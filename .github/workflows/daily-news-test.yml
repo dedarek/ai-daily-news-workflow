@@ -47,9 +47,11 @@ jobs:
       - name: Run source smoke tests
         run: ./scripts/smoke_test.sh
 
-      - name: Build HTML and podcast artifacts
+      - name: Collect live news and build artifacts
+        env:
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
         run: |
-          python3 scripts/run_test_pipeline.py \
+          python3 scripts/run_live_pipeline.py \
             --date "${{ steps.issue.outputs.date }}" \
             --output-dir dist
 
@@ -87,7 +89,7 @@ jobs:
             echo
             echo "- Date: ${{ steps.issue.outputs.date }}"
             echo "- Recipient: \`$TEST_RECIPIENT\`"
-            echo "- Content mode: validated fixture"
+            echo "- Content mode: live collection"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
             echo
             echo "Artifacts contain the generated HTML, MP3, and JSON report."
