@@ -204,9 +204,61 @@ def extract_json_object(text: str) -> dict:
     return json.loads(text[start:end + 1])
 
 
+def request_deepseek_json(
+    *,
+    endpoint: str,
+    model: str,
+    api_key: str,
+    system_prompt: str,
+    user_prompt: str,
+) -> tuple[dict, dict]:
+    payload = json.dumps({
+        'model': model,
+        'messages': [
+            {'role': 'system', 'content': system_prompt},
+            {'role': 'user', 'content': user_prompt},
+        ],
+        'response_format': {'type': 'json_object'},
+        'reasoning_effort': 'low',
+        'temperature': 0.3,
+    }).encode('utf-8')
+    response_data: dict | None = None
+    for attempt in range(1, 4):
+        request = Request(
+            f'{endpoint}/chat/completions',
+            data=payload,
+            headers={
+                'Authorization': f'Bearer {api_key}',
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'User-Agent': 'ai-daily-news-workflow/1.0',
+            },
+            method='POST',
+        )
+        try:
+            with urlopen(request, timeout=240) as response:
+                response_data = json.loads(response.read().decode('utf-8'))
+            break
+        except HTTPError as exc:
+            error_body = exc.read().decode('utf-8', errors='replace')[:1000]
+            retryable = exc.code in (429, 500, 502, 503, 504)
+            if not retryable or attempt == 3:
+                raise RuntimeError(f'OpenCode Go HTTP {exc.code}: {error_body}') from exc
+            retry_after = exc.headers.get('Retry-After')
+            delay = int(retry_after) if retry_after and retry_after.isdigit() else 30 * attempt
+            print(f'OpenCode Go transient HTTP {exc.code}; retrying in {delay}s ({attempt}/3)', flush=True)
+            time.sleep(delay)
+    if response_data is None:
+        raise RuntimeError('OpenCode Go returned no response')
+    choice = response_data['choices'][0]
+    if choice.get('finish_reason') != 'stop':
+        raise RuntimeError(f"OpenCode Go incomplete response: finish_reason={choice.get('finish_reason')}")
+    return extract_json_object(choice['message']['content']), response_data.get('usage') or {}
+
+
 def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list[Article], list[dict[str, str]], dict]:
     endpoint = os.environ.get('OPENCODE_GO_BASE_URL', 'https://opencode.ai/zen/go/v1').rstrip('/')
-    model = os.environ.get('OPENCODE_GO_MODEL', 'deepseek-v4-pro')
+    model = os.environ.get('OPENCODE_GO_MODEL', 'deepseek-v4-flash')
     candidates = [
         {'title': item.title, 'source_summary': item.summary, 'url': item.url, 'suggested_section': item.section}
         for item in candidate_articles
@@ -215,105 +267,135 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
         '你是中文AI行业日报主编。只使用输入候选中的事实和URL，不得编造事实、数字、机构、'
         '模型能力或链接。输出必须是单个合法JSON对象，不要Markdown。'
     )
-    user_prompt = f'''
-请编辑以下候选新闻，输出：
-1. articles：保留 12-15 条，按事件去重；每项字段为 title、body、section、review、url。
-2. podcast_dialogue：12-18轮自然双人对话，每项字段 speaker（S1或S2）与 text。
+    selection_prompt = f'''
+从以下候选中选择恰好12条最值得进入AI日报的新闻，按事件去重并分类。
+只输出JSON：{{"selection":[{{"url":"候选中的原始URL","section":"栏目"}}]}}
+规则：
+- URL必须原样复制候选URL，不得创造或修改。
+- section只能是：{json.dumps(SECTION_ORDER, ensure_ascii=False)}。
+- 第一项必须是“🔥 今日焦点”，全文仅允许一个“🔥 今日焦点”。
+- 尽量覆盖产品、行业、研究、开源或工具中的至少4类。
 
-严格规则：
-- url 必须原样取自候选，不得修改或创造。
-- body 用中文写 120-220 字，至少4句，只能基于 source_summary 已给出的事实；信息不足时解释技术或行业背景，
-  但不得新增无法验证的具体数字。
-- section 只能是：{json.dumps(SECTION_ORDER, ensure_ascii=False)}。
-- 第一条 section 必须是“🔥 今日焦点”，且仅一条。
-- review 1-2句，有明确判断但必须基于事实，不写空洞套话。
-- podcast_dialogue 围绕最重要的5-7条新闻展开，S1是资深AI从业者，S2是产品视角；
-  禁止“第一条新闻”“接下来我们聊”，每轮20-90字。
-- 不得在任何正文、锐评或播客中提及聚合源名称。
-
-输出JSON结构：
-{{
-  "articles": [
-    {{"title":"...", "body":"...", "section":"...", "review":"...", "url":"..."}}
-  ],
-  "podcast_dialogue": [
-    {{"speaker":"S1","text":"..."}}
-  ]
-}}
-
-候选数据：
+候选：
 {json.dumps(candidates, ensure_ascii=False)}
 '''.strip()
-    payload = json.dumps({
-        'model': model,
-        'messages': [
-            {'role': 'system', 'content': system_prompt},
-            {'role': 'user', 'content': user_prompt},
-        ],
-        'temperature': 0.35,
-        'max_tokens': 9000,
-    }).encode('utf-8')
-    request = Request(
-        f'{endpoint}/chat/completions',
-        data=payload,
-        headers={
-            'Authorization': f'Bearer {api_key}',
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'User-Agent': 'ai-daily-news-workflow/1.0',
-        },
-        method='POST',
+    selection_result, selection_usage = request_deepseek_json(
+        endpoint=endpoint,
+        model=model,
+        api_key=api_key,
+        system_prompt=system_prompt,
+        user_prompt=selection_prompt,
     )
-    try:
-        with urlopen(request, timeout=240) as response:
-            response_data = json.loads(response.read().decode('utf-8'))
-    except HTTPError as exc:
-        error_body = exc.read().decode('utf-8', errors='replace')[:1000]
-        raise RuntimeError(f'OpenCode Go HTTP {exc.code}: {error_body}') from exc
-    content = response_data['choices'][0]['message']['content']
-    result = extract_json_object(content)
-    allowed_urls = {item.url for item in candidate_articles}
-    articles: list[Article] = []
+    candidate_map = {item.url: item for item in candidate_articles}
+    selected: list[tuple[Article, str]] = []
     seen_urls: set[str] = set()
-    for item in result.get('articles', []):
+    for item in selection_result.get('selection', []):
         url = str(item.get('url', '')).strip()
-        if url not in allowed_urls or url in seen_urls:
-            continue
-        article = Article(
-            title=clean_text(str(item.get('title', ''))),
-            summary=clean_text(str(item.get('body', ''))),
-            url=url,
-            section=str(item.get('section', '')).strip(),
-            review=clean_text(str(item.get('review', ''))),
-        )
-        if (
-            article.title
-            and len(article.summary) >= 120
-            and article.section in SECTION_ORDER
-            and article.review
-        ):
-            articles.append(article)
+        section = str(item.get('section', '')).strip()
+        if url in candidate_map and url not in seen_urls and section in SECTION_ORDER:
+            selected.append((candidate_map[url], section))
             seen_urls.add(url)
-    if not 12 <= len(articles) <= 15:
-        raise RuntimeError(f'LLM returned {len(articles)} valid articles; expected 12-15')
-    focus_count = sum(item.section == '🔥 今日焦点' for item in articles)
-    if articles[0].section != '🔥 今日焦点' or focus_count != 1:
-        raise RuntimeError(f'LLM focus-section validation failed: first={articles[0].section}, count={focus_count}')
+    if len(selected) != 12:
+        raise RuntimeError(f'LLM selected {len(selected)} valid articles; expected exactly 12')
+    focus_count = sum(section == '🔥 今日焦点' for _, section in selected)
+    if selected[0][1] != '🔥 今日焦点' or focus_count != 1:
+        raise RuntimeError(f'LLM selection focus validation failed: first={selected[0][1]}, count={focus_count}')
 
+    articles: list[Article] = []
+    editorial_usages: list[dict] = []
+    for batch_start in range(0, len(selected), 4):
+        batch = selected[batch_start:batch_start + 4]
+        batch_input = [
+            {
+                'title': source.title,
+                'source_summary': source.summary,
+                'url': source.url,
+                'section': section,
+            }
+            for source, section in batch
+        ]
+        batch_prompt = f'''
+编辑以下4条新闻。只输出JSON：
+{{"articles":[{{"title":"...","body":"...","review":"..."}}]}}
+规则：
+- 必须恰好输出4条并严格保持输入顺序。不要输出或改写URL、栏目。
+- title简洁准确，不添加输入中没有的事实。
+- body用中文写120-220字、至少4句，只能使用source_summary中的事实；
+  可补充一般性技术背景，但不得新增具体数字、机构声明或未经输入支持的结论。
+- review写1-2句明确判断，基于事实，不写“值得关注”“意义重大”等空话。
+- 不得提及聚合源名称。
+
+输入：
+{json.dumps(batch_input, ensure_ascii=False)}
+'''.strip()
+        batch_result, batch_usage = request_deepseek_json(
+            endpoint=endpoint,
+            model=model,
+            api_key=api_key,
+            system_prompt=system_prompt,
+            user_prompt=batch_prompt,
+        )
+        editorial_usages.append(batch_usage)
+        generated_items = batch_result.get('articles', [])
+        if len(generated_items) != len(batch):
+            raise RuntimeError(
+                f'LLM editorial batch returned {len(generated_items)} items; expected {len(batch)}'
+            )
+        for item, (source, section) in zip(generated_items, batch):
+            body = clean_text(str(item.get('body', '')))
+            if len(body) < 120:
+                body = clean_text(f'{body} {source.summary}')
+            article = Article(
+                title=clean_text(str(item.get('title', ''))),
+                summary=body,
+                url=source.url,
+                section=section,
+                review=clean_text(str(item.get('review', ''))),
+            )
+            if (
+                article.title
+                and len(article.summary) >= 120
+                and article.review
+            ):
+                articles.append(article)
+            else:
+                raise RuntimeError(f'LLM editorial item invalid for source URL: {source.url}')
+
+    podcast_prompt = f'''
+基于以下已经校验通过的日报，生成12-18轮自然双人播客对话。
+S1是资深AI从业者，S2是产品视角。围绕最重要的5-7条新闻深入讨论，有反应、补充、分歧和判断。
+禁止使用“第一条新闻”“接下来我们聊”等机械报幕；每轮20-90个中文字符。
+只输出JSON：{{"podcast_dialogue":[{{"speaker":"S1","text":"..."}},{{"speaker":"S2","text":"..."}}]}}
+不得新增输入中没有的具体事实、数字或机构，不得提及聚合源名称。
+
+日报：
+{json.dumps([asdict(item) for item in articles], ensure_ascii=False)}
+'''.strip()
+    podcast_result, podcast_usage = request_deepseek_json(
+        endpoint=endpoint,
+        model=model,
+        api_key=api_key,
+        system_prompt='你是中文AI播客编剧。只使用输入日报中的事实，输出必须是合法JSON对象。',
+        user_prompt=podcast_prompt,
+    )
     dialogue: list[dict[str, str]] = []
-    for item in result.get('podcast_dialogue', []):
+    for item in podcast_result.get('podcast_dialogue', []):
         speaker = str(item.get('speaker', '')).strip()
         text = clean_text(str(item.get('text', '')))
         if speaker in ('S1', 'S2') and 20 <= len(text) <= 140:
             dialogue.append({'speaker': speaker, 'text': text})
     if not 12 <= len(dialogue) <= 18:
         raise RuntimeError(f'LLM returned {len(dialogue)} valid podcast turns; expected 12-18')
-    usage = response_data.get('usage') or {}
     metadata = {
         'provider': 'opencode-go',
         'model': model,
         'endpoint': endpoint,
-        'usage': usage,
+        'calls': 5,
+        'usage': {
+            'selection': selection_usage,
+            'editorial_batches': editorial_usages,
+            'podcast': podcast_usage,
+        },
     }
     return articles, dialogue, metadata
 
