@@ -30,6 +30,7 @@ class Article:
     summary: str
     url: str
     section: str
+    review: str = ''
 
 
 class DailyPageParser(HTMLParser):
@@ -190,6 +191,123 @@ def parse_articles(raw_html: str, limit: int = 15) -> list[Article]:
     return articles
 
 
+def extract_json_object(text: str) -> dict:
+    text = text.strip()
+    if text.startswith('```'):
+        text = re.sub(r'^```(?:json)?\s*', '', text)
+        text = re.sub(r'\s*```$', '', text)
+    start = text.find('{')
+    end = text.rfind('}')
+    if start < 0 or end <= start:
+        raise RuntimeError('LLM response did not contain a JSON object')
+    return json.loads(text[start:end + 1])
+
+
+def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list[Article], list[dict[str, str]], dict]:
+    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', 'https://opencode.ai/zen/go/v1').rstrip('/')
+    model = os.environ.get('OPENCODE_GO_MODEL', 'deepseek-v4-pro')
+    candidates = [
+        {'title': item.title, 'source_summary': item.summary, 'url': item.url, 'suggested_section': item.section}
+        for item in candidate_articles
+    ]
+    system_prompt = (
+        '你是中文AI行业日报主编。只使用输入候选中的事实和URL，不得编造事实、数字、机构、'
+        '模型能力或链接。输出必须是单个合法JSON对象，不要Markdown。'
+    )
+    user_prompt = f'''
+请编辑以下候选新闻，输出：
+1. articles：保留 12-15 条，按事件去重；每项字段为 title、body、section、review、url。
+2. podcast_dialogue：12-18轮自然双人对话，每项字段 speaker（S1或S2）与 text。
+
+严格规则：
+- url 必须原样取自候选，不得修改或创造。
+- body 用中文写 120-220 字，至少4句，只能基于 source_summary 已给出的事实；信息不足时解释技术或行业背景，
+  但不得新增无法验证的具体数字。
+- section 只能是：{json.dumps(SECTION_ORDER, ensure_ascii=False)}。
+- 第一条 section 必须是“🔥 今日焦点”，且仅一条。
+- review 1-2句，有明确判断但必须基于事实，不写空洞套话。
+- podcast_dialogue 围绕最重要的5-7条新闻展开，S1是资深AI从业者，S2是产品视角；
+  禁止“第一条新闻”“接下来我们聊”，每轮20-90字。
+- 不得在任何正文、锐评或播客中提及聚合源名称。
+
+输出JSON结构：
+{{
+  "articles": [
+    {{"title":"...", "body":"...", "section":"...", "review":"...", "url":"..."}}
+  ],
+  "podcast_dialogue": [
+    {{"speaker":"S1","text":"..."}}
+  ]
+}}
+
+候选数据：
+{json.dumps(candidates, ensure_ascii=False)}
+'''.strip()
+    payload = json.dumps({
+        'model': model,
+        'messages': [
+            {'role': 'system', 'content': system_prompt},
+            {'role': 'user', 'content': user_prompt},
+        ],
+        'temperature': 0.35,
+        'max_tokens': 9000,
+    }).encode('utf-8')
+    request = Request(
+        f'{endpoint}/chat/completions',
+        data=payload,
+        headers={'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'},
+        method='POST',
+    )
+    with urlopen(request, timeout=240) as response:
+        response_data = json.loads(response.read().decode('utf-8'))
+    content = response_data['choices'][0]['message']['content']
+    result = extract_json_object(content)
+    allowed_urls = {item.url for item in candidate_articles}
+    articles: list[Article] = []
+    seen_urls: set[str] = set()
+    for item in result.get('articles', []):
+        url = str(item.get('url', '')).strip()
+        if url not in allowed_urls or url in seen_urls:
+            continue
+        article = Article(
+            title=clean_text(str(item.get('title', ''))),
+            summary=clean_text(str(item.get('body', ''))),
+            url=url,
+            section=str(item.get('section', '')).strip(),
+            review=clean_text(str(item.get('review', ''))),
+        )
+        if (
+            article.title
+            and len(article.summary) >= 120
+            and article.section in SECTION_ORDER
+            and article.review
+        ):
+            articles.append(article)
+            seen_urls.add(url)
+    if not 12 <= len(articles) <= 15:
+        raise RuntimeError(f'LLM returned {len(articles)} valid articles; expected 12-15')
+    focus_count = sum(item.section == '🔥 今日焦点' for item in articles)
+    if articles[0].section != '🔥 今日焦点' or focus_count != 1:
+        raise RuntimeError(f'LLM focus-section validation failed: first={articles[0].section}, count={focus_count}')
+
+    dialogue: list[dict[str, str]] = []
+    for item in result.get('podcast_dialogue', []):
+        speaker = str(item.get('speaker', '')).strip()
+        text = clean_text(str(item.get('text', '')))
+        if speaker in ('S1', 'S2') and 20 <= len(text) <= 140:
+            dialogue.append({'speaker': speaker, 'text': text})
+    if not 12 <= len(dialogue) <= 18:
+        raise RuntimeError(f'LLM returned {len(dialogue)} valid podcast turns; expected 12-18')
+    usage = response_data.get('usage') or {}
+    metadata = {
+        'provider': 'opencode-go',
+        'model': model,
+        'endpoint': endpoint,
+        'usage': usage,
+    }
+    return articles, dialogue, metadata
+
+
 def render_html(issue_date: str, content_date: str, articles: list[Article], output_path: Path) -> None:
     dt = datetime.strptime(issue_date, '%Y-%m-%d')
     weekdays = '一二三四五六日'
@@ -221,7 +339,7 @@ def render_html(issue_date: str, content_date: str, articles: list[Article], out
         parts.append(f'<tr><td style="padding:22px 36px 26px;"><h2 style="font-size:17px;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">{section}</h2>')
         for article in section_articles:
             escaped_url = html.escape(article.url, quote=True)
-            review = f'AI锐评：真正值得看的，是“{html.escape(article.title)}”能否从消息变成稳定、可复用的实际能力。'
+            review = f'AI锐评：{html.escape(article.review)}'
             parts.extend([
                 '<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">',
                 '<tr><td style="padding:14px 18px;background:#f8fafc;">',
@@ -241,16 +359,15 @@ def render_html(issue_date: str, content_date: str, articles: list[Article], out
     output_path.write_text(''.join(parts), encoding='utf-8')
 
 
-def synthesize_siliconflow(articles: list[Article], output_path: Path, api_key: str) -> bool:
+def synthesize_siliconflow(dialogue: list[dict[str, str]], output_path: Path, api_key: str) -> bool:
     segment_dir = Path('/tmp') / f'{output_path.stem}-segments'
     if segment_dir.exists():
         shutil.rmtree(segment_dir)
     segment_dir.mkdir(exist_ok=True)
     segments: list[Path] = []
-    selected = articles[:6]
-    for index, article in enumerate(selected):
-        speaker = 'alex' if index % 2 == 0 else 'anna'
-        text = f'{article.title}。{article.summary[:220]}'
+    for index, turn in enumerate(dialogue):
+        speaker = 'alex' if turn['speaker'] == 'S1' else 'anna'
+        text = turn['text']
         payload = json.dumps({
             'model': 'FunAudioLLM/CosyVoice2-0.5B',
             'input': text,
@@ -309,7 +426,11 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     content_date, source_url, raw_html = fetch_latest(args.date)
-    articles = parse_articles(raw_html)
+    candidates = parse_articles(raw_html)
+    llm_api_key = os.environ.get('OPENCODE_GO_API_KEY', '')
+    if not llm_api_key:
+        raise RuntimeError('OPENCODE_GO_API_KEY is required; refusing to generate a non-LLM issue')
+    articles, dialogue, llm_metadata = call_deepseek(candidates, llm_api_key)
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
     data_path = output_dir / f'news-data-{args.date}.json'
@@ -318,7 +439,7 @@ def main() -> int:
 
     tts_mode = 'fallback-sample'
     api_key = os.environ.get('SILICONFLOW_API_KEY', '')
-    if api_key and synthesize_siliconflow(articles, podcast_path, api_key):
+    if api_key and synthesize_siliconflow(dialogue, podcast_path, api_key):
         tts_mode = 'siliconflow-live'
     else:
         fallback_podcast(podcast_path)
@@ -336,6 +457,9 @@ def main() -> int:
         'source_url': source_url,
         'recipient': 'yyc54321@126.com',
         'article_count': len(articles),
+        'candidate_count': len(candidates),
+        'llm': llm_metadata,
+        'podcast_turns': len(dialogue),
         'tts_mode': tts_mode,
         'html_bytes': html_path.stat().st_size,
         'podcast_bytes': podcast_path.stat().st_size,
