@@ -11,6 +11,21 @@ chmod +x scripts/*.sh
 默认将 `skill/` 以符号链接部署到
 `${CODEX_HOME:-$HOME/.codex}/skills/ai-daily-news`。本地修改仓库后无需重复复制。
 
+## GitHub Actions 测试工作流
+
+`.github/workflows/daily-news-test.yml` 支持：
+
+- 每天北京时间 11:30 自动运行
+- GitHub 页面手动触发
+- 生成 HTML、测试播客和 JSON 报告
+- 执行 HTML 质量门禁
+- 发送器 dry-run 验证
+- 可选真实发送，唯一收件人为 `yyc54321@126.com`
+- 上传 14 天可下载的运行产物
+
+当前内容阶段使用 2026-06-24 的已验证日报作为测试夹具，确保先跑通构建、音频、
+校验、邮件和产物链路。实时新闻采集将在下一阶段替换夹具生成步骤。
+
 ## 一、系统概览
 
 每天自动采集 AI 行业新闻，生成 HTML 邮件 + 双人对话播客，分发给团队。
