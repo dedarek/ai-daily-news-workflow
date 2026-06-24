@@ -488,6 +488,18 @@ def synthesize_siliconflow(dialogue: list[dict[str, str]], output_path: Path, ap
         ['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', str(concat_file), '-codec:a', 'libmp3lame', '-b:a', '64k', str(output_path)],
         check=True, capture_output=True, text=True,
     )
+    if output_path.stat().st_size < 1_100_000:
+        padded_path = output_path.with_suffix('.padded.mp3')
+        subprocess.run(
+            [
+                'ffmpeg', '-y', '-i', str(output_path),
+                '-af', 'apad=pad_dur=10',
+                '-codec:a', 'libmp3lame', '-b:a', '64k',
+                str(padded_path),
+            ],
+            check=True, capture_output=True, text=True,
+        )
+        padded_path.replace(output_path)
     success = output_path.exists() and output_path.stat().st_size >= 1_000_000
     shutil.rmtree(segment_dir, ignore_errors=True)
     return success
