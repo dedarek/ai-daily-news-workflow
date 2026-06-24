@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日AI热点新闻（试运营）</title>
+</head>
+<body style="margin:0;padding:0;font-family:'PingFang SC','Microsoft YaHei','Inter','Helvetica Neue',Arial,sans-serif;background-color:#eef1f5;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding:24px 0;">
+    <tr>
+      <td align="center">
+        <table width="700" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border:1px solid #c9cdd4;border-radius:10px;overflow:hidden;">
+          <tr>
+            <td style="background-color:#3b82f6;padding:28px 30px;text-align:center;border-bottom:4px solid #1d4ed8;">
+              <h1 style="color:#ffffff;margin:0;font-size:22px;font-weight:700;letter-spacing:0.5px;">📰 每日AI热点新闻（试运营）</h1>
+              <p style="color:rgba(255,255,255,0.85);margin:8px 0 0 0;font-size:13px;">2026年05月24日 星期日</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:22px 36px 18px;">
+              <p style="color:#374151;font-size:15px;line-height:1.9;margin:0;">今天这期有三条主线特别清楚：一是模型底层效率继续往“更省内存、更长上下文、更高分辨率”推进，线性注意力、推理过程解释和超高分生图都在给下一轮模型架构打地基；二是 AI 编程和产品生产线正在从开发者圈层外溢，Anthropic 的开发者活动、Open Design 的爆发，以及胡彦斌用 Claude 做 App，都说明“会不会写代码”不再是唯一门槛；三是行业也开始正面面对 AI 的真实代价与治理问题，算力投入、云成本黑洞、生态投资和智能体监管同步浮出水面。换句话说，AI 叙事已经从“模型多强”切到“谁能把模型做得更便宜、更可控、也更能真正落地”。</p>
+            </td>
+          </tr>
+          <tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+          
+    <tr><td style="padding:22px 36px 26px;">
+      <h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">🔥 今日焦点</h2>
+      
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #fca5a5;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;border-left:4px solid #ef4444;background-color:#ffffff;">
+              <span style="display:inline-block;background-color:#ef4444;color:#ffffff;font-size:11px;padding:2px 10px;border-radius:10px;font-weight:600;margin-bottom:8px;">焦点</span>
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://arxiv.org/abs/2605.22791" style="color:#2563EB;text-decoration:none;">Gated DeltaNet-2：在线性注意力中解耦擦除与写入</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">这篇论文瞄准的是线性注意力最难的一点：模型把上下文压进固定大小的 recurrent state 之后，究竟该怎么“忘掉旧信息、写入新信息”，还不把已有关联关系搅乱。作者把 erase 和 write 两个动作拆开建模，不再用单一标量门控一把梭，结果是在长上下文检索、高分辨率建模和稳定性上都拿到更好的表现。论文摘要明确提到，这套方法把 sequence mixing 保持在线性时间，同时把 decoding 维持在常数内存，目标非常明确，就是给长文本和高吞吐推理场景减压。对做 Agent、RAG 和长上下文推理的团队来说，这类工作比单纯刷 benchmark 更关键，因为它直接关系到实际成本。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：今年真正值钱的创新，不是再把参数堆高一档，而是把“记忆怎么写、怎么删”这件事做精细。谁先把长上下文成本压下去，谁就先拿到下一轮应用红利。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://arxiv.org/abs/2605.22791" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://arxiv.org/abs/2605.22791</a></p>
+            </td>
+          </tr>
+        </table>
+        
+    </td></tr>
+    <tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+    
+    <tr><td style="padding:22px 36px 26px;">
+      <h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">📚 前沿研究</h2>
+      
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://arxiv.org/abs/2603.29735" style="color:#2563EB;text-decoration:none;">Unveiling the Reasoning Process of Large Language Models</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">这篇研究试图回答一个很硬核的问题：大语言模型到底是在第几层开始“真正推理”的。作者在数学和符号推理任务上分析层间分工，发现外层更偏向保留和路由输入相关特征，中间层更像是把 token 级信息抽象成关系结构的主加工区。也就是说，模型的“思考”不是均匀铺在全网络里，而是有明显的功能分层。这个结论的价值不只是解释性更强，它还可能影响后续的模型裁剪、推理监控和对齐干预，因为如果知道哪几层在做关键推理，就更容易精准地改。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：大家过去总说模型像黑箱，但黑箱不等于完全无结构。谁先把“哪层在思考、哪层在搬运”讲清楚，谁就更接近下一代可控模型。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://arxiv.org/abs/2603.29735" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://arxiv.org/abs/2603.29735</a></p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://rajabi2001.github.io/sega/" style="color:#2563EB;text-decoration:none;">SEGA 算法把图像生成分辨率上限推到 6K</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">SEGA 做的不是简单堆算力，而是在推理阶段动态重标定不同 RoPE 频段上的 attention，让模型能够根据 latent 的空间频率内容调整结构保真和细节保真之间的权衡。项目页给出的结果很激进：无需重新训练，就能把多个扩散 Transformer 的生成分辨率推进到 36 megapixels 量级，也就是约 6K 级别。对图像生成赛道来说，这个方向特别有意义，因为它绕开了“想做高清就必须重新训大模型”的高成本路径。对于做电商海报、影视概念图和印刷级素材的人来说，推理期直接抬分辨率上限，比再多几个提示词技巧更实用。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：高分辨率不是审美加分项，而是商业化门槛。谁先把 6K 变成训练外能力，谁就离生产环境更近一步。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://rajabi2001.github.io/sega/" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://rajabi2001.github.io/sega/</a></p>
+            </td>
+          </tr>
+        </table>
+        
+    </td></tr>
+    <tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+    
+    <tr><td style="padding:22px 36px 26px;">
+      <h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">💼 产业与治理</h2>
+      
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://www.qbitai.com/2026/05/423202.html" style="color:#2563EB;text-decoration:none;">昆仑万维方汉拆解 AI 时代企业生存逻辑</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">方汉这场分享里有几个判断很值得记：第一，经验不再天然构成护城河，闭环而且可容错的岗位会更快被 AI 吞掉；第二，Token 消耗正在像“电力”一样成为 AI 时代的新硬通货，不同用户的月消耗量可以从几百万直接拉开到数百亿甚至更高；第三，企业在落地阶段未必总要赌第一名模型，很多场景里“选第二名但更稳的方案”反而更像经营决策。文章里还明确点出，真正不容易被替代的是高判断、低容错、需要品味和责任承担的角色。这类观点的价值在于，它不是继续卖焦虑，而是把 AI 冲击拆成了岗位结构、成本结构和组织结构三个层面。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：今年最清醒的一类判断，不是“AGI 明天到”，而是先把哪类岗位先没、哪类岗位还能活说清楚。会算 Token 账的人，正在取代只会喊口号的人。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://www.qbitai.com/2026/05/423202.html" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://www.qbitai.com/2026/05/423202.html</a></p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://x.com/PeterDiamandis/status/2058171651280261516" style="color:#2563EB;text-decoration:none;">马斯克称 AI 将接管未来航天器与工程设计</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">围绕未来航天器设计，马斯克公开表示，AI 会在后续工程设计流程里承担越来越核心的角色，甚至把星舰描述成可能是最后一代主要由人类手工主导的大型工程产品。这个表态的分量不只是噱头，因为航天本来就是一个高度依赖仿真、约束求解和多目标优化的行业，天然适合让模型去接管重复迭代与方案搜索。真正难的部分在于验证：设计可以更快生成，但材料、控制、冗余和安全边界仍然要被严格证明。换句话说，AI 接手设计不是终点，真正的竞争会转向“生成—仿真—验证”闭环谁跑得更快。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：AI 先替代的未必是程序员，也可能是 CAD 和仿真链条里那些最贵、最慢的迭代环节。工程行业一旦吃到这波效率红利，变化会比互联网时代更猛。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://x.com/PeterDiamandis/status/2058171651280261516" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://x.com/PeterDiamandis/status/2058171651280261516</a></p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://x.com/thewire_in/status/2058117971722359174" style="color:#2563EB;text-decoration:none;">国内率先发布前沿智能体监管新规</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">这条消息的关键信号不是“又多一份监管文件”，而是智能体终于开始被当成独立对象来分级和治理。按照目前流出的描述，新规试图对前沿智能体给出更细的分类标准与治理框架，而不是继续把它们笼统塞进通用生成式 AI 的篮子里。这个变化很重要，因为智能体和普通聊天模型最大的不同，在于它能调用工具、执行动作、产生现实后果。行业接下来会越来越清楚：模型安全和智能体安全不是一回事，前者更多是内容风险，后者则直接碰到权限、审计、责任归属和外部执行边界。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：谁先把智能体按“会不会动手”来监管，谁就更接近现实。把会执行的系统还当成纯内容产品管，迟早要出事故。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://x.com/thewire_in/status/2058117971722359174" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://x.com/thewire_in/status/2058117971722359174</a></p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://x.com/cryptorover/status/2058225638792896854" style="color:#2563EB;text-decoration:none;">AI 巨头被曝面临万亿级云支出与亏损压力</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">围绕头部模型公司的财务健康度，社交媒体今天再次把“AI 产业繁荣背后的云成本黑洞”推上台面。相关讨论把 OpenAI 等公司的亏损规模、训练推理成本和长期云支出放在一起看，核心问题只有一个：当行业把数百亿美元继续砸进算力后，什么时候能真正形成稳定利润。这个议题之所以重要，是因为现在的竞争已经不是谁先出模型，而是谁能把训练成本、推理成本和客户付费意愿串成闭环。只要这个闭环没跑通，所有“万亿估值”的故事就仍然要靠资本市场持续输血。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：AI 现在最像重资产基础设施行业，而不是轻资产软件业。故事可以先讲大，但账迟早要算细。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://x.com/cryptorover/status/2058225638792896854" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://x.com/cryptorover/status/2058225638792896854</a></p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://x.com/cryptogoos/status/2058247337420673156" style="color:#2563EB;text-decoration:none;">英伟达被曝投入 450 亿美元布局 AI 生态与基础设施</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">围绕英伟达生态位的讨论今天继续发酵，外界把其对基础设施伙伴和产业链协同的投入规模抬到了 450 亿美元量级。无论这个数字最终是否精确，它至少反映出一个事实：英伟达现在做的已经不只是卖 GPU，而是在通过资本、软件栈和生态绑定把自己嵌进 AI 产业的每一层。上游是芯片和服务器，下游是云厂商、模型厂和应用公司，中间再叠加 CUDA、网络互联和推理优化工具，形成典型的系统性锁定。对其他玩家来说，真正难超越的未必是单卡性能，而是这整套“算力 + 资本 + 生态”的联动能力。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：英伟达最可怕的地方，从来不是一块卡有多强，而是它把“买卡”变成了“进体系”。这才是生态垄断的高级形态。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://x.com/cryptogoos/status/2058247337420673156" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://x.com/cryptogoos/status/2058247337420673156</a></p>
+            </td>
+          </tr>
+        </table>
+        
+    </td></tr>
+    <tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+    
+    <tr><td style="padding:22px 36px 26px;">
+      <h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">🛠️ 开源与工具</h2>
+      
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0" style="color:#2563EB;text-decoration:none;">Release Open Design 0.8.0</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">Open Design 0.8.0 这次不是小修小补。发布页显示，项目在 7 天里合入了 305 个 PR、75 位贡献者参与，GitHub 总星标已经超过 5 万。更关键的是，团队把底层重构成“everything is a plugin”的架构：引擎尽量变小，能力通过插件层叠加，这意味着它未来更容易被接进代码智能体、设计系统和自动化工作流。对 AI 设计工具来说，这条路比单点功能炫技更像长期路线，因为平台化意味着第三方生态可以持续往上长。它从“一个生成 UI 的项目”转向“设计—实现—扩展”基础设施，这才是真正值得看的升级。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：开源项目最怕只有热度没有结构。Open Design 这次把结构先重做了，说明它不满足于当一个漂亮 demo，而是在抢“设计操作系统”的位置。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0</a></p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://github.com/Fincept-Corporation/FinceptTerminal" style="color:#2563EB;text-decoration:none;">FinceptTerminal 用 37 个智能体重做开源金融终端</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">FinceptTerminal 的野心相当直接：把 Bloomberg/彭博终端式的信息密度、量化分析能力和 AI 自动化结合进一个开源桌面应用。仓库介绍写得很清楚，它是原生 C++20 桌面程序，界面用 Qt6，分析层嵌入 Python，同时内置 37 个围绕交易、投资、经济与地缘分析的智能体。功能也不是空泛口号，文档里明确列出 DCF、VaR、Sharpe、衍生品定价、组合优化等一整套金融分析能力。对 AI 产品圈来说，这类项目最大的看点不是“又一个 Agent”，而是多智能体终于开始进入有明确指标、有明确工作流、有明确专业术语的高价值垂直场景。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：金融终端一直是高门槛高 ARPU 赛道。谁能把专业分析和多智能体做成可替代传统终端的体验，谁就不是做玩具，而是在啃利润最厚的市场。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://github.com/Fincept-Corporation/FinceptTerminal" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://github.com/Fincept-Corporation/FinceptTerminal</a></p>
+            </td>
+          </tr>
+        </table>
+        
+    </td></tr>
+    <tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+    
+    <tr><td style="padding:22px 36px 26px;">
+      <h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">👨‍💻 编程工作流</h2>
+      
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/amp/" style="color:#2563EB;text-decoration:none;">Anthropic’s Code with Claude showed off coding's future</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">MIT Technology Review 这篇现场报道里有个细节特别扎眼：Anthropic 在伦敦开 Code with Claude 活动时，台上问“过去一周里谁提交过完全由 Claude 写的 PR”，现场接近一半开发者举手。这个比例说明，AI 编程已经不是“偶尔帮补全”的边缘工具，而是很多团队真实工作流的一部分。报道也点出新的分工正在形成：模型先生成、人类再审查、修订和承担责任。对软件行业来说，这意味着产能结构、团队协作方式和 junior 成长路径都会被重写，因为人不再从每一行代码里学习，而是更多在 review、约束和系统理解里积累价值。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：写代码这件事正在从“生产动作”变成“监督动作”。以后最贵的工程师，不一定是敲得最快的，而是看得最准的。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/amp/" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/amp/</a></p>
+            </td>
+          </tr>
+        </table>
+        
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+          <tr>
+            <td style="padding:16px 18px;background-color:#f8fafc;">
+              
+              <h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;"><a href="https://x.com/CryptoDoggyCN/status/2058093601444581585" style="color:#2563EB;text-decoration:none;">胡彦斌借助 Claude 开发社区 App 并开启公测</a></h3>
+              <p class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">胡彦斌分享自己借助 Claude 开发社区 App、并把产品推进到公测阶段的案例，之所以引发传播，不是因为它技术上最前沿，而是因为它让大众第一次更直观地看到“不会写代码的人，也能把产品做出来”这件事。按照流传内容，这个项目已经有明确产品形态和测试入口，不再停留在 demo 或概念验证。对 AI 应用市场来说，这类案例的意义在于，它会继续降低人们对软件开发的心理门槛，让更多创作者、艺人、教育者和小团队直接跨过“先找程序员”的老路径。AI 编程真正的市场爆发，也许不是程序员圈内再卷一轮，而是圈外的人开始直接入场。</p>
+              <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;"><p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">AI锐评：当明星都开始自己做 App，AI 编程的竞争就不只是开发工具之争，而是“谁把造产品门槛打到最低”的全民战争。</p></td></tr></table>
+              <p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="https://x.com/CryptoDoggyCN/status/2058093601444581585" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://x.com/CryptoDoggyCN/status/2058093601444581585</a></p>
+            </td>
+          </tr>
+        </table>
+        
+    </td></tr>
+    <tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+    
+          <tr>
+            <td style="background-color:#edf0f4;border-top:2px solid #d1d5db;padding:18px 36px;text-align:center;font-size:12px;color:#64748b;line-height:2;">
+              联系我们：<a href="mailto:penglei4@lenovo.com" style="color:#2563EB;text-decoration:none;">penglei4@lenovo.com</a> ｜ <a href="mailto:yangyc13@lenovo.com" style="color:#2563EB;text-decoration:none;">yangyc13@lenovo.com</a><br>
+              技术创新中心：<a href="mailto:-TIC@lenovo.com" style="color:#2563EB;text-decoration:none;">-TIC@lenovo.com</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

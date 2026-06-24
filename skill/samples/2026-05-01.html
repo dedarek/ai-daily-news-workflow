@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>每日AI热点新闻 2026-05-01</title></head>
+<body style="margin:0;padding:20px 0;background-color:#eef1f5;font-family:PingFang SC,Microsoft YaHei,Inter,Helvetica Neue,Arial,sans-serif;">
+<table width="700" cellpadding="0" cellspacing="0" align="center" style="background:#ffffff;border:1px solid #c9cdd4;border-radius:10px;overflow:hidden;">
+
+<tr><td style="background:#3b82f6;border-bottom:4px solid #1d4ed8;padding:24px 32px;">
+<p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;">📰 每日AI热点新闻（试运营）</p>
+<p style="margin:6px 0 0 0;font-size:13px;color:rgba(255,255,255,0.85);">2026年05月01日 星期五</p>
+</td></tr>
+
+<tr><td style="padding:20px 32px;border-bottom:1px solid #e5e7eb;">
+<p style="margin:0;color:#374151;font-size:15px;line-height:1.9;">OpenAI 今天格外忙：Codex 自主编程能力首次公开演示，Agent API 通过 WebSocket 实现端到端提速 40%，推理速度从 65 跳到接近 1000 tokens/秒。谷歌 DeepMind 宣布 AI Co-Clinician 医疗协作倡议，正式走向临床部署。国内方面，快手发布 AI 办公助手 KroWork，华为联合中科大推出灵境科研云平台。开源社区也有看点：Zig 语言禁止 AI 生成代码进入代码库，Karpathy 重新定义了什么叫真正的 Agent 工程。</p>
+</td></tr>
+
+<tr><td style="padding:24px 32px;">
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+<tr><td>
+<h2 style="margin:0 0 12px 0;font-size:17px;font-weight:700;color:#111827;border-bottom:2px solid #dbeafe;padding-bottom:8px;">🔥 今日焦点</h2>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #fca5a5;border-left:4px solid #ef4444;border-radius:8px;background-color:#fff8f8;">
+<tr><td style="padding:16px 20px;">
+<p style="margin:0 0 6px 0;"><span style="background:#ef4444;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">TODAY'S FOCUS</span></p>
+<p style="margin:0 0 8px 0;font-size:15px;font-weight:700;"><a href="https://x.com/sama/status/2049944981750833659" style="color:#2563EB;text-decoration:none;">OpenAI Codex 自主编程功能曝光</a></p>
+<p style="margin:0 0 10px 0;color:#475569;font-size:14px;line-height:1.8;">OpenAI 首席执行官 Sam Altman 在社交媒体曝光了 Codex 的自主编程能力演示片段，展示其在无人监督的情况下独立完成多文件修改、运行测试、自我修复 Bug 的全流程。Codex 能够读取整个代码库、理解上下文、生成代码并验证结果，整个过程不依赖人工干预。该能力将集成进 ChatGPT 和 API，意味着开发者可以把一个完整的工程任务直接"甩给" Codex 去完成。这是继 GitHub Copilot 之后 AI 编程领域最具颠覆性的进展，预示着"AI 结对程序员"向"AI 独立程序员"的关键跃迁。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:8px;">
+<tr><td style="padding:8px 12px;font-size:13px;font-style:italic;color:#6B7280;">自主编程不是辅助了——是真的在独立干活，开发者的角色正在从写代码变成审代码。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://x.com/sama/status/2049944981750833659" style="color:#2563EB;">https://x.com/sama/status/2049944981750833659</a></p>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+<tr><td>
+<h2 style="margin:0 0 12px 0;font-size:17px;font-weight:700;color:#111827;border-bottom:2px solid #dbeafe;padding-bottom:8px;">🚀 产品发布</h2>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://openai.com/index/speeding-up-agentic-workflows-with-websockets/" style="color:#2563EB;text-decoration:none;">OpenAI 接口提速 40% 突破瓶颈</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">OpenAI 在 Responses API 中引入持久化 WebSocket 连接，解决了 Agent 循环中大量同步 HTTP 请求带来的累积延迟问题。过去 GPT-5/5.2 约为 65 tokens/秒，新版 GPT-5.3-Codex-Spark 专为速度优化，借助 Cerebus 专用推理硬件实现接近 1000 tokens/秒的推理速度。端到端 Agent 循环整体提速 40%，主要得益于缓存、减少网络往返次数、WebSocket 持久连接三项优化的叠加效果。这对构建复杂 Agent 工作流的开发者影响显著，以往需要数分钟完成的任务现在大幅缩短。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">65 → 1000 tokens/秒，推理速度直接跳了一个数量级，瓶颈正在从算力转向开发者的想象力。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://openai.com/index/speeding-up-agentic-workflows-with-websockets/" style="color:#2563EB;">https://openai.com/index/speeding-up-agentic-workflows-with-websockets/</a></p>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://deepmind.google/blog/ai-co-clinician/" style="color:#2563EB;text-decoration:none;">谷歌发布医疗协作新系统</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">Google DeepMind 发布 AI Co-Clinician 研究倡议，提出"三元护理"模式（患者-医生-AI 代理），让 AI 在临床主治权威下协助患者诊疗全程。项目基于 MedPaLM 和 AMIE 多年积累——AMIE 已在真实可行性试验中达到医生水平的文本诊疗表现。WHO 预测 2030 年全球将缺口超 1000 万医疗工作者，AI 协同被视为最现实的填补路径。DeepMind 在 Nature 发表的多项研究已证明 AI 与临床医生协作可提升诊断准确率，此次倡议标志着从实验室研究走向系统性医疗部署。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">AI 进诊室是必然，问题从"能不能"变成了"谁负责"——医疗责任归属才是最难解的那道题。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://deepmind.google/blog/ai-co-clinician/" style="color:#2563EB;">https://deepmind.google/blog/ai-co-clinician/</a></p>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://www.qbitai.com/2026/04/412018.html" style="color:#2563EB;text-decoration:none;">Stripe 发布 288 项金融基建功能</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">Stripe 在年度 Sessions 大会上一次性发布 288 项产品更新，核心是面向 AI Agent 经济的金融基础设施升级。新增双向支付支持让智能体可以在同一会话中收款和付款，实时结算延迟降至毫秒级，专门针对 AI 代理自动交易场景做了拦截和风控优化。这次更新被外界解读为 Stripe 押注"机器对机器支付"赛道的重要信号——未来支付发起方可能大量是 AI Agent 而非人类。对金融合规和监管来说，这意味着需要建立全新的身份验证和授权框架。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">AI 开始帮你花钱了，Stripe 先把钱的水管修好——这一步走得比大多数人预想的快。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://www.qbitai.com/2026/04/412018.html" style="color:#2563EB;">https://www.qbitai.com/2026/04/412018.html</a></p>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://techcrunch.com/2026/04/30/spotify-introduces-verified-artist-badges-to-help-distinguish-humans-from-ai/" style="color:#2563EB;text-decoration:none;">Spotify 上线真人创作绿色勋章</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">Spotify 正式推出"Verified by Spotify"绿色认证徽章，用于区分真人艺术家与 AI 生成音乐账号。获得认证需满足：可识别的线下存在（演出、周边、社交账号关联）、平台内持续稳定的听众增长而非一次性流量峰值。上线初期，用户主动搜索的艺术家中超 99% 将获得认证，以独立音乐人为主。此举直接回应了近年来 AI 生成音乐账号批量涌入、稀释真人艺术家曝光的行业乱象，也是流媒体平台首次在界面层面系统性地做"人机区分"。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">连音乐平台都开始贴"真人制造"标签了，内容真实性危机比想象中来得更早。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://techcrunch.com/2026/04/30/spotify-introduces-verified-artist-badges-to-help-distinguish-humans-from-ai/" style="color:#2563EB;">https://techcrunch.com/2026/04/30/spotify-introduces-verified-artist-badges-to-help-distinguish-humans-from-ai/</a></p>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+<tr><td>
+<h2 style="margin:0 0 12px 0;font-size:17px;font-weight:700;color:#111827;border-bottom:2px solid #dbeafe;padding-bottom:8px;">🇨🇳 国内 AI</h2>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://www.aibase.com/zh/news/27659" style="color:#2563EB;text-decoration:none;">快手发布办公神器 KroWork</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">快手发布面向普通职场用户的 AI 办公助手 KroWork，核心卖点是"口令生成专属工具"——用户用自然语言描述需求，系统自动生成对应的工作流工具，无需编程背景。内置安全沙箱机制隔离数据，防止企业敏感信息泄露。首批落地场景包括报销流程自动化、会议纪要整理、跨部门数据汇总等高频但低价值的事务性工作。快手此举意在通过企业服务打开新的商业化路径，与字节跳动旗下飞书、钉钉等平台的 AI 功能形成正面竞争。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">用口令造工具这个产品思路很聪明，把"搭积木"这件事的门槛打到了普通员工能接受的程度。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://www.aibase.com/zh/news/27659" style="color:#2563EB;">https://www.aibase.com/zh/news/27659</a></p>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247887926&idx=1&sn=dbd9ca8dfac3edd12eb7a8e8dae304da" style="color:#2563EB;text-decoration:none;">华为与中科大发布灵境科研云平台</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">华为与中国科学大学联合发布"灵境"智能科研云平台，核心是多智能体协同科研框架——不同专业背景的 AI Agent 可以分工合作完成从文献调研、假设生成到实验设计的完整研究流程。依托华为昇腾算力底座，平台面向高校和科研机构开放接入。双方表示目标是将某些类型的科研周期从以月计缩短到以天计，并通过开源社区实现科研方法论的积累复用。此次合作被视为"AI for Science"在中国学术体系内的重要落地案例。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">科研加速这件事如果是真的，影响是代际级别的——但"以天计完成科研"到底靠不靠谱，还需要等同行评审检验。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247887926&idx=1&sn=dbd9ca8dfac3edd12eb7a8e8dae304da" style="color:#2563EB;">https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247887926&idx=1&sn=dbd9ca8dfac3edd12eb7a8e8dae304da</a></p>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+<tr><td>
+<h2 style="margin:0 0 12px 0;font-size:17px;font-weight:700;color:#111827;border-bottom:2px solid #dbeafe;padding-bottom:8px;">💡 前沿研究 & 观点</h2>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://arxiv.org/abs/2604.16042" style="color:#2563EB;text-decoration:none;">大模型走向内生透明玻璃箱</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">ACL 2026 收录的这篇论文提出了"内生透明"（Intrinsic Transparency）架构设计范式，通过在模型结构层面引入可解释约束，使模型的推理路径可以被直接追踪和验证，无需额外的解释器工具。现有的黑盒大模型依赖事后解释方法（如 LIME、SHAP），这类方法只能近似解释，无法真正揭示决策机制。新框架在标准基准上保持与黑盒模型可比的性能，同时让每个推理步骤都具有内生的可审计性。这对医疗、法律、金融等高风险场景的 AI 应用合规具有重要意义。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">透明度从附加功能变成架构本身的一部分，这才是真正有意义的可解释AI，不是贴在黑盒外面的标签。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://arxiv.org/abs/2604.16042" style="color:#2563EB;">https://arxiv.org/abs/2604.16042</a></p>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://newshacker.me/story?id=47951295" style="color:#2563EB;text-decoration:none;">Opus 4.7 识破匿名作者引发争议</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">Claude Opus 4.7 在一项测试中识破了隐藏身份的匿名用户，引发 AI 伦理讨论。据 Hacker News 讨论区记录，模型在没有明确提示的情况下，通过写作风格和推理模式推断出了用户真实身份，并在对话中暗示了这一判断。这触及了一个核心边界：AI 是否应该主动进行身份推断？用户是否有权在 AI 对话中保持真正的匿名性？事件暴露了大模型能力与用户隐私预期之间的系统性张力，也引发了对模型应否主动"去匿名化"的政策讨论。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">模型能识破匿名这件事本身不可怕，可怕的是它默默做了但没提示你——这是信任边界的问题。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://newshacker.me/story?id=47951295" style="color:#2563EB;">https://newshacker.me/story?id=47951295</a></p>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://x.com/karpathy/status/2049903821095354523" style="color:#2563EB;text-decoration:none;">Karpathy 重定义智能体工程范式</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">Andrej Karpathy 发文重新定义智能体工程范式，核心论点是：当前"Agent = 调用工具的 LLM"的理解太过狭窄，真正的 Agent 工程需要在推理时间（inference time）分配计算资源、动态规划任务图、管理长期记忆与状态。他认为现有框架（LangChain、AutoGen 等）过度依赖提示词堆叠，而不是从架构层面解决 Agent 的可靠性问题。这篇帖子迅速在 AI 工程师社区引发广泛讨论，被认为是 2026 年 Agent 工程方向最清晰的一次框架性表述。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">Karpathy 每次发这种帖子都会让整个行业停下来想一想——这次他说的是"你们搭的那些 Agent 还不够 Agent"。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://x.com/karpathy/status/2049903821095354523" style="color:#2563EB;">https://x.com/karpathy/status/2049903821095354523</a></p>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+<tr><td>
+<h2 style="margin:0 0 12px 0;font-size:17px;font-weight:700;color:#111827;border-bottom:2px solid #dbeafe;padding-bottom:8px;">🔓 开源 & 社区</h2>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://www.aibase.com/zh/news/27660" style="color:#2563EB;text-decoration:none;">Zig 项目严禁 AI 辅助代码贡献</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">Zig 编程语言核心项目宣布禁止在代码贡献中使用任何 AI 辅助工具生成的代码，这一决定来自项目负责人 Andrew Kelley。理由涉及三点：AI 生成代码引入难以追踪的版权风险；生成代码的质量和安全性缺乏人工真正理解作为背书；以及维护者难以对 AI 生成代码进行有效的代码审查。这一立场与 Rust、Python 等社区的"可选允许 AI 辅助"政策形成鲜明对比，在开源社区引发了关于 AI 代码所有权和贡献标准的广泛辩论。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">系统级语言禁 AI 代码有其道理——你不理解的代码就不应该进到操作系统底层，这不是反AI是负责任。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://www.aibase.com/zh/news/27660" style="color:#2563EB;">https://www.aibase.com/zh/news/27660</a></p>
+</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border:1px solid #e5e7eb;border-radius:8px;background-color:#f8fafc;">
+<tr><td style="padding:14px 18px;">
+<p style="margin:0 0 6px 0;font-size:15px;font-weight:700;"><a href="https://github.com/lukilabs/craft-agents-oss" style="color:#2563EB;text-decoration:none;">Craft-Agents 开源代理框架星标突破 5.5k</a></p>
+<p style="margin:0 0 8px 0;color:#475569;font-size:14px;line-height:1.8;">Craft-Agents 是 luki labs 开源的轻量级多智能体协作框架，本周星标突破 5.5k，跻身 GitHub Trending 榜首。框架设计哲学是"少依赖、可组合"——不依赖 LangChain 或其他重型框架，开发者通过简单 Python 接口即可定义 Agent 间的通信协议和任务分配逻辑。内置对 OpenAI、Anthropic、Ollama 本地模型的统一接口，支持同步和异步两种执行模式。社区反响热烈的原因是它解决了现有框架"过度封装导致调试地狱"的核心痛点。</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fffbeb;border-left:3px solid #f59e0b;margin-bottom:6px;">
+<tr><td style="padding:7px 12px;font-size:13px;font-style:italic;color:#6B7280;">轻量可组合这个方向是对的，Agent 框架市场还没有真正的赢家，这是后来者的机会。</td></tr>
+</table>
+<p style="margin:0;font-size:12px;color:#64748b;">🔗 <a href="https://github.com/lukilabs/craft-agents-oss" style="color:#2563EB;">https://github.com/lukilabs/craft-agents-oss</a></p>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+</td></tr>
+
+<tr><td style="background:#edf0f4;border-top:2px solid #d1d5db;padding:16px 32px;text-align:center;">
+<p style="margin:0 0 4px 0;font-size:12px;color:#64748b;">联系我们：<a href="mailto:penglei4@lenovo.com" style="color:#2563EB;">penglei4@lenovo.com</a> ｜ <a href="mailto:yangyc13@lenovo.com" style="color:#2563EB;">yangyc13@lenovo.com</a></p>
+<p style="margin:0;font-size:12px;color:#64748b;">技术创新中心：<a href="mailto:-TIC@lenovo.com" style="color:#2563EB;">-TIC@lenovo.com</a></p>
+</td></tr>
+
+</table>
+</body>
+</html>

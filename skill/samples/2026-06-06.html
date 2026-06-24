@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日AI热点新闻（试运营）</title>
+</head>
+<body style="margin:0;padding:0;font-family:'PingFang SC','Microsoft YaHei','Inter','Helvetica Neue',Arial,sans-serif;background-color:#eef1f5;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding:24px 0;">
+    <tr><td align="center">
+      <table width="700" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border:1px solid #c9cdd4;border-radius:10px;overflow:hidden;">
+        <tr>
+          <td style="background-color:#3b82f6;padding:28px 30px;text-align:center;border-bottom:4px solid #1d4ed8;">
+            <h1 style="color:#ffffff;margin:0;font-size:22px;font-weight:700;letter-spacing:0.5px;">📰 每日AI热点新闻（试运营）</h1>
+            <p style="color:rgba(255,255,255,0.85);margin:8px 0 0 0;font-size:13px;">2026年06月06日 星期六</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:22px 36px 18px;">
+            <p style="color:#374151;font-size:15px;line-height:1.9;margin:0;">今天的信息密度很高，一半在讲 AI 从 demo 走向工作流，另一半在提醒 reliability 与 governance 不能掉队。产品面上，Google 与腾讯都在扩展 AI 进入真实生产和创作场景的深度，B 站则继续把 AI 创作推向大众参与。研究面上，自我纠错幻觉、Video2LoRA、VASO 和 Discrete-WAM 分别指向可靠性、长视频理解、具身安全和世界模型路线。开源侧的 open-notebook、Agent-Reach 和 MiroFish 说明，AI 工具链已经开始从单点模型竞争转向基础设施层竞争。整体看，行业正从“谁的模型更强”转向“谁能把模型嵌进科研、企业和 agent 系统”。</p>
+          </td>
+        </tr>
+        <tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+        <tr><td style="padding:22px 36px 10px;"><h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">🔥 今日焦点</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #fca5a5;border-left:4px solid #ef4444;background-color:#ffffff;border-radius:8px;">
+          <span style="display:inline-block;background-color:#ef4444;color:#ffffff;font-size:11px;padding:2px 10px;border-radius:10px;font-weight:600;margin-bottom:8px;">焦点</span>
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://www.anthropic.com/research/making-claude-a-chemist" style="color:#2563EB;text-decoration:none;">Anthropic 让 Claude 开始读懂化学谱图</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">Anthropic 6 月 5 日发文介绍其把 Claude 用到化学分析场景的首批结果，切入点是实验室最常见的 NMR 氢谱解读。文章由公司化学家 David Kamber 撰写，核心任务是让模型在白板分子结构、仪器读数、数据库查询字符串以及专利、论文记法之间来回切换。官方明确表示，他们正在与合成、计算和分析化学家合作，让 Claude 更适合真实研发流程，而不是只会回答通用化学常识题。对企业研发来说，这意味着通用大模型开始从“懂文本”转向“懂专业表征”，一旦能稳定处理谱图、专利和实验记录，药物与材料研发工作流会被直接改写。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：真正值钱的不是“AI 懂化学”这句口号，而是它能不能吃下实验室里最脏最碎的表征数据。Anthropic 这步如果站稳，下一阶段竞争就不是聊天质量，而是谁先接管科研工作台。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://www.anthropic.com/research/making-claude-a-chemist" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://www.anthropic.com/research/making-claude-a-chemist</a></p>
+        </td>
+      </tr>
+    </table>
+    </td></tr><tr><td style="padding:22px 36px 10px;"><h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">🚀 产品与平台</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://x.com/GoogleAI/status/2062942864288387430" style="color:#2563EB;text-decoration:none;">Google 同日推进图像、科研、端侧和实时音乐四条线</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">GoogleAI 官方账号同日集中公布多项更新，覆盖图像生成、科学研究、端侧部署和实时音乐创作四条线。公开摘要提到香蕉模型正式启用，科学智能系统开始支持自主构建假说，离线端侧模型继续压低内存需求，音乐工具则强调实时互动创作。虽然单条动态没有展开完整参数，但这一轮发布的共同点很明确：既要把前沿能力放进研究和创作场景，也要把模型往本地设备和低延迟体验推进。对谷歌而言，这不是单点模型刷榜，而是在铺一整套从云到端、从科研到娱乐的产品矩阵。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：Google 现在越来越像“产品编排者”而不只是“模型供应商”。只要四条线有两条真正跑出用户量，它的生态黏性就会继续抬高。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://x.com/GoogleAI/status/2062942864288387430" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://x.com/GoogleAI/status/2062942864288387430</a></p>
+        </td>
+      </tr>
+    </table>
+    
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://www.qbitai.com/2026/06/430758.html" style="color:#2563EB;text-decoration:none;">腾讯云把 WorkBuddy 卖成 AI Native 组织方案</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">腾讯云在 6 月 5 日 AI 产业应用大会上正式发布 WorkBuddy 企业版和 Agent Suite，并把产品定位成“从超级个体到超级团队”的 AI Native 组织方案。量子位报道显示，WorkBuddy 企业版提供 7×24 专家数字员工、人与 AI 协作的团队模式，以及企业级管理后台三大核心能力。它还把腾讯文档、腾讯网盘和腾讯乐享三类产品原生接入，目标是打通内容创作、知识沉淀和能力复用的完整链路。比起再做一个聊天入口，腾讯这次更像是在卖企业 AI 的操作系统：先把数字员工和知识资产治理做起来，再谈规模化落地。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：国内大厂终于开始少讲“一个超级助手”，多讲“一个可治理的超级团队”。企业真金白银买单的，通常不是会聊天的模型，而是能被管理、被复用、被审计的组织能力。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://www.qbitai.com/2026/06/430758.html" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://www.qbitai.com/2026/06/430758.html</a></p>
+        </td>
+      </tr>
+    </table>
+    
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://www.qbitai.com/2026/06/430752.html" style="color:#2563EB;text-decoration:none;">B 站用公开赛试探中国版 Build in Public</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">B 站 6 月 5 日启动“build in bilibili · AI 创造公开赛”，赛制强调“公开做产品，观众即用户”。量子位披露，这场比赛不限制年龄、学历、职业和开发经验，参赛者只要用 AI 做出可运行、可交互的产品并持续公开连载，就能参赛。官方透露，4 月底官宣概念后已经收到超千份意向报名，其中非专业开发者占比达到 60%，未成年和银发用户占比达到 17%。这说明 AI 创作正在从开发者圈层向大众扩散，B 站想要抢的是中国版 Build in Public 的社区心智，而不是一场一次性的营销赛事。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：最有意思的不是比赛本身，而是“投币和弹幕变成产品评审机制”。如果 B 站真把用户反馈和产品迭代绑在一起，它拿到的会是一条很难复制的原生分发链。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://www.qbitai.com/2026/06/430752.html" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://www.qbitai.com/2026/06/430752.html</a></p>
+        </td>
+      </tr>
+    </table>
+    </td></tr><tr><td style="padding:22px 36px 10px;"><h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">💡 前沿研究</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://arxiv.org/abs/2606.05976" style="color:#2563EB;text-decoration:none;">论文质疑“自我纠错”神话：模型更会纠正别人，不会纠正自己</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">6 月 4 日提交的论文《The Self-Correction Illusion》直接挑战了“模型会自我反思就更可靠”的常见假设。研究者发现，LLM 往往不能有效修正自己刚刚给出的错误答案，但如果把同样的错误包装成“别人写的”，模型反而更容易指出问题。也就是说，许多看似有效的 self-correction，很可能只是对对话模板和身份设定的偏好，而不是真正的推理复核能力。对做 agent 和 long reasoning 的团队来说，这个结论很扎心：不能把“再想一遍”直接当成可靠性保险。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：这篇论文像是给“多想一步就更安全”泼了一盆冷水。真正的鲁棒性，还是得靠外部校验、工具链和结构化流程，不是靠模型自我感动。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://arxiv.org/abs/2606.05976" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://arxiv.org/abs/2606.05976</a></p>
+        </td>
+      </tr>
+    </table>
+    
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://arxiv.org/abs/2606.05395" style="color:#2563EB;text-decoration:none;">VASO 想把具身智能的“会做”和“可审计”绑在一起</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">VASO 的标题里直接把目标写得很硬：为 Physical AI Agents 提供 formally verifiable self-evolving skills。按来源摘要，这套框架把“技能自我演化”和“形式化可验证”放在一起做，并给出了 97.2% 的具身智能合规率表现。过去机器人 agent 的难点往往不是学不会，而是学出来的技能难以证明安全、难以上生产线。VASO 的价值就在于，它试图把强化学习式迭代和安全验证链条合并，让“会做”与“可审计”同时成立。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：机器人行业最缺的从来不是 demo，而是可验证。谁能先把安全证明做成能力层，谁就更接近真正的商业部署。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://arxiv.org/abs/2606.05395" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://arxiv.org/abs/2606.05395</a></p>
+        </td>
+      </tr>
+    </table>
+    
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://huggingface.co/papers/2606.05645" style="color:#2563EB;text-decoration:none;">Discrete-WAM 把世界模型往“可决策”再推一步</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">Discrete-WAM 把世界模型和策略学习统一到离散的 vision-action token 编辑框架里，并强调反事实推理能力。来源摘要提到，它可以预测多种不同驾驶未来场景，用于自动驾驶世界模型训练。相比只做视频预测的世界模型，这类方法更接近“既能想象未来、又能服务决策”的路线。自动驾驶领域要的从来不是会生成画面，而是会生成足够可用、可比较、可反事实推演的未来状态。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：世界模型如果只是好看，那还是演示；能给策略学习供血，才是真基础设施。Discrete-WAM 走的是更硬的那条路。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://huggingface.co/papers/2606.05645" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://huggingface.co/papers/2606.05645</a></p>
+        </td>
+      </tr>
+    </table>
+    
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://huggingface.co/papers/2606.04351" style="color:#2563EB;text-decoration:none;">Video2LoRA 把长视频理解改成“先压成参数，再来问答”</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">Video2LoRA 试图把视频理解从“把大量视觉 token 塞进上下文”改成“先把视频压成一个 LoRA 适配器”。Hugging Face 页面给出的结果是，推理阶段可以单次 forward 将视频转成适配器，在回答时把视觉 token 负载最多降到 1500 倍以下，并带来 6 到 80 倍的速度提升。论文的关键点不只是快，而是把超长视频理解的成本结构改掉：模型不再持续吃上下文，而是先做参数化内化。若结果可复现，这会直接影响长视频问答、监控分析和视频 agent 的部署方式。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：大家都在卷更大的上下文，但 Video2LoRA 的思路是换账本。把 token 成本变成参数成本，才可能把视频 agent 做到生产级。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://huggingface.co/papers/2606.04351" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://huggingface.co/papers/2606.04351</a></p>
+        </td>
+      </tr>
+    </table>
+    </td></tr><tr><td style="padding:22px 36px 10px;"><h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">🤖 Agent &amp; 工具</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://github.com/lfnovo/open-notebook" style="color:#2563EB;text-decoration:none;">open-notebook 证明 NotebookLM 赛道已经进入开源阶段</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">GitHub 上的 open-notebook 把自己定位成 NotebookLM 的开源实现，并强调更高的灵活性和更多功能。源摘要称项目热度已冲到 26k 星，这意味着“个人知识库 + 多源材料问答 + 可控工作流”依然是开发者最愿意安装的 AI 形态之一。相比封闭产品，开源替代的优势不在于界面更漂亮，而在于可以自己接模型、改索引、调流程，甚至部署在私有环境里。NotebookLM 证明了需求，open-notebook 则说明这个赛道开始进入“基础设施开源化”阶段。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：一个产品被大规模开源复刻，通常说明需求已经坐实。接下来拼的就不是概念，而是扩展性、私有化和二次开发能力。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://github.com/lfnovo/open-notebook" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://github.com/lfnovo/open-notebook</a></p>
+        </td>
+      </tr>
+    </table>
+    
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://github.com/Panniantong/Agent-Reach" style="color:#2563EB;text-decoration:none;">Agent-Reach 把“看见整个互联网”做成零 API 费工具链</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">Agent-Reach 的 README 直接打出“Give your AI agent eyes to see the entire internet”，核心卖点是零 API 费读取和搜索 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书等多个平台。来源摘要提到项目已获得 21k 星，说明开发者对“把网页和社交平台读通”的需求非常强。它切中的不是模型本身，而是 agent 最现实的短板：大部分产品一旦离开浏览器和平台 API，就成了看不见外网的盲人。谁先把跨平台读取做成低门槛基础设施，谁就更有机会拿走下一轮 agent 工具链红利。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：Agent 时代的入口，不一定是更强的模型，也可能是更便宜、更稳定的“读世界”能力。Agent-Reach 很懂这一点。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://github.com/Panniantong/Agent-Reach" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://github.com/Panniantong/Agent-Reach</a></p>
+        </td>
+      </tr>
+    </table>
+    
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://github.com/666ghj/MiroFish" style="color:#2563EB;text-decoration:none;">MiroFish 继续把“群体智能”包装成通用引擎</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">MiroFish 把自己定义成“通用群体智能引擎，预测万物”，GitHub 页面显示项目已经拿到 64k 星。它试图把多主体交互、群体决策和预测机制封装成一个通用引擎，而不只是某个垂类应用。这个方向有意思的地方在于，它把智能体价值从“单体更聪明”转向“群体如何形成有效判断”。如果 swarm intelligence 真的能被产品化，未来很多商业和社会预测工具都会从单模型输出，转成多主体博弈式结果。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：单体 agent 还在卷能力上限，MiroFish 已经在卷“集体怎么做判断”。这条路一旦跑通，会改写很多决策类产品的交互范式。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://github.com/666ghj/MiroFish" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://github.com/666ghj/MiroFish</a></p>
+        </td>
+      </tr>
+    </table>
+    </td></tr><tr><td style="padding:22px 36px 10px;"><h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">📌 行业观察</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border-collapse:separate;">
+      <tr>
+        <td style="padding:14px 18px;border:1px solid #e5e7eb;background-color:#f8fafc;border-radius:8px;">
+          
+          <h3 style="font-size:15px;font-weight:700;margin:8px 0 8px;line-height:1.6;">
+            <a href="https://the-decoder.com/satya-nadella-publicly-torches-a-vps-plan-to-make-microsofts-ai-agent-deliberately-addictive/" style="color:#2563EB;text-decoration:none;">Nadella 公开否掉“让 AI 助手成瘾”的产品方向</a>
+          </h3>
+          <div class="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 10px;">The Decoder 披露，微软 CEO Satya Nadella 公开痛批一份内部备忘录，该备忘录提出要让新 AI agent Scout 变得“deliberately addictive”。报道中给出的原话极重，Nadella 直接把这种方向定性为“absolutely insane”。这不是常见的公关式安全表态，而是把产品增长和行为操控的边界摆到了台面上。AI 助手一旦从“提高留存”滑向“设计成瘾”，下一个监管雷区就不再是 hallucination，而是数字成瘾与操纵伦理。</div>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+            <div style="font-size:13px;color:#6B7280;font-style:italic;line-height:1.8;">AI锐评：这件事的信号非常明确：AI 产品可以追求高频，但不能把“上瘾”当策略。谁先踩这条线，谁就可能先撞上监管。</div>
+          </td></tr></table>
+          <p style="font-size:12px;color:#64748b;margin:10px 0 0;">🔗 <a href="https://the-decoder.com/satya-nadella-publicly-torches-a-vps-plan-to-make-microsofts-ai-agent-deliberately-addictive/" style="color:#2563EB;text-decoration:none;word-break:break-all;">https://the-decoder.com/satya-nadella-publicly-torches-a-vps-plan-to-make-microsofts-ai-agent-deliberately-addictive/</a></p>
+        </td>
+      </tr>
+    </table>
+    </td></tr>
+        <tr>
+          <td style="background-color:#edf0f4;border-top:2px solid #d1d5db;padding:18px 36px;text-align:center;font-size:12px;color:#64748b;line-height:2;">
+            联系我们：<a href="mailto:penglei4@lenovo.com" style="color:#2563EB;text-decoration:none;">penglei4@lenovo.com</a> ｜ <a href="mailto:yangyc13@lenovo.com" style="color:#2563EB;text-decoration:none;">yangyc13@lenovo.com</a><br>
+            技术创新中心：<a href="mailto:-TIC@lenovo.com" style="color:#2563EB;text-decoration:none;">-TIC@lenovo.com</a>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

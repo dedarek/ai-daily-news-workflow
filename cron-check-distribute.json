@@ -1,0 +1,56 @@
+{
+  "id": "960ab210-0b3e-4d9a-9989-02d0765bd164",
+  "name": "ai-daily-news-check-and-distribute",
+  "enabled": true,
+  "createdAtMs": 1777741590074,
+  "updatedAtMs": 1782314496483,
+  "agentId": "research",
+  "sessionKey": "agent:research:discord:channel:1496713694149738586",
+  "schedule": {
+    "kind": "cron",
+    "expr": "30 14 * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "sessionTarget": "isolated",
+  "wakeMode": "now",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "[CRON: daily-news-distribute] 14:30 自动质量检查 + 全员分发。\n\n如果当日 review 邮件和播客均已生成且通过质量门禁，直接执行全员分发，无需等待人工确认。\n\n执行命令（仅一条）：\npython3 /root/.openclaw/workspace-research/skills/ai-daily-news/scripts/check_and_distribute.py\n\n参数：host=auto, security=full, ask=off\n\n执行后汇报：成功数/失败数、send-log 路径、是否全部完成。",
+    "timeoutSeconds": 1800
+  },
+  "delivery": {
+    "mode": "announce",
+    "channel": "discord",
+    "to": "channel:1496713694149738586"
+  },
+  "failureAlert": {
+    "after": 1,
+    "channel": "discord",
+    "to": "channel:1496713694149738586"
+  },
+  "state": {
+    "nextRunAtMs": 1782369000000,
+    "lastRunAtMs": 1782282600012,
+    "lastRunStatus": "error",
+    "lastStatus": "error",
+    "lastDurationMs": 11789,
+    "lastDeliveryStatus": "unknown",
+    "consecutiveErrors": 3,
+    "consecutiveSkipped": 0,
+    "lastDiagnostics": {
+      "summary": "Copilot token exchange failed: HTTP 403",
+      "entries": [
+        {
+          "ts": 1782282611799,
+          "source": "agent-run",
+          "severity": "error",
+          "message": "Copilot token exchange failed: HTTP 403"
+        }
+      ]
+    },
+    "lastDiagnosticSummary": "Copilot token exchange failed: HTTP 403",
+    "lastErrorReason": "auth",
+    "lastFailureAlertAtMs": 1782282611814,
+    "lastError": "FailoverError: Copilot token exchange failed: HTTP 403"
+  }
+}
