@@ -222,7 +222,7 @@ def request_deepseek_json(
         'reasoning_effort': 'low',
         'temperature': 0.3,
     }).encode('utf-8')
-    response_data: dict | None = None
+    last_content_error = ''
     for attempt in range(1, 4):
         request = Request(
             f'{endpoint}/chat/completions',
@@ -238,7 +238,14 @@ def request_deepseek_json(
         try:
             with urlopen(request, timeout=240) as response:
                 response_data = json.loads(response.read().decode('utf-8'))
-            break
+            choice = response_data['choices'][0]
+            if choice.get('finish_reason') != 'stop':
+                raise RuntimeError(f"incomplete response: finish_reason={choice.get('finish_reason')}")
+            try:
+                result = extract_json_object(choice['message']['content'])
+            except (json.JSONDecodeError, RuntimeError) as exc:
+                raise RuntimeError(f'invalid JSON response: {exc}') from exc
+            return result, response_data.get('usage') or {}
         except HTTPError as exc:
             error_body = exc.read().decode('utf-8', errors='replace')[:1000]
             retryable = exc.code in (429, 500, 502, 503, 504)
@@ -248,12 +255,14 @@ def request_deepseek_json(
             delay = int(retry_after) if retry_after and retry_after.isdigit() else 30 * attempt
             print(f'OpenCode Go transient HTTP {exc.code}; retrying in {delay}s ({attempt}/3)', flush=True)
             time.sleep(delay)
-    if response_data is None:
-        raise RuntimeError('OpenCode Go returned no response')
-    choice = response_data['choices'][0]
-    if choice.get('finish_reason') != 'stop':
-        raise RuntimeError(f"OpenCode Go incomplete response: finish_reason={choice.get('finish_reason')}")
-    return extract_json_object(choice['message']['content']), response_data.get('usage') or {}
+        except RuntimeError as exc:
+            last_content_error = str(exc)
+            if attempt == 3:
+                raise RuntimeError(f'OpenCode Go content validation failed after 3 attempts: {exc}') from exc
+            delay = 10 * attempt
+            print(f'OpenCode Go {exc}; regenerating in {delay}s ({attempt}/3)', flush=True)
+            time.sleep(delay)
+    raise RuntimeError(f'OpenCode Go returned no valid response: {last_content_error}')
 
 
 def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list[Article], list[dict[str, str]], dict]:
