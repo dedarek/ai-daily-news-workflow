@@ -14,6 +14,7 @@ from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -255,11 +256,20 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
     request = Request(
         f'{endpoint}/chat/completions',
         data=payload,
-        headers={'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'},
+        headers={
+            'Authorization': f'Bearer {api_key}',
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'User-Agent': 'ai-daily-news-workflow/1.0',
+        },
         method='POST',
     )
-    with urlopen(request, timeout=240) as response:
-        response_data = json.loads(response.read().decode('utf-8'))
+    try:
+        with urlopen(request, timeout=240) as response:
+            response_data = json.loads(response.read().decode('utf-8'))
+    except HTTPError as exc:
+        error_body = exc.read().decode('utf-8', errors='replace')[:1000]
+        raise RuntimeError(f'OpenCode Go HTTP {exc.code}: {error_body}') from exc
     content = response_data['choices'][0]['message']['content']
     result = extract_json_object(content)
     allowed_urls = {item.url for item in candidate_articles}
