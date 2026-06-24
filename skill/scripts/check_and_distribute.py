@@ -17,7 +17,7 @@ SAMPLES_DIR = SKILL_DIR / 'samples'
 VALIDATOR = SKILL_DIR / 'scripts' / 'validate_html_quality.py'
 
 MIN_HTML_BYTES = 15 * 1024
-MIN_MP3_BYTES = 1 * 1024 * 1024
+MIN_MP3_BYTES = 1_000_000
 MAX_MP3_BYTES = 8 * 1024 * 1024
 FORBIDDEN_MARKERS = [
     'hubtoday',
