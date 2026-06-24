@@ -52,7 +52,7 @@ jobs:
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
           OPENCODE_GO_BASE_URL: https://opencode.ai/zen/go/v1
-          OPENCODE_GO_MODEL: deepseek-v4-flash
+          OPENCODE_GO_MODELS: deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5
         run: |
           python3 scripts/run_live_pipeline.py \
             --date "${{ steps.issue.outputs.date }}" \

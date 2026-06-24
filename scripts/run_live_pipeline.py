@@ -207,67 +207,86 @@ def extract_json_object(text: str) -> dict:
 def request_deepseek_json(
     *,
     endpoint: str,
-    model: str,
+    models: list[str],
     api_key: str,
     system_prompt: str,
     user_prompt: str,
-) -> tuple[dict, dict]:
-    payload = json.dumps({
-        'model': model,
-        'messages': [
-            {'role': 'system', 'content': system_prompt},
-            {'role': 'user', 'content': user_prompt},
-        ],
-        'response_format': {'type': 'json_object'},
-        'reasoning_effort': 'low',
-        'temperature': 0.3,
-    }).encode('utf-8')
-    last_content_error = ''
-    for attempt in range(1, 4):
-        request = Request(
-            f'{endpoint}/chat/completions',
-            data=payload,
-            headers={
-                'Authorization': f'Bearer {api_key}',
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'User-Agent': 'ai-daily-news-workflow/1.0',
-            },
-            method='POST',
-        )
-        try:
-            with urlopen(request, timeout=240) as response:
-                response_data = json.loads(response.read().decode('utf-8'))
-            choice = response_data['choices'][0]
-            if choice.get('finish_reason') != 'stop':
-                raise RuntimeError(f"incomplete response: finish_reason={choice.get('finish_reason')}")
+) -> tuple[dict, dict, str]:
+    model_errors: list[str] = []
+    for model_index, model in enumerate(models):
+        payload = json.dumps({
+            'model': model,
+            'messages': [
+                {'role': 'system', 'content': system_prompt},
+                {'role': 'user', 'content': user_prompt},
+            ],
+            'response_format': {'type': 'json_object'},
+            'reasoning_effort': 'low',
+            'temperature': 0.3,
+        }).encode('utf-8')
+        last_error = ''
+        for attempt in range(1, 4):
+            request = Request(
+                f'{endpoint}/chat/completions',
+                data=payload,
+                headers={
+                    'Authorization': f'Bearer {api_key}',
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'User-Agent': 'ai-daily-news-workflow/1.0',
+                },
+                method='POST',
+            )
             try:
-                result = extract_json_object(choice['message']['content'])
-            except (json.JSONDecodeError, RuntimeError) as exc:
-                raise RuntimeError(f'invalid JSON response: {exc}') from exc
-            return result, response_data.get('usage') or {}
-        except HTTPError as exc:
-            error_body = exc.read().decode('utf-8', errors='replace')[:1000]
-            retryable = exc.code in (429, 500, 502, 503, 504)
-            if not retryable or attempt == 3:
-                raise RuntimeError(f'OpenCode Go HTTP {exc.code}: {error_body}') from exc
-            retry_after = exc.headers.get('Retry-After')
-            delay = int(retry_after) if retry_after and retry_after.isdigit() else 30 * attempt
-            print(f'OpenCode Go transient HTTP {exc.code}; retrying in {delay}s ({attempt}/3)', flush=True)
-            time.sleep(delay)
-        except RuntimeError as exc:
-            last_content_error = str(exc)
-            if attempt == 3:
-                raise RuntimeError(f'OpenCode Go content validation failed after 3 attempts: {exc}') from exc
-            delay = 10 * attempt
-            print(f'OpenCode Go {exc}; regenerating in {delay}s ({attempt}/3)', flush=True)
-            time.sleep(delay)
-    raise RuntimeError(f'OpenCode Go returned no valid response: {last_content_error}')
+                with urlopen(request, timeout=240) as response:
+                    response_data = json.loads(response.read().decode('utf-8'))
+                choice = response_data['choices'][0]
+                if choice.get('finish_reason') != 'stop':
+                    raise RuntimeError(f"incomplete response: finish_reason={choice.get('finish_reason')}")
+                try:
+                    result = extract_json_object(choice['message']['content'])
+                except (json.JSONDecodeError, RuntimeError) as exc:
+                    raise RuntimeError(f'invalid JSON response: {exc}') from exc
+                return result, response_data.get('usage') or {}, model
+            except HTTPError as exc:
+                error_body = exc.read().decode('utf-8', errors='replace')[:1000]
+                last_error = f'HTTP {exc.code}: {error_body}'
+                retryable = exc.code in (429, 500, 502, 503, 504)
+                if not retryable:
+                    break
+                if attempt < 3:
+                    retry_after = exc.headers.get('Retry-After')
+                    delay = int(retry_after) if retry_after and retry_after.isdigit() else 20 * attempt
+                    print(
+                        f'OpenCode Go model={model} transient HTTP {exc.code}; '
+                        f'retrying in {delay}s ({attempt}/3)',
+                        flush=True,
+                    )
+                    time.sleep(delay)
+            except RuntimeError as exc:
+                last_error = str(exc)
+                if attempt < 3:
+                    delay = 8 * attempt
+                    print(
+                        f'OpenCode Go model={model} {exc}; regenerating in {delay}s ({attempt}/3)',
+                        flush=True,
+                    )
+                    time.sleep(delay)
+        model_errors.append(f'{model}: {last_error or "no valid response"}')
+        if model_index < len(models) - 1:
+            print(f'OpenCode Go switching model {model} -> {models[model_index + 1]}', flush=True)
+    raise RuntimeError('OpenCode Go model chain exhausted: ' + ' | '.join(model_errors))
 
 
 def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list[Article], list[dict[str, str]], dict]:
     endpoint = os.environ.get('OPENCODE_GO_BASE_URL', 'https://opencode.ai/zen/go/v1').rstrip('/')
-    model = os.environ.get('OPENCODE_GO_MODEL', 'deepseek-v4-flash')
+    configured_models = os.environ.get(
+        'OPENCODE_GO_MODELS',
+        'deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5',
+    )
+    models = [model.strip() for model in configured_models.split(',') if model.strip()]
+    if not models:
+        raise RuntimeError('OPENCODE_GO_MODELS must contain at least one model')
     candidates = [
         {'title': item.title, 'source_summary': item.summary, 'url': item.url, 'suggested_section': item.section}
         for item in candidate_articles
@@ -288,9 +307,9 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
 候选：
 {json.dumps(candidates, ensure_ascii=False)}
 '''.strip()
-    selection_result, selection_usage = request_deepseek_json(
+    selection_result, selection_usage, selection_model = request_deepseek_json(
         endpoint=endpoint,
-        model=model,
+        models=models,
         api_key=api_key,
         system_prompt=system_prompt,
         user_prompt=selection_prompt,
@@ -311,7 +330,7 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
         raise RuntimeError(f'LLM selection focus validation failed: first={selected[0][1]}, count={focus_count}')
 
     articles: list[Article] = []
-    editorial_usages: list[dict] = []
+    editorial_calls: list[dict] = []
     for batch_start in range(0, len(selected), 4):
         batch = selected[batch_start:batch_start + 4]
         batch_input = [
@@ -337,14 +356,14 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
 输入：
 {json.dumps(batch_input, ensure_ascii=False)}
 '''.strip()
-        batch_result, batch_usage = request_deepseek_json(
+        batch_result, batch_usage, batch_model = request_deepseek_json(
             endpoint=endpoint,
-            model=model,
+            models=models,
             api_key=api_key,
             system_prompt=system_prompt,
             user_prompt=batch_prompt,
         )
-        editorial_usages.append(batch_usage)
+        editorial_calls.append({'model': batch_model, 'usage': batch_usage})
         generated_items = batch_result.get('articles', [])
         if len(generated_items) != len(batch):
             raise RuntimeError(
@@ -380,9 +399,9 @@ S1是资深AI从业者，S2是产品视角。围绕最重要的5-7条新闻深�
 日报：
 {json.dumps([asdict(item) for item in articles], ensure_ascii=False)}
 '''.strip()
-    podcast_result, podcast_usage = request_deepseek_json(
+    podcast_result, podcast_usage, podcast_model = request_deepseek_json(
         endpoint=endpoint,
-        model=model,
+        models=models,
         api_key=api_key,
         system_prompt='你是中文AI播客编剧。只使用输入日报中的事实，输出必须是合法JSON对象。',
         user_prompt=podcast_prompt,
@@ -397,13 +416,13 @@ S1是资深AI从业者，S2是产品视角。围绕最重要的5-7条新闻深�
         raise RuntimeError(f'LLM returned {len(dialogue)} valid podcast turns; expected 12-18')
     metadata = {
         'provider': 'opencode-go',
-        'model': model,
+        'model_chain': models,
         'endpoint': endpoint,
         'calls': 5,
-        'usage': {
-            'selection': selection_usage,
-            'editorial_batches': editorial_usages,
-            'podcast': podcast_usage,
+        'call_details': {
+            'selection': {'model': selection_model, 'usage': selection_usage},
+            'editorial_batches': editorial_calls,
+            'podcast': {'model': podcast_model, 'usage': podcast_usage},
         },
     }
     return articles, dialogue, metadata
