@@ -15,10 +15,11 @@ from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
 TMP = Path('/tmp')
+TEST_RECIPIENT = 'yyc54321@126.com'
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Send the AI daily-news email to all configured recipients')
+    parser = argparse.ArgumentParser(description='Send the AI daily-news test email to the single approved recipient')
     parser.add_argument('--date', required=True, help='YYYY-MM-DD')
     parser.add_argument('--dry-run', action='store_true', help='Build and validate messages without SMTP delivery')
     return parser.parse_args()
@@ -42,7 +43,12 @@ def read_smtp_config() -> tuple[str, int, str, str]:
 
 def read_recipients() -> list[str]:
     text = (SKILL_DIR / 'references' / 'recipients.md').read_text(encoding='utf-8')
-    return list(dict.fromkeys(re.findall(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', text)))
+    configured = list(dict.fromkeys(re.findall(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', text)))
+    if configured != [TEST_RECIPIENT]:
+        raise RuntimeError(
+            f'Test-mode recipient guard rejected configuration: expected only {TEST_RECIPIENT}, got {configured}'
+        )
+    return configured
 
 
 def build_message(date_str: str, sender: str, recipient: str, html_content: str, mp3_path: Path) -> MIMEMultipart:
@@ -83,6 +89,8 @@ def main() -> int:
 
     html_content = html_path.read_text(encoding='utf-8')
     recipients = read_recipients()
+    if recipients != [TEST_RECIPIENT]:
+        raise RuntimeError('Recipient guard failed; refusing delivery')
     host, port, sender, password = read_smtp_config()
     delay = float(os.environ.get('AI_DAILY_SEND_DELAY', '8'))
     batch_pause = float(os.environ.get('AI_DAILY_BATCH_PAUSE', '30'))

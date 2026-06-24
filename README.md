@@ -17,7 +17,7 @@ chmod +x scripts/*.sh
 
 ```
 11:30  生成 + review 发 yyc54321@126.com
-14:30  无人取消 → 自动全员分发 48 人
+14:30  质量复检 → 仍仅发送测试邮箱
 ```
 
 ---
@@ -50,8 +50,9 @@ chmod +x scripts/*.sh
 **Review 收件人（11:30）**：
 - `yyc54321@126.com`
 
-**全员分发名单（14:30）**：
-- 见 `skill/references/recipients.md` — 共 48 人（联想内部）
+**当前测试收件人（所有流程）**：
+- `yyc54321@126.com`
+- 发送器带硬限制，任何其他地址都会导致任务终止
 
 ---
 
@@ -69,7 +70,7 @@ chmod +x scripts/*.sh
 11:30-14:30  管理员（BIL）可审核 review 邮件，有问题可取消
 
 14:30 CST  check-and-distribute cron 触发
-           └─ 质量检查通过 → 自动 send-all 48 人
+           └─ 质量检查通过 → 仅发送 yyc54321@126.com
 ```
 
 ---
@@ -192,14 +193,14 @@ skill/
 │   ├── content-rules.md        # 栏目结构、正文要求、锐评、去重
 │   ├── html-design.md          # 配色、字体、结构
 │   ├── smtp-config.md          # SMTP 配置
-│   ├── recipients.md           # 全员邮件收件人名单（48人）
+│   ├── recipients.md           # 唯一测试收件人
 │   ├── recent-issues-state.md  # 跨天去重状态
 │   └── send-log.md             # 发送日志
 ├── scripts/
 │   ├── check_and_distribute.py # 14:30 质量检查 + send-all
 │   ├── validate_html_quality.py # HTML 质量校验
 │   ├── smtp_probe.py           # SMTP 预检
-│   └── send-all-*.py           # 各天 send-all 脚本（/tmp 下）
+│   └── send_all.py             # 测试模式单收件人发送器
 ├── samples/                    # HTML 留样归档
 ├── logs/                       # 每日执行日志
 └── moss-ttsd/                  # 旧版 TTS 脚本（参考用）
@@ -220,7 +221,7 @@ skill/
 ### 任务 2: check-and-distribute
 - **时间**：每天 14:30 CST
 - **Session**：isolated
-- **操作**：运行 `check_and_distribute.py`，通过则全员分发
+- **操作**：运行 `check_and_distribute.py`，通过后仍只发送测试邮箱
 - **Auto-send**：无人取消则自动执行
 
 ---

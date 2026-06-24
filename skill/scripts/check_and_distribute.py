@@ -5,7 +5,6 @@ import argparse
 import html as html_lib
 import os
 import re
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -109,29 +108,10 @@ def count_body_blocks(html: str) -> int:
 
 
 def ensure_send_script(date_str: str, dry_run: bool) -> Tuple[Path, bool, str]:
-    target = TMP / f'send-all-{date_str}.py'
-    if target.exists():
-        return target, False, 'existing'
-
     bundled = SKILL_DIR / 'scripts' / 'send_all.py'
-    if bundled.exists():
-        return bundled, False, 'bundled'
-
-    candidates = sorted(TMP.glob('send-all-*.py'), key=lambda p: p.stat().st_mtime, reverse=True)
-    if not candidates:
-        raise FileNotFoundError(f'No template send-all script found under {TMP}')
-    source = candidates[0]
-    source_text = source.read_text(encoding='utf-8')
-    source_date_match = re.search(r'(\d{4}-\d{2}-\d{2})', source.name)
-    if not source_date_match:
-        raise RuntimeError(f'Cannot infer source date from {source.name}')
-    source_date = source_date_match.group(1)
-    new_text = source_text.replace(source_date, date_str)
-    if dry_run:
-        return target, True, f'would-copy-from {source.name}'
-    target.write_text(new_text, encoding='utf-8')
-    os.chmod(target, 0o755)
-    return target, True, f'copied-from {source.name}'
+    if not bundled.exists():
+        raise FileNotFoundError(f'Missing guarded test sender: {bundled}')
+    return bundled, False, 'bundled-test-only'
 
 
 def detect_running(send_script: Path) -> bool:

@@ -15,7 +15,7 @@
   "wakeMode": "now",
   "payload": {
     "kind": "agentTurn",
-    "message": "[CRON: daily-news-distribute] 14:30 自动质量检查 + 全员分发。\n\n如果当日 review 邮件和播客均已生成且通过质量门禁，直接执行全员分发，无需等待人工确认。\n\n执行命令（仅一条）：\npython3 /root/.openclaw/workspace-research/skills/ai-daily-news/scripts/check_and_distribute.py\n\n参数：host=auto, security=full, ask=off\n\n执行后汇报：成功数/失败数、send-log 路径、是否全部完成。",
+    "message": "[CRON: daily-news-distribute-test] 14:30 自动质量检查，仅允许发送测试邮箱 yyc54321@126.com，严禁发送任何其他地址。\n\n执行命令（仅一条）：\npython3 ~/.codex/skills/ai-daily-news/scripts/check_and_distribute.py\n\n执行后汇报测试邮箱发送结果和 send-log 路径。",
     "timeoutSeconds": 1800
   },
   "delivery": {

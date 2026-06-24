@@ -9,7 +9,8 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 - **受众**：公司内部技术团队
 - **发送渠道**：邮件（播客附件）+ 飞书消息（暂停）+ 飞书文档备份（暂停）
 - **发送时间**：每天 11:30 北京时间（定时自动 + 支持手动触发）
-- **每期条数**：12-15 条（最低 5 条，少于 5 条暂停发送） | **调性**：轻松可读 | **无需人工审核**
+- **每期条数**：12-15 条（最低 5 条，少于 5 条暂停发送） | **调性**：轻松可读
+- **当前模式**：测试模式，仅允许发送 `yyc54321@126.com`
 
 **⛔ 严格遵循 `references/fault-prevention.md` 中的所有约束规则。**
 
@@ -138,14 +139,16 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
       写 Python 脚本到 /tmp/send-email-YYYY-MM-DD.py → exec 执行 → 验证 result 文件存在且含 SUCCESS
       ```
     - exec 执行后必须确认 `/tmp/ai-daily-news-result-YYYY-MM-DD.txt` 存在且内容含 `SUCCESS`，否则视为发送失败，重试一次
-    - **第二步（自动）**：14:30 如无手动取消，自动执行全员分发
-    - ⛔ **11:30 cron 仅发 review 邮件给 yyc54321@126.com**，全员分发由 14:30 cron 自动执行
+    - **第二步（测试）**：14:30 质量复检后仍只允许发送 `yyc54321@126.com`
+    - ⛔ **所有自动与手动邮件任务都只能发送给 `yyc54321@126.com`**
     - 读取 `references/smtp-config.md`，标题 `每日AI热点新闻（试运营）`
     - 邮件正文为 HTML 内容
     - **如有播客音频**，将音频文件作为邮件附件发送
     - ⛔ **邮件格式要求**：用 `MIMEMultipart('alternative')`，纯文本作为 plain part + HTML 作为 html part。**绝对禁止把 HTML 文件作为附件发送**，HTML 必须是邮件正文（2026-04-21 事故：发成了附件导致收件人看到的是纯文本"请查看附件"）。不要用 `MIMEMultipart('mixed')` 除非有播客音频附件
     - 如有播客附件，则用 `MIMEMultipart('mixed')`，内部先放 `MIMEMultipart('alternative')`（text+html），再放音频附件
-    - ⛔ **全员分发限流规则**（手动触发时必须遵守）：
+    - ⛔ **测试发送规则**：
+      - 收件人必须严格等于 `yyc54321@126.com`
+      - 禁止读取、恢复或使用历史全员名单
       - 每封邮件之间间隔 **8-10 秒**
       - 每发 **10 封**后暂停 **30 秒**
       - 如果收到 451/421/550 错误（频率限制），暂停 **60 秒**后重连重试，最多重试 3 次
@@ -162,7 +165,7 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 - 文件名示例：`samples/2026-04-03.html`
 - 此步骤在分发（Step 4）完成后、收尾（Step 5）前执行
 
-### Step 4.6: 14:30 全员分发质量门禁（给独立 cron 用）
+### Step 4.6: 14:30 测试发送质量门禁（给独立 cron 用）
 - **⛔ 禁止再使用旧门禁：** `hubtoday_count > 0` / `<p>` 标签数量 > 0
 - 当前 HTML 模板允许使用 `table/div/td` 结构，**`<p>` 数量为 0 不代表异常**
 - 当前数据源已切换，**聚合源文案和域名都必须为 0 才算通过**（`hubtoday` / `hex2077` / `hextra` / `aibase.com`）
@@ -173,14 +176,14 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
   4. HTML 中聚合源/禁用域名计数为 0：`hubtoday`、`hex2077`、`hextra`、`aibase.com`、`wappoc_appmsgcaptcha`、`mp.weixin.qq.com/mp/wappoc`
   5. 提取唯一新闻原文链接数 ≥ 8，且不得为站点首页根路径
   6. 正文块统计需兼容 `<div>` / `<p>` / `<td>`，去标签后 ≥80 字的正文块至少 8 个
-- **只有以上门禁全部通过，才允许执行 `/tmp/send-all-YYYY-MM-DD.py`**
+- **只有以上门禁全部通过，才允许执行仓库内受限发送器，且收件人只能是 `yyc54321@126.com`**
 
 ### Step 5: 收尾
 - 更新 `references/recent-issues-state.md`
 - **⛔ 强制留痕日志（每次必须执行，不可跳过）**：将本次执行结果写入 `logs/YYYY-MM-DD.md`，内容包括：
   - 各步骤状态（✅/❌）+ 数据条数 + HTML大小 + 播客时长/大小
   - Review 邮件：收件人列表 + SMTP 实际执行结果（"Email sent to: ..."输出）
-  - 全员分发：成功数/总数 + 失败列表
+  - 测试发送：`yyc54321@126.com` 的成功或失败状态
   - 故障记录（如有）
   - 日志目录固定为 `logs/`（skill 目录下持久化存储，不用 /tmp）
 - 返回执行摘要（条数、各渠道状态、播客时长、异常记录）
