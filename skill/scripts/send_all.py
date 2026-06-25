@@ -22,6 +22,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Send the AI daily-news test email to the single approved recipient')
     parser.add_argument('--date', required=True, help='YYYY-MM-DD')
     parser.add_argument('--dry-run', action='store_true', help='Build and validate messages without SMTP delivery')
+    parser.add_argument('--subject-suffix', default='', help='Optional text appended to the email subject')
     return parser.parse_args()
 
 
@@ -51,9 +52,16 @@ def read_recipients() -> list[str]:
     return configured
 
 
-def build_message(date_str: str, sender: str, recipient: str, html_content: str, mp3_path: Path) -> MIMEMultipart:
+def build_message(
+    date_str: str,
+    sender: str,
+    recipient: str,
+    html_content: str,
+    mp3_path: Path,
+    subject_suffix: str = '',
+) -> MIMEMultipart:
     message = MIMEMultipart('mixed')
-    message['Subject'] = f'每日AI热点新闻（试运营）— {date_str}'
+    message['Subject'] = f'每日AI热点新闻（试运营）— {date_str}{subject_suffix}'
     message['From'] = sender
     message['To'] = recipient
 
@@ -97,7 +105,14 @@ def main() -> int:
     success = 0
 
     for index, recipient in enumerate(recipients, start=1):
-        message = build_message(args.date, sender, recipient, html_content, mp3_path)
+        message = build_message(
+            args.date,
+            sender,
+            recipient,
+            html_content,
+            mp3_path,
+            args.subject_suffix,
+        )
         if args.dry_run:
             print(f'✅ [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)
             success += 1

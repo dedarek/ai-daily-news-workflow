@@ -1,4 +1,4 @@
-name: AI Daily News Test
+name: AI Daily News Morning
 
 on:
   workflow_dispatch:
@@ -10,9 +10,12 @@ on:
         default: true
   schedule:
     - cron: "30 3 * * *"
+    - cron: "40 3 * * *"
+    - cron: "50 3 * * *"
+    - cron: "10 4 * * *"
 
 concurrency:
-  group: ai-daily-news-test
+  group: ai-daily-news-morning
   cancel-in-progress: false
 
 permissions:
@@ -21,7 +24,7 @@ permissions:
 jobs:
   build-validate-send:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     env:
       TZ: Asia/Shanghai
       TEST_RECIPIENT: yyc54321@126.com
@@ -30,24 +33,48 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Resolve issue date
+        id: issue
+        run: echo "date=$(TZ=Asia/Shanghai date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Check out published content
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: published-site
+
+      - name: Check morning delivery marker
+        id: delivery
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            SENT=$(python3 scripts/delivery_marker.py check \
+              --site-dir published-site \
+              --date "${{ steps.issue.outputs.date }}" \
+              --phase morning)
+          else
+            SENT=false
+          fi
+          echo "skip=$SENT" >> "$GITHUB_OUTPUT"
+          echo "Morning already sent: $SENT"
+
       - name: Set up Python
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install media dependency
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Resolve issue date
-        id: issue
-        run: echo "date=$(TZ=Asia/Shanghai date +%F)" >> "$GITHUB_OUTPUT"
-
       - name: Run source smoke tests
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: ./scripts/smoke_test.sh
 
       - name: Collect live news and build artifacts
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
@@ -59,12 +86,14 @@ jobs:
             --output-dir dist
 
       - name: Run complete quality gate
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
           python3 skill/scripts/check_and_distribute.py \
             --date "${{ steps.issue.outputs.date }}" \
             --dry-run
 
       - name: Verify single-recipient delivery plan
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
@@ -73,13 +102,8 @@ jobs:
             --date "${{ steps.issue.outputs.date }}" \
             --dry-run
 
-      - name: Check out published content
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: published-site
-
       - name: Update public content API
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
           python3 scripts/build_content_site.py \
             --date "${{ steps.issue.outputs.date }}" \
@@ -88,6 +112,7 @@ jobs:
             --base-url "https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow"
 
       - name: Publish content API
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
           cd published-site
           git config user.name "github-actions[bot]"
@@ -101,7 +126,7 @@ jobs:
           fi
 
       - name: Send test email
-        if: ${{ github.event_name == 'schedule' || inputs.send_email }}
+        if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
@@ -110,6 +135,19 @@ jobs:
           test -n "$AI_DAILY_SMTP_PASSWORD"
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}"
+
+      - name: Mark morning delivery
+        if: ${{ success() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
+        run: |
+          python3 scripts/delivery_marker.py mark \
+            --site-dir published-site \
+            --date "${{ steps.issue.outputs.date }}" \
+            --phase morning \
+            --run-id "${{ github.run_id }}"
+          cd published-site
+          git add state/
+          git commit -m "Mark morning delivery ${{ steps.issue.outputs.date }}"
+          git push origin HEAD:gh-pages
 
       - name: Write workflow summary
         if: always()
@@ -121,6 +159,7 @@ jobs:
             echo "- Recipient: \`$TEST_RECIPIENT\`"
             echo "- Content mode: live collection"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
+            echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
             echo "- Content API: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow/api/latest.json"
             echo
             echo "Artifacts contain the generated HTML, MP3, JSON report, articles, and podcast script."
