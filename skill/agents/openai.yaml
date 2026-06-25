@@ -1,7 +1,0 @@
-interface:
-  display_name: "AI Daily News"
-  short_description: "生成、校验并分发中文 AI 日报与双人播客"
-  default_prompt: "Use $ai-daily-news to generate and validate today's AI news digest in dry-run mode."
-
-policy:
-  allow_implicit_invocation: true
