@@ -263,3 +263,19 @@ skill/
 - "手动运行，只发 yyc54321@126.com"
 - "手动运行，不要转发"
 - "手动运行，全程（含播客）"
+
+---
+
+## 十三、内容 API
+
+每日任务成功后会同步更新 GitHub Pages 静态内容服务：
+
+- `/api/latest.json`
+- `/feed.json`
+- `/api/issues/YYYY-MM-DD/index.json`
+- `/api/issues/YYYY-MM-DD/articles.json`
+- `/api/issues/YYYY-MM-DD/podcast-script.json`
+- `/html/YYYY-MM-DD.html`
+- `/audio/YYYY-MM-DD.mp3`
+
+服务只发布日报内容，不包含邮箱、Secrets 或内部运行配置。

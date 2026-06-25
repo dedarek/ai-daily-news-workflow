@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-validate-send:
@@ -73,6 +73,33 @@ jobs:
             --date "${{ steps.issue.outputs.date }}" \
             --dry-run
 
+      - name: Check out published content
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: published-site
+
+      - name: Update public content API
+        run: |
+          python3 scripts/build_content_site.py \
+            --date "${{ steps.issue.outputs.date }}" \
+            --dist-dir dist \
+            --site-dir published-site \
+            --base-url "https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow"
+
+      - name: Publish content API
+        run: |
+          cd published-site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No content changes"
+          else
+            git commit -m "Publish AI daily news ${{ steps.issue.outputs.date }}"
+            git push origin HEAD:gh-pages
+          fi
+
       - name: Send test email
         if: ${{ github.event_name == 'schedule' || inputs.send_email }}
         env:
@@ -94,8 +121,9 @@ jobs:
             echo "- Recipient: \`$TEST_RECIPIENT\`"
             echo "- Content mode: live collection"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
+            echo "- Content API: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow/api/latest.json"
             echo
-            echo "Artifacts contain the generated HTML, MP3, and JSON report."
+            echo "Artifacts contain the generated HTML, MP3, JSON report, articles, and podcast script."
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload generated artifacts
