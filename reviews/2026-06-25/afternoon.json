@@ -1,0 +1,38 @@
+{
+  "issue_date": "2026-06-25",
+  "reviewed_at": "2026-06-25T17:53:31.026971+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": false,
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 68,
+    "summary": "存在正文模板化重复问题，整体质量一般",
+    "issues": [
+      "可灵AI与谷歌音箱正文出现完全相同的模板化段落，属于重复观点，降低可读性",
+      "部分锐评较为简短，但仍与新闻相关"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "fail",
+      "readability": "fail",
+      "editorial_quality": "fail",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "deepseek-v4-flash",
+  "usage": {
+    "prompt_tokens": 3295,
+    "completion_tokens": 2127,
+    "total_tokens": 5422,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1996
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 3295
+  }
+}
