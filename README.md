@@ -1,5 +1,8 @@
 # AI 每日热点新闻 — 完整复现手册
 
+完整的系统架构、接口、运维与故障排查说明见：
+[docs/AI_DAILY_NEWS_GUIDE.md](docs/AI_DAILY_NEWS_GUIDE.md)。
+
 ## 本地仓库部署
 
 ```bash
