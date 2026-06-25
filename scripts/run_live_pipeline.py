@@ -566,8 +566,24 @@ def main() -> int:
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
     data_path = output_dir / f'news-data-{args.date}.json'
+    podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
     render_html(args.date, content_date, articles, html_path)
     data_path.write_text(json.dumps([asdict(a) for a in articles], ensure_ascii=False, indent=2), encoding='utf-8')
+    podcast_script_path.write_text(
+        json.dumps(
+            {
+                'issue_date': args.date,
+                'speakers': {
+                    'S1': {'name': '老陈', 'role': '资深AI从业者'},
+                    'S2': {'name': '小满', 'role': '产品与应用视角'},
+                },
+                'dialogue': dialogue,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding='utf-8',
+    )
 
     tts_mode = 'fallback-sample'
     api_key = os.environ.get('SILICONFLOW_API_KEY', '')
@@ -592,6 +608,7 @@ def main() -> int:
         'candidate_count': len(candidates),
         'llm': llm_metadata,
         'podcast_turns': len(dialogue),
+        'podcast_script_file': podcast_script_path.name,
         'tts_mode': tts_mode,
         'html_bytes': html_path.stat().st_size,
         'podcast_bytes': podcast_path.stat().st_size,
