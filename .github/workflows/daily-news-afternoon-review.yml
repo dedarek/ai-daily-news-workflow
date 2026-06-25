@@ -1,0 +1,143 @@
+name: AI Daily News Afternoon Review
+
+on:
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: "Send the reviewed issue to the single test recipient"
+        required: true
+        type: boolean
+        default: false
+  schedule:
+    - cron: "30 6 * * *"
+    - cron: "40 6 * * *"
+    - cron: "50 6 * * *"
+    - cron: "10 7 * * *"
+
+concurrency:
+  group: ai-daily-news-afternoon
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  review-and-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Asia/Shanghai
+      TEST_RECIPIENT: yyc54321@126.com
+      CONTENT_BASE_URL: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Resolve issue date
+        id: issue
+        run: echo "date=$(TZ=Asia/Shanghai date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Check out published content
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: published-site
+
+      - name: Check afternoon delivery marker
+        id: delivery
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            SENT=$(python3 scripts/delivery_marker.py check \
+              --site-dir published-site \
+              --date "${{ steps.issue.outputs.date }}" \
+              --phase afternoon)
+          else
+            SENT=false
+          fi
+          echo "skip=$SENT" >> "$GITHUB_OUTPUT"
+          echo "Afternoon already sent: $SENT"
+
+      - name: Set up Python
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download and independently review published issue
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
+        env:
+          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
+          OPENCODE_GO_BASE_URL: https://opencode.ai/zen/go/v1
+          OPENCODE_GO_MODELS: deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5
+        run: |
+          python3 scripts/prepare_review_delivery.py \
+            --date "${{ steps.issue.outputs.date }}" \
+            --base-url "$CONTENT_BASE_URL" \
+            --output-dir review-dist
+
+      - name: Run deterministic quality gate again
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
+        run: |
+          python3 skill/scripts/check_and_distribute.py \
+            --date "${{ steps.issue.outputs.date }}" \
+            --dry-run
+
+      - name: Verify single-recipient delivery plan
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
+        env:
+          AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
+          AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+        run: |
+          python3 skill/scripts/send_all.py \
+            --date "${{ steps.issue.outputs.date }}" \
+            --dry-run
+
+      - name: Send reviewed issue
+        if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
+        env:
+          AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
+          AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+        run: |
+          python3 skill/scripts/send_all.py \
+            --date "${{ steps.issue.outputs.date }}" \
+            --subject-suffix "（14:30 LLM复审通过）"
+
+      - name: Publish review report and delivery marker
+        if: ${{ success() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
+        run: |
+          mkdir -p "published-site/reviews/${{ steps.issue.outputs.date }}"
+          cp "review-dist/quality-review-${{ steps.issue.outputs.date }}.json" \
+            "published-site/reviews/${{ steps.issue.outputs.date }}/afternoon.json"
+          python3 scripts/delivery_marker.py mark \
+            --site-dir published-site \
+            --date "${{ steps.issue.outputs.date }}" \
+            --phase afternoon \
+            --run-id "${{ github.run_id }}"
+          cd published-site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reviews/ state/
+          git commit -m "Publish afternoon review ${{ steps.issue.outputs.date }}"
+          git push origin HEAD:gh-pages
+
+      - name: Write workflow summary
+        if: always()
+        run: |
+          {
+            echo "## AI Daily News afternoon review"
+            echo
+            echo "- Date: ${{ steps.issue.outputs.date }}"
+            echo "- Recipient: \`$TEST_RECIPIENT\`"
+            echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
+            echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload review artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-daily-news-review-${{ steps.issue.outputs.date }}
+          path: review-dist/
+          if-no-files-found: warn
+          retention-days: 14
