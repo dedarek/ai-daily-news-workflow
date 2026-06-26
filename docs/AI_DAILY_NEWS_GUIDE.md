@@ -3,7 +3,7 @@
 ## 1. 项目概览
 
 本项目每天自动完成 AI 新闻采集、LLM 编辑、HTML 日报生成、播客口播稿生成、
-语音合成、质量校验、测试邮件发送及公网内容发布。
+语音合成、质量校验、分阶段邮件发送及公网内容发布。
 
 当前运行环境不依赖 VPS：
 
@@ -28,9 +28,9 @@
 | 项目 | 当前状态 |
 |---|---|
 | 工作流 | 已部署至 GitHub Actions |
-| 自动时间 | 每天北京时间 11:30 首发，14:30 LLM 复审后二次发送 |
+| 自动时间 | 每天北京时间 11:30 管理员检查发送，14:30 LLM 复审后正式发送 |
 | 手动运行 | 支持 |
-| 邮件收件人 | `yyc54321@126.com`、`heyujie1104@gmail.com`、`heyj17@lenovo.com` |
+| 邮件收件人 | `skill/references/recipients.json`，`admins` 用于上午，`all` 用于下午 |
 | 新闻数量 | 每期 12 条 |
 | LLM | OpenCode Go 模型自动降级链 |
 | 播客 | 双人对话稿 + MP3 |
@@ -38,15 +38,15 @@
 | 历史归档 | 自动保留 |
 | 跨域访问 | 支持，`Access-Control-Allow-Origin: *` |
 
-发送程序包含收件人硬限制。如果配置文件出现第二个邮箱，程序会在连接 SMTP
-之前直接终止。
+发送程序只读取 `skill/references/recipients.json`，并通过 `--audience` 显式选择
+`admins` 或 `all`。配置校验会在连接 SMTP 前完成。
 
 ---
 
 ## 3. 系统架构
 
 ```text
-GitHub Actions 每日 11:30 触发首发
+GitHub Actions 每日 11:30 触发管理员检查发送
         │
         ├── 抓取最新可用 AI 日报源
         │
@@ -65,7 +65,7 @@ GitHub Actions 每日 11:30 触发首发
         │
         ├── 发布 GitHub Pages 内容 API
         │
-        └── 发送测试邮件
+        └── 发送管理员检查邮件
                 └── skill/references/recipients.json
 
 14:30 独立复审工作流
@@ -74,7 +74,7 @@ GitHub Actions 每日 11:30 触发首发
         ├── LLM 独立检查事实一致性、重复、可读性和播客质量
         ├── 再次执行确定性质量门禁
         ├── 保存公开复审报告
-        └── 再次发送至测试收件人名单中的地址
+        └── 发送至 recipients.json 中的 all
 ```
 
 生成流水线与内容服务相互分离：
@@ -112,7 +112,7 @@ GitHub Actions 每日 11:30 触发首发
 9. 执行 HTML、链接、栏目及音频质量门禁。
 10. 验证收件人发送计划。
 11. 更新 `gh-pages` 历史内容。
-12. 根据运行参数发送测试邮件。
+12. 根据运行参数发送对应 audience 邮件。
 13. 上传 GitHub Actions 运行产物。
 
 ### 数据日期回退
@@ -212,12 +212,20 @@ Bitrate: 64k
 
 ## 7. 邮件发送
 
-当前允许的测试收件人：
+当前收件人配置：
 
-```text
-yyc54321@126.com
-heyujie1104@gmail.com
-heyj17@lenovo.com
+```json
+{
+  "admins": [
+    "yyc54321@126.com",
+    "heyj17@lenovo.com"
+  ],
+  "all": [
+    "yyc54321@126.com",
+    "heyj17@lenovo.com",
+    "heyujie1104@gmail.com"
+  ]
+}
 ```
 
 相关文件：
@@ -253,11 +261,12 @@ skill/references/smtp-config.md
 
 ### 安全限制
 
-`send_all.py` 从 `skill/references/recipients.json` 读取收件人，并验证：
+`send_all.py` 从 `skill/references/recipients.json` 读取指定 audience，并验证：
 
-1. 配置必须是非空 JSON 字符串数组。
-2. 每一项必须是合法邮箱地址，且不得重复。
-3. 不允许恢复或读取历史全员名单。
+1. 配置必须是非空 JSON 对象。
+2. 每个 audience 必须是非空 JSON 字符串数组。
+3. 每一项必须是合法邮箱地址，且同一 audience 内不得重复。
+4. 不允许恢复或读取历史全员名单。
 
 ---
 
@@ -544,7 +553,7 @@ Cache-Control: max-age=600
 1. `send_email` 是否为 `true`。
 2. 质量门禁是否通过。
 3. SMTP Secrets 是否存在。
-4. 日志是否出现 `成功: 1 / 1`。
+4. 日志是否出现 `Audience: admins` 或 `Audience: all` 以及 `成功: N / N`。
 
 ---
 

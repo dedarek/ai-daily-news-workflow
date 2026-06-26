@@ -125,13 +125,14 @@
 - **问题**：14:30 检查 job 的模型在 SMTP 断连时误判"发送失败"，自己生成了 send-remaining 脚本补发，导致断连前已成功发送的收件人收到两封
 - **根因**：send-all 脚本自带断连重连逻辑，已能自动续发；但模型不知道这一点，额外生成补发脚本
 - **预防（铁律）**：
-  - 测试发送**只允许调用仓库内 `scripts/send_all.py` 一次**
-  - 收件人必须严格等于测试收件人名单中的地址
+  - 每个发送阶段**只允许调用仓库内 `scripts/send_all.py` 一次**
+  - 上午发送必须使用 `--audience admins`，下午发送必须使用 `--audience all`
+  - 收件人必须严格来自 `skill/references/recipients.json` 中对应 audience
   - 禁止调用 `/tmp/send-all-*.py` 或任何历史发送脚本
   - **严禁生成任何 send-remaining / send-partial / retry 等补发脚本**
   - 如果发送脚本退出码非 0，只能报告失败，不能自行补发
 - [ ] `python3 -c "assert b'&#x' not in open('output.html','rb').read()"` 通过（无 HTML 实体编码）
-- [ ] 测试发送只调用受限发送器一次，收件人仅限测试收件人名单
+- [ ] 当前发送阶段只调用受限发送器一次，收件人仅限对应 audience
 
 ### 8. 脚本写完未执行导致邮件未发送（2026-05-07 新增）
 - **问题**：cron 生成了 send-email 脚本但没有用 exec 执行，result 文件未写入，review 邮件实际未发出

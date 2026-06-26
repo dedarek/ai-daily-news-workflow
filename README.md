@@ -23,7 +23,7 @@ chmod +x scripts/*.sh
 - 生成 HTML、测试播客和 JSON 报告
 - 执行 HTML 质量门禁
 - 发送器 dry-run 验证
-- 可选真实发送，测试收件人为 `yyc54321@126.com`、`heyujie1104@gmail.com`、`heyj17@lenovo.com`
+- 可选真实发送；上午发送给 `recipients.json` 的 `admins`，下午发送给 `all`
 - 上传 14 天可下载的运行产物
 
 工作流会优先采集当天日报；如果当天页面尚未发布，则最多向前回退 3 天，并在
@@ -40,8 +40,8 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 每天自动采集 AI 行业新闻，生成 HTML 邮件 + 双人对话播客，分发给团队。
 
 ```
-11:30  生成 + review 发 recipients.json 中的测试收件人
-14:30  质量复检 → 仍仅发送 recipients.json 中的测试收件人
+11:30  生成 + review 发 recipients.json 中的 admins
+14:30  质量复检 → 发送 recipients.json 中的 all
 ```
 
 ---
@@ -71,15 +71,14 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 
 ### 邮件收件人
 
-**Review 收件人（11:30）**：
+**管理员检查收件人（11:30，`admins`）**：
 - `yyc54321@126.com`
-- `heyujie1104@gmail.com`
 - `heyj17@lenovo.com`
 
-**当前测试收件人（所有流程）**：
+**下午正式收件人（14:30，`all`）**：
 - `yyc54321@126.com`
-- `heyujie1104@gmail.com`
 - `heyj17@lenovo.com`
+- `heyujie1104@gmail.com`
 - 发送器从 `skill/references/recipients.json` 读取并校验邮箱格式。
 
 ---
@@ -92,13 +91,13 @@ JSON 运行报告及邮件页脚记录实际内容日期。
            ├─ Step 2: 数据采集 + 链接验证（~5 min）
            ├─ Step 3: HTML 生成 + 质量门禁（~5 min）
            ├─ Step 3.5: 播客合成（~5-8 min）
-           ├─ Step 4: 发 review 邮件给 recipients.json 中的测试收件人
+           ├─ Step 4: 发 review 邮件给 recipients.json 中的 admins
            └─ Step 5: 留样 + 日志
            
 11:30-14:30  管理员（BIL）可审核 review 邮件，有问题可取消
 
 14:30 CST  check-and-distribute cron 触发
-           └─ 质量检查通过 → 仅发送 recipients.json 中的测试收件人
+           └─ 质量检查通过 → 发送 recipients.json 中的 all
 ```
 
 ---
@@ -221,14 +220,14 @@ skill/
 │   ├── content-rules.md        # 栏目结构、正文要求、锐评、去重
 │   ├── html-design.md          # 配色、字体、结构
 │   ├── smtp-config.md          # SMTP 配置
-│   ├── recipients.json         # 测试收件人 JSON
+│   ├── recipients.json         # 分阶段收件人 JSON（admins/all）
 │   ├── recent-issues-state.md  # 跨天去重状态
 │   └── send-log.md             # 发送日志
 ├── scripts/
 │   ├── check_and_distribute.py # 14:30 质量检查 + send-all
 │   ├── validate_html_quality.py # HTML 质量校验
 │   ├── smtp_probe.py           # SMTP 预检
-│   └── send_all.py             # 测试模式单收件人发送器
+│   └── send_all.py             # 受控邮件发送器
 ├── samples/                    # HTML 留样归档
 ├── logs/                       # 每日执行日志
 └── moss-ttsd/                  # 旧版 TTS 脚本（参考用）
@@ -244,12 +243,12 @@ skill/
 - **Session**：isolated
 - **模型**：无覆盖（使用默认）
 - **操作**：读取 SKILL.md 执行完整流程
-- **分发**：仅 review 邮件 → `skill/references/recipients.json`
+- **分发**：review 邮件 → `skill/references/recipients.json` 的 `admins`
 
 ### 任务 2: check-and-distribute
 - **时间**：每天 14:30 CST
 - **Session**：isolated
-- **操作**：运行 `check_and_distribute.py`，通过后仍只发送测试邮箱
+- **操作**：运行 `check_and_distribute.py`，通过后发送 `recipients.json` 的 `all`
 - **Auto-send**：无人取消则自动执行
 
 ---
@@ -267,7 +266,7 @@ skill/
 ## 十二、手动触发
 
 在 Discord #新闻 频道说 "手动运行" 即可，可加参数如：
-- "手动运行，只发测试收件人"
+- "手动运行，只发管理员"
 - "手动运行，不要转发"
 - "手动运行，全程（含播客）"
 

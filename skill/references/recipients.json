@@ -1,5 +1,11 @@
-[
-  "yyc54321@126.com",
-  "heyujie1104@gmail.com",
-  "heyj17@lenovo.com"
-]
+{
+  "admins": [
+    "yyc54321@126.com",
+    "heyj17@lenovo.com"
+  ],
+  "all": [
+    "yyc54321@126.com",
+    "heyj17@lenovo.com",
+    "heyujie1104@gmail.com"
+  ]
+}

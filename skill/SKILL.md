@@ -8,9 +8,9 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 - **产品名称**：每日AI热点新闻（试运营）
 - **受众**：公司内部技术团队
 - **发送渠道**：邮件（播客附件）+ 飞书消息（暂停）+ 飞书文档备份（暂停）
-- **发送时间**：每天 11:30 北京时间（定时自动 + 支持手动触发）
+- **发送时间**：每天 11:30 北京时间发管理员检查邮件，14:30 北京时间复审通过后发正式邮件（定时自动 + 支持手动触发）
 - **每期条数**：12-15 条（最低 5 条，少于 5 条暂停发送） | **调性**：轻松可读
-- **当前模式**：测试模式，收件人唯一配置源为 `references/recipients.json`
+- **当前模式**：分阶段发送，收件人唯一配置源为 `references/recipients.json`；`admins` 用于上午管理员检查，`all` 用于下午正式分发
 
 **⛔ 严格遵循 `references/fault-prevention.md` 中的所有约束规则。**
 
@@ -134,18 +134,19 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 - **任务**：
   - 📧 邮件：
     - **收件人唯一来源**：`references/recipients.json`
-    - **⛔ 必须调用仓库内受控发送器**：`python3 scripts/send_all.py --date YYYY-MM-DD`
-    - 发送前可用 `python3 scripts/send_all.py --date YYYY-MM-DD --dry-run` 验证收件人配置、HTML 与 MP3 输入。
-    - ⛔ 禁止在 `SKILL.md`、临时脚本、prompt 或 workflow 中另写收件人名单；新增或删除测试收件人只能改 `references/recipients.json`。
-    - 14:30 质量复检后如需发送，仍调用同一个发送器并读取同一个 JSON 配置。
+    - **上午管理员检查**：`python3 scripts/send_all.py --date YYYY-MM-DD --audience admins`
+    - **下午正式分发**：`python3 scripts/send_all.py --date YYYY-MM-DD --audience all`
+    - 发送前可加 `--dry-run` 验证指定 audience 的收件人配置、HTML 与 MP3 输入。
+    - ⛔ 禁止在 `SKILL.md`、临时脚本、prompt 或 workflow 中另写收件人名单；新增或删除收件人只能改 `references/recipients.json`。
+    - 14:30 质量复检后如需发送，仍调用同一个发送器并使用 `--audience all`。
     - 读取 `references/smtp-config.md`，标题 `每日AI热点新闻（试运营）`
     - 邮件正文为 HTML 内容
     - **如有播客音频**，将音频文件作为邮件附件发送
     - ⛔ **邮件格式要求**：用 `MIMEMultipart('alternative')`，纯文本作为 plain part + HTML 作为 html part。**绝对禁止把 HTML 文件作为附件发送**，HTML 必须是邮件正文（2026-04-21 事故：发成了附件导致收件人看到的是纯文本"请查看附件"）。不要用 `MIMEMultipart('mixed')` 除非有播客音频附件
     - 如有播客附件，则用 `MIMEMultipart('mixed')`，内部先放 `MIMEMultipart('alternative')`（text+html），再放音频附件
-    - ⛔ **测试发送规则**：
-      - 收件人必须只来自 `references/recipients.json`
-      - `references/recipients.json` 必须是非空 JSON 字符串数组，邮箱格式合法且不得重复
+    - ⛔ **发送规则**：
+      - 收件人必须只来自 `references/recipients.json` 中指定的 audience
+      - `references/recipients.json` 必须是非空 JSON 对象，每个 audience 是非空字符串数组，邮箱格式合法且不得重复
       - 禁止读取、恢复或使用历史全员名单
       - 每封邮件之间间隔 **8-10 秒**
       - 每发 **10 封**后暂停 **30 秒**
@@ -174,14 +175,14 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
   4. HTML 中聚合源/禁用域名计数为 0：`hubtoday`、`hex2077`、`hextra`、`aibase.com`、`wappoc_appmsgcaptcha`、`mp.weixin.qq.com/mp/wappoc`
   5. 提取唯一新闻原文链接数 ≥ 8，且不得为站点首页根路径
   6. 正文块统计需兼容 `<div>` / `<p>` / `<td>`，去标签后 ≥80 字的正文块至少 8 个
-- **只有以上门禁全部通过，才允许执行仓库内受控发送器，且收件人只能来自 `references/recipients.json`**
+- **只有以上门禁全部通过，才允许执行仓库内受控发送器；上午使用 `--audience admins`，下午使用 `--audience all`**
 
 ### Step 5: 收尾
 - 更新 `references/recent-issues-state.md`
 - **⛔ 强制留痕日志（每次必须执行，不可跳过）**：将本次执行结果写入 `logs/YYYY-MM-DD.md`，内容包括：
   - 各步骤状态（✅/❌）+ 数据条数 + HTML大小 + 播客时长/大小
-  - Review 邮件：收件人列表 + SMTP 实际执行结果（"Email sent to: ..."输出）
-  - 测试发送：`references/recipients.json` 中各收件人的成功或失败状态
+  - Review 邮件：audience 名称、收件人列表 + SMTP 实际执行结果
+  - 发送结果：`references/recipients.json` 指定 audience 中各收件人的成功或失败状态
   - 故障记录（如有）
   - 日志目录固定为 `logs/`（skill 目录下持久化存储，不用 /tmp）
 - 返回执行摘要（条数、各渠道状态、播客时长、异常记录）

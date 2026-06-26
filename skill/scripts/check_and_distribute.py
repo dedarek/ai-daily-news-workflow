@@ -110,8 +110,8 @@ def count_body_blocks(html: str) -> int:
 def ensure_send_script(date_str: str, dry_run: bool) -> Tuple[Path, bool, str]:
     bundled = SKILL_DIR / 'scripts' / 'send_all.py'
     if not bundled.exists():
-        raise FileNotFoundError(f'Missing guarded test sender: {bundled}')
-    return bundled, False, 'bundled-test-only'
+        raise FileNotFoundError(f'Missing guarded sender: {bundled}')
+    return bundled, False, 'bundled-audience-sender'
 
 
 def detect_running(send_script: Path) -> bool:
@@ -243,7 +243,7 @@ def main() -> int:
 
     command = ['python3', '-u', str(send_script)]
     if send_script.name == 'send_all.py':
-        command.extend(['--date', date_str])
+        command.extend(['--date', date_str, '--audience', 'all'])
 
     with log_path.open('wb') as logf:
         proc = subprocess.run(command, stdout=logf, stderr=subprocess.STDOUT)

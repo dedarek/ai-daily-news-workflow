@@ -20,8 +20,13 @@ RECIPIENTS_FILE = SKILL_DIR / 'references' / 'recipients.json'
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Send the AI daily-news test email to the approved test recipients')
+    parser = argparse.ArgumentParser(description='Send the AI daily-news email to a configured recipient audience')
     parser.add_argument('--date', required=True, help='YYYY-MM-DD')
+    parser.add_argument(
+        '--audience',
+        required=True,
+        help='Recipient audience key from recipients.json, for example admins or all',
+    )
     parser.add_argument('--dry-run', action='store_true', help='Build and validate messages without SMTP delivery')
     parser.add_argument('--subject-suffix', default='', help='Optional text appended to the email subject')
     return parser.parse_args()
@@ -43,7 +48,7 @@ def read_smtp_config() -> tuple[str, int, str, str]:
     return host, port, sender, password
 
 
-def read_recipients() -> list[str]:
+def read_recipients(audience: str) -> list[str]:
     try:
         configured = json.loads(RECIPIENTS_FILE.read_text(encoding='utf-8'))
     except FileNotFoundError as exc:
@@ -51,21 +56,28 @@ def read_recipients() -> list[str]:
     except json.JSONDecodeError as exc:
         raise RuntimeError(f'Invalid recipient JSON in {RECIPIENTS_FILE}: {exc}') from exc
 
-    if not isinstance(configured, list) or not configured:
-        raise RuntimeError(f'Recipient JSON must be a non-empty list: {RECIPIENTS_FILE}')
+    if not isinstance(configured, dict) or not configured:
+        raise RuntimeError(f'Recipient JSON must be a non-empty object of audience arrays: {RECIPIENTS_FILE}')
+    if audience not in configured:
+        available = ', '.join(sorted(str(key) for key in configured))
+        raise RuntimeError(f'Unknown recipient audience "{audience}". Available audiences: {available}')
+
+    recipients = configured[audience]
+    if not isinstance(recipients, list) or not recipients:
+        raise RuntimeError(f'Recipient audience "{audience}" must be a non-empty array: {RECIPIENTS_FILE}')
 
     validated: list[str] = []
     seen: set[str] = set()
-    for item in configured:
+    for item in recipients:
         if not isinstance(item, str):
-            raise RuntimeError(f'Recipient JSON must contain only strings: {RECIPIENTS_FILE}')
+            raise RuntimeError(f'Recipient audience "{audience}" must contain only strings: {RECIPIENTS_FILE}')
         recipient = item.strip()
         if not recipient:
-            raise RuntimeError(f'Recipient JSON contains blank entry: {RECIPIENTS_FILE}')
+            raise RuntimeError(f'Recipient audience "{audience}" contains blank entry: {RECIPIENTS_FILE}')
         if not re.fullmatch(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', recipient):
             raise RuntimeError(f'Invalid recipient address in {RECIPIENTS_FILE}: {recipient}')
         if recipient in seen:
-            raise RuntimeError(f'Duplicate recipient in {RECIPIENTS_FILE}: {recipient}')
+            raise RuntimeError(f'Duplicate recipient in audience "{audience}": {recipient}')
         seen.add(recipient)
         validated.append(recipient)
     return validated
@@ -115,11 +127,13 @@ def main() -> int:
         raise FileNotFoundError(f'Missing input: html={html_path.exists()} mp3={mp3_path.exists()}')
 
     html_content = html_path.read_text(encoding='utf-8')
-    recipients = read_recipients()
+    recipients = read_recipients(args.audience)
     host, port, sender, password = read_smtp_config()
     delay = float(os.environ.get('AI_DAILY_SEND_DELAY', '8'))
     batch_pause = float(os.environ.get('AI_DAILY_BATCH_PAUSE', '30'))
     success = 0
+
+    print(f'Audience: {args.audience}', flush=True)
 
     for index, recipient in enumerate(recipients, start=1):
         message = build_message(args.date, sender, recipient, html_content, mp3_path, args.subject_suffix)
