@@ -4,7 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       send_email:
-        description: "Send the reviewed issue to all recipients in recipients.json"
+        description: "Send the reviewed issue using the afternoon phase in send-email-config.json"
+        required: true
+        type: boolean
+        default: true
+      send_files:
+        description: "Upload reviewed artifacts to the backend before optional email delivery"
         required: true
         type: boolean
         default: true
@@ -90,8 +95,16 @@ jobs:
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
-            --audience all \
+            --phase afternoon \
             --dry-run
+
+      - name: Upload pre-send artifacts
+        if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_files) }}
+        env:
+          AI_DAILY_PRE_SEND_API_URL: ${{ secrets.AI_DAILY_PRE_SEND_API_URL || vars.AI_DAILY_PRE_SEND_API_URL }}
+        run: |
+          python3 scripts/upload_delivery_artifacts.py \
+            --date "${{ steps.issue.outputs.date }}"
 
       - name: Send reviewed issue
         if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
@@ -101,8 +114,7 @@ jobs:
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
-            --audience all \
-            --subject-suffix "（14:30 LLM复审通过）"
+            --phase afternoon
 
       - name: Publish review report and delivery marker
         if: ${{ success() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
@@ -125,13 +137,16 @@ jobs:
       - name: Write workflow summary
         if: always()
         run: |
-          RECIPIENTS=$(python3 -c "import json, pathlib; print(', '.join(json.loads(pathlib.Path('skill/references/recipients.json').read_text(encoding='utf-8'))['all']))")
+          AUDIENCE=$(python3 -c "import json, pathlib; print(json.loads(pathlib.Path('skill/references/send-email-config.json').read_text(encoding='utf-8'))['phases']['afternoon']['audience'])")
+          RECIPIENTS=$(python3 -c "import json, pathlib, sys; print(', '.join(json.loads(pathlib.Path('skill/references/recipients.json').read_text(encoding='utf-8'))[sys.argv[1]]))" "$AUDIENCE")
           {
             echo "## AI Daily News afternoon review"
             echo
             echo "- Date: ${{ steps.issue.outputs.date }}"
-            echo "- Audience: \`all\`"
+            echo "- Phase: \`afternoon\`"
+            echo "- Audience: \`$AUDIENCE\`"
             echo "- Recipients: \`$RECIPIENTS\`"
+            echo "- File upload requested: ${{ github.event_name == 'schedule' || inputs.send_files }}"
             echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
           } >> "$GITHUB_STEP_SUMMARY"

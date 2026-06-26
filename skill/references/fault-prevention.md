@@ -126,7 +126,8 @@
 - **根因**：send-all 脚本自带断连重连逻辑，已能自动续发；但模型不知道这一点，额外生成补发脚本
 - **预防（铁律）**：
   - 每个发送阶段**只允许调用仓库内 `scripts/send_all.py` 一次**
-  - 上午发送必须使用 `--audience admins`，下午发送必须使用 `--audience all`
+  - 上午发送必须使用 `--phase morning`，下午发送必须使用 `--phase afternoon`
+  - phase 到 audience 的映射必须严格来自 `skill/references/send-email-config.json`
   - 收件人必须严格来自 `skill/references/recipients.json` 中对应 audience
   - 禁止调用 `/tmp/send-all-*.py` 或任何历史发送脚本
   - **严禁生成任何 send-remaining / send-partial / retry 等补发脚本**

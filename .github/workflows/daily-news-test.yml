@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       send_email:
-        description: "Send the result to the admin recipients in recipients.json"
+        description: "Send the result using the morning phase in send-email-config.json"
         required: true
         type: boolean
         default: true
@@ -99,7 +99,7 @@ jobs:
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
-            --audience admins \
+            --phase morning \
             --dry-run
 
       - name: Update public content API
@@ -135,7 +135,7 @@ jobs:
           test -n "$AI_DAILY_SMTP_PASSWORD"
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
-            --audience admins
+            --phase morning
 
       - name: Mark morning delivery
         if: ${{ success() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
@@ -153,12 +153,14 @@ jobs:
       - name: Write workflow summary
         if: always()
         run: |
-          RECIPIENTS=$(python3 -c "import json, pathlib; print(', '.join(json.loads(pathlib.Path('skill/references/recipients.json').read_text(encoding='utf-8'))['admins']))")
+          AUDIENCE=$(python3 -c "import json, pathlib; print(json.loads(pathlib.Path('skill/references/send-email-config.json').read_text(encoding='utf-8'))['phases']['morning']['audience'])")
+          RECIPIENTS=$(python3 -c "import json, pathlib, sys; print(', '.join(json.loads(pathlib.Path('skill/references/recipients.json').read_text(encoding='utf-8'))[sys.argv[1]]))" "$AUDIENCE")
           {
             echo "## AI Daily News test"
             echo
             echo "- Date: ${{ steps.issue.outputs.date }}"
-            echo "- Audience: \`admins\`"
+            echo "- Phase: \`morning\`"
+            echo "- Audience: \`$AUDIENCE\`"
             echo "- Recipients: \`$RECIPIENTS\`"
             echo "- Content mode: live collection"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"

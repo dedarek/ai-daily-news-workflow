@@ -23,7 +23,7 @@ chmod +x scripts/*.sh
 - 生成 HTML、测试播客和 JSON 报告
 - 执行 HTML 质量门禁
 - 发送器 dry-run 验证
-- 可选真实发送；上午发送给 `recipients.json` 的 `admins`，下午发送给 `all`
+- 可选真实发送；发送 phase、audience 和标题后缀由 `skill/references/send-email-config.json` 配置
 - 上传 14 天可下载的运行产物
 
 工作流会优先采集当天日报；如果当天页面尚未发布，则最多向前回退 3 天，并在
@@ -41,7 +41,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 
 ```
 11:30  生成 + review 发 recipients.json 中的 admins
-14:30  质量复检 → 发送 recipients.json 中的 all
+14:30  质量复检 → send_files 上传重要文件到后端 API → send_email 发送 recipients.json 中的 all
 ```
 
 ---
@@ -81,6 +81,12 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 - `heyujie1104@gmail.com`
 - 发送器从 `skill/references/recipients.json` 读取并校验邮箱格式。
 
+发送阶段配置在 `skill/references/send-email-config.json`：
+
+- `morning` → `admins`
+- `afternoon` → `all`
+- 邮件标题后缀、发送间隔、批次暂停和重试参数也在这里维护。
+
 ---
 
 ## 三、每日时间线
@@ -97,7 +103,8 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 11:30-14:30  管理员（BIL）可审核 review 邮件，有问题可取消
 
 14:30 CST  check-and-distribute cron 触发
-           └─ 质量检查通过 → 发送 recipients.json 中的 all
+           ├─ send_files=true → 上传重要文件到后端 API
+           └─ send_email=true → 发送 recipients.json 中的 all
 ```
 
 ---
@@ -221,6 +228,8 @@ skill/
 │   ├── html-design.md          # 配色、字体、结构
 │   ├── smtp-config.md          # SMTP 配置
 │   ├── recipients.json         # 分阶段收件人 JSON（admins/all）
+│   ├── send-email-config.json  # 邮件发送 phase/audience/节流配置
+│   ├── send-file-config.json   # 全员发送前文件上传配置
 │   ├── recent-issues-state.md  # 跨天去重状态
 │   └── send-log.md             # 发送日志
 ├── scripts/
@@ -233,6 +242,8 @@ skill/
 └── moss-ttsd/                  # 旧版 TTS 脚本（参考用）
     └── scripts/mosi_dialogue.sh
 ```
+
+仓库根目录 `scripts/upload_delivery_artifacts.py` 负责全员发送前上传重要文件。
 
 ---
 
@@ -249,7 +260,38 @@ skill/
 - **时间**：每天 14:30 CST
 - **Session**：isolated
 - **操作**：运行 `check_and_distribute.py`，通过后发送 `recipients.json` 的 `all`
+- **send_files**：控制是否调用 `scripts/upload_delivery_artifacts.py` 上传重要文件
+- **send_email**：控制是否调用 `send_all.py --phase afternoon` 发全员邮件
+- **自动触发**：`send_files=true` 且 `send_email=true`
 - **Auto-send**：无人取消则自动执行
+
+### 发送前后端上传
+
+下午流程会按 `send_files` 开关把 `review-dist/` 中的重要文件上传到后端 API。默认地址：
+
+```text
+http://8.137.39.142:8000/mock/receive
+```
+
+后续 IP、路径、字段映射或 artifact 目录变化时，优先改：
+
+```text
+skill/references/send-file-config.json
+```
+
+临时调试时也可以用 GitHub Actions Variable 或 Secret 覆盖 endpoint：
+
+```text
+AI_DAILY_PRE_SEND_API_URL
+```
+
+上传字段：
+
+- `jsons`：`articles-YYYY-MM-DD.json`、`podcast-script-YYYY-MM-DD.json`、`quality-review-YYYY-MM-DD.json`
+- `htmls`：`daily-news-YYYY-MM-DD.html`
+- `docs`：`podcast-script-YYYY-MM-DD.txt`、`daily-news-podcast-YYYY-MM-DD.mp3`
+
+自动触发时 `send_files` 和 `send_email` 都视为 true。手动触发时可单独测试上传或邮件；如果两个都开启，上传步骤位于邮件发送之前，上传失败会阻断后续邮件发送。
 
 ---
 

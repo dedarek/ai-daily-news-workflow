@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "endpoint": "http://8.137.39.142:8000/mock/receive",
+  "artifact_dir": "review-dist",
+  "timeout_seconds": 120,
+  "fields_by_suffix": {
+    ".json": "jsons",
+    ".html": "htmls",
+    ".htm": "htmls",
+    ".md": "docs",
+    ".txt": "docs",
+    ".mp3": "docs",
+    ".wav": "docs",
+    ".m4a": "docs"
+  }
+}

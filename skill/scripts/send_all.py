@@ -17,19 +17,66 @@ from pathlib import Path
 SKILL_DIR = Path(__file__).resolve().parent.parent
 TMP = Path('/tmp')
 RECIPIENTS_FILE = SKILL_DIR / 'references' / 'recipients.json'
+SEND_EMAIL_CONFIG_FILE = SKILL_DIR / 'references' / 'send-email-config.json'
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Send the AI daily-news email to a configured recipient audience')
     parser.add_argument('--date', required=True, help='YYYY-MM-DD')
+    parser.add_argument('--phase', help='Delivery phase from send-email-config.json, for example morning or afternoon')
     parser.add_argument(
         '--audience',
-        required=True,
-        help='Recipient audience key from recipients.json, for example admins or all',
+        help='Override recipient audience key from recipients.json, for example admins or all',
+    )
+    parser.add_argument(
+        '--subject-suffix',
+        default=None,
+        help='Override text appended to the email subject. Defaults to the phase config.',
     )
     parser.add_argument('--dry-run', action='store_true', help='Build and validate messages without SMTP delivery')
-    parser.add_argument('--subject-suffix', default='', help='Optional text appended to the email subject')
     return parser.parse_args()
+
+
+def read_send_email_config() -> dict:
+    try:
+        configured = json.loads(SEND_EMAIL_CONFIG_FILE.read_text(encoding='utf-8'))
+    except FileNotFoundError as exc:
+        raise FileNotFoundError(f'Missing send email config: {SEND_EMAIL_CONFIG_FILE}') from exc
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f'Invalid send email config JSON in {SEND_EMAIL_CONFIG_FILE}: {exc}') from exc
+    if not isinstance(configured, dict):
+        raise RuntimeError(f'Send email config must be a JSON object: {SEND_EMAIL_CONFIG_FILE}')
+    return configured
+
+
+def resolve_delivery_options(args: argparse.Namespace, config: dict) -> tuple[str, str, float, float, int, float]:
+    phase_config: dict = {}
+    if args.phase:
+        phases = config.get('phases')
+        if not isinstance(phases, dict) or args.phase not in phases:
+            available = ', '.join(sorted(str(key) for key in phases)) if isinstance(phases, dict) else ''
+            raise RuntimeError(f'Unknown email phase "{args.phase}". Available phases: {available}')
+        phase_config = phases[args.phase]
+        if not isinstance(phase_config, dict):
+            raise RuntimeError(f'Email phase "{args.phase}" must be an object')
+
+    audience = args.audience or phase_config.get('audience')
+    if not isinstance(audience, str) or not audience.strip():
+        raise RuntimeError('Missing recipient audience. Pass --phase or --audience.')
+
+    subject_suffix = args.subject_suffix
+    if subject_suffix is None:
+        subject_suffix = phase_config.get('subject_suffix', '')
+    if not isinstance(subject_suffix, str):
+        raise RuntimeError('subject_suffix must be a string')
+
+    delay = float(os.environ.get('AI_DAILY_SEND_DELAY', config.get('send_delay_seconds', 8)))
+    batch_pause = float(os.environ.get('AI_DAILY_BATCH_PAUSE', config.get('batch_pause_seconds', 30)))
+    retry_attempts = int(os.environ.get('AI_DAILY_SEND_RETRY_ATTEMPTS', config.get('retry_attempts', 3)))
+    retry_delay = float(os.environ.get('AI_DAILY_SEND_RETRY_DELAY', config.get('retry_delay_seconds', 60)))
+    if retry_attempts < 1:
+        raise RuntimeError('retry_attempts must be >= 1')
+    return audience.strip(), subject_suffix, delay, batch_pause, retry_attempts, retry_delay
 
 
 def read_smtp_config() -> tuple[str, int, str, str]:
@@ -121,29 +168,34 @@ def send_one(host: str, port: int, sender: str, password: str, recipient: str, m
 
 def main() -> int:
     args = parse_args()
+    email_config = read_send_email_config()
+    audience, subject_suffix, delay, batch_pause, retry_attempts, retry_delay = resolve_delivery_options(
+        args,
+        email_config,
+    )
     html_path = TMP / f'ai-daily-news-html-{args.date}.html'
     mp3_path = TMP / f'ai-daily-news-podcast-{args.date}.mp3'
     if not html_path.exists() or not mp3_path.exists():
         raise FileNotFoundError(f'Missing input: html={html_path.exists()} mp3={mp3_path.exists()}')
 
     html_content = html_path.read_text(encoding='utf-8')
-    recipients = read_recipients(args.audience)
+    recipients = read_recipients(audience)
     host, port, sender, password = read_smtp_config()
-    delay = float(os.environ.get('AI_DAILY_SEND_DELAY', '8'))
-    batch_pause = float(os.environ.get('AI_DAILY_BATCH_PAUSE', '30'))
     success = 0
 
-    print(f'Audience: {args.audience}', flush=True)
+    if args.phase:
+        print(f'Phase: {args.phase}', flush=True)
+    print(f'Audience: {audience}', flush=True)
 
     for index, recipient in enumerate(recipients, start=1):
-        message = build_message(args.date, sender, recipient, html_content, mp3_path, args.subject_suffix)
+        message = build_message(args.date, sender, recipient, html_content, mp3_path, subject_suffix)
         if args.dry_run:
             print(f'✅ [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)
             success += 1
             continue
 
         last_error: Exception | None = None
-        for attempt in range(1, 4):
+        for attempt in range(1, retry_attempts + 1):
             try:
                 send_one(host, port, sender, password, recipient, message)
                 print(f'✅ [{index}/{len(recipients)}] {recipient}', flush=True)
@@ -153,8 +205,8 @@ def main() -> int:
             except (smtplib.SMTPException, OSError) as exc:
                 last_error = exc
                 print(f'⚠️ [{index}/{len(recipients)}] attempt={attempt} {recipient}: {exc}', flush=True)
-                if attempt < 3:
-                    time.sleep(60)
+                if attempt < retry_attempts:
+                    time.sleep(retry_delay)
         if last_error is not None:
             print(f'❌ {recipient}: {last_error}', flush=True)
 

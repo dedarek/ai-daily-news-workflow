@@ -28,7 +28,7 @@
 | 项目 | 当前状态 |
 |---|---|
 | 工作流 | 已部署至 GitHub Actions |
-| 自动时间 | 每天北京时间 11:30 管理员检查发送，14:30 LLM 复审后正式发送 |
+| 自动时间 | 每天北京时间 11:30 管理员检查发送，14:30 LLM 复审后自动上传文件并正式发送 |
 | 手动运行 | 支持 |
 | 邮件收件人 | `skill/references/recipients.json`，`admins` 用于上午，`all` 用于下午 |
 | 新闻数量 | 每期 12 条 |
@@ -38,8 +38,9 @@
 | 历史归档 | 自动保留 |
 | 跨域访问 | 支持，`Access-Control-Allow-Origin: *` |
 
-发送程序只读取 `skill/references/recipients.json`，并通过 `--audience` 显式选择
-`admins` 或 `all`。配置校验会在连接 SMTP 前完成。
+发送程序读取 `skill/references/send-email-config.json` 解析 `morning` / `afternoon`
+phase，再从 `skill/references/recipients.json` 读取对应 audience。配置校验会在连接
+SMTP 前完成。
 
 ---
 
@@ -73,8 +74,9 @@ GitHub Actions 每日 11:30 触发管理员检查发送
         ├── 拉取当天公开成品
         ├── LLM 独立检查事实一致性、重复、可读性和播客质量
         ├── 再次执行确定性质量门禁
+        ├── send_files=true 时上传重要文件到后端 API
         ├── 保存公开复审报告
-        └── 发送至 recipients.json 中的 all
+        └── send_email=true 时发送至 recipients.json 中的 all
 ```
 
 生成流水线与内容服务相互分离：
@@ -232,8 +234,11 @@ Bitrate: 64k
 
 ```text
 skill/references/recipients.json
+skill/references/send-email-config.json
+skill/references/send-file-config.json
 skill/scripts/send_all.py
 skill/references/smtp-config.md
+scripts/upload_delivery_artifacts.py
 ```
 
 邮件包含：
@@ -257,11 +262,52 @@ skill/references/smtp-config.md
 - 确定性门禁必须全部通过。
 - LLM 不得判断存在明显事实矛盾。
 - LLM 质量评分不得低于 50。
+- 自动触发时 `send_files=true` 且 `send_email=true`。
+- 手动触发时 `send_files` 控制是否上传后端，`send_email` 控制是否发全员邮件。
+- 如果同一次运行中两个开关都为 true，后端上传必须成功后才会发送全员邮件。
 - 文风或模板化表达等非致命问题会记录到公开复审报告，但不会单独阻止发送。
+
+### 发送前后端上传
+
+下午流程在 `send_files=true` 时会调用：
+
+```bash
+python3 scripts/upload_delivery_artifacts.py \
+  --date YYYY-MM-DD
+```
+
+默认 endpoint：
+
+```text
+http://8.137.39.142:8000/mock/receive
+```
+
+后续地址、字段映射或 artifact 目录变化时，不需要改代码，修改：
+
+```text
+skill/references/send-file-config.json
+```
+
+临时覆盖 endpoint 时，可配置 GitHub Actions Variable 或 Secret：
+
+```text
+AI_DAILY_PRE_SEND_API_URL
+```
+
+上传文件来自 `review-dist/`：
+
+| 字段 | 文件 |
+|---|---|
+| `jsons` | `articles-YYYY-MM-DD.json`、`podcast-script-YYYY-MM-DD.json`、`quality-review-YYYY-MM-DD.json` |
+| `htmls` | `daily-news-YYYY-MM-DD.html` |
+| `docs` | `podcast-script-YYYY-MM-DD.txt`、`daily-news-podcast-YYYY-MM-DD.mp3` |
+
+上传失败会使 workflow 失败；如果本次同时 `send_email=true`，会阻断 `--phase afternoon` 全员发送。
 
 ### 安全限制
 
-`send_all.py` 从 `skill/references/recipients.json` 读取指定 audience，并验证：
+`send_all.py` 从 `skill/references/send-email-config.json` 读取 phase 配置，再从
+`skill/references/recipients.json` 读取指定 audience，并验证：
 
 1. 配置必须是非空 JSON 对象。
 2. 每个 audience 必须是非空 JSON 字符串数组。
@@ -438,6 +484,13 @@ send_email=true   生成、发布并发送邮件
 send_email=false  只生成和发布，不发送邮件
 ```
 
+下午复审 workflow 另有：
+
+```text
+send_files=true   上传 review-dist 中的重要文件到后端 API
+send_files=false  不上传文件，便于只测试复审或邮件路径
+```
+
 CLI 示例：
 
 ```bash
@@ -466,6 +519,7 @@ gh run list \
 | `SILICONFLOW_API_KEY` | 播客语音合成 |
 | `AI_DAILY_SMTP_USER` | SMTP 发件账号 |
 | `AI_DAILY_SMTP_PASSWORD` | SMTP 授权码 |
+| `AI_DAILY_PRE_SEND_API_URL` | 可选，临时覆盖 `send-file-config.json` 中的上传地址 |
 
 Secret 只注入 GitHub Runner，不会发布到 GitHub Pages。
 

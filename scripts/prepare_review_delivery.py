@@ -25,6 +25,16 @@ def get_json(url: str):
     return json.loads(get_bytes(url).decode('utf-8'))
 
 
+def write_podcast_text(path: Path, podcast_script: dict) -> None:
+    lines: list[str] = []
+    for item in podcast_script.get('dialogue') or []:
+        speaker = str(item.get('speaker', '')).strip()
+        text = str(item.get('text', '')).strip()
+        if speaker and text:
+            lines.append(f'[{speaker}] {text}')
+    path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description='Prepare and LLM-review an already published daily issue')
     parser.add_argument('--date', required=True)
@@ -47,6 +57,18 @@ def main() -> int:
     podcast_script = get_json(latest['podcast_script_url'])
     html_bytes = get_bytes(latest['html_url'])
     audio_bytes = get_bytes(latest['audio_url'])
+
+    (output_dir / f'articles-{args.date}.json').write_text(
+        json.dumps(articles, ensure_ascii=False, indent=2),
+        encoding='utf-8',
+    )
+    (output_dir / f'podcast-script-{args.date}.json').write_text(
+        json.dumps(podcast_script, ensure_ascii=False, indent=2),
+        encoding='utf-8',
+    )
+    (output_dir / f'daily-news-{args.date}.html').write_bytes(html_bytes)
+    (output_dir / f'daily-news-podcast-{args.date}.mp3').write_bytes(audio_bytes)
+    write_podcast_text(output_dir / f'podcast-script-{args.date}.txt', podcast_script)
 
     deterministic_issues: list[str] = []
     urls = [item.get('url') for item in articles]

@@ -10,7 +10,7 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 - **发送渠道**：邮件（播客附件）+ 飞书消息（暂停）+ 飞书文档备份（暂停）
 - **发送时间**：每天 11:30 北京时间发管理员检查邮件，14:30 北京时间复审通过后发正式邮件（定时自动 + 支持手动触发）
 - **每期条数**：12-15 条（最低 5 条，少于 5 条暂停发送） | **调性**：轻松可读
-- **当前模式**：分阶段发送，收件人唯一配置源为 `references/recipients.json`；`admins` 用于上午管理员检查，`all` 用于下午正式分发
+- **当前模式**：分阶段发送，邮件 phase 配置源为 `references/send-email-config.json`，收件人配置源为 `references/recipients.json`
 
 **⛔ 严格遵循 `references/fault-prevention.md` 中的所有约束规则。**
 
@@ -134,18 +134,19 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 - **任务**：
   - 📧 邮件：
     - **收件人唯一来源**：`references/recipients.json`
-    - **上午管理员检查**：`python3 scripts/send_all.py --date YYYY-MM-DD --audience admins`
-    - **下午正式分发**：`python3 scripts/send_all.py --date YYYY-MM-DD --audience all`
-    - 发送前可加 `--dry-run` 验证指定 audience 的收件人配置、HTML 与 MP3 输入。
-    - ⛔ 禁止在 `SKILL.md`、临时脚本、prompt 或 workflow 中另写收件人名单；新增或删除收件人只能改 `references/recipients.json`。
-    - 14:30 质量复检后如需发送，仍调用同一个发送器并使用 `--audience all`。
+    - **发送 phase 配置来源**：`references/send-email-config.json`
+    - **上午管理员检查**：`python3 scripts/send_all.py --date YYYY-MM-DD --phase morning`
+    - **下午正式分发**：`python3 scripts/send_all.py --date YYYY-MM-DD --phase afternoon`
+    - 发送前可加 `--dry-run` 验证指定 phase 的收件人配置、HTML 与 MP3 输入。
+    - ⛔ 禁止在 `SKILL.md`、临时脚本、prompt 或 workflow 中另写收件人名单或 phase 映射；新增或删除收件人只能改 `references/recipients.json`，调整阶段策略只能改 `references/send-email-config.json`。
+    - 14:30 质量复检后如需发送，仍调用同一个发送器并使用 `--phase afternoon`。
     - 读取 `references/smtp-config.md`，标题 `每日AI热点新闻（试运营）`
     - 邮件正文为 HTML 内容
     - **如有播客音频**，将音频文件作为邮件附件发送
     - ⛔ **邮件格式要求**：用 `MIMEMultipart('alternative')`，纯文本作为 plain part + HTML 作为 html part。**绝对禁止把 HTML 文件作为附件发送**，HTML 必须是邮件正文（2026-04-21 事故：发成了附件导致收件人看到的是纯文本"请查看附件"）。不要用 `MIMEMultipart('mixed')` 除非有播客音频附件
     - 如有播客附件，则用 `MIMEMultipart('mixed')`，内部先放 `MIMEMultipart('alternative')`（text+html），再放音频附件
     - ⛔ **发送规则**：
-      - 收件人必须只来自 `references/recipients.json` 中指定的 audience
+      - 收件人必须只来自 `references/send-email-config.json` 解析出的 audience
       - `references/recipients.json` 必须是非空 JSON 对象，每个 audience 是非空字符串数组，邮箱格式合法且不得重复
       - 禁止读取、恢复或使用历史全员名单
       - 每封邮件之间间隔 **8-10 秒**
@@ -154,6 +155,16 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
       - 163 邮箱日发送配额有限，带大附件时更容易触发限流
   - 📱 飞书：**⏸️ 暂停**（access token 过期，待重新配置飞书应用后恢复）
   - 📄 飞书文档备份：**⏸️ 暂停**（同上）
+  - 🔼 全员发送前后端上传：
+    - 由 workflow 的 `send_files` 控制；定时自动触发时必须视为 true。
+    - 手动调试时 `send_files` 只控制是否上传文件，不控制是否发邮件。
+    - 配置来源：`references/send-file-config.json`
+    - 调用 `scripts/upload_delivery_artifacts.py --date YYYY-MM-DD`。
+    - endpoint 优先用 `AI_DAILY_PRE_SEND_API_URL` 临时覆盖，否则读取 `references/send-file-config.json`，禁止在临时脚本中另写地址。
+    - 如果同一次运行中 `send_files=true` 且 `send_email=true`，上传失败必须阻断全员发送。
+  - 📧 全员邮件发送：
+    - 由 workflow 的 `send_email` 控制；定时自动触发时必须视为 true。
+    - `send_email` 只控制邮件，不控制后端上传。
   - 📝 发送日志：写入 `references/send-log.md`（日期 + 条数 + 各渠道状态 + 播客合成状态）
   - ⛔ **发送结果以 `scripts/send_all.py` stdout 为准**，成功条件为输出 `成功: N / N` 且进程退出码为 0
 - **容错**：某渠道失败记录原因，不阻塞其他渠道
@@ -175,7 +186,7 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
   4. HTML 中聚合源/禁用域名计数为 0：`hubtoday`、`hex2077`、`hextra`、`aibase.com`、`wappoc_appmsgcaptcha`、`mp.weixin.qq.com/mp/wappoc`
   5. 提取唯一新闻原文链接数 ≥ 8，且不得为站点首页根路径
   6. 正文块统计需兼容 `<div>` / `<p>` / `<td>`，去标签后 ≥80 字的正文块至少 8 个
-- **只有以上门禁全部通过，才允许执行仓库内受控发送器；上午使用 `--audience admins`，下午使用 `--audience all`**
+- **只有以上门禁全部通过，才允许执行仓库内受控发送器；上午使用 `--phase morning`，下午使用 `--phase afternoon`**
 
 ### Step 5: 收尾
 - 更新 `references/recent-issues-state.md`
@@ -197,6 +208,8 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 | `references/html-design.md` | HTML 配色、字体、结构规范 |
 | `references/smtp-config.md` | SMTP 配置 |
 | `references/recipients.json` | 邮件收件人 |
+| `references/send-email-config.json` | 邮件 phase、audience、标题后缀和节流配置 |
+| `references/send-file-config.json` | 全员发送前后端上传配置 |
 | `references/recent-issues-state.md` | 跨天去重状态 |
 | `references/rss-radar-sources.md` | RSS 源配置 |
 | `templates/v4-2026-03-18.html` | HTML 模板参考 |

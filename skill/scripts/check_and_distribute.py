@@ -243,7 +243,7 @@ def main() -> int:
 
     command = ['python3', '-u', str(send_script)]
     if send_script.name == 'send_all.py':
-        command.extend(['--date', date_str, '--audience', 'all'])
+        command.extend(['--date', date_str, '--phase', 'afternoon'])
 
     with log_path.open('wb') as logf:
         proc = subprocess.run(command, stdout=logf, stderr=subprocess.STDOUT)
