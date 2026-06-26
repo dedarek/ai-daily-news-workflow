@@ -1,0 +1,38 @@
+{
+  "issue_date": "2026-06-26",
+  "reviewed_at": "2026-06-26T14:43:06.734654+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 85,
+    "summary": "新闻内容总体合辑且无严重矛盾，但部分summary存在模板化重复句式，播客未覆盖全部新闻。",
+    "issues": [
+      "多条新闻summary包含重复的模板句式（如‘这项动态围绕...展开，值得关注的不是单一功能...’）",
+      "播客口播稿未覆盖谷歌智能音箱、Claude @功能、ECC和codebase-memory-mcp等新闻"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "fail",
+      "editorial_quality": "fail",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "deepseek-v4-flash",
+  "usage": {
+    "prompt_tokens": 3392,
+    "completion_tokens": 1790,
+    "total_tokens": 5182,
+    "prompt_tokens_details": {
+      "cached_tokens": 3328
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1624
+    },
+    "prompt_cache_hit_tokens": 3328,
+    "prompt_cache_miss_tokens": 64
+  }
+}
