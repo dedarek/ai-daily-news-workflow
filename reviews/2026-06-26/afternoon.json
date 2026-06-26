@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-06-26",
-  "reviewed_at": "2026-06-26T14:43:06.734654+08:00",
+  "reviewed_at": "2026-06-26T15:57:52.715841+08:00",
   "pass": true,
   "delivery_approved": true,
   "llm_recommendation_pass": true,
@@ -8,29 +8,29 @@
   "llm_review": {
     "pass": true,
     "score": 85,
-    "summary": "新闻内容总体合辑且无严重矛盾，但部分summary存在模板化重复句式，播客未覆盖全部新闻。",
+    "summary": "整体质量较高，部分新闻正文存在模板化套话，播客对话自然但未覆盖全部新闻，建议优化。",
     "issues": [
-      "多条新闻summary包含重复的模板句式（如‘这项动态围绕...展开，值得关注的不是单一功能...’）",
-      "播客口播稿未覆盖谷歌智能音箱、Claude @功能、ECC和codebase-memory-mcp等新闻"
+      "部分新闻正文（如谷歌智能音箱、华为云VLA）结尾使用相同模板句式，显得机械，建议根据内容差异化撰写。",
+      "播客对话仅覆盖部分新闻，遗漏了谷歌智能音箱、Claude @功能等条目，虽不影响整体但可能不够全面。"
     ],
     "checks": {
       "factual_consistency": "pass",
       "duplication": "pass",
-      "readability": "fail",
-      "editorial_quality": "fail",
+      "readability": "pass",
+      "editorial_quality": "pass",
       "podcast_quality": "pass"
     }
   },
   "review_model": "deepseek-v4-flash",
   "usage": {
     "prompt_tokens": 3392,
-    "completion_tokens": 1790,
-    "total_tokens": 5182,
+    "completion_tokens": 2647,
+    "total_tokens": 6039,
     "prompt_tokens_details": {
       "cached_tokens": 3328
     },
     "completion_tokens_details": {
-      "reasoning_tokens": 1624
+      "reasoning_tokens": 2474
     },
     "prompt_cache_hit_tokens": 3328,
     "prompt_cache_miss_tokens": 64
