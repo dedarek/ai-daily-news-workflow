@@ -270,7 +270,7 @@ skill/
 下午流程会按 `send_files` 开关把 `review-dist/` 中的重要文件上传到后端 API。默认地址：
 
 ```text
-http://8.137.39.142:8000/mock/receive
+http://8.137.39.142:8010/mock/receive
 ```
 
 后续 IP、路径、字段映射或 artifact 目录变化时，优先改：

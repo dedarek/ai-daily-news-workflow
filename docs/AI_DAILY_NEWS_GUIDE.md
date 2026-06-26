@@ -279,7 +279,7 @@ python3 scripts/upload_delivery_artifacts.py \
 默认 endpoint：
 
 ```text
-http://8.137.39.142:8000/mock/receive
+http://8.137.39.142:8010/mock/receive
 ```
 
 后续地址、字段映射或 artifact 目录变化时，不需要改代码，修改：

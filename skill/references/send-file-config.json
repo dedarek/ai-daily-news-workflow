@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "endpoint": "http://8.137.39.142:8000/mock/receive",
+  "endpoint": "http://8.137.39.142:8010/mock/receive",
   "artifact_dir": "review-dist",
   "timeout_seconds": 120,
   "fields_by_suffix": {
