@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import smtplib
@@ -15,11 +16,11 @@ from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
 TMP = Path('/tmp')
-TEST_RECIPIENT = 'yyc54321@126.com'
+RECIPIENTS_FILE = SKILL_DIR / 'references' / 'recipients.json'
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Send the AI daily-news test email to the single approved recipient')
+    parser = argparse.ArgumentParser(description='Send the AI daily-news test email to the approved test recipients')
     parser.add_argument('--date', required=True, help='YYYY-MM-DD')
     parser.add_argument('--dry-run', action='store_true', help='Build and validate messages without SMTP delivery')
     parser.add_argument('--subject-suffix', default='', help='Optional text appended to the email subject')
@@ -43,13 +44,31 @@ def read_smtp_config() -> tuple[str, int, str, str]:
 
 
 def read_recipients() -> list[str]:
-    text = (SKILL_DIR / 'references' / 'recipients.md').read_text(encoding='utf-8')
-    configured = list(dict.fromkeys(re.findall(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', text)))
-    if configured != [TEST_RECIPIENT]:
-        raise RuntimeError(
-            f'Test-mode recipient guard rejected configuration: expected only {TEST_RECIPIENT}, got {configured}'
-        )
-    return configured
+    try:
+        configured = json.loads(RECIPIENTS_FILE.read_text(encoding='utf-8'))
+    except FileNotFoundError as exc:
+        raise FileNotFoundError(f'Missing recipient config: {RECIPIENTS_FILE}') from exc
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f'Invalid recipient JSON in {RECIPIENTS_FILE}: {exc}') from exc
+
+    if not isinstance(configured, list) or not configured:
+        raise RuntimeError(f'Recipient JSON must be a non-empty list: {RECIPIENTS_FILE}')
+
+    validated: list[str] = []
+    seen: set[str] = set()
+    for item in configured:
+        if not isinstance(item, str):
+            raise RuntimeError(f'Recipient JSON must contain only strings: {RECIPIENTS_FILE}')
+        recipient = item.strip()
+        if not recipient:
+            raise RuntimeError(f'Recipient JSON contains blank entry: {RECIPIENTS_FILE}')
+        if not re.fullmatch(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', recipient):
+            raise RuntimeError(f'Invalid recipient address in {RECIPIENTS_FILE}: {recipient}')
+        if recipient in seen:
+            raise RuntimeError(f'Duplicate recipient in {RECIPIENTS_FILE}: {recipient}')
+        seen.add(recipient)
+        validated.append(recipient)
+    return validated
 
 
 def build_message(
@@ -97,22 +116,13 @@ def main() -> int:
 
     html_content = html_path.read_text(encoding='utf-8')
     recipients = read_recipients()
-    if recipients != [TEST_RECIPIENT]:
-        raise RuntimeError('Recipient guard failed; refusing delivery')
     host, port, sender, password = read_smtp_config()
     delay = float(os.environ.get('AI_DAILY_SEND_DELAY', '8'))
     batch_pause = float(os.environ.get('AI_DAILY_BATCH_PAUSE', '30'))
     success = 0
 
     for index, recipient in enumerate(recipients, start=1):
-        message = build_message(
-            args.date,
-            sender,
-            recipient,
-            html_content,
-            mp3_path,
-            args.subject_suffix,
-        )
+        message = build_message(args.date, sender, recipient, html_content, mp3_path, args.subject_suffix)
         if args.dry_run:
             print(f'✅ [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)
             success += 1

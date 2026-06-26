@@ -23,7 +23,7 @@ chmod +x scripts/*.sh
 - 生成 HTML、测试播客和 JSON 报告
 - 执行 HTML 质量门禁
 - 发送器 dry-run 验证
-- 可选真实发送，唯一收件人为 `yyc54321@126.com`
+- 可选真实发送，测试收件人为 `yyc54321@126.com`、`heyujie1104@gmail.com`、`heyj17@lenovo.com`
 - 上传 14 天可下载的运行产物
 
 工作流会优先采集当天日报；如果当天页面尚未发布，则最多向前回退 3 天，并在
@@ -40,8 +40,8 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 每天自动采集 AI 行业新闻，生成 HTML 邮件 + 双人对话播客，分发给团队。
 
 ```
-11:30  生成 + review 发 yyc54321@126.com
-14:30  质量复检 → 仍仅发送测试邮箱
+11:30  生成 + review 发 recipients.json 中的测试收件人
+14:30  质量复检 → 仍仅发送 recipients.json 中的测试收件人
 ```
 
 ---
@@ -73,10 +73,14 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 
 **Review 收件人（11:30）**：
 - `yyc54321@126.com`
+- `heyujie1104@gmail.com`
+- `heyj17@lenovo.com`
 
 **当前测试收件人（所有流程）**：
 - `yyc54321@126.com`
-- 发送器带硬限制，任何其他地址都会导致任务终止
+- `heyujie1104@gmail.com`
+- `heyj17@lenovo.com`
+- 发送器从 `skill/references/recipients.json` 读取并校验邮箱格式。
 
 ---
 
@@ -88,13 +92,13 @@ JSON 运行报告及邮件页脚记录实际内容日期。
            ├─ Step 2: 数据采集 + 链接验证（~5 min）
            ├─ Step 3: HTML 生成 + 质量门禁（~5 min）
            ├─ Step 3.5: 播客合成（~5-8 min）
-           ├─ Step 4: 发 review 邮件给 yyc54321@126.com
+           ├─ Step 4: 发 review 邮件给 recipients.json 中的测试收件人
            └─ Step 5: 留样 + 日志
            
 11:30-14:30  管理员（BIL）可审核 review 邮件，有问题可取消
 
 14:30 CST  check-and-distribute cron 触发
-           └─ 质量检查通过 → 仅发送 yyc54321@126.com
+           └─ 质量检查通过 → 仅发送 recipients.json 中的测试收件人
 ```
 
 ---
@@ -217,7 +221,7 @@ skill/
 │   ├── content-rules.md        # 栏目结构、正文要求、锐评、去重
 │   ├── html-design.md          # 配色、字体、结构
 │   ├── smtp-config.md          # SMTP 配置
-│   ├── recipients.md           # 唯一测试收件人
+│   ├── recipients.json         # 测试收件人 JSON
 │   ├── recent-issues-state.md  # 跨天去重状态
 │   └── send-log.md             # 发送日志
 ├── scripts/
@@ -240,7 +244,7 @@ skill/
 - **Session**：isolated
 - **模型**：无覆盖（使用默认）
 - **操作**：读取 SKILL.md 执行完整流程
-- **分发**：仅 review 邮件 → yyc54321@126.com
+- **分发**：仅 review 邮件 → `skill/references/recipients.json`
 
 ### 任务 2: check-and-distribute
 - **时间**：每天 14:30 CST
@@ -263,7 +267,7 @@ skill/
 ## 十二、手动触发
 
 在 Discord #新闻 频道说 "手动运行" 即可，可加参数如：
-- "手动运行，只发 yyc54321@126.com"
+- "手动运行，只发测试收件人"
 - "手动运行，不要转发"
 - "手动运行，全程（含播客）"
 

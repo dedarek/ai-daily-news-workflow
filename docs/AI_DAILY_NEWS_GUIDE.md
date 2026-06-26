@@ -30,7 +30,7 @@
 | 工作流 | 已部署至 GitHub Actions |
 | 自动时间 | 每天北京时间 11:30 首发，14:30 LLM 复审后二次发送 |
 | 手动运行 | 支持 |
-| 邮件收件人 | 仅 `yyc54321@126.com` |
+| 邮件收件人 | `yyc54321@126.com`、`heyujie1104@gmail.com`、`heyj17@lenovo.com` |
 | 新闻数量 | 每期 12 条 |
 | LLM | OpenCode Go 模型自动降级链 |
 | 播客 | 双人对话稿 + MP3 |
@@ -66,7 +66,7 @@ GitHub Actions 每日 11:30 触发首发
         ├── 发布 GitHub Pages 内容 API
         │
         └── 发送测试邮件
-                └── yyc54321@126.com
+                └── skill/references/recipients.json
 
 14:30 独立复审工作流
         │
@@ -74,7 +74,7 @@ GitHub Actions 每日 11:30 触发首发
         ├── LLM 独立检查事实一致性、重复、可读性和播客质量
         ├── 再次执行确定性质量门禁
         ├── 保存公开复审报告
-        └── 再次发送至 yyc54321@126.com
+        └── 再次发送至测试收件人名单中的地址
 ```
 
 生成流水线与内容服务相互分离：
@@ -110,7 +110,7 @@ GitHub Actions 每日 11:30 触发首发
 7. 生成 HTML 日报和播客口播稿。
 8. 调用 SiliconFlow 合成 MP3。
 9. 执行 HTML、链接、栏目及音频质量门禁。
-10. 验证唯一收件人发送计划。
+10. 验证收件人发送计划。
 11. 更新 `gh-pages` 历史内容。
 12. 根据运行参数发送测试邮件。
 13. 上传 GitHub Actions 运行产物。
@@ -212,16 +212,18 @@ Bitrate: 64k
 
 ## 7. 邮件发送
 
-当前唯一允许的收件人：
+当前允许的测试收件人：
 
 ```text
 yyc54321@126.com
+heyujie1104@gmail.com
+heyj17@lenovo.com
 ```
 
 相关文件：
 
 ```text
-skill/references/recipients.md
+skill/references/recipients.json
 skill/scripts/send_all.py
 skill/references/smtp-config.md
 ```
@@ -251,10 +253,10 @@ skill/references/smtp-config.md
 
 ### 安全限制
 
-`send_all.py` 同时验证：
+`send_all.py` 从 `skill/references/recipients.json` 读取收件人，并验证：
 
-1. 配置中只能出现一个邮箱。
-2. 邮箱必须严格等于 `yyc54321@126.com`。
+1. 配置必须是非空 JSON 字符串数组。
+2. 每一项必须是合法邮箱地址，且不得重复。
 3. 不允许恢复或读取历史全员名单。
 
 ---
