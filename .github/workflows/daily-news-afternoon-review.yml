@@ -7,7 +7,7 @@ on:
         description: "Send the reviewed issue to the test recipients in recipients.json"
         required: true
         type: boolean
-        default: false
+        default: true
   schedule:
     - cron: "30 6 * * *"
     - cron: "40 6 * * *"
