@@ -7,12 +7,12 @@ on:
         description: "Send the reviewed issue using the afternoon phase in send-email-config.json"
         required: true
         type: boolean
-        default: true
+        default: false
       send_files:
-        description: "Upload reviewed artifacts to the backend before optional email delivery"
+        description: "Run file upload before optional email delivery"
         required: true
         type: boolean
-        default: true
+        default: false
   schedule:
     - cron: "30 6 * * *"
     - cron: "40 6 * * *"
@@ -98,7 +98,7 @@ jobs:
             --phase afternoon \
             --dry-run
 
-      - name: Upload pre-send artifacts
+      - name: File upload
         if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_files) }}
         env:
           AI_DAILY_PRE_SEND_API_URL: ${{ secrets.AI_DAILY_PRE_SEND_API_URL || vars.AI_DAILY_PRE_SEND_API_URL }}

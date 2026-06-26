@@ -41,7 +41,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 
 ```
 11:30  生成 + review 发 recipients.json 中的 admins
-14:30  质量复检 → send_files 上传重要文件到后端 API → send_email 发送 recipients.json 中的 all
+14:30  质量复检 → send_files 文件上传 → send_email 发送 recipients.json 中的 all
 ```
 
 ---
@@ -103,7 +103,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 11:30-14:30  管理员（BIL）可审核 review 邮件，有问题可取消
 
 14:30 CST  check-and-distribute cron 触发
-           ├─ send_files=true → 上传重要文件到后端 API
+           ├─ send_files=true → 文件上传
            └─ send_email=true → 发送 recipients.json 中的 all
 ```
 
@@ -229,7 +229,7 @@ skill/
 │   ├── smtp-config.md          # SMTP 配置
 │   ├── recipients.json         # 分阶段收件人 JSON（admins/all）
 │   ├── send-email-config.json  # 邮件发送 phase/audience/节流配置
-│   ├── send-file-config.json   # 全员发送前文件上传配置
+│   ├── send-file-config.json   # 文件上传配置
 │   ├── recent-issues-state.md  # 跨天去重状态
 │   └── send-log.md             # 发送日志
 ├── scripts/
@@ -243,7 +243,7 @@ skill/
     └── scripts/mosi_dialogue.sh
 ```
 
-仓库根目录 `scripts/upload_delivery_artifacts.py` 负责全员发送前上传重要文件。
+仓库根目录 `scripts/upload_delivery_artifacts.py` 负责文件上传。
 
 ---
 
@@ -260,14 +260,14 @@ skill/
 - **时间**：每天 14:30 CST
 - **Session**：isolated
 - **操作**：运行 `check_and_distribute.py`，通过后发送 `recipients.json` 的 `all`
-- **send_files**：控制是否调用 `scripts/upload_delivery_artifacts.py` 上传重要文件
+- **send_files**：控制是否执行文件上传
 - **send_email**：控制是否调用 `send_all.py --phase afternoon` 发全员邮件
 - **自动触发**：`send_files=true` 且 `send_email=true`
 - **Auto-send**：无人取消则自动执行
 
-### 发送前后端上传
+### 文件上传
 
-下午流程会按 `send_files` 开关把 `review-dist/` 中的重要文件上传到后端 API。默认地址：
+下午流程会按 `send_files` 开关把 `review-dist/` 中配置的文件上传到后端 API。默认地址：
 
 ```text
 http://8.137.39.142:8011/mock/receive
@@ -279,7 +279,7 @@ http://8.137.39.142:8011/mock/receive
 Authorization: Bearer tsd-tic
 ```
 
-后续 IP、路径、认证、字段映射或 artifact 目录变化时，优先改：
+后续 IP、路径、认证、上传文件或 artifact 目录变化时，优先改：
 
 ```text
 skill/references/send-file-config.json
@@ -297,11 +297,10 @@ AI_DAILY_PRE_SEND_API_URL
 AI_DAILY_PRE_SEND_API_TOKEN
 ```
 
-上传字段：
+当前只上传两个文件：
 
-- `jsons`：`articles-YYYY-MM-DD.json`、`podcast-script-YYYY-MM-DD.json`、`quality-review-YYYY-MM-DD.json`
-- `htmls`：`daily-news-YYYY-MM-DD.html`
-- `docs`：`podcast-script-YYYY-MM-DD.txt`、`daily-news-podcast-YYYY-MM-DD.mp3`
+- `jsons`：`articles-YYYY-MM-DD.json`
+- `docs`：`daily-news-podcast-YYYY-MM-DD.mp3`
 
 自动触发时 `send_files` 和 `send_email` 都视为 true。手动触发时可单独测试上传或邮件；如果两个都开启，上传步骤位于邮件发送之前，上传失败会阻断后续邮件发送。
 

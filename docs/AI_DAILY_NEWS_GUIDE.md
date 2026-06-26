@@ -28,7 +28,7 @@
 | 项目 | 当前状态 |
 |---|---|
 | 工作流 | 已部署至 GitHub Actions |
-| 自动时间 | 每天北京时间 11:30 管理员检查发送，14:30 LLM 复审后自动上传文件并正式发送 |
+| 自动时间 | 每天北京时间 11:30 管理员检查发送，14:30 LLM 复审后自动文件上传并正式发送 |
 | 手动运行 | 支持 |
 | 邮件收件人 | `skill/references/recipients.json`，`admins` 用于上午，`all` 用于下午 |
 | 新闻数量 | 每期 12 条 |
@@ -74,7 +74,7 @@ GitHub Actions 每日 11:30 触发管理员检查发送
         ├── 拉取当天公开成品
         ├── LLM 独立检查事实一致性、重复、可读性和播客质量
         ├── 再次执行确定性质量门禁
-        ├── send_files=true 时上传重要文件到后端 API
+        ├── send_files=true 时执行文件上传
         ├── 保存公开复审报告
         └── send_email=true 时发送至 recipients.json 中的 all
 ```
@@ -263,11 +263,11 @@ scripts/upload_delivery_artifacts.py
 - LLM 不得判断存在明显事实矛盾。
 - LLM 质量评分不得低于 50。
 - 自动触发时 `send_files=true` 且 `send_email=true`。
-- 手动触发时 `send_files` 控制是否上传后端，`send_email` 控制是否发全员邮件。
-- 如果同一次运行中两个开关都为 true，后端上传必须成功后才会发送全员邮件。
+- 手动触发时 `send_files` 控制是否文件上传，`send_email` 控制是否发全员邮件。
+- 如果同一次运行中两个开关都为 true，文件上传必须成功后才会发送全员邮件。
 - 文风或模板化表达等非致命问题会记录到公开复审报告，但不会单独阻止发送。
 
-### 发送前后端上传
+### 文件上传
 
 下午流程在 `send_files=true` 时会调用：
 
@@ -288,7 +288,7 @@ http://8.137.39.142:8011/mock/receive
 Authorization: Bearer tsd-tic
 ```
 
-后续地址、认证、字段映射或 artifact 目录变化时，不需要改代码，修改：
+后续地址、认证、上传文件或 artifact 目录变化时，不需要改代码，修改：
 
 ```text
 skill/references/send-file-config.json
@@ -306,13 +306,12 @@ AI_DAILY_PRE_SEND_API_URL
 AI_DAILY_PRE_SEND_API_TOKEN
 ```
 
-上传文件来自 `review-dist/`：
+上传文件来自 `review-dist/`。当前只上传两个文件：
 
 | 字段 | 文件 |
 |---|---|
-| `jsons` | `articles-YYYY-MM-DD.json`、`podcast-script-YYYY-MM-DD.json`、`quality-review-YYYY-MM-DD.json` |
-| `htmls` | `daily-news-YYYY-MM-DD.html` |
-| `docs` | `podcast-script-YYYY-MM-DD.txt`、`daily-news-podcast-YYYY-MM-DD.mp3` |
+| `jsons` | `articles-YYYY-MM-DD.json` |
+| `docs` | `daily-news-podcast-YYYY-MM-DD.mp3` |
 
 上传失败会使 workflow 失败；如果本次同时 `send_email=true`，会阻断 `--phase afternoon` 全员发送。
 
@@ -499,7 +498,7 @@ send_email=false  只生成和发布，不发送邮件
 下午复审 workflow 另有：
 
 ```text
-send_files=true   上传 review-dist 中的重要文件到后端 API
+send_files=true   执行文件上传
 send_files=false  不上传文件，便于只测试复审或邮件路径
 ```
 

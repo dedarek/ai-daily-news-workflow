@@ -16,7 +16,7 @@ CONFIG_FILE = REPO_ROOT / 'skill' / 'references' / 'send-file-config.json'
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Upload pre-send AI daily-news artifacts to a backend API')
+    parser = argparse.ArgumentParser(description='Upload configured AI daily-news files to a backend API')
     parser.add_argument('--date', required=True, help='YYYY-MM-DD')
     parser.add_argument('--artifact-dir', help='Override directory containing files to upload')
     parser.add_argument(
@@ -40,16 +40,24 @@ def read_config() -> dict:
     return configured
 
 
-def collect_files(artifact_dir: Path, date_str: str, fields_by_suffix: dict[str, str]) -> list[tuple[str, Path]]:
+def collect_configured_files(artifact_dir: Path, date_str: str, configured_files: object) -> list[tuple[str, Path]]:
     if not artifact_dir.exists():
         raise FileNotFoundError(f'Missing artifact directory: {artifact_dir}')
 
-    candidates = sorted(path for path in artifact_dir.iterdir() if path.is_file() and date_str in path.name)
     files: list[tuple[str, Path]] = []
-    for path in candidates:
-        field = fields_by_suffix.get(path.suffix.lower())
-        if field:
-            files.append((field, path))
+    if not isinstance(configured_files, list) or not configured_files:
+        raise RuntimeError(f'send-file config requires a non-empty files array: {CONFIG_FILE}')
+    for item in configured_files:
+        if not isinstance(item, dict):
+            raise RuntimeError(f'each send-file config files item must be an object: {CONFIG_FILE}')
+        pattern = str(item.get('path') or '').strip()
+        field = str(item.get('field') or '').strip()
+        if not pattern or not field:
+            raise RuntimeError(f'each send-file config files item requires path and field: {CONFIG_FILE}')
+        path = artifact_dir / pattern.format(date=date_str)
+        if not path.is_file():
+            raise FileNotFoundError(f'Missing configured upload file: {path}')
+        files.append((field, path))
     if not files:
         raise RuntimeError(f'No uploadable artifacts for {date_str} in {artifact_dir}')
     return files
@@ -129,21 +137,10 @@ def main() -> int:
     if not endpoint.startswith(('http://', 'https://')):
         raise RuntimeError(f'Invalid upload endpoint: {endpoint}')
 
-    fields_by_suffix = config.get('fields_by_suffix')
-    if not isinstance(fields_by_suffix, dict) or not fields_by_suffix:
-        raise RuntimeError(f'send-file config requires non-empty fields_by_suffix: {CONFIG_FILE}')
-    normalized_fields = {
-        str(suffix).lower(): str(field)
-        for suffix, field in fields_by_suffix.items()
-        if str(suffix).startswith('.') and str(field).strip()
-    }
-    if not normalized_fields:
-        raise RuntimeError(f'send-file config fields_by_suffix has no valid mappings: {CONFIG_FILE}')
-
     artifact_dir = Path(args.artifact_dir or config.get('artifact_dir') or 'review-dist').resolve()
     timeout_seconds = float(config.get('timeout_seconds', 120))
     extra_headers = resolve_headers(config)
-    files = collect_files(artifact_dir, args.date, normalized_fields)
+    files = collect_configured_files(artifact_dir, args.date, config.get('files'))
     plan = [
         {'field': field, 'file': str(path), 'bytes': path.stat().st_size}
         for field, path in files

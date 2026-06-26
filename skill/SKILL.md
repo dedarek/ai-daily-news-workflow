@@ -155,11 +155,12 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
       - 163 邮箱日发送配额有限，带大附件时更容易触发限流
   - 📱 飞书：**⏸️ 暂停**（access token 过期，待重新配置飞书应用后恢复）
   - 📄 飞书文档备份：**⏸️ 暂停**（同上）
-  - 🔼 全员发送前后端上传：
+  - 🔼 文件上传：
     - 由 workflow 的 `send_files` 控制；定时自动触发时必须视为 true。
-    - 手动调试时 `send_files` 只控制是否上传文件，不控制是否发邮件。
+    - 手动调试时 `send_files` 只控制是否文件上传，不控制是否发邮件。
     - 配置来源：`references/send-file-config.json`
     - 调用 `scripts/upload_delivery_artifacts.py --date YYYY-MM-DD`。
+    - 当前只上传 `articles-YYYY-MM-DD.json` 和 `daily-news-podcast-YYYY-MM-DD.mp3`。
     - endpoint 优先用 `AI_DAILY_PRE_SEND_API_URL` 临时覆盖，否则读取 `references/send-file-config.json`，禁止在临时脚本中另写地址。
     - 如果同一次运行中 `send_files=true` 且 `send_email=true`，上传失败必须阻断全员发送。
   - 📧 全员邮件发送：
@@ -209,7 +210,7 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 | `references/smtp-config.md` | SMTP 配置 |
 | `references/recipients.json` | 邮件收件人 |
 | `references/send-email-config.json` | 邮件 phase、audience、标题后缀和节流配置 |
-| `references/send-file-config.json` | 全员发送前后端上传配置 |
+| `references/send-file-config.json` | 文件上传配置 |
 | `references/recent-issues-state.md` | 跨天去重状态 |
 | `references/rss-radar-sources.md` | RSS 源配置 |
 | `templates/v4-2026-03-18.html` | HTML 模板参考 |
