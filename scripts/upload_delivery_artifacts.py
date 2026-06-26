@@ -73,16 +73,38 @@ def build_multipart(files: list[tuple[str, Path]]) -> tuple[str, bytes]:
     return boundary, b''.join(chunks)
 
 
-def upload(endpoint: str, files: list[tuple[str, Path]], timeout_seconds: float) -> tuple[int, str]:
+def resolve_headers(config: dict) -> dict[str, str]:
+    auth = config.get('auth')
+    if not isinstance(auth, dict) or auth.get('enabled') is False:
+        return {}
+
+    header = str(auth.get('header') or 'Authorization').strip()
+    scheme = str(auth.get('scheme') or '').strip()
+    token = os.environ.get('AI_DAILY_PRE_SEND_API_TOKEN') or str(auth.get('token') or '').strip()
+    if not header:
+        raise RuntimeError('send-file config auth.header must not be blank')
+    if not token:
+        raise RuntimeError('send-file config auth token is blank. Set auth.token or AI_DAILY_PRE_SEND_API_TOKEN.')
+    return {header: f'{scheme} {token}'.strip() if scheme else token}
+
+
+def upload(
+    endpoint: str,
+    files: list[tuple[str, Path]],
+    timeout_seconds: float,
+    extra_headers: dict[str, str],
+) -> tuple[int, str]:
     boundary, body = build_multipart(files)
+    headers = {
+        'Content-Type': f'multipart/form-data; boundary={boundary}',
+        'Content-Length': str(len(body)),
+        'User-Agent': 'ai-daily-news-workflow/1.0',
+    }
+    headers.update(extra_headers)
     request = Request(
         endpoint,
         data=body,
-        headers={
-            'Content-Type': f'multipart/form-data; boundary={boundary}',
-            'Content-Length': str(len(body)),
-            'User-Agent': 'ai-daily-news-workflow/1.0',
-        },
+        headers=headers,
         method='POST',
     )
     try:
@@ -120,18 +142,26 @@ def main() -> int:
 
     artifact_dir = Path(args.artifact_dir or config.get('artifact_dir') or 'review-dist').resolve()
     timeout_seconds = float(config.get('timeout_seconds', 120))
+    extra_headers = resolve_headers(config)
     files = collect_files(artifact_dir, args.date, normalized_fields)
     plan = [
         {'field': field, 'file': str(path), 'bytes': path.stat().st_size}
         for field, path in files
     ]
-    print(json.dumps({'endpoint': endpoint, 'files': plan}, ensure_ascii=False, indent=2), flush=True)
+    print(
+        json.dumps(
+            {'endpoint': endpoint, 'auth_headers': sorted(extra_headers), 'files': plan},
+            ensure_ascii=False,
+            indent=2,
+        ),
+        flush=True,
+    )
 
     if args.dry_run:
         print('DRY_RUN: upload skipped', flush=True)
         return 0
 
-    status, response_body = upload(endpoint, files, timeout_seconds)
+    status, response_body = upload(endpoint, files, timeout_seconds, extra_headers)
     if not 200 <= status < 300:
         raise RuntimeError(f'Upload failed: HTTP {status}: {response_body[:1000]}')
     print(json.dumps({'status': status, 'response': response_body[:2000]}, ensure_ascii=False, indent=2), flush=True)

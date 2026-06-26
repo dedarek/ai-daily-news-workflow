@@ -270,10 +270,16 @@ skill/
 下午流程会按 `send_files` 开关把 `review-dist/` 中的重要文件上传到后端 API。默认地址：
 
 ```text
-http://8.137.39.142:8010/mock/receive
+http://8.137.39.142:8011/mock/receive
 ```
 
-后续 IP、路径、字段映射或 artifact 目录变化时，优先改：
+默认认证配置同样在 `send-file-config.json`：
+
+```text
+Authorization: Bearer tsd-tic
+```
+
+后续 IP、路径、认证、字段映射或 artifact 目录变化时，优先改：
 
 ```text
 skill/references/send-file-config.json
@@ -283,6 +289,12 @@ skill/references/send-file-config.json
 
 ```text
 AI_DAILY_PRE_SEND_API_URL
+```
+
+临时覆盖认证 token：
+
+```text
+AI_DAILY_PRE_SEND_API_TOKEN
 ```
 
 上传字段：

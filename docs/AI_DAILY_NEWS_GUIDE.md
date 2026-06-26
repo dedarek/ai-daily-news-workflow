@@ -279,10 +279,16 @@ python3 scripts/upload_delivery_artifacts.py \
 默认 endpoint：
 
 ```text
-http://8.137.39.142:8010/mock/receive
+http://8.137.39.142:8011/mock/receive
 ```
 
-后续地址、字段映射或 artifact 目录变化时，不需要改代码，修改：
+默认认证配置同样在 `send-file-config.json`：
+
+```text
+Authorization: Bearer tsd-tic
+```
+
+后续地址、认证、字段映射或 artifact 目录变化时，不需要改代码，修改：
 
 ```text
 skill/references/send-file-config.json
@@ -292,6 +298,12 @@ skill/references/send-file-config.json
 
 ```text
 AI_DAILY_PRE_SEND_API_URL
+```
+
+临时覆盖认证 token 时，可配置 GitHub Actions Variable 或 Secret：
+
+```text
+AI_DAILY_PRE_SEND_API_TOKEN
 ```
 
 上传文件来自 `review-dist/`：
@@ -520,6 +532,7 @@ gh run list \
 | `AI_DAILY_SMTP_USER` | SMTP 发件账号 |
 | `AI_DAILY_SMTP_PASSWORD` | SMTP 授权码 |
 | `AI_DAILY_PRE_SEND_API_URL` | 可选，临时覆盖 `send-file-config.json` 中的上传地址 |
+| `AI_DAILY_PRE_SEND_API_TOKEN` | 可选，临时覆盖 `send-file-config.json` 中的上传认证 token |
 
 Secret 只注入 GitHub Runner，不会发布到 GitHub Pages。
 

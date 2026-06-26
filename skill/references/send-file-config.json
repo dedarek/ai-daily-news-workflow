@@ -1,6 +1,12 @@
 {
   "enabled": true,
-  "endpoint": "http://8.137.39.142:8010/mock/receive",
+  "endpoint": "http://8.137.39.142:8011/mock/receive",
+  "auth": {
+    "enabled": true,
+    "header": "Authorization",
+    "scheme": "Bearer",
+    "token": "tsd-tic"
+  },
   "artifact_dir": "review-dist",
   "timeout_seconds": 120,
   "fields_by_suffix": {
