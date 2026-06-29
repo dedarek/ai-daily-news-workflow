@@ -697,9 +697,15 @@ def main() -> int:
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
     data_path = output_dir / f'news-data-{args.date}.json'
+    candidate_data_path = output_dir / f'candidate-news-{args.date}.json'
     podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
+    podcast_script_text_path = output_dir / f'podcast-script-{args.date}.txt'
     moss_input_path = output_dir / f'podcast-moss-input-{args.date}.txt'
     render_html(args.date, content_date, articles, html_path)
+    candidate_data_path.write_text(
+        json.dumps([asdict(a) for a in candidates], ensure_ascii=False, indent=2),
+        encoding='utf-8',
+    )
     data_path.write_text(json.dumps([asdict(a) for a in articles], ensure_ascii=False, indent=2), encoding='utf-8')
     podcast_script_path.write_text(
         json.dumps(
@@ -714,6 +720,10 @@ def main() -> int:
             ensure_ascii=False,
             indent=2,
         ),
+        encoding='utf-8',
+    )
+    podcast_script_text_path.write_text(
+        '\n'.join(f'[{turn["speaker"]}] {turn["text"]}' for turn in dialogue) + '\n',
         encoding='utf-8',
     )
     moss_input_path.write_text(moss_dialogue_input(dialogue), encoding='utf-8')
@@ -739,9 +749,11 @@ def main() -> int:
         'recipient': 'yyc54321@126.com',
         'article_count': len(articles),
         'candidate_count': len(candidates),
+        'candidate_data_file': candidate_data_path.name,
         'llm': llm_metadata,
         'podcast_turns': len(dialogue),
         'podcast_script_file': podcast_script_path.name,
+        'podcast_script_text_file': podcast_script_text_path.name,
         'podcast_moss_input_file': moss_input_path.name,
         'tts_mode': tts_mode,
         'tts_model': MOSS_TTS_MODEL,

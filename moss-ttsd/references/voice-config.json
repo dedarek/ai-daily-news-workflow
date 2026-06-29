@@ -1,0 +1,24 @@
+{
+  "model": "fnlp/MOSS-TTSD-v0.5",
+  "endpoint": "https://api.siliconflow.cn/v1/audio/speech",
+  "tts_mode": "siliconflow-moss-reference-live",
+  "voices": {
+    "S1": {
+      "name": "老陈",
+      "role": "资深AI从业者",
+      "audio": "moss-ttsd/references/voice_laochen_s1.wav",
+      "transcript_env": "MOSS_TTS_S1_REFERENCE_TEXT"
+    },
+    "S2": {
+      "name": "小满",
+      "role": "产品与应用视角",
+      "audio": "moss-ttsd/references/voice_anna_s2.mp3",
+      "transcript_env": "MOSS_TTS_S2_REFERENCE_TEXT"
+    }
+  },
+  "constraints": {
+    "allowed_speakers": ["S1", "S2"],
+    "single_call_dialogue_synthesis": true,
+    "fallback_audio_allowed": false
+  }
+}

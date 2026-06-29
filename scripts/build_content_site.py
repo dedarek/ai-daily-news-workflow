@@ -23,6 +23,13 @@ def absolute(base_url: str, path: str) -> str:
     return f"{base_url.rstrip('/')}/{path.lstrip('/')}"
 
 
+def first_existing(paths: list[Path], label: str) -> Path:
+    for path in paths:
+        if path.exists():
+            return path
+    raise FileNotFoundError(f'Missing content artifact for {label}: {[str(path) for path in paths]}')
+
+
 def render_index(latest: dict, issues: list[dict]) -> str:
     rows = ''.join(
         f'<li><a href="{item["html_url"]}">{item["issue_date"]}</a>'
@@ -47,6 +54,7 @@ def render_index(latest: dict, issues: list[dict]) -> str:
   <ul>
     <li><a href="api/latest.json"><code>/api/latest.json</code></a></li>
     <li><a href="feed.json"><code>/feed.json</code></a></li>
+    <li><code>/api/issues/YYYY-MM-DD/manifest.json</code></li>
     <li><code>/api/issues/YYYY-MM-DD/index.json</code></li>
     <li><code>/api/issues/YYYY-MM-DD/articles.json</code></li>
     <li><code>/api/issues/YYYY-MM-DD/podcast-script.json</code></li>
@@ -69,22 +77,37 @@ def main() -> int:
     dist = (REPO_ROOT / args.dist_dir).resolve()
     site = Path(args.site_dir).resolve()
     site.mkdir(parents=True, exist_ok=True)
-    report_path = dist / f'pipeline-report-{args.date}.json'
-    articles_path = dist / f'news-data-{args.date}.json'
-    script_path = dist / f'podcast-script-{args.date}.json'
-    html_path = dist / f'ai-daily-news-html-{args.date}.html'
-    audio_path = dist / f'ai-daily-news-podcast-{args.date}.mp3'
-    required = [report_path, articles_path, script_path, html_path, audio_path]
-    missing = [str(path) for path in required if not path.exists()]
-    if missing:
-        raise FileNotFoundError(f'Missing content artifacts: {missing}')
+    manifest_path = first_existing([dist / f'manifest-{args.date}.json'], 'manifest')
+    report_path = first_existing([dist / f'pipeline-report-{args.date}.json'], 'pipeline report')
+    articles_path = first_existing(
+        [dist / f'articles-{args.date}.json', dist / f'news-data-{args.date}.json'],
+        'articles',
+    )
+    candidate_articles_path = first_existing([dist / f'candidate-news-{args.date}.json'], 'candidate articles')
+    script_path = first_existing([dist / f'podcast-script-{args.date}.json'], 'podcast script')
+    script_text_path = first_existing([dist / f'podcast-script-{args.date}.txt'], 'podcast script text')
+    moss_input_path = first_existing([dist / f'podcast-moss-input-{args.date}.txt'], 'podcast moss input')
+    html_path = first_existing(
+        [dist / f'daily-news-{args.date}.html', dist / f'ai-daily-news-html-{args.date}.html'],
+        'html',
+    )
+    audio_path = first_existing(
+        [dist / f'daily-news-podcast-{args.date}.mp3', dist / f'ai-daily-news-podcast-{args.date}.mp3'],
+        'audio',
+    )
 
     report = read_json(report_path)
+    manifest = read_json(manifest_path)
+    candidate_articles = read_json(candidate_articles_path)
     articles = read_json(articles_path)
     podcast_script = read_json(script_path)
     issue_root = site / 'api' / 'issues' / args.date
+    write_json(issue_root / 'candidate-news.json', candidate_articles)
     write_json(issue_root / 'articles.json', articles)
     write_json(issue_root / 'podcast-script.json', podcast_script)
+    shutil.copy2(script_text_path, issue_root / 'podcast-script.txt')
+    shutil.copy2(moss_input_path, issue_root / 'podcast-moss-input.txt')
+    write_json(issue_root / 'pipeline-report.json', report)
 
     published_html = site / 'html' / f'{args.date}.html'
     published_audio = site / 'audio' / f'{args.date}.mp3'
@@ -105,10 +128,26 @@ def main() -> int:
         'tts_reference_files': report.get('tts_reference_files'),
         'llm': report['llm'],
         'articles_url': absolute(args.base_url, f'api/issues/{args.date}/articles.json'),
+        'candidate_articles_url': absolute(args.base_url, f'api/issues/{args.date}/candidate-news.json'),
         'podcast_script_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.json'),
+        'podcast_script_text_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.txt'),
+        'podcast_moss_input_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-moss-input.txt'),
+        'manifest_url': absolute(args.base_url, f'api/issues/{args.date}/manifest.json'),
         'html_url': absolute(args.base_url, f'html/{args.date}.html'),
         'audio_url': absolute(args.base_url, f'audio/{args.date}.mp3'),
     }
+    manifest['published_artifacts'] = {
+        'index': absolute(args.base_url, f'api/issues/{args.date}/index.json'),
+        'candidate_articles': issue['candidate_articles_url'],
+        'articles': issue['articles_url'],
+        'podcast_script': issue['podcast_script_url'],
+        'podcast_script_text': issue['podcast_script_text_url'],
+        'podcast_moss_input': issue['podcast_moss_input_url'],
+        'html': issue['html_url'],
+        'audio': issue['audio_url'],
+        'pipeline_report': absolute(args.base_url, f'api/issues/{args.date}/pipeline-report.json'),
+    }
+    write_json(issue_root / 'manifest.json', manifest)
     write_json(issue_root / 'index.json', issue)
     write_json(site / 'api' / 'latest.json', issue)
 

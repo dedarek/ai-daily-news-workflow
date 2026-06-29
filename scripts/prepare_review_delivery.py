@@ -35,6 +35,22 @@ def write_podcast_text(path: Path, podcast_script: dict) -> None:
     path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
+def write_json_file(path: Path, data) -> None:
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+
+
+def load_published_issue(base: str, issue_date: str) -> tuple[dict, dict]:
+    manifest = get_json(f'{base}/api/issues/{issue_date}/manifest.json')
+    if manifest.get('date') != issue_date:
+        raise RuntimeError(f'Manifest date is {manifest.get("date")}, expected {issue_date}')
+    if manifest.get('status') != 'ready':
+        raise RuntimeError(f'Morning manifest is not ready: status={manifest.get("status")}')
+    published = manifest.get('published_artifacts')
+    if not isinstance(published, dict):
+        raise RuntimeError('Morning manifest missing published_artifacts')
+    return manifest, published
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description='Prepare and LLM-review an already published daily issue')
     parser.add_argument('--date', required=True)
@@ -46,17 +62,16 @@ def main() -> int:
     base = args.base_url.rstrip('/')
     output_dir = (REPO_ROOT / args.output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
-    latest = get_json(f'{base}/api/latest.json')
-    if latest.get('issue_date') != args.date:
-        raise RuntimeError(
-            f'Latest public issue is {latest.get("issue_date")}, expected {args.date}; '
-            'morning publication is not ready'
-        )
+    manifest, published = load_published_issue(base, args.date)
 
-    articles = get_json(latest['articles_url'])
-    podcast_script = get_json(latest['podcast_script_url'])
-    html_bytes = get_bytes(latest['html_url'])
-    audio_bytes = get_bytes(latest['audio_url'])
+    articles = get_json(published['articles'])
+    candidate_articles = get_json(published['candidate_articles']) if published.get('candidate_articles') else []
+    podcast_script = get_json(published['podcast_script'])
+    html_bytes = get_bytes(published['html'])
+    audio_bytes = get_bytes(published['audio'])
+    write_json_file(output_dir / f'manifest-{args.date}.json', manifest)
+    if candidate_articles:
+        write_json_file(output_dir / f'candidate-news-{args.date}.json', candidate_articles)
 
     (output_dir / f'articles-{args.date}.json').write_text(
         json.dumps(articles, ensure_ascii=False, indent=2),
@@ -71,14 +86,19 @@ def main() -> int:
     write_podcast_text(output_dir / f'podcast-script-{args.date}.txt', podcast_script)
 
     deterministic_issues: list[str] = []
-    if latest.get('tts_mode') != 'siliconflow-moss-reference-live':
-        deterministic_issues.append(f'tts_mode={latest.get("tts_mode")} is not siliconflow-moss-reference-live')
+    report_from_manifest = manifest.get('pipeline_report') if isinstance(manifest.get('pipeline_report'), dict) else {}
+    if report_from_manifest.get('tts_mode') != 'siliconflow-moss-reference-live':
+        deterministic_issues.append(
+            f'tts_mode={report_from_manifest.get("tts_mode")} is not siliconflow-moss-reference-live'
+        )
     expected_reference_files = {
         'S1': 'moss-ttsd/references/voice_laochen_s1.wav',
         'S2': 'moss-ttsd/references/voice_anna_s2.mp3',
     }
-    if latest.get('tts_reference_files') != expected_reference_files:
-        deterministic_issues.append(f'tts_reference_files={latest.get("tts_reference_files")} do not match expected MOSS references')
+    if report_from_manifest.get('tts_reference_files') != expected_reference_files:
+        deterministic_issues.append(
+            f'tts_reference_files={report_from_manifest.get("tts_reference_files")} do not match expected MOSS references'
+        )
     urls = [item.get('url') for item in articles]
     if len(articles) < 8:
         deterministic_issues.append(f'article_count={len(articles)} < 8')

@@ -96,13 +96,32 @@ jobs:
             --phase afternoon \
             --dry-run
 
-      - name: File upload
+      - name: 文件上传
         if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_files) }}
         env:
           AI_DAILY_PRE_SEND_API_URL: ${{ secrets.AI_DAILY_PRE_SEND_API_URL || vars.AI_DAILY_PRE_SEND_API_URL }}
         run: |
+          set +e
           python3 scripts/upload_delivery_artifacts.py \
             --date "${{ steps.issue.outputs.date }}"
+          STATUS=$?
+          set -e
+          if [ "$STATUS" -ne 0 ]; then
+            echo "::warning::File upload failed with exit code $STATUS; continuing to email delivery"
+            {
+              echo "### 文件上传"
+              echo
+              echo "- Status: warning"
+              echo "- Exit code: $STATUS"
+              echo "- Delivery continues: yes"
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            {
+              echo "### 文件上传"
+              echo
+              echo "- Status: success"
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Send reviewed issue
         if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
