@@ -60,7 +60,7 @@ GitHub Actions 每日 11:30 触发管理员检查发送
         │   ├── AI 锐评
         │   └── 双人播客脚本
         │
-        ├── SiliconFlow TTS 合成 MP3
+        ├── SiliconFlow MOSS-TTSD 参考音频合成 MP3
         │
         ├── HTML 与音频质量门禁
         │
@@ -110,7 +110,7 @@ GitHub Actions 每日 11:30 触发管理员检查发送
 5. 采集最新可用新闻。
 6. 调用 LLM 生成结构化内容。
 7. 生成 HTML 日报和播客口播稿。
-8. 调用 SiliconFlow 合成 MP3。
+8. 调用 SiliconFlow MOSS-TTSD，使用仓库中的两个参考音频合成 MP3。
 9. 执行 HTML、链接、栏目及音频质量门禁。
 10. 验证收件人发送计划。
 11. 更新 `gh-pages` 历史内容。
@@ -192,21 +192,25 @@ TTS 配置：
 
 ```text
 Provider: SiliconFlow
-Model: FunAudioLLM/CosyVoice2-0.5B
-S1 Voice: alex
-S2 Voice: anna
+Model: fnlp/MOSS-TTSD-v0.5
+S1 Reference: moss-ttsd/references/voice_laochen_s1.wav
+S2 Reference: moss-ttsd/references/voice_anna_s2.mp3
 Format: MP3
-Bitrate: 64k
+Mode: single-pass spoken dialogue synthesis with [S1]/[S2] tags
 ```
 
-如果 SiliconFlow 请求失败，当前流程会生成备用测试音频，并在运行报告中将
-`tts_mode` 标记为 `fallback-sample`。
+如果 SiliconFlow 请求失败，当前流程会直接失败并阻止发布。禁止生成备用测试音频
+作为正式 MP3，也禁止改回内置 alex/anna 音色。
 
 正常实时音频标记为：
 
 ```json
 {
-  "tts_mode": "siliconflow-live"
+  "tts_mode": "siliconflow-moss-reference-live",
+  "tts_reference_files": {
+    "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+    "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+  }
 }
 ```
 
@@ -251,8 +255,8 @@ scripts/upload_delivery_artifacts.py
 
 为降低 GitHub cron 偶发漏调度风险，两个时段均设置补偿触发：
 
-- 上午：11:30、11:40、11:50、12:10。
-- 下午：14:30、14:40、14:50、15:10。
+- 上午：11:30、11:40。
+- 下午：14:30、14:40。
 
 每个阶段成功发送后会在 `gh-pages/state/deliveries/YYYY-MM-DD/` 写入幂等标记。
 当天同阶段的后续补偿任务检测到标记后会立即跳过，因此不会因补偿 cron 重复发送。
@@ -354,7 +358,7 @@ GET /api/latest.json
   "content_date": "2026-06-25",
   "article_count": 12,
   "podcast_turns": 16,
-  "tts_mode": "siliconflow-live",
+  "tts_mode": "siliconflow-moss-reference-live",
   "articles_url": "https://.../articles.json",
   "podcast_script_url": "https://.../podcast-script.json",
   "html_url": "https://.../2026-06-25.html",
@@ -600,7 +604,10 @@ Flash → Pro → MiMo V2.5
 
 ### TTS 失败
 
-生成备用音频，报告中的 `tts_mode` 会显示为 `fallback-sample`。
+工作流直接失败，不发布、不上传、不发送。下午复审也会拒绝
+`tts_mode != "siliconflow-moss-reference-live"`，或参考音频文件不是
+`moss-ttsd/references/voice_laochen_s1.wav` 和
+`moss-ttsd/references/voice_anna_s2.mp3` 的已发布内容。
 
 ### Pages 尚未更新
 

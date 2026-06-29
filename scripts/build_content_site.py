@@ -101,6 +101,8 @@ def main() -> int:
         'article_count': len(articles),
         'podcast_turns': len(podcast_script['dialogue']),
         'tts_mode': report['tts_mode'],
+        'tts_model': report.get('tts_model'),
+        'tts_reference_files': report.get('tts_reference_files'),
         'llm': report['llm'],
         'articles_url': absolute(args.base_url, f'api/issues/{args.date}/articles.json'),
         'podcast_script_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.json'),

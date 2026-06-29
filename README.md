@@ -62,12 +62,47 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 |----|-----|
 | API Key | `sk-xlh…vzmm`（来自 openclaw.json embeddings 配置）|
 | Endpoint | `POST https://api.siliconflow.cn/v1/audio/speech` |
-| Model | `FunAudioLLM/CosyVoice2-0.5B` |
-| 老陈(S1) voice | `FunAudioLLM/CosyVoice2-0.5B:alex` |
-| 小满(S2) voice | `FunAudioLLM/CosyVoice2-0.5B:anna` |
+| Model | `fnlp/MOSS-TTSD-v0.5` |
+| 老陈(S1) reference | `moss-ttsd/references/voice_laochen_s1.wav` |
+| 小满(S2) reference | `moss-ttsd/references/voice_anna_s2.mp3` |
 | 响应格式 | `response_format: "mp3"` |
 
-⚠️ 这不是 MOSI 官方 API（studio.mosi.cn 的 key 已失效），是硅基流动的 CosyVoice。
+⚠️ 通过 SiliconFlow `/audio/speech` 调用 MOSS-TTSD，必须只使用仓库 `moss-ttsd/references/` 中的两个参考音频。
+
+### 播客单独测试
+
+用已有 `articles-YYYY-MM-DD.json` 或 `news-data-YYYY-MM-DD.json` 只重新生成播客脚本和 MP3，不发布、不发送：
+
+```bash
+python scripts/generate_podcast_only.py \
+  --date 2026-06-26 \
+  --articles review-dist/articles-2026-06-26.json \
+  --output-dir tmp/podcast-test
+```
+
+只测试对话文本、不调用 TTS：
+
+```bash
+python scripts/generate_podcast_only.py \
+  --date 2026-06-26 \
+  --articles review-dist/articles-2026-06-26.json \
+  --output-dir tmp/podcast-test \
+  --skip-audio
+```
+
+`--articles` 也支持传入 `https://.../articles.json` URL。
+
+生成音频时建议传入两个 reference audio 的准确台词，或配置同名环境变量
+`MOSS_TTS_S1_REFERENCE_TEXT`、`MOSS_TTS_S2_REFERENCE_TEXT`：
+
+```bash
+python scripts/generate_podcast_only.py \
+  --date 2026-06-26 \
+  --articles review-dist/articles-2026-06-26.json \
+  --output-dir tmp/podcast-test \
+  --s1-reference-text "voice_laochen_s1.wav 的准确台词" \
+  --s2-reference-text "voice_anna_s2.mp3 的准确台词"
+```
 
 ### 邮件收件人
 
@@ -92,7 +127,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 ## 三、每日时间线
 
 ```
-11:30 CST  ai-daily-news cron 触发
+11:30 GMT+8  ai-daily-news cron 触发
            ├─ Step 1: 预检（~1 min）
            ├─ Step 2: 数据采集 + 链接验证（~5 min）
            ├─ Step 3: HTML 生成 + 质量门禁（~5 min）
@@ -102,7 +137,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
            
 11:30-14:30  管理员（BIL）可审核 review 邮件，有问题可取消
 
-14:30 CST  check-and-distribute cron 触发
+14:30 GMT+8  check-and-distribute cron 触发
            ├─ send_files=true → 文件上传
            └─ send_email=true → 发送 recipients.json 中的 all
 ```
@@ -191,8 +226,8 @@ https://hex2077.dev/docs/YYYY-MM/YYYY-MM-DD/
 - 目标 5-10 分钟
 
 ### 合成方式
-- 逐句调用 SiliconFlow CosyVoice TTS
-- ffmpeg concat 拼接所有 MP3 段
+- 单次调用 SiliconFlow MOSS-TTSD 双人对话合成
+- 输入使用 `[S1]... [S2]...` 对话标签，并传入两个本地 reference audio
 - 检查总大小，超过 8MB 降码率到 48k
 
 ---
@@ -250,14 +285,14 @@ skill/
 ## 十、Cron 任务配置
 
 ### 任务 1: ai-daily-news
-- **时间**：每天 11:30 CST
+- **时间**：每天 11:30 GMT+8
 - **Session**：isolated
 - **模型**：无覆盖（使用默认）
 - **操作**：读取 SKILL.md 执行完整流程
 - **分发**：review 邮件 → `skill/references/recipients.json` 的 `admins`
 
 ### 任务 2: check-and-distribute
-- **时间**：每天 14:30 CST
+- **时间**：每天 14:30 GMT+8
 - **Session**：isolated
 - **操作**：运行 `check_and_distribute.py`，通过后发送 `recipients.json` 的 `all`
 - **send_files**：控制是否执行文件上传

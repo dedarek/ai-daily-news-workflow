@@ -11,8 +11,6 @@ on:
   schedule:
     - cron: "30 3 * * *"
     - cron: "40 3 * * *"
-    - cron: "50 3 * * *"
-    - cron: "10 4 * * *"
 
 concurrency:
   group: ai-daily-news-morning
@@ -79,6 +77,8 @@ jobs:
           OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
           OPENCODE_GO_BASE_URL: https://opencode.ai/zen/go/v1
           OPENCODE_GO_MODELS: deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5
+          MOSS_TTS_S1_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S1_REFERENCE_TEXT || vars.MOSS_TTS_S1_REFERENCE_TEXT }}
+          MOSS_TTS_S2_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S2_REFERENCE_TEXT || vars.MOSS_TTS_S2_REFERENCE_TEXT }}
         run: |
           python3 scripts/run_live_pipeline.py \
             --date "${{ steps.issue.outputs.date }}" \

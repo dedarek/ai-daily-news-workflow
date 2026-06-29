@@ -71,6 +71,14 @@ def main() -> int:
     write_podcast_text(output_dir / f'podcast-script-{args.date}.txt', podcast_script)
 
     deterministic_issues: list[str] = []
+    if latest.get('tts_mode') != 'siliconflow-moss-reference-live':
+        deterministic_issues.append(f'tts_mode={latest.get("tts_mode")} is not siliconflow-moss-reference-live')
+    expected_reference_files = {
+        'S1': 'moss-ttsd/references/voice_laochen_s1.wav',
+        'S2': 'moss-ttsd/references/voice_anna_s2.mp3',
+    }
+    if latest.get('tts_reference_files') != expected_reference_files:
+        deterministic_issues.append(f'tts_reference_files={latest.get("tts_reference_files")} do not match expected MOSS references')
     urls = [item.get('url') for item in articles]
     if len(articles) < 8:
         deterministic_issues.append(f'article_count={len(articles)} < 8')

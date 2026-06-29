@@ -83,9 +83,9 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 
 - **执行方式**：
   1. 主 session 先读取 `/tmp/ai-daily-news-data-YYYY-MM-DD.json`，精选 5-7 条新闻，撰写对话脚本写入 `/tmp/ai-daily-news-podcast-YYYY-MM-DD.script`
-  2. 将分段合成命令写成一个 shell 脚本，用 `exec` 后台运行（设置 `timeout: 1200` 即 20 分钟），用 `process poll` 等待完成
+  2. 通过 `scripts/run_live_pipeline.py` 调用 SiliconFlow MOSS-TTSD 合成（设置 `timeout: 1200` 即 20 分钟）
   3. 合成完成后读取 `/tmp/ai-daily-news-podcast-YYYY-MM-DD.status` 确认结果
-  4. 超时或失败 → 重试一次 → 再失败放弃播客，记录错误，继续分发（邮件不带附件）
+  4. 超时或失败 → 工作流失败，禁止发布、上传和发送；不得生成备用样例音频
 
 - **输入**：读取 `/tmp/ai-daily-news-data-YYYY-MM-DD.json` 中的新闻数据
 
@@ -96,33 +96,25 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
      - **从新闻中精选 5-7 条最值得深聊的**，不要全播报，宁精勿滥
      - **⛔ 绝对禁止机械播报格式**。禁止"第一条新闻是…""接下来我们聊聊…"这种流水账
      - **用自然话题过渡**：用"说到这个我想起…""对了还有个事…""你看到那个…没""说完硬件说软件…"这类口语化过渡
-     - **每条新闻 8-12 句对话**，包含：
+     - **总计 16-22 轮对话，覆盖 5-7 条新闻**；每条新闻至少有一次追问或回应，包含：
        - 一人抛出事件（口语化引入，不是念标题）
        - 另一人反应+补充观点
        - 深入分析（技术细节、行业影响、背后原因）
        - 自然过渡到下一条
      - **加入主观判断和个人观点**（"我觉得这个…""你不觉得这个时机太巧了吗…"）
      - **适当联想串联**相关新闻（"说完技术说监管…"）
-     - 总时长目标：8-12 分钟对话内容
+     - 总时长目标：自然短播客，不强行拉长；以真实讨论感优先
      - 文本格式：每行以 `[S1]` 或 `[S2]` 开头。每段讨论（一个话题）≤ 40 行，段与段之间空一行分隔
 
-  2. **合成音频**（使用 MOSI 官方 API mosi_dialogue.sh）：
-     - 脚本路径：`~/.openclaw/workspace-research/skills/moss-ttsd/scripts/mosi_dialogue.sh`
-     - ⛔ **必须显式 export 环境变量**：`export MOSI_TTS_API_KEY="sk-726c3a87ccf9dd6f845436d827b4c9f5c39e9c3ff630ff0b"`（cron session 不加载 .bashrc）
-     - S1（老陈）：`--voice1 2040784925577187328`
-     - S2（小满）：`--voice2 2001910895478837248`（甜美开朗女声）
-     - **⛔ 因为文本较长，必须分段合成**（每段 ≤ 15 行对话文本），逐段调用 mosi_dialogue.sh
-     - 每段输出：`/tmp/ai-daily-news-podcast-YYYY-MM-DD-part{N}.wav`
-     - ffmpeg concat 拼接所有段为完整 WAV：`ffmpeg -f concat -safe 0 -i filelist.txt -c copy /tmp/ai-daily-news-podcast-YYYY-MM-DD.wav`
-     - 转 MP3（**必须限制码率，避免触发 163 限流**）：
-       ```
-       ffmpeg -i /tmp/ai-daily-news-podcast-YYYY-MM-DD.wav -codec:a libmp3lame -b:a 64k /tmp/ai-daily-news-podcast-YYYY-MM-DD.mp3
-       ```
-       ⚠️ **强制使用 64k 码率**（语音内容 64k 完全够用，比 128k 节省一半体积）
-       转码后检查文件大小，**如果超过 8MB，改用 48k 再转一次**：
-       ```
-       SIZE=$(stat -c%s /tmp/ai-daily-news-podcast-YYYY-MM-DD.mp3); if [ $SIZE -gt 8388608 ]; then ffmpeg -y -i /tmp/ai-daily-news-podcast-YYYY-MM-DD.wav -codec:a libmp3lame -b:a 48k /tmp/ai-daily-news-podcast-YYYY-MM-DD.mp3; fi
-       ```
+  2. **合成音频**（使用 SiliconFlow MOSS-TTSD 参考音频模式）：
+     - Endpoint：`POST https://api.siliconflow.cn/v1/audio/speech`
+     - Model：`fnlp/MOSS-TTSD-v0.5`
+     - S1（老陈）参考音频：`moss-ttsd/references/voice_laochen_s1.wav`
+     - S2（小满）参考音频：`moss-ttsd/references/voice_anna_s2.mp3`
+     - ⛔ 只能使用上述两个 reference audio；禁止使用内置 `alex` / `anna` 音色，禁止改用其他 voice id。
+     - 输入格式：`[S1]... [S2]...`，由 MOSS-TTSD 单次生成双人对话 MP3，不再逐句合成和 concat。
+     - `tts_mode` 必须为 `siliconflow-moss-reference-live`，并在报告中记录两个 `tts_reference_files`。
+     - 如果合成失败、输出过小或参考音频缺失，必须终止工作流；禁止 fallback 样例音频。
      - 最终输出：`/tmp/ai-daily-news-podcast-YYYY-MM-DD.mp3`
 
   3. **输出**：音频文件路径和时长写入 `/tmp/ai-daily-news-podcast-YYYY-MM-DD.status`（成功写路径，失败写错误信息）
@@ -227,7 +219,7 @@ description: Generate, validate, review, and distribute a Chinese daily AI news 
 1. **Step 1**: 预检（主 session，exec 逐项检查）
 2. **Step 2**: 数据采集 → 用 `exec` 后台跑 python 脚本 → `process poll` 等待完成 → `read` 结果 JSON
 3. **Step 3**: 生成 HTML（主 session）
-4. **Step 3.5**: 播客合成 → 用 `exec` 后台跑 mosi_dialogue.sh 分段合成 → `process poll` 等待（超时 20 分钟）→ 失败则重试一次 → 再失败放弃播客
+4. **Step 3.5**: 播客合成 → `scripts/run_live_pipeline.py` 调用 SiliconFlow MOSS-TTSD + 两个本地 reference audio → 失败则终止发布
 5. **Step 4**: 分发（主 session，exec 发 SMTP 邮件）
 6. **Step 4.5-5**: HTML 留样 + 收尾
 

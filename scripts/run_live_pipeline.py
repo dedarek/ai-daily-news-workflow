@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import html
 import json
+import mimetypes
 import os
 import re
 import shutil
@@ -19,10 +21,22 @@ from urllib.request import Request, urlopen
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = REPO_ROOT / 'skill'
-VOICE_SAMPLE = REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_anna_s2.mp3'
 SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
+MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
+MOSS_REFERENCE_VOICES = {
+    'S1': {
+        'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
+        'text_env': 'MOSS_TTS_S1_REFERENCE_TEXT',
+        'default_text': '今天我们来聊几个AI行业里的关键变化，重点看它们对产品和企业落地意味着什么。',
+    },
+    'S2': {
+        'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_anna_s2.mp3',
+        'text_env': 'MOSS_TTS_S2_REFERENCE_TEXT',
+        'default_text': '我更关心这些变化什么时候能真正落到用户手里，以及企业该怎么判断投入产出。',
+    },
+}
 
 
 @dataclass
@@ -107,6 +121,68 @@ def clean_text(text: str) -> str:
     return re.sub(r'\s+', ' ', text).strip()
 
 
+def validate_podcast_dialogue(dialogue: list[dict[str, str]]) -> list[str]:
+    issues: list[str] = []
+    if not 20 <= len(dialogue) <= 28:
+        issues.append(f'podcast_turns={len(dialogue)} outside 20-28')
+
+    for index, turn in enumerate(dialogue):
+        expected = 'S1' if index % 2 == 0 else 'S2'
+        if turn.get('speaker') != expected:
+            issues.append(f'turn {index + 1} speaker={turn.get("speaker")} expected {expected}')
+            break
+
+    texts = [turn.get('text', '') for turn in dialogue]
+    question_count = sum(
+        1
+        for text in texts
+        if any(marker in text for marker in ('？', '?', '吗', '呢', '怎么', '为什么', '是不是', '意味着什么'))
+    )
+    if question_count < 5:
+        issues.append(f'question_turns={question_count} < 5')
+
+    connective_count = sum(
+        1
+        for text in texts
+        if any(marker in text for marker in ('但', '不过', '所以', '换句话说', '你是说', '我担心', '问题是', '关键是', '反过来'))
+    )
+    if connective_count < 9:
+        issues.append(f'connected_turns={connective_count} < 9')
+
+    challenge_count = sum(
+        1
+        for text in texts
+        if any(marker in text for marker in ('我不太同意', '不一定', '未必', '风险', '问题', '担心', '挑战', '代价'))
+    )
+    if challenge_count < 4:
+        issues.append(f'challenge_turns={challenge_count} < 4')
+
+    stiff_opening_count = sum(
+        1
+        for text in texts
+        if re.match(r'^[\u4e00-\u9fa5A-Za-z0-9]+(发布|公布|推出|宣布|曝出|即将|将于|通过|采用|认为)', text)
+    )
+    if stiff_opening_count > max(3, len(texts) // 4):
+        issues.append(f'stiff_news_openings={stiff_opening_count} too many')
+
+    banned_phrases = (
+        '第一条新闻',
+        '第二条新闻',
+        '第三条新闻',
+        '接下来我们聊',
+        '我们再看',
+        '下面来看',
+        '值得关注的是',
+        '这项动态围绕',
+        '后续观察重点',
+    )
+    banned_hits = [phrase for phrase in banned_phrases if any(phrase in text for text in texts)]
+    if banned_hits:
+        issues.append(f'banned broadcast phrases: {banned_hits}')
+
+    return issues
+
+
 def valid_article_url(url: str) -> bool:
     lower = url.lower()
     if any(part in lower for part in FORBIDDEN_URL_PARTS):
@@ -134,16 +210,10 @@ def expand_summary(title: str, raw: str) -> str:
     raw = clean_text(raw)
     raw = raw.removeprefix(title).lstrip('。 ')
     sentences = [s.strip() for s in re.split(r'(?<=[。！？])', raw) if s.strip()]
-    base = ''.join(sentences[:4]).strip()
-    if not base.endswith(('。', '！', '？')):
+    base = ''.join(sentences[:5]).strip() or raw
+    if base and not base.endswith(('。', '！', '？')):
         base += '。'
-    context = (
-        f'这项动态围绕“{title.rstrip("。")}”展开，值得关注的不是单一功能，而是它对产品能力、'
-        '开发流程和实际应用门槛带来的连锁变化。后续观察重点包括公开能力是否按计划落地、'
-        '真实用户反馈以及同类产品是否快速跟进。'
-    )
-    result = base + context
-    return result[:420]
+    return base[:420]
 
 
 def fetch_latest(issue_date: str) -> tuple[str, str, str]:
@@ -278,7 +348,7 @@ def request_deepseek_json(
     raise RuntimeError('OpenCode Go model chain exhausted: ' + ' | '.join(model_errors))
 
 
-def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list[Article], list[dict[str, str]], dict]:
+def llm_config() -> tuple[str, list[str]]:
     endpoint = os.environ.get('OPENCODE_GO_BASE_URL', 'https://opencode.ai/zen/go/v1').rstrip('/')
     configured_models = os.environ.get(
         'OPENCODE_GO_MODELS',
@@ -287,6 +357,11 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
     models = [model.strip() for model in configured_models.split(',') if model.strip()]
     if not models:
         raise RuntimeError('OPENCODE_GO_MODELS must contain at least one model')
+    return endpoint, models
+
+
+def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list[Article], list[dict[str, str]], dict]:
+    endpoint, models = llm_config()
     candidates = [
         {'title': item.title, 'source_summary': item.summary, 'url': item.url, 'suggested_section': item.section}
         for item in candidate_articles
@@ -348,8 +423,8 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
 规则：
 - 必须恰好输出4条并严格保持输入顺序。不要输出或改写URL、栏目。
 - title简洁准确，不添加输入中没有的事实。
-- body用中文写120-220字、至少4句，只能使用source_summary中的事实；
-  可补充一般性技术背景，但不得新增具体数字、机构声明或未经输入支持的结论。
+- body用中文写120-220字、至少4句，只能使用source_summary中的事实，不得补写泛泛背景。
+- 禁止模板句和空话，例如“这项动态围绕”“值得关注的不是”“后续观察重点”“带来的连锁变化”。
 - review写1-2句明确判断，基于事实，不写“值得关注”“意义重大”等空话。
 - 不得提及聚合源名称。
 
@@ -389,12 +464,47 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
             else:
                 raise RuntimeError(f'LLM editorial item invalid for source URL: {source.url}')
 
+    dialogue, podcast_metadata = generate_podcast_dialogue(articles, api_key)
+    metadata = {
+        'provider': 'opencode-go',
+        'model_chain': models,
+        'endpoint': endpoint,
+        'calls': 5,
+        'call_details': {
+            'selection': {'model': selection_model, 'usage': selection_usage},
+            'editorial_batches': editorial_calls,
+            'podcast': podcast_metadata['call_details']['podcast'],
+        },
+    }
+    return articles, dialogue, metadata
+
+
+def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
+    endpoint, models = llm_config()
     podcast_prompt = f'''
-基于以下已经校验通过的日报，生成12-18轮自然双人播客对话。
-S1是资深AI从业者，S2是产品视角。围绕最重要的5-7条新闻深入讨论，有反应、补充、分歧和判断。
-禁止使用“第一条新闻”“接下来我们聊”等机械报幕；每轮20-90个中文字符。
-只输出JSON：{{"podcast_dialogue":[{{"speaker":"S1","text":"..."}},{{"speaker":"S2","text":"..."}}]}}
-不得新增输入中没有的具体事实、数字或机构，不得提及聚合源名称。
+基于以下日报，生成20-28轮自然双人播客对话。
+
+角色设定：
+- S1是资深AI从业者，负责解释技术机制、产业约束和风险。
+- S2是产品与应用视角，负责追问“这和用户/企业/产品有什么关系”，也可以质疑S1的判断。
+
+对话质量要求：
+- 这必须是一段真实对话，不是两个人轮流念新闻摘要。
+- 必须覆盖5-7条最有讨论价值的新闻，按一条新闻接一条新闻连续讨论；每条新闻至少2轮、最多4轮。
+- 可以把相关性强的新闻放在同一段里比较，但不能把5-7条压缩成3-4个大主题后忽略具体新闻。
+- 每条新闻的讨论顺序必须是：口语化引入事实 -> 追问它为什么重要 -> 给出限制/风险/反面看法 -> 自然转到下一条。
+- 每一轮都要回应上一轮：追问、解释、反驳、补充、让步或换个角度，不允许孤立陈述。
+- 至少5轮要用问句推动对话，至少4轮要出现分歧、风险或反直觉判断。
+- S2不能只是附和，必须持续追问“所以呢、谁会受影响、落地难点是什么、有没有被高估”。
+- 允许使用口语化承接，例如“问题是”“我反而担心”“换句话说”“你是说”，但不要过度表演。
+- 禁止“公司/机构 + 发布/宣布/推出...”这种每轮念标题的开头连续出现。
+- 禁止使用“第一条新闻”“接下来我们聊”“我们再看”等机械报幕。
+- 禁止把日报里的summary压缩成一句重新念出来；必须转化成口语讨论。
+- 每轮35-110个中文字符；speaker必须严格按S1、S2、S1、S2交替，从S1开始。
+- 只使用输入日报中的事实，不得新增具体事实、数字或机构，不得提及聚合源名称。
+
+输出要求：
+只输出JSON：{{"covered_titles":["..."],"podcast_dialogue":[{{"speaker":"S1","text":"..."}},{{"speaker":"S2","text":"..."}}]}}
 
 日报：
 {json.dumps([asdict(item) for item in articles], ensure_ascii=False)}
@@ -410,22 +520,28 @@ S1是资深AI从业者，S2是产品视角。围绕最重要的5-7条新闻深�
     for item in podcast_result.get('podcast_dialogue', []):
         speaker = str(item.get('speaker', '')).strip()
         text = clean_text(str(item.get('text', '')))
-        if speaker in ('S1', 'S2') and 20 <= len(text) <= 140:
+        if speaker in ('S1', 'S2') and 35 <= len(text) <= 110:
             dialogue.append({'speaker': speaker, 'text': text})
-    if not 12 <= len(dialogue) <= 18:
-        raise RuntimeError(f'LLM returned {len(dialogue)} valid podcast turns; expected 12-18')
+    covered_titles = [
+        str(title).strip()
+        for title in podcast_result.get('covered_titles', [])
+        if str(title).strip()
+    ]
+    if not 5 <= len(covered_titles) <= 7:
+        raise RuntimeError(f'LLM podcast covered {len(covered_titles)} titles; expected 5-7')
+    dialogue_issues = validate_podcast_dialogue(dialogue)
+    if dialogue_issues:
+        raise RuntimeError(f'LLM podcast dialogue quality failed: {dialogue_issues}')
     metadata = {
         'provider': 'opencode-go',
         'model_chain': models,
         'endpoint': endpoint,
-        'calls': 5,
+        'calls': 1,
         'call_details': {
-            'selection': {'model': selection_model, 'usage': selection_usage},
-            'editorial_batches': editorial_calls,
             'podcast': {'model': podcast_model, 'usage': podcast_usage},
         },
     }
-    return articles, dialogue, metadata
+    return dialogue, metadata
 
 
 def render_html(issue_date: str, content_date: str, articles: list[Article], output_path: Path) -> None:
@@ -479,65 +595,80 @@ def render_html(issue_date: str, content_date: str, articles: list[Article], out
     output_path.write_text(''.join(parts), encoding='utf-8')
 
 
-def synthesize_siliconflow(dialogue: list[dict[str, str]], output_path: Path, api_key: str) -> bool:
-    segment_dir = Path('/tmp') / f'{output_path.stem}-segments'
-    if segment_dir.exists():
-        shutil.rmtree(segment_dir)
-    segment_dir.mkdir(exist_ok=True)
-    segments: list[Path] = []
-    for index, turn in enumerate(dialogue):
-        speaker = 'alex' if turn['speaker'] == 'S1' else 'anna'
-        text = turn['text']
-        payload = json.dumps({
-            'model': 'FunAudioLLM/CosyVoice2-0.5B',
-            'input': text,
-            'voice': f'FunAudioLLM/CosyVoice2-0.5B:{speaker}',
-            'response_format': 'mp3',
-        }).encode()
-        request = Request(
-            'https://api.siliconflow.cn/v1/audio/speech',
-            data=payload,
-            headers={'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'},
-            method='POST',
-        )
-        target = segment_dir / f'{index:02d}.mp3'
-        try:
-            with urlopen(request, timeout=90) as response:
-                target.write_bytes(response.read())
-            if target.stat().st_size < 1000:
-                return False
-            segments.append(target)
-            time.sleep(0.5)
-        except Exception:
-            return False
-    concat_file = segment_dir / 'concat.txt'
-    concat_file.write_text(''.join(f"file '{p.resolve()}'\n" for p in segments), encoding='utf-8')
-    subprocess.run(
-        ['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', str(concat_file), '-codec:a', 'libmp3lame', '-b:a', '64k', str(output_path)],
-        check=True, capture_output=True, text=True,
-    )
-    if output_path.stat().st_size < 1_100_000:
-        padded_path = output_path.with_suffix('.padded.mp3')
-        subprocess.run(
-            [
-                'ffmpeg', '-y', '-i', str(output_path),
-                '-af', 'apad=pad_dur=10',
-                '-codec:a', 'libmp3lame', '-b:a', '64k',
-                str(padded_path),
-            ],
-            check=True, capture_output=True, text=True,
-        )
-        padded_path.replace(output_path)
-    success = output_path.exists() and output_path.stat().st_size >= 1_000_000
-    shutil.rmtree(segment_dir, ignore_errors=True)
-    return success
+def encode_reference_audio(path: Path) -> str:
+    if not path.exists() or path.stat().st_size == 0:
+        raise RuntimeError(f'MOSS reference voice missing or empty: {path}')
+    mime_type = mimetypes.guess_type(path.name)[0] or 'application/octet-stream'
+    encoded = base64.b64encode(path.read_bytes()).decode('ascii')
+    return f'data:{mime_type};base64,{encoded}'
 
 
-def fallback_podcast(output_path: Path) -> None:
-    subprocess.run(
-        ['ffmpeg', '-y', '-stream_loop', '40', '-i', str(VOICE_SAMPLE), '-t', '180', '-codec:a', 'libmp3lame', '-b:a', '64k', str(output_path)],
-        check=True, capture_output=True, text=True,
+def moss_reference_payload() -> list[dict[str, str]]:
+    references: list[dict[str, str]] = []
+    for speaker in ('S1', 'S2'):
+        config = MOSS_REFERENCE_VOICES[speaker]
+        reference_text = os.environ.get(config['text_env'])
+        if not reference_text:
+            print(
+                f'warning: {config["text_env"]} is not set; using fallback reference text for {speaker}. '
+                'For best MOSS-TTSD quality, set it to the exact transcript of the reference audio.',
+                flush=True,
+            )
+            reference_text = config['default_text']
+        references.append({
+            'audio': encode_reference_audio(config['path']),
+            'text': reference_text,
+        })
+    return references
+
+
+def moss_dialogue_input(dialogue: list[dict[str, str]]) -> str:
+    return ''.join(f'[{turn["speaker"]}]{turn["text"]}' for turn in dialogue)
+
+
+def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Path, api_key: str) -> bool:
+    payload = json.dumps({
+        'model': MOSS_TTS_MODEL,
+        'stream': True,
+        'input': moss_dialogue_input(dialogue),
+        'references': moss_reference_payload(),
+        'max_tokens': 4096,
+        'response_format': 'mp3',
+        'speed': 1,
+        'gain': 0,
+    }).encode()
+    request = Request(
+        'https://api.siliconflow.cn/v1/audio/speech',
+        data=payload,
+        headers={'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'},
+        method='POST',
     )
+    try:
+        with urlopen(request, timeout=240) as response:
+            audio = response.read()
+    except HTTPError as exc:
+        error_body = exc.read().decode('utf-8', errors='ignore')[:500]
+        print(f'MOSS-TTSD failed: HTTP {exc.code} {error_body}')
+        return False
+    except Exception as exc:
+        print(f'MOSS-TTSD failed: {exc}')
+        return False
+    if len(audio) < 100_000:
+        print(f'MOSS-TTSD output too small: {len(audio)} bytes')
+        return False
+    output_path.write_bytes(audio)
+    if output_path.stat().st_size > 8 * 1024 * 1024:
+        compressed = output_path.with_name(output_path.stem + '-compressed.mp3')
+        result = subprocess.run(
+            ['ffmpeg', '-y', '-i', str(output_path), '-codec:a', 'libmp3lame', '-b:a', '48k', str(compressed)],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0 and compressed.stat().st_size < output_path.stat().st_size:
+            compressed.replace(output_path)
+        elif compressed.exists():
+            compressed.unlink()
+    return output_path.exists() and output_path.stat().st_size > 100_000
 
 
 def duration(path: Path) -> float:
@@ -567,6 +698,7 @@ def main() -> int:
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
     data_path = output_dir / f'news-data-{args.date}.json'
     podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
+    moss_input_path = output_dir / f'podcast-moss-input-{args.date}.txt'
     render_html(args.date, content_date, articles, html_path)
     data_path.write_text(json.dumps([asdict(a) for a in articles], ensure_ascii=False, indent=2), encoding='utf-8')
     podcast_script_path.write_text(
@@ -584,13 +716,14 @@ def main() -> int:
         ),
         encoding='utf-8',
     )
+    moss_input_path.write_text(moss_dialogue_input(dialogue), encoding='utf-8')
 
-    tts_mode = 'fallback-sample'
     api_key = os.environ.get('SILICONFLOW_API_KEY', '')
-    if api_key and synthesize_siliconflow(dialogue, podcast_path, api_key):
-        tts_mode = 'siliconflow-live'
-    else:
-        fallback_podcast(podcast_path)
+    if not api_key:
+        raise RuntimeError('SILICONFLOW_API_KEY is required; refusing to generate podcast audio')
+    if not synthesize_siliconflow_moss(dialogue, podcast_path, api_key):
+        raise RuntimeError('SiliconFlow MOSS-TTSD failed; refusing to publish podcast audio')
+    tts_mode = 'siliconflow-moss-reference-live'
 
     tmp_html = Path('/tmp') / html_path.name
     tmp_podcast = Path('/tmp') / podcast_path.name
@@ -609,7 +742,13 @@ def main() -> int:
         'llm': llm_metadata,
         'podcast_turns': len(dialogue),
         'podcast_script_file': podcast_script_path.name,
+        'podcast_moss_input_file': moss_input_path.name,
         'tts_mode': tts_mode,
+        'tts_model': MOSS_TTS_MODEL,
+        'tts_reference_files': {
+            speaker: MOSS_REFERENCE_VOICES[speaker]['path'].relative_to(REPO_ROOT).as_posix()
+            for speaker in ('S1', 'S2')
+        },
         'html_bytes': html_path.stat().st_size,
         'podcast_bytes': podcast_path.stat().st_size,
         'podcast_duration_seconds': round(duration(podcast_path), 2),
