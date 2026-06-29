@@ -9,8 +9,8 @@ on:
         type: boolean
         default: true
   schedule:
-    - cron: "30 3 * * *"
-    - cron: "40 3 * * *"
+    - cron: "30 22 * * *"
+    - cron: "40 22 * * *"
 
 concurrency:
   group: ai-daily-news-morning

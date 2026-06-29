@@ -286,6 +286,7 @@ skill/
 
 ### 任务 1: ai-daily-news
 - **时间**：每天 11:30 GMT+8
+- **GitHub cron**：`22:30/22:40 UTC`（即 GMT+8 06:30/06:40，按观察到的 GitHub 延迟提前 5 小时）
 - **Session**：isolated
 - **模型**：无覆盖（使用默认）
 - **操作**：读取 SKILL.md 执行完整流程
@@ -293,6 +294,7 @@ skill/
 
 ### 任务 2: check-and-distribute
 - **时间**：每天 14:30 GMT+8
+- **GitHub cron**：`01:30/01:40 UTC`（即 GMT+8 09:30/09:40，按观察到的 GitHub 延迟提前 5 小时）
 - **Session**：isolated
 - **操作**：运行 `check_and_distribute.py`，通过后发送 `recipients.json` 的 `all`
 - **send_files**：控制是否执行文件上传

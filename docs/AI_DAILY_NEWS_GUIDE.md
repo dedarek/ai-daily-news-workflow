@@ -253,10 +253,12 @@ scripts/upload_delivery_artifacts.py
 
 自动定时任务默认发送邮件。手动运行时可通过 `send_email` 参数决定是否发送。
 
-为降低 GitHub cron 偶发漏调度风险，两个时段均设置补偿触发：
+业务目标时间仍是上午 11:30 和下午 14:30。由于 GitHub scheduled workflow
+在当前仓库观察到约 5 小时延迟，workflow cron 已提前 5 小时配置，并各保留一次
+10 分钟补偿触发：
 
-- 上午：11:30、11:40。
-- 下午：14:30、14:40。
+- 上午 workflow cron：06:30、06:40 GMT+8（UTC 22:30、22:40），目标实际运行约 11:30、11:40。
+- 下午 workflow cron：09:30、09:40 GMT+8（UTC 01:30、01:40），目标实际运行约 14:30、14:40。
 
 每个阶段成功发送后会在 `gh-pages/state/deliveries/YYYY-MM-DD/` 写入幂等标记。
 当天同阶段的后续补偿任务检测到标记后会立即跳过，因此不会因补偿 cron 重复发送。
