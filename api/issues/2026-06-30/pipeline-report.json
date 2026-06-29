@@ -1,0 +1,117 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-06-30",
+  "content_date": "2026-06-29",
+  "source_url": "https://hex2077.dev/docs/2026-06/2026-06-29/",
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 15,
+  "candidate_data_file": "candidate-news-2026-06-30.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-v4-flash",
+      "deepseek-v4-pro",
+      "mimo-v2.5"
+    ],
+    "endpoint": "https://opencode.ai/zen/go/v1",
+    "calls": 5,
+    "call_details": {
+      "selection": {
+        "model": "deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 1891,
+          "completion_tokens": 5867,
+          "total_tokens": 7758,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 5429
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1891
+        }
+      },
+      "editorial_batches": [
+        {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 694,
+            "completion_tokens": 19865,
+            "total_tokens": 20559,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 19259
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 694
+          }
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 736,
+            "completion_tokens": 2852,
+            "total_tokens": 3588,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2356
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 736
+          }
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 690,
+            "completion_tokens": 2790,
+            "total_tokens": 3480,
+            "prompt_tokens_details": {
+              "cached_tokens": 256
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2293
+            },
+            "prompt_cache_hit_tokens": 256,
+            "prompt_cache_miss_tokens": 434
+          }
+        }
+      ],
+      "podcast": {
+        "model": "deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 2668,
+          "completion_tokens": 20873,
+          "total_tokens": 23541,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 19559
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 2668
+        }
+      }
+    }
+  },
+  "podcast_turns": 25,
+  "podcast_script_file": "podcast-script-2026-06-30.json",
+  "podcast_script_text_file": "podcast-script-2026-06-30.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-06-30.txt",
+  "tts_mode": "siliconflow-moss-reference-live",
+  "tts_model": "fnlp/MOSS-TTSD-v0.5",
+  "tts_reference_files": {
+    "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+    "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+  },
+  "html_bytes": 22311,
+  "podcast_bytes": 3787135,
+  "podcast_duration_seconds": 236.62
+}

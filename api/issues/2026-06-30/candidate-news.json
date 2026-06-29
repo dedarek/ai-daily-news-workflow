@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Claude Tag嵌入企业工作流",
+    "summary": "用户可在Slack里直接@Claude派活。它拥有组织级工具和持久化记忆。这被誉为大模型第三次交互重塑。云端AI开箱即用简直是杀手锏💥。更多细节请看原贴分析。",
+    "url": "https://x.com/dotey/status/2071356525570924563",
+    "section": "🔥 今日焦点",
+    "review": ""
+  },
+  {
+    "title": "阿里通义首发WanStreamer",
+    "summary": "单Transformer搞定音视频全交互。通过块因果注意力实现流式生成。模型响应延迟低至惊人的200毫秒。完美支持亚秒级全双工视频对话🎙️。欢迎查看官方演示。",
+    "url": "https://x.com/Gorden_Sun/status/2071253439498379358",
+    "section": "🚀 产品发布",
+    "review": ""
+  },
+  {
+    "title": "谷歌AI Studio上线UI变体",
+    "summary": "一键即可为生成的网页套用多种风格。用Gemini写前端代码简直如虎添翼。产出结果还能一键分享极其丝滑。点击右上角即可快速调用工具。体验全新前端魔法提升效率。",
+    "url": "https://x.com/Gorden_Sun/status/2071245834747064670",
+    "section": "🚀 产品发布",
+    "review": ""
+  },
+  {
+    "title": "Hermes推出MoA虚拟路由",
+    "summary": "系统能够根据时刻自动调度不同模型。这种快慢脑逻辑让工程化效益大增。其跑分结果甚至超越了Opus4.8。混合专家路由释放了极致效能💡。在此阅读更新详情。",
+    "url": "https://x.com/yangyi/status/2071245449139556549",
+    "section": "🚀 产品发布",
+    "review": ""
+  },
+  {
+    "title": "Claude超限后可转至GPT",
+    "summary": "桌面端触及限额会自动整理对话摘要。用户能一键将上下文发送给ChatGPT。但这暴露了桌面版细节仍有待提升。若支持深度链接便无需反复总结。点击围观新特性优化体验。",
+    "url": "https://x.com/yangyi/status/2071120458855145605",
+    "section": "🚀 产品发布",
+    "review": ""
+  },
+  {
+    "title": "百度开源Unlimited OCR",
+    "summary": "该模型能一口气读完几十页长文档。创新引入滑动窗口注意力机制。它学会像人类一样选择性遗忘💡。系统显存开销几乎不再无限增长。在此论文地址中刷新SOTA成绩。",
+    "url": "https://www.qbitai.com/2026/06/439464.html",
+    "section": "💡 前沿研究",
+    "review": ""
+  },
+  {
+    "title": "光计算突破太空算力瓶颈",
+    "summary": "太空芯片面临高辐射与散热地狱考验。光本位科技用光子替代电子。光计算天然抗辐射且几乎不发热。同等重量下载荷能提供更高算力。阅读详情了解首颗天基光计算卫星。",
+    "url": "https://www.qbitai.com/2026/06/439728.html",
+    "section": "💡 前沿研究",
+    "review": ""
+  },
+  {
+    "title": "英伟达发布最危险AI论文",
+    "summary": "红皇后哥德尔机器打破20年封印。它让AI主动编写并进化学习算法。考官与考生在沙盒里同步变态繁衍😱。这种无休止的自我迭代令人毛骨悚然。这篇重磅论文暗示ASI加速降临。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709592&idx=1&sn=67287b57a9e541025be9a34c4b272334",
+    "section": "💡 前沿研究",
+    "review": ""
+  },
+  {
+    "title": "Token盗用成AI商业新威胁",
+    "summary": "Stripe高管Emily指出智能体正主导交易。黑客🚨目标转向昂贵推理资源。他们利用脚本疯狂榨干试用额度。AI初创遭滥用的概率高达十倍。企业需升级风控系统防御攻击。",
+    "url": "https://www.qbitai.com/2026/06/439746.html",
+    "section": "💼 行业动态",
+    "review": ""
+  },
+  {
+    "title": "微软豪赌核聚变供电大模型",
+    "summary": "为解决AI算力带来的恐怖能耗痛点。科技巨头疯狂抢购核聚变设备。一旦成功即可享受半独占式清洁能源⚡。若失败就全当为人类社会做慈善了。去社媒看看大厂的能源焦虑。",
+    "url": "https://x.com/geniusvczh/status/2071101220744548754",
+    "section": "💼 行业动态",
+    "review": ""
+  },
+  {
+    "title": "传统业务全面AI化遭痛批",
+    "summary": "有网友犀利直言业务AI化纯属扯犊子。很多企业连最基础数据沉淀都没做好。核心动作根本无法放心交由AI决策。AIGC产品目前想要变现异常困难📉。进入讨论区看清醒派精彩发言。",
+    "url": "https://m.okjike.com/originalPosts/6a411c6f228d9ca169d7f39e",
+    "section": "💼 行业动态",
+    "review": ""
+  },
+  {
+    "title": "Anthropic风控骚操作惹众怒",
+    "summary": "开发大佬受不了Claude频繁封号断连。这种极端的安全策略严重拖累了开发。正常用户的合法请求频频被误拦截🚫。社区对平台的信任度正在肉眼可见流失。点击围观吐槽了解事件详情。",
+    "url": "https://x.com/berryxia/status/2071264059593523203",
+    "section": "💼 行业动态",
+    "review": ""
+  },
+  {
+    "title": "私人交易智能体Vibe-Trading",
+    "summary": "这是一个14.3k的超火爆开源项目。专注为你打造个人专属AI交易助手。解决量化交易门槛极高📈痛点。自然语言就能控制复杂金融交易策略。直达项目主页体验财富密码。",
+    "url": "https://github.com/HKUDS/Vibe-Trading",
+    "section": "🔓 开源热榜",
+    "review": ""
+  },
+  {
+    "title": "Mac极速离线语音听写",
+    "summary": "FluidVoice顺利收获3.7k高分星标。它主打完全本地化的语音转文本。彻底解决隐私泄露与网络高延迟痛点。语音生成速度快到直接起飞。欢迎访问源码仓库尝试离线体验。",
+    "url": "https://github.com/altic-dev/FluidVoice",
+    "section": "🔓 开源热榜",
+    "review": ""
+  },
+  {
+    "title": "RepoPrompt社区版正式开源",
+    "summary": "作者被OpenAI招安后大方送出福利。工具通过MCP无缝接管底层命令行。能精挑细选代码库拼出优质提示词。完美解决长文本模型易变笨痛点。访问开源仓库获取代码神器。",
+    "url": "https://x.com/dotey/status/2071348102263378085",
+    "section": "🔓 开源热榜",
+    "review": ""
+  }
+]

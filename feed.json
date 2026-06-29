@@ -3,6 +3,122 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-06-30",
+      "content_date": "2026-06-29",
+      "published_at": "2026-06-29T23:43:43.575744+00:00",
+      "article_count": 12,
+      "podcast_turns": 25,
+      "tts_mode": "siliconflow-moss-reference-live",
+      "tts_model": "fnlp/MOSS-TTSD-v0.5",
+      "tts_reference_files": {
+        "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+        "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+      },
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "deepseek-v4-flash",
+          "deepseek-v4-pro",
+          "mimo-v2.5"
+        ],
+        "endpoint": "https://opencode.ai/zen/go/v1",
+        "calls": 5,
+        "call_details": {
+          "selection": {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 1891,
+              "completion_tokens": 5867,
+              "total_tokens": 7758,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 5429
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 1891
+            }
+          },
+          "editorial_batches": [
+            {
+              "model": "deepseek-v4-flash",
+              "usage": {
+                "prompt_tokens": 694,
+                "completion_tokens": 19865,
+                "total_tokens": 20559,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 19259
+                },
+                "prompt_cache_hit_tokens": 0,
+                "prompt_cache_miss_tokens": 694
+              }
+            },
+            {
+              "model": "deepseek-v4-flash",
+              "usage": {
+                "prompt_tokens": 736,
+                "completion_tokens": 2852,
+                "total_tokens": 3588,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 2356
+                },
+                "prompt_cache_hit_tokens": 0,
+                "prompt_cache_miss_tokens": 736
+              }
+            },
+            {
+              "model": "deepseek-v4-flash",
+              "usage": {
+                "prompt_tokens": 690,
+                "completion_tokens": 2790,
+                "total_tokens": 3480,
+                "prompt_tokens_details": {
+                  "cached_tokens": 256
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 2293
+                },
+                "prompt_cache_hit_tokens": 256,
+                "prompt_cache_miss_tokens": 434
+              }
+            }
+          ],
+          "podcast": {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 2668,
+              "completion_tokens": 20873,
+              "total_tokens": 23541,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 19559
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 2668
+            }
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-script.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-moss-input.txt",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-06-30.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-06-30.mp3"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-06-28",
       "content_date": "2026-06-27",
       "published_at": "2026-06-28T07:16:56.990719+00:00",

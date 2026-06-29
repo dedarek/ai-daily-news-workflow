@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "date": "2026-06-30",
+  "status": "ready",
+  "created_at": "2026-06-29T23:43:42.595927+00:00",
+  "artifacts": {
+    "candidate_articles": "dist/candidate-news-2026-06-30.json",
+    "articles": "dist/articles-2026-06-30.json",
+    "legacy_articles": "dist/news-data-2026-06-30.json",
+    "html": "dist/daily-news-2026-06-30.html",
+    "legacy_html": "dist/ai-daily-news-html-2026-06-30.html",
+    "podcast_script": "dist/podcast-script-2026-06-30.json",
+    "podcast_script_text": "dist/podcast-script-2026-06-30.txt",
+    "podcast_moss_input": "dist/podcast-moss-input-2026-06-30.txt",
+    "audio": "dist/daily-news-podcast-2026-06-30.mp3",
+    "legacy_audio": "dist/ai-daily-news-podcast-2026-06-30.mp3",
+    "pipeline_report": "dist/pipeline-report-2026-06-30.json"
+  },
+  "quality": {
+    "deterministic": "pass",
+    "agent_review": "pass",
+    "issues": []
+  },
+  "repair": {
+    "attempts": 0,
+    "items": []
+  },
+  "memory_update": {
+    "candidate_count": 15,
+    "selected_count": 12
+  },
+  "agent": {
+    "provider": "deepagents",
+    "model": "deepseek-v4-flash",
+    "preflight": "Preflight complete. Here's the summary:\n\n---\n\n## Preflight Result — 2026-06-30\n\n```json\n{\n  \"pass\": true,\n  \"risks\": [\n    {\n      \"severity\": \"medium\",\n      \"area\": \"deduplication\",\n      \"detail\": \"state/recent-news.json has an empty days object. summarize_recent_titles returned no data. The agent will have zero prior title context for 7-day dedup. Candidate selection may overlap with previously covered events if any earlier issues exist.\"\n    },\n    {\n      \"severity\": \"low\",\n      \"area\": \"workspace\",\n      \"detail\": \"All artifacts are absent (exists=false, bytes=0). Expected for a first run — no leftover or partial artifacts from a prior attempt.\"\n    }\n  ],\n  \"required_next_step\": \"Run scripts/run_news_agent.py --date 2026-06-30 to generate candidate articles, selected articles, HTML, podcast script, MOSS-TTSD input, and MP3. Follow with manifest generation and deterministic validation.\"\n}\n```\n\n**Key findings from inspection:**\n\n| Check | Status |\n|---|---|\n| `summarize_recent_titles()` | Empty — no dedup memory |\n| `inspect_workspace` | All 9 canonical artifacts missing (clean slate) |\n| `state/recent-news.json` | Exists, `days: {}` |\n| Skill refs (`news-agent-rules`, `output-schema`, `delivery-rules`, `voice-config`) | All present and valid |\n| Manifest schema v1 | Template ready at `dist/manifest-2026-06-30.json` (will be created) |\n\nThe workspace is ready for generation. The main risk is the empty dedup state — the agent will be operating without seven-day title history, so extra attention should be paid during article selection to avoid re-covering events from prior issues. The deterministic supervisor should proceed with generation and post-generation validation."
+  },
+  "pipeline_report": {
+    "mode": "live-collection",
+    "issue_date": "2026-06-30",
+    "content_date": "2026-06-29",
+    "source_url": "https://hex2077.dev/docs/2026-06/2026-06-29/",
+    "recipient": "yyc54321@126.com",
+    "article_count": 12,
+    "candidate_count": 15,
+    "candidate_data_file": "candidate-news-2026-06-30.json",
+    "llm": {
+      "provider": "opencode-go",
+      "model_chain": [
+        "deepseek-v4-flash",
+        "deepseek-v4-pro",
+        "mimo-v2.5"
+      ],
+      "endpoint": "https://opencode.ai/zen/go/v1",
+      "calls": 5,
+      "call_details": {
+        "selection": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 1891,
+            "completion_tokens": 5867,
+            "total_tokens": 7758,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 5429
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1891
+          }
+        },
+        "editorial_batches": [
+          {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 694,
+              "completion_tokens": 19865,
+              "total_tokens": 20559,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 19259
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 694
+            }
+          },
+          {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 736,
+              "completion_tokens": 2852,
+              "total_tokens": 3588,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2356
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 736
+            }
+          },
+          {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 690,
+              "completion_tokens": 2790,
+              "total_tokens": 3480,
+              "prompt_tokens_details": {
+                "cached_tokens": 256
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2293
+              },
+              "prompt_cache_hit_tokens": 256,
+              "prompt_cache_miss_tokens": 434
+            }
+          }
+        ],
+        "podcast": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 2668,
+            "completion_tokens": 20873,
+            "total_tokens": 23541,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 19559
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2668
+          }
+        }
+      }
+    },
+    "podcast_turns": 25,
+    "podcast_script_file": "podcast-script-2026-06-30.json",
+    "podcast_script_text_file": "podcast-script-2026-06-30.txt",
+    "podcast_moss_input_file": "podcast-moss-input-2026-06-30.txt",
+    "tts_mode": "siliconflow-moss-reference-live",
+    "tts_model": "fnlp/MOSS-TTSD-v0.5",
+    "tts_reference_files": {
+      "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+      "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+    },
+    "html_bytes": 22311,
+    "podcast_bytes": 3787135,
+    "podcast_duration_seconds": 236.62
+  },
+  "published_artifacts": {
+    "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/index.json",
+    "candidate_articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/candidate-news.json",
+    "articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/articles.json",
+    "podcast_script": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-script.json",
+    "podcast_script_text": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-script.txt",
+    "podcast_moss_input": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-moss-input.txt",
+    "html": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-06-30.html",
+    "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-06-30.mp3",
+    "pipeline_report": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/pipeline-report.json"
+  }
+}
