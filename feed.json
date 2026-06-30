@@ -5,11 +5,12 @@
       "schema_version": 1,
       "issue_date": "2026-06-30",
       "content_date": "2026-06-29",
-      "published_at": "2026-06-29T23:43:43.575744+00:00",
+      "published_at": "2026-06-30T06:56:15.678037+00:00",
       "article_count": 12,
       "podcast_turns": 25,
       "tts_mode": "siliconflow-moss-reference-live",
       "tts_model": "fnlp/MOSS-TTSD-v0.5",
+      "tts_speed": null,
       "tts_reference_files": {
         "S1": "moss-ttsd/references/voice_laochen_s1.wav",
         "S2": "moss-ttsd/references/voice_anna_s2.mp3"
@@ -112,6 +113,7 @@
       "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/candidate-news.json",
       "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-script.json",
       "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-06-30.txt",
       "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/podcast-moss-input.txt",
       "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/manifest.json",
       "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-06-30.html",
