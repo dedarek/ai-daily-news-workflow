@@ -94,6 +94,7 @@ jobs:
         run: |
           python3 skill/scripts/check_and_distribute.py \
             --date "${{ steps.issue.outputs.date }}" \
+            --artifact-dir dist \
             --dry-run
 
       - name: Verify recipient delivery plan
@@ -104,6 +105,7 @@ jobs:
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
+            --artifact-dir dist \
             --phase morning \
             --dry-run
 
@@ -140,6 +142,7 @@ jobs:
           test -n "$AI_DAILY_SMTP_PASSWORD"
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
+            --artifact-dir dist \
             --phase morning
 
       - name: Mark morning delivery

@@ -83,6 +83,7 @@ jobs:
         run: |
           python3 skill/scripts/check_and_distribute.py \
             --date "${{ steps.issue.outputs.date }}" \
+            --artifact-dir review-dist \
             --dry-run
 
       - name: Verify recipient delivery plan
@@ -93,6 +94,7 @@ jobs:
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
+            --artifact-dir review-dist \
             --phase afternoon \
             --dry-run
 
@@ -131,6 +133,7 @@ jobs:
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
+            --artifact-dir review-dist \
             --phase afternoon
 
       - name: Publish review report and delivery marker

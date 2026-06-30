@@ -4,7 +4,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import shutil
 from datetime import datetime
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -165,13 +164,6 @@ def main() -> int:
     report_path = output_dir / f'quality-review-{args.date}.json'
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
 
-    html_path = Path('/tmp') / f'ai-daily-news-html-{args.date}.html'
-    audio_path = Path('/tmp') / f'ai-daily-news-podcast-{args.date}.mp3'
-    html_path.write_bytes(html_bytes)
-    audio_path.write_bytes(audio_bytes)
-    sample_path = SKILL_DIR / 'samples' / f'{args.date}.html'
-    sample_path.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(html_path, sample_path)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0 if delivery_approved else 20
 

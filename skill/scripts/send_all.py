@@ -23,6 +23,10 @@ SEND_EMAIL_CONFIG_FILE = SKILL_DIR / 'references' / 'send-email-config.json'
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Send the AI daily-news email to a configured recipient audience')
     parser.add_argument('--date', required=True, help='YYYY-MM-DD')
+    parser.add_argument(
+        '--artifact-dir',
+        help='Directory containing generated artifacts. Defaults to /tmp for legacy compatibility.',
+    )
     parser.add_argument('--phase', help='Delivery phase from send-email-config.json, for example morning or afternoon')
     parser.add_argument(
         '--audience',
@@ -35,6 +39,15 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument('--dry-run', action='store_true', help='Build and validate messages without SMTP delivery')
     return parser.parse_args()
+
+
+def resolve_artifact(artifact_dir: Path, date_str: str, names: list[str]) -> Path:
+    for name in names:
+        path = artifact_dir / name.format(date=date_str)
+        if path.is_file():
+            return path
+    expected = ', '.join(str(artifact_dir / name.format(date=date_str)) for name in names)
+    raise FileNotFoundError(f'Missing artifact. Tried: {expected}')
 
 
 def read_send_email_config() -> dict:
@@ -173,10 +186,23 @@ def main() -> int:
         args,
         email_config,
     )
-    html_path = TMP / f'ai-daily-news-html-{args.date}.html'
-    mp3_path = TMP / f'ai-daily-news-podcast-{args.date}.mp3'
-    if not html_path.exists() or not mp3_path.exists():
-        raise FileNotFoundError(f'Missing input: html={html_path.exists()} mp3={mp3_path.exists()}')
+    artifact_dir = Path(args.artifact_dir).resolve() if args.artifact_dir else TMP
+    html_path = resolve_artifact(
+        artifact_dir,
+        args.date,
+        [
+            'daily-news-{date}.html',
+            'ai-daily-news-html-{date}.html',
+        ],
+    )
+    mp3_path = resolve_artifact(
+        artifact_dir,
+        args.date,
+        [
+            'daily-news-podcast-{date}.mp3',
+            'ai-daily-news-podcast-{date}.mp3',
+        ],
+    )
 
     html_content = html_path.read_text(encoding='utf-8')
     recipients = read_recipients(audience)

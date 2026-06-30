@@ -42,6 +42,10 @@ def strip_tags(text: str) -> str:
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description='AI daily news quality gate + one-shot distribution runner')
     p.add_argument('--date', help='YYYY-MM-DD; default=today in local timezone via date command')
+    p.add_argument(
+        '--artifact-dir',
+        help='Directory containing generated artifacts. Defaults to /tmp and skill/samples for legacy compatibility.',
+    )
     p.add_argument('--dry-run', action='store_true', help='Only validate/generate plan; never run send-all')
     return p.parse_args()
 
@@ -57,6 +61,14 @@ def file_info(path: Path) -> str:
     if not path.exists():
         return 'missing'
     return f'{path.stat().st_size} bytes'
+
+
+def resolve_artifact(artifact_dir: Path, date_str: str, names: List[str]) -> Path:
+    for name in names:
+        path = artifact_dir / name.format(date=date_str)
+        if path.is_file():
+            return path
+    return artifact_dir / names[0].format(date=date_str)
 
 
 def gather_links(html: str) -> Tuple[List[str], List[str]]:
@@ -164,9 +176,24 @@ def main() -> int:
     args = parse_args()
     date_str = args.date or detect_date()
 
-    html_path = TMP / f'ai-daily-news-html-{date_str}.html'
-    mp3_path = TMP / f'ai-daily-news-podcast-{date_str}.mp3'
-    sample_path = SAMPLES_DIR / f'{date_str}.html'
+    artifact_dir = Path(args.artifact_dir).resolve() if args.artifact_dir else TMP
+    html_path = resolve_artifact(
+        artifact_dir,
+        date_str,
+        [
+            'daily-news-{date}.html',
+            'ai-daily-news-html-{date}.html',
+        ],
+    )
+    mp3_path = resolve_artifact(
+        artifact_dir,
+        date_str,
+        [
+            'daily-news-podcast-{date}.mp3',
+            'ai-daily-news-podcast-{date}.mp3',
+        ],
+    )
+    sample_path = None if args.artifact_dir else SAMPLES_DIR / f'{date_str}.html'
     log_path = TMP / f'send-log-{date_str}.txt'
 
     failures: List[str] = []
@@ -192,17 +219,18 @@ def main() -> int:
         if not (MIN_MP3_BYTES <= mp3_size <= MAX_MP3_BYTES):
             failures.append(f'MP3_SIZE_OUT_OF_RANGE: {mp3_path} = {mp3_size} bytes not in [{MIN_MP3_BYTES}, {MAX_MP3_BYTES}]')
 
-    if not sample_path.exists():
-        failures.append(f'MISSING: {sample_path}')
-    else:
-        facts.append(f'SAMPLE: {sample_path} ({sample_path.stat().st_size} bytes)')
+    if sample_path is not None:
+        if not sample_path.exists():
+            failures.append(f'MISSING: {sample_path}')
+        else:
+            facts.append(f'SAMPLE: {sample_path} ({sample_path.stat().st_size} bytes)')
 
     if html_text:
         if not VALIDATOR.exists():
             failures.append(f'MISSING_VALIDATOR: {VALIDATOR}')
         else:
             validator = subprocess.run(
-                ['python3', str(VALIDATOR), '--date', date_str, '--check-sample'],
+                [sys.executable, str(VALIDATOR), '--date', date_str, '--path', str(html_path)],
                 text=True,
                 capture_output=True,
             )
@@ -246,9 +274,11 @@ def main() -> int:
         print('EXECUTED_SEND_ALL: NO')
         return 41
 
-    command = ['python3', '-u', str(send_script)]
+    command = [sys.executable, '-u', str(send_script)]
     if send_script.name == 'send_all.py':
         command.extend(['--date', date_str, '--phase', 'afternoon'])
+        if args.artifact_dir:
+            command.extend(['--artifact-dir', str(artifact_dir)])
 
     with log_path.open('wb') as logf:
         proc = subprocess.run(command, stdout=logf, stderr=subprocess.STDOUT)
