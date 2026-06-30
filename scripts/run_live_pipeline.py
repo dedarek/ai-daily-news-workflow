@@ -32,6 +32,7 @@ FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgca
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.08
+DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
 MOSS_REFERENCE_VOICES = {
     'S1': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
@@ -800,70 +801,78 @@ def render_html(
 
     parts = [
         '<!DOCTYPE html>',
-        '<html><head><meta charset="utf-8"><style>',
-        "body{font-family:'PingFang SC','Microsoft YaHei','Inter','Helvetica Neue',Arial,sans-serif;margin:0;padding:20px 0;background:#F9FAFB}",
-        'table{border-collapse:collapse;width:100%;max-width:700px;margin:0 auto;background:#fff;border:1px solid #E5E7EB;border-radius:12px}',
-        'td{padding:0}',
-        '.header{background:#0F172A;padding:40px 36px 32px;text-align:center;border-radius:12px 12px 0 0}',
-        '.header h1{color:#fff;margin:0;font-size:24px;font-weight:700;letter-spacing:1px}',
-        '.header .date{color:#9CA3AF;font-size:13px;margin-top:10px;font-weight:400}',
-        '.summary-wrap{padding:24px 36px 0}',
-        '.summary{font-size:15px;line-height:1.8;color:#374151;margin:0}',
-        '.section{padding:0 36px 28px}',
-        '.section-divider{padding:0 36px}',
-        '.section-divider hr{border:none;border-top:1px solid #E5E7EB;margin:16px 0}',
-        '.section-title{font-size:17px;font-weight:700;color:#111827;margin:0 0 18px;padding-bottom:10px;border-bottom:2px solid #E2E8F0;letter-spacing:0.5px}',
-        '.item{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #F1F5F9}',
-        '.item:last-child{border-bottom:none;padding-bottom:0}',
-        '.item-title{font-size:15px;font-weight:700;margin:0 0 10px;line-height:1.6}',
-        '.item-title a{color:#2563EB;text-decoration:none}',
-        '.item-body{font-size:14px;line-height:2;color:#475569;margin:0 0 10px}',
-        '.item-comment{font-size:13px;color:#6B7280;font-style:italic;margin:0 0 8px;padding:10px 14px;background:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;line-height:1.8}',
-        '.item-link{font-size:12px;color:#64748b;margin:0;line-height:1.8}',
-        '.item-link a{color:#2563EB;text-decoration:none;word-break:break-all}',
-        '.item-link a:hover{text-decoration:underline}',
-        '.focus-badge{display:inline-block;background:linear-gradient(135deg,#ef4444,#f97316);color:#fff;font-size:11px;padding:2px 10px;border-radius:10px;margin-right:8px;font-weight:600;letter-spacing:0.5px;vertical-align:middle}',
-        '.footer-wrap{padding:0}',
-        '.footer{background:#F8FAFC;border-top:1px solid #E2E8F0;border-radius:0 0 12px 12px;padding:20px 36px;text-align:center;font-size:12px;color:#94a3b8;line-height:2}',
-        '</style></head><body>',
-        '<table><tr><td>',
-        '<div class="header">',
-        '<h1>📰 每日AI热点新闻（试运营）</h1>',
-        f'<div class="date">{display_date}</div>',
-        '</div>',
-        '<div class="summary-wrap">',
-        f'<div class="summary">今日关注：{html.escape(digest_summary)}</div>',
-        '</div>',
+        '<html lang="zh-CN">',
+        '<head>',
+        '<meta charset="UTF-8">',
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+        f'<title>每日AI热点新闻 — {html.escape(issue_date)}</title>',
+        '</head>',
+        '<body style="margin:0;padding:0;font-family:\'PingFang SC\',\'Microsoft YaHei\',\'Helvetica Neue\',Arial,sans-serif;background-color:#eef1f5;">',
+        '<table width="100%" cellpadding="0" cellspacing="0" style="padding:24px 0;">',
+        '<tr><td align="center">',
+        '<table width="700" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border:1px solid #c9cdd4;border-radius:10px;overflow:hidden;">',
+        '<tr><td style="background-color:#3b82f6;padding:28px 30px;text-align:center;border-bottom:4px solid #1d4ed8;">',
+        '<h1 style="color:#ffffff;margin:0;font-size:22px;font-weight:700;letter-spacing:0.5px;">📰 每日AI热点新闻（试运营）</h1>',
+        f'<p style="color:rgba(255,255,255,0.85);margin:8px 0 0 0;font-size:13px;">{display_date}</p>',
+        '</td></tr>',
+        '<tr><td style="padding:22px 36px 18px;">',
+        f'<p style="color:#374151;font-size:15px;line-height:1.9;margin:0;">{html.escape(digest_summary)}</p>',
+        '</td></tr>',
     ]
     for section in SECTION_ORDER:
         section_articles = grouped.get(section) or []
         if not section_articles:
             continue
-        parts.append('<div class="section-divider"><hr></div>')
-        parts.append(f'<div class="section"><h2 class="section-title">{section}</h2>')
+        parts.extend([
+            '<tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>',
+            '<tr><td style="padding:22px 36px 26px;">',
+            f'<h2 style="font-size:17px;font-weight:700;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">{html.escape(section)}</h2>',
+        ])
         for article in section_articles:
             escaped_url = html.escape(article.url, quote=True)
             review = f'AI锐评：{html.escape(article.review)}'
-            focus_badge = '<span class="focus-badge">焦点</span>' if section == '🔥 今日焦点' else ''
+            is_focus = section == '🔥 今日焦点'
+            card_style = (
+                'margin-bottom:16px;border:1px solid #fca5a5;border-radius:8px;overflow:hidden;'
+                if is_focus else
+                'margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;'
+            )
+            cell_style = (
+                'padding:14px 18px;background-color:#ffffff;border-left:4px solid #ef4444;'
+                if is_focus else
+                'padding:14px 18px;background-color:#f8fafc;'
+            )
             parts.extend([
-                '<div class="item">',
-                f'<div class="item-title">{focus_badge}<a href="{escaped_url}">{html.escape(article.title)}</a></div>',
-                f'<p data-role="news-body" class="item-body">{html.escape(article.summary)}</p>',
-                f'<div class="item-comment">{review}</div>',
-                f'<div class="item-link">🔗 <a href="{escaped_url}">{escaped_url}</a></div>',
-                '</div>',
+                f'<table width="100%" cellpadding="0" cellspacing="0" style="{card_style}">',
+                f'<tr><td style="{cell_style}">',
             ])
-        parts.append('</div>')
+            if is_focus:
+                parts.append('<span style="display:inline-block;background-color:#ef4444;color:#ffffff;font-size:11px;padding:2px 10px;border-radius:10px;font-weight:600;margin-bottom:8px;">焦点</span>')
+            parts.extend([
+                '<h3 style="font-size:15px;font-weight:700;margin:8px 0 6px;line-height:1.6;">' if is_focus else '<h3 style="font-size:15px;font-weight:700;margin:0 0 6px;line-height:1.6;">',
+                f'<a href="{escaped_url}" style="color:#2563EB;text-decoration:none;">{html.escape(article.title)}</a>',
+                '</h3>',
+                f'<p data-role="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">{html.escape(article.summary)}</p>',
+                '<table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background-color:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">',
+                f'<p style="font-size:13px;color:#6B7280;font-style:italic;margin:0;line-height:1.8;">{review}</p>',
+                '</td></tr></table>',
+                f'<p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="{escaped_url}" style="color:#2563EB;text-decoration:none;word-break:break-all;">{html.escape(article.url)}</a></p>',
+                '</td></tr></table>',
+            ])
+        parts.append('</td></tr>')
     parts.extend([
-        '<div class="footer-wrap">',
-        '<div class="footer">',
-        '试运营期间有任何问题请联系：penglei4@lenovo.com<br>',
-        '技术创新中心：-TIC@lenovo.com',
-        f'<br>内容采集日期：{content_date} · 内容仅供参考',
-        '</div>',
-        '</div>',
-        '</td></tr></table>',
-        '</body></html>',
+        '<tr><td style="padding:20px 36px;text-align:center;background-color:#f8fafc;">',
+        '<p style="font-size:12px;color:#9ca3af;margin:0;line-height:1.6;">',
+        f'每日AI热点新闻 · 试运营阶段 · {html.escape(issue_date)}<br>',
+        f'内容采集日期：{html.escape(content_date)} · 本邮件由AI自动生成，内容仅供参考。<br>',
+        '如有问题请联系：penglei4@lenovo.com',
+        '</p>',
+        '</td></tr>',
+        '</table>',
+        '</td></tr>',
+        '</table>',
+        '</body>',
+        '</html>',
     ])
     output_path.write_text(''.join(parts), encoding='utf-8')
 
@@ -908,6 +917,55 @@ def moss_tts_speed() -> float:
     if not 0.8 <= speed <= 1.3:
         raise RuntimeError(f'MOSS_TTS_SPEED must be between 0.8 and 1.3, got {speed}')
     return speed
+
+
+def tts_leading_silence_seconds() -> float:
+    raw = os.environ.get('MOSS_TTS_LEADING_SILENCE_SECONDS', str(DEFAULT_TTS_LEADING_SILENCE_SECONDS))
+    try:
+        seconds = float(raw)
+    except ValueError as exc:
+        raise RuntimeError(f'MOSS_TTS_LEADING_SILENCE_SECONDS must be a number, got {raw!r}') from exc
+    if not 0 <= seconds <= 2:
+        raise RuntimeError(f'MOSS_TTS_LEADING_SILENCE_SECONDS must be between 0 and 2, got {seconds}')
+    return seconds
+
+
+def prepend_audio_silence(path: Path, seconds: float) -> None:
+    if seconds <= 0:
+        return
+    padded = path.with_name(path.stem + '-padded.mp3')
+    result = subprocess.run(
+        [
+            'ffmpeg',
+            '-y',
+            '-f',
+            'lavfi',
+            '-t',
+            f'{seconds:.3f}',
+            '-i',
+            'anullsrc=r=24000:cl=mono',
+            '-i',
+            str(path),
+            '-filter_complex',
+            '[0:a][1:a]concat=n=2:v=0:a=1[a]',
+            '-map',
+            '[a]',
+            '-codec:a',
+            'libmp3lame',
+            '-b:a',
+            '64k',
+            str(padded),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f'ffmpeg failed to prepend TTS silence: {result.stderr[-1000:]}')
+    padded_size = padded.stat().st_size
+    if padded_size <= 0:
+        padded.unlink(missing_ok=True)
+        raise RuntimeError('ffmpeg padded output is empty')
+    padded.replace(path)
 
 
 def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Path, api_key: str) -> bool:
@@ -1018,6 +1076,8 @@ def main() -> int:
         raise RuntimeError('SILICONFLOW_API_KEY is required; refusing to generate podcast audio')
     if not synthesize_siliconflow_moss(dialogue, podcast_path, api_key):
         raise RuntimeError('SiliconFlow MOSS-TTSD failed; refusing to publish podcast audio')
+    leading_silence_seconds = tts_leading_silence_seconds()
+    prepend_audio_silence(podcast_path, leading_silence_seconds)
     tts_mode = 'siliconflow-moss-reference-live'
 
     tmp_html = Path('/tmp') / html_path.name
@@ -1044,6 +1104,7 @@ def main() -> int:
         'tts_mode': tts_mode,
         'tts_model': MOSS_TTS_MODEL,
         'tts_speed': moss_tts_speed(),
+        'tts_leading_silence_seconds': leading_silence_seconds,
         'tts_reference_files': {
             speaker: MOSS_REFERENCE_VOICES[speaker]['path'].relative_to(REPO_ROOT).as_posix()
             for speaker in ('S1', 'S2')
