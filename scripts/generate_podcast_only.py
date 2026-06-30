@@ -19,6 +19,7 @@ from run_live_pipeline import (  # noqa: E402
     duration,
     generate_podcast_dialogue,
     moss_dialogue_input,
+    moss_tts_speed,
     synthesize_siliconflow_moss,
 )
 
@@ -150,6 +151,7 @@ def main() -> int:
         'llm': podcast_metadata,
         'tts_mode': tts_mode,
         'tts_model': MOSS_TTS_MODEL if not args.skip_audio else None,
+        'tts_speed': moss_tts_speed() if not args.skip_audio else None,
         'tts_reference_files': {
             speaker: MOSS_REFERENCE_VOICES[speaker]['path'].relative_to(REPO_ROOT).as_posix()
             for speaker in ('S1', 'S2')

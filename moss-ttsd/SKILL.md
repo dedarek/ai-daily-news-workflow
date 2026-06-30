@@ -40,6 +40,14 @@ POST https://api.siliconflow.cn/v1/audio/speech
 The production script sends both reference audio files in the `references`
 payload and uses `response_format=mp3`.
 
+Default speed is `1.08`. Override only when needed with:
+
+```text
+MOSS_TTS_SPEED
+```
+
+Allowed range: `0.8` to `1.3`.
+
 ## Dialogue Input Format
 
 The TTS input must be one continuous string:
@@ -69,4 +77,5 @@ The pipeline report and manifest must record:
 
 - `tts_mode = siliconflow-moss-reference-live`
 - `tts_model = fnlp/MOSS-TTSD-v0.5`
+- `tts_speed`
 - both reference file paths

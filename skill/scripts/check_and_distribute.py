@@ -16,7 +16,7 @@ SKILL_DIR = Path(__file__).resolve().parent.parent
 SAMPLES_DIR = SKILL_DIR / 'samples'
 VALIDATOR = SKILL_DIR / 'scripts' / 'validate_html_quality.py'
 
-MIN_HTML_BYTES = 15 * 1024
+MIN_HTML_BYTES = 10 * 1024
 MIN_MP3_BYTES = 1_000_000
 MAX_MP3_BYTES = 8 * 1024 * 1024
 FORBIDDEN_MARKERS = [
@@ -84,13 +84,18 @@ def gather_links(html: str) -> Tuple[List[str], List[str]]:
 def count_body_blocks(html: str) -> int:
     blocks: List[str] = []
 
+    for m in re.finditer(r'<p\b(?P<attrs>[^>]*)data-role=["\']news-body["\'][^>]*>(?P<body>.*?)</p>', html, flags=re.I | re.S):
+        text = strip_tags(m.group('body') or '')
+        if len(text) >= 80:
+            blocks.append(text)
+
     for m in re.finditer(r'<(?P<tag>div|p|td)\b(?P<attrs>[^>]*)>(?P<body>.*?)</(?P=tag)>', html, flags=re.I | re.S):
         tag = m.group('tag').lower()
         attrs = m.group('attrs') or ''
         body = m.group('body') or ''
         attrs_l = attrs.lower()
         include = False
-        if 'data-role="news-body"' in attrs_l or "data-role='news-body'" in attrs_l:
+        if tag == 'p' and ('data-role="news-body"' in attrs_l or "data-role='news-body'" in attrs_l):
             include = True
         elif tag == 'td':
             include = True

@@ -86,6 +86,13 @@ Array of article objects:
 }
 ```
 
+When published to GitHub Pages, the raw podcast dialogue text must also be
+available at:
+
+```text
+https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/YYYY-MM-DD.txt
+```
+
 Allowed manifest status values:
 
 - `ready`

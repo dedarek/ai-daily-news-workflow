@@ -31,11 +31,16 @@ def first_existing(paths: list[Path], label: str) -> Path:
 
 
 def render_index(latest: dict, issues: list[dict]) -> str:
-    rows = ''.join(
-        f'<li><a href="{item["html_url"]}">{item["issue_date"]}</a>'
-        f' · {item["article_count"]} 条 · <a href="{item["audio_url"]}">播客</a></li>'
-        for item in issues[:30]
-    )
+    row_parts: list[str] = []
+    for item in issues[:30]:
+        dialogue_url = item.get('podcast_dialogue_text_url') or item.get('podcast_script_text_url')
+        dialogue_link = f' · <a href="{dialogue_url}">原始对话文本</a>' if dialogue_url else ''
+        row_parts.append(
+            f'<li><a href="{item["html_url"]}">{item["issue_date"]}</a>'
+            f' · {item["article_count"]} 条 · <a href="{item["audio_url"]}">播客</a>'
+            f'{dialogue_link}</li>'
+        )
+    rows = ''.join(row_parts)
     return f'''<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -58,6 +63,7 @@ def render_index(latest: dict, issues: list[dict]) -> str:
     <li><code>/api/issues/YYYY-MM-DD/index.json</code></li>
     <li><code>/api/issues/YYYY-MM-DD/articles.json</code></li>
     <li><code>/api/issues/YYYY-MM-DD/podcast-script.json</code></li>
+    <li><code>/podcast-dialogue/YYYY-MM-DD.txt</code></li>
   </ul>
   <h2>最近期次</h2>
   <ul>{rows}</ul>
@@ -111,10 +117,13 @@ def main() -> int:
 
     published_html = site / 'html' / f'{args.date}.html'
     published_audio = site / 'audio' / f'{args.date}.mp3'
+    published_dialogue_text = site / 'podcast-dialogue' / f'{args.date}.txt'
     published_html.parent.mkdir(parents=True, exist_ok=True)
     published_audio.parent.mkdir(parents=True, exist_ok=True)
+    published_dialogue_text.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(html_path, published_html)
     shutil.copy2(audio_path, published_audio)
+    shutil.copy2(script_text_path, published_dialogue_text)
 
     issue = {
         'schema_version': 1,
@@ -125,12 +134,14 @@ def main() -> int:
         'podcast_turns': len(podcast_script['dialogue']),
         'tts_mode': report['tts_mode'],
         'tts_model': report.get('tts_model'),
+        'tts_speed': report.get('tts_speed'),
         'tts_reference_files': report.get('tts_reference_files'),
         'llm': report['llm'],
         'articles_url': absolute(args.base_url, f'api/issues/{args.date}/articles.json'),
         'candidate_articles_url': absolute(args.base_url, f'api/issues/{args.date}/candidate-news.json'),
         'podcast_script_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.json'),
         'podcast_script_text_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.txt'),
+        'podcast_dialogue_text_url': absolute(args.base_url, f'podcast-dialogue/{args.date}.txt'),
         'podcast_moss_input_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-moss-input.txt'),
         'manifest_url': absolute(args.base_url, f'api/issues/{args.date}/manifest.json'),
         'html_url': absolute(args.base_url, f'html/{args.date}.html'),
@@ -142,6 +153,7 @@ def main() -> int:
         'articles': issue['articles_url'],
         'podcast_script': issue['podcast_script_url'],
         'podcast_script_text': issue['podcast_script_text_url'],
+        'podcast_dialogue_text': issue['podcast_dialogue_text_url'],
         'podcast_moss_input': issue['podcast_moss_input_url'],
         'html': issue['html_url'],
         'audio': issue['audio_url'],

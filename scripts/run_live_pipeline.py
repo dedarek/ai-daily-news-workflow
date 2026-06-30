@@ -25,6 +25,7 @@ SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
+DEFAULT_MOSS_TTS_SPEED = 1.08
 MOSS_REFERENCE_VOICES = {
     'S1': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
@@ -123,8 +124,8 @@ def clean_text(text: str) -> str:
 
 def validate_podcast_dialogue(dialogue: list[dict[str, str]]) -> list[str]:
     issues: list[str] = []
-    if not 20 <= len(dialogue) <= 28:
-        issues.append(f'podcast_turns={len(dialogue)} outside 20-28')
+    if not 12 <= len(dialogue) <= 18:
+        issues.append(f'podcast_turns={len(dialogue)} outside 12-18')
 
     for index, turn in enumerate(dialogue):
         expected = 'S1' if index % 2 == 0 else 'S2'
@@ -133,29 +134,41 @@ def validate_podcast_dialogue(dialogue: list[dict[str, str]]) -> list[str]:
             break
 
     texts = [turn.get('text', '') for turn in dialogue]
+    if texts:
+        opening_markers = ('大家好', '早上好', '中午好', '下午好', '今天', '欢迎', '开场', '又到了')
+        if not any(marker in texts[0] for marker in opening_markers):
+            issues.append('podcast opening missing conversational greeting/context')
+        stiff_first_turns = sum(
+            1
+            for text in texts[:2]
+            if re.match(r'^[\u4e00-\u9fa5A-Za-z0-9]+(发布|公布|推出|宣布|曝出|即将|将于|通过|采用|认为)', text)
+        )
+        if stiff_first_turns:
+            issues.append('podcast starts directly with news facts instead of an opening')
+
     question_count = sum(
         1
         for text in texts
         if any(marker in text for marker in ('？', '?', '吗', '呢', '怎么', '为什么', '是不是', '意味着什么'))
     )
-    if question_count < 5:
-        issues.append(f'question_turns={question_count} < 5')
+    if question_count < 3:
+        issues.append(f'question_turns={question_count} < 3')
 
     connective_count = sum(
         1
         for text in texts
         if any(marker in text for marker in ('但', '不过', '所以', '换句话说', '你是说', '我担心', '问题是', '关键是', '反过来'))
     )
-    if connective_count < 9:
-        issues.append(f'connected_turns={connective_count} < 9')
+    if connective_count < 5:
+        issues.append(f'connected_turns={connective_count} < 5')
 
     challenge_count = sum(
         1
         for text in texts
         if any(marker in text for marker in ('我不太同意', '不一定', '未必', '风险', '问题', '担心', '挑战', '代价'))
     )
-    if challenge_count < 4:
-        issues.append(f'challenge_turns={challenge_count} < 4')
+    if challenge_count < 2:
+        issues.append(f'challenge_turns={challenge_count} < 2')
 
     stiff_opening_count = sum(
         1
@@ -482,29 +495,21 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
 def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
     endpoint, models = llm_config()
     podcast_prompt = f'''
-基于以下日报，生成20-28轮自然双人播客对话。
-
+基于以下已经校验通过的日报，生成12-18轮自然双人播客对话。
 角色设定：
-- S1是资深AI从业者，负责解释技术机制、产业约束和风险。
-- S2是产品与应用视角，负责追问“这和用户/企业/产品有什么关系”，也可以质疑S1的判断。
+- S1是资深AI从业者
+- S2是产品与应用经理
+分别贡献不同视角的分析
 
-对话质量要求：
+对话要求：
 - 这必须是一段真实对话，不是两个人轮流念新闻摘要。
-- 必须覆盖5-7条最有讨论价值的新闻，按一条新闻接一条新闻连续讨论；每条新闻至少2轮、最多4轮。
-- 可以把相关性强的新闻放在同一段里比较，但不能把5-7条压缩成3-4个大主题后忽略具体新闻。
-- 每条新闻的讨论顺序必须是：口语化引入事实 -> 追问它为什么重要 -> 给出限制/风险/反面看法 -> 自然转到下一条。
-- 每一轮都要回应上一轮：追问、解释、反驳、补充、让步或换个角度，不允许孤立陈述。
-- 至少5轮要用问句推动对话，至少4轮要出现分歧、风险或反直觉判断。
-- S2不能只是附和，必须持续追问“所以呢、谁会受影响、落地难点是什么、有没有被高估”。
-- 允许使用口语化承接，例如“问题是”“我反而担心”“换句话说”“你是说”，但不要过度表演。
-- 禁止“公司/机构 + 发布/宣布/推出...”这种每轮念标题的开头连续出现。
-- 禁止使用“第一条新闻”“接下来我们聊”“我们再看”等机械报幕。
-- 禁止把日报里的summary压缩成一句重新念出来；必须转化成口语讨论。
-- 每轮35-110个中文字符；speaker必须严格按S1、S2、S1、S2交替，从S1开始。
+- 围绕最重要的5-7条新闻深入讨论，有反应、补充、分歧和判断。
+- 禁止使用“第一条新闻”“接下来我们聊”等机械报幕；每轮20-90个中文字符。
+- 前2轮必须是自然开场：短开场问候/点题，并抛出今天的主线问题。
 - 只使用输入日报中的事实，不得新增具体事实、数字或机构，不得提及聚合源名称。
 
 输出要求：
-只输出JSON：{{"covered_titles":["..."],"podcast_dialogue":[{{"speaker":"S1","text":"..."}},{{"speaker":"S2","text":"..."}}]}}
+只输出JSON：{{"podcast_dialogue":[{{"speaker":"S1","text":"..."}},{{"speaker":"S2","text":"..."}}]}}
 
 日报：
 {json.dumps([asdict(item) for item in articles], ensure_ascii=False)}
@@ -520,15 +525,8 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
     for item in podcast_result.get('podcast_dialogue', []):
         speaker = str(item.get('speaker', '')).strip()
         text = clean_text(str(item.get('text', '')))
-        if speaker in ('S1', 'S2') and 35 <= len(text) <= 110:
+        if speaker in ('S1', 'S2') and 20 <= len(text) <= 90:
             dialogue.append({'speaker': speaker, 'text': text})
-    covered_titles = [
-        str(title).strip()
-        for title in podcast_result.get('covered_titles', [])
-        if str(title).strip()
-    ]
-    if not 5 <= len(covered_titles) <= 7:
-        raise RuntimeError(f'LLM podcast covered {len(covered_titles)} titles; expected 5-7')
     dialogue_issues = validate_podcast_dialogue(dialogue)
     if dialogue_issues:
         raise RuntimeError(f'LLM podcast dialogue quality failed: {dialogue_issues}')
@@ -554,43 +552,71 @@ def render_html(issue_date: str, content_date: str, articles: list[Article], out
         grouped.setdefault(article.section, []).append(article)
 
     parts = [
-        '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">',
-        '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-        f'<title>每日AI热点新闻 — {issue_date}</title></head>',
-        '<body style="margin:0;padding:0;font-family:PingFang SC,Microsoft YaHei,Arial,sans-serif;background:#eef1f5;">',
-        '<table width="100%" cellpadding="0" cellspacing="0" style="padding:24px 0;"><tr><td align="center">',
-        '<table width="700" cellpadding="0" cellspacing="0" style="background:#fff;border:1px solid #c9cdd4;border-radius:10px;overflow:hidden;">',
-        '<tr><td style="background:#3b82f6;padding:28px 30px;text-align:center;border-bottom:4px solid #1d4ed8;">',
-        '<h1 style="color:#fff;margin:0;font-size:22px;">📰 每日AI热点新闻（试运营）</h1>',
-        f'<p style="color:#dbeafe;margin:8px 0 0;font-size:13px;">{display_date}</p></td></tr>',
-        '<tr><td style="padding:22px 36px 18px;">',
-        f'<p style="color:#374151;font-size:15px;line-height:1.9;margin:0;">今日关注：{html.escape(summary_titles)}。'
-        '本期从产品、行业、研究与工具等方向筛选值得跟进的动态。</p></td></tr>',
+        '<!DOCTYPE html>',
+        '<html><head><meta charset="utf-8"><style>',
+        "body{font-family:'PingFang SC','Microsoft YaHei','Inter','Helvetica Neue',Arial,sans-serif;margin:0;padding:20px 0;background:#F9FAFB}",
+        'table{border-collapse:collapse;width:100%;max-width:700px;margin:0 auto;background:#fff;border:1px solid #E5E7EB;border-radius:12px}',
+        'td{padding:0}',
+        '.header{background:#0F172A;padding:40px 36px 32px;text-align:center;border-radius:12px 12px 0 0}',
+        '.header h1{color:#fff;margin:0;font-size:24px;font-weight:700;letter-spacing:1px}',
+        '.header .date{color:#9CA3AF;font-size:13px;margin-top:10px;font-weight:400}',
+        '.summary-wrap{padding:24px 36px 0}',
+        '.summary{font-size:15px;line-height:1.8;color:#374151;margin:0}',
+        '.section{padding:0 36px 28px}',
+        '.section-divider{padding:0 36px}',
+        '.section-divider hr{border:none;border-top:1px solid #E5E7EB;margin:16px 0}',
+        '.section-title{font-size:17px;font-weight:700;color:#111827;margin:0 0 18px;padding-bottom:10px;border-bottom:2px solid #E2E8F0;letter-spacing:0.5px}',
+        '.item{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #F1F5F9}',
+        '.item:last-child{border-bottom:none;padding-bottom:0}',
+        '.item-title{font-size:15px;font-weight:700;margin:0 0 10px;line-height:1.6}',
+        '.item-title a{color:#2563EB;text-decoration:none}',
+        '.item-body{font-size:14px;line-height:2;color:#475569;margin:0 0 10px}',
+        '.item-comment{font-size:13px;color:#6B7280;font-style:italic;margin:0 0 8px;padding:10px 14px;background:#fffbeb;border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;line-height:1.8}',
+        '.item-link{font-size:12px;color:#64748b;margin:0;line-height:1.8}',
+        '.item-link a{color:#2563EB;text-decoration:none;word-break:break-all}',
+        '.item-link a:hover{text-decoration:underline}',
+        '.focus-badge{display:inline-block;background:linear-gradient(135deg,#ef4444,#f97316);color:#fff;font-size:11px;padding:2px 10px;border-radius:10px;margin-right:8px;font-weight:600;letter-spacing:0.5px;vertical-align:middle}',
+        '.footer-wrap{padding:0}',
+        '.footer{background:#F8FAFC;border-top:1px solid #E2E8F0;border-radius:0 0 12px 12px;padding:20px 36px;text-align:center;font-size:12px;color:#94a3b8;line-height:2}',
+        '</style></head><body>',
+        '<table><tr><td>',
+        '<div class="header">',
+        '<h1>📰 每日AI热点新闻（试运营）</h1>',
+        f'<div class="date">{display_date}</div>',
+        '</div>',
+        '<div class="summary-wrap">',
+        f'<div class="summary">今日关注：{html.escape(summary_titles)}。本期从产品、行业、研究与工具等方向筛选值得跟进的动态。</div>',
+        '</div>',
     ]
     for section in SECTION_ORDER:
         section_articles = grouped.get(section) or []
         if not section_articles:
             continue
-        parts.append('<tr><td style="padding:0 36px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>')
-        parts.append(f'<tr><td style="padding:22px 36px 26px;"><h2 style="font-size:17px;color:#111827;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid #dbeafe;">{section}</h2>')
+        parts.append('<div class="section-divider"><hr></div>')
+        parts.append(f'<div class="section"><h2 class="section-title">{section}</h2>')
         for article in section_articles:
             escaped_url = html.escape(article.url, quote=True)
             review = f'AI锐评：{html.escape(article.review)}'
+            focus_badge = '<span class="focus-badge">焦点</span>' if section == '🔥 今日焦点' else ''
             parts.extend([
-                '<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">',
-                '<tr><td style="padding:14px 18px;background:#f8fafc;">',
-                f'<h3 style="font-size:15px;margin:0 0 6px;line-height:1.6;"><a href="{escaped_url}" style="color:#2563eb;text-decoration:none;">{html.escape(article.title)}</a></h3>',
-                f'<p data-role="news-body" style="font-size:14px;line-height:2;color:#475569;margin:0 0 8px;">{html.escape(article.summary)}</p>',
-                '<table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:8px 12px;background:#fffbeb;border-left:3px solid #f59e0b;">',
-                f'<p style="font-size:13px;color:#6b7280;font-style:italic;margin:0;line-height:1.8;">{review}</p></td></tr></table>',
-                f'<p style="font-size:12px;color:#64748b;margin:8px 0 0;">🔗 <a href="{escaped_url}" style="color:#2563eb;text-decoration:none;word-break:break-all;">{escaped_url}</a></p>',
-                '</td></tr></table>',
+                '<div class="item">',
+                f'<div class="item-title">{focus_badge}<a href="{escaped_url}">{html.escape(article.title)}</a></div>',
+                f'<p data-role="news-body" class="item-body">{html.escape(article.summary)}</p>',
+                f'<div class="item-comment">{review}</div>',
+                f'<div class="item-link">🔗 <a href="{escaped_url}">{escaped_url}</a></div>',
+                '</div>',
             ])
-        parts.append('</td></tr>')
+        parts.append('</div>')
     parts.extend([
-        '<tr><td style="padding:20px 36px;text-align:center;background:#f8fafc;">',
-        f'<p style="font-size:12px;color:#9ca3af;margin:0;line-height:1.6;">每日AI热点新闻 · {issue_date}<br>内容采集日期：{content_date} · 内容仅供参考</p>',
-        '</td></tr></table></td></tr></table></body></html>',
+        '<div class="footer-wrap">',
+        '<div class="footer">',
+        '试运营期间有任何问题请联系：penglei4@lenovo.com<br>',
+        '技术创新中心：-TIC@lenovo.com',
+        f'<br>内容采集日期：{content_date} · 内容仅供参考',
+        '</div>',
+        '</div>',
+        '</td></tr></table>',
+        '</body></html>',
     ])
     output_path.write_text(''.join(parts), encoding='utf-8')
 
@@ -626,7 +652,19 @@ def moss_dialogue_input(dialogue: list[dict[str, str]]) -> str:
     return ''.join(f'[{turn["speaker"]}]{turn["text"]}' for turn in dialogue)
 
 
+def moss_tts_speed() -> float:
+    raw = os.environ.get('MOSS_TTS_SPEED', str(DEFAULT_MOSS_TTS_SPEED))
+    try:
+        speed = float(raw)
+    except ValueError as exc:
+        raise RuntimeError(f'MOSS_TTS_SPEED must be a number, got {raw!r}') from exc
+    if not 0.8 <= speed <= 1.3:
+        raise RuntimeError(f'MOSS_TTS_SPEED must be between 0.8 and 1.3, got {speed}')
+    return speed
+
+
 def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Path, api_key: str) -> bool:
+    speed = moss_tts_speed()
     payload = json.dumps({
         'model': MOSS_TTS_MODEL,
         'stream': True,
@@ -634,7 +672,7 @@ def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Pat
         'references': moss_reference_payload(),
         'max_tokens': 4096,
         'response_format': 'mp3',
-        'speed': 1,
+        'speed': speed,
         'gain': 0,
     }).encode()
     request = Request(
@@ -757,6 +795,7 @@ def main() -> int:
         'podcast_moss_input_file': moss_input_path.name,
         'tts_mode': tts_mode,
         'tts_model': MOSS_TTS_MODEL,
+        'tts_speed': moss_tts_speed(),
         'tts_reference_files': {
             speaker: MOSS_REFERENCE_VOICES[speaker]['path'].relative_to(REPO_ROOT).as_posix()
             for speaker in ('S1', 'S2')

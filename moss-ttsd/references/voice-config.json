@@ -2,6 +2,8 @@
   "model": "fnlp/MOSS-TTSD-v0.5",
   "endpoint": "https://api.siliconflow.cn/v1/audio/speech",
   "tts_mode": "siliconflow-moss-reference-live",
+  "default_speed": 1.08,
+  "speed_env": "MOSS_TTS_SPEED",
   "voices": {
     "S1": {
       "name": "老陈",

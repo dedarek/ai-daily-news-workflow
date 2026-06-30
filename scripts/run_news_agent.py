@@ -25,7 +25,7 @@ ERROR = 50
 MIN_SIZES = {
     'candidate_articles': 500,
     'articles': 500,
-    'html': 15 * 1024,
+    'html': 10 * 1024,
     'podcast_script': 500,
     'podcast_script_text': 500,
     'podcast_moss_input': 500,

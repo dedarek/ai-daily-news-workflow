@@ -114,8 +114,8 @@ def main() -> int:
     dialogue = podcast_script.get('dialogue') or []
     if len(dialogue) < 12:
         deterministic_issues.append(f'podcast_turns={len(dialogue)} < 12')
-    if len(html_bytes) < 15 * 1024:
-        deterministic_issues.append(f'html_bytes={len(html_bytes)} < 15360')
+    if len(html_bytes) < 10 * 1024:
+        deterministic_issues.append(f'html_bytes={len(html_bytes)} < 10240')
     if not 1_000_000 <= len(audio_bytes) <= 8 * 1024 * 1024:
         deterministic_issues.append(f'audio_bytes={len(audio_bytes)} outside allowed range')
 

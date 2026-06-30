@@ -8,6 +8,9 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
 SKILL_DIR = Path(__file__).resolve().parent.parent
 SAMPLES_DIR = SKILL_DIR / 'samples'
 TMP = Path('/tmp')
@@ -49,12 +52,17 @@ def strip_tags(text: str) -> str:
 
 def count_body_blocks(html: str) -> int:
     blocks: list[str] = []
+    for m in re.finditer(r'<p\b(?P<attrs>[^>]*)data-role=["\']news-body["\'][^>]*>(?P<body>.*?)</p>', html, flags=re.I | re.S):
+        text = strip_tags(m.group('body') or '')
+        if len(text) >= 80:
+            blocks.append(text)
+
     for m in re.finditer(r'<(?P<tag>div|p|td)\b(?P<attrs>[^>]*)>(?P<body>.*?)</(?P=tag)>', html, flags=re.I | re.S):
         tag = m.group('tag').lower()
         attrs = (m.group('attrs') or '').lower()
         body = m.group('body') or ''
         include = False
-        if 'data-role="news-body"' in attrs or "data-role='news-body'" in attrs:
+        if tag == 'p' and ('data-role="news-body"' in attrs or "data-role='news-body'" in attrs):
             include = True
         elif tag == 'td':
             include = True
