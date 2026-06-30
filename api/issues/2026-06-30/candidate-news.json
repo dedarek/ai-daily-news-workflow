@@ -1,107 +1,137 @@
 [
   {
-    "title": "Claude Tag嵌入企业工作流",
-    "summary": "用户可在Slack里直接@Claude派活。它拥有组织级工具和持久化记忆。这被誉为大模型第三次交互重塑。云端AI开箱即用简直是杀手锏💥。更多细节请看原贴分析。",
-    "url": "https://x.com/dotey/status/2071356525570924563",
+    "title": "美团发布VitaBench2.0评测系统",
+    "summary": "美团团队发布VitaBench2.0基准。它是首个针对动态用户建模的智能体系统（AI资讯）。系统涵盖56位用户与海量任务。测试发现大模型(T_T)缺乏主动沟通意愿。该项目开源将推动AI向伴侣进化。",
+    "url": "https://tech.meituan.com/2026/06/29/LongCat-VitaBench-2.0.html",
     "section": "🔥 今日焦点",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "阿里通义首发WanStreamer",
-    "summary": "单Transformer搞定音视频全交互。通过块因果注意力实现流式生成。模型响应延迟低至惊人的200毫秒。完美支持亚秒级全双工视频对话🎙️。欢迎查看官方演示。",
-    "url": "https://x.com/Gorden_Sun/status/2071253439498379358",
+    "title": "谷歌开放免费个性化AI生图",
+    "summary": "谷歌正向美国免费用户开放个性化生图。机器人能根据兴趣创造视觉内容（AI资讯）。它还可以直接调用应用的底层数据。重磅功能极大降低了普通人创作门槛。AI绘图的普及化进程又迈出重要一步。",
+    "url": "https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/",
     "section": "🚀 产品发布",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "谷歌AI Studio上线UI变体",
-    "summary": "一键即可为生成的网页套用多种风格。用Gemini写前端代码简直如虎添翼。产出结果还能一键分享极其丝滑。点击右上角即可快速调用工具。体验全新前端魔法提升效率。",
-    "url": "https://x.com/Gorden_Sun/status/2071245834747064670",
+    "title": "英伟达重磅发布BioNeMo工具包",
+    "summary": "英伟达重磅发布BioNeMo工具包。工具将分子模型转化为可调用专属技能（AI资讯）。智能体任务完成率瞬间飙升至满分。代理有效断言平均增加了近两倍。此举为药物发现领域带来全新可能。",
+    "url": "https://www.marktechpost.com/2026/06/29/nvidia-bionemo-agent-toolkit-turns-biomolecular-models-into-callable-skills-for-ai-agents-in-drug-discovery/",
     "section": "🚀 产品发布",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "Hermes推出MoA虚拟路由",
-    "summary": "系统能够根据时刻自动调度不同模型。这种快慢脑逻辑让工程化效益大增。其跑分结果甚至超越了Opus4.8。混合专家路由释放了极致效能💡。在此阅读更新详情。",
-    "url": "https://x.com/yangyi/status/2071245449139556549",
-    "section": "🚀 产品发布",
-    "review": ""
-  },
-  {
-    "title": "Claude超限后可转至GPT",
-    "summary": "桌面端触及限额会自动整理对话摘要。用户能一键将上下文发送给ChatGPT。但这暴露了桌面版细节仍有待提升。若支持深度链接便无需反复总结。点击围观新特性优化体验。",
-    "url": "https://x.com/yangyi/status/2071120458855145605",
-    "section": "🚀 产品发布",
-    "review": ""
-  },
-  {
-    "title": "百度开源Unlimited OCR",
-    "summary": "该模型能一口气读完几十页长文档。创新引入滑动窗口注意力机制。它学会像人类一样选择性遗忘💡。系统显存开销几乎不再无限增长。在此论文地址中刷新SOTA成绩。",
-    "url": "https://www.qbitai.com/2026/06/439464.html",
+    "title": "智谱GLM5.2模型比肩Claude",
+    "summary": "智谱开放权重的GLM5.2模型表现抢眼。它在安全任务中比肩受限模型（AI资讯）。这证明国产大模型在漏洞检测上极强。该进展加剧了对出口管制策略探讨。开源生态正重塑全球AI安全技术格局。",
+    "url": "http://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651341457&idx=1&sn=6cb6f18e45073e2a0112b42f3c8fbde2&chksm=bc1c110f3f5c5bf132774ce07fceb76800bfafaaf15044f1050345ede904aaef332d6970c8d8&scene=0&xtrack=1#rd",
     "section": "💡 前沿研究",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "光计算突破太空算力瓶颈",
-    "summary": "太空芯片面临高辐射与散热地狱考验。光本位科技用光子替代电子。光计算天然抗辐射且几乎不发热。同等重量下载荷能提供更高算力。阅读详情了解首颗天基光计算卫星。",
-    "url": "https://www.qbitai.com/2026/06/439728.html",
+    "title": "学者利用AI攻克计算几何难题",
+    "summary": "加州大学学者利用AI攻克计算几何难题。他们用模型证明了最远点对等经典数学问题（AI资讯）。初始证明由AI生成并实现了关键突破。姚班天才陈立杰此前工作成为关键。人机协作正成为系统解决难题的新范式。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709773&idx=2&sn=68bde762eb0070f5bd61518728971232",
     "section": "💡 前沿研究",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "英伟达发布最危险AI论文",
-    "summary": "红皇后哥德尔机器打破20年封印。它让AI主动编写并进化学习算法。考官与考生在沙盒里同步变态繁衍😱。这种无休止的自我迭代令人毛骨悚然。这篇重磅论文暗示ASI加速降临。",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709592&idx=1&sn=67287b57a9e541025be9a34c4b272334",
+    "title": "研究人员提出AgentOdyssey框架",
+    "summary": "科研人员提出全新评估框架AgentOdyssey。系统生成开放文本游戏测试智能体（AI资讯）。AI被置于连续环境中交替学习与推理。测试结果揭示了顶级模型(O_O)能力的不足。研究证实短期记忆是测试训练重要部分。",
+    "url": "https://huggingface.co/papers/2606.24893",
     "section": "💡 前沿研究",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "Token盗用成AI商业新威胁",
-    "summary": "Stripe高管Emily指出智能体正主导交易。黑客🚨目标转向昂贵推理资源。他们利用脚本疯狂榨干试用额度。AI初创遭滥用的概率高达十倍。企业需升级风控系统防御攻击。",
-    "url": "https://www.qbitai.com/2026/06/439746.html",
+    "title": "阿里发布QwenImage2.0RL报告",
+    "summary": "阿里重磅发布QwenImage2.0RL报告。新技术利用强化学习提升了画面质量（AI资讯）。策略蒸馏被首次应用于扩散模型后训练。模型在指令遵循和编辑上极其出色。这一成果对开源文生图生态有示范效应。",
+    "url": "https://huggingface.co/papers/2606.27608",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达推出仿真训练系统SimFoundry",
+    "summary": "英伟达推出全新仿真训练系统SimFoundry。该技术能根据视频自动构建三维场景（AI资讯）。虚拟训练的机器人可以直接落地上岗。真实测试显示复杂操作成功率(oﾟ▽ﾟ)暴涨四成。此成果对具身智能产业化有强大推动力。",
+    "url": "https://huggingface.co/papers/2606.28276",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Tidal平台出台AI音乐新政策",
+    "summary": "音乐平台Tidal出台AI音乐全新政策。下月中旬起不再为纯AI曲目（AI资讯）付版税。系统识别的AI曲目会被🔥强制打上标签。公司强调优先保障(￣^￣)人类创作者利益。但平台并未对生成式音乐全面封杀。",
+    "url": "https://www.theverge.com/tech/959211/tidal-ai-music-policy-demonetizingdetect-label",
     "section": "💼 行业动态",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "微软豪赌核聚变供电大模型",
-    "summary": "为解决AI算力带来的恐怖能耗痛点。科技巨头疯狂抢购核聚变设备。一旦成功即可享受半独占式清洁能源⚡。若失败就全当为人类社会做慈善了。去社媒看看大厂的能源焦虑。",
-    "url": "https://x.com/geniusvczh/status/2071101220744548754",
+    "title": "最高法对地理围栏搜查令裁决",
+    "summary": "美国最高法院对地理围栏搜查令裁决。取证行为将受到宪法第四修正案的全面限制（AI资讯）。舆论担忧执法部门🔥购买第三方数据。公众对科技公司(O_O)底层隐私机制存疑。这项判决或将引发数据交易连锁反应。",
+    "url": "https://newshacker.me/story?id=48720924",
     "section": "💼 行业动态",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "传统业务全面AI化遭痛批",
-    "summary": "有网友犀利直言业务AI化纯属扯犊子。很多企业连最基础数据沉淀都没做好。核心动作根本无法放心交由AI决策。AIGC产品目前想要变现异常困难📉。进入讨论区看清醒派精彩发言。",
-    "url": "https://m.okjike.com/originalPosts/6a411c6f228d9ca169d7f39e",
+    "title": "DeepSeek创始人决定启动融资",
+    "summary": "深度求索创始人受ClaudeMythos震撼决定融资。他意识到不储备弹药无法支撑后续的模型研发（AI资讯）。公司目前所有部门正在🔥疯狂招兵买马。团队正加紧适配国产芯片并(O_O)重写底层。其坚守开源低价与通用人工智能战略未变。",
+    "url": "https://www.qbitai.com/2026/06/439863.html",
     "section": "💼 行业动态",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "Anthropic风控骚操作惹众怒",
-    "summary": "开发大佬受不了Claude频繁封号断连。这种极端的安全策略严重拖累了开发。正常用户的合法请求频频被误拦截🚫。社区对平台的信任度正在肉眼可见流失。点击围观吐槽了解事件详情。",
-    "url": "https://x.com/berryxia/status/2071264059593523203",
-    "section": "💼 行业动态",
-    "review": ""
-  },
-  {
-    "title": "私人交易智能体Vibe-Trading",
-    "summary": "这是一个14.3k的超火爆开源项目。专注为你打造个人专属AI交易助手。解决量化交易门槛极高📈痛点。自然语言就能控制复杂金融交易策略。直达项目主页体验财富密码。",
-    "url": "https://github.com/HKUDS/Vibe-Trading",
+    "title": "VeraCrypt: 强大磁盘加密工具",
+    "summary": "开源项目VeraCrypt是强大加密工具。它基于老牌软件重构解决数据泄露痛点（AI资讯）。项目凭极致安全性在社区斩获🔥万颗星标。对隐私要求极高的用户(O_O)绝不容错过。",
+    "url": "https://github.com/veracrypt/VeraCrypt",
     "section": "🔓 开源热榜",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "Mac极速离线语音听写",
-    "summary": "FluidVoice顺利收获3.7k高分星标。它主打完全本地化的语音转文本。彻底解决隐私泄露与网络高延迟痛点。语音生成速度快到直接起飞。欢迎访问源码仓库尝试离线体验。",
-    "url": "https://github.com/altic-dev/FluidVoice",
+    "title": "tolaria: 桌面端知识库管理",
+    "summary": "开源项目tolaria专注构建桌面知识库。它完美解决了文档难以高效整理的管理痛点（AI资讯）。该仓库已狂揽近一万八千颗开发者星标。流畅交互体验让人用过就彻底爱不释手。",
+    "url": "https://github.com/refactoringhq/tolaria",
     "section": "🔓 开源热榜",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   },
   {
-    "title": "RepoPrompt社区版正式开源",
-    "summary": "作者被OpenAI招安后大方送出福利。工具通过MCP无缝接管底层命令行。能精挑细选代码库拼出优质提示词。完美解决长文本模型易变笨痛点。访问开源仓库获取代码神器。",
-    "url": "https://x.com/dotey/status/2071348102263378085",
+    "title": "VulnClaw: 自动化安全渗透框架",
+    "summary": "开源项目VulnClaw打造了自动渗透框架。AI智能体解决了人工挖掘效率低下的测试痛点（AI资讯）。系统支持自然语言实现🔥自动生成安全报告。创新思路迅速吸引了一千多颗(oﾟ▽ﾟ)星标关注。",
+    "url": "https://github.com/Unclecheng-li/VulnClaw",
     "section": "🔓 开源热榜",
-    "review": ""
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "free-for-dev: 免费开发资源清单",
+    "summary": "项目freefordev整理了免费资源清单。它直击独立开发者寻找白嫖服务的关键痛点（AI资讯）。这份宝库目前已经积累超十二万颗星标。部署测试还是个人实验都能从中找方案。",
+    "url": "https://github.com/ripienaar/free-for-dev",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
   }
 ]

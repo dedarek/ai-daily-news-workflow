@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-06-30",
   "status": "ready",
-  "created_at": "2026-06-29T23:43:42.595927+00:00",
+  "created_at": "2026-06-30T07:14:31.299189+00:00",
   "artifacts": {
     "candidate_articles": "dist/candidate-news-2026-06-30.json",
     "articles": "dist/articles-2026-06-30.json",
@@ -18,7 +18,7 @@
   },
   "quality": {
     "deterministic": "pass",
-    "agent_review": "pass",
+    "agent_review": "not_run",
     "issues": []
   },
   "repair": {
@@ -29,16 +29,12 @@
     "candidate_count": 15,
     "selected_count": 12
   },
-  "agent": {
-    "provider": "deepagents",
-    "model": "deepseek-v4-flash",
-    "preflight": "Preflight complete. Here's the summary:\n\n---\n\n## Preflight Result — 2026-06-30\n\n```json\n{\n  \"pass\": true,\n  \"risks\": [\n    {\n      \"severity\": \"medium\",\n      \"area\": \"deduplication\",\n      \"detail\": \"state/recent-news.json has an empty days object. summarize_recent_titles returned no data. The agent will have zero prior title context for 7-day dedup. Candidate selection may overlap with previously covered events if any earlier issues exist.\"\n    },\n    {\n      \"severity\": \"low\",\n      \"area\": \"workspace\",\n      \"detail\": \"All artifacts are absent (exists=false, bytes=0). Expected for a first run — no leftover or partial artifacts from a prior attempt.\"\n    }\n  ],\n  \"required_next_step\": \"Run scripts/run_news_agent.py --date 2026-06-30 to generate candidate articles, selected articles, HTML, podcast script, MOSS-TTSD input, and MP3. Follow with manifest generation and deterministic validation.\"\n}\n```\n\n**Key findings from inspection:**\n\n| Check | Status |\n|---|---|\n| `summarize_recent_titles()` | Empty — no dedup memory |\n| `inspect_workspace` | All 9 canonical artifacts missing (clean slate) |\n| `state/recent-news.json` | Exists, `days: {}` |\n| Skill refs (`news-agent-rules`, `output-schema`, `delivery-rules`, `voice-config`) | All present and valid |\n| Manifest schema v1 | Template ready at `dist/manifest-2026-06-30.json` (will be created) |\n\nThe workspace is ready for generation. The main risk is the empty dedup state — the agent will be operating without seven-day title history, so extra attention should be paid during article selection to avoid re-covering events from prior issues. The deterministic supervisor should proceed with generation and post-generation validation."
-  },
+  "agent": null,
   "pipeline_report": {
     "mode": "live-collection",
     "issue_date": "2026-06-30",
-    "content_date": "2026-06-29",
-    "source_url": "https://hex2077.dev/docs/2026-06/2026-06-29/",
+    "content_date": "2026-06-30",
+    "source_url": "https://hex2077.dev/docs/2026-06/2026-06-30/",
     "recipient": "yyc54321@126.com",
     "article_count": 12,
     "candidate_count": 15,
@@ -51,105 +47,222 @@
         "mimo-v2.5"
       ],
       "endpoint": "https://opencode.ai/zen/go/v1",
-      "calls": 5,
+      "calls": 9,
       "call_details": {
         "selection": {
           "model": "deepseek-v4-flash",
           "usage": {
-            "prompt_tokens": 1891,
-            "completion_tokens": 5867,
-            "total_tokens": 7758,
+            "prompt_tokens": 2254,
+            "completion_tokens": 7368,
+            "total_tokens": 9622,
             "prompt_tokens_details": {
               "cached_tokens": 0
             },
             "completion_tokens_details": {
-              "reasoning_tokens": 5429
+              "reasoning_tokens": 6786
             },
             "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1891
+            "prompt_cache_miss_tokens": 2254
           }
         },
         "editorial_batches": [
           {
             "model": "deepseek-v4-flash",
             "usage": {
-              "prompt_tokens": 694,
-              "completion_tokens": 19865,
-              "total_tokens": 20559,
+              "prompt_tokens": 4322,
+              "completion_tokens": 2905,
+              "total_tokens": 7227,
               "prompt_tokens_details": {
-                "cached_tokens": 0
+                "cached_tokens": 4224
               },
               "completion_tokens_details": {
-                "reasoning_tokens": 19259
+                "reasoning_tokens": 2267
               },
-              "prompt_cache_hit_tokens": 0,
-              "prompt_cache_miss_tokens": 694
+              "prompt_cache_hit_tokens": 4224,
+              "prompt_cache_miss_tokens": 98
             }
           },
           {
             "model": "deepseek-v4-flash",
             "usage": {
-              "prompt_tokens": 736,
-              "completion_tokens": 2852,
-              "total_tokens": 3588,
+              "prompt_tokens": 2987,
+              "completion_tokens": 7367,
+              "total_tokens": 10354,
               "prompt_tokens_details": {
-                "cached_tokens": 0
+                "cached_tokens": 2944
               },
               "completion_tokens_details": {
-                "reasoning_tokens": 2356
+                "reasoning_tokens": 6627
               },
-              "prompt_cache_hit_tokens": 0,
-              "prompt_cache_miss_tokens": 736
+              "prompt_cache_hit_tokens": 2944,
+              "prompt_cache_miss_tokens": 43
             }
           },
           {
             "model": "deepseek-v4-flash",
             "usage": {
-              "prompt_tokens": 690,
-              "completion_tokens": 2790,
-              "total_tokens": 3480,
+              "prompt_tokens": 5748,
+              "completion_tokens": 4692,
+              "total_tokens": 10440,
               "prompt_tokens_details": {
-                "cached_tokens": 256
+                "cached_tokens": 384
               },
               "completion_tokens_details": {
-                "reasoning_tokens": 2293
+                "reasoning_tokens": 3864
               },
-              "prompt_cache_hit_tokens": 256,
-              "prompt_cache_miss_tokens": 434
+              "prompt_cache_hit_tokens": 384,
+              "prompt_cache_miss_tokens": 5364
             }
           }
         ],
-        "podcast": {
+        "digest_summary": {
           "model": "deepseek-v4-flash",
           "usage": {
-            "prompt_tokens": 2668,
-            "completion_tokens": 20873,
-            "total_tokens": 23541,
+            "prompt_tokens": 3028,
+            "completion_tokens": 3342,
+            "total_tokens": 6370,
             "prompt_tokens_details": {
               "cached_tokens": 0
             },
             "completion_tokens_details": {
-              "reasoning_tokens": 19559
+              "reasoning_tokens": 3259
             },
             "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 2668
+            "prompt_cache_miss_tokens": 3028
           }
-        }
+        },
+        "podcast": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 3182,
+            "completion_tokens": 5683,
+            "total_tokens": 8865,
+            "prompt_tokens_details": {
+              "cached_tokens": 3072
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 5167
+            },
+            "prompt_cache_hit_tokens": 3072,
+            "prompt_cache_miss_tokens": 110
+          }
+        },
+        "podcast_review": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 3627,
+            "completion_tokens": 1033,
+            "total_tokens": 4660,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1015
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3627
+          }
+        },
+        "podcast_attempts": [
+          {
+            "attempt": 1,
+            "generation": {
+              "model": "deepseek-v4-flash",
+              "usage": {
+                "prompt_tokens": 3117,
+                "completion_tokens": 6761,
+                "total_tokens": 9878,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 6285
+                },
+                "prompt_cache_hit_tokens": 0,
+                "prompt_cache_miss_tokens": 3117
+              }
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": false,
+              "issues": [
+                "开场不够自然，直接进入新闻，缺少问候或话题引入",
+                "对话像轮流复述摘要，缺少互动和观点碰撞，过于平铺直叙"
+              ],
+              "repair_instruction": "修改开场，添加简短问候和引入语（如上周热点回顾）；在讨论中增加主持人之间的质疑、不同看法或深入追问，避免简单肯定和补充，使对话更加生动真实。"
+            },
+            "review_model": "deepseek-v4-flash",
+            "review_usage": {
+              "prompt_tokens": 3582,
+              "completion_tokens": 1786,
+              "total_tokens": 5368,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1683
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 3582
+            }
+          },
+          {
+            "attempt": 2,
+            "generation": {
+              "model": "deepseek-v4-flash",
+              "usage": {
+                "prompt_tokens": 3182,
+                "completion_tokens": 5683,
+                "total_tokens": 8865,
+                "prompt_tokens_details": {
+                  "cached_tokens": 3072
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 5167
+                },
+                "prompt_cache_hit_tokens": 3072,
+                "prompt_cache_miss_tokens": 110
+              }
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": true,
+              "issues": [],
+              "repair_instruction": ""
+            },
+            "review_model": "deepseek-v4-flash",
+            "review_usage": {
+              "prompt_tokens": 3627,
+              "completion_tokens": 1033,
+              "total_tokens": 4660,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1015
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 3627
+            }
+          }
+        ]
       }
     },
-    "podcast_turns": 25,
+    "digest_summary": "今日AI行业呈现模型竞争、应用加速与监管跟进三条主线。DeepSeek受业界模型震撼启动融资，智谱开放模型在安全任务比肩Claude；谷歌免费开放个性化生图，英伟达推出仿真与生物工具；Tidal限制AI音乐版税，最高法院加强地理围栏隐私保护。AI在数学证明上亦获突破。",
+    "podcast_turns": 18,
     "podcast_script_file": "podcast-script-2026-06-30.json",
     "podcast_script_text_file": "podcast-script-2026-06-30.txt",
     "podcast_moss_input_file": "podcast-moss-input-2026-06-30.txt",
     "tts_mode": "siliconflow-moss-reference-live",
     "tts_model": "fnlp/MOSS-TTSD-v0.5",
+    "tts_speed": 1.08,
     "tts_reference_files": {
       "S1": "moss-ttsd/references/voice_laochen_s1.wav",
       "S2": "moss-ttsd/references/voice_anna_s2.mp3"
     },
-    "html_bytes": 22311,
-    "podcast_bytes": 3787135,
-    "podcast_duration_seconds": 236.62
+    "html_bytes": 18003,
+    "podcast_bytes": 1544959,
+    "podcast_duration_seconds": 96.48
   },
   "published_artifacts": {
     "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-30/index.json",
