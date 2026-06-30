@@ -19,8 +19,14 @@ from urllib.parse import urlparse
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
+from prompt_loader import prompt_template as prompt_template_from_file
+from prompt_loader import render_prompt as render_prompt_from_file
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = REPO_ROOT / 'skill'
+NEWS_PROMPTS_FILE = SKILL_DIR / 'references' / 'news-prompts.md'
+PODCAST_PROMPTS_FILE = SKILL_DIR / 'references' / 'podcast-prompts.md'
+STATE_PATH = REPO_ROOT / 'state' / 'recent-news.json'
 SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
@@ -47,6 +53,8 @@ class Article:
     url: str
     section: str
     review: str = ''
+    source_text: str = ''
+    source_text_status: str = ''
 
 
 class DailyPageParser(HTMLParser):
@@ -116,6 +124,34 @@ class DailyPageParser(HTMLParser):
                 self.li_title.append(data)
 
 
+class SourceTextParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.skip_depth = 0
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in {'script', 'style', 'svg', 'noscript'}:
+            self.skip_depth += 1
+        if tag in {'p', 'li', 'h1', 'h2', 'h3', 'blockquote', 'figcaption'}:
+            self.parts.append('。')
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in {'script', 'style', 'svg', 'noscript'} and self.skip_depth:
+            self.skip_depth -= 1
+        if tag in {'p', 'li', 'h1', 'h2', 'h3', 'blockquote', 'figcaption'}:
+            self.parts.append('。')
+
+    def handle_data(self, data: str) -> None:
+        if not self.skip_depth:
+            self.parts.append(data)
+
+    def text(self) -> str:
+        text = clean_text(' '.join(self.parts))
+        text = re.sub(r'(。\s*){2,}', '。', text)
+        return text.lstrip('。 ')
+
+
 def clean_text(text: str) -> str:
     text = re.sub(r'\(AI资讯\)', '', text, flags=re.I)
     text = text.replace('🚀', '').replace('(✧∀✧)', '').replace('⭐', '')
@@ -124,20 +160,26 @@ def clean_text(text: str) -> str:
 
 def validate_podcast_dialogue(dialogue: list[dict[str, str]]) -> list[str]:
     issues: list[str] = []
-    if not 12 <= len(dialogue) <= 18:
-        issues.append(f'podcast_turns={len(dialogue)} outside 12-18')
+    if not 10 <= len(dialogue) <= 22:
+        issues.append(f'podcast_turns={len(dialogue)} outside accepted 10-22')
 
     for index, turn in enumerate(dialogue):
+        speaker = turn.get('speaker')
+        text = clean_text(str(turn.get('text', '')))
+        if speaker not in ('S1', 'S2'):
+            issues.append(f'turn {index + 1} invalid speaker={speaker}')
+            continue
+        if not text:
+            issues.append(f'turn {index + 1} empty text')
+            continue
+        if not 10 <= len(text) <= 130:
+            issues.append(f'turn {index + 1} text length={len(text)} outside accepted 10-130')
         expected = 'S1' if index % 2 == 0 else 'S2'
-        if turn.get('speaker') != expected:
-            issues.append(f'turn {index + 1} speaker={turn.get("speaker")} expected {expected}')
-            break
+        if speaker != expected:
+            issues.append(f'turn {index + 1} speaker={speaker} expected {expected}')
 
     texts = [turn.get('text', '') for turn in dialogue]
     if texts:
-        opening_markers = ('大家好', '早上好', '中午好', '下午好', '今天', '欢迎', '开场', '又到了')
-        if not any(marker in texts[0] for marker in opening_markers):
-            issues.append('podcast opening missing conversational greeting/context')
         stiff_first_turns = sum(
             1
             for text in texts[:2]
@@ -145,38 +187,6 @@ def validate_podcast_dialogue(dialogue: list[dict[str, str]]) -> list[str]:
         )
         if stiff_first_turns:
             issues.append('podcast starts directly with news facts instead of an opening')
-
-    question_count = sum(
-        1
-        for text in texts
-        if any(marker in text for marker in ('？', '?', '吗', '呢', '怎么', '为什么', '是不是', '意味着什么'))
-    )
-    if question_count < 3:
-        issues.append(f'question_turns={question_count} < 3')
-
-    connective_count = sum(
-        1
-        for text in texts
-        if any(marker in text for marker in ('但', '不过', '所以', '换句话说', '你是说', '我担心', '问题是', '关键是', '反过来'))
-    )
-    if connective_count < 5:
-        issues.append(f'connected_turns={connective_count} < 5')
-
-    challenge_count = sum(
-        1
-        for text in texts
-        if any(marker in text for marker in ('我不太同意', '不一定', '未必', '风险', '问题', '担心', '挑战', '代价'))
-    )
-    if challenge_count < 2:
-        issues.append(f'challenge_turns={challenge_count} < 2')
-
-    stiff_opening_count = sum(
-        1
-        for text in texts
-        if re.match(r'^[\u4e00-\u9fa5A-Za-z0-9]+(发布|公布|推出|宣布|曝出|即将|将于|通过|采用|认为)', text)
-    )
-    if stiff_opening_count > max(3, len(texts) // 4):
-        issues.append(f'stiff_news_openings={stiff_opening_count} too many')
 
     banned_phrases = (
         '第一条新闻',
@@ -202,6 +212,14 @@ def valid_article_url(url: str) -> bool:
         return False
     parsed = urlparse(url)
     return parsed.scheme in ('http', 'https') and bool(parsed.netloc) and parsed.path not in ('', '/')
+
+
+def prompt_template(name: str) -> str:
+    return prompt_template_from_file(PODCAST_PROMPTS_FILE, name)
+
+
+def render_prompt(name: str, **values: str) -> str:
+    return render_prompt_from_file(PODCAST_PROMPTS_FILE, name, **values)
 
 
 def section_for(source_heading: str, index: int) -> str:
@@ -247,6 +265,48 @@ def fetch_latest(issue_date: str) -> tuple[str, str, str]:
     raise RuntimeError('No daily source page available: ' + ', '.join(errors))
 
 
+def extract_source_text(raw_html: str) -> str:
+    raw_html = re.sub(r'(?is)<(script|style|svg|noscript).*?</\1>', ' ', raw_html)
+    parser = SourceTextParser()
+    parser.feed(raw_html)
+    text = parser.text()
+    boilerplate_patterns = (
+        r'Copyright.*',
+        r'All rights reserved.*',
+        r'登录后.*',
+        r'打开.*?App.*',
+        r'分享到.*',
+    )
+    for pattern in boilerplate_patterns:
+        text = re.sub(pattern, ' ', text, flags=re.I)
+    return clean_text(text)[:5000]
+
+
+def fetch_source_text(url: str, fallback: str) -> tuple[str, str]:
+    try:
+        request = Request(
+            url,
+            headers={
+                'User-Agent': 'Mozilla/5.0 AI-Daily-News-Workflow/1.0',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            },
+        )
+        with urlopen(request, timeout=25) as response:
+            content_type = response.headers.get('Content-Type', '')
+            raw = response.read(1_500_000)
+        if 'html' not in content_type.lower() and b'<html' not in raw[:1000].lower():
+            return fallback, 'fallback'
+        encoding = 'utf-8'
+        match = re.search(r'charset=([\w.-]+)', content_type, flags=re.I)
+        if match:
+            encoding = match.group(1)
+        text = extract_source_text(raw.decode(encoding, errors='replace'))
+        return (text, 'fetched') if len(text) >= 200 else (fallback, 'fallback')
+    except Exception as exc:
+        print(f'WARN source_text_fetch_failed url={url} error={type(exc).__name__}', flush=True)
+        return fallback, 'fallback'
+
+
 def parse_articles(raw_html: str, limit: int = 15) -> list[Article]:
     parser = DailyPageParser()
     parser.feed(raw_html)
@@ -273,6 +333,64 @@ def parse_articles(raw_html: str, limit: int = 15) -> list[Article]:
     if len(articles) < 8:
         raise RuntimeError(f'Only {len(articles)} valid live articles were parsed')
     return articles
+
+
+def enrich_articles_with_source_text(articles: list[Article]) -> list[Article]:
+    enriched: list[Article] = []
+    for article in articles:
+        source_text, source_text_status = fetch_source_text(article.url, article.summary)
+        enriched.append(
+            Article(
+                title=article.title,
+                summary=article.summary,
+                url=article.url,
+                section=article.section,
+                review=article.review,
+                source_text=source_text,
+                source_text_status=source_text_status,
+            )
+        )
+    return enriched
+
+
+def load_recent_titles_for_selection(exclude_date: str) -> dict[str, dict[str, list[dict[str, str]]]]:
+    if not STATE_PATH.exists():
+        return {}
+    try:
+        state = json.loads(STATE_PATH.read_text(encoding='utf-8'))
+    except json.JSONDecodeError:
+        return {}
+    days = state.get('days') if isinstance(state, dict) else {}
+    if not isinstance(days, dict):
+        return {}
+
+    recent: dict[str, dict[str, list[dict[str, str]]]] = {}
+    for day, payload in sorted(days.items(), reverse=True):
+        if day == exclude_date or not isinstance(payload, dict):
+            continue
+        recent[day] = {
+            'candidates': [
+                {
+                    'date': str(item.get('date') or day),
+                    'title': str(item.get('title', '')).strip(),
+                    'summary': str(item.get('summary', '')).strip()[:260],
+                    'url': str(item.get('url', '')).strip(),
+                }
+                for item in payload.get('candidates', [])
+                if isinstance(item, dict) and str(item.get('title', '')).strip()
+            ],
+            'selected': [
+                {
+                    'date': str(item.get('date') or day),
+                    'title': str(item.get('title', '')).strip(),
+                    'summary': str(item.get('summary', '')).strip()[:260],
+                    'url': str(item.get('url', '')).strip(),
+                }
+                for item in payload.get('selected', [])
+                if isinstance(item, dict) and str(item.get('title', '')).strip()
+            ],
+        }
+    return recent
 
 
 def extract_json_object(text: str) -> dict:
@@ -373,28 +491,29 @@ def llm_config() -> tuple[str, list[str]]:
     return endpoint, models
 
 
-def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list[Article], list[dict[str, str]], dict]:
+def call_deepseek(
+    candidate_articles: list[Article],
+    api_key: str,
+    issue_date: str,
+) -> tuple[list[Article], list[dict[str, str]], dict]:
     endpoint, models = llm_config()
     candidates = [
-        {'title': item.title, 'source_summary': item.summary, 'url': item.url, 'suggested_section': item.section}
+        {
+            'title': item.title,
+            'source_summary': item.summary,
+            'url': item.url,
+            'suggested_section': item.section,
+        }
         for item in candidate_articles
     ]
-    system_prompt = (
-        '你是中文AI行业日报主编。只使用输入候选中的事实和URL，不得编造事实、数字、机构、'
-        '模型能力或链接。输出必须是单个合法JSON对象，不要Markdown。'
+    system_prompt = prompt_template_from_file(NEWS_PROMPTS_FILE, 'editorial_system')
+    selection_prompt = render_prompt_from_file(
+        NEWS_PROMPTS_FILE,
+        'selection_user',
+        section_order_json=json.dumps(SECTION_ORDER, ensure_ascii=False),
+        recent_titles_json=json.dumps(load_recent_titles_for_selection(issue_date), ensure_ascii=False),
+        candidates_json=json.dumps(candidates, ensure_ascii=False),
     )
-    selection_prompt = f'''
-从以下候选中选择恰好12条最值得进入AI日报的新闻，按事件去重并分类。
-只输出JSON：{{"selection":[{{"url":"候选中的原始URL","section":"栏目"}}]}}
-规则：
-- URL必须原样复制候选URL，不得创造或修改。
-- section只能是：{json.dumps(SECTION_ORDER, ensure_ascii=False)}。
-- 第一项必须是“🔥 今日焦点”，全文仅允许一个“🔥 今日焦点”。
-- 尽量覆盖产品、行业、研究、开源或工具中的至少4类。
-
-候选：
-{json.dumps(candidates, ensure_ascii=False)}
-'''.strip()
     selection_result, selection_usage, selection_model = request_deepseek_json(
         endpoint=endpoint,
         models=models,
@@ -417,6 +536,10 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
     if selected[0][1] != '🔥 今日焦点' or focus_count != 1:
         raise RuntimeError(f'LLM selection focus validation failed: first={selected[0][1]}, count={focus_count}')
 
+    selected_sections = [section for _, section in selected]
+    selected_sources = enrich_articles_with_source_text([source for source, _ in selected])
+    selected = list(zip(selected_sources, selected_sections))
+
     articles: list[Article] = []
     editorial_calls: list[dict] = []
     for batch_start in range(0, len(selected), 4):
@@ -425,25 +548,18 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
             {
                 'title': source.title,
                 'source_summary': source.summary,
+                'source_text': source.source_text,
+                'source_text_status': source.source_text_status,
                 'url': source.url,
                 'section': section,
             }
             for source, section in batch
         ]
-        batch_prompt = f'''
-编辑以下4条新闻。只输出JSON：
-{{"articles":[{{"title":"...","body":"...","review":"..."}}]}}
-规则：
-- 必须恰好输出4条并严格保持输入顺序。不要输出或改写URL、栏目。
-- title简洁准确，不添加输入中没有的事实。
-- body用中文写120-220字、至少4句，只能使用source_summary中的事实，不得补写泛泛背景。
-- 禁止模板句和空话，例如“这项动态围绕”“值得关注的不是”“后续观察重点”“带来的连锁变化”。
-- review写1-2句明确判断，基于事实，不写“值得关注”“意义重大”等空话。
-- 不得提及聚合源名称。
-
-输入：
-{json.dumps(batch_input, ensure_ascii=False)}
-'''.strip()
+        batch_prompt = render_prompt_from_file(
+            NEWS_PROMPTS_FILE,
+            'editorial_batch_user',
+            batch_input_json=json.dumps(batch_input, ensure_ascii=False),
+        )
         batch_result, batch_usage, batch_model = request_deepseek_json(
             endpoint=endpoint,
             models=models,
@@ -478,68 +594,160 @@ def call_deepseek(candidate_articles: list[Article], api_key: str) -> tuple[list
                 raise RuntimeError(f'LLM editorial item invalid for source URL: {source.url}')
 
     dialogue, podcast_metadata = generate_podcast_dialogue(articles, api_key)
+    podcast_details = podcast_metadata.get('call_details', {})
     metadata = {
         'provider': 'opencode-go',
         'model_chain': models,
         'endpoint': endpoint,
-        'calls': 5,
+        'calls': 1 + len(editorial_calls) + int(podcast_metadata.get('calls', 1)),
         'call_details': {
             'selection': {'model': selection_model, 'usage': selection_usage},
             'editorial_batches': editorial_calls,
-            'podcast': podcast_metadata['call_details']['podcast'],
+            'podcast': podcast_details.get('podcast'),
+            'podcast_review': podcast_details.get('podcast_review'),
+            'podcast_attempts': podcast_details.get('podcast_attempts'),
         },
     }
     return articles, dialogue, metadata
 
 
-def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
-    endpoint, models = llm_config()
-    podcast_prompt = f'''
-基于以下已经校验通过的日报，生成12-18轮自然双人播客对话。
-角色设定：
-- S1是资深AI从业者
-- S2是产品与应用经理
-分别贡献不同视角的分析
+def build_podcast_prompt(articles: list[Article], repair_instruction: str = '') -> str:
+    podcast_prompt = render_prompt(
+        'podcast_generation_user',
+        articles_json=json.dumps([asdict(item) for item in articles], ensure_ascii=False),
+    )
+    if repair_instruction:
+        podcast_prompt += '\n' + render_prompt(
+            'podcast_generation_repair',
+            repair_instruction=repair_instruction,
+        )
+    return podcast_prompt
 
-对话要求：
-- 这必须是一段真实对话，不是两个人轮流念新闻摘要。
-- 围绕最重要的5-7条新闻深入讨论，有反应、补充、分歧和判断。
-- 禁止使用“第一条新闻”“接下来我们聊”等机械报幕；每轮20-90个中文字符。
-- 前2轮必须是自然开场：短开场问候/点题，并抛出今天的主线问题。
-- 只使用输入日报中的事实，不得新增具体事实、数字或机构，不得提及聚合源名称。
 
-输出要求：
-只输出JSON：{{"podcast_dialogue":[{{"speaker":"S1","text":"..."}},{{"speaker":"S2","text":"..."}}]}}
+def parse_podcast_dialogue(podcast_result: dict) -> list[dict[str, str]]:
+    dialogue: list[dict[str, str]] = []
+    for item in podcast_result.get('podcast_dialogue', []):
+        if not isinstance(item, dict):
+            continue
+        speaker = str(item.get('speaker', '')).strip()
+        text = clean_text(str(item.get('text', '')))
+        dialogue.append({'speaker': speaker, 'text': text})
+    return dialogue
 
-日报：
-{json.dumps([asdict(item) for item in articles], ensure_ascii=False)}
-'''.strip()
+
+def generate_podcast_dialogue_once(
+    *,
+    endpoint: str,
+    models: list[str],
+    api_key: str,
+    articles: list[Article],
+    repair_instruction: str = '',
+) -> tuple[list[dict[str, str]], dict, str]:
+    podcast_prompt = build_podcast_prompt(articles, repair_instruction)
     podcast_result, podcast_usage, podcast_model = request_deepseek_json(
         endpoint=endpoint,
         models=models,
         api_key=api_key,
-        system_prompt='你是中文AI播客编剧。只使用输入日报中的事实，输出必须是合法JSON对象。',
+        system_prompt=prompt_template('podcast_generation_system'),
         user_prompt=podcast_prompt,
     )
-    dialogue: list[dict[str, str]] = []
-    for item in podcast_result.get('podcast_dialogue', []):
-        speaker = str(item.get('speaker', '')).strip()
-        text = clean_text(str(item.get('text', '')))
-        if speaker in ('S1', 'S2') and 20 <= len(text) <= 90:
-            dialogue.append({'speaker': speaker, 'text': text})
-    dialogue_issues = validate_podcast_dialogue(dialogue)
-    if dialogue_issues:
-        raise RuntimeError(f'LLM podcast dialogue quality failed: {dialogue_issues}')
-    metadata = {
-        'provider': 'opencode-go',
-        'model_chain': models,
-        'endpoint': endpoint,
-        'calls': 1,
-        'call_details': {
-            'podcast': {'model': podcast_model, 'usage': podcast_usage},
-        },
-    }
-    return dialogue, metadata
+    return parse_podcast_dialogue(podcast_result), podcast_usage, podcast_model
+
+
+def review_podcast_dialogue(
+    *,
+    endpoint: str,
+    models: list[str],
+    api_key: str,
+    articles: list[Article],
+    dialogue: list[dict[str, str]],
+    structure_issues: list[str],
+) -> tuple[dict, dict, str]:
+    review_prompt = render_prompt(
+        'podcast_review_user',
+        structure_issues_json=json.dumps(structure_issues, ensure_ascii=False),
+        articles_json=json.dumps([asdict(item) for item in articles], ensure_ascii=False),
+        dialogue_json=json.dumps(dialogue, ensure_ascii=False),
+    )
+    review, usage, model = request_deepseek_json(
+        endpoint=endpoint,
+        models=models,
+        api_key=api_key,
+        system_prompt=prompt_template('podcast_review_system'),
+        user_prompt=review_prompt,
+    )
+    issues = review.get('issues')
+    if not isinstance(issues, list):
+        issues = [str(issues)] if issues else []
+    return {
+        'pass': review.get('pass') is True,
+        'issues': [str(item) for item in issues],
+        'repair_instruction': str(review.get('repair_instruction') or '').strip(),
+    }, usage, model
+
+
+def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
+    endpoint, models = llm_config()
+    attempts: list[dict] = []
+    repair_instruction = ''
+    final_dialogue: list[dict[str, str]] = []
+
+    for attempt in range(1, 3):
+        dialogue, podcast_usage, podcast_model = generate_podcast_dialogue_once(
+            endpoint=endpoint,
+            models=models,
+            api_key=api_key,
+            articles=articles,
+            repair_instruction=repair_instruction,
+        )
+        final_dialogue = dialogue
+        structure_issues = validate_podcast_dialogue(dialogue)
+        review, review_usage, review_model = review_podcast_dialogue(
+            endpoint=endpoint,
+            models=models,
+            api_key=api_key,
+            articles=articles,
+            dialogue=dialogue,
+            structure_issues=structure_issues,
+        )
+
+        attempts.append({
+            'attempt': attempt,
+            'generation': {'model': podcast_model, 'usage': podcast_usage},
+            'structure_issues': structure_issues,
+            'review': review,
+            'review_model': review_model,
+            'review_usage': review_usage,
+        })
+
+        if not structure_issues and review.get('pass') is True:
+            metadata = {
+                'provider': 'opencode-go',
+                'model_chain': models,
+                'endpoint': endpoint,
+                'calls': sum(1 + (1 if item.get('review') is not None else 0) for item in attempts),
+                'call_details': {
+                    'podcast': {'model': podcast_model, 'usage': podcast_usage},
+                    'podcast_review': {'model': review_model, 'usage': review_usage},
+                    'podcast_attempts': attempts,
+                },
+            }
+            return dialogue, metadata
+
+        repair_parts: list[str] = []
+        if structure_issues:
+            repair_parts.append('结构问题：' + '；'.join(structure_issues))
+        review_instruction = review.get('repair_instruction') or '；'.join(review.get('issues') or [])
+        if review_instruction:
+            repair_parts.append('AI自检意见：' + review_instruction)
+        repair_instruction = '\n'.join(repair_parts)
+        if not repair_instruction:
+            repair_instruction = '对话质量未通过，请增强自然开场、真实互动、分歧和判断，并保持不新增事实。'
+
+    raise RuntimeError(
+        'LLM podcast dialogue quality failed after repair loop: '
+        + json.dumps({'attempts': attempts, 'final_dialogue': final_dialogue}, ensure_ascii=False)
+    )
 
 
 def render_html(issue_date: str, content_date: str, articles: list[Article], output_path: Path) -> None:
@@ -731,7 +939,7 @@ def main() -> int:
     llm_api_key = os.environ.get('OPENCODE_GO_API_KEY', '')
     if not llm_api_key:
         raise RuntimeError('OPENCODE_GO_API_KEY is required; refusing to generate a non-LLM issue')
-    articles, dialogue, llm_metadata = call_deepseek(candidates, llm_api_key)
+    articles, dialogue, llm_metadata = call_deepseek(candidates, llm_api_key, args.date)
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
     data_path = output_dir / f'news-data-{args.date}.json'

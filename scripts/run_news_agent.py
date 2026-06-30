@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import shutil
 import subprocess
 import sys
@@ -35,7 +34,7 @@ MIN_SIZES = {
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Run the DeepAgent-backed AI daily-news material workflow')
+    parser = argparse.ArgumentParser(description='Run the AI daily-news material workflow')
     parser.add_argument('--date', default=date.today().isoformat(), help='YYYY-MM-DD')
     parser.add_argument('--output-dir', default='dist')
     parser.add_argument(
@@ -44,11 +43,6 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument('--check-only', action='store_true', help='Only validate manifest and declared artifacts')
     parser.add_argument('--force-regenerate', action='store_true', help='Ignore an existing ready manifest')
-    parser.add_argument(
-        '--skip-agent-preflight',
-        action='store_true',
-        help='Debug escape hatch: run deterministic pipeline without invoking DeepAgent',
-    )
     return parser.parse_args()
 
 
@@ -104,16 +98,34 @@ def load_recent_titles() -> dict[str, Any]:
 
 
 def summarize_recent_titles() -> str:
-    """Return recent candidate and selected news titles used for seven-day deduplication."""
+    """Return recent candidate and selected news records used for seven-day deduplication."""
     state = load_recent_titles()
     days = state.get('days') if isinstance(state.get('days'), dict) else {}
-    summary: dict[str, dict[str, list[str]]] = {}
+    summary: dict[str, dict[str, list[dict[str, str]]]] = {}
     for day, payload in sorted(days.items(), reverse=True):
         if not isinstance(payload, dict):
             continue
         summary[day] = {
-            'candidates': [str(item.get('title', '')) for item in payload.get('candidates', []) if isinstance(item, dict)],
-            'selected': [str(item.get('title', '')) for item in payload.get('selected', []) if isinstance(item, dict)],
+            'candidates': [
+                {
+                    'date': str(item.get('date') or day),
+                    'title': str(item.get('title', '')),
+                    'summary': str(item.get('summary', ''))[:260],
+                    'url': str(item.get('url', '')),
+                }
+                for item in payload.get('candidates', [])
+                if isinstance(item, dict)
+            ],
+            'selected': [
+                {
+                    'date': str(item.get('date') or day),
+                    'title': str(item.get('title', '')),
+                    'summary': str(item.get('summary', ''))[:260],
+                    'url': str(item.get('url', '')),
+                }
+                for item in payload.get('selected', [])
+                if isinstance(item, dict)
+            ],
         }
     return json.dumps(summary, ensure_ascii=False, indent=2)
 
@@ -137,83 +149,6 @@ def inspect_workspace(issue_date: str, output_dir_name: str) -> str:
         'recent_titles': json.loads(summarize_recent_titles()),
     }
     return json.dumps(payload, ensure_ascii=False, indent=2)
-
-
-def create_news_agent():
-    try:
-        from deepagents import create_deep_agent
-        try:
-            from deepagents.backends import FilesystemBackend
-        except ImportError:
-            from deepagents import FilesystemBackend  # type: ignore
-        from langchain_openai import ChatOpenAI
-    except ImportError as exc:
-        raise RuntimeError(
-            'DeepAgent dependencies are missing. Install with: python -m pip install -r requirements.txt'
-        ) from exc
-
-    api_key = os.environ.get('OPENCODE_GO_API_KEY', '').strip()
-    if not api_key:
-        raise RuntimeError('OPENCODE_GO_API_KEY is required for DeepAgent preflight')
-
-    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', 'https://opencode.ai/zen/go/v1').rstrip('/')
-    models = [
-        item.strip()
-        for item in os.environ.get('OPENCODE_GO_MODELS', 'deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5').split(',')
-        if item.strip()
-    ]
-    model_name = os.environ.get('AI_DAILY_AGENT_MODEL') or (models[0] if models else 'deepseek-v4-flash')
-    model = ChatOpenAI(
-        model=model_name,
-        api_key=api_key,
-        base_url=endpoint,
-        temperature=0,
-    )
-    backend = FilesystemBackend(root_dir=str(REPO_ROOT.resolve()), virtual_mode=False)
-    return create_deep_agent(
-        model=model,
-        tools=[summarize_recent_titles, inspect_workspace],
-        backend=backend,
-        skills=['.'],
-        system_prompt=(
-            'You are the AI Daily News production agent. Use the project skills and tools to prepare a concise '
-            'run plan. Do not send email, upload files, mutate recipient configuration, or write delivery markers.'
-        ),
-    )
-
-
-def run_agent_preflight(issue_date: str, output_dir: Path) -> dict[str, Any]:
-    agent = create_news_agent()
-    prompt = f'''
-Run preflight for the AI Daily News materials job.
-
-Required actions:
-1. Use summarize_recent_titles.
-2. Use inspect_workspace with issue_date="{issue_date}" and output_dir_name="{output_dir.relative_to(REPO_ROOT).as_posix()}".
-3. Read the ai-daily-news and moss-ttsd skills if relevant.
-4. Return a short JSON object with keys: pass, risks, required_next_step.
-
-Important boundaries:
-- You do not send email.
-- You do not upload files.
-- You do not change recipients or SMTP config.
-- The deterministic supervisor will run generation and validation after your preflight.
-'''.strip()
-    result = agent.invoke(
-        {'messages': [{'role': 'user', 'content': prompt}]},
-        config={'configurable': {'thread_id': f'ai-daily-news-{issue_date}'}},
-    )
-    messages = result.get('messages', []) if isinstance(result, dict) else []
-    content = ''
-    if messages:
-        last = messages[-1]
-        content = getattr(last, 'content', '') or (last.get('content', '') if isinstance(last, dict) else '')
-    return {
-        'provider': 'deepagents',
-        'model': os.environ.get('AI_DAILY_AGENT_MODEL')
-        or os.environ.get('OPENCODE_GO_MODELS', 'deepseek-v4-flash').split(',')[0].strip(),
-        'preflight': str(content).strip(),
-    }
 
 
 def run_pipeline(issue_date: str, output_dir: Path) -> None:
@@ -289,7 +224,7 @@ def restore_from_published_site(site_dir: Path, output_dir: Path, issue_date: st
     return True
 
 
-def compact_title_items(path: Path) -> list[dict[str, str]]:
+def compact_title_items(path: Path, issue_date: str) -> list[dict[str, str]]:
     if not path.exists():
         return []
     raw = read_json(path)
@@ -301,8 +236,14 @@ def compact_title_items(path: Path) -> list[dict[str, str]]:
             continue
         title = str(item.get('title', '')).strip()
         url = str(item.get('url', '')).strip()
+        summary = str(item.get('summary') or item.get('body') or '').strip()
         if title:
-            items.append({'title': title, 'url': url})
+            items.append({
+                'date': issue_date,
+                'title': title,
+                'summary': summary[:500],
+                'url': url,
+            })
     return items
 
 
@@ -314,8 +255,8 @@ def update_recent_state(issue_date: str, paths: dict[str, Path]) -> dict[str, in
         days = {}
         state['days'] = days
     days[issue_date] = {
-        'candidates': compact_title_items(paths['candidate_articles']),
-        'selected': compact_title_items(paths['articles']),
+        'candidates': compact_title_items(paths['candidate_articles'], issue_date),
+        'selected': compact_title_items(paths['articles'], issue_date),
     }
 
     cutoff = datetime.strptime(issue_date, '%Y-%m-%d').date() - timedelta(days=window_days - 1)
@@ -454,8 +395,6 @@ def main() -> int:
     paths = artifact_paths(output_dir, args.date)
     agent_metadata: dict[str, Any] | None = None
     try:
-        if not args.skip_agent_preflight:
-            agent_metadata = run_agent_preflight(args.date, output_dir)
         run_pipeline(args.date, output_dir)
         paths = normalize_artifacts(output_dir, args.date)
         issues = validate_artifacts(paths)

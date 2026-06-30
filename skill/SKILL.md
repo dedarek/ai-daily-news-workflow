@@ -25,9 +25,11 @@ When this skill is activated, read these files in order:
 
 1. `references/news-agent-rules.md`
 2. `references/output-schema.md`
-3. `references/delivery-rules.md`
-4. `../moss-ttsd/SKILL.md`
-5. `../moss-ttsd/references/voice-config.json`
+3. `references/news-prompts.md`
+4. `references/podcast-prompts.md`
+5. `references/delivery-rules.md`
+6. `../moss-ttsd/SKILL.md`
+7. `../moss-ttsd/references/voice-config.json`
 
 Do not scan historical logs unless a human explicitly asks for debugging a
 specific historical date.

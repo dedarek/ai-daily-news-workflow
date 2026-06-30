@@ -9,10 +9,12 @@ from datetime import datetime
 from pathlib import Path
 from urllib.request import Request, urlopen
 
+from prompt_loader import prompt_template, render_prompt
 from run_live_pipeline import request_deepseek_json
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = REPO_ROOT / 'skill'
+NEWS_PROMPTS_FILE = SKILL_DIR / 'references' / 'news-prompts.md'
 
 
 def get_bytes(url: str) -> bytes:
@@ -131,44 +133,18 @@ def main() -> int:
         ).split(',')
         if item.strip()
     ]
-    review_prompt = f'''
-你是AI行业日报的终审编辑。请独立检查以下成品，输出JSON：
-{{
-  "pass": true,
-  "score": 0到100的整数,
-  "summary": "一句话结论",
-  "issues": ["问题"],
-  "checks": {{
-    "factual_consistency": "pass或fail",
-    "duplication": "pass或fail",
-    "readability": "pass或fail",
-    "editorial_quality": "pass或fail",
-    "podcast_quality": "pass或fail"
-  }}
-}}
-
-判定标准：
-- 标题、正文和锐评之间不得明显矛盾。
-- 不得有明显重复事件或重复观点。
-- 正文应清楚、具体、可读，不得充斥模板化空话。
-- 锐评必须与对应新闻相关。
-- 播客应为自然双人对话，不得机械报幕。
-- 如果没有严重问题，pass=true；轻微措辞问题可列入issues但不必判失败。
-
-确定性检查结果：
-{json.dumps(deterministic_issues, ensure_ascii=False)}
-
-新闻：
-{json.dumps(articles, ensure_ascii=False)}
-
-播客口播稿：
-{json.dumps(podcast_script, ensure_ascii=False)}
-'''.strip()
+    review_prompt = render_prompt(
+        NEWS_PROMPTS_FILE,
+        'afternoon_review_user',
+        deterministic_issues_json=json.dumps(deterministic_issues, ensure_ascii=False),
+        articles_json=json.dumps(articles, ensure_ascii=False),
+        podcast_script_json=json.dumps(podcast_script, ensure_ascii=False),
+    )
     review, usage, model = request_deepseek_json(
         endpoint=endpoint,
         models=models,
         api_key=api_key,
-        system_prompt='你是严格但务实的中文AI日报终审编辑，只输出合法JSON。',
+        system_prompt=prompt_template(NEWS_PROMPTS_FILE, 'afternoon_review_system'),
         user_prompt=review_prompt,
     )
     score = int(review.get('score', 0))

@@ -16,11 +16,11 @@ The issue must include:
 
 - Prefer current, concrete AI product, research, open-source, policy, and industry news.
 - Keep the selection event-based. Do not include multiple articles about the same event.
-- Read only titles and URLs from `state/recent-news.json` for the last seven days.
+- Read only date, title, summary, and URL from `state/recent-news.json` for the last seven days.
 - Use the recent state as an advisory dedupe signal, not a hard global block.
-- If two titles look similar, compare event identity before dropping either.
+- If two records look similar, compare event identity from title and summary before dropping either.
 - Similar but materially different events must not be dropped.
-- Candidate and selected titles must be written back through the supervisor state update.
+- Candidate and selected date/title/summary/URL records must be written back through the supervisor state update.
 
 ## Article Rules
 
