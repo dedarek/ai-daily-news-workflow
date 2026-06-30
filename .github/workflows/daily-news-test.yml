@@ -8,6 +8,11 @@ on:
         required: true
         type: boolean
         default: true
+      force_regenerate:
+        description: "Force regenerate today's materials even if gh-pages already has a ready issue"
+        required: true
+        type: boolean
+        default: true
   schedule:
     - cron: "30 1 * * *"
     - cron: "40 1 * * *"
@@ -84,10 +89,15 @@ jobs:
           MOSS_TTS_S1_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S1_REFERENCE_TEXT || vars.MOSS_TTS_S1_REFERENCE_TEXT }}
           MOSS_TTS_S2_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S2_REFERENCE_TEXT || vars.MOSS_TTS_S2_REFERENCE_TEXT }}
         run: |
+          FORCE_ARGS=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_regenerate }}" = "true" ]; then
+            FORCE_ARGS="--force-regenerate"
+          fi
           python3 scripts/run_news_agent.py \
             --date "${{ steps.issue.outputs.date }}" \
             --output-dir dist \
-            --published-site-dir published-site
+            --published-site-dir published-site \
+            $FORCE_ARGS
 
       - name: Run complete quality gate
         if: ${{ steps.delivery.outputs.skip != 'true' }}

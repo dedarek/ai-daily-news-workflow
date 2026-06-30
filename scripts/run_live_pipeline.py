@@ -491,11 +491,37 @@ def llm_config() -> tuple[str, list[str]]:
     return endpoint, models
 
 
+def generate_digest_summary(
+    *,
+    endpoint: str,
+    models: list[str],
+    api_key: str,
+    system_prompt: str,
+    articles: list[Article],
+) -> tuple[str, dict, str]:
+    prompt = render_prompt_from_file(
+        NEWS_PROMPTS_FILE,
+        'digest_summary_user',
+        articles_json=json.dumps([asdict(item) for item in articles], ensure_ascii=False),
+    )
+    result, usage, model = request_deepseek_json(
+        endpoint=endpoint,
+        models=models,
+        api_key=api_key,
+        system_prompt=system_prompt,
+        user_prompt=prompt,
+    )
+    summary = clean_text(str(result.get('summary', '')))
+    if not 30 <= len(summary) <= 140:
+        summary = '今天的AI动态集中在模型能力、产品落地与开源生态的持续演进，企业应用和开发者工具仍是主要竞争焦点。'
+    return summary, usage, model
+
+
 def call_deepseek(
     candidate_articles: list[Article],
     api_key: str,
     issue_date: str,
-) -> tuple[list[Article], list[dict[str, str]], dict]:
+) -> tuple[list[Article], list[dict[str, str]], str, dict]:
     endpoint, models = llm_config()
     candidates = [
         {
@@ -593,22 +619,30 @@ def call_deepseek(
             else:
                 raise RuntimeError(f'LLM editorial item invalid for source URL: {source.url}')
 
+    digest_summary, digest_usage, digest_model = generate_digest_summary(
+        endpoint=endpoint,
+        models=models,
+        api_key=api_key,
+        system_prompt=system_prompt,
+        articles=articles,
+    )
     dialogue, podcast_metadata = generate_podcast_dialogue(articles, api_key)
     podcast_details = podcast_metadata.get('call_details', {})
     metadata = {
         'provider': 'opencode-go',
         'model_chain': models,
         'endpoint': endpoint,
-        'calls': 1 + len(editorial_calls) + int(podcast_metadata.get('calls', 1)),
+        'calls': 2 + len(editorial_calls) + int(podcast_metadata.get('calls', 1)),
         'call_details': {
             'selection': {'model': selection_model, 'usage': selection_usage},
             'editorial_batches': editorial_calls,
+            'digest_summary': {'model': digest_model, 'usage': digest_usage},
             'podcast': podcast_details.get('podcast'),
             'podcast_review': podcast_details.get('podcast_review'),
             'podcast_attempts': podcast_details.get('podcast_attempts'),
         },
     }
-    return articles, dialogue, metadata
+    return articles, dialogue, digest_summary, metadata
 
 
 def build_podcast_prompt(articles: list[Article], repair_instruction: str = '') -> str:
@@ -750,11 +784,16 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
     )
 
 
-def render_html(issue_date: str, content_date: str, articles: list[Article], output_path: Path) -> None:
+def render_html(
+    issue_date: str,
+    content_date: str,
+    articles: list[Article],
+    output_path: Path,
+    digest_summary: str,
+) -> None:
     dt = datetime.strptime(issue_date, '%Y-%m-%d')
     weekdays = '一二三四五六日'
     display_date = f'{dt.year}年{dt.month}月{dt.day}日 星期{weekdays[dt.weekday()]}'
-    summary_titles = '；'.join(article.title for article in articles[:5])
     grouped = {section: [] for section in SECTION_ORDER}
     for article in articles:
         grouped.setdefault(article.section, []).append(article)
@@ -793,7 +832,7 @@ def render_html(issue_date: str, content_date: str, articles: list[Article], out
         f'<div class="date">{display_date}</div>',
         '</div>',
         '<div class="summary-wrap">',
-        f'<div class="summary">今日关注：{html.escape(summary_titles)}。本期从产品、行业、研究与工具等方向筛选值得跟进的动态。</div>',
+        f'<div class="summary">今日关注：{html.escape(digest_summary)}</div>',
         '</div>',
     ]
     for section in SECTION_ORDER:
@@ -939,7 +978,7 @@ def main() -> int:
     llm_api_key = os.environ.get('OPENCODE_GO_API_KEY', '')
     if not llm_api_key:
         raise RuntimeError('OPENCODE_GO_API_KEY is required; refusing to generate a non-LLM issue')
-    articles, dialogue, llm_metadata = call_deepseek(candidates, llm_api_key, args.date)
+    articles, dialogue, digest_summary, llm_metadata = call_deepseek(candidates, llm_api_key, args.date)
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
     data_path = output_dir / f'news-data-{args.date}.json'
@@ -947,7 +986,7 @@ def main() -> int:
     podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
     podcast_script_text_path = output_dir / f'podcast-script-{args.date}.txt'
     moss_input_path = output_dir / f'podcast-moss-input-{args.date}.txt'
-    render_html(args.date, content_date, articles, html_path)
+    render_html(args.date, content_date, articles, html_path, digest_summary)
     candidate_data_path.write_text(
         json.dumps([asdict(a) for a in candidates], ensure_ascii=False, indent=2),
         encoding='utf-8',
@@ -997,6 +1036,7 @@ def main() -> int:
         'candidate_count': len(candidates),
         'candidate_data_file': candidate_data_path.name,
         'llm': llm_metadata,
+        'digest_summary': digest_summary,
         'podcast_turns': len(dialogue),
         'podcast_script_file': podcast_script_path.name,
         'podcast_script_text_file': podcast_script_text_path.name,

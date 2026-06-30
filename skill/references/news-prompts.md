@@ -52,6 +52,23 @@ Edit text between markers. Keep placeholder names unchanged.
 {batch_input_json}
 <!-- prompt:editorial_batch_user:end -->
 
+## Digest Summary User Prompt
+
+<!-- prompt:digest_summary_user:start -->
+基于以下已定稿的AI日报，写一段“今日关注”导语。
+
+输出要求：
+- 只输出JSON：{"summary":"..."}
+- summary用中文写1句话，60-110字。
+- 不要简单罗列标题。
+- 要概括今天新闻之间的主线，例如产品竞争、模型能力、企业落地、开源生态、监管或研究趋势。
+- 只能使用输入新闻中的事实，不得新增事实。
+- 不要使用“值得关注”“意义重大”“本期从产品、行业、研究与工具”等套话。
+
+新闻：
+{articles_json}
+<!-- prompt:digest_summary_user:end -->
+
 ## Afternoon Review System Prompt
 
 <!-- prompt:afternoon_review_system:start -->
