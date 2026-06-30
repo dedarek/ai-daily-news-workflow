@@ -14,8 +14,8 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: "30 4 * * *"
-    - cron: "40 4 * * *"
+    - cron: "30 6 * * *"
+    - cron: "40 6 * * *"
 
 concurrency:
   group: ai-daily-news-afternoon
