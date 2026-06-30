@@ -31,7 +31,7 @@ SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
-DEFAULT_MOSS_TTS_SPEED = 1.08
+DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
 MOSS_REFERENCE_VOICES = {
     'S1': {

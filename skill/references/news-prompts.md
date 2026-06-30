@@ -60,8 +60,9 @@ Edit text between markers. Keep placeholder names unchanged.
 输出要求：
 - 只输出JSON：{"summary":"..."}
 - summary用中文总结，60-110字。
-- 不要简单罗列标题。
+- 不要罗列标题。
 - 要概括今天新闻之间的主线。
+- 有一定的见解与总结。
 - 只能使用输入新闻中的事实，不得新增、捏造。
 - 不要使用空话和套话。
 
