@@ -27,7 +27,7 @@ permissions:
 jobs:
   review-and-send:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     env:
       TZ: Asia/Shanghai
       CONTENT_BASE_URL: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow
@@ -59,6 +59,34 @@ jobs:
           fi
           echo "skip=$SENT" >> "$GITHUB_OUTPUT"
           echo "Afternoon already sent: $SENT"
+
+      - name: Wait for published morning issue
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
+        run: |
+          ISSUE_URL="$CONTENT_BASE_URL/api/issues/${{ steps.issue.outputs.date }}/manifest.json"
+          for attempt in $(seq 1 18); do
+            STATUS=$(curl -L -s -o /tmp/morning-manifest.json -w "%{http_code}" "$ISSUE_URL")
+            if [ "$STATUS" = "200" ]; then
+              if python3 - <<'PY'
+import json
+from pathlib import Path
+manifest = json.loads(Path('/tmp/morning-manifest.json').read_text(encoding='utf-8'))
+if manifest.get('status') != 'ready':
+    raise SystemExit(f"manifest status is {manifest.get('status')}, expected ready")
+published = manifest.get('published_artifacts')
+if not isinstance(published, dict) or not published.get('html') or not published.get('audio'):
+    raise SystemExit('manifest missing published html/audio artifacts')
+PY
+              then
+                echo "Morning issue is published: $ISSUE_URL"
+                exit 0
+              fi
+            fi
+            echo "Morning issue not published yet: status=$STATUS attempt=$attempt/18"
+            sleep 300
+          done
+          echo "::error::Morning issue was not published after waiting 90 minutes: $ISSUE_URL"
+          exit 1
 
       - name: Set up Python
         if: ${{ steps.delivery.outputs.skip != 'true' }}
