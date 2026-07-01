@@ -247,6 +247,27 @@ def compact_title_items(path: Path, issue_date: str) -> list[dict[str, str]]:
     return items
 
 
+def restore_memory_from_site(site_dir: Path) -> bool:
+    """生成前把 gh-pages 上累积的记忆恢复到本地 STATE_PATH，
+    这样 run_live_pipeline 子进程选题时才能读到真实的最近若干天历史。"""
+    src = site_dir / 'state' / 'recent-news.json'
+    if not src.exists():
+        return False
+    STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, STATE_PATH)
+    return True
+
+
+def sync_memory_to_site(site_dir: Path) -> None:
+    """生成并更新记忆后，把本地 STATE_PATH 写回 gh-pages checkout，
+    让 workflow 的 publish 步骤（git add .）把更新后的记忆提交到 gh-pages 持久化。"""
+    if not STATE_PATH.exists():
+        return
+    dst = site_dir / 'state' / 'recent-news.json'
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(STATE_PATH, dst)
+
+
 def update_recent_state(issue_date: str, paths: dict[str, Path]) -> dict[str, int]:
     state = load_recent_titles()
     window_days = int(state.get('window_days') or 7)
@@ -395,10 +416,18 @@ def main() -> int:
     paths = artifact_paths(output_dir, args.date)
     agent_metadata: dict[str, Any] | None = None
     try:
+        if published_site_dir:
+            restored = restore_memory_from_site(published_site_dir)
+            print(json.dumps(
+                {'memory_restore': 'ok' if restored else 'no_prior_memory'},
+                ensure_ascii=False,
+            ))
         run_pipeline(args.date, output_dir)
         paths = normalize_artifacts(output_dir, args.date)
         issues = validate_artifacts(paths)
         memory_update = update_recent_state(args.date, paths)
+        if published_site_dir:
+            sync_memory_to_site(published_site_dir)
         status = 'ready' if not issues else 'failed'
         manifest = write_manifest(
             output_dir=output_dir,

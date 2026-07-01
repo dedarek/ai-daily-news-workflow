@@ -47,15 +47,23 @@ The issue must include:
 
 ## Repair and Retry
 
-Automatic repair is allowed only for deterministic or structural failures:
+Podcast dialogue quality is judged by the **LLM Harness** (the review step), not by mechanical code rules.
+
+The repair loop follows Deep Agent Loop principles (带记忆的持续优化，而非机械重试):
+
+1. **Generate** — Deep Agent produces the dialogue.
+2. **Harness** — LLM reviewer evaluates quality holistically: natural opening, real discussion depth, turn count, turn length, use of facts, interaction between speakers.
+3. **Repair with accumulated trajectory** — If Harness says `pass: false`, the *entire history* of past attempts and their issues is fed back into the next generation call. The agent iterates with memory and must not repeat earlier mistakes, rather than reacting to a single isolated instruction.
+4. **Keep the best** — The loop always tracks the *best* attempt so far (fewest structural + review issues), not just the latest one.
+5. **Converge, don't spin** — The attempt budget (currently 5) is only a guardrail. The loop stops early when it stalls (no improvement across two consecutive rounds); it is not a fixed mechanical count.
+6. **Honest fallback** — If no attempt passes the Harness, the loop returns the *best* attempt (not the last) and marks `harness.final_pass = false`, `harness.loop_exhausted = true` in the manifest metadata (`llm.call_details.podcast_harness`) so downstream review and humans can see it. The pipeline does not crash and does not pretend success.
+
+Code-level hard blocks are reserved only for truly broken output:
 
 - Invalid JSON.
-- Missing required fields.
-- Missing artifacts.
-- Speaker alternation failure.
-- Too few selected articles.
-- Body text too short.
-- Podcast turn count outside the allowed range.
+- Empty dialogue.
+- Wrong speaker field values.
+- Missing required artifacts.
 - MP3 size outside the allowed range.
 - Manifest schema invalid.
 
@@ -65,5 +73,3 @@ Do not auto-repair factual conflicts. Mark the run as `needs_human_review` if:
 - The Agent cannot determine whether similar news items are the same event.
 - A major claim lacks enough support.
 - The review finds factual consistency failure.
-
-Maximum automatic repair attempts: `2`.

@@ -50,7 +50,7 @@ Edit the text between markers. Keep placeholder names unchanged.
 ## Review User Prompt
 
 <!-- prompt:podcast_review_user:start -->
-你是AI日报播客的终审编辑。请检查下面的双人对话，只输出JSON：
+你是AI日报播客的终审编辑（Harness）。请检查下面的双人对话，只输出JSON：
 {"pass": true, "issues": [], "repair_instruction": ""}
 
 检查重点：
@@ -59,7 +59,12 @@ Edit the text between markers. Keep placeholder names unchanged.
 - 是否围绕5-7条重要新闻展开，并有足够解释和信息量。
 - 是否有承接、追问、补充、分歧和判断。
 - 是否只使用日报事实，没有新增具体事实、数字或机构。
-- 结构问题是否已经解决。
+- 轮次是否足够（建议20-28轮）；若少于10轮，视为严重不足，必须判不通过。
+- 每轮发言是否适合口播（建议35-110字）；若有多轮超过160字或少于10字，视为问题。
+- 结构问题是否已经解决（见下方结构检查结果）。
+
+如果没有严重问题，pass=true，轻微问题列入issues即可。
+repair_instruction必须针对本次具体问题给出可操作的修改建议，不得笼统。
 
 结构检查结果：
 {structure_issues_json}

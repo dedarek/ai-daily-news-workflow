@@ -160,49 +160,20 @@ def clean_text(text: str) -> str:
 
 
 def validate_podcast_dialogue(dialogue: list[dict[str, str]]) -> list[str]:
+    """仅检测真正损坏的结构（空列表、说话人字段错误、空文本），
+    不对轮数、字数、用词做硬性限制——由 LLM review 动态判断内容质量。"""
     issues: list[str] = []
-    if not 10 <= len(dialogue) <= 22:
-        issues.append(f'podcast_turns={len(dialogue)} outside accepted 10-22')
+    if not dialogue:
+        issues.append('podcast_turns=0 dialogue is empty')
+        return issues
 
     for index, turn in enumerate(dialogue):
         speaker = turn.get('speaker')
         text = clean_text(str(turn.get('text', '')))
         if speaker not in ('S1', 'S2'):
-            issues.append(f'turn {index + 1} invalid speaker={speaker}')
-            continue
-        if not text:
+            issues.append(f'turn {index + 1} invalid speaker={speaker!r}')
+        elif not text:
             issues.append(f'turn {index + 1} empty text')
-            continue
-        if not 10 <= len(text) <= 130:
-            issues.append(f'turn {index + 1} text length={len(text)} outside accepted 10-130')
-        expected = 'S1' if index % 2 == 0 else 'S2'
-        if speaker != expected:
-            issues.append(f'turn {index + 1} speaker={speaker} expected {expected}')
-
-    texts = [turn.get('text', '') for turn in dialogue]
-    if texts:
-        stiff_first_turns = sum(
-            1
-            for text in texts[:2]
-            if re.match(r'^[\u4e00-\u9fa5A-Za-z0-9]+(发布|公布|推出|宣布|曝出|即将|将于|通过|采用|认为)', text)
-        )
-        if stiff_first_turns:
-            issues.append('podcast starts directly with news facts instead of an opening')
-
-    banned_phrases = (
-        '第一条新闻',
-        '第二条新闻',
-        '第三条新闻',
-        '接下来我们聊',
-        '我们再看',
-        '下面来看',
-        '值得关注的是',
-        '这项动态围绕',
-        '后续观察重点',
-    )
-    banned_hits = [phrase for phrase in banned_phrases if any(phrase in text for text in texts)]
-    if banned_hits:
-        issues.append(f'banned broadcast phrases: {banned_hits}')
 
     return issues
 
@@ -641,6 +612,7 @@ def call_deepseek(
             'podcast': podcast_details.get('podcast'),
             'podcast_review': podcast_details.get('podcast_review'),
             'podcast_attempts': podcast_details.get('podcast_attempts'),
+            'podcast_harness': podcast_metadata.get('harness'),
         },
     }
     return articles, dialogue, digest_summary, metadata
@@ -721,13 +693,70 @@ def review_podcast_dialogue(
     }, usage, model
 
 
-def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
-    endpoint, models = llm_config()
-    attempts: list[dict] = []
-    repair_instruction = ''
-    final_dialogue: list[dict[str, str]] = []
+def build_cumulative_repair_instruction(trajectory: list[dict]) -> str:
+    """把历次审查反馈汇总成累积修复指令，让 agent 带着完整轨迹持续优化，
+    而不是每轮孤立地只看上一条指令。"""
+    if not trajectory:
+        return ''
+    lines = [
+        f'这是第 {len(trajectory) + 1} 次生成。前几次的终审反馈如下，'
+        '请这一次一并解决所有历史问题，不要重复同样的错误：'
+    ]
+    for record in trajectory:
+        parts: list[str] = []
+        if record.get('structure_issues'):
+            parts.append('结构损坏：' + '；'.join(record['structure_issues']))
+        if record.get('review_issues'):
+            parts.append('质量问题：' + '；'.join(record['review_issues']))
+        detail = '；'.join(parts) if parts else '（未记录具体问题）'
+        lines.append(f'- 第{record["attempt"]}次：{detail}')
+    latest = trajectory[-1].get('repair_instruction')
+    if latest:
+        lines.append('最近一次审查给出的具体修复建议：' + latest)
+    lines.append('请在不新增任何事实的前提下，产出一版真正自然、有讨论深度、能通过终审的双人对话。')
+    return '\n'.join(lines)
 
-    for attempt in range(1, 3):
+
+def _podcast_metadata(models: list[str], endpoint: str, attempts: list[dict], best: dict, harness: dict) -> dict:
+    return {
+        'provider': 'opencode-go',
+        'model_chain': models,
+        'endpoint': endpoint,
+        'calls': len(attempts) * 2,
+        'call_details': {
+            'podcast': {'model': best['podcast_model'], 'usage': best['podcast_usage']},
+            'podcast_review': {'model': best['review_model'], 'usage': best['review_usage']},
+            'podcast_attempts': attempts,
+        },
+        'harness': harness,
+    }
+
+
+def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
+    """
+    生成 & 审核播客对话的 Deep Agent Loop 实现。
+
+    Loop 理念（区别于机械重试）：
+      - 生成（Deep Agent）→ LLM Harness 终审 → 不达标则把【完整历史轨迹】丢回 agent 继续优化
+      - agent 带记忆地迭代：每轮都能看到自己历次被指出的问题，而非孤立重来
+      - 始终保留【历史最优】的一版（而不是最后一版）
+      - 预算上限只是护栏；到顶或连续无改善（停滞）才收敛，收敛时返回历史最优并明确标注未通过
+      - 真正损坏（空对话/说话人字段错）视为不通过，必须修；内容质量交给 LLM Harness 判断
+    """
+    endpoint, models = llm_config()
+    max_attempts = 5
+    attempts: list[dict] = []
+    trajectory: list[dict] = []
+    best: dict | None = None
+    prev_score: int | None = None
+    stall = 0
+
+    def score_of(structure_issues: list[str], review: dict) -> int:
+        # 结构损坏权重远高于内容问题，确保"真损坏"优先被修掉
+        return len(structure_issues) * 100 + len(review.get('issues') or [])
+
+    for attempt in range(1, max_attempts + 1):
+        repair_instruction = build_cumulative_repair_instruction(trajectory)
         dialogue, podcast_usage, podcast_model = generate_podcast_dialogue_once(
             endpoint=endpoint,
             models=models,
@@ -735,7 +764,6 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             articles=articles,
             repair_instruction=repair_instruction,
         )
-        final_dialogue = dialogue
         structure_issues = validate_podcast_dialogue(dialogue)
         review, review_usage, review_model = review_podcast_dialogue(
             endpoint=endpoint,
@@ -755,34 +783,74 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             'review_usage': review_usage,
         })
 
-        if not structure_issues and review.get('pass') is True:
-            metadata = {
-                'provider': 'opencode-go',
-                'model_chain': models,
-                'endpoint': endpoint,
-                'calls': sum(1 + (1 if item.get('review') is not None else 0) for item in attempts),
-                'call_details': {
-                    'podcast': {'model': podcast_model, 'usage': podcast_usage},
-                    'podcast_review': {'model': review_model, 'usage': review_usage},
-                    'podcast_attempts': attempts,
-                },
+        score = score_of(structure_issues, review)
+        candidate = {
+            'score': score,
+            'attempt': attempt,
+            'dialogue': dialogue,
+            'review': review,
+            'structure_issues': structure_issues,
+            'podcast_model': podcast_model,
+            'podcast_usage': podcast_usage,
+            'review_model': review_model,
+            'review_usage': review_usage,
+        }
+        if best is None or score < best['score']:
+            best = candidate
+
+        # 通过门禁：LLM Harness 认可，且没有真正的结构损坏
+        review_pass = review.get('pass') is True and not structure_issues
+        if review_pass:
+            harness = {
+                'attempts': attempt,
+                'best_attempt': attempt,
+                'final_pass': True,
+                'final_issues': review.get('issues') or [],
+                'structure_issues': structure_issues,
+                'loop_exhausted': False,
+                'converged': False,
             }
-            return dialogue, metadata
+            return dialogue, _podcast_metadata(models, endpoint, attempts, candidate, harness)
 
-        repair_parts: list[str] = []
-        if structure_issues:
-            repair_parts.append('结构问题：' + '；'.join(structure_issues))
-        review_instruction = review.get('repair_instruction') or '；'.join(review.get('issues') or [])
-        if review_instruction:
-            repair_parts.append('AI自检意见：' + review_instruction)
-        repair_instruction = '\n'.join(repair_parts)
-        if not repair_instruction:
-            repair_instruction = '对话质量未通过，请增强自然开场、真实互动、分歧和判断，并保持不新增事实。'
+        # 把本轮问题并入累积轨迹，供下一轮 agent 带记忆优化
+        trajectory.append({
+            'attempt': attempt,
+            'structure_issues': structure_issues,
+            'review_issues': review.get('issues') or [],
+            'repair_instruction': review.get('repair_instruction') or '',
+        })
 
-    raise RuntimeError(
-        'LLM podcast dialogue quality failed after repair loop: '
-        + json.dumps({'attempts': attempts, 'final_dialogue': final_dialogue}, ensure_ascii=False)
+        # 停滞检测：连续两轮没有任何改善，说明模型卡住，提前收敛到历史最优
+        if prev_score is not None and score >= prev_score:
+            stall += 1
+        else:
+            stall = 0
+        prev_score = score
+        if stall >= 2:
+            print(
+                f'warning: podcast loop converged at attempt {attempt} without pass '
+                f'(no improvement in {stall} rounds); returning best attempt #{best["attempt"]}',
+                flush=True,
+            )
+            break
+
+    # 预算耗尽或停滞收敛：返回历史最优（而非最后一次），并明确标注未通过
+    assert best is not None
+    harness = {
+        'attempts': len(attempts),
+        'best_attempt': best['attempt'],
+        'final_pass': False,
+        'final_issues': best['review'].get('issues') or [],
+        'structure_issues': best['structure_issues'],
+        'loop_exhausted': True,
+        'converged': stall >= 2,
+    }
+    print(
+        f'warning: podcast dialogue loop did not pass after {len(attempts)} attempts; '
+        f'returning best attempt #{best["attempt"]} (score={best["score"]}) for downstream review',
+        flush=True,
     )
+    return best['dialogue'], _podcast_metadata(models, endpoint, attempts, best, harness)
 
 
 def render_html(

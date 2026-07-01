@@ -113,8 +113,8 @@ def main() -> int:
     if short_bodies:
         deterministic_issues.append(f'short article bodies: {short_bodies}')
     dialogue = podcast_script.get('dialogue') or []
-    if len(dialogue) < 12:
-        deterministic_issues.append(f'podcast_turns={len(dialogue)} < 12')
+    if not dialogue:
+        deterministic_issues.append('podcast dialogue is empty')
     if len(html_bytes) < 10 * 1024:
         deterministic_issues.append(f'html_bytes={len(html_bytes)} < 10240')
     if not 1_000_000 <= len(audio_bytes) <= 8 * 1024 * 1024:
