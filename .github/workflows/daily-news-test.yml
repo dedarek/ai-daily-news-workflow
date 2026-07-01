@@ -16,6 +16,8 @@ on:
   schedule:
     - cron: "30 3 * * *"
     - cron: "40 3 * * *"
+    - cron: "45 4 * * *"
+    - cron: "55 4 * * *"
 
 concurrency:
   group: ai-daily-news-morning
