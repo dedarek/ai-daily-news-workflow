@@ -41,7 +41,7 @@ The issue must include:
 - Use 20-28 turns.
 - Speakers must alternate strictly: `S1`, `S2`, `S1`, `S2`, ...
 - Each turn should be 35-110 Chinese characters.
-- The first two turns must be a natural opening: S1 greets or frames the day, S2 responds and raises the main question.
+- The first two turns must be a natural opening: S1 frames the day by opening on the most important topic or an overall read, S2 responds and raises the main question. A fixed greeting line ("哈喽，大家好，欢迎收听今天的AI日报。") is prepended automatically by the pipeline (`apply_tts_warmup`) to absorb MOSS-TTSD cold-start degradation, so S1 must not write its own "大家好/欢迎收听" greeting.
 - The conversation must not start directly with `company + announced/released/launched`.
 - The conversation must include questions, pushback, transitions, and cross-topic links.
 - Avoid stiff phrases such as `第一条新闻`, `第二条新闻`, `接下来我们聊`, `下面来看`.

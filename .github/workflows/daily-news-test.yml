@@ -14,10 +14,9 @@ on:
         type: boolean
         default: true
   schedule:
-    - cron: "30 3 * * *"
-    - cron: "40 3 * * *"
-    - cron: "45 4 * * *"
-    - cron: "55 4 * * *"
+    # 北京时间(UTC+8);两个 fallback + delivery_marker 幂等,补偿 GitHub 定时延迟,只发一次
+    - cron: "50 2 * * *"  # 10:50 北京
+    - cron: "30 3 * * *"  # 11:30 北京
 
 concurrency:
   group: ai-daily-news-morning

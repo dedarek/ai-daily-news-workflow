@@ -33,6 +33,10 @@ SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', 
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
+# MOSS-TTSD 是自回归声学模型，开头几个 token 的韵律/音色上下文尚未稳定（冷启动），
+# 会导致正文前几个词发音质量差。固定一句无信息量的问候作为 warm-up 前导，把冷启动
+# 劣化吸收到这句固定问候上，让正文第一句不再受损。设为空字符串可禁用。
+DEFAULT_TTS_WARMUP_TEXT = '哈喽，大家好，欢迎收听今天的AI日报。'
 MOSS_REFERENCE_VOICES = {
     'S1': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
@@ -976,6 +980,31 @@ def moss_dialogue_input(dialogue: list[dict[str, str]]) -> str:
     return ''.join(f'[{turn["speaker"]}]{turn["text"]}' for turn in dialogue)
 
 
+def tts_warmup_text() -> str:
+    return os.environ.get('MOSS_TTS_WARMUP_TEXT', DEFAULT_TTS_WARMUP_TEXT).strip()
+
+
+def apply_tts_warmup(dialogue: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Prepend a fixed greeting so MOSS-TTSD cold-start degradation lands on a
+    throwaway line instead of the first real sentence.
+
+    - Idempotent: skips if the first turn already starts with the warmup text.
+    - Merges into the first S1 turn when possible (keeps turn count and the
+      S1/S2 alternation intact); otherwise inserts a standalone S1 turn.
+    """
+    warmup = tts_warmup_text()
+    if not warmup or not dialogue:
+        return dialogue
+    first = dialogue[0]
+    if first.get('text', '').startswith(warmup):
+        return dialogue
+    if first.get('speaker') == 'S1':
+        merged = dict(first)
+        merged['text'] = f'{warmup}{first.get("text", "")}'
+        return [merged, *dialogue[1:]]
+    return [{'speaker': 'S1', 'text': warmup}, *dialogue]
+
+
 def moss_tts_speed() -> float:
     raw = os.environ.get('MOSS_TTS_SPEED', str(DEFAULT_MOSS_TTS_SPEED))
     try:
@@ -1112,6 +1141,7 @@ def main() -> int:
     podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
     podcast_script_text_path = output_dir / f'podcast-script-{args.date}.txt'
     moss_input_path = output_dir / f'podcast-moss-input-{args.date}.txt'
+    dialogue = apply_tts_warmup(dialogue)
     render_html(args.date, content_date, articles, html_path, digest_summary)
     candidate_data_path.write_text(
         json.dumps([asdict(a) for a in candidates], ensure_ascii=False, indent=2),
