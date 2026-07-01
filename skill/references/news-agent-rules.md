@@ -21,6 +21,7 @@ The issue must include:
 - If two records look similar, compare event identity from title and summary before dropping either.
 - Similar but materially different events must not be dropped.
 - Candidate and selected date/title/summary/URL records must be written back through the supervisor state update.
+- Memory is persisted across days on the `gh-pages` branch. Before generation the supervisor restores `state/recent-news.json` from the published site (`restore_memory_from_site`); after updating it, the supervisor writes it back to the published site (`sync_memory_to_site`) so the publish step commits it. This closed loop is what makes the seven-day dedupe actually effective — without it the memory would stay empty every run.
 
 ## Article Rules
 
