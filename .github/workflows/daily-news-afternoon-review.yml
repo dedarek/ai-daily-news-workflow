@@ -67,21 +67,9 @@ jobs:
           ISSUE_URL="$CONTENT_BASE_URL/api/issues/${{ steps.issue.outputs.date }}/manifest.json"
           for attempt in $(seq 1 18); do
             STATUS=$(curl -L -s -o /tmp/morning-manifest.json -w "%{http_code}" "$ISSUE_URL")
-            if [ "$STATUS" = "200" ]; then
-              if python3 - <<'PY'
-import json
-from pathlib import Path
-manifest = json.loads(Path('/tmp/morning-manifest.json').read_text(encoding='utf-8'))
-if manifest.get('status') != 'ready':
-    raise SystemExit(f"manifest status is {manifest.get('status')}, expected ready")
-published = manifest.get('published_artifacts')
-if not isinstance(published, dict) or not published.get('html') or not published.get('audio'):
-    raise SystemExit('manifest missing published html/audio artifacts')
-PY
-              then
-                echo "Morning issue is published: $ISSUE_URL"
-                exit 0
-              fi
+            if [ "$STATUS" = "200" ] && python3 scripts/check_manifest_ready.py /tmp/morning-manifest.json; then
+              echo "Morning issue is published: $ISSUE_URL"
+              exit 0
             fi
             echo "Morning issue not published yet: status=$STATUS attempt=$attempt/18"
             sleep 300
