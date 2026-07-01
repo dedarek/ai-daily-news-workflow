@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-01",
+  "status": "ready",
+  "created_at": "2026-07-01T08:02:36.714977+00:00",
+  "artifacts": {
+    "candidate_articles": "dist/candidate-news-2026-07-01.json",
+    "articles": "dist/articles-2026-07-01.json",
+    "legacy_articles": "dist/news-data-2026-07-01.json",
+    "html": "dist/daily-news-2026-07-01.html",
+    "legacy_html": "dist/ai-daily-news-html-2026-07-01.html",
+    "podcast_script": "dist/podcast-script-2026-07-01.json",
+    "podcast_script_text": "dist/podcast-script-2026-07-01.txt",
+    "podcast_moss_input": "dist/podcast-moss-input-2026-07-01.txt",
+    "audio": "dist/daily-news-podcast-2026-07-01.mp3",
+    "legacy_audio": "dist/ai-daily-news-podcast-2026-07-01.mp3",
+    "pipeline_report": "dist/pipeline-report-2026-07-01.json"
+  },
+  "quality": {
+    "deterministic": "pass",
+    "agent_review": "not_run",
+    "issues": []
+  },
+  "repair": {
+    "attempts": 0,
+    "items": []
+  },
+  "memory_update": {
+    "candidate_count": 15,
+    "selected_count": 12
+  },
+  "agent": null,
+  "pipeline_report": {
+    "mode": "live-collection",
+    "issue_date": "2026-07-01",
+    "content_date": "2026-07-01",
+    "source_url": "https://hex2077.dev/docs/2026-07/2026-07-01/",
+    "recipient": "yyc54321@126.com",
+    "article_count": 12,
+    "candidate_count": 15,
+    "candidate_data_file": "candidate-news-2026-07-01.json",
+    "llm": {
+      "provider": "opencode-go",
+      "model_chain": [
+        "deepseek-v4-flash",
+        "deepseek-v4-pro",
+        "mimo-v2.5"
+      ],
+      "endpoint": "https://opencode.ai/zen/go/v1",
+      "calls": 9,
+      "call_details": {
+        "selection": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 2200,
+            "completion_tokens": 3917,
+            "total_tokens": 6117,
+            "prompt_tokens_details": {
+              "cached_tokens": 256
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3432
+            },
+            "prompt_cache_hit_tokens": 256,
+            "prompt_cache_miss_tokens": 1944
+          }
+        },
+        "editorial_batches": [
+          {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 4259,
+              "completion_tokens": 9902,
+              "total_tokens": 14161,
+              "prompt_tokens_details": {
+                "cached_tokens": 384
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 8890
+              },
+              "prompt_cache_hit_tokens": 384,
+              "prompt_cache_miss_tokens": 3875
+            }
+          },
+          {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 3823,
+              "completion_tokens": 2820,
+              "total_tokens": 6643,
+              "prompt_tokens_details": {
+                "cached_tokens": 384
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2110
+              },
+              "prompt_cache_hit_tokens": 384,
+              "prompt_cache_miss_tokens": 3439
+            }
+          },
+          {
+            "model": "deepseek-v4-flash",
+            "usage": {
+              "prompt_tokens": 5222,
+              "completion_tokens": 4371,
+              "total_tokens": 9593,
+              "prompt_tokens_details": {
+                "cached_tokens": 5120
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 3694
+              },
+              "prompt_cache_hit_tokens": 5120,
+              "prompt_cache_miss_tokens": 102
+            }
+          }
+        ],
+        "digest_summary": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 1150,
+            "total_tokens": 4273,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1079
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3123
+          }
+        },
+        "podcast": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 3630,
+            "completion_tokens": 2436,
+            "total_tokens": 6066,
+            "prompt_tokens_details": {
+              "cached_tokens": 3200
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1383
+            },
+            "prompt_cache_hit_tokens": 3200,
+            "prompt_cache_miss_tokens": 430
+          }
+        },
+        "podcast_review": {
+          "model": "deepseek-v4-flash",
+          "usage": {
+            "prompt_tokens": 4155,
+            "completion_tokens": 4731,
+            "total_tokens": 8886,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 4709
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 4155
+          }
+        },
+        "podcast_attempts": [
+          {
+            "attempt": 1,
+            "generation": {
+              "model": "deepseek-v4-flash",
+              "usage": {
+                "prompt_tokens": 3309,
+                "completion_tokens": 7628,
+                "total_tokens": 10937,
+                "prompt_tokens_details": {
+                  "cached_tokens": 384
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 7013
+                },
+                "prompt_cache_hit_tokens": 384,
+                "prompt_cache_miss_tokens": 2925
+              }
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": false,
+              "issues": [
+                "轮次严重不足：仅有8段发言，少于10轮，按规则必须判不通过。",
+                "缺乏自然开场：直接进入新闻讨论，没有主持人开场白。",
+                "部分发言长度略超建议范围：如S2的第二段（约120字）和第三段（约120字），建议控制在35-110字以内。"
+              ],
+              "repair_instruction": "1. 大幅增加对话轮次至20-28轮：例如对Sonnet 5和Claude Science深入探讨其对开发者/科研人员的影响，加入追问和分歧；对MIT学者的观点可进一步讨论应用瓶颈；对Grok 4.5营销策略展開批判性思考；对BIS警告结合市场现状分析。确保每轮互动既有事实又有观点。2. 在开头加入自然引入语：如“欢迎收听今天的AI日报，我是Harness。今天Anthropic连发两弹，先来看看Sonnet 5……”。3. 精简过长的发言，确保每段在35-110字之间，便于口播。例如将S2的第二段拆分为两轮，分别讨论MIT观点和Openclaw。"
+            },
+            "review_model": "deepseek-v4-flash",
+            "review_usage": {
+              "prompt_tokens": 3801,
+              "completion_tokens": 3106,
+              "total_tokens": 6907,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2842
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 3801
+            }
+          },
+          {
+            "attempt": 2,
+            "generation": {
+              "model": "deepseek-v4-flash",
+              "usage": {
+                "prompt_tokens": 3630,
+                "completion_tokens": 2436,
+                "total_tokens": 6066,
+                "prompt_tokens_details": {
+                  "cached_tokens": 3200
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 1383
+                },
+                "prompt_cache_hit_tokens": 3200,
+                "prompt_cache_miss_tokens": 430
+              }
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": true,
+              "issues": [],
+              "repair_instruction": ""
+            },
+            "review_model": "deepseek-v4-flash",
+            "review_usage": {
+              "prompt_tokens": 4155,
+              "completion_tokens": 4731,
+              "total_tokens": 8886,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 4709
+              },
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 4155
+            }
+          }
+        ],
+        "podcast_harness": {
+          "attempts": 2,
+          "best_attempt": 2,
+          "final_pass": true,
+          "final_issues": [],
+          "structure_issues": [],
+          "loop_exhausted": false,
+          "converged": false
+        }
+      }
+    },
+    "digest_summary": "今日AI日报聚焦代理式AI的加速渗透与挑战：Anthropic Sonnet5以强大自主规划能力逼近顶级模型，Openclaw登陆手机拓宽使用场景，同时OSWorld基准暴露长周期任务短板，MIT学者指出数据瓶颈，安全网关开源应对风险，BIS则警告投资过热。",
+    "podcast_turns": 22,
+    "podcast_script_file": "podcast-script-2026-07-01.json",
+    "podcast_script_text_file": "podcast-script-2026-07-01.txt",
+    "podcast_moss_input_file": "podcast-moss-input-2026-07-01.txt",
+    "tts_mode": "siliconflow-moss-reference-live",
+    "tts_model": "fnlp/MOSS-TTSD-v0.5",
+    "tts_speed": 1.02,
+    "tts_leading_silence_seconds": 0.35,
+    "tts_reference_files": {
+      "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+      "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+    },
+    "html_bytes": 25895,
+    "podcast_bytes": 1514541,
+    "podcast_duration_seconds": 189.29
+  },
+  "published_artifacts": {
+    "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-01/index.json",
+    "candidate_articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-01/candidate-news.json",
+    "articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-01/articles.json",
+    "podcast_script": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-01/podcast-script.json",
+    "podcast_script_text": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-01/podcast-script.txt",
+    "podcast_dialogue_text": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-01.txt",
+    "podcast_moss_input": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-01/podcast-moss-input.txt",
+    "html": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-01.html",
+    "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-01.mp3",
+    "pipeline_report": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-01/pipeline-report.json"
+  }
+}

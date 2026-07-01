@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Anthropic发布全新Sonnet5",
+    "summary": "继之前的更新后Anthropic再放大招。这个新模型性能跑分全面超越了前代。它在多项测试中 💥 击败了昂贵的Opus。研发团队特别强调了其安全合规机制。业界对这次的技术跃升 😲 感到极度震惊。",
+    "url": "https://the-decoder.com/anthropics-new-claude-sonnet-5-closes-the-gap-to-the-pricier-opus-model-series/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic发布专用科研平台",
+    "summary": "该科研辅助工具被命名为Claude系统。系统内部集成了 高达六十种专业技能。用户可从全新科研平台获取更多详情。关键数据仅在本地集群运行以确保安全。这必将彻底改变 🔬 科学研究的传统方式。",
+    "url": "https://the-decoder.com/anthropic-launches-claude-science-an-ai-workspace-built-specifically-for-researchers/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Openclaw正式登陆手机",
+    "summary": "免费开源的智能程序Openclaw现在全面支持双系统。这款开源智能体移动版终于正式发布。该前沿技术让用户 🌟 轻松拥有专属助手。移动端的智能体将彻底改变生活方式。未来人机交互 📱 必将变得更加便捷智能。",
+    "url": "https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok 4.5内测版重磅登场",
+    "summary": "马斯克刚刚在社交平台发布动态宣布开启内测.该巨无霸模型拥有 ✨ 一点五万亿的恐怖参数量。特斯拉与SpaceX两大巨头已率先部署了内部测试。据内部人士透露其性能 有望赶超最强旗舰模型。",
+    "url": "https://x.com/elonmusk/status/2072097988064018595",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta开源无创脑波解码系统",
+    "summary": "社交巨头近期开源了前沿的脑波解码模型。该项目尝试利用大模型将脑电波翻译成文本。这项脑控技术安全引发了广泛担忧。庞大的硬件设备 😲 让该技术难以快速落地。很多人对其实际应用效果 🤔 依然抱有怀疑态度。",
+    "url": "https://newshacker.me/story?id=48739466",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "大模型异步训练技术获得突破",
+    "summary": "研究者成功破解大模型异步训练瓶颈。他们发现选用Muon优化器能极大提升稳定性。配合全新反馈机制 可有效消除系统气泡。该创新方案实现了十亿级模型无损性能。这为大模型 💡 底层算力优化指明了方向。",
+    "url": "https://huggingface.co/papers/2606.30634",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "电脑智能体基准OSWorld发布",
+    "summary": "该全新基准涵盖了一百零八个真实工作流。人类完成 these 任务平均需要耗时一点六小时。顶尖模型在智能体交互侧试新基准中表现惨淡。当前AI仍旧无法 ┐(´д｀)┌ 搞定高难度复杂操作。这暴露出 💻 现阶段智能体技术的巨大短板。",
+    "url": "https://huggingface.co/papers/2606.29537",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达发布全新图像生成模型",
+    "summary": "英伟达研发团队推出新型的离散扩散模型。该模型能够动态修改生成图像的微小细节。这项英伟达离散扩散新研究展现了优异性能。创新算法 有效降低了系统的显存消耗。图像生成质量与效率 🎨 均获得了显著提升。",
+    "url": "https://huggingface.co/papers/2606.29814",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "研究探讨智能体该何时主动收手",
+    "summary": "最新学术研究提出了主动弃权决策新机制。传统大模型在不确定环境中经常盲目执行。这篇论文分析智能体决策成为了关注焦点。大尺寸模型在及时停步上表现 😲 相对较差。新技术无需微调即可 🛡️ 显著提升系统安全性。",
+    "url": "https://huggingface.co/papers/2606.28733",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "实时视频编辑框架LiveEdit发布",
+    "summary": "顶尖科学家发布了创新的实时视频编辑系统。该前沿技术 ⚡ 实现了每秒十二点六帧处理速度。它采用三阶段蒸馏技术来全力保障画面稳定。这为流式视频编辑最新奠定了坚实基础。该轻量方案 🎨 非常适用于增强现实应用。",
+    "url": "https://huggingface.co/papers/2606.26740",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "德扑AI团队跨界发力做量化",
+    "summary": "三位前谷歌深脑研究员创立了神秘新公司。量化实验室的最新称其估值已破五亿。该精英团队 🏆 曾开发过顶尖的德州扑克算法。如今他们利用AI算法 帮助对冲基金狂赚大钱。这标志着博弈AI在金融领域正式落地。",
+    "url": "https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "麻省理工学者解析代理式AI未来",
+    "summary": "MIT顶尖专家近日深入探讨了智能代理演进。欢迎关注代理式系统最新的深度访谈。研究指出未来必须严格关注其社会影响边界。我们应当尽早思考 🤔 人机协同的复杂伦理考量。规范化发展 🛡️ 将是整个行业的必经之路。",
+    "url": "https://news.mit.edu/2026/agentic-ai-and-what-do-we-want-it-be-0630",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国际清算银行警告AI投资过热",
+    "summary": "该权威金融机构近日发布了最新的行业报告。报告明确指出全球的AI投资已经明显过热。各国监管机构 😰 正在密切防范重蹈泡沫覆辙。市场参与者应警惕估值虚高并主动避险。这为狂热的资本市场 📉 敲响了清醒的警钟。",
+    "url": "https://cn.nikkei.com/politicsaeconomy/efinance/63062-2026-06-30-10-34-46.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美商务部撤销两款大模型出口管制",
+    "summary": "美国日前已放行最新大模型的出口限制。该公司的旗舰大模型终于 🙌 成功解除了枷锁。潜在的安全风险检测 🧐 依然是双方后续合作重点。中国开源模型的迅速追赶引发了美方高度担忧。这一反转 🌍 将深远影响全球技术博弈格局。",
+    "url": "https://x.com/dotey/status/2072117950438662420",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "面向AI智能体的安全网关开源",
+    "summary": "传统的智能体防护依赖大模型检测极易产生幻觉。该智能体安全网关以高星关注度迅速走红。底层系统 🤯 能在五毫秒内通过有向图追踪调用。它通过污点机制来 🔒 强力拦截多步数据泄露。这彻底解决了智能体数据安全的巨大痛点。",
+    "url": "https://github.com/beebeeVB/trajeckt",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

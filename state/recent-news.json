@@ -1,0 +1,173 @@
+{
+  "window_days": 7,
+  "days": {
+    "2026-07-01": {
+      "candidates": [
+        {
+          "date": "2026-07-01",
+          "title": "Anthropic发布全新Sonnet5",
+          "summary": "继之前的更新后Anthropic再放大招。这个新模型性能跑分全面超越了前代。它在多项测试中 💥 击败了昂贵的Opus。研发团队特别强调了其安全合规机制。业界对这次的技术跃升 😲 感到极度震惊。",
+          "url": "https://the-decoder.com/anthropics-new-claude-sonnet-5-closes-the-gap-to-the-pricier-opus-model-series/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Anthropic发布专用科研平台",
+          "summary": "该科研辅助工具被命名为Claude系统。系统内部集成了 高达六十种专业技能。用户可从全新科研平台获取更多详情。关键数据仅在本地集群运行以确保安全。这必将彻底改变 🔬 科学研究的传统方式。",
+          "url": "https://the-decoder.com/anthropic-launches-claude-science-an-ai-workspace-built-specifically-for-researchers/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Openclaw正式登陆手机",
+          "summary": "免费开源的智能程序Openclaw现在全面支持双系统。这款开源智能体移动版终于正式发布。该前沿技术让用户 🌟 轻松拥有专属助手。移动端的智能体将彻底改变生活方式。未来人机交互 📱 必将变得更加便捷智能。",
+          "url": "https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Grok 4.5内测版重磅登场",
+          "summary": "马斯克刚刚在社交平台发布动态宣布开启内测.该巨无霸模型拥有 ✨ 一点五万亿的恐怖参数量。特斯拉与SpaceX两大巨头已率先部署了内部测试。据内部人士透露其性能 有望赶超最强旗舰模型。",
+          "url": "https://x.com/elonmusk/status/2072097988064018595"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Meta开源无创脑波解码系统",
+          "summary": "社交巨头近期开源了前沿的脑波解码模型。该项目尝试利用大模型将脑电波翻译成文本。这项脑控技术安全引发了广泛担忧。庞大的硬件设备 😲 让该技术难以快速落地。很多人对其实际应用效果 🤔 依然抱有怀疑态度。",
+          "url": "https://newshacker.me/story?id=48739466"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "大模型异步训练技术获得突破",
+          "summary": "研究者成功破解大模型异步训练瓶颈。他们发现选用Muon优化器能极大提升稳定性。配合全新反馈机制 可有效消除系统气泡。该创新方案实现了十亿级模型无损性能。这为大模型 💡 底层算力优化指明了方向。",
+          "url": "https://huggingface.co/papers/2606.30634"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "电脑智能体基准OSWorld发布",
+          "summary": "该全新基准涵盖了一百零八个真实工作流。人类完成 these 任务平均需要耗时一点六小时。顶尖模型在智能体交互侧试新基准中表现惨淡。当前AI仍旧无法 ┐(´д｀)┌ 搞定高难度复杂操作。这暴露出 💻 现阶段智能体技术的巨大短板。",
+          "url": "https://huggingface.co/papers/2606.29537"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "英伟达发布全新图像生成模型",
+          "summary": "英伟达研发团队推出新型的离散扩散模型。该模型能够动态修改生成图像的微小细节。这项英伟达离散扩散新研究展现了优异性能。创新算法 有效降低了系统的显存消耗。图像生成质量与效率 🎨 均获得了显著提升。",
+          "url": "https://huggingface.co/papers/2606.29814"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "研究探讨智能体该何时主动收手",
+          "summary": "最新学术研究提出了主动弃权决策新机制。传统大模型在不确定环境中经常盲目执行。这篇论文分析智能体决策成为了关注焦点。大尺寸模型在及时停步上表现 😲 相对较差。新技术无需微调即可 🛡️ 显著提升系统安全性。",
+          "url": "https://huggingface.co/papers/2606.28733"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "实时视频编辑框架LiveEdit发布",
+          "summary": "顶尖科学家发布了创新的实时视频编辑系统。该前沿技术 ⚡ 实现了每秒十二点六帧处理速度。它采用三阶段蒸馏技术来全力保障画面稳定。这为流式视频编辑最新奠定了坚实基础。该轻量方案 🎨 非常适用于增强现实应用。",
+          "url": "https://huggingface.co/papers/2606.26740"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "德扑AI团队跨界发力做量化",
+          "summary": "三位前谷歌深脑研究员创立了神秘新公司。量化实验室的最新称其估值已破五亿。该精英团队 🏆 曾开发过顶尖的德州扑克算法。如今他们利用AI算法 帮助对冲基金狂赚大钱。这标志着博弈AI在金融领域正式落地。",
+          "url": "https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "麻省理工学者解析代理式AI未来",
+          "summary": "MIT顶尖专家近日深入探讨了智能代理演进。欢迎关注代理式系统最新的深度访谈。研究指出未来必须严格关注其社会影响边界。我们应当尽早思考 🤔 人机协同的复杂伦理考量。规范化发展 🛡️ 将是整个行业的必经之路。",
+          "url": "https://news.mit.edu/2026/agentic-ai-and-what-do-we-want-it-be-0630"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "国际清算银行警告AI投资过热",
+          "summary": "该权威金融机构近日发布了最新的行业报告。报告明确指出全球的AI投资已经明显过热。各国监管机构 😰 正在密切防范重蹈泡沫覆辙。市场参与者应警惕估值虚高并主动避险。这为狂热的资本市场 📉 敲响了清醒的警钟。",
+          "url": "https://cn.nikkei.com/politicsaeconomy/efinance/63062-2026-06-30-10-34-46.html"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "美商务部撤销两款大模型出口管制",
+          "summary": "美国日前已放行最新大模型的出口限制。该公司的旗舰大模型终于 🙌 成功解除了枷锁。潜在的安全风险检测 🧐 依然是双方后续合作重点。中国开源模型的迅速追赶引发了美方高度担忧。这一反转 🌍 将深远影响全球技术博弈格局。",
+          "url": "https://x.com/dotey/status/2072117950438662420"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "面向AI智能体的安全网关开源",
+          "summary": "传统的智能体防护依赖大模型检测极易产生幻觉。该智能体安全网关以高星关注度迅速走红。底层系统 🤯 能在五毫秒内通过有向图追踪调用。它通过污点机制来 🔒 强力拦截多步数据泄露。这彻底解决了智能体数据安全的巨大痛点。",
+          "url": "https://github.com/beebeeVB/trajeckt"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-07-01",
+          "title": "Anthropic发布全新Sonnet5",
+          "summary": "Anthropic 正式发布 Claude Sonnet 5，称其为最具备代理能力的 Sonnet 模型。该模型能自主规划并调用浏览器、终端等工具完成复杂任务。在多项公开基准测试中，Sonnet 5 全面超越前代 Sonnet 4.6，并在代理编程（SWE-bench Pro 63.2%）、终端操作（Terminal-Bench 80.4%）及计算机使用（OSWorld 81.2%）等测试中大幅领先，同时显著缩小了与顶级模型 Opus 4.8 的差距。在真实知识工作测试 GDPval-AA v2 上，Sonnet 5 甚至以 1,618 分略超 Opus 4.8 的 1,615 分。此外，新模型在安全合规方面有显著改进：拒绝恶意请求能力增强，幻觉和谄媚行为减少。Anthropic 强调该模型未针对网络安全任务训练，风险可控，并默认启用实时防护功能。Sonnet 5 即日起在所有 Anthropic 平台上线，提供介绍性折扣至 2026 年 8 月，之后恢复标准 Sonnet 定价。",
+          "url": "https://the-decoder.com/anthropics-new-claude-sonnet-5-closes-the-gap-to-the-pricier-opus-model-series/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Anthropic发布专用科研平台",
+          "summary": "Anthropic 推出 Claude Science，一个专为科学家设计的 AI 工作台。该平台整合了 60 多种预配置技能，涵盖基因组学、蛋白质组学和化学信息学等领域，使研究人员能够分析文献、执行多步骤数据分析、生成图表并撰写论文。Claude Science 在本地 macOS 或 Linux 系统运行，通过 SSH 或 HPC 集群连接远程计算资源，确保敏感数据不离开实验室基础设施。平台还集成了 Nvidia 的 BioNeMo 工具包，包含 Evo 2、Boltz-2 等模型，并允许用户将自定义流程保存为可复用的技能。内置验证代理会自动检查引用和计算结果。即日起向 Pro、Max、Team 及 Enterprise 用户开放测试版，Anthropic 同时为最多 50 个研究项目提供高达 3 万美元的信用额度补助，申请截止至 2026 年 7 月 15 日。",
+          "url": "https://the-decoder.com/anthropic-launches-claude-science-an-ai-workspace-built-specifically-for-researchers/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Openclaw正式登陆手机",
+          "summary": "免费开源 AI 代理 OpenClaw 正式推出 iOS 和 Android 移动端应用。用户可通过手机连接 OpenClaw Gateway，运行已编程的代理来完成编程、膳食规划等多种任务。OpenClaw 今年早些时候因 MoltBook 项目走红——一个声称完全由 AI 代理运转的社交网站，后被研究指出部分内容由真人伪装，引发真实性争议。其创始人 Peter Steinberger 已在 2 月加入 OpenAI。移动版的上线标志着 AI 代理正式进入智能手机场景，尽管早期用户反映效果参差不齐，但此举将自主代理功能带到更广泛的用户群中。",
+          "url": "https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Grok 4.5内测版重磅登场",
+          "summary": "Elon Musk 于 6 月 30 日在 X 平台发布一条极简帖文，内容仅单词“Grok”及一条链接，迅速获得近 190 万次阅读和超 3200 条回复。该帖被普遍解读为 Grok 4.5 内测的官方宣布，但帖文本身未提供任何模型细节。此前已有消息称该模型已在特斯拉和 SpaceX 部署内部测试。此次通过个人社交账号直接发布，延续了 Musk 一贯的营销风格，但也引发外界对模型真实性能的猜测。",
+          "url": "https://x.com/elonmusk/status/2072097988064018595"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "德扑AI团队跨界发力做量化",
+          "summary": "三位前Google DeepMind研究员创立了量化实验室EquiLibre Technologies，基于他们曾开发的德州扑克AI DeepStack的强化学习技术，应用于股票和加密货币交易。该公司与量化公司Tower Research Capital合作，算法每日在标普500和纳斯达克交易数十亿美元，自2025年上线以来每月均实现正收益。EquiLibre在Creandum领投的A轮融资中估值达5亿美元，但具体融资金额未披露。团队强调其定位是人工智能实验室而非金融公司，仍专注于前沿技术研究。",
+          "url": "https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "麻省理工学者解析代理式AI未来",
+          "summary": "麻省理工学院计算机科学家Phillip Isola近日接受采访，深入解析了代理式AI的定义与发展现状。他指出，代理式AI与生成式AI的关键区别在于能够采取实际行动，如预订航班或进行机器人操作。尽管已有35%的企业部署了AI代理，但训练数据的缺乏仍是主要挑战，当前最成功的应用集中于编程代码辅助。Isola认为，未来代理式AI需通过大量试错学习才能应对复杂现实场景。",
+          "url": "https://news.mit.edu/2026/agentic-ai-and-what-do-we-want-it-be-0630"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "国际清算银行警告AI投资过热",
+          "summary": "国际清算银行近日发布最新报告，警告全球人工智能领域的投资已明显过热。报告指出，当前AI相关资产估值虚高，存在泡沫风险，各国监管机构正密切防范市场过热可能引发的冲击。该机构呼吁市场参与者保持警惕，主动规避高风险资产，避免盲目跟风投资。这一警告为持续升温的AI资本市场敲响了警钟，提示行业需要回归理性发展。",
+          "url": "https://cn.nikkei.com/politicsaeconomy/efinance/63062-2026-06-30-10-34-46.html"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "美商务部撤销两款大模型出口管制",
+          "summary": "美国商务部日前致信Anthropic，确认撤销对其两款大模型Claude Fable 5和Mythos 5的出口管制，自7月1日起恢复用户访问。解禁附有条件：Anthropic需主动检测并报告模型安全风险，与政府合作制定未来发布流程，并构建标准化评估体系。与此同时，OpenAI的GPT-5.6系列仍被限制在政府认可的合作伙伴中，引发行业对政府审批模式的批评。有分析指出，此类管制可能导致中国开源模型获得追赶机会。",
+          "url": "https://x.com/dotey/status/2072117950438662420"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "面向AI智能体的安全网关开源",
+          "summary": "面向AI智能体的安全网关项目trajeckt在GitHub开源。该网关通过有向图追踪智能体累积轨迹，在约1.6毫秒内确定性地阻断多步工具调用链的数据泄露。与逐操作授权不同，它识别看似合法但整体构成窃取的操作序列。项目支持Docker快速部署，但当前仅获5星关注，仍处于早期验证阶段。",
+          "url": "https://github.com/beebeeVB/trajeckt"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "大模型异步训练技术获得突破",
+          "summary": "Yandex Research团队发现，大模型异步管道并行训练中的梯度延迟并非固有缺陷，其稳定性主要取决于优化器选择。使用Muon优化器可显著提升稳定性，结合Error Feedback修正机制后，百亿参数MoE模型的性能与同步训练持平。该工作在PipeDream-2BW调度下实现恒定一步延迟，消除了同步流水线中的空闲气泡。这一结果挑战了异步训练不稳定的传统认知，为大规模算力优化提供了新路径。",
+          "url": "https://huggingface.co/papers/2606.30634"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "电脑智能体基准OSWorld发布",
+          "summary": "OSWorld 2.0基准发布，包含108个真实世界长期工作流，人类完成中位数耗时1.6小时。最佳模型Claude Opus 4.8在500步内仅完成20.6%的任务，GPT-5.5完成率约13%。任务涉及流式交互、动态环境、隐式状态推断等复杂挑战。分析表明，智能体主要问题不在于基础操作，而在于约束跟踪、中途信息获取和状态恢复能力不足，距离专业级计算机使用仍有显著差距。",
+          "url": "https://huggingface.co/papers/2606.29537"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "英伟达发布全新图像生成模型",
+          "summary": "英伟达提出Nemotron-Labs-Diffusion-Image，一种高分辨率文生图掩码离散扩散模型。其令牌编辑机制允许在推理时动态修改已生成的离散token，弥补了标准MDMs自修正能力缺失。分组交叉熵目标为嵌入空间邻近token分配正信号，缓解大词汇表训练稀疏问题。自定义融合算子显著降低显存占用。在GenEval、DPG、HPSv3上分别达0.90、86.9和10.76分，展现了训练效率与生成质量的提升。",
+          "url": "https://huggingface.co/papers/2606.29814"
+        }
+      ]
+    }
+  }
+}
