@@ -982,9 +982,9 @@ def encode_reference_audio(path: Path) -> str:
     return f'data:{mime_type};base64,{encoded}'
 
 
-def moss_reference_payload() -> list[dict[str, str]]:
+def moss_reference_payload(speakers: tuple[str, ...] = ('S1', 'S2')) -> list[dict[str, str]]:
     references: list[dict[str, str]] = []
-    for speaker in ('S1', 'S2'):
+    for speaker in speakers:
         config = MOSS_REFERENCE_VOICES[speaker]
         reference_text = os.environ.get(config['text_env'])
         if not reference_text:
@@ -1003,6 +1003,10 @@ def moss_reference_payload() -> list[dict[str, str]]:
 
 def moss_dialogue_input(dialogue: list[dict[str, str]]) -> str:
     return ''.join(f'[{turn["speaker"]}]{turn["text"]}' for turn in dialogue)
+
+
+def voice_speaker_name(role_label: str) -> str:
+    return {'S1': 'host', 'S2': 'analyst'}.get(role_label, role_label.lower())
 
 
 def tts_warmup_text() -> str:
@@ -1090,13 +1094,36 @@ def prepend_audio_silence(path: Path, seconds: float) -> None:
     padded.replace(path)
 
 
-def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Path, api_key: str) -> bool:
+def compress_audio_if_large(path: Path, *, max_bytes: int = 8 * 1024 * 1024) -> None:
+    if not path.exists() or path.stat().st_size <= max_bytes:
+        return
+    compressed = path.with_name(path.stem + '-compressed.mp3')
+    result = subprocess.run(
+        ['ffmpeg', '-y', '-i', str(path), '-codec:a', 'libmp3lame', '-b:a', '48k', str(compressed)],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode == 0 and compressed.exists() and compressed.stat().st_size < path.stat().st_size:
+        compressed.replace(path)
+    elif compressed.exists():
+        compressed.unlink()
+
+
+def synthesize_siliconflow_moss(
+    dialogue: list[dict[str, str]],
+    output_path: Path,
+    api_key: str,
+    *,
+    references: list[dict[str, str]] | None = None,
+    min_bytes: int = 100_000,
+    compress_if_large: bool = True,
+) -> bool:
     speed = moss_tts_speed()
     payload = json.dumps({
         'model': MOSS_TTS_MODEL,
         'stream': True,
         'input': moss_dialogue_input(dialogue),
-        'references': moss_reference_payload(),
+        'references': references if references is not None else moss_reference_payload(),
         'max_tokens': 4096,
         'response_format': 'mp3',
         'speed': speed,
@@ -1118,22 +1145,125 @@ def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Pat
     except Exception as exc:
         print(f'MOSS-TTSD failed: {exc}')
         return False
-    if len(audio) < 100_000:
+    if len(audio) < min_bytes:
         print(f'MOSS-TTSD output too small: {len(audio)} bytes')
         return False
     output_path.write_bytes(audio)
-    if output_path.stat().st_size > 8 * 1024 * 1024:
-        compressed = output_path.with_name(output_path.stem + '-compressed.mp3')
-        result = subprocess.run(
-            ['ffmpeg', '-y', '-i', str(output_path), '-codec:a', 'libmp3lame', '-b:a', '48k', str(compressed)],
-            capture_output=True,
-            text=True,
-        )
-        if result.returncode == 0 and compressed.stat().st_size < output_path.stat().st_size:
-            compressed.replace(output_path)
-        elif compressed.exists():
-            compressed.unlink()
-    return output_path.exists() and output_path.stat().st_size > 100_000
+    if compress_if_large:
+        compress_audio_if_large(output_path)
+    return output_path.exists() and output_path.stat().st_size > min_bytes
+
+
+def concat_audio_chunks(chunk_paths: list[Path], output_path: Path) -> None:
+    if not chunk_paths:
+        raise RuntimeError('No audio chunks to concatenate')
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    concat_list = output_path.with_name(output_path.stem + '-concat.txt')
+
+    def concat_file_line(path: Path) -> str:
+        escaped = path.resolve().as_posix().replace("'", r"'\''")
+        return f"file '{escaped}'\n"
+
+    concat_list.write_text(
+        ''.join(concat_file_line(path) for path in chunk_paths),
+        encoding='utf-8',
+    )
+    copy_result = subprocess.run(
+        ['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', str(concat_list), '-c', 'copy', str(output_path)],
+        capture_output=True,
+        text=True,
+    )
+    if copy_result.returncode == 0 and output_path.exists() and output_path.stat().st_size > 0:
+        return
+    reencode_result = subprocess.run(
+        [
+            'ffmpeg',
+            '-y',
+            '-f',
+            'concat',
+            '-safe',
+            '0',
+            '-i',
+            str(concat_list),
+            '-codec:a',
+            'libmp3lame',
+            '-b:a',
+            '64k',
+            str(output_path),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if reencode_result.returncode != 0:
+        raise RuntimeError(f'ffmpeg concat failed: {reencode_result.stderr[-1000:]}')
+    if not output_path.exists() or output_path.stat().st_size <= 0:
+        raise RuntimeError('ffmpeg concat output is empty')
+
+
+def synthesize_siliconflow_moss_turns(
+    dialogue: list[dict[str, str]],
+    output_path: Path,
+    voice_path: Path,
+    issue_date: str,
+    api_key: str,
+    *,
+    leading_silence_seconds: float = 0.0,
+) -> dict:
+    chunk_dir = output_path.parent / 'voice-chunks' / issue_date
+    if chunk_dir.exists():
+        shutil.rmtree(chunk_dir)
+    chunk_dir.mkdir(parents=True, exist_ok=True)
+
+    chunk_paths: list[Path] = []
+    turns: list[dict[str, object]] = []
+    cursor = leading_silence_seconds
+    for index, turn in enumerate(dialogue):
+        role_label = str(turn.get('speaker', '')).strip()
+        text = str(turn.get('text', '')).strip()
+        if role_label not in MOSS_REFERENCE_VOICES or not text:
+            raise RuntimeError(f'Invalid podcast turn for voice generation at index={index}: {turn!r}')
+
+        chunk_path = chunk_dir / f'{index:03d}-{role_label}.mp3'
+        single_turn_dialogue = [{'speaker': 'S1', 'text': text}]
+        references = moss_reference_payload((role_label,))
+        if not synthesize_siliconflow_moss(
+            single_turn_dialogue,
+            chunk_path,
+            api_key,
+            references=references,
+            min_bytes=5_000,
+            compress_if_large=False,
+        ):
+            raise RuntimeError(f'SiliconFlow MOSS-TTSD failed for turn index={index} speaker={role_label}')
+
+        chunk_duration = duration(chunk_path)
+        start = cursor
+        end = start + chunk_duration
+        turns.append({
+            'index': index,
+            'speaker': voice_speaker_name(role_label),
+            'roleLabel': role_label,
+            'text': text,
+            'start': round(start, 2),
+            'end': round(end, 2),
+        })
+        cursor = end
+        chunk_paths.append(chunk_path)
+
+    concat_audio_chunks(chunk_paths, output_path)
+    if leading_silence_seconds > 0:
+        prepend_audio_silence(output_path, leading_silence_seconds)
+    compress_audio_if_large(output_path)
+
+    voice_manifest = {
+        'title': 'AI热点新闻',
+        'date': issue_date,
+        'audio': output_path.relative_to(REPO_ROOT).as_posix(),
+        'duration': round(duration(output_path), 2),
+        'turns': turns,
+    }
+    voice_path.write_text(json.dumps(voice_manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+    return voice_manifest
 
 
 def duration(path: Path) -> float:
@@ -1166,6 +1296,7 @@ def main() -> int:
     podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
     podcast_script_text_path = output_dir / f'podcast-script-{args.date}.txt'
     moss_input_path = output_dir / f'podcast-moss-input-{args.date}.txt'
+    voice_path = output_dir / f'voice-{args.date}.json'
     dialogue = apply_tts_warmup(dialogue)
     render_html(args.date, content_date, articles, html_path, digest_summary)
     candidate_data_path.write_text(
@@ -1197,10 +1328,15 @@ def main() -> int:
     api_key = os.environ.get('SILICONFLOW_API_KEY', '')
     if not api_key:
         raise RuntimeError('SILICONFLOW_API_KEY is required; refusing to generate podcast audio')
-    if not synthesize_siliconflow_moss(dialogue, podcast_path, api_key):
-        raise RuntimeError('SiliconFlow MOSS-TTSD failed; refusing to publish podcast audio')
     leading_silence_seconds = tts_leading_silence_seconds()
-    prepend_audio_silence(podcast_path, leading_silence_seconds)
+    voice_manifest = synthesize_siliconflow_moss_turns(
+        dialogue,
+        podcast_path,
+        voice_path,
+        args.date,
+        api_key,
+        leading_silence_seconds=leading_silence_seconds,
+    )
     tts_mode = 'siliconflow-moss-reference-live'
 
     tmp_html = Path('/tmp') / html_path.name
@@ -1224,6 +1360,8 @@ def main() -> int:
         'podcast_script_file': podcast_script_path.name,
         'podcast_script_text_file': podcast_script_text_path.name,
         'podcast_moss_input_file': moss_input_path.name,
+        'voice_file': voice_path.name,
+        'voice_turns': len(voice_manifest['turns']),
         'tts_mode': tts_mode,
         'tts_model': MOSS_TTS_MODEL,
         'tts_speed': moss_tts_speed(),

@@ -28,6 +28,7 @@ MIN_SIZES = {
     'podcast_script': 500,
     'podcast_script_text': 500,
     'podcast_moss_input': 500,
+    'voice': 500,
     'audio': 1_000_000,
     'pipeline_report': 500,
 }
@@ -73,6 +74,7 @@ def artifact_paths(output_dir: Path, issue_date: str) -> dict[str, Path]:
         'podcast_script': output_dir / f'podcast-script-{issue_date}.json',
         'podcast_script_text': output_dir / f'podcast-script-{issue_date}.txt',
         'podcast_moss_input': output_dir / f'podcast-moss-input-{issue_date}.txt',
+        'voice': output_dir / f'voice-{issue_date}.json',
         'audio': output_dir / f'daily-news-podcast-{issue_date}.mp3',
         'legacy_audio': output_dir / f'ai-daily-news-podcast-{issue_date}.mp3',
         'pipeline_report': output_dir / f'pipeline-report-{issue_date}.json',
@@ -209,6 +211,7 @@ def restore_from_published_site(site_dir: Path, output_dir: Path, issue_date: st
         (issue_root / 'podcast-script.json', output_dir / f'podcast-script-{issue_date}.json'),
         (issue_root / 'podcast-script.txt', output_dir / f'podcast-script-{issue_date}.txt'),
         (issue_root / 'podcast-moss-input.txt', output_dir / f'podcast-moss-input-{issue_date}.txt'),
+        (issue_root / 'voice.json', output_dir / f'voice-{issue_date}.json'),
         (issue_root / 'pipeline-report.json', output_dir / f'pipeline-report-{issue_date}.json'),
         (site_dir / 'html' / f'{issue_date}.html', output_dir / f'daily-news-{issue_date}.html'),
         (site_dir / 'audio' / f'{issue_date}.mp3', output_dir / f'daily-news-podcast-{issue_date}.mp3'),
@@ -308,6 +311,61 @@ def validate_artifacts(paths: dict[str, Path]) -> list[str]:
             issues.append(f'{key} too small: {size} < {min_size}')
     if paths['audio'].exists() and paths['audio'].stat().st_size > 8 * 1024 * 1024:
         issues.append(f'audio too large: {paths["audio"].stat().st_size} > 8388608')
+    if paths['voice'].exists():
+        issues.extend(validate_voice_manifest(paths['voice']))
+    return issues
+
+
+def validate_voice_manifest(path: Path) -> list[str]:
+    issues: list[str] = []
+    try:
+        voice = read_json(path)
+    except Exception as exc:
+        return [f'voice manifest unreadable: {exc}']
+    if not isinstance(voice, dict):
+        return ['voice manifest is not an object']
+    expected_keys = ['title', 'date', 'audio', 'duration', 'turns']
+    if list(voice.keys()) != expected_keys:
+        issues.append(f'voice manifest keys must be exactly {expected_keys}')
+    if not isinstance(voice.get('title'), str) or not voice.get('title'):
+        issues.append('voice.title must be a non-empty string')
+    if not isinstance(voice.get('date'), str):
+        issues.append('voice.date must be a string')
+    if not isinstance(voice.get('audio'), str) or not voice.get('audio'):
+        issues.append('voice.audio must be a non-empty string')
+    if not isinstance(voice.get('duration'), (int, float)) or voice.get('duration', 0) <= 0:
+        issues.append('voice.duration must be positive')
+    turns = voice.get('turns')
+    if not isinstance(turns, list) or not turns:
+        issues.append('voice.turns must be a non-empty array')
+        return issues
+    previous_end = 0.0
+    for expected_index, item in enumerate(turns):
+        if not isinstance(item, dict):
+            issues.append(f'voice.turns[{expected_index}] must be an object')
+            continue
+        expected_turn_keys = ['index', 'speaker', 'roleLabel', 'text', 'start', 'end']
+        if list(item.keys()) != expected_turn_keys:
+            issues.append(f'voice.turns[{expected_index}] keys must be exactly {expected_turn_keys}')
+        if item.get('index') != expected_index:
+            issues.append(f'voice.turns[{expected_index}].index mismatch')
+        if item.get('roleLabel') not in {'S1', 'S2'}:
+            issues.append(f'voice.turns[{expected_index}].roleLabel must be S1 or S2')
+        if item.get('speaker') not in {'host', 'analyst'}:
+            issues.append(f'voice.turns[{expected_index}].speaker must be host or analyst')
+        if not isinstance(item.get('text'), str) or not item.get('text').strip():
+            issues.append(f'voice.turns[{expected_index}].text must be non-empty')
+        start = item.get('start')
+        end = item.get('end')
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)) or end <= start:
+            issues.append(f'voice.turns[{expected_index}] start/end invalid')
+            continue
+        if start < previous_end - 0.05:
+            issues.append(f'voice.turns[{expected_index}].start overlaps previous turn')
+        previous_end = end
+    duration = voice.get('duration')
+    if isinstance(duration, (int, float)) and previous_end > duration + 1.0:
+        issues.append('voice.duration is shorter than last turn end')
     return issues
 
 
@@ -374,15 +432,20 @@ def validate_manifest(output_dir: Path, issue_date: str) -> tuple[int, dict[str,
     artifacts = manifest.get('artifacts')
     if not isinstance(artifacts, dict):
         return INVALID, {'status': 'invalid', 'reason': 'missing artifacts object'}
+    resolved_artifacts: dict[str, Path] = {}
     for key, min_size in MIN_SIZES.items():
         value = artifacts.get(key)
         if not isinstance(value, str) or not value:
             return INVALID, {'status': 'invalid', 'reason': f'missing artifact key: {key}'}
         artifact = (REPO_ROOT / value).resolve()
+        resolved_artifacts[key] = artifact
         if not artifact.exists():
             return INVALID, {'status': 'invalid', 'reason': f'artifact missing: {key} {artifact}'}
         if artifact.stat().st_size < min_size:
             return INVALID, {'status': 'invalid', 'reason': f'artifact too small: {key} {artifact.stat().st_size}'}
+    voice_issues = validate_voice_manifest(resolved_artifacts['voice'])
+    if voice_issues:
+        return INVALID, {'status': 'invalid', 'reason': 'invalid voice manifest: ' + '; '.join(voice_issues)}
     return READY, {'status': 'ready', 'manifest': rel(path)}
 
 

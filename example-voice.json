@@ -1,0 +1,184 @@
+{
+  "title": "AI热点新闻",
+  "date": "",
+  "audio": "outputs/audio/1.mp3",
+  "duration": 169.4,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "今天Anthropic动静不小，Sonnet 5号称最强代理模型，基准测试全面超越前代，甚至接近Opus了。",
+      "start": 0.0,
+      "end": 7.68
+    },
+    {
+      "index": 1,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "确实，SWE-bench Pro 63.2%，终端操作80.4%，这进步很实在。而且定价还有折扣，开发者可能会动心。",
+      "start": 7.84,
+      "end": 17.34
+    },
+    {
+      "index": 2,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "但Opus 4.8的地位有点尴尬，除非它后续有更大提升。另外安全方面有改善，不过监管刚解禁了它的两个模型，条件不少。",
+      "start": 17.5,
+      "end": 26.58
+    },
+    {
+      "index": 3,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "那个出口管制解禁挺有意思，Fable 5和Mythos 5恢复了，但要求Anthropic主动检测风险，和合作制定流程。",
+      "start": 26.74,
+      "end": 34.6
+    },
+    {
+      "index": 4,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "这种有条件的解禁可能成为新监管模式，但标准不清晰会带来不确定性。不过至少Anthropic能继续服务用户了。",
+      "start": 34.76,
+      "end": 42.28
+    },
+    {
+      "index": 5,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "与此同时他们还推出了Claude Science，给科学家用的工作台，整合了60多种技能，还能本地部署保护数据。",
+      "start": 42.44,
+      "end": 49.86
+    },
+    {
+      "index": 6,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "这个切入点很精准，科研场景对数据隐私要求高。但beta阶段，那60项技能覆盖深度如何，实际效果还得观察。",
+      "start": 50.02,
+      "end": 58.02
+    },
+    {
+      "index": 7,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "嗯，而且只给Pro以上用户开放，还有信用额度补助，看来是想培养高端用户粘性。",
+      "start": 58.18,
+      "end": 64.34
+    },
+    {
+      "index": 8,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "另一边代理移动化也来了，OpenClaw终于上了iOS和Android，用户可以手机跑编程、规划任务了。",
+      "start": 64.5,
+      "end": 71.6
+    },
+    {
+      "index": 9,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "不过早期用户反馈参差不齐，而且MoltBook那个争议——完全AI代理做的网站后来被曝有人工参与，可信度打折扣。",
+      "start": 71.76,
+      "end": 80.2
+    },
+    {
+      "index": 10,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "对，代理的可验证性还是大问题。MIT学者Phillip Isola也提到，训练数据缺乏是主要瓶颈，目前编程代理最成功。",
+      "start": 80.36,
+      "end": 88.76
+    },
+    {
+      "index": 11,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "结构化场景更容易突破，但复杂任务比如预订航班，试错成本很高。OSWorld 2.0基准也证实了这点。",
+      "start": 88.92,
+      "end": 97.0
+    },
+    {
+      "index": 12,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "那个基准里最佳模型500步只完成20%的任务，人类要1.6小时。智能体在约束跟踪、状态恢复上还很弱。",
+      "start": 97.16,
+      "end": 105.72
+    },
+    {
+      "index": 13,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "说到不靠谱的发布，Elon Musk只发了个“Grok”链接就引爆讨论，但啥细节都没有。",
+      "start": 105.88,
+      "end": 112.24
+    },
+    {
+      "index": 14,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "这很像他的风格，制造悬念。但我们也无法评估Grok 4.5真实水平，可能只是内测预热。",
+      "start": 112.4,
+      "end": 118.64
+    },
+    {
+      "index": 15,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "短期话题度是赚到了，可投资者需要实在的东西。相比之下，德扑AI团队转型量化交易更有实质。",
+      "start": 118.8,
+      "end": 126.54
+    },
+    {
+      "index": 16,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "他们用DeepStack的强化学习做股票交易，和Tower Research合作，自去年上线每月正收益。",
+      "start": 126.7,
+      "end": 132.96
+    },
+    {
+      "index": 17,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "不过“每月正收益”这个宣称在高波动市场里能持续多久？而且估值5亿美元，A轮融资，风险也不小。",
+      "start": 133.12,
+      "end": 140.48
+    },
+    {
+      "index": 18,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "这确实反映了AI应用的泡沫风险，国际清算银行刚警告AI投资过热，估值虚高。",
+      "start": 140.64,
+      "end": 146.56
+    },
+    {
+      "index": 19,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "但市场情绪短期很难降温，投资者仍在追逐热点。我们得警惕那些技术还没落地就高估值的公司。",
+      "start": 146.72,
+      "end": 154.32
+    },
+    {
+      "index": 20,
+      "speaker": "host",
+      "roleLabel": "S1",
+      "text": "今天新闻给我的感觉是：代理式AI在多个方向同时发力，但离真正的实用还有距离，无论是技术还是商业模式。",
+      "start": 154.48,
+      "end": 162.4
+    },
+    {
+      "index": 21,
+      "speaker": "analyst",
+      "roleLabel": "S2",
+      "text": "没错，从模型能力到产品化再到监管，每个环节都有不确定性。理性看待进展，别被营销带偏。",
+      "start": 162.56,
+      "end": 169.4
+    }
+  ]
+}

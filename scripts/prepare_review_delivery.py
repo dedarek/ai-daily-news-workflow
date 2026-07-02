@@ -68,6 +68,7 @@ def main() -> int:
     articles = get_json(published['articles'])
     candidate_articles = get_json(published['candidate_articles']) if published.get('candidate_articles') else []
     podcast_script = get_json(published['podcast_script'])
+    voice = get_json(published['voice']) if published.get('voice') else None
     html_bytes = get_bytes(published['html'])
     audio_bytes = get_bytes(published['audio'])
     write_json_file(output_dir / f'manifest-{args.date}.json', manifest)
@@ -82,6 +83,8 @@ def main() -> int:
         json.dumps(podcast_script, ensure_ascii=False, indent=2),
         encoding='utf-8',
     )
+    if voice:
+        write_json_file(output_dir / f'voice-{args.date}.json', voice)
     (output_dir / f'daily-news-{args.date}.html').write_bytes(html_bytes)
     (output_dir / f'daily-news-podcast-{args.date}.mp3').write_bytes(audio_bytes)
     write_podcast_text(output_dir / f'podcast-script-{args.date}.txt', podcast_script)

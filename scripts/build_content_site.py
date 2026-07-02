@@ -93,6 +93,7 @@ def main() -> int:
     script_path = first_existing([dist / f'podcast-script-{args.date}.json'], 'podcast script')
     script_text_path = first_existing([dist / f'podcast-script-{args.date}.txt'], 'podcast script text')
     moss_input_path = first_existing([dist / f'podcast-moss-input-{args.date}.txt'], 'podcast moss input')
+    voice_path = first_existing([dist / f'voice-{args.date}.json'], 'voice timeline')
     html_path = first_existing(
         [dist / f'daily-news-{args.date}.html', dist / f'ai-daily-news-html-{args.date}.html'],
         'html',
@@ -107,6 +108,7 @@ def main() -> int:
     candidate_articles = read_json(candidate_articles_path)
     articles = read_json(articles_path)
     podcast_script = read_json(script_path)
+    voice = read_json(voice_path)
     issue_root = site / 'api' / 'issues' / args.date
     write_json(issue_root / 'candidate-news.json', candidate_articles)
     write_json(issue_root / 'articles.json', articles)
@@ -143,10 +145,13 @@ def main() -> int:
         'podcast_script_text_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.txt'),
         'podcast_dialogue_text_url': absolute(args.base_url, f'podcast-dialogue/{args.date}.txt'),
         'podcast_moss_input_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-moss-input.txt'),
+        'voice_url': absolute(args.base_url, f'api/issues/{args.date}/voice.json'),
         'manifest_url': absolute(args.base_url, f'api/issues/{args.date}/manifest.json'),
         'html_url': absolute(args.base_url, f'html/{args.date}.html'),
         'audio_url': absolute(args.base_url, f'audio/{args.date}.mp3'),
     }
+    voice['audio'] = issue['audio_url']
+    write_json(issue_root / 'voice.json', voice)
     manifest['published_artifacts'] = {
         'index': absolute(args.base_url, f'api/issues/{args.date}/index.json'),
         'candidate_articles': issue['candidate_articles_url'],
@@ -155,6 +160,7 @@ def main() -> int:
         'podcast_script_text': issue['podcast_script_text_url'],
         'podcast_dialogue_text': issue['podcast_dialogue_text_url'],
         'podcast_moss_input': issue['podcast_moss_input_url'],
+        'voice': issue['voice_url'],
         'html': issue['html_url'],
         'audio': issue['audio_url'],
         'pipeline_report': absolute(args.base_url, f'api/issues/{args.date}/pipeline-report.json'),
