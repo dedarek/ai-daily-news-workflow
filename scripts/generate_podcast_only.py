@@ -88,9 +88,9 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     articles, articles_source = load_articles(args.articles)
-    llm_api_key = os.environ.get('OPENCODE_GO_API_KEY', '')
+    llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
     if not llm_api_key:
-        raise RuntimeError('OPENCODE_GO_API_KEY is required to generate podcast dialogue')
+        raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required to generate podcast dialogue')
 
     dialogue, podcast_metadata = generate_podcast_dialogue(articles, llm_api_key)
 

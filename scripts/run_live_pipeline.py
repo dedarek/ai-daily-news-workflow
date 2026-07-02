@@ -30,6 +30,8 @@ STATE_PATH = REPO_ROOT / 'state' / 'recent-news.json'
 SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
+DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
+DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3'
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
@@ -390,20 +392,28 @@ def request_deepseek_json(
     user_prompt: str,
 ) -> tuple[dict, dict, str]:
     if not models:
-        raise RuntimeError('OpenCode Go model list is empty')
+        raise RuntimeError('LLM API model list is empty')
     model_errors: list[str] = []
     for model_index, model in enumerate(models):
-        print(f'OpenCode Go trying model {model_index + 1}/{len(models)}: {model}', flush=True)
-        payload = json.dumps({
+        print(f'LLM API trying model {model_index + 1}/{len(models)}: {model}', flush=True)
+        try:
+            max_tokens = max(1, int(os.environ.get('OPENCODE_GO_MAX_TOKENS', '16384')))
+        except ValueError:
+            max_tokens = 16384
+        payload_body = {
             'model': model,
             'messages': [
                 {'role': 'system', 'content': system_prompt},
                 {'role': 'user', 'content': user_prompt},
             ],
-            'response_format': {'type': 'json_object'},
-            'reasoning_effort': 'low',
             'temperature': 0.3,
-        }).encode('utf-8')
+            'top_p': 0.95,
+            'max_tokens': max_tokens,
+            'stream': False,
+        }
+        if os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}:
+            payload_body['chat_template_kwargs'] = {'thinking': True}
+        payload = json.dumps(payload_body).encode('utf-8')
         last_error = ''
         for attempt in range(1, 4):
             request = Request(
@@ -436,7 +446,7 @@ def request_deepseek_json(
                     break
                 if exc.code == 429 and model_index < len(models) - 1:
                     print(
-                        f'OpenCode Go model={model} HTTP 429 rate limited; '
+                        f'LLM API model={model} HTTP 429 rate limited; '
                         f'switching model instead of waiting',
                         flush=True,
                     )
@@ -450,7 +460,7 @@ def request_deepseek_json(
                         max_delay = 60
                     delay = min(retry_after_delay, max_delay)
                     print(
-                        f'OpenCode Go model={model} transient HTTP {exc.code}; '
+                        f'LLM API model={model} transient HTTP {exc.code}; '
                         f'retrying in {delay}s ({attempt}/3)',
                         flush=True,
                     )
@@ -460,21 +470,21 @@ def request_deepseek_json(
                 if attempt < 3:
                     delay = 8 * attempt
                     print(
-                        f'OpenCode Go model={model} {exc}; regenerating in {delay}s ({attempt}/3)',
+                        f'LLM API model={model} {exc}; regenerating in {delay}s ({attempt}/3)',
                         flush=True,
                     )
                     time.sleep(delay)
         model_errors.append(f'{model}: {last_error or "no valid response"}')
         if model_index < len(models) - 1:
-            print(f'OpenCode Go switching model {model} -> {models[model_index + 1]}', flush=True)
-    raise RuntimeError('OpenCode Go model chain exhausted: ' + ' | '.join(model_errors))
+            print(f'LLM API switching model {model} -> {models[model_index + 1]}', flush=True)
+    raise RuntimeError('LLM API model chain exhausted: ' + ' | '.join(model_errors))
 
 
 def llm_config() -> tuple[str, list[str]]:
-    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', 'https://opencode.ai/zen/go/v1').rstrip('/')
+    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', DEFAULT_LLM_BASE_URL).rstrip('/')
     configured_models = os.environ.get(
         'OPENCODE_GO_MODELS',
-        'deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5',
+        DEFAULT_LLM_MODELS,
     )
     models = [model.strip() for model in configured_models.split(',') if model.strip()]
     if not models:
@@ -1145,9 +1155,9 @@ def main() -> int:
 
     content_date, source_url, raw_html = fetch_latest(args.date)
     candidates = parse_articles(raw_html)
-    llm_api_key = os.environ.get('OPENCODE_GO_API_KEY', '')
+    llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
     if not llm_api_key:
-        raise RuntimeError('OPENCODE_GO_API_KEY is required; refusing to generate a non-LLM issue')
+        raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required; refusing to generate a non-LLM issue')
     articles, dialogue, digest_summary, llm_metadata = call_deepseek(candidates, llm_api_key, args.date)
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'

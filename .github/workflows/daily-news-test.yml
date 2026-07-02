@@ -85,9 +85,9 @@ jobs:
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
-          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
-          OPENCODE_GO_BASE_URL: https://opencode.ai/zen/go/v1
-          OPENCODE_GO_MODELS: deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5
+          OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          OPENCODE_GO_BASE_URL: https://integrate.api.nvidia.com/v1
+          OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3
           MOSS_TTS_S1_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S1_REFERENCE_TEXT || vars.MOSS_TTS_S1_REFERENCE_TEXT }}
           MOSS_TTS_S2_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S2_REFERENCE_TEXT || vars.MOSS_TTS_S2_REFERENCE_TEXT }}
         run: |

@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 from prompt_loader import prompt_template, render_prompt
-from run_live_pipeline import request_deepseek_json
+from run_live_pipeline import DEFAULT_LLM_BASE_URL, DEFAULT_LLM_MODELS, request_deepseek_json
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = REPO_ROOT / 'skill'
@@ -120,15 +120,15 @@ def main() -> int:
     if not 1_000_000 <= len(audio_bytes) <= 8 * 1024 * 1024:
         deterministic_issues.append(f'audio_bytes={len(audio_bytes)} outside allowed range')
 
-    api_key = os.environ.get('OPENCODE_GO_API_KEY', '')
+    api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
     if not api_key:
-        raise RuntimeError('OPENCODE_GO_API_KEY is required for afternoon quality review')
-    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', 'https://opencode.ai/zen/go/v1').rstrip('/')
+        raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required for afternoon quality review')
+    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', DEFAULT_LLM_BASE_URL).rstrip('/')
     models = [
         item.strip()
         for item in os.environ.get(
             'OPENCODE_GO_MODELS',
-            'deepseek-v4-flash,deepseek-v4-pro,mimo-v2.5',
+            DEFAULT_LLM_MODELS,
         ).split(',')
         if item.strip()
     ]
