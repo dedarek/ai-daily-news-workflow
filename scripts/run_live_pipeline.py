@@ -389,8 +389,11 @@ def request_deepseek_json(
     system_prompt: str,
     user_prompt: str,
 ) -> tuple[dict, dict, str]:
+    if not models:
+        raise RuntimeError('OpenCode Go model list is empty')
     model_errors: list[str] = []
     for model_index, model in enumerate(models):
+        print(f'OpenCode Go trying model {model_index + 1}/{len(models)}: {model}', flush=True)
         payload = json.dumps({
             'model': model,
             'messages': [
