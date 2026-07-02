@@ -61,21 +61,36 @@ jobs:
           echo "skip=$SENT" >> "$GITHUB_OUTPUT"
           echo "Afternoon already sent: $SENT"
 
-      - name: Wait for published morning issue
+      - name: Check published morning issue
         if: ${{ steps.delivery.outputs.skip != 'true' }}
+        env:
+          AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
+          AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
         run: |
           ISSUE_URL="$CONTENT_BASE_URL/api/issues/${{ steps.issue.outputs.date }}/manifest.json"
-          for attempt in $(seq 1 18); do
-            STATUS=$(curl -L -s -o /tmp/morning-manifest.json -w "%{http_code}" "$ISSUE_URL")
-            if [ "$STATUS" = "200" ] && python3 scripts/check_manifest_ready.py /tmp/morning-manifest.json; then
-              echo "Morning issue is published: $ISSUE_URL"
-              exit 0
-            fi
-            echo "Morning issue not published yet: status=$STATUS attempt=$attempt/18"
-            sleep 300
-          done
-          echo "::error::Morning issue was not published after waiting 90 minutes: $ISSUE_URL"
-          exit 1
+          STATUS=$(curl -L -s -o /tmp/morning-manifest.json -w "%{http_code}" "$ISSUE_URL")
+          if [ "$STATUS" != "200" ]; then
+            REASON="Morning issue manifest is missing or unreachable: status=$STATUS"
+            echo "::error::$REASON"
+            python3 scripts/send_admin_alert.py \
+              --date "${{ steps.issue.outputs.date }}" \
+              --phase afternoon \
+              --reason "$REASON" \
+              --issue-url "$ISSUE_URL" || echo "::warning::Failed to send admin alert"
+            exit 1
+          fi
+          if ! READY_OUTPUT=$(python3 scripts/check_manifest_ready.py /tmp/morning-manifest.json 2>&1); then
+            REASON="Morning issue manifest is not ready: $READY_OUTPUT"
+            echo "::error::$REASON"
+            python3 scripts/send_admin_alert.py \
+              --date "${{ steps.issue.outputs.date }}" \
+              --phase afternoon \
+              --reason "$REASON" \
+              --issue-url "$ISSUE_URL" || echo "::warning::Failed to send admin alert"
+            exit 1
+          fi
+          echo "Morning issue is published: $ISSUE_URL"
+          exit 0
 
       - name: Set up Python
         if: ${{ steps.delivery.outputs.skip != 'true' }}

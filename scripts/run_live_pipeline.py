@@ -431,9 +431,21 @@ def request_deepseek_json(
                 retryable = exc.code in (429, 500, 502, 503, 504)
                 if not retryable:
                     break
+                if exc.code == 429 and model_index < len(models) - 1:
+                    print(
+                        f'OpenCode Go model={model} HTTP 429 rate limited; '
+                        f'switching model instead of waiting',
+                        flush=True,
+                    )
+                    break
                 if attempt < 3:
                     retry_after = exc.headers.get('Retry-After')
-                    delay = int(retry_after) if retry_after and retry_after.isdigit() else 20 * attempt
+                    retry_after_delay = int(retry_after) if retry_after and retry_after.isdigit() else 20 * attempt
+                    try:
+                        max_delay = max(1, int(os.environ.get('OPENCODE_GO_MAX_RETRY_DELAY', '60')))
+                    except ValueError:
+                        max_delay = 60
+                    delay = min(retry_after_delay, max_delay)
                     print(
                         f'OpenCode Go model={model} transient HTTP {exc.code}; '
                         f'retrying in {delay}s ({attempt}/3)',
