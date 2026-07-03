@@ -426,6 +426,83 @@ def llm_provider_chain(endpoint: str, models: list[str], api_key: str) -> list[d
     return providers
 
 
+def llm_stream_enabled() -> bool:
+    return os.environ.get('LLM_STREAM', 'true').lower() not in {'0', 'false', 'no'}
+
+
+def read_non_stream_chat_completion(response) -> tuple[str, str, dict]:
+    response_data = json.loads(response.read().decode('utf-8'))
+    choice = response_data['choices'][0]
+    content = choice['message']['content']
+    return content, str(choice.get('finish_reason') or ''), response_data.get('usage') or {}
+
+
+def read_stream_chat_completion(response, *, provider_name: str, model: str) -> tuple[str, str, dict]:
+    content_parts: list[str] = []
+    finish_reason = ''
+    usage: dict = {}
+    started = time.perf_counter()
+    first_chunk_seconds: float | None = None
+    first_content_seconds: float | None = None
+
+    while True:
+        raw_line = response.readline()
+        if raw_line == b'':
+            break
+        line = raw_line.decode('utf-8', errors='replace').strip()
+        if not line or line.startswith(':'):
+            continue
+        if not line.startswith('data:'):
+            continue
+        data = line[5:].strip()
+        if data == '[DONE]':
+            break
+        if first_chunk_seconds is None:
+            first_chunk_seconds = time.perf_counter() - started
+            print(
+                f'LLM stream provider={provider_name} model={model} '
+                f'first_chunk={first_chunk_seconds:.2f}s',
+                flush=True,
+            )
+        try:
+            event = json.loads(data)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(event.get('usage'), dict):
+            usage = event['usage']
+        choices = event.get('choices') or []
+        if not choices:
+            continue
+        choice = choices[0]
+        if choice.get('finish_reason'):
+            finish_reason = str(choice.get('finish_reason'))
+        delta = choice.get('delta') or {}
+        piece = delta.get('content')
+        if piece is None:
+            message = choice.get('message') or {}
+            piece = message.get('content')
+        if piece:
+            if first_content_seconds is None:
+                first_content_seconds = time.perf_counter() - started
+                print(
+                    f'LLM stream provider={provider_name} model={model} '
+                    f'first_content={first_content_seconds:.2f}s',
+                    flush=True,
+                )
+            content_parts.append(str(piece))
+
+    content = ''.join(content_parts)
+    if not content:
+        raise RuntimeError(f'empty streaming response: finish_reason={finish_reason or "unknown"}')
+    return content, finish_reason, usage
+
+
+def read_chat_completion_response(response, *, provider_name: str, model: str, stream: bool) -> tuple[str, str, dict]:
+    if stream:
+        return read_stream_chat_completion(response, provider_name=provider_name, model=model)
+    return read_non_stream_chat_completion(response)
+
+
 def request_deepseek_json(
     *,
     endpoint: str,
@@ -466,7 +543,7 @@ def request_deepseek_json(
                 'temperature': 0.3,
                 'top_p': 0.95,
                 'max_tokens': max_tokens,
-                'stream': False,
+                'stream': llm_stream_enabled(),
             }
             chat_template_kwargs = provider.get('chat_template_kwargs')
             if chat_template_kwargs:
@@ -480,22 +557,26 @@ def request_deepseek_json(
                     headers={
                         'Authorization': f'Bearer {provider_api_key}',
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json',
+                        'Accept': 'text/event-stream' if payload_body['stream'] else 'application/json',
                         'User-Agent': 'ai-daily-news-workflow/1.0',
                     },
                     method='POST',
                 )
                 try:
                     with urlopen(request, timeout=request_timeout) as response:
-                        response_data = json.loads(response.read().decode('utf-8'))
-                    choice = response_data['choices'][0]
-                    if choice.get('finish_reason') != 'stop':
-                        raise RuntimeError(f"incomplete response: finish_reason={choice.get('finish_reason')}")
+                        content, finish_reason, usage = read_chat_completion_response(
+                            response,
+                            provider_name=provider_name,
+                            model=str(model),
+                            stream=bool(payload_body['stream']),
+                        )
+                    if finish_reason and finish_reason != 'stop':
+                        raise RuntimeError(f'incomplete response: finish_reason={finish_reason}')
                     try:
-                        result = extract_json_object(choice['message']['content'])
+                        result = extract_json_object(content)
                     except (json.JSONDecodeError, RuntimeError) as exc:
                         raise RuntimeError(f'invalid JSON response: {exc}') from exc
-                    return result, response_data.get('usage') or {}, f'{provider_name}:{model}'
+                    return result, usage, f'{provider_name}:{model}'
                 except HTTPError as exc:
                     error_body = exc.read().decode('utf-8', errors='replace')[:1000]
                     last_error = f'HTTP {exc.code}: {error_body}'
