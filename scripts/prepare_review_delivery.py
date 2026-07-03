@@ -154,6 +154,8 @@ def main() -> int:
         api_key=api_key,
         system_prompt=prompt_template(NEWS_PROMPTS_FILE, 'afternoon_review_system'),
         user_prompt=review_prompt,
+        thinking_enabled=False,
+        task_name='afternoon_review',
     )
     score = int(review.get('score', 0))
     checks = review.get('checks') or {}

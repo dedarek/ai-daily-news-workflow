@@ -282,6 +282,13 @@ def fetch_source_text(url: str, fallback: str) -> tuple[str, str]:
             encoding = match.group(1)
         text = extract_source_text(raw.decode(encoding, errors='replace'))
         return (text, 'fetched') if len(text) >= 200 else (fallback, 'fallback')
+    except HTTPError as exc:
+        print(
+            f'WARN source_text_fetch_failed url={url} '
+            f'error=HTTPError status={exc.code} reason={exc.reason}',
+            flush=True,
+        )
+        return fallback, 'fallback'
     except Exception as exc:
         print(f'WARN source_text_fetch_failed url={url} error={type(exc).__name__}', flush=True)
         return fallback, 'fallback'
@@ -392,7 +399,15 @@ def normalize_bearer_token(raw: str) -> str:
     return token
 
 
-def llm_provider_chain(endpoint: str, models: list[str], api_key: str) -> list[dict[str, object]]:
+def llm_provider_chain(
+    endpoint: str,
+    models: list[str],
+    api_key: str,
+    *,
+    thinking_enabled: bool | None = None,
+) -> list[dict[str, object]]:
+    if thinking_enabled is None:
+        thinking_enabled = os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}
     providers: list[dict[str, object]] = [
         {
             'name': 'nvidia',
@@ -400,7 +415,7 @@ def llm_provider_chain(endpoint: str, models: list[str], api_key: str) -> list[d
             'models': models,
             'api_key': normalize_bearer_token(api_key),
             'chat_template_kwargs': {'thinking': True}
-            if os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}
+            if thinking_enabled
             else None,
         }
     ]
@@ -437,7 +452,13 @@ def read_non_stream_chat_completion(response) -> tuple[str, str, dict]:
     return content, str(choice.get('finish_reason') or ''), response_data.get('usage') or {}
 
 
-def read_stream_chat_completion(response, *, provider_name: str, model: str) -> tuple[str, str, dict]:
+def read_stream_chat_completion(
+    response,
+    *,
+    task_name: str,
+    provider_name: str,
+    model: str,
+) -> tuple[str, str, dict]:
     content_parts: list[str] = []
     finish_reason = ''
     usage: dict = {}
@@ -460,7 +481,7 @@ def read_stream_chat_completion(response, *, provider_name: str, model: str) -> 
         if first_chunk_seconds is None:
             first_chunk_seconds = time.perf_counter() - started
             print(
-                f'LLM stream provider={provider_name} model={model} '
+                f'LLM stream task={task_name} provider={provider_name} model={model} '
                 f'first_chunk={first_chunk_seconds:.2f}s',
                 flush=True,
             )
@@ -485,7 +506,7 @@ def read_stream_chat_completion(response, *, provider_name: str, model: str) -> 
             if first_content_seconds is None:
                 first_content_seconds = time.perf_counter() - started
                 print(
-                    f'LLM stream provider={provider_name} model={model} '
+                    f'LLM stream task={task_name} provider={provider_name} model={model} '
                     f'first_content={first_content_seconds:.2f}s',
                     flush=True,
                 )
@@ -497,9 +518,21 @@ def read_stream_chat_completion(response, *, provider_name: str, model: str) -> 
     return content, finish_reason, usage
 
 
-def read_chat_completion_response(response, *, provider_name: str, model: str, stream: bool) -> tuple[str, str, dict]:
+def read_chat_completion_response(
+    response,
+    *,
+    task_name: str,
+    provider_name: str,
+    model: str,
+    stream: bool,
+) -> tuple[str, str, dict]:
     if stream:
-        return read_stream_chat_completion(response, provider_name=provider_name, model=model)
+        return read_stream_chat_completion(
+            response,
+            task_name=task_name,
+            provider_name=provider_name,
+            model=model,
+        )
     return read_non_stream_chat_completion(response)
 
 
@@ -510,6 +543,8 @@ def request_deepseek_json(
     api_key: str,
     system_prompt: str,
     user_prompt: str,
+    thinking_enabled: bool | None = None,
+    task_name: str = 'unknown',
 ) -> tuple[dict, dict, str]:
     if not models:
         raise RuntimeError('LLM API model list is empty')
@@ -518,7 +553,7 @@ def request_deepseek_json(
     except ValueError:
         request_timeout = 600
     model_errors: list[str] = []
-    providers = llm_provider_chain(endpoint, models, api_key)
+    providers = llm_provider_chain(endpoint, models, api_key, thinking_enabled=thinking_enabled)
     for provider_index, provider in enumerate(providers):
         provider_name = str(provider['name'])
         provider_endpoint = str(provider['endpoint'])
@@ -526,7 +561,7 @@ def request_deepseek_json(
         provider_models = list(provider['models'])  # type: ignore[arg-type]
         for model_index, model in enumerate(provider_models):
             print(
-                f'LLM API trying provider={provider_name} '
+                f'LLM API task={task_name} trying provider={provider_name} '
                 f'model {model_index + 1}/{len(provider_models)}: {model}',
                 flush=True,
             )
@@ -566,6 +601,7 @@ def request_deepseek_json(
                     with urlopen(request, timeout=request_timeout) as response:
                         content, finish_reason, usage = read_chat_completion_response(
                             response,
+                            task_name=task_name,
                             provider_name=provider_name,
                             model=str(model),
                             stream=bool(payload_body['stream']),
@@ -586,7 +622,7 @@ def request_deepseek_json(
                     if exc.code == 429 and model_index < len(provider_models) - 1:
                         print(
                             f'LLM API provider={provider_name} model={model} HTTP 429 rate limited; '
-                            f'switching model instead of waiting',
+                            f'task={task_name} switching model instead of waiting',
                             flush=True,
                         )
                         break
@@ -600,7 +636,7 @@ def request_deepseek_json(
                         delay = min(retry_after_delay, max_delay)
                         print(
                             f'LLM API provider={provider_name} model={model} transient HTTP {exc.code}; '
-                            f'retrying in {delay}s ({attempt}/3)',
+                            f'task={task_name} retrying in {delay}s ({attempt}/3)',
                             flush=True,
                         )
                         time.sleep(delay)
@@ -609,7 +645,7 @@ def request_deepseek_json(
                     if model_index < len(provider_models) - 1 or provider_index < len(providers) - 1:
                         print(
                             f'LLM API provider={provider_name} model={model} {last_error}; '
-                            'switching model instead of waiting',
+                            f'task={task_name} switching model instead of waiting',
                             flush=True,
                         )
                         break
@@ -617,7 +653,7 @@ def request_deepseek_json(
                         delay = 10 * attempt
                         print(
                             f'LLM API provider={provider_name} model={model} {last_error}; '
-                            f'retrying in {delay}s ({attempt}/3)',
+                            f'task={task_name} retrying in {delay}s ({attempt}/3)',
                             flush=True,
                         )
                         time.sleep(delay)
@@ -627,7 +663,7 @@ def request_deepseek_json(
                         delay = 8 * attempt
                         print(
                             f'LLM API provider={provider_name} model={model} {exc}; '
-                            f'regenerating in {delay}s ({attempt}/3)',
+                            f'task={task_name} regenerating in {delay}s ({attempt}/3)',
                             flush=True,
                         )
                         time.sleep(delay)
@@ -635,13 +671,13 @@ def request_deepseek_json(
             if model_index < len(provider_models) - 1:
                 print(
                     f'LLM API switching model {provider_name}:{model} -> '
-                    f'{provider_name}:{provider_models[model_index + 1]}',
+                    f'{provider_name}:{provider_models[model_index + 1]} task={task_name}',
                     flush=True,
                 )
         if provider_index < len(providers) - 1:
             print(
                 f'LLM API provider {provider_name} exhausted; '
-                f'switching to {providers[provider_index + 1]["name"]}',
+                f'switching to {providers[provider_index + 1]["name"]} task={task_name}',
                 flush=True,
             )
     raise RuntimeError('LLM API model chain exhausted: ' + ' | '.join(model_errors))
@@ -683,6 +719,7 @@ def generate_digest_summary(
         api_key=api_key,
         system_prompt=system_prompt,
         user_prompt=prompt,
+        task_name='digest_summary',
     )
     summary = clean_text(str(result.get('summary', '')))
     if not 30 <= len(summary) <= 140:
@@ -719,6 +756,7 @@ def call_deepseek(
         api_key=api_key,
         system_prompt=system_prompt,
         user_prompt=selection_prompt,
+        task_name='selection',
     )
     candidate_map = {item.url: item for item in candidate_articles}
     selected: list[tuple[Article, str]] = []
@@ -765,6 +803,7 @@ def call_deepseek(
             api_key=api_key,
             system_prompt=system_prompt,
             user_prompt=batch_prompt,
+            task_name=f'editorial_batch_{batch_start // 4 + 1}',
         )
         editorial_calls.append({'model': batch_model, 'usage': batch_usage})
         generated_items = batch_result.get('articles', [])
@@ -850,6 +889,7 @@ def generate_podcast_dialogue_once(
     api_key: str,
     articles: list[Article],
     repair_instruction: str = '',
+    attempt: int = 1,
 ) -> tuple[list[dict[str, str]], dict, str]:
     podcast_prompt = build_podcast_prompt(articles, repair_instruction)
     podcast_result, podcast_usage, podcast_model = request_deepseek_json(
@@ -858,6 +898,7 @@ def generate_podcast_dialogue_once(
         api_key=api_key,
         system_prompt=prompt_template('podcast_generation_system'),
         user_prompt=podcast_prompt,
+        task_name=f'podcast_generation_attempt_{attempt}',
     )
     return parse_podcast_dialogue(podcast_result), podcast_usage, podcast_model
 
@@ -870,6 +911,7 @@ def review_podcast_dialogue(
     articles: list[Article],
     dialogue: list[dict[str, str]],
     structure_issues: list[str],
+    attempt: int = 1,
 ) -> tuple[dict, dict, str]:
     review_prompt = render_prompt(
         'podcast_review_user',
@@ -883,6 +925,7 @@ def review_podcast_dialogue(
         api_key=api_key,
         system_prompt=prompt_template('podcast_review_system'),
         user_prompt=review_prompt,
+        task_name=f'podcast_review_attempt_{attempt}',
     )
     issues = review.get('issues')
     if not isinstance(issues, list):
@@ -964,6 +1007,7 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             api_key=api_key,
             articles=articles,
             repair_instruction=repair_instruction,
+            attempt=attempt,
         )
         structure_issues = validate_podcast_dialogue(dialogue)
         review, review_usage, review_model = review_podcast_dialogue(
@@ -973,6 +1017,7 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             articles=articles,
             dialogue=dialogue,
             structure_issues=structure_issues,
+            attempt=attempt,
         )
 
         attempts.append({
