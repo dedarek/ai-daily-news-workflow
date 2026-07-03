@@ -18,9 +18,10 @@ def prompt_template(path: Path, name: str) -> str:
 
 def render_prompt(path: Path, name: str, **values: str) -> str:
     prompt = prompt_template(path, name)
+    placeholders = set(re.findall(r'\{([a-zA-Z_][a-zA-Z0-9_]*)\}', prompt))
+    missing = sorted(item for item in placeholders if item not in values)
+    if missing:
+        raise RuntimeError(f'Missing placeholder values in prompt {name}: {missing}')
     for key, value in values.items():
         prompt = prompt.replace('{' + key + '}', value)
-    unresolved = re.findall(r'\{[a-zA-Z_][a-zA-Z0-9_]*\}', prompt)
-    if unresolved:
-        raise RuntimeError(f'Unresolved placeholders in prompt {name}: {unresolved}')
     return prompt

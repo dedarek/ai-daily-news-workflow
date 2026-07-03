@@ -87,8 +87,10 @@ jobs:
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          NVIDIA_LLM_BASE_URL: https://integrate.api.nvidia.com/v1
+          NVIDIA_LLM_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2
           OPENCODE_GO_BASE_URL: https://integrate.api.nvidia.com/v1
-          OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3
+          OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2
           OPENCODE_GO_TIMEOUT_SECONDS: "600"
           LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
           LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}

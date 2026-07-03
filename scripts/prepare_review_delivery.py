@@ -126,13 +126,19 @@ def main() -> int:
     api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
     if not api_key:
         raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required for afternoon quality review')
-    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', DEFAULT_LLM_BASE_URL).rstrip('/')
+    endpoint = (
+        os.environ.get('NVIDIA_LLM_BASE_URL')
+        or os.environ.get('OPENCODE_GO_BASE_URL')
+        or DEFAULT_LLM_BASE_URL
+    ).rstrip('/')
+    configured_models = (
+        os.environ.get('NVIDIA_LLM_MODELS')
+        or os.environ.get('OPENCODE_GO_MODELS')
+        or DEFAULT_LLM_MODELS
+    )
     models = [
         item.strip()
-        for item in os.environ.get(
-            'OPENCODE_GO_MODELS',
-            DEFAULT_LLM_MODELS,
-        ).split(',')
+        for item in configured_models.split(',')
         if item.strip()
     ]
     review_prompt = render_prompt(

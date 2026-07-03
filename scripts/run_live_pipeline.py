@@ -31,7 +31,7 @@ SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
 DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
-DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3'
+DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2'
 DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
 DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
@@ -567,10 +567,15 @@ def request_deepseek_json(
 
 
 def llm_config() -> tuple[str, list[str]]:
-    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', DEFAULT_LLM_BASE_URL).rstrip('/')
-    configured_models = os.environ.get(
-        'OPENCODE_GO_MODELS',
-        DEFAULT_LLM_MODELS,
+    endpoint = (
+        os.environ.get('NVIDIA_LLM_BASE_URL')
+        or os.environ.get('OPENCODE_GO_BASE_URL')
+        or DEFAULT_LLM_BASE_URL
+    ).rstrip('/')
+    configured_models = (
+        os.environ.get('NVIDIA_LLM_MODELS')
+        or os.environ.get('OPENCODE_GO_MODELS')
+        or DEFAULT_LLM_MODELS
     )
     models = [model.strip() for model in configured_models.split(',') if model.strip()]
     if not models:
