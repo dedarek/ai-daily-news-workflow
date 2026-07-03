@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Fable5大模型正式解禁",
+    "summary": "因美国撤销限制大模型重新上线。团队为应对安全漏洞 🛡️ 紧急训练了新分类器。所有检测到的异常请求都会被自动重定向。竞品此时趁机 推出了自家的开源模型。",
+    "url": "https://www.marktechpost.com/2026/07/01/anthropic-redeploys-claude-fable-5-on-july-1-after-us-export-controls-lift-adds-new-cybersecurity-classifier/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "音频大模型攻克阿拉伯调式",
+    "summary": "研究团队巧妙地 🎵 微调了音频大模型。他们针对微音程风格设计出专属的新插件。该生成系统 (゜o゜) 能够在本地设备顺利运行。请观看前沿音乐生成演示了解更多细节。这填补了非西方音乐在AI领域的空白。",
+    "url": "https://x.com/StabilityAI/status/2072423193927668193",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌智能助手登陆Mac",
+    "summary": "谷歌昨日将旗下的代理助手推向了苹果电脑。新版本 支持用自然语言下达复杂的指令。这款助手能够在后台管理电子邮件 (⊙o⊙) 并安排日程。这篇谷歌最新动态报道介绍了详情。用户反馈其响应速度 and 准确率都很高。",
+    "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "解耦逻辑解决大模型冲突",
+    "summary": "该研究设计了 解耦冲突分析框架。该系统 🧠 将复杂的冲突上下文拆解为推理图谱。算法借助 强化学习 策略 (๑•̀ㅂ•́) 持续优化内在逻辑。最终7B模型的判定成功率超越了强大的GPT-5.1。",
+    "url": "https://arxiv.org/abs/2508.01273",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "EvoPI框架正式面世",
+    "summary": "一项医学推理对齐研究近日公开发布。该机制能让多模态模型在🧠中实现完全自主学习。其核心的演进原则开源代码也已公布在社区。动态进化监管框架让测试指标最高提升了二四点六。这为智能医疗诊断提供了极其重要的落地参考。",
+    "url": "https://arxiv.org/abs/2606.31800",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "INFUSER提升LLM推理能力",
+    "summary": "科研人员提出了一种全新的自进化框架。该框架使得大模型能以极少监督完成自我改进。实测证明 😲 其数学和编程性能提升超两成。自进化推理算法为未来的推理进化奠定了坚实基础。",
+    "url": "https://arxiv.org/abs/2606.09052",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "BlockPilot解码加速技术发布",
+    "summary": "这套创新算法 ✨ 能够自动预测推理过程的最佳分块。研究团队采用自适应生成策略来具体实现。它的推理速度 ⚡️ 竟然直接飙升了四倍多。这套新架构极其轻量并且支持无缝嵌入现有系统。",
+    "url": "https://huggingface.co/papers/2606.31315",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "日本用AI解决劳动力短缺",
+    "summary": "该国政府正计划研发主权大模型以应对危机。目标是在二零四零年前🤖全面部署千万台机器人。科技巨头们将联手攻克极其复杂的物理AI技术。国家发展主权模型有望大幅提升社会的整体生产率。这将会深刻改变日本制造业未来的生态格局。",
+    "url": "https://www.artificialintelligence-news.com/news/japan-ai-robots-2040-national-ai-model/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "隐私平台Venice晋升独角兽",
+    "summary": "团队刚刚成功完成了一笔巨额的A轮融资。融资总额高达 💰 六千五百万美元极其吸睛。该初创平台 (๑•̀ㅂ•́) 始终专注用户的隐私安全防护。这笔巨资将用于 扩展全球市场业务。",
+    "url": "https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美机构警告偏见防护或违法",
+    "summary": "美国联邦贸易委员会近日颁布了最新政策。如果机器人输出意识形态内容便可能触犯法律。这让不少 ⊙_⊙ 前沿开发者感受到了巨大的监管压力。路透社监管新规揭示了合规运营的潜在风险。大模型厂商们将被迫重新审视自身的安全对齐机制。",
+    "url": "https://www.reuters.com/legal/government/us-ftc-says-ai-bias-safeguards-may-run-afoul-consumer-law-2026-07-01/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国内大模型大打价格战",
+    "summary": "字节与阿里等五家厂牌 📉 纷纷开始集体大降价。各大厂商大打价格战 ＼(◎o◎)／ 只为拼命抢夺开发者。降幅高达九成九的惊人价格跳水让海量用户受惠。这也极大降低了企业调用大模型服务的核心门槛。",
+    "url": "https://aiweekly.co/alerts/five-chinese-ai-labs-cut-token-prices-up-to-99",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美国AI支持率在去年四月突现拐点",
+    "summary": "学者发布美国民众支持人工智能发展调查。数据显示该支持率在去年四月十八日见顶。随后数据竟然 📉 开启了持续下滑趋势。众多网友对此表示 (⊙_⊙) 感到困惑。",
+    "url": "https://www.reddit.com/r/artificial/comments/1ukucjh/what_happened_to_ai_on_april_18_2025/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "服务商高管痛批代币计费是泡沫",
+    "summary": "这种按量收费方式并没有带来实质价值。厂商们在商业变革（AI资讯）中寻求转变。比如S公司已经 💸 开始尝试按效果收费。这种成效付费 (•̀•́) 才能真正通过财务审核。",
+    "url": "https://www.reddit.com/r/artificial/comments/1ukxfb6/servicenows_customer_chief_just_called/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能体协作平台项目开源",
+    "summary": "日常开发时通用的提示词 (っ°Д°;)っ 往往会产生严重的幻觉。这款斩获超高星标的 智能体协作项目 隆重登场。它内部集成了极其丰富的 🧑‍💻 多工种智能体。每一个AI角色都具备独特个性与独立的执行工作流。中小团队如今能够一键构建起专属的全栈开发团队。",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "超级代理开源框架发布",
+    "summary": "传统的软件开发工作流程往往复杂且非常低效。如今开发者可以使用 智能代理开发框架 来大幅度提效。该明星项目当前已经斩获了超过**24.2万**颗星。其极具突破性的测试驱动开发机制让(⊙o⊙)程序员感到十分震惊。",
+    "url": "https://github.com/obra/superpowers",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

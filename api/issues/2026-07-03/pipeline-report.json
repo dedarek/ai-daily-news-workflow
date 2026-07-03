@@ -1,0 +1,100 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-07-03",
+  "content_date": "2026-07-02",
+  "source_url": "https://hex2077.dev/docs/2026-07/2026-07-02/",
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 15,
+  "candidate_data_file": "candidate-news-2026-07-03.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 7,
+    "call_details": {
+      "selection": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1第七轮发言112字，略超110字建议上限；S1第十五轮111字，略超上限；S1第十七轮126字，明显偏长。虽未超160字硬性限制，但影响口播节奏，建议精简。"
+            ],
+            "repair_instruction": "请针对超长轮次进行精简：\n1. S1第七轮可将“这跟谷歌桌面代理在逻辑上其实是一脉相承的，只不过一个在数字空间，一个在物理空间”压缩为“这与谷歌桌面代理逻辑一脉相承，只是分处数字与物理空间”，节省约5字。\n2. S1第十五轮可将“短期看，开发者确实受益，调用门槛大幅降低。但长期看，利润被压缩，资金储备少的实验室可能直接被淘汰”改为“短期开发者受益于门槛降低，但长期利润压缩可能淘汰资金薄弱的实验室”，节省约8字。\n3. S1第十七轮建议拆分为两句或删减修饰词，例如：“不过今天也有一个技术上的好消息。研究人员提出Kcr框架，专门解决大模型的知识冲突问题。它将冲突上下文解耦为推理轨迹，用强化学习训练策略，结果7B模型在冲突裁决上超越了GPT-4o和GPT-5.1。”可减少约20字，同时保持信息完整。"
+          },
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1第七轮发言112字，略超110字建议上限；S1第十五轮111字，略超上限；S1第十七轮126字，明显偏长。虽未超160字硬性限制，但影响口播节奏，建议精简。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今日AI领域多线并进：谷歌代理助手登陆Mac，开源协作框架涌现；模型在推理、音频生成等方面持续突破，但国内大模型价格战白热化，美国监管警告偏见防护可能违法，隐私平台Venice逆势成为独角兽，凸显行业在创新与合规间的博弈。",
+  "podcast_turns": 24,
+  "podcast_script_file": "podcast-script-2026-07-03.json",
+  "podcast_script_text_file": "podcast-script-2026-07-03.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-07-03.txt",
+  "voice_file": "voice-2026-07-03.json",
+  "voice_turns": 24,
+  "tts_mode": "siliconflow-moss-reference-live",
+  "tts_model": "fnlp/MOSS-TTSD-v0.5",
+  "tts_speed": 1.02,
+  "tts_leading_silence_seconds": 0.35,
+  "tts_reference_files": {
+    "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+    "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+  },
+  "html_bytes": 26419,
+  "podcast_bytes": 4248429,
+  "podcast_duration_seconds": 531.02
+}
