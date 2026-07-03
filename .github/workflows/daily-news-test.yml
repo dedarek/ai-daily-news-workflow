@@ -104,9 +104,10 @@ jobs:
           test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret NVIDIA_API_KEY"; exit 1; }
           test -n "$SILICONFLOW_API_KEY" || { echo "::error::Missing GitHub Actions secret SILICONFLOW_API_KEY"; exit 1; }
           FORCE_ARGS=""
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_regenerate }}" = "true" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             FORCE_ARGS="--force-regenerate"
           fi
+          echo "FORCE_ARGS=$FORCE_ARGS"
           python3 scripts/run_news_agent.py \
             --date "${{ steps.issue.outputs.date }}" \
             --output-dir dist \
@@ -195,6 +196,7 @@ jobs:
             echo "- Audience: \`$AUDIENCE\`"
             echo "- Recipients: \`$RECIPIENTS\`"
             echo "- Content mode: DeepAgent-backed material workflow"
+            echo "- Force regenerate: ${{ github.event_name == 'workflow_dispatch' }}"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
             echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
             echo "- Content API: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow/api/latest.json"
