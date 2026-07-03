@@ -32,6 +32,8 @@ FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgca
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
 DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
 DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3'
+DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
+DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
@@ -383,6 +385,47 @@ def extract_json_object(text: str) -> dict:
     return json.loads(text[start:end + 1])
 
 
+def normalize_bearer_token(raw: str) -> str:
+    token = raw.strip()
+    if token.lower().startswith('bearer '):
+        return token[7:].strip()
+    return token
+
+
+def llm_provider_chain(endpoint: str, models: list[str], api_key: str) -> list[dict[str, object]]:
+    providers: list[dict[str, object]] = [
+        {
+            'name': 'nvidia',
+            'endpoint': endpoint,
+            'models': models,
+            'api_key': normalize_bearer_token(api_key),
+            'chat_template_kwargs': {'thinking': True}
+            if os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}
+            else None,
+        }
+    ]
+    lenovo_api_key = normalize_bearer_token(
+        os.environ.get('LENOVO_LLM_API_KEY')
+        or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY', '')
+    )
+    if lenovo_api_key:
+        lenovo_endpoint = os.environ.get('LENOVO_LLM_BASE_URL', DEFAULT_LENOVO_LLM_BASE_URL).rstrip('/')
+        lenovo_models = [
+            item.strip()
+            for item in os.environ.get('LENOVO_LLM_MODELS', DEFAULT_LENOVO_LLM_MODEL).split(',')
+            if item.strip()
+        ]
+        if lenovo_models:
+            providers.append({
+                'name': 'lenovo',
+                'endpoint': lenovo_endpoint,
+                'models': lenovo_models,
+                'api_key': lenovo_api_key,
+                'chat_template_kwargs': {'enable_thinking': False},
+            })
+    return providers
+
+
 def request_deepseek_json(
     *,
     endpoint: str,
@@ -394,108 +437,132 @@ def request_deepseek_json(
     if not models:
         raise RuntimeError('LLM API model list is empty')
     try:
-        request_timeout = max(30, int(os.environ.get('OPENCODE_GO_TIMEOUT_SECONDS', '180')))
+        request_timeout = max(30, int(os.environ.get('OPENCODE_GO_TIMEOUT_SECONDS', '600')))
     except ValueError:
-        request_timeout = 180
+        request_timeout = 600
     model_errors: list[str] = []
-    for model_index, model in enumerate(models):
-        print(f'LLM API trying model {model_index + 1}/{len(models)}: {model}', flush=True)
-        try:
-            max_tokens = max(1, int(os.environ.get('OPENCODE_GO_MAX_TOKENS', '16384')))
-        except ValueError:
-            max_tokens = 16384
-        payload_body = {
-            'model': model,
-            'messages': [
-                {'role': 'system', 'content': system_prompt},
-                {'role': 'user', 'content': user_prompt},
-            ],
-            'temperature': 0.3,
-            'top_p': 0.95,
-            'max_tokens': max_tokens,
-            'stream': False,
-        }
-        if os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}:
-            payload_body['chat_template_kwargs'] = {'thinking': True}
-        payload = json.dumps(payload_body).encode('utf-8')
-        last_error = ''
-        for attempt in range(1, 4):
-            request = Request(
-                f'{endpoint}/chat/completions',
-                data=payload,
-                headers={
-                    'Authorization': f'Bearer {api_key}',
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                    'User-Agent': 'ai-daily-news-workflow/1.0',
-                },
-                method='POST',
+    providers = llm_provider_chain(endpoint, models, api_key)
+    for provider_index, provider in enumerate(providers):
+        provider_name = str(provider['name'])
+        provider_endpoint = str(provider['endpoint'])
+        provider_api_key = str(provider['api_key'])
+        provider_models = list(provider['models'])  # type: ignore[arg-type]
+        for model_index, model in enumerate(provider_models):
+            print(
+                f'LLM API trying provider={provider_name} '
+                f'model {model_index + 1}/{len(provider_models)}: {model}',
+                flush=True,
             )
             try:
-                with urlopen(request, timeout=request_timeout) as response:
-                    response_data = json.loads(response.read().decode('utf-8'))
-                choice = response_data['choices'][0]
-                if choice.get('finish_reason') != 'stop':
-                    raise RuntimeError(f"incomplete response: finish_reason={choice.get('finish_reason')}")
+                max_tokens = max(1, int(os.environ.get('OPENCODE_GO_MAX_TOKENS', '16384')))
+            except ValueError:
+                max_tokens = 16384
+            payload_body = {
+                'model': model,
+                'messages': [
+                    {'role': 'system', 'content': system_prompt},
+                    {'role': 'user', 'content': user_prompt},
+                ],
+                'temperature': 0.3,
+                'top_p': 0.95,
+                'max_tokens': max_tokens,
+                'stream': False,
+            }
+            chat_template_kwargs = provider.get('chat_template_kwargs')
+            if chat_template_kwargs:
+                payload_body['chat_template_kwargs'] = chat_template_kwargs
+            payload = json.dumps(payload_body).encode('utf-8')
+            last_error = ''
+            for attempt in range(1, 4):
+                request = Request(
+                    f'{provider_endpoint}/chat/completions',
+                    data=payload,
+                    headers={
+                        'Authorization': f'Bearer {provider_api_key}',
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'User-Agent': 'ai-daily-news-workflow/1.0',
+                    },
+                    method='POST',
+                )
                 try:
-                    result = extract_json_object(choice['message']['content'])
-                except (json.JSONDecodeError, RuntimeError) as exc:
-                    raise RuntimeError(f'invalid JSON response: {exc}') from exc
-                return result, response_data.get('usage') or {}, model
-            except HTTPError as exc:
-                error_body = exc.read().decode('utf-8', errors='replace')[:1000]
-                last_error = f'HTTP {exc.code}: {error_body}'
-                retryable = exc.code in (429, 500, 502, 503, 504)
-                if not retryable:
-                    break
-                if exc.code == 429 and model_index < len(models) - 1:
-                    print(
-                        f'LLM API model={model} HTTP 429 rate limited; '
-                        f'switching model instead of waiting',
-                        flush=True,
-                    )
-                    break
-                if attempt < 3:
-                    retry_after = exc.headers.get('Retry-After')
-                    retry_after_delay = int(retry_after) if retry_after and retry_after.isdigit() else 20 * attempt
+                    with urlopen(request, timeout=request_timeout) as response:
+                        response_data = json.loads(response.read().decode('utf-8'))
+                    choice = response_data['choices'][0]
+                    if choice.get('finish_reason') != 'stop':
+                        raise RuntimeError(f"incomplete response: finish_reason={choice.get('finish_reason')}")
                     try:
-                        max_delay = max(1, int(os.environ.get('OPENCODE_GO_MAX_RETRY_DELAY', '60')))
-                    except ValueError:
-                        max_delay = 60
-                    delay = min(retry_after_delay, max_delay)
-                    print(
-                        f'LLM API model={model} transient HTTP {exc.code}; '
-                        f'retrying in {delay}s ({attempt}/3)',
-                        flush=True,
-                    )
-                    time.sleep(delay)
-            except (TimeoutError, URLError, OSError) as exc:
-                last_error = f'network error: {type(exc).__name__}: {exc}'
-                if model_index < len(models) - 1:
-                    print(
-                        f'LLM API model={model} {last_error}; switching model instead of waiting',
-                        flush=True,
-                    )
-                    break
-                if attempt < 3:
-                    delay = 10 * attempt
-                    print(
-                        f'LLM API model={model} {last_error}; retrying in {delay}s ({attempt}/3)',
-                        flush=True,
-                    )
-                    time.sleep(delay)
-            except RuntimeError as exc:
-                last_error = str(exc)
-                if attempt < 3:
-                    delay = 8 * attempt
-                    print(
-                        f'LLM API model={model} {exc}; regenerating in {delay}s ({attempt}/3)',
-                        flush=True,
-                    )
-                    time.sleep(delay)
-        model_errors.append(f'{model}: {last_error or "no valid response"}')
-        if model_index < len(models) - 1:
-            print(f'LLM API switching model {model} -> {models[model_index + 1]}', flush=True)
+                        result = extract_json_object(choice['message']['content'])
+                    except (json.JSONDecodeError, RuntimeError) as exc:
+                        raise RuntimeError(f'invalid JSON response: {exc}') from exc
+                    return result, response_data.get('usage') or {}, f'{provider_name}:{model}'
+                except HTTPError as exc:
+                    error_body = exc.read().decode('utf-8', errors='replace')[:1000]
+                    last_error = f'HTTP {exc.code}: {error_body}'
+                    retryable = exc.code in (429, 500, 502, 503, 504)
+                    if not retryable:
+                        break
+                    if exc.code == 429 and model_index < len(provider_models) - 1:
+                        print(
+                            f'LLM API provider={provider_name} model={model} HTTP 429 rate limited; '
+                            f'switching model instead of waiting',
+                            flush=True,
+                        )
+                        break
+                    if attempt < 3:
+                        retry_after = exc.headers.get('Retry-After')
+                        retry_after_delay = int(retry_after) if retry_after and retry_after.isdigit() else 20 * attempt
+                        try:
+                            max_delay = max(1, int(os.environ.get('OPENCODE_GO_MAX_RETRY_DELAY', '60')))
+                        except ValueError:
+                            max_delay = 60
+                        delay = min(retry_after_delay, max_delay)
+                        print(
+                            f'LLM API provider={provider_name} model={model} transient HTTP {exc.code}; '
+                            f'retrying in {delay}s ({attempt}/3)',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+                except (TimeoutError, URLError, OSError) as exc:
+                    last_error = f'network error: {type(exc).__name__}: {exc}'
+                    if model_index < len(provider_models) - 1 or provider_index < len(providers) - 1:
+                        print(
+                            f'LLM API provider={provider_name} model={model} {last_error}; '
+                            'switching model instead of waiting',
+                            flush=True,
+                        )
+                        break
+                    if attempt < 3:
+                        delay = 10 * attempt
+                        print(
+                            f'LLM API provider={provider_name} model={model} {last_error}; '
+                            f'retrying in {delay}s ({attempt}/3)',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+                except RuntimeError as exc:
+                    last_error = str(exc)
+                    if attempt < 3:
+                        delay = 8 * attempt
+                        print(
+                            f'LLM API provider={provider_name} model={model} {exc}; '
+                            f'regenerating in {delay}s ({attempt}/3)',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+            model_errors.append(f'{provider_name}:{model}: {last_error or "no valid response"}')
+            if model_index < len(provider_models) - 1:
+                print(
+                    f'LLM API switching model {provider_name}:{model} -> '
+                    f'{provider_name}:{provider_models[model_index + 1]}',
+                    flush=True,
+                )
+        if provider_index < len(providers) - 1:
+            print(
+                f'LLM API provider {provider_name} exhausted; '
+                f'switching to {providers[provider_index + 1]["name"]}',
+                flush=True,
+            )
     raise RuntimeError('LLM API model chain exhausted: ' + ' | '.join(model_errors))
 
 
