@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-07-03",
+  "reviewed_at": "2026-07-03T16:34:14.437108+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 100,
+    "summary": "成品质量良好，标题、正文、锐评一致，无重复，播客对话自然，所有检查通过。",
+    "issues": [],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "deepseek-ai/deepseek-v4-pro",
+  "usage": {
+    "prompt_tokens": 4934,
+    "completion_tokens": 575,
+    "total_tokens": 5509
+  }
+}
