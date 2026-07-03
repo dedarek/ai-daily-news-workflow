@@ -34,13 +34,25 @@ def render_index(latest: dict, issues: list[dict]) -> str:
     row_parts: list[str] = []
     for item in issues[:30]:
         dialogue_url = item.get('podcast_dialogue_text_url') or item.get('podcast_script_text_url')
-        dialogue_link = f' · <a href="{dialogue_url}">原始对话文本</a>' if dialogue_url else ''
+        dialogue_link = f' · <a href="{dialogue_url}">对话文本</a>' if dialogue_url else ''
+        voice_url = item.get('voice_timeline_url') or item.get('voice_url')
+        voice_link = f' · <a href="{voice_url}">带时间JSON</a>' if voice_url else ''
         row_parts.append(
             f'<li><a href="{item["html_url"]}">{item["issue_date"]}</a>'
-            f' · {item["article_count"]} 条 · <a href="{item["audio_url"]}">播客</a>'
-            f'{dialogue_link}</li>'
+            f' · {item["article_count"]} 条 · <a href="{item["audio_url"]}">音频</a>'
+            f'{dialogue_link}{voice_link}</li>'
         )
     rows = ''.join(row_parts)
+    latest_dialogue_url = latest.get('podcast_dialogue_text_url') or latest.get('podcast_script_text_url')
+    latest_voice_url = latest.get('voice_timeline_url') or latest.get('voice_url')
+    latest_links = [
+        f'<a href="{latest["html_url"]}">日报</a>',
+        f'<a href="{latest["audio_url"]}">音频</a>',
+    ]
+    if latest_dialogue_url:
+        latest_links.append(f'<a href="{latest_dialogue_url}">对话文本</a>')
+    if latest_voice_url:
+        latest_links.append(f'<a href="{latest_voice_url}">带时间JSON</a>')
     return f'''<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -54,7 +66,7 @@ def render_index(latest: dict, issues: list[dict]) -> str:
 </head>
 <body>
   <h1>AI Daily News Content API</h1>
-  <p>最新一期：<a href="{latest["html_url"]}">{latest["issue_date"]}</a></p>
+  <p>最新一期：{latest["issue_date"]} · {' · '.join(latest_links)}</p>
   <h2>API</h2>
   <ul>
     <li><a href="api/latest.json"><code>/api/latest.json</code></a></li>
@@ -64,6 +76,7 @@ def render_index(latest: dict, issues: list[dict]) -> str:
     <li><code>/api/issues/YYYY-MM-DD/articles.json</code></li>
     <li><code>/api/issues/YYYY-MM-DD/podcast-script.json</code></li>
     <li><code>/podcast-dialogue/YYYY-MM-DD.txt</code></li>
+    <li><code>/voice/YYYY-MM-DD.json</code></li>
   </ul>
   <h2>最近期次</h2>
   <ul>{rows}</ul>

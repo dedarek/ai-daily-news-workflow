@@ -41,11 +41,13 @@ DEFAULT_TTS_WARMUP_TEXT = ''
 MOSS_REFERENCE_VOICES = {
     'S1': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
+        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.txt',
         'text_env': 'MOSS_TTS_S1_REFERENCE_TEXT',
         'default_text': '今天我们来聊几个AI行业里的关键变化，重点看它们对产品和企业落地意味着什么。',
     },
     'S2': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_anna_s2.mp3',
+        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_anna_s2.txt',
         'text_env': 'MOSS_TTS_S2_REFERENCE_TEXT',
         'default_text': '我更关心这些变化什么时候能真正落到用户手里，以及企业该怎么判断投入产出。',
     },
@@ -1201,9 +1203,13 @@ def moss_reference_payload(speakers: tuple[str, ...] = ('S1', 'S2')) -> list[dic
     for speaker in speakers:
         config = MOSS_REFERENCE_VOICES[speaker]
         reference_text = os.environ.get(config['text_env'])
+        transcript_path = config.get('transcript_path')
+        if not reference_text and isinstance(transcript_path, Path) and transcript_path.exists():
+            reference_text = transcript_path.read_text(encoding='utf-8').strip()
         if not reference_text:
             raise RuntimeError(
-                f'{config["text_env"]} is required. Set it to the exact transcript of '
+                f'{config["text_env"]} or {config["path"].with_suffix(".txt").relative_to(REPO_ROOT).as_posix()} '
+                f'is required. MOSS-TTSD needs the exact transcript of '
                 f'{config["path"].relative_to(REPO_ROOT).as_posix()}; refusing to use mismatched fallback text.'
             )
         references.append({
@@ -1605,7 +1611,7 @@ def main() -> int:
     if not api_key:
         raise RuntimeError('SILICONFLOW_API_KEY is required; refusing to generate podcast audio')
     leading_silence_seconds = tts_leading_silence_seconds()
-    tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'single_call').strip().lower()
+    tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'per_turn').strip().lower()
     if tts_synthesis_mode in {'per_turn', 'per-turn', 'turns'}:
         tts_synthesis_mode = 'per_turn'
         voice_manifest = synthesize_siliconflow_moss_turns(

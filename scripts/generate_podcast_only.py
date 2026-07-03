@@ -134,7 +134,7 @@ def main() -> int:
         tts_api_key = os.environ.get('SILICONFLOW_API_KEY', '')
         if not tts_api_key:
             raise RuntimeError('SILICONFLOW_API_KEY is required unless --skip-audio is set')
-        tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'single_call').strip().lower()
+        tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'per_turn').strip().lower()
         if tts_synthesis_mode in {'per_turn', 'per-turn', 'turns'}:
             voice_manifest = synthesize_siliconflow_moss_turns(
                 dialogue,
