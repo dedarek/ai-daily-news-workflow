@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from prompt_loader import prompt_template as prompt_template_from_file
@@ -393,6 +393,10 @@ def request_deepseek_json(
 ) -> tuple[dict, dict, str]:
     if not models:
         raise RuntimeError('LLM API model list is empty')
+    try:
+        request_timeout = max(30, int(os.environ.get('OPENCODE_GO_TIMEOUT_SECONDS', '180')))
+    except ValueError:
+        request_timeout = 180
     model_errors: list[str] = []
     for model_index, model in enumerate(models):
         print(f'LLM API trying model {model_index + 1}/{len(models)}: {model}', flush=True)
@@ -428,7 +432,7 @@ def request_deepseek_json(
                 method='POST',
             )
             try:
-                with urlopen(request, timeout=240) as response:
+                with urlopen(request, timeout=request_timeout) as response:
                     response_data = json.loads(response.read().decode('utf-8'))
                 choice = response_data['choices'][0]
                 if choice.get('finish_reason') != 'stop':
@@ -462,6 +466,21 @@ def request_deepseek_json(
                     print(
                         f'LLM API model={model} transient HTTP {exc.code}; '
                         f'retrying in {delay}s ({attempt}/3)',
+                        flush=True,
+                    )
+                    time.sleep(delay)
+            except (TimeoutError, URLError, OSError) as exc:
+                last_error = f'network error: {type(exc).__name__}: {exc}'
+                if model_index < len(models) - 1:
+                    print(
+                        f'LLM API model={model} {last_error}; switching model instead of waiting',
+                        flush=True,
+                    )
+                    break
+                if attempt < 3:
+                    delay = 10 * attempt
+                    print(
+                        f'LLM API model={model} {last_error}; retrying in {delay}s ({attempt}/3)',
                         flush=True,
                     )
                     time.sleep(delay)

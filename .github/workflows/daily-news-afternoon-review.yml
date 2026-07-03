@@ -105,6 +105,7 @@ jobs:
           OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           OPENCODE_GO_BASE_URL: https://integrate.api.nvidia.com/v1
           OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3
+          OPENCODE_GO_TIMEOUT_SECONDS: "180"
         run: |
           test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret NVIDIA_API_KEY"; exit 1; }
           python3 scripts/prepare_review_delivery.py \
