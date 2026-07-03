@@ -344,15 +344,13 @@ def validate_voice_manifest(path: Path) -> list[str]:
         if not isinstance(item, dict):
             issues.append(f'voice.turns[{expected_index}] must be an object')
             continue
-        expected_turn_keys = ['index', 'speaker', 'roleLabel', 'text', 'start', 'end']
+        expected_turn_keys = ['index', 'roleLabel', 'text', 'start', 'end']
         if list(item.keys()) != expected_turn_keys:
             issues.append(f'voice.turns[{expected_index}] keys must be exactly {expected_turn_keys}')
         if item.get('index') != expected_index:
             issues.append(f'voice.turns[{expected_index}].index mismatch')
         if item.get('roleLabel') not in {'S1', 'S2'}:
             issues.append(f'voice.turns[{expected_index}].roleLabel must be S1 or S2')
-        if item.get('speaker') not in {'host', 'analyst'}:
-            issues.append(f'voice.turns[{expected_index}].speaker must be host or analyst')
         if not isinstance(item.get('text'), str) or not item.get('text').strip():
             issues.append(f'voice.turns[{expected_index}].text must be non-empty')
         start = item.get('start')

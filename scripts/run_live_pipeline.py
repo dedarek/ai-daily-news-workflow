@@ -41,13 +41,13 @@ DEFAULT_TTS_WARMUP_TEXT = ''
 MOSS_REFERENCE_VOICES = {
     'S1': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
-        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.txt',
+        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'S1.txt',
         'text_env': 'MOSS_TTS_S1_REFERENCE_TEXT',
         'default_text': '今天我们来聊几个AI行业里的关键变化，重点看它们对产品和企业落地意味着什么。',
     },
     'S2': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_anna_s2.mp3',
-        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_anna_s2.txt',
+        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'S2.txt',
         'text_env': 'MOSS_TTS_S2_REFERENCE_TEXT',
         'default_text': '我更关心这些变化什么时候能真正落到用户手里，以及企业该怎么判断投入产出。',
     },
@@ -1208,7 +1208,7 @@ def moss_reference_payload(speakers: tuple[str, ...] = ('S1', 'S2')) -> list[dic
             reference_text = transcript_path.read_text(encoding='utf-8').strip()
         if not reference_text:
             raise RuntimeError(
-                f'{config["text_env"]} or {config["path"].with_suffix(".txt").relative_to(REPO_ROOT).as_posix()} '
+                f'{config["text_env"]} or {config["transcript_path"].relative_to(REPO_ROOT).as_posix()} '
                 f'is required. MOSS-TTSD needs the exact transcript of '
                 f'{config["path"].relative_to(REPO_ROOT).as_posix()}; refusing to use mismatched fallback text.'
             )
@@ -1440,7 +1440,6 @@ def estimated_voice_turns(
         )
         turns.append({
             'index': index,
-            'speaker': voice_speaker_name(role_label),
             'roleLabel': role_label,
             'text': text,
             'start': round(cursor, 2),
@@ -1523,7 +1522,6 @@ def synthesize_siliconflow_moss_turns(
         end = start + chunk_duration
         turns.append({
             'index': index,
-            'speaker': voice_speaker_name(role_label),
             'roleLabel': role_label,
             'text': text,
             'start': round(start, 2),
