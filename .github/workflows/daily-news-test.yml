@@ -96,11 +96,15 @@ jobs:
           LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
           LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}
           LENOVO_LLM_MODELS: ${{ vars.LENOVO_LLM_MODELS || 'qwen35-122b-a10b-fp8' }}
+          MOSS_TTS_SYNTHESIS_MODE: single_call
+          MOSS_TTS_WARMUP_TEXT: ""
           MOSS_TTS_S1_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S1_REFERENCE_TEXT || vars.MOSS_TTS_S1_REFERENCE_TEXT }}
           MOSS_TTS_S2_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S2_REFERENCE_TEXT || vars.MOSS_TTS_S2_REFERENCE_TEXT }}
         run: |
           test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret NVIDIA_API_KEY"; exit 1; }
           test -n "$SILICONFLOW_API_KEY" || { echo "::error::Missing GitHub Actions secret SILICONFLOW_API_KEY"; exit 1; }
+          test -n "$MOSS_TTS_S1_REFERENCE_TEXT" || { echo "::error::Missing MOSS_TTS_S1_REFERENCE_TEXT exact transcript"; exit 1; }
+          test -n "$MOSS_TTS_S2_REFERENCE_TEXT" || { echo "::error::Missing MOSS_TTS_S2_REFERENCE_TEXT exact transcript"; exit 1; }
           FORCE_ARGS=""
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_regenerate }}" = "true" ]; then
             FORCE_ARGS="--force-regenerate"

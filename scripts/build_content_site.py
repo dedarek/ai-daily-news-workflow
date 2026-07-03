@@ -120,9 +120,11 @@ def main() -> int:
     published_html = site / 'html' / f'{args.date}.html'
     published_audio = site / 'audio' / f'{args.date}.mp3'
     published_dialogue_text = site / 'podcast-dialogue' / f'{args.date}.txt'
+    published_voice = site / 'voice' / f'{args.date}.json'
     published_html.parent.mkdir(parents=True, exist_ok=True)
     published_audio.parent.mkdir(parents=True, exist_ok=True)
     published_dialogue_text.parent.mkdir(parents=True, exist_ok=True)
+    published_voice.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(html_path, published_html)
     shutil.copy2(audio_path, published_audio)
     shutil.copy2(script_text_path, published_dialogue_text)
@@ -146,12 +148,14 @@ def main() -> int:
         'podcast_dialogue_text_url': absolute(args.base_url, f'podcast-dialogue/{args.date}.txt'),
         'podcast_moss_input_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-moss-input.txt'),
         'voice_url': absolute(args.base_url, f'api/issues/{args.date}/voice.json'),
+        'voice_timeline_url': absolute(args.base_url, f'voice/{args.date}.json'),
         'manifest_url': absolute(args.base_url, f'api/issues/{args.date}/manifest.json'),
         'html_url': absolute(args.base_url, f'html/{args.date}.html'),
         'audio_url': absolute(args.base_url, f'audio/{args.date}.mp3'),
     }
     voice['audio'] = issue['audio_url']
     write_json(issue_root / 'voice.json', voice)
+    write_json(published_voice, voice)
     manifest['published_artifacts'] = {
         'index': absolute(args.base_url, f'api/issues/{args.date}/index.json'),
         'candidate_articles': issue['candidate_articles_url'],
@@ -161,6 +165,7 @@ def main() -> int:
         'podcast_dialogue_text': issue['podcast_dialogue_text_url'],
         'podcast_moss_input': issue['podcast_moss_input_url'],
         'voice': issue['voice_url'],
+        'voice_timeline': issue['voice_timeline_url'],
         'html': issue['html_url'],
         'audio': issue['audio_url'],
         'pipeline_report': absolute(args.base_url, f'api/issues/{args.date}/pipeline-report.json'),

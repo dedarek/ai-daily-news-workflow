@@ -20,6 +20,7 @@ from run_live_pipeline import (  # noqa: E402
     generate_podcast_dialogue,
     moss_dialogue_input,
     moss_tts_speed,
+    synthesize_siliconflow_moss_single,
     synthesize_siliconflow_moss_turns,
     tts_leading_silence_seconds,
 )
@@ -133,14 +134,26 @@ def main() -> int:
         tts_api_key = os.environ.get('SILICONFLOW_API_KEY', '')
         if not tts_api_key:
             raise RuntimeError('SILICONFLOW_API_KEY is required unless --skip-audio is set')
-        voice_manifest = synthesize_siliconflow_moss_turns(
-            dialogue,
-            audio_path,
-            voice_path,
-            args.date,
-            tts_api_key,
-            leading_silence_seconds=tts_leading_silence_seconds(),
-        )
+        tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'single_call').strip().lower()
+        if tts_synthesis_mode in {'per_turn', 'per-turn', 'turns'}:
+            voice_manifest = synthesize_siliconflow_moss_turns(
+                dialogue,
+                audio_path,
+                voice_path,
+                args.date,
+                tts_api_key,
+                leading_silence_seconds=tts_leading_silence_seconds(),
+            )
+        else:
+            tts_synthesis_mode = 'single_call'
+            voice_manifest = synthesize_siliconflow_moss_single(
+                dialogue,
+                audio_path,
+                voice_path,
+                args.date,
+                tts_api_key,
+                leading_silence_seconds=tts_leading_silence_seconds(),
+            )
         tts_mode = 'siliconflow-moss-reference-live'
         podcast_bytes = audio_path.stat().st_size
         podcast_duration = safe_duration(audio_path)
@@ -161,6 +174,12 @@ def main() -> int:
         'podcast_duration_seconds': podcast_duration,
         'llm': podcast_metadata,
         'tts_mode': tts_mode,
+        'tts_synthesis_mode': tts_synthesis_mode if not args.skip_audio else None,
+        'voice_timing_source': (
+            'estimated_text_weight' if not args.skip_audio and tts_synthesis_mode == 'single_call'
+            else 'per_turn_audio_duration' if not args.skip_audio
+            else None
+        ),
         'tts_model': MOSS_TTS_MODEL if not args.skip_audio else None,
         'tts_speed': moss_tts_speed() if not args.skip_audio else None,
         'tts_reference_files': {

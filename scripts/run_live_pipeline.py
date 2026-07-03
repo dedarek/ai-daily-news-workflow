@@ -37,10 +37,7 @@ DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
-# MOSS-TTSD 是自回归声学模型，开头几个 token 的韵律/音色上下文尚未稳定（冷启动），
-# 会导致正文前几个词发音质量差。固定一句无信息量的问候作为 warm-up 前导，把冷启动
-# 劣化吸收到这句固定问候上，让正文第一句不再受损。设为空字符串可禁用。
-DEFAULT_TTS_WARMUP_TEXT = '哈喽，大家好，欢迎收听今天的AI日报。'
+DEFAULT_TTS_WARMUP_TEXT = ''
 MOSS_REFERENCE_VOICES = {
     'S1': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
@@ -1205,12 +1202,10 @@ def moss_reference_payload(speakers: tuple[str, ...] = ('S1', 'S2')) -> list[dic
         config = MOSS_REFERENCE_VOICES[speaker]
         reference_text = os.environ.get(config['text_env'])
         if not reference_text:
-            print(
-                f'warning: {config["text_env"]} is not set; using fallback reference text for {speaker}. '
-                'For best MOSS-TTSD quality, set it to the exact transcript of the reference audio.',
-                flush=True,
+            raise RuntimeError(
+                f'{config["text_env"]} is required. Set it to the exact transcript of '
+                f'{config["path"].relative_to(REPO_ROOT).as_posix()}; refusing to use mismatched fallback text.'
             )
-            reference_text = config['default_text']
         references.append({
             'audio': encode_reference_audio(config['path']),
             'text': reference_text,
@@ -1417,6 +1412,70 @@ def concat_audio_chunks(chunk_paths: list[Path], output_path: Path) -> None:
         raise RuntimeError('ffmpeg concat output is empty')
 
 
+def estimated_voice_turns(
+    dialogue: list[dict[str, str]],
+    total_duration: float,
+    *,
+    start_offset: float = 0.0,
+) -> list[dict[str, object]]:
+    weights = [max(1, len(str(turn.get('text', '')).strip())) for turn in dialogue]
+    total_weight = max(1, sum(weights))
+    cursor = min(max(0.0, start_offset), total_duration)
+    available_duration = max(0.0, total_duration - cursor)
+    turns: list[dict[str, object]] = []
+    for index, (turn, weight) in enumerate(zip(dialogue, weights)):
+        role_label = str(turn.get('speaker', '')).strip()
+        text = str(turn.get('text', '')).strip()
+        if role_label not in MOSS_REFERENCE_VOICES or not text:
+            raise RuntimeError(f'Invalid podcast turn for voice timeline at index={index}: {turn!r}')
+        end = total_duration if index == len(dialogue) - 1 else min(
+            total_duration,
+            cursor + available_duration * weight / total_weight,
+        )
+        turns.append({
+            'index': index,
+            'speaker': voice_speaker_name(role_label),
+            'roleLabel': role_label,
+            'text': text,
+            'start': round(cursor, 2),
+            'end': round(end, 2),
+        })
+        cursor = end
+    return turns
+
+
+def synthesize_siliconflow_moss_single(
+    dialogue: list[dict[str, str]],
+    output_path: Path,
+    voice_path: Path,
+    issue_date: str,
+    api_key: str,
+    *,
+    leading_silence_seconds: float = 0.0,
+) -> dict:
+    if not synthesize_siliconflow_moss(
+        dialogue,
+        output_path,
+        api_key,
+        references=moss_reference_payload(('S1', 'S2')),
+        min_bytes=100_000,
+        compress_if_large=True,
+    ):
+        raise RuntimeError('SiliconFlow MOSS-TTSD failed for full dialogue synthesis')
+    if leading_silence_seconds > 0:
+        prepend_audio_silence(output_path, leading_silence_seconds)
+    total_duration = duration(output_path)
+    voice_manifest = {
+        'title': 'AI热点新闻',
+        'date': issue_date,
+        'audio': output_path.relative_to(REPO_ROOT).as_posix(),
+        'duration': round(total_duration, 2),
+        'turns': estimated_voice_turns(dialogue, total_duration, start_offset=leading_silence_seconds),
+    }
+    voice_path.write_text(json.dumps(voice_manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+    return voice_manifest
+
+
 def synthesize_siliconflow_moss_turns(
     dialogue: list[dict[str, str]],
     output_path: Path,
@@ -1546,14 +1605,27 @@ def main() -> int:
     if not api_key:
         raise RuntimeError('SILICONFLOW_API_KEY is required; refusing to generate podcast audio')
     leading_silence_seconds = tts_leading_silence_seconds()
-    voice_manifest = synthesize_siliconflow_moss_turns(
-        dialogue,
-        podcast_path,
-        voice_path,
-        args.date,
-        api_key,
-        leading_silence_seconds=leading_silence_seconds,
-    )
+    tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'single_call').strip().lower()
+    if tts_synthesis_mode in {'per_turn', 'per-turn', 'turns'}:
+        tts_synthesis_mode = 'per_turn'
+        voice_manifest = synthesize_siliconflow_moss_turns(
+            dialogue,
+            podcast_path,
+            voice_path,
+            args.date,
+            api_key,
+            leading_silence_seconds=leading_silence_seconds,
+        )
+    else:
+        tts_synthesis_mode = 'single_call'
+        voice_manifest = synthesize_siliconflow_moss_single(
+            dialogue,
+            podcast_path,
+            voice_path,
+            args.date,
+            api_key,
+            leading_silence_seconds=leading_silence_seconds,
+        )
     tts_mode = 'siliconflow-moss-reference-live'
 
     tmp_html = Path('/tmp') / html_path.name
@@ -1580,6 +1652,8 @@ def main() -> int:
         'voice_file': voice_path.name,
         'voice_turns': len(voice_manifest['turns']),
         'tts_mode': tts_mode,
+        'tts_synthesis_mode': tts_synthesis_mode,
+        'voice_timing_source': 'estimated_text_weight' if tts_synthesis_mode == 'single_call' else 'per_turn_audio_duration',
         'tts_model': MOSS_TTS_MODEL,
         'tts_speed': moss_tts_speed(),
         'tts_leading_silence_seconds': leading_silence_seconds,
