@@ -15,9 +15,9 @@ on:
         default: true
   schedule:
     # 北京时间(UTC+8);一个 fallback + delivery_marker 幂等,补偿 GitHub 定时延迟,只发一次
-    - cron: "51 1 * * *"  # 9:51 北京
-    - cron: "34 3 * * *"  # 11:34 北京
-    - cron: "10 4 * * *"  # 12:10 北京,临时补救
+    - cron: "51 0 * * *"  # 8:51 北京
+    - cron: "34 1 * * *"  # 9:34 北京
+    - cron: "10 3 * * *"  # 11:10 北京,临时补救
 
 concurrency:
   group: ai-daily-news-morning
@@ -85,16 +85,30 @@ jobs:
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          NVIDIA_LLM_BASE_URL: https://integrate.api.nvidia.com/v1
+          NVIDIA_LLM_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2
           OPENCODE_GO_BASE_URL: https://integrate.api.nvidia.com/v1
-          OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3
+          OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2
+          OPENCODE_GO_TIMEOUT_SECONDS: "600"
+          LLM_STREAM: "true"
+          LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
+          LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}
+          LENOVO_LLM_MODELS: ${{ vars.LENOVO_LLM_MODELS || 'qwen35-122b-a10b-fp8' }}
+          MOSS_TTS_SYNTHESIS_MODE: per_turn
+          MOSS_TTS_WARMUP_TEXT: ""
           MOSS_TTS_S1_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S1_REFERENCE_TEXT || vars.MOSS_TTS_S1_REFERENCE_TEXT }}
           MOSS_TTS_S2_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S2_REFERENCE_TEXT || vars.MOSS_TTS_S2_REFERENCE_TEXT }}
         run: |
+          test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret NVIDIA_API_KEY"; exit 1; }
+          test -n "$SILICONFLOW_API_KEY" || { echo "::error::Missing GitHub Actions secret SILICONFLOW_API_KEY"; exit 1; }
           FORCE_ARGS=""
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_regenerate }}" = "true" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             FORCE_ARGS="--force-regenerate"
+            rm -rf dist
           fi
+          echo "FORCE_ARGS=$FORCE_ARGS"
           python3 scripts/run_news_agent.py \
             --date "${{ steps.issue.outputs.date }}" \
             --output-dir dist \
@@ -183,6 +197,7 @@ jobs:
             echo "- Audience: \`$AUDIENCE\`"
             echo "- Recipients: \`$RECIPIENTS\`"
             echo "- Content mode: DeepAgent-backed material workflow"
+            echo "- Force regenerate: ${{ github.event_name == 'workflow_dispatch' }}"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
             echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
             echo "- Content API: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow/api/latest.json"

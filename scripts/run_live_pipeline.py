@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from prompt_loader import prompt_template as prompt_template_from_file
@@ -31,22 +31,23 @@ SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
 DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
-DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3'
+DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2'
+DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
+DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
-# MOSS-TTSD 是自回归声学模型，开头几个 token 的韵律/音色上下文尚未稳定（冷启动），
-# 会导致正文前几个词发音质量差。固定一句无信息量的问候作为 warm-up 前导，把冷启动
-# 劣化吸收到这句固定问候上，让正文第一句不再受损。设为空字符串可禁用。
-DEFAULT_TTS_WARMUP_TEXT = '哈喽，大家好，欢迎收听今天的AI日报。'
+DEFAULT_TTS_WARMUP_TEXT = ''
 MOSS_REFERENCE_VOICES = {
     'S1': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_laochen_s1.wav',
+        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'S1.txt',
         'text_env': 'MOSS_TTS_S1_REFERENCE_TEXT',
         'default_text': '今天我们来聊几个AI行业里的关键变化，重点看它们对产品和企业落地意味着什么。',
     },
     'S2': {
         'path': REPO_ROOT / 'moss-ttsd' / 'references' / 'voice_anna_s2.mp3',
+        'transcript_path': REPO_ROOT / 'moss-ttsd' / 'references' / 'S2.txt',
         'text_env': 'MOSS_TTS_S2_REFERENCE_TEXT',
         'default_text': '我更关心这些变化什么时候能真正落到用户手里，以及企业该怎么判断投入产出。',
     },
@@ -280,6 +281,13 @@ def fetch_source_text(url: str, fallback: str) -> tuple[str, str]:
             encoding = match.group(1)
         text = extract_source_text(raw.decode(encoding, errors='replace'))
         return (text, 'fetched') if len(text) >= 200 else (fallback, 'fallback')
+    except HTTPError as exc:
+        print(
+            f'WARN source_text_fetch_failed url={url} '
+            f'error=HTTPError status={exc.code} reason={exc.reason}',
+            flush=True,
+        )
+        return fallback, 'fallback'
     except Exception as exc:
         print(f'WARN source_text_fetch_failed url={url} error={type(exc).__name__}', flush=True)
         return fallback, 'fallback'
@@ -383,6 +391,150 @@ def extract_json_object(text: str) -> dict:
     return json.loads(text[start:end + 1])
 
 
+def normalize_bearer_token(raw: str) -> str:
+    token = raw.strip()
+    if token.lower().startswith('bearer '):
+        return token[7:].strip()
+    return token
+
+
+def llm_provider_chain(
+    endpoint: str,
+    models: list[str],
+    api_key: str,
+    *,
+    thinking_enabled: bool | None = None,
+) -> list[dict[str, object]]:
+    if thinking_enabled is None:
+        thinking_enabled = os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}
+    providers: list[dict[str, object]] = [
+        {
+            'name': 'nvidia',
+            'endpoint': endpoint,
+            'models': models,
+            'api_key': normalize_bearer_token(api_key),
+            'chat_template_kwargs': {'thinking': True}
+            if thinking_enabled
+            else None,
+        }
+    ]
+    lenovo_api_key = normalize_bearer_token(
+        os.environ.get('LENOVO_LLM_API_KEY')
+        or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY', '')
+    )
+    if lenovo_api_key:
+        lenovo_endpoint = os.environ.get('LENOVO_LLM_BASE_URL', DEFAULT_LENOVO_LLM_BASE_URL).rstrip('/')
+        lenovo_models = [
+            item.strip()
+            for item in os.environ.get('LENOVO_LLM_MODELS', DEFAULT_LENOVO_LLM_MODEL).split(',')
+            if item.strip()
+        ]
+        if lenovo_models:
+            providers.append({
+                'name': 'lenovo',
+                'endpoint': lenovo_endpoint,
+                'models': lenovo_models,
+                'api_key': lenovo_api_key,
+                'chat_template_kwargs': {'enable_thinking': False},
+            })
+    return providers
+
+
+def llm_stream_enabled() -> bool:
+    return os.environ.get('LLM_STREAM', 'true').lower() not in {'0', 'false', 'no'}
+
+
+def read_non_stream_chat_completion(response) -> tuple[str, str, dict]:
+    response_data = json.loads(response.read().decode('utf-8'))
+    choice = response_data['choices'][0]
+    content = choice['message']['content']
+    return content, str(choice.get('finish_reason') or ''), response_data.get('usage') or {}
+
+
+def read_stream_chat_completion(
+    response,
+    *,
+    task_name: str,
+    provider_name: str,
+    model: str,
+) -> tuple[str, str, dict]:
+    content_parts: list[str] = []
+    finish_reason = ''
+    usage: dict = {}
+    started = time.perf_counter()
+    first_chunk_seconds: float | None = None
+    first_content_seconds: float | None = None
+
+    while True:
+        raw_line = response.readline()
+        if raw_line == b'':
+            break
+        line = raw_line.decode('utf-8', errors='replace').strip()
+        if not line or line.startswith(':'):
+            continue
+        if not line.startswith('data:'):
+            continue
+        data = line[5:].strip()
+        if data == '[DONE]':
+            break
+        if first_chunk_seconds is None:
+            first_chunk_seconds = time.perf_counter() - started
+            print(
+                f'LLM stream task={task_name} provider={provider_name} model={model} '
+                f'first_chunk={first_chunk_seconds:.2f}s',
+                flush=True,
+            )
+        try:
+            event = json.loads(data)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(event.get('usage'), dict):
+            usage = event['usage']
+        choices = event.get('choices') or []
+        if not choices:
+            continue
+        choice = choices[0]
+        if choice.get('finish_reason'):
+            finish_reason = str(choice.get('finish_reason'))
+        delta = choice.get('delta') or {}
+        piece = delta.get('content')
+        if piece is None:
+            message = choice.get('message') or {}
+            piece = message.get('content')
+        if piece:
+            if first_content_seconds is None:
+                first_content_seconds = time.perf_counter() - started
+                print(
+                    f'LLM stream task={task_name} provider={provider_name} model={model} '
+                    f'first_content={first_content_seconds:.2f}s',
+                    flush=True,
+                )
+            content_parts.append(str(piece))
+
+    content = ''.join(content_parts)
+    if not content:
+        raise RuntimeError(f'empty streaming response: finish_reason={finish_reason or "unknown"}')
+    return content, finish_reason, usage
+
+
+def read_chat_completion_response(
+    response,
+    *,
+    task_name: str,
+    provider_name: str,
+    model: str,
+    stream: bool,
+) -> tuple[str, str, dict]:
+    if stream:
+        return read_stream_chat_completion(
+            response,
+            task_name=task_name,
+            provider_name=provider_name,
+            model=model,
+        )
+    return read_non_stream_chat_completion(response)
+
+
 def request_deepseek_json(
     *,
     endpoint: str,
@@ -390,101 +542,156 @@ def request_deepseek_json(
     api_key: str,
     system_prompt: str,
     user_prompt: str,
+    thinking_enabled: bool | None = None,
+    task_name: str = 'unknown',
 ) -> tuple[dict, dict, str]:
     if not models:
         raise RuntimeError('LLM API model list is empty')
+    try:
+        request_timeout = max(30, int(os.environ.get('OPENCODE_GO_TIMEOUT_SECONDS', '600')))
+    except ValueError:
+        request_timeout = 600
     model_errors: list[str] = []
-    for model_index, model in enumerate(models):
-        print(f'LLM API trying model {model_index + 1}/{len(models)}: {model}', flush=True)
-        try:
-            max_tokens = max(1, int(os.environ.get('OPENCODE_GO_MAX_TOKENS', '16384')))
-        except ValueError:
-            max_tokens = 16384
-        payload_body = {
-            'model': model,
-            'messages': [
-                {'role': 'system', 'content': system_prompt},
-                {'role': 'user', 'content': user_prompt},
-            ],
-            'temperature': 0.3,
-            'top_p': 0.95,
-            'max_tokens': max_tokens,
-            'stream': False,
-        }
-        if os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}:
-            payload_body['chat_template_kwargs'] = {'thinking': True}
-        payload = json.dumps(payload_body).encode('utf-8')
-        last_error = ''
-        for attempt in range(1, 4):
-            request = Request(
-                f'{endpoint}/chat/completions',
-                data=payload,
-                headers={
-                    'Authorization': f'Bearer {api_key}',
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                    'User-Agent': 'ai-daily-news-workflow/1.0',
-                },
-                method='POST',
+    providers = llm_provider_chain(endpoint, models, api_key, thinking_enabled=thinking_enabled)
+    for provider_index, provider in enumerate(providers):
+        provider_name = str(provider['name'])
+        provider_endpoint = str(provider['endpoint'])
+        provider_api_key = str(provider['api_key'])
+        provider_models = list(provider['models'])  # type: ignore[arg-type]
+        for model_index, model in enumerate(provider_models):
+            print(
+                f'LLM API task={task_name} trying provider={provider_name} '
+                f'model {model_index + 1}/{len(provider_models)}: {model}',
+                flush=True,
             )
             try:
-                with urlopen(request, timeout=240) as response:
-                    response_data = json.loads(response.read().decode('utf-8'))
-                choice = response_data['choices'][0]
-                if choice.get('finish_reason') != 'stop':
-                    raise RuntimeError(f"incomplete response: finish_reason={choice.get('finish_reason')}")
+                max_tokens = max(1, int(os.environ.get('OPENCODE_GO_MAX_TOKENS', '16384')))
+            except ValueError:
+                max_tokens = 16384
+            payload_body = {
+                'model': model,
+                'messages': [
+                    {'role': 'system', 'content': system_prompt},
+                    {'role': 'user', 'content': user_prompt},
+                ],
+                'temperature': 0.3,
+                'top_p': 0.95,
+                'max_tokens': max_tokens,
+                'stream': llm_stream_enabled(),
+            }
+            chat_template_kwargs = provider.get('chat_template_kwargs')
+            if chat_template_kwargs:
+                payload_body['chat_template_kwargs'] = chat_template_kwargs
+            payload = json.dumps(payload_body).encode('utf-8')
+            last_error = ''
+            for attempt in range(1, 4):
+                request = Request(
+                    f'{provider_endpoint}/chat/completions',
+                    data=payload,
+                    headers={
+                        'Authorization': f'Bearer {provider_api_key}',
+                        'Content-Type': 'application/json',
+                        'Accept': 'text/event-stream' if payload_body['stream'] else 'application/json',
+                        'User-Agent': 'ai-daily-news-workflow/1.0',
+                    },
+                    method='POST',
+                )
                 try:
-                    result = extract_json_object(choice['message']['content'])
-                except (json.JSONDecodeError, RuntimeError) as exc:
-                    raise RuntimeError(f'invalid JSON response: {exc}') from exc
-                return result, response_data.get('usage') or {}, model
-            except HTTPError as exc:
-                error_body = exc.read().decode('utf-8', errors='replace')[:1000]
-                last_error = f'HTTP {exc.code}: {error_body}'
-                retryable = exc.code in (429, 500, 502, 503, 504)
-                if not retryable:
-                    break
-                if exc.code == 429 and model_index < len(models) - 1:
-                    print(
-                        f'LLM API model={model} HTTP 429 rate limited; '
-                        f'switching model instead of waiting',
-                        flush=True,
-                    )
-                    break
-                if attempt < 3:
-                    retry_after = exc.headers.get('Retry-After')
-                    retry_after_delay = int(retry_after) if retry_after and retry_after.isdigit() else 20 * attempt
+                    with urlopen(request, timeout=request_timeout) as response:
+                        content, finish_reason, usage = read_chat_completion_response(
+                            response,
+                            task_name=task_name,
+                            provider_name=provider_name,
+                            model=str(model),
+                            stream=bool(payload_body['stream']),
+                        )
+                    if finish_reason and finish_reason != 'stop':
+                        raise RuntimeError(f'incomplete response: finish_reason={finish_reason}')
                     try:
-                        max_delay = max(1, int(os.environ.get('OPENCODE_GO_MAX_RETRY_DELAY', '60')))
-                    except ValueError:
-                        max_delay = 60
-                    delay = min(retry_after_delay, max_delay)
-                    print(
-                        f'LLM API model={model} transient HTTP {exc.code}; '
-                        f'retrying in {delay}s ({attempt}/3)',
-                        flush=True,
-                    )
-                    time.sleep(delay)
-            except RuntimeError as exc:
-                last_error = str(exc)
-                if attempt < 3:
-                    delay = 8 * attempt
-                    print(
-                        f'LLM API model={model} {exc}; regenerating in {delay}s ({attempt}/3)',
-                        flush=True,
-                    )
-                    time.sleep(delay)
-        model_errors.append(f'{model}: {last_error or "no valid response"}')
-        if model_index < len(models) - 1:
-            print(f'LLM API switching model {model} -> {models[model_index + 1]}', flush=True)
+                        result = extract_json_object(content)
+                    except (json.JSONDecodeError, RuntimeError) as exc:
+                        raise RuntimeError(f'invalid JSON response: {exc}') from exc
+                    return result, usage, f'{provider_name}:{model}'
+                except HTTPError as exc:
+                    error_body = exc.read().decode('utf-8', errors='replace')[:1000]
+                    last_error = f'HTTP {exc.code}: {error_body}'
+                    retryable = exc.code in (429, 500, 502, 503, 504)
+                    if not retryable:
+                        break
+                    if exc.code == 429 and model_index < len(provider_models) - 1:
+                        print(
+                            f'LLM API provider={provider_name} model={model} HTTP 429 rate limited; '
+                            f'task={task_name} switching model instead of waiting',
+                            flush=True,
+                        )
+                        break
+                    if attempt < 3:
+                        retry_after = exc.headers.get('Retry-After')
+                        retry_after_delay = int(retry_after) if retry_after and retry_after.isdigit() else 20 * attempt
+                        try:
+                            max_delay = max(1, int(os.environ.get('OPENCODE_GO_MAX_RETRY_DELAY', '60')))
+                        except ValueError:
+                            max_delay = 60
+                        delay = min(retry_after_delay, max_delay)
+                        print(
+                            f'LLM API provider={provider_name} model={model} transient HTTP {exc.code}; '
+                            f'task={task_name} retrying in {delay}s ({attempt}/3)',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+                except (TimeoutError, URLError, OSError) as exc:
+                    last_error = f'network error: {type(exc).__name__}: {exc}'
+                    if model_index < len(provider_models) - 1 or provider_index < len(providers) - 1:
+                        print(
+                            f'LLM API provider={provider_name} model={model} {last_error}; '
+                            f'task={task_name} switching model instead of waiting',
+                            flush=True,
+                        )
+                        break
+                    if attempt < 3:
+                        delay = 10 * attempt
+                        print(
+                            f'LLM API provider={provider_name} model={model} {last_error}; '
+                            f'task={task_name} retrying in {delay}s ({attempt}/3)',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+                except RuntimeError as exc:
+                    last_error = str(exc)
+                    if attempt < 3:
+                        delay = 8 * attempt
+                        print(
+                            f'LLM API provider={provider_name} model={model} {exc}; '
+                            f'task={task_name} regenerating in {delay}s ({attempt}/3)',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+            model_errors.append(f'{provider_name}:{model}: {last_error or "no valid response"}')
+            if model_index < len(provider_models) - 1:
+                print(
+                    f'LLM API switching model {provider_name}:{model} -> '
+                    f'{provider_name}:{provider_models[model_index + 1]} task={task_name}',
+                    flush=True,
+                )
+        if provider_index < len(providers) - 1:
+            print(
+                f'LLM API provider {provider_name} exhausted; '
+                f'switching to {providers[provider_index + 1]["name"]} task={task_name}',
+                flush=True,
+            )
     raise RuntimeError('LLM API model chain exhausted: ' + ' | '.join(model_errors))
 
 
 def llm_config() -> tuple[str, list[str]]:
-    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', DEFAULT_LLM_BASE_URL).rstrip('/')
-    configured_models = os.environ.get(
-        'OPENCODE_GO_MODELS',
-        DEFAULT_LLM_MODELS,
+    endpoint = (
+        os.environ.get('NVIDIA_LLM_BASE_URL')
+        or os.environ.get('OPENCODE_GO_BASE_URL')
+        or DEFAULT_LLM_BASE_URL
+    ).rstrip('/')
+    configured_models = (
+        os.environ.get('NVIDIA_LLM_MODELS')
+        or os.environ.get('OPENCODE_GO_MODELS')
+        or DEFAULT_LLM_MODELS
     )
     models = [model.strip() for model in configured_models.split(',') if model.strip()]
     if not models:
@@ -511,6 +718,7 @@ def generate_digest_summary(
         api_key=api_key,
         system_prompt=system_prompt,
         user_prompt=prompt,
+        task_name='digest_summary',
     )
     summary = clean_text(str(result.get('summary', '')))
     if not 30 <= len(summary) <= 140:
@@ -547,6 +755,7 @@ def call_deepseek(
         api_key=api_key,
         system_prompt=system_prompt,
         user_prompt=selection_prompt,
+        task_name='selection',
     )
     candidate_map = {item.url: item for item in candidate_articles}
     selected: list[tuple[Article, str]] = []
@@ -593,6 +802,7 @@ def call_deepseek(
             api_key=api_key,
             system_prompt=system_prompt,
             user_prompt=batch_prompt,
+            task_name=f'editorial_batch_{batch_start // 4 + 1}',
         )
         editorial_calls.append({'model': batch_model, 'usage': batch_usage})
         generated_items = batch_result.get('articles', [])
@@ -678,6 +888,7 @@ def generate_podcast_dialogue_once(
     api_key: str,
     articles: list[Article],
     repair_instruction: str = '',
+    attempt: int = 1,
 ) -> tuple[list[dict[str, str]], dict, str]:
     podcast_prompt = build_podcast_prompt(articles, repair_instruction)
     podcast_result, podcast_usage, podcast_model = request_deepseek_json(
@@ -686,6 +897,7 @@ def generate_podcast_dialogue_once(
         api_key=api_key,
         system_prompt=prompt_template('podcast_generation_system'),
         user_prompt=podcast_prompt,
+        task_name=f'podcast_generation_attempt_{attempt}',
     )
     return parse_podcast_dialogue(podcast_result), podcast_usage, podcast_model
 
@@ -698,6 +910,7 @@ def review_podcast_dialogue(
     articles: list[Article],
     dialogue: list[dict[str, str]],
     structure_issues: list[str],
+    attempt: int = 1,
 ) -> tuple[dict, dict, str]:
     review_prompt = render_prompt(
         'podcast_review_user',
@@ -711,6 +924,7 @@ def review_podcast_dialogue(
         api_key=api_key,
         system_prompt=prompt_template('podcast_review_system'),
         user_prompt=review_prompt,
+        task_name=f'podcast_review_attempt_{attempt}',
     )
     issues = review.get('issues')
     if not isinstance(issues, list):
@@ -792,6 +1006,7 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             api_key=api_key,
             articles=articles,
             repair_instruction=repair_instruction,
+            attempt=attempt,
         )
         structure_issues = validate_podcast_dialogue(dialogue)
         review, review_usage, review_model = review_podcast_dialogue(
@@ -801,6 +1016,7 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             articles=articles,
             dialogue=dialogue,
             structure_issues=structure_issues,
+            attempt=attempt,
         )
 
         attempts.append({
@@ -982,18 +1198,20 @@ def encode_reference_audio(path: Path) -> str:
     return f'data:{mime_type};base64,{encoded}'
 
 
-def moss_reference_payload() -> list[dict[str, str]]:
+def moss_reference_payload(speakers: tuple[str, ...] = ('S1', 'S2')) -> list[dict[str, str]]:
     references: list[dict[str, str]] = []
-    for speaker in ('S1', 'S2'):
+    for speaker in speakers:
         config = MOSS_REFERENCE_VOICES[speaker]
         reference_text = os.environ.get(config['text_env'])
+        transcript_path = config.get('transcript_path')
+        if not reference_text and isinstance(transcript_path, Path) and transcript_path.exists():
+            reference_text = transcript_path.read_text(encoding='utf-8').strip()
         if not reference_text:
-            print(
-                f'warning: {config["text_env"]} is not set; using fallback reference text for {speaker}. '
-                'For best MOSS-TTSD quality, set it to the exact transcript of the reference audio.',
-                flush=True,
+            raise RuntimeError(
+                f'{config["text_env"]} or {config["transcript_path"].relative_to(REPO_ROOT).as_posix()} '
+                f'is required. MOSS-TTSD needs the exact transcript of '
+                f'{config["path"].relative_to(REPO_ROOT).as_posix()}; refusing to use mismatched fallback text.'
             )
-            reference_text = config['default_text']
         references.append({
             'audio': encode_reference_audio(config['path']),
             'text': reference_text,
@@ -1003,6 +1221,10 @@ def moss_reference_payload() -> list[dict[str, str]]:
 
 def moss_dialogue_input(dialogue: list[dict[str, str]]) -> str:
     return ''.join(f'[{turn["speaker"]}]{turn["text"]}' for turn in dialogue)
+
+
+def voice_speaker_name(role_label: str) -> str:
+    return {'S1': 'host', 'S2': 'analyst'}.get(role_label, role_label.lower())
 
 
 def tts_warmup_text() -> str:
@@ -1090,13 +1312,36 @@ def prepend_audio_silence(path: Path, seconds: float) -> None:
     padded.replace(path)
 
 
-def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Path, api_key: str) -> bool:
+def compress_audio_if_large(path: Path, *, max_bytes: int = 8 * 1024 * 1024) -> None:
+    if not path.exists() or path.stat().st_size <= max_bytes:
+        return
+    compressed = path.with_name(path.stem + '-compressed.mp3')
+    result = subprocess.run(
+        ['ffmpeg', '-y', '-i', str(path), '-codec:a', 'libmp3lame', '-b:a', '48k', str(compressed)],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode == 0 and compressed.exists() and compressed.stat().st_size < path.stat().st_size:
+        compressed.replace(path)
+    elif compressed.exists():
+        compressed.unlink()
+
+
+def synthesize_siliconflow_moss(
+    dialogue: list[dict[str, str]],
+    output_path: Path,
+    api_key: str,
+    *,
+    references: list[dict[str, str]] | None = None,
+    min_bytes: int = 100_000,
+    compress_if_large: bool = True,
+) -> bool:
     speed = moss_tts_speed()
     payload = json.dumps({
         'model': MOSS_TTS_MODEL,
         'stream': True,
         'input': moss_dialogue_input(dialogue),
-        'references': moss_reference_payload(),
+        'references': references if references is not None else moss_reference_payload(),
         'max_tokens': 4096,
         'response_format': 'mp3',
         'speed': speed,
@@ -1118,22 +1363,187 @@ def synthesize_siliconflow_moss(dialogue: list[dict[str, str]], output_path: Pat
     except Exception as exc:
         print(f'MOSS-TTSD failed: {exc}')
         return False
-    if len(audio) < 100_000:
+    if len(audio) < min_bytes:
         print(f'MOSS-TTSD output too small: {len(audio)} bytes')
         return False
     output_path.write_bytes(audio)
-    if output_path.stat().st_size > 8 * 1024 * 1024:
-        compressed = output_path.with_name(output_path.stem + '-compressed.mp3')
-        result = subprocess.run(
-            ['ffmpeg', '-y', '-i', str(output_path), '-codec:a', 'libmp3lame', '-b:a', '48k', str(compressed)],
-            capture_output=True,
-            text=True,
+    if compress_if_large:
+        compress_audio_if_large(output_path)
+    return output_path.exists() and output_path.stat().st_size > min_bytes
+
+
+def concat_audio_chunks(chunk_paths: list[Path], output_path: Path) -> None:
+    if not chunk_paths:
+        raise RuntimeError('No audio chunks to concatenate')
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    concat_list = output_path.with_name(output_path.stem + '-concat.txt')
+
+    def concat_file_line(path: Path) -> str:
+        escaped = path.resolve().as_posix().replace("'", r"'\''")
+        return f"file '{escaped}'\n"
+
+    concat_list.write_text(
+        ''.join(concat_file_line(path) for path in chunk_paths),
+        encoding='utf-8',
+    )
+    copy_result = subprocess.run(
+        ['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', str(concat_list), '-c', 'copy', str(output_path)],
+        capture_output=True,
+        text=True,
+    )
+    if copy_result.returncode == 0 and output_path.exists() and output_path.stat().st_size > 0:
+        return
+    reencode_result = subprocess.run(
+        [
+            'ffmpeg',
+            '-y',
+            '-f',
+            'concat',
+            '-safe',
+            '0',
+            '-i',
+            str(concat_list),
+            '-codec:a',
+            'libmp3lame',
+            '-b:a',
+            '64k',
+            str(output_path),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if reencode_result.returncode != 0:
+        raise RuntimeError(f'ffmpeg concat failed: {reencode_result.stderr[-1000:]}')
+    if not output_path.exists() or output_path.stat().st_size <= 0:
+        raise RuntimeError('ffmpeg concat output is empty')
+
+
+def estimated_voice_turns(
+    dialogue: list[dict[str, str]],
+    total_duration: float,
+    *,
+    start_offset: float = 0.0,
+) -> list[dict[str, object]]:
+    weights = [max(1, len(str(turn.get('text', '')).strip())) for turn in dialogue]
+    total_weight = max(1, sum(weights))
+    cursor = min(max(0.0, start_offset), total_duration)
+    available_duration = max(0.0, total_duration - cursor)
+    turns: list[dict[str, object]] = []
+    for index, (turn, weight) in enumerate(zip(dialogue, weights)):
+        role_label = str(turn.get('speaker', '')).strip()
+        text = str(turn.get('text', '')).strip()
+        if role_label not in MOSS_REFERENCE_VOICES or not text:
+            raise RuntimeError(f'Invalid podcast turn for voice timeline at index={index}: {turn!r}')
+        end = total_duration if index == len(dialogue) - 1 else min(
+            total_duration,
+            cursor + available_duration * weight / total_weight,
         )
-        if result.returncode == 0 and compressed.stat().st_size < output_path.stat().st_size:
-            compressed.replace(output_path)
-        elif compressed.exists():
-            compressed.unlink()
-    return output_path.exists() and output_path.stat().st_size > 100_000
+        turns.append({
+            'index': index,
+            'roleLabel': role_label,
+            'text': text,
+            'start': round(cursor, 2),
+            'end': round(end, 2),
+        })
+        cursor = end
+    return turns
+
+
+def synthesize_siliconflow_moss_single(
+    dialogue: list[dict[str, str]],
+    output_path: Path,
+    voice_path: Path,
+    issue_date: str,
+    api_key: str,
+    *,
+    leading_silence_seconds: float = 0.0,
+) -> dict:
+    if not synthesize_siliconflow_moss(
+        dialogue,
+        output_path,
+        api_key,
+        references=moss_reference_payload(('S1', 'S2')),
+        min_bytes=100_000,
+        compress_if_large=True,
+    ):
+        raise RuntimeError('SiliconFlow MOSS-TTSD failed for full dialogue synthesis')
+    if leading_silence_seconds > 0:
+        prepend_audio_silence(output_path, leading_silence_seconds)
+    total_duration = duration(output_path)
+    voice_manifest = {
+        'title': 'AI热点新闻',
+        'date': issue_date,
+        'audio': output_path.relative_to(REPO_ROOT).as_posix(),
+        'duration': round(total_duration, 2),
+        'turns': estimated_voice_turns(dialogue, total_duration, start_offset=leading_silence_seconds),
+    }
+    voice_path.write_text(json.dumps(voice_manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+    return voice_manifest
+
+
+def synthesize_siliconflow_moss_turns(
+    dialogue: list[dict[str, str]],
+    output_path: Path,
+    voice_path: Path,
+    issue_date: str,
+    api_key: str,
+    *,
+    leading_silence_seconds: float = 0.0,
+) -> dict:
+    chunk_dir = output_path.parent / 'voice-chunks' / issue_date
+    if chunk_dir.exists():
+        shutil.rmtree(chunk_dir)
+    chunk_dir.mkdir(parents=True, exist_ok=True)
+
+    chunk_paths: list[Path] = []
+    turns: list[dict[str, object]] = []
+    cursor = leading_silence_seconds
+    for index, turn in enumerate(dialogue):
+        role_label = str(turn.get('speaker', '')).strip()
+        text = str(turn.get('text', '')).strip()
+        if role_label not in MOSS_REFERENCE_VOICES or not text:
+            raise RuntimeError(f'Invalid podcast turn for voice generation at index={index}: {turn!r}')
+
+        chunk_path = chunk_dir / f'{index:03d}-{role_label}.mp3'
+        single_turn_dialogue = [{'speaker': 'S1', 'text': text}]
+        references = moss_reference_payload((role_label,))
+        if not synthesize_siliconflow_moss(
+            single_turn_dialogue,
+            chunk_path,
+            api_key,
+            references=references,
+            min_bytes=5_000,
+            compress_if_large=False,
+        ):
+            raise RuntimeError(f'SiliconFlow MOSS-TTSD failed for turn index={index} speaker={role_label}')
+
+        chunk_duration = duration(chunk_path)
+        start = cursor
+        end = start + chunk_duration
+        turns.append({
+            'index': index,
+            'roleLabel': role_label,
+            'text': text,
+            'start': round(start, 2),
+            'end': round(end, 2),
+        })
+        cursor = end
+        chunk_paths.append(chunk_path)
+
+    concat_audio_chunks(chunk_paths, output_path)
+    if leading_silence_seconds > 0:
+        prepend_audio_silence(output_path, leading_silence_seconds)
+    compress_audio_if_large(output_path)
+
+    voice_manifest = {
+        'title': 'AI热点新闻',
+        'date': issue_date,
+        'audio': output_path.relative_to(REPO_ROOT).as_posix(),
+        'duration': round(duration(output_path), 2),
+        'turns': turns,
+    }
+    voice_path.write_text(json.dumps(voice_manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+    return voice_manifest
 
 
 def duration(path: Path) -> float:
@@ -1166,6 +1576,7 @@ def main() -> int:
     podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
     podcast_script_text_path = output_dir / f'podcast-script-{args.date}.txt'
     moss_input_path = output_dir / f'podcast-moss-input-{args.date}.txt'
+    voice_path = output_dir / f'voice-{args.date}.json'
     dialogue = apply_tts_warmup(dialogue)
     render_html(args.date, content_date, articles, html_path, digest_summary)
     candidate_data_path.write_text(
@@ -1197,10 +1608,28 @@ def main() -> int:
     api_key = os.environ.get('SILICONFLOW_API_KEY', '')
     if not api_key:
         raise RuntimeError('SILICONFLOW_API_KEY is required; refusing to generate podcast audio')
-    if not synthesize_siliconflow_moss(dialogue, podcast_path, api_key):
-        raise RuntimeError('SiliconFlow MOSS-TTSD failed; refusing to publish podcast audio')
     leading_silence_seconds = tts_leading_silence_seconds()
-    prepend_audio_silence(podcast_path, leading_silence_seconds)
+    tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'per_turn').strip().lower()
+    if tts_synthesis_mode in {'per_turn', 'per-turn', 'turns'}:
+        tts_synthesis_mode = 'per_turn'
+        voice_manifest = synthesize_siliconflow_moss_turns(
+            dialogue,
+            podcast_path,
+            voice_path,
+            args.date,
+            api_key,
+            leading_silence_seconds=leading_silence_seconds,
+        )
+    else:
+        tts_synthesis_mode = 'single_call'
+        voice_manifest = synthesize_siliconflow_moss_single(
+            dialogue,
+            podcast_path,
+            voice_path,
+            args.date,
+            api_key,
+            leading_silence_seconds=leading_silence_seconds,
+        )
     tts_mode = 'siliconflow-moss-reference-live'
 
     tmp_html = Path('/tmp') / html_path.name
@@ -1224,7 +1653,11 @@ def main() -> int:
         'podcast_script_file': podcast_script_path.name,
         'podcast_script_text_file': podcast_script_text_path.name,
         'podcast_moss_input_file': moss_input_path.name,
+        'voice_file': voice_path.name,
+        'voice_turns': len(voice_manifest['turns']),
         'tts_mode': tts_mode,
+        'tts_synthesis_mode': tts_synthesis_mode,
+        'voice_timing_source': 'estimated_text_weight' if tts_synthesis_mode == 'single_call' else 'per_turn_audio_duration',
         'tts_model': MOSS_TTS_MODEL,
         'tts_speed': moss_tts_speed(),
         'tts_leading_silence_seconds': leading_silence_seconds,

@@ -52,6 +52,26 @@ Array of article objects:
 }
 ```
 
+## `voice-YYYY-MM-DD.json`
+
+```json
+{
+  "title": "AI热点新闻",
+  "date": "YYYY-MM-DD",
+  "audio": "dist/daily-news-podcast-YYYY-MM-DD.mp3",
+  "duration": 123.45,
+  "turns": [
+    {
+      "index": 0,
+      "roleLabel": "S1",
+      "text": "string",
+      "start": 0.0,
+      "end": 4.2
+    }
+  ]
+}
+```
+
 ## `manifest-YYYY-MM-DD.json`
 
 ```json

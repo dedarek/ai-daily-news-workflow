@@ -15,8 +15,8 @@ on:
         default: false
   schedule:
     # 北京时间(UTC+8);提前定时补偿 GitHub 延迟,依赖 morning 已发布(内置等待+幂等)
-    - cron: "30 5 * * *"  # 13:30 北京
-    - cron: "0 6 * * *"   # 14:00 北京
+    - cron: "30 4 * * *"  # 12:30 北京
+    - cron: "0 5 * * *"   # 13:00 北京
 
 concurrency:
   group: ai-daily-news-afternoon
@@ -101,10 +101,19 @@ jobs:
       - name: Download and independently review published issue
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          NVIDIA_LLM_BASE_URL: https://integrate.api.nvidia.com/v1
+          NVIDIA_LLM_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2
           OPENCODE_GO_BASE_URL: https://integrate.api.nvidia.com/v1
-          OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,minimaxai/minimax-m3
+          OPENCODE_GO_MODELS: deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2
+          OPENCODE_GO_TIMEOUT_SECONDS: "600"
+          LLM_STREAM: "true"
+          LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
+          LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}
+          LENOVO_LLM_MODELS: ${{ vars.LENOVO_LLM_MODELS || 'qwen35-122b-a10b-fp8' }}
         run: |
+          test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret NVIDIA_API_KEY"; exit 1; }
           python3 scripts/prepare_review_delivery.py \
             --date "${{ steps.issue.outputs.date }}" \
             --base-url "$CONTENT_BASE_URL" \

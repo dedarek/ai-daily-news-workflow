@@ -68,6 +68,7 @@ def main() -> int:
     articles = get_json(published['articles'])
     candidate_articles = get_json(published['candidate_articles']) if published.get('candidate_articles') else []
     podcast_script = get_json(published['podcast_script'])
+    voice = get_json(published['voice']) if published.get('voice') else None
     html_bytes = get_bytes(published['html'])
     audio_bytes = get_bytes(published['audio'])
     write_json_file(output_dir / f'manifest-{args.date}.json', manifest)
@@ -82,6 +83,8 @@ def main() -> int:
         json.dumps(podcast_script, ensure_ascii=False, indent=2),
         encoding='utf-8',
     )
+    if voice:
+        write_json_file(output_dir / f'voice-{args.date}.json', voice)
     (output_dir / f'daily-news-{args.date}.html').write_bytes(html_bytes)
     (output_dir / f'daily-news-podcast-{args.date}.mp3').write_bytes(audio_bytes)
     write_podcast_text(output_dir / f'podcast-script-{args.date}.txt', podcast_script)
@@ -123,13 +126,19 @@ def main() -> int:
     api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
     if not api_key:
         raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required for afternoon quality review')
-    endpoint = os.environ.get('OPENCODE_GO_BASE_URL', DEFAULT_LLM_BASE_URL).rstrip('/')
+    endpoint = (
+        os.environ.get('NVIDIA_LLM_BASE_URL')
+        or os.environ.get('OPENCODE_GO_BASE_URL')
+        or DEFAULT_LLM_BASE_URL
+    ).rstrip('/')
+    configured_models = (
+        os.environ.get('NVIDIA_LLM_MODELS')
+        or os.environ.get('OPENCODE_GO_MODELS')
+        or DEFAULT_LLM_MODELS
+    )
     models = [
         item.strip()
-        for item in os.environ.get(
-            'OPENCODE_GO_MODELS',
-            DEFAULT_LLM_MODELS,
-        ).split(',')
+        for item in configured_models.split(',')
         if item.strip()
     ]
     review_prompt = render_prompt(
@@ -145,6 +154,8 @@ def main() -> int:
         api_key=api_key,
         system_prompt=prompt_template(NEWS_PROMPTS_FILE, 'afternoon_review_system'),
         user_prompt=review_prompt,
+        thinking_enabled=False,
+        task_name='afternoon_review',
     )
     score = int(review.get('score', 0))
     checks = review.get('checks') or {}

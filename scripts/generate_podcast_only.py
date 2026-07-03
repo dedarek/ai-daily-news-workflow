@@ -20,7 +20,9 @@ from run_live_pipeline import (  # noqa: E402
     generate_podcast_dialogue,
     moss_dialogue_input,
     moss_tts_speed,
-    synthesize_siliconflow_moss,
+    synthesize_siliconflow_moss_single,
+    synthesize_siliconflow_moss_turns,
+    tts_leading_silence_seconds,
 )
 
 
@@ -98,6 +100,7 @@ def main() -> int:
     script_txt_path = output_dir / f'podcast-script-{args.date}.txt'
     moss_input_path = output_dir / f'podcast-moss-input-{args.date}.txt'
     audio_path = output_dir / f'daily-news-podcast-{args.date}.mp3'
+    voice_path = output_dir / f'voice-{args.date}.json'
     report_path = output_dir / f'podcast-only-report-{args.date}.json'
 
     script_json_path.write_text(
@@ -122,6 +125,7 @@ def main() -> int:
     tts_mode = 'skipped'
     podcast_bytes = 0
     podcast_duration = 0.0
+    voice_manifest: dict | None = None
     if not args.skip_audio:
         if args.s1_reference_text:
             os.environ['MOSS_TTS_S1_REFERENCE_TEXT'] = args.s1_reference_text
@@ -130,8 +134,26 @@ def main() -> int:
         tts_api_key = os.environ.get('SILICONFLOW_API_KEY', '')
         if not tts_api_key:
             raise RuntimeError('SILICONFLOW_API_KEY is required unless --skip-audio is set')
-        if not synthesize_siliconflow_moss(dialogue, audio_path, tts_api_key):
-            raise RuntimeError('SiliconFlow MOSS-TTSD failed')
+        tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'per_turn').strip().lower()
+        if tts_synthesis_mode in {'per_turn', 'per-turn', 'turns'}:
+            voice_manifest = synthesize_siliconflow_moss_turns(
+                dialogue,
+                audio_path,
+                voice_path,
+                args.date,
+                tts_api_key,
+                leading_silence_seconds=tts_leading_silence_seconds(),
+            )
+        else:
+            tts_synthesis_mode = 'single_call'
+            voice_manifest = synthesize_siliconflow_moss_single(
+                dialogue,
+                audio_path,
+                voice_path,
+                args.date,
+                tts_api_key,
+                leading_silence_seconds=tts_leading_silence_seconds(),
+            )
         tts_mode = 'siliconflow-moss-reference-live'
         podcast_bytes = audio_path.stat().st_size
         podcast_duration = safe_duration(audio_path)
@@ -146,10 +168,18 @@ def main() -> int:
         'podcast_script_txt': str(script_txt_path),
         'podcast_moss_input': str(moss_input_path),
         'podcast_audio': str(audio_path) if audio_path.exists() else None,
+        'voice_json': str(voice_path) if voice_path.exists() else None,
+        'voice_turns': len(voice_manifest['turns']) if voice_manifest else 0,
         'podcast_bytes': podcast_bytes,
         'podcast_duration_seconds': podcast_duration,
         'llm': podcast_metadata,
         'tts_mode': tts_mode,
+        'tts_synthesis_mode': tts_synthesis_mode if not args.skip_audio else None,
+        'voice_timing_source': (
+            'estimated_text_weight' if not args.skip_audio and tts_synthesis_mode == 'single_call'
+            else 'per_turn_audio_duration' if not args.skip_audio
+            else None
+        ),
         'tts_model': MOSS_TTS_MODEL if not args.skip_audio else None,
         'tts_speed': moss_tts_speed() if not args.skip_audio else None,
         'tts_reference_files': {

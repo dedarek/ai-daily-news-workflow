@@ -34,13 +34,25 @@ def render_index(latest: dict, issues: list[dict]) -> str:
     row_parts: list[str] = []
     for item in issues[:30]:
         dialogue_url = item.get('podcast_dialogue_text_url') or item.get('podcast_script_text_url')
-        dialogue_link = f' · <a href="{dialogue_url}">原始对话文本</a>' if dialogue_url else ''
+        dialogue_link = f' · <a href="{dialogue_url}">对话文本</a>' if dialogue_url else ''
+        voice_url = item.get('voice_timeline_url') or item.get('voice_url')
+        voice_link = f' · <a href="{voice_url}">带时间JSON</a>' if voice_url else ''
         row_parts.append(
             f'<li><a href="{item["html_url"]}">{item["issue_date"]}</a>'
-            f' · {item["article_count"]} 条 · <a href="{item["audio_url"]}">播客</a>'
-            f'{dialogue_link}</li>'
+            f' · {item["article_count"]} 条 · <a href="{item["audio_url"]}">音频</a>'
+            f'{dialogue_link}{voice_link}</li>'
         )
     rows = ''.join(row_parts)
+    latest_dialogue_url = latest.get('podcast_dialogue_text_url') or latest.get('podcast_script_text_url')
+    latest_voice_url = latest.get('voice_timeline_url') or latest.get('voice_url')
+    latest_links = [
+        f'<a href="{latest["html_url"]}">日报</a>',
+        f'<a href="{latest["audio_url"]}">音频</a>',
+    ]
+    if latest_dialogue_url:
+        latest_links.append(f'<a href="{latest_dialogue_url}">对话文本</a>')
+    if latest_voice_url:
+        latest_links.append(f'<a href="{latest_voice_url}">带时间JSON</a>')
     return f'''<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -54,7 +66,7 @@ def render_index(latest: dict, issues: list[dict]) -> str:
 </head>
 <body>
   <h1>AI Daily News Content API</h1>
-  <p>最新一期：<a href="{latest["html_url"]}">{latest["issue_date"]}</a></p>
+  <p>最新一期：{latest["issue_date"]} · {' · '.join(latest_links)}</p>
   <h2>API</h2>
   <ul>
     <li><a href="api/latest.json"><code>/api/latest.json</code></a></li>
@@ -64,6 +76,7 @@ def render_index(latest: dict, issues: list[dict]) -> str:
     <li><code>/api/issues/YYYY-MM-DD/articles.json</code></li>
     <li><code>/api/issues/YYYY-MM-DD/podcast-script.json</code></li>
     <li><code>/podcast-dialogue/YYYY-MM-DD.txt</code></li>
+    <li><code>/voice/YYYY-MM-DD.json</code></li>
   </ul>
   <h2>最近期次</h2>
   <ul>{rows}</ul>
@@ -93,6 +106,7 @@ def main() -> int:
     script_path = first_existing([dist / f'podcast-script-{args.date}.json'], 'podcast script')
     script_text_path = first_existing([dist / f'podcast-script-{args.date}.txt'], 'podcast script text')
     moss_input_path = first_existing([dist / f'podcast-moss-input-{args.date}.txt'], 'podcast moss input')
+    voice_path = first_existing([dist / f'voice-{args.date}.json'], 'voice timeline')
     html_path = first_existing(
         [dist / f'daily-news-{args.date}.html', dist / f'ai-daily-news-html-{args.date}.html'],
         'html',
@@ -107,6 +121,7 @@ def main() -> int:
     candidate_articles = read_json(candidate_articles_path)
     articles = read_json(articles_path)
     podcast_script = read_json(script_path)
+    voice = read_json(voice_path)
     issue_root = site / 'api' / 'issues' / args.date
     write_json(issue_root / 'candidate-news.json', candidate_articles)
     write_json(issue_root / 'articles.json', articles)
@@ -118,9 +133,11 @@ def main() -> int:
     published_html = site / 'html' / f'{args.date}.html'
     published_audio = site / 'audio' / f'{args.date}.mp3'
     published_dialogue_text = site / 'podcast-dialogue' / f'{args.date}.txt'
+    published_voice = site / 'voice' / f'{args.date}.json'
     published_html.parent.mkdir(parents=True, exist_ok=True)
     published_audio.parent.mkdir(parents=True, exist_ok=True)
     published_dialogue_text.parent.mkdir(parents=True, exist_ok=True)
+    published_voice.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(html_path, published_html)
     shutil.copy2(audio_path, published_audio)
     shutil.copy2(script_text_path, published_dialogue_text)
@@ -143,10 +160,15 @@ def main() -> int:
         'podcast_script_text_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.txt'),
         'podcast_dialogue_text_url': absolute(args.base_url, f'podcast-dialogue/{args.date}.txt'),
         'podcast_moss_input_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-moss-input.txt'),
+        'voice_url': absolute(args.base_url, f'api/issues/{args.date}/voice.json'),
+        'voice_timeline_url': absolute(args.base_url, f'voice/{args.date}.json'),
         'manifest_url': absolute(args.base_url, f'api/issues/{args.date}/manifest.json'),
         'html_url': absolute(args.base_url, f'html/{args.date}.html'),
         'audio_url': absolute(args.base_url, f'audio/{args.date}.mp3'),
     }
+    voice['audio'] = issue['audio_url']
+    write_json(issue_root / 'voice.json', voice)
+    write_json(published_voice, voice)
     manifest['published_artifacts'] = {
         'index': absolute(args.base_url, f'api/issues/{args.date}/index.json'),
         'candidate_articles': issue['candidate_articles_url'],
@@ -155,6 +177,8 @@ def main() -> int:
         'podcast_script_text': issue['podcast_script_text_url'],
         'podcast_dialogue_text': issue['podcast_dialogue_text_url'],
         'podcast_moss_input': issue['podcast_moss_input_url'],
+        'voice': issue['voice_url'],
+        'voice_timeline': issue['voice_timeline_url'],
         'html': issue['html_url'],
         'audio': issue['audio_url'],
         'pipeline_report': absolute(args.base_url, f'api/issues/{args.date}/pipeline-report.json'),
