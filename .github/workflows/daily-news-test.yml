@@ -106,6 +106,7 @@ jobs:
           FORCE_ARGS=""
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             FORCE_ARGS="--force-regenerate"
+            rm -rf dist
           fi
           echo "FORCE_ARGS=$FORCE_ARGS"
           python3 scripts/run_news_agent.py \
