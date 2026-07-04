@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-07-04",
+  "reviewed_at": "2026-07-04T15:22:04.299793+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "内容整体质量较高，事实一致、无重复，播客对话自然；仅存在个别措辞可优化的细节问题。",
+    "issues": [
+      "锐评中“成本减半的潜力受限于软件生态和吞吐量短板”与正文“实际测试显示其单流吞吐量并不算高”表述一致，但锐评可更直接点出‘宣传与实际部署的落差’。",
+      "播客中提及“GLM5.2在上面跑得不错”，但正文未明确给出GLM5.2在该卡上的具体性能数据，仅提及“适配GLM5.2等模型的表现评价不一”，口语化表达可稍作限定以避免误解。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+  "usage": {}
+}
