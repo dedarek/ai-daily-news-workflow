@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-07-03",
-  "content_date": "2026-07-02",
-  "published_at": "2026-07-03T04:07:26.752374+00:00",
+  "issue_date": "2026-07-04",
+  "content_date": "2026-07-04",
+  "published_at": "2026-07-04T04:57:19.141508+00:00",
   "article_count": 12,
-  "podcast_turns": 24,
+  "podcast_turns": 20,
   "tts_mode": "siliconflow-moss-reference-live",
   "tts_model": "fnlp/MOSS-TTSD-v0.5",
   "tts_speed": 1.02,
@@ -62,10 +62,8 @@
           "structure_issues": [],
           "review": {
             "pass": true,
-            "issues": [
-              "S1第七轮发言112字，略超110字建议上限；S1第十五轮111字，略超上限；S1第十七轮126字，明显偏长。虽未超160字硬性限制，但影响口播节奏，建议精简。"
-            ],
-            "repair_instruction": "请针对超长轮次进行精简：\n1. S1第七轮可将“这跟谷歌桌面代理在逻辑上其实是一脉相承的，只不过一个在数字空间，一个在物理空间”压缩为“这与谷歌桌面代理逻辑一脉相承，只是分处数字与物理空间”，节省约5字。\n2. S1第十五轮可将“短期看，开发者确实受益，调用门槛大幅降低。但长期看，利润被压缩，资金储备少的实验室可能直接被淘汰”改为“短期开发者受益于门槛降低，但长期利润压缩可能淘汰资金薄弱的实验室”，节省约8字。\n3. S1第十七轮建议拆分为两句或删减修饰词，例如：“不过今天也有一个技术上的好消息。研究人员提出Kcr框架，专门解决大模型的知识冲突问题。它将冲突上下文解耦为推理轨迹，用强化学习训练策略，结果7B模型在冲突裁决上超越了GPT-4o和GPT-5.1。”可减少约20字，同时保持信息完整。"
+            "issues": [],
+            "repair_instruction": ""
           },
           "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
           "review_usage": {}
@@ -75,23 +73,22 @@
         "attempts": 1,
         "best_attempt": 1,
         "final_pass": true,
-        "final_issues": [
-          "S1第七轮发言112字，略超110字建议上限；S1第十五轮111字，略超上限；S1第十七轮126字，明显偏长。虽未超160字硬性限制，但影响口播节奏，建议精简。"
-        ],
+        "final_issues": [],
         "structure_issues": [],
         "loop_exhausted": false,
         "converged": false
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-03/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-03/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-03/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-03/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-03.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-03/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-03/voice.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-03/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-03.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-03.mp3"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-04/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-04/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-04/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-04/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-04.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-04/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-04/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-04.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-04/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-04.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-04.mp3"
 }

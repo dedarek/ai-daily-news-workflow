@@ -1,0 +1,98 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-07-04",
+  "content_date": "2026-07-04",
+  "source_url": "https://hex2077.dev/docs/2026-07/2026-07-04/",
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 15,
+  "candidate_data_file": "candidate-news-2026-07-04.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 7,
+    "call_details": {
+      "selection": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [],
+            "repair_instruction": ""
+          },
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今天的AI动态集中在模型能力、产品落地与开源生态的持续演进，企业应用和开发者工具仍是主要竞争焦点。",
+  "podcast_turns": 20,
+  "podcast_script_file": "podcast-script-2026-07-04.json",
+  "podcast_script_text_file": "podcast-script-2026-07-04.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-07-04.txt",
+  "voice_file": "voice-2026-07-04.json",
+  "voice_turns": 20,
+  "tts_mode": "siliconflow-moss-reference-live",
+  "tts_synthesis_mode": "per_turn",
+  "voice_timing_source": "per_turn_audio_duration",
+  "tts_model": "fnlp/MOSS-TTSD-v0.5",
+  "tts_speed": 1.02,
+  "tts_leading_silence_seconds": 0.35,
+  "tts_reference_files": {
+    "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+    "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+  },
+  "html_bytes": 26214,
+  "podcast_bytes": 2272365,
+  "podcast_duration_seconds": 284.02
+}
