@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-05",
+  "status": "ready",
+  "created_at": "2026-07-05T05:13:10.656494+00:00",
+  "artifacts": {
+    "candidate_articles": "dist/candidate-news-2026-07-05.json",
+    "articles": "dist/articles-2026-07-05.json",
+    "legacy_articles": "dist/news-data-2026-07-05.json",
+    "html": "dist/daily-news-2026-07-05.html",
+    "legacy_html": "dist/ai-daily-news-html-2026-07-05.html",
+    "podcast_script": "dist/podcast-script-2026-07-05.json",
+    "podcast_script_text": "dist/podcast-script-2026-07-05.txt",
+    "podcast_moss_input": "dist/podcast-moss-input-2026-07-05.txt",
+    "voice": "dist/voice-2026-07-05.json",
+    "audio": "dist/daily-news-podcast-2026-07-05.mp3",
+    "legacy_audio": "dist/ai-daily-news-podcast-2026-07-05.mp3",
+    "pipeline_report": "dist/pipeline-report-2026-07-05.json"
+  },
+  "quality": {
+    "deterministic": "pass",
+    "agent_review": "not_run",
+    "issues": []
+  },
+  "repair": {
+    "attempts": 0,
+    "items": []
+  },
+  "memory_update": {
+    "candidate_count": 15,
+    "selected_count": 12
+  },
+  "agent": null,
+  "pipeline_report": {
+    "mode": "live-collection",
+    "issue_date": "2026-07-05",
+    "content_date": "2026-07-05",
+    "source_url": "https://hex2077.dev/docs/2026-07/2026-07-05/",
+    "recipient": "yyc54321@126.com",
+    "article_count": 12,
+    "candidate_count": 15,
+    "candidate_data_file": "candidate-news-2026-07-05.json",
+    "llm": {
+      "provider": "opencode-go",
+      "model_chain": [
+        "deepseek-ai/deepseek-v4-pro",
+        "moonshotai/kimi-k2.6",
+        "z-ai/glm-5.2"
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1",
+      "calls": 7,
+      "call_details": {
+        "selection": {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        "editorial_batches": [
+          {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          }
+        ],
+        "digest_summary": {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        "podcast": {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        "podcast_review": {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        "podcast_attempts": [
+          {
+            "attempt": 1,
+            "generation": {
+              "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+              "usage": {}
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": true,
+              "issues": [
+                "对话覆盖了9条新闻，略超建议的5-7条核心新闻范围，可能造成信息密度偏高，听众注意力分散。"
+              ],
+              "repair_instruction": "当前对话串联了9条日报新闻，虽每条都有讨论，但整体信息量偏大。建议将“独立开发中人机协作比例反转”与“AI辅助学习副作用”合并为一轮讨论，利用二者共通的“能力退化”主题进行对比，从而将独立新闻条数压缩至8条；或直接删去独立开发这条，使焦点更集中于安全、基础设施、监管与伦理四条主线，让讨论深度更均衡。"
+            },
+            "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "review_usage": {}
+          }
+        ],
+        "podcast_harness": {
+          "attempts": 1,
+          "best_attempt": 1,
+          "final_pass": true,
+          "final_issues": [
+            "对话覆盖了9条新闻，略超建议的5-7条核心新闻范围，可能造成信息密度偏高，听众注意力分散。"
+          ],
+          "structure_issues": [],
+          "loop_exhausted": false,
+          "converged": false
+        }
+      }
+    },
+    "digest_summary": "今日新闻凸显AI自主化双刃剑：全自动勒索攻击、芯片设计Agent、开发中99%机器承担任务展现效率跃升，但学习长期危害、恶意竞争、智能体下架及成本失控等事件，共同指向自主性失控、治理缺位与伦理风险。行业亟需在创新与安全间建立有效护栏。",
+    "podcast_turns": 18,
+    "podcast_script_file": "podcast-script-2026-07-05.json",
+    "podcast_script_text_file": "podcast-script-2026-07-05.txt",
+    "podcast_moss_input_file": "podcast-moss-input-2026-07-05.txt",
+    "voice_file": "voice-2026-07-05.json",
+    "voice_turns": 18,
+    "tts_mode": "siliconflow-moss-reference-live",
+    "tts_synthesis_mode": "per_turn",
+    "voice_timing_source": "per_turn_audio_duration",
+    "tts_model": "fnlp/MOSS-TTSD-v0.5",
+    "tts_speed": 1.02,
+    "tts_leading_silence_seconds": 0.35,
+    "tts_reference_files": {
+      "S1": "moss-ttsd/references/voice_laochen_s1.wav",
+      "S2": "moss-ttsd/references/voice_anna_s2.mp3"
+    },
+    "html_bytes": 26885,
+    "podcast_bytes": 2808621,
+    "podcast_duration_seconds": 351.05
+  },
+  "published_artifacts": {
+    "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/index.json",
+    "candidate_articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/candidate-news.json",
+    "articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/articles.json",
+    "podcast_script": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/podcast-script.json",
+    "podcast_script_text": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/podcast-script.txt",
+    "podcast_dialogue_text": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-05.txt",
+    "podcast_moss_input": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/podcast-moss-input.txt",
+    "voice": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/voice.json",
+    "voice_timeline": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-05.json",
+    "html": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-05.html",
+    "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-05.mp3",
+    "pipeline_report": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/pipeline-report.json"
+  }
+}
