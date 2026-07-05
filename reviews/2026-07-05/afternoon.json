@@ -1,0 +1,34 @@
+{
+  "issue_date": "2026-07-05",
+  "reviewed_at": "2026-07-05T15:46:54.988860+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 82,
+    "summary": "整体质量合格，播客对话自然流畅且信息覆盖全面，但存在标题夸大、事实细节存疑及个别表述不准确等问题。",
+    "issues": [
+      "标题'英伟达联和甲骨文发布电网调度新方案'中'联和'应为'联合'，存在错别字",
+      "标题'大厂恶意竞争丑闻遭到曝光'表述情绪化且'大厂'指代模糊，与正文'Meta'具体主体不符，标题正文存在矛盾",
+      "标题'政客垄断前沿技术遭指控'过度概括，正文实为专家学者对'总统集权政策'的警告，'政客'一词不准确且未限定国家/地区",
+      "标题'独立开发中人机协作比例大反转'中'大反转'、'99%'等表述来自单一工程师直播分享，缺乏独立验证，作为新闻标题过于绝对",
+      "播客中S2提到'JADEPUFFER事件里，攻击者还删除了数据库架构、留下虚假的加密算法描述'，但新闻原文为'勒索说明夸大加密算法'，'虚假'与'夸大'程度有差异，存在轻微事实变形",
+      "播客S1提到'黄仁勋都公开表示不满'，新闻原文为'英伟达CEO黄仁勋对此表示不满，认为不使用AI工具的员工令人抓狂'，'公开表示'与原文语境有出入，原文更侧重内部效率压力而非公开批评"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "nvidia:moonshotai/kimi-k2.6",
+  "usage": {
+    "prompt_tokens": 4208,
+    "total_tokens": 4579,
+    "completion_tokens": 371
+  }
+}
