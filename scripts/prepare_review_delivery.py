@@ -160,6 +160,13 @@ def main() -> int:
     score = int(review.get('score', 0))
     checks = review.get('checks') or {}
     factual_pass = checks.get('factual_consistency') != 'fail'
+    blocking_reasons: list[str] = []
+    if deterministic_issues:
+        blocking_reasons.extend(f'deterministic: {item}' for item in deterministic_issues)
+    if not factual_pass:
+        blocking_reasons.append('llm: factual_consistency=fail')
+    if score < 50:
+        blocking_reasons.append(f'llm: score={score} < 50')
     delivery_approved = not deterministic_issues and factual_pass and score >= 50
     report = {
         'issue_date': args.date,
@@ -167,6 +174,7 @@ def main() -> int:
         'pass': delivery_approved,
         'delivery_approved': delivery_approved,
         'llm_recommendation_pass': review.get('pass') is True,
+        'blocking_reasons': blocking_reasons,
         'deterministic_issues': deterministic_issues,
         'llm_review': review,
         'review_model': model,

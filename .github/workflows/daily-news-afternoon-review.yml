@@ -119,6 +119,39 @@ jobs:
             --base-url "$CONTENT_BASE_URL" \
             --output-dir review-dist
 
+      - name: Alert admins when afternoon review blocks delivery
+        if: ${{ failure() && steps.delivery.outputs.skip != 'true' }}
+        env:
+          AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
+          AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+        run: |
+          REASON="Afternoon review failed before delivery."
+          REPORT="review-dist/quality-review-${{ steps.issue.outputs.date }}.json"
+          if [ -f "$REPORT" ]; then
+            REASON=$(python3 - "$REPORT" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+reasons = report.get('blocking_reasons') or []
+review = report.get('llm_review') or {}
+issues = review.get('issues') or []
+parts = []
+if reasons:
+    parts.append('Blocking reasons: ' + '; '.join(map(str, reasons)))
+if issues:
+    parts.append('Review issues: ' + '; '.join(map(str, issues[:3])))
+print(' | '.join(parts) or 'Afternoon review blocked delivery.')
+PY
+)
+          fi
+          python3 scripts/send_admin_alert.py \
+            --date "${{ steps.issue.outputs.date }}" \
+            --phase afternoon \
+            --reason "$REASON" \
+            --issue-url "$CONTENT_BASE_URL/api/issues/${{ steps.issue.outputs.date }}/manifest.json" || echo "::warning::Failed to send admin alert"
+
       - name: Run deterministic quality gate again
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |

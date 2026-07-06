@@ -100,6 +100,7 @@ Edit text between markers. Keep placeholder names unchanged.
 - 正文应清楚、具体、可读，不得充斥模板化空话。
 - 锐评必须与对应新闻相关。
 - 播客应为自然双人对话，不得机械报幕。
+- 如果任何 checks 字段为 fail，pass 必须为 false，并在 issues 中写清楚阻断原因。
 - 如果没有严重问题，pass=true；轻微措辞问题可列入issues但不必判失败。
 
 确定性检查结果：
