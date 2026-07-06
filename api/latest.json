@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-07-05",
-  "content_date": "2026-07-05",
-  "published_at": "2026-07-05T05:13:11.271807+00:00",
+  "issue_date": "2026-07-06",
+  "content_date": "2026-07-06",
+  "published_at": "2026-07-06T05:24:06.913755+00:00",
   "article_count": 12,
-  "podcast_turns": 18,
+  "podcast_turns": 21,
   "tts_mode": "siliconflow-moss-reference-live",
   "tts_model": "fnlp/MOSS-TTSD-v0.5",
   "tts_speed": 1.02,
@@ -63,9 +63,9 @@
           "review": {
             "pass": true,
             "issues": [
-              "对话覆盖了9条新闻，略超建议的5-7条核心新闻范围，可能造成信息密度偏高，听众注意力分散。"
+              "对话覆盖了8条新闻，略超出建议的5-7条范围，可能使讨论稍显分散。"
             ],
-            "repair_instruction": "当前对话串联了9条日报新闻，虽每条都有讨论，但整体信息量偏大。建议将“独立开发中人机协作比例反转”与“AI辅助学习副作用”合并为一轮讨论，利用二者共通的“能力退化”主题进行对比，从而将独立新闻条数压缩至8条；或直接删去独立开发这条，使焦点更集中于安全、基础设施、监管与伦理四条主线，让讨论深度更均衡。"
+            "repair_instruction": "建议精简新闻数量至5-7条。可考虑将“人类被替代危机”与“企业AI变革五阶段”合并为一条讨论主线，或删去其中一条相对次要的新闻，使对话更聚焦，避免信息过载。"
           },
           "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
           "review_usage": {}
@@ -76,7 +76,7 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "对话覆盖了9条新闻，略超建议的5-7条核心新闻范围，可能造成信息密度偏高，听众注意力分散。"
+          "对话覆盖了8条新闻，略超出建议的5-7条范围，可能使讨论稍显分散。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -84,15 +84,15 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-05.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-05.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-05/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-05.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-05.mp3"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-06/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-06/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-06/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-06/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-06.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-06/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-06/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-06.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-06/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-06.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-06.mp3"
 }

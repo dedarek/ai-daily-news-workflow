@@ -1,0 +1,137 @@
+[
+  {
+    "title": "英伟达免费开放模型试用",
+    "summary": "英伟达这次🎁居然变身免费大善人了。官方已在直达英伟达官方体验中心上线。大家目前只需要使用国内手机号即可注册。听说它的请求限制用着 (✿◡‿◡) 挺不戳。详情可浏览原作者分享的社交动态了解。",
+    "url": "https://build.nvidia.com/z-ai/glm-5.2",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "华为发布“韬定律”V2版论文",
+    "summary": "继前代探索后，何庭波更新了时间缩微理论。新版研究优化了芯片物理底层架构。堆叠设计将 芯片能效 大幅拉升。算力在未来有望 (oﾟvﾟ) 实现暴涨百倍。",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB6UloxcElYa0xoMGI0VG9GVzUxdzVxZldzc2xNVlZsemRZeExhQzRvMzBlTmF3Z2RuU1BIRllvUEQ3YkhEb2dGTkQ0bDJQM1RVdHdhY3hvYThZQTlweGJ1TU9JelZpWnJBbXlmT05HWjE",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "李飞飞等发布具身智能新系统",
+    "summary": "英伟达联和李飞飞发布全新 仿真系统。系统仅需一段 视频就能 重建数字孪生。平台自动生成 无限训练数据 (^▽^) 供学习。策略可以直接评估且 零样本部署。快去阅读 李飞飞团队具身智能成果 吧。",
+    "url": "https://arxiv.org/pdf/2606.28276v1",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "T*算法破解扩散语言模型推理难题",
+    "summary": "上海智能院联合复旦开发出最新算法。该成果发表于最新发表的科研学术论文。团队让推理性能(o^^o)大幅提升。请看机器之心发布的详细报道了解详情。",
+    "url": "https://arxiv.org/pdf/2602.09375",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美国富人尝试使用人工智能教育孩子",
+    "summary": "归谷富豪热捧新型人工智能学校的模式。家长为此项目支付了每年🤖数万美元。孩子们开始逐渐适应与智能导师的交互过程。先锋教育同样也引发了 (⊙_⊙) 担忧。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "哲学毕业生在AI时代迎来职业春天",
+    "summary": "许多科技实验室正在争相招募哲学学者。网友在社区分享了关于该现象的讨论。学者们需要🤔用人类逻辑解决机器道德问题。传统冷门专业如今迎来 (・∀—) 就业黄金期。",
+    "url": "https://www.reddit.com/r/artificial/comments/1uo3f4x/the_revenge_of_the_philosophy_majors_ai_are/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中美AI巨头因防模型蒸馏产生冲突",
+    "summary": "安索匹克此前指控阿里窃取了大模型产权。阿里因此限制了员工使用智能终端编程助手。许多用户 😰 抱怨系统策略变得过度敏感。正常的学术提问常常被模型 😭 无情地拒绝。用户沦为两家巨头公司的激烈冲突受害者。",
+    "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "猜字母实验成为大模型预测机制鼻祖",
+    "summary": "一期知名科普平台发布的视频在网络上爆火。科学家妻子在😲七十年前开展过猜字母实验。该研究本质上就是预测下文的概率算法。该结论印证了国内科技媒体相关的报道的观点。",
+    "url": "https://www.youtube.com/watch?v=l6DKRf-fAAM",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "人类识别AI文本正确率高达七五",
+    "summary": "网友在海外热门社区交流平台分享了🤔测试。许多人参与了在线真假文本辨别网页测验。大家能以超七成正确率轻松辨识(°_°)机器文章。不少人还拿到了百分百正确的成绩。",
+    "url": "https://www.reddit.com/r/artificial/comments/1uo8u8z/people_are_able_to_detect_ai_generated_text_75_of/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "人类正面临被智能体替代的危机",
+    "summary": "硅基基础设施建设今年迎来爆发。新一代智能体数量😱出现暴发式增长。未来软件界面优先度配非人类用户。快去关注人类未来生存危机探讨寻找答案。",
+    "url": "https://m.okjike.com/originalPosts/6a49a6d854aae0885e6c4320",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "企业AI变革划分为五个阶段",
+    "summary": "多数公司正处于精简人员的第二阶段。领先企业已 🧐 开始考核Token成本。未来组织 (^_^) 将极度扁平并以人才为中心。阅读 讨论关于企业转型 交流。",
+    "url": "https://m.okjike.com/originalPosts/6a49dd6864a7b806f17eb350",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "文件持久化规划工具在社区爆火",
+    "summary": "该工具可以防指编程智能体在运行中崩溃。多个智能体能够 (｡•̀ᴗ-) 共享当前磁盘状态。开发者可通过部署了文件持久化项目记录动作。该开源项目当前已斩获**24k星标**的好成绩。",
+    "url": "https://github.com/OthmanAdi/planning-with-files",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MCP游戏编辑器桥接工具问世",
+    "summary": "新工具成功连接了大模型与游戏编辑器。开发者 (⊙o⊙) 常常因为手动调整场景头疼。该项目已在代码托管平台上对应项目斩获**11k星标**。它能够修该脚本并且自主高效控制游戏场景。",
+    "url": "https://github.com/CoplayDev/unity-mcp",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "防止模型生成平庸界面项目开源",
+    "summary": "许多开发这苦于🤖模型生成垃圾前端页面。这一代码美化生成与排版工具已拿下**57k星标**。它促使智能体 (✧阻✧) 产出更美观的前端。软件自动生成的代码样式不会再千篇一律。",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开源极速会议助手Meetily发布",
+    "summary": "本地会议助手主打本地运行不泄录隐私。该本地会议自动转录项目斩获了**16k星标**。工具😲利用高效引擎能自动转录会议内容。本地算法能 (/ω＼) 智能生成会议记要。",
+    "url": "https://github.com/Zackriya-Solutions/meetily",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
