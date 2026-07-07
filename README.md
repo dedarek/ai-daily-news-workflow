@@ -67,6 +67,31 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 
 可用 `AI_DAILY_VIDEO_API_BASE_URL` 覆盖默认 API 地址。
 
+底层调用等价于：
+
+```bash
+JOB=$(curl -s -X POST http://8.137.39.142:8011/video-api/api/videos/generate \
+  -H "Authorization: Bearer $AI_DAILY_VIDEO_API_TOKEN" \
+  -F script_file=@dist/podcast-script-YYYY-MM-DD.txt \
+  -F day=YYYY-MM-DD-HHMM \
+  -F title='AI热点新闻' \
+  | python3 -c "import sys,json;print(json.load(sys.stdin)['job_id'])")
+
+while true; do
+  STATUS=$(curl -s "http://8.137.39.142:8011/video-api/api/jobs/$JOB" \
+    -H "Authorization: Bearer $AI_DAILY_VIDEO_API_TOKEN" \
+    | python3 -c "import sys,json;print(json.load(sys.stdin)['status'])")
+  echo "$STATUS"
+  [ "$STATUS" = "succeeded" ] && break
+  [ "$STATUS" = "failed" ] && exit 1
+  sleep 5
+done
+
+curl -L "http://8.137.39.142:8011/video-api/api/jobs/$JOB/download" \
+  -H "Authorization: Bearer $AI_DAILY_VIDEO_API_TOKEN" \
+  -o result.zip
+```
+
 ### 播客单独测试
 
 用已有 `articles-YYYY-MM-DD.json` 或 `news-data-YYYY-MM-DD.json` 只重新生成播客脚本、MP3 和 MP4，不发布、不发送：

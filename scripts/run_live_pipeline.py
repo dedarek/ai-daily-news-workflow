@@ -1331,8 +1331,17 @@ def submit_video_api_job(script_path: Path, issue_date: str, token: str, base_ur
     if not script_path.is_file():
         raise RuntimeError(f'video API script file missing: {script_path}')
     title = os.environ.get('AI_DAILY_VIDEO_API_TITLE', DEFAULT_VIDEO_API_TITLE)
+    day = video_api_day(issue_date)
+    print(
+        'VIDEO_API submit '
+        f'base_url={base_url.rstrip("/")} '
+        f'script_file={script_path.name} '
+        f'script_bytes={script_path.stat().st_size} '
+        f'day={day} title={title}',
+        flush=True,
+    )
     boundary, body = build_multipart_form(
-        fields={'day': video_api_day(issue_date), 'title': title},
+        fields={'day': day, 'title': title},
         files={'script_file': script_path},
     )
     request = Request(
@@ -1351,6 +1360,7 @@ def submit_video_api_job(script_path: Path, issue_date: str, token: str, base_ur
     job_id = str(payload.get('job_id') or '').strip()
     if not job_id:
         raise RuntimeError(f'video API response missing job_id: {payload}')
+    print(f'VIDEO_API accepted job_id={job_id}', flush=True)
     return job_id, payload
 
 
@@ -1498,6 +1508,7 @@ def generate_video_api_media(
     final_payload = wait_video_api_job(job_id, token, used_base_url)
     zip_path = audio_path.with_name(f'video-api-result-{issue_date}.zip')
     download_video_api_zip(job_id, token, zip_path, used_base_url)
+    print(f'VIDEO_API downloaded zip={zip_path.name} bytes={zip_path.stat().st_size}', flush=True)
     extract_largest_zip_member(zip_path, '.mp3', audio_path)
     extract_largest_zip_member(zip_path, '.mp4', video_path)
     compress_audio_if_large(audio_path)
