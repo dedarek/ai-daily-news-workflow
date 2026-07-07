@@ -13,6 +13,7 @@ Required same-day files:
 - `dist/podcast-script-YYYY-MM-DD.txt`
 - `dist/podcast-moss-input-YYYY-MM-DD.txt`
 - `dist/daily-news-podcast-YYYY-MM-DD.mp3`
+- `dist/daily-news-video-YYYY-MM-DD.mp4`
 - `dist/pipeline-report-YYYY-MM-DD.json`
 - `dist/manifest-YYYY-MM-DD.json`
 
@@ -21,6 +22,7 @@ Legacy compatibility files may also exist:
 - `dist/news-data-YYYY-MM-DD.json`
 - `dist/ai-daily-news-html-YYYY-MM-DD.html`
 - `dist/ai-daily-news-podcast-YYYY-MM-DD.mp3`
+- `dist/ai-daily-news-video-YYYY-MM-DD.mp4`
 
 ## `articles-YYYY-MM-DD.json`
 
@@ -59,6 +61,7 @@ Array of article objects:
   "title": "AI热点新闻",
   "date": "YYYY-MM-DD",
   "audio": "dist/daily-news-podcast-YYYY-MM-DD.mp3",
+  "video": "dist/daily-news-video-YYYY-MM-DD.mp4",
   "duration": 123.45,
   "turns": [
     {
@@ -88,6 +91,7 @@ Array of article objects:
     "podcast_script_text": "dist/podcast-script-YYYY-MM-DD.txt",
     "podcast_moss_input": "dist/podcast-moss-input-YYYY-MM-DD.txt",
     "audio": "dist/daily-news-podcast-YYYY-MM-DD.mp3",
+    "video": "dist/daily-news-video-YYYY-MM-DD.mp4",
     "pipeline_report": "dist/pipeline-report-YYYY-MM-DD.json"
   },
   "quality": {
@@ -111,6 +115,12 @@ available at:
 
 ```text
 https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/YYYY-MM-DD.txt
+```
+
+The generated video must be published at:
+
+```text
+https://dedarek.github.io/ai-daily-news-workflow/video/YYYY-MM-DD.mp4
 ```
 
 Allowed manifest status values:

@@ -57,23 +57,22 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 
 ⚠️ 163 有限流：每封间隔 8-10 秒，每 10 封暂停 30 秒。带大附件时更容易触发。
 
-### 播客 TTS（硅基流动 SiliconFlow）
+### 播客音频/视频生成（外部 Video API）
 | 项 | 值 |
 |----|-----|
-| API Key | `sk-xlh…vzmm`（来自 openclaw.json embeddings 配置）|
-| Endpoint | `POST https://api.siliconflow.cn/v1/audio/speech` |
-| Model | `fnlp/MOSS-TTSD-v0.5` |
-| 老陈(S1) reference | `moss-ttsd/references/voice_laochen_s1.wav` |
-| 小满(S2) reference | `moss-ttsd/references/voice_anna_s2.mp3` |
-| 响应格式 | `response_format: "mp3"` |
+| Token | `AI_DAILY_VIDEO_API_TOKEN` |
+| Endpoint | `POST https://8.137.39.142:8011/video-api/api/videos/generate` |
+| 输入 | `podcast-script-YYYY-MM-DD.txt` |
+| 输出 | 下载 job zip，并提取 MP3 + MP4 |
 
-⚠️ 通过 SiliconFlow `/audio/speech` 调用 MOSS-TTSD，必须只使用仓库 `moss-ttsd/references/` 中的两个参考音频。
+可用 `AI_DAILY_VIDEO_API_BASE_URL` 覆盖默认 API 地址。
 
 ### 播客单独测试
 
-用已有 `articles-YYYY-MM-DD.json` 或 `news-data-YYYY-MM-DD.json` 只重新生成播客脚本和 MP3，不发布、不发送：
+用已有 `articles-YYYY-MM-DD.json` 或 `news-data-YYYY-MM-DD.json` 只重新生成播客脚本、MP3 和 MP4，不发布、不发送：
 
 ```bash
+export AI_DAILY_VIDEO_API_TOKEN=...
 python scripts/generate_podcast_only.py \
   --date 2026-06-26 \
   --articles review-dist/articles-2026-06-26.json \
@@ -91,18 +90,6 @@ python scripts/generate_podcast_only.py \
 ```
 
 `--articles` 也支持传入 `https://.../articles.json` URL。
-
-生成音频时建议传入两个 reference audio 的准确台词，或配置同名环境变量
-`MOSS_TTS_S1_REFERENCE_TEXT`、`MOSS_TTS_S2_REFERENCE_TEXT`：
-
-```bash
-python scripts/generate_podcast_only.py \
-  --date 2026-06-26 \
-  --articles review-dist/articles-2026-06-26.json \
-  --output-dir tmp/podcast-test \
-  --s1-reference-text "voice_laochen_s1.wav 的准确台词" \
-  --s2-reference-text "voice_anna_s2.mp3 的准确台词"
-```
 
 ### 邮件收件人
 
@@ -226,9 +213,10 @@ https://hex2077.dev/docs/YYYY-MM/YYYY-MM-DD/
 - 目标 5-10 分钟
 
 ### 合成方式
-- 单次调用 SiliconFlow MOSS-TTSD 双人对话合成
-- 输入使用 `[S1]... [S2]...` 对话标签，并传入两个本地 reference audio
-- 检查总大小，超过 8MB 降码率到 48k
+- 将 `podcast-script-YYYY-MM-DD.txt` 上传到外部 Video API。
+- 轮询 job 状态，成功后下载 zip。
+- 从 zip 中提取 MP3 和 MP4；MP3 沿用原有邮件附件和大小校验链路，MP4 发布到 GitHub Pages 并作为邮件附件发送。
+- 检查 MP3 总大小，超过 8MB 降码率到 48k。
 
 ---
 
@@ -242,7 +230,7 @@ https://hex2077.dev/docs/YYYY-MM/YYYY-MM-DD/
 | 4 | **微信文章链接跳验证码** | 含 `wappoc_appmsgcaptcha` 的直接淘汰 |
 | 5 | **中文写成 &#x 实体** | 写文件必须 `encoding="utf-8"`，写完立即验证 |
 | 6 | **Copilot token 过期** | 去掉 cron 的 model override，用默认模型 |
-| 7 | **MOSI API key 失效** | 改用 SiliconFlow CosyVoice |
+| 7 | **Video API token 缺失** | 配置 `AI_DAILY_VIDEO_API_TOKEN` GitHub Secret |
 | 8 | **send-all 脚本挂起无输出** | SMTP 连接断开后等待重连，给足超时时间（≥15 min） |
 | 9 | **栏目顺序漂移** | 严格按规范顺序排列，缺栏目跳过但不乱序 |
 | 10 | **播客超过 8MB** | 自动降码率到 48k |
@@ -347,7 +335,7 @@ AI_DAILY_PRE_SEND_API_TOKEN
 
 - Python 3 （命令用 `python3`，没有 `python`）
 - ffmpeg ≥ 6.x
-- node ≥ 22（mcporter / SiliconFlow API 调用）
+- node ≥ 22（mcporter 工具链）
 - curl
 - bash
 
@@ -373,5 +361,6 @@ AI_DAILY_PRE_SEND_API_TOKEN
 - `/api/issues/YYYY-MM-DD/podcast-script.json`
 - `/html/YYYY-MM-DD.html`
 - `/audio/YYYY-MM-DD.mp3`
+- `/video/YYYY-MM-DD.mp4`
 
 服务只发布日报内容，不包含邮箱、Secrets 或内部运行配置。

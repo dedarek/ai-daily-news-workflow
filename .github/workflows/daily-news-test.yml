@@ -84,7 +84,8 @@ jobs:
       - name: Run news agent and build artifacts
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
-          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          AI_DAILY_VIDEO_API_TOKEN: ${{ secrets.AI_DAILY_VIDEO_API_TOKEN || vars.AI_DAILY_VIDEO_API_TOKEN }}
+          AI_DAILY_VIDEO_API_BASE_URL: ${{ vars.AI_DAILY_VIDEO_API_BASE_URL || 'https://8.137.39.142:8011/video-api/api' }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           NVIDIA_LLM_BASE_URL: https://integrate.api.nvidia.com/v1
@@ -96,13 +97,9 @@ jobs:
           LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
           LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}
           LENOVO_LLM_MODELS: ${{ vars.LENOVO_LLM_MODELS || 'qwen35-122b-a10b-fp8' }}
-          MOSS_TTS_SYNTHESIS_MODE: per_turn
-          MOSS_TTS_WARMUP_TEXT: ""
-          MOSS_TTS_S1_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S1_REFERENCE_TEXT || vars.MOSS_TTS_S1_REFERENCE_TEXT }}
-          MOSS_TTS_S2_REFERENCE_TEXT: ${{ secrets.MOSS_TTS_S2_REFERENCE_TEXT || vars.MOSS_TTS_S2_REFERENCE_TEXT }}
         run: |
           test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret NVIDIA_API_KEY"; exit 1; }
-          test -n "$SILICONFLOW_API_KEY" || { echo "::error::Missing GitHub Actions secret SILICONFLOW_API_KEY"; exit 1; }
+          test -n "$AI_DAILY_VIDEO_API_TOKEN" || { echo "::error::Missing GitHub Actions secret AI_DAILY_VIDEO_API_TOKEN"; exit 1; }
           FORCE_ARGS=""
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             FORCE_ARGS="--force-regenerate"
@@ -202,7 +199,7 @@ jobs:
             echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
             echo "- Content API: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow/api/latest.json"
             echo
-            echo "Artifacts contain the generated HTML, MP3, JSON report, articles, and podcast script."
+            echo "Artifacts contain the generated HTML, MP3, MP4, JSON report, articles, and podcast script."
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload generated artifacts

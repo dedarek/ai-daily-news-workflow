@@ -11,6 +11,8 @@ import re
 import shutil
 import subprocess
 import time
+import uuid
+import zipfile
 from dataclasses import asdict, dataclass
 from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
@@ -34,6 +36,8 @@ DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
 DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2'
 DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
 DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
+DEFAULT_VIDEO_API_BASE_URL = 'https://8.137.39.142:8011/video-api/api'
+DEFAULT_VIDEO_API_TITLE = 'AI热点新闻'
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
@@ -1223,6 +1227,170 @@ def moss_dialogue_input(dialogue: list[dict[str, str]]) -> str:
     return ''.join(f'[{turn["speaker"]}]{turn["text"]}' for turn in dialogue)
 
 
+def build_multipart_form(
+    fields: dict[str, str],
+    files: dict[str, Path],
+) -> tuple[str, bytes]:
+    boundary = f'----ai-daily-news-{uuid.uuid4().hex}'
+    chunks: list[bytes] = []
+    for name, value in fields.items():
+        chunks.append(f'--{boundary}\r\n'.encode('ascii'))
+        chunks.append(f'Content-Disposition: form-data; name="{name}"\r\n\r\n'.encode('utf-8'))
+        chunks.append(str(value).encode('utf-8'))
+        chunks.append(b'\r\n')
+    for name, path in files.items():
+        content_type = mimetypes.guess_type(path.name)[0] or 'application/octet-stream'
+        chunks.append(f'--{boundary}\r\n'.encode('ascii'))
+        chunks.append(
+            (
+                f'Content-Disposition: form-data; name="{name}"; filename="{path.name}"\r\n'
+                f'Content-Type: {content_type}\r\n\r\n'
+            ).encode('utf-8')
+        )
+        chunks.append(path.read_bytes())
+        chunks.append(b'\r\n')
+    chunks.append(f'--{boundary}--\r\n'.encode('ascii'))
+    return boundary, b''.join(chunks)
+
+
+def video_api_base_url() -> str:
+    return os.environ.get('AI_DAILY_VIDEO_API_BASE_URL', DEFAULT_VIDEO_API_BASE_URL).rstrip('/')
+
+
+def video_api_token() -> str:
+    return (
+        os.environ.get('AI_DAILY_VIDEO_API_TOKEN')
+        or os.environ.get('VIDEO_API_TOKEN')
+        or os.environ.get('YOUR_TOKEN')
+        or ''
+    ).strip()
+
+
+def video_api_day(issue_date: str) -> str:
+    return os.environ.get('AI_DAILY_VIDEO_API_DAY') or f'{issue_date}-{datetime.now().strftime("%H%M")}'
+
+
+def video_api_json(url: str, token: str, *, timeout: float = 60) -> dict:
+    request = Request(
+        url,
+        headers={'Authorization': f'Bearer {token}', 'User-Agent': 'ai-daily-news-workflow/1.0'},
+    )
+    with urlopen(request, timeout=timeout) as response:
+        return json.loads(response.read().decode('utf-8'))
+
+
+def submit_video_api_job(script_path: Path, issue_date: str, token: str) -> tuple[str, dict]:
+    if not script_path.is_file():
+        raise RuntimeError(f'video API script file missing: {script_path}')
+    title = os.environ.get('AI_DAILY_VIDEO_API_TITLE', DEFAULT_VIDEO_API_TITLE)
+    boundary, body = build_multipart_form(
+        fields={'day': video_api_day(issue_date), 'title': title},
+        files={'script_file': script_path},
+    )
+    request = Request(
+        f'{video_api_base_url()}/videos/generate',
+        data=body,
+        headers={
+            'Authorization': f'Bearer {token}',
+            'Content-Type': f'multipart/form-data; boundary={boundary}',
+            'Content-Length': str(len(body)),
+            'User-Agent': 'ai-daily-news-workflow/1.0',
+        },
+        method='POST',
+    )
+    with urlopen(request, timeout=float(os.environ.get('AI_DAILY_VIDEO_API_SUBMIT_TIMEOUT_SECONDS', '120'))) as response:
+        payload = json.loads(response.read().decode('utf-8'))
+    job_id = str(payload.get('job_id') or '').strip()
+    if not job_id:
+        raise RuntimeError(f'video API response missing job_id: {payload}')
+    return job_id, payload
+
+
+def wait_video_api_job(job_id: str, token: str) -> dict:
+    timeout_seconds = float(os.environ.get('AI_DAILY_VIDEO_API_TIMEOUT_SECONDS', '1800'))
+    poll_seconds = float(os.environ.get('AI_DAILY_VIDEO_API_POLL_SECONDS', '5'))
+    deadline = time.time() + timeout_seconds
+    last_payload: dict = {}
+    while time.time() < deadline:
+        payload = video_api_json(f'{video_api_base_url()}/jobs/{job_id}', token, timeout=60)
+        last_payload = payload
+        status = str(payload.get('status') or '').strip().lower()
+        print(f'VIDEO_API job={job_id} status={status}', flush=True)
+        if status == 'succeeded':
+            return payload
+        if status == 'failed':
+            raise RuntimeError(f'video API job failed: {payload}')
+        time.sleep(poll_seconds)
+    raise RuntimeError(f'video API job timed out after {timeout_seconds}s: {last_payload}')
+
+
+def download_video_api_zip(job_id: str, token: str, zip_path: Path) -> None:
+    request = Request(
+        f'{video_api_base_url()}/jobs/{job_id}/download',
+        headers={'Authorization': f'Bearer {token}', 'User-Agent': 'ai-daily-news-workflow/1.0'},
+    )
+    with urlopen(request, timeout=float(os.environ.get('AI_DAILY_VIDEO_API_DOWNLOAD_TIMEOUT_SECONDS', '300'))) as response:
+        zip_path.write_bytes(response.read())
+    if not zip_path.exists() or zip_path.stat().st_size < 1000:
+        raise RuntimeError(f'video API download is empty or too small: {zip_path}')
+
+
+def extract_largest_zip_member(zip_path: Path, suffix: str, output_path: Path) -> None:
+    with zipfile.ZipFile(zip_path) as archive:
+        candidates = [
+            info for info in archive.infolist()
+            if not info.is_dir() and info.filename.lower().endswith(suffix)
+        ]
+        if not candidates:
+            raise RuntimeError(f'video API zip missing *{suffix}: {zip_path}')
+        selected = max(candidates, key=lambda info: info.file_size)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with archive.open(selected) as src, output_path.open('wb') as dst:
+            shutil.copyfileobj(src, dst)
+    if not output_path.exists() or output_path.stat().st_size <= 0:
+        raise RuntimeError(f'extracted media is empty: {output_path}')
+
+
+def generate_video_api_media(
+    script_path: Path,
+    audio_path: Path,
+    video_path: Path,
+    voice_path: Path,
+    issue_date: str,
+    dialogue: list[dict[str, str]],
+) -> tuple[dict, dict]:
+    token = video_api_token()
+    if not token:
+        raise RuntimeError('AI_DAILY_VIDEO_API_TOKEN is required; refusing to generate podcast audio/video')
+    job_id, submit_payload = submit_video_api_job(script_path, issue_date, token)
+    final_payload = wait_video_api_job(job_id, token)
+    zip_path = audio_path.with_name(f'video-api-result-{issue_date}.zip')
+    download_video_api_zip(job_id, token, zip_path)
+    extract_largest_zip_member(zip_path, '.mp3', audio_path)
+    extract_largest_zip_member(zip_path, '.mp4', video_path)
+    compress_audio_if_large(audio_path)
+
+    total_duration = duration(audio_path)
+    voice_manifest = {
+        'title': DEFAULT_VIDEO_API_TITLE,
+        'date': issue_date,
+        'audio': audio_path.relative_to(REPO_ROOT).as_posix(),
+        'video': video_path.relative_to(REPO_ROOT).as_posix(),
+        'duration': round(total_duration, 2),
+        'turns': estimated_voice_turns(dialogue, total_duration),
+    }
+    voice_path.write_text(json.dumps(voice_manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+    return voice_manifest, {
+        'provider': 'video-api',
+        'base_url': video_api_base_url(),
+        'job_id': job_id,
+        'submit_response': submit_payload,
+        'final_response': final_payload,
+        'zip_file': zip_path.name,
+        'video_file': video_path.name,
+    }
+
+
 def voice_speaker_name(role_label: str) -> str:
     return {'S1': 'host', 'S2': 'analyst'}.get(role_label, role_label.lower())
 
@@ -1571,6 +1739,7 @@ def main() -> int:
     articles, dialogue, digest_summary, llm_metadata = call_deepseek(candidates, llm_api_key, args.date)
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
+    video_path = output_dir / f'ai-daily-news-video-{args.date}.mp4'
     data_path = output_dir / f'news-data-{args.date}.json'
     candidate_data_path = output_dir / f'candidate-news-{args.date}.json'
     podcast_script_path = output_dir / f'podcast-script-{args.date}.json'
@@ -1605,37 +1774,22 @@ def main() -> int:
     )
     moss_input_path.write_text(moss_dialogue_input(dialogue), encoding='utf-8')
 
-    api_key = os.environ.get('SILICONFLOW_API_KEY', '')
-    if not api_key:
-        raise RuntimeError('SILICONFLOW_API_KEY is required; refusing to generate podcast audio')
-    leading_silence_seconds = tts_leading_silence_seconds()
-    tts_synthesis_mode = os.environ.get('MOSS_TTS_SYNTHESIS_MODE', 'per_turn').strip().lower()
-    if tts_synthesis_mode in {'per_turn', 'per-turn', 'turns'}:
-        tts_synthesis_mode = 'per_turn'
-        voice_manifest = synthesize_siliconflow_moss_turns(
-            dialogue,
-            podcast_path,
-            voice_path,
-            args.date,
-            api_key,
-            leading_silence_seconds=leading_silence_seconds,
-        )
-    else:
-        tts_synthesis_mode = 'single_call'
-        voice_manifest = synthesize_siliconflow_moss_single(
-            dialogue,
-            podcast_path,
-            voice_path,
-            args.date,
-            api_key,
-            leading_silence_seconds=leading_silence_seconds,
-        )
-    tts_mode = 'siliconflow-moss-reference-live'
+    voice_manifest, video_api_metadata = generate_video_api_media(
+        podcast_script_text_path,
+        podcast_path,
+        video_path,
+        voice_path,
+        args.date,
+        dialogue,
+    )
+    tts_mode = 'video-api-audio-video'
 
     tmp_html = Path('/tmp') / html_path.name
     tmp_podcast = Path('/tmp') / podcast_path.name
+    tmp_video = Path('/tmp') / video_path.name
     shutil.copy2(html_path, tmp_html)
     shutil.copy2(podcast_path, tmp_podcast)
+    shutil.copy2(video_path, tmp_video)
     shutil.copy2(html_path, SKILL_DIR / 'samples' / f'{args.date}.html')
 
     report = {
@@ -1656,17 +1810,16 @@ def main() -> int:
         'voice_file': voice_path.name,
         'voice_turns': len(voice_manifest['turns']),
         'tts_mode': tts_mode,
-        'tts_synthesis_mode': tts_synthesis_mode,
-        'voice_timing_source': 'estimated_text_weight' if tts_synthesis_mode == 'single_call' else 'per_turn_audio_duration',
-        'tts_model': MOSS_TTS_MODEL,
-        'tts_speed': moss_tts_speed(),
-        'tts_leading_silence_seconds': leading_silence_seconds,
-        'tts_reference_files': {
-            speaker: MOSS_REFERENCE_VOICES[speaker]['path'].relative_to(REPO_ROOT).as_posix()
-            for speaker in ('S1', 'S2')
-        },
+        'tts_synthesis_mode': 'external_video_api',
+        'voice_timing_source': 'estimated_text_weight',
+        'tts_model': None,
+        'tts_speed': None,
+        'tts_leading_silence_seconds': 0,
+        'tts_reference_files': None,
+        'video_api': video_api_metadata,
         'html_bytes': html_path.stat().st_size,
         'podcast_bytes': podcast_path.stat().st_size,
+        'video_bytes': video_path.stat().st_size,
         'podcast_duration_seconds': round(duration(podcast_path), 2),
     }
     (output_dir / f'pipeline-report-{args.date}.json').write_text(

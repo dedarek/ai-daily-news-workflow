@@ -149,6 +149,7 @@ def build_message(
     recipient: str,
     html_content: str,
     mp3_path: Path,
+    mp4_path: Path | None = None,
     subject_suffix: str = '',
 ) -> MIMEMultipart:
     message = MIMEMultipart('mixed')
@@ -169,6 +170,13 @@ def build_message(
     encoders.encode_base64(audio)
     audio.add_header('Content-Disposition', 'attachment', filename=f'ai-daily-news-{date_str}.mp3')
     message.attach(audio)
+    if mp4_path is not None:
+        with mp4_path.open('rb') as video_file:
+            video = MIMEBase('video', 'mp4')
+            video.set_payload(video_file.read())
+        encoders.encode_base64(video)
+        video.add_header('Content-Disposition', 'attachment', filename=f'ai-daily-news-{date_str}.mp4')
+        message.attach(video)
     return message
 
 
@@ -203,6 +211,14 @@ def main() -> int:
             'ai-daily-news-podcast-{date}.mp3',
         ],
     )
+    mp4_path = resolve_artifact(
+        artifact_dir,
+        args.date,
+        [
+            'daily-news-video-{date}.mp4',
+            'ai-daily-news-video-{date}.mp4',
+        ],
+    )
 
     html_content = html_path.read_text(encoding='utf-8')
     recipients = read_recipients(audience)
@@ -214,9 +230,9 @@ def main() -> int:
     print(f'Audience: {audience}', flush=True)
 
     for index, recipient in enumerate(recipients, start=1):
-        message = build_message(args.date, sender, recipient, html_content, mp3_path, subject_suffix)
+        message = build_message(args.date, sender, recipient, html_content, mp3_path, mp4_path, subject_suffix)
         if args.dry_run:
-            print(f'✅ [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)
+            print(f'OK [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)
             success += 1
             continue
 
@@ -224,17 +240,17 @@ def main() -> int:
         for attempt in range(1, retry_attempts + 1):
             try:
                 send_one(host, port, sender, password, recipient, message)
-                print(f'✅ [{index}/{len(recipients)}] {recipient}', flush=True)
+                print(f'OK [{index}/{len(recipients)}] {recipient}', flush=True)
                 success += 1
                 last_error = None
                 break
             except (smtplib.SMTPException, OSError) as exc:
                 last_error = exc
-                print(f'⚠️ [{index}/{len(recipients)}] attempt={attempt} {recipient}: {exc}', flush=True)
+                print(f'WARN [{index}/{len(recipients)}] attempt={attempt} {recipient}: {exc}', flush=True)
                 if attempt < retry_attempts:
                     time.sleep(retry_delay)
         if last_error is not None:
-            print(f'❌ {recipient}: {last_error}', flush=True)
+            print(f'FAIL {recipient}: {last_error}', flush=True)
 
         if index < len(recipients):
             time.sleep(delay)

@@ -19,6 +19,7 @@ VALIDATOR = SKILL_DIR / 'scripts' / 'validate_html_quality.py'
 MIN_HTML_BYTES = 10 * 1024
 MIN_MP3_BYTES = 1_000_000
 MAX_MP3_BYTES = 8 * 1024 * 1024
+MIN_MP4_BYTES = 100_000
 FORBIDDEN_MARKERS = [
     'hubtoday',
     'hex2077',
@@ -193,6 +194,14 @@ def main() -> int:
             'ai-daily-news-podcast-{date}.mp3',
         ],
     )
+    mp4_path = resolve_artifact(
+        artifact_dir,
+        date_str,
+        [
+            'daily-news-video-{date}.mp4',
+            'ai-daily-news-video-{date}.mp4',
+        ],
+    )
     sample_path = None if args.artifact_dir else SAMPLES_DIR / f'{date_str}.html'
     log_path = TMP / f'send-log-{date_str}.txt'
 
@@ -218,6 +227,14 @@ def main() -> int:
         facts.append(f'MP3: {mp3_path} ({mp3_size} bytes)')
         if not (MIN_MP3_BYTES <= mp3_size <= MAX_MP3_BYTES):
             failures.append(f'MP3_SIZE_OUT_OF_RANGE: {mp3_path} = {mp3_size} bytes not in [{MIN_MP3_BYTES}, {MAX_MP3_BYTES}]')
+
+    if not mp4_path.exists():
+        failures.append(f'MISSING: {mp4_path}')
+    else:
+        mp4_size = mp4_path.stat().st_size
+        facts.append(f'MP4: {mp4_path} ({mp4_size} bytes)')
+        if mp4_size < MIN_MP4_BYTES:
+            failures.append(f'MP4_TOO_SMALL: {mp4_path} = {mp4_size} bytes < {MIN_MP4_BYTES}')
 
     if sample_path is not None:
         if not sample_path.exists():

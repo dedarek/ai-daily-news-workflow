@@ -30,6 +30,7 @@ MIN_SIZES = {
     'podcast_moss_input': 500,
     'voice': 500,
     'audio': 1_000_000,
+    'video': 100_000,
     'pipeline_report': 500,
 }
 
@@ -77,6 +78,8 @@ def artifact_paths(output_dir: Path, issue_date: str) -> dict[str, Path]:
         'voice': output_dir / f'voice-{issue_date}.json',
         'audio': output_dir / f'daily-news-podcast-{issue_date}.mp3',
         'legacy_audio': output_dir / f'ai-daily-news-podcast-{issue_date}.mp3',
+        'video': output_dir / f'daily-news-video-{issue_date}.mp4',
+        'legacy_video': output_dir / f'ai-daily-news-video-{issue_date}.mp4',
         'pipeline_report': output_dir / f'pipeline-report-{issue_date}.json',
     }
 
@@ -179,6 +182,7 @@ def normalize_artifacts(output_dir: Path, issue_date: str) -> dict[str, Path]:
     copy_if_needed(paths['legacy_articles'], paths['articles'])
     copy_if_needed(paths['legacy_html'], paths['html'])
     copy_if_needed(paths['legacy_audio'], paths['audio'])
+    copy_if_needed(paths['legacy_video'], paths['video'])
 
     podcast_json = paths['podcast_script']
     podcast_txt = paths['podcast_script_text']
@@ -195,6 +199,7 @@ def normalize_artifacts(output_dir: Path, issue_date: str) -> dict[str, Path]:
     tmp = Path('/tmp')
     copy_if_needed(paths['legacy_html'], tmp / paths['legacy_html'].name)
     copy_if_needed(paths['legacy_audio'], tmp / paths['legacy_audio'].name)
+    copy_if_needed(paths['legacy_video'], tmp / paths['legacy_video'].name)
     return paths
 
 
@@ -215,6 +220,7 @@ def restore_from_published_site(site_dir: Path, output_dir: Path, issue_date: st
         (issue_root / 'pipeline-report.json', output_dir / f'pipeline-report-{issue_date}.json'),
         (site_dir / 'html' / f'{issue_date}.html', output_dir / f'daily-news-{issue_date}.html'),
         (site_dir / 'audio' / f'{issue_date}.mp3', output_dir / f'daily-news-podcast-{issue_date}.mp3'),
+        (site_dir / 'video' / f'{issue_date}.mp4', output_dir / f'daily-news-video-{issue_date}.mp4'),
     ]
     missing = [str(src) for src, _ in mappings if not src.exists()]
     if missing:
@@ -325,14 +331,17 @@ def validate_voice_manifest(path: Path) -> list[str]:
     if not isinstance(voice, dict):
         return ['voice manifest is not an object']
     expected_keys = ['title', 'date', 'audio', 'duration', 'turns']
-    if list(voice.keys()) != expected_keys:
-        issues.append(f'voice manifest keys must be exactly {expected_keys}')
+    expected_keys_with_video = ['title', 'date', 'audio', 'video', 'duration', 'turns']
+    if list(voice.keys()) not in (expected_keys, expected_keys_with_video):
+        issues.append(f'voice manifest keys must be exactly {expected_keys} or {expected_keys_with_video}')
     if not isinstance(voice.get('title'), str) or not voice.get('title'):
         issues.append('voice.title must be a non-empty string')
     if not isinstance(voice.get('date'), str):
         issues.append('voice.date must be a string')
     if not isinstance(voice.get('audio'), str) or not voice.get('audio'):
         issues.append('voice.audio must be a non-empty string')
+    if 'video' in voice and (not isinstance(voice.get('video'), str) or not voice.get('video')):
+        issues.append('voice.video must be a non-empty string when present')
     if not isinstance(voice.get('duration'), (int, float)) or voice.get('duration', 0) <= 0:
         issues.append('voice.duration must be positive')
     turns = voice.get('turns')

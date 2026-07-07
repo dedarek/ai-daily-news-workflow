@@ -71,6 +71,7 @@ def main() -> int:
     voice = get_json(published['voice']) if published.get('voice') else None
     html_bytes = get_bytes(published['html'])
     audio_bytes = get_bytes(published['audio'])
+    video_bytes = get_bytes(published['video'])
     write_json_file(output_dir / f'manifest-{args.date}.json', manifest)
     if candidate_articles:
         write_json_file(output_dir / f'candidate-news-{args.date}.json', candidate_articles)
@@ -87,21 +88,14 @@ def main() -> int:
         write_json_file(output_dir / f'voice-{args.date}.json', voice)
     (output_dir / f'daily-news-{args.date}.html').write_bytes(html_bytes)
     (output_dir / f'daily-news-podcast-{args.date}.mp3').write_bytes(audio_bytes)
+    (output_dir / f'daily-news-video-{args.date}.mp4').write_bytes(video_bytes)
     write_podcast_text(output_dir / f'podcast-script-{args.date}.txt', podcast_script)
 
     deterministic_issues: list[str] = []
     report_from_manifest = manifest.get('pipeline_report') if isinstance(manifest.get('pipeline_report'), dict) else {}
-    if report_from_manifest.get('tts_mode') != 'siliconflow-moss-reference-live':
+    if report_from_manifest.get('tts_mode') != 'video-api-audio-video':
         deterministic_issues.append(
-            f'tts_mode={report_from_manifest.get("tts_mode")} is not siliconflow-moss-reference-live'
-        )
-    expected_reference_files = {
-        'S1': 'moss-ttsd/references/voice_laochen_s1.wav',
-        'S2': 'moss-ttsd/references/voice_anna_s2.mp3',
-    }
-    if report_from_manifest.get('tts_reference_files') != expected_reference_files:
-        deterministic_issues.append(
-            f'tts_reference_files={report_from_manifest.get("tts_reference_files")} do not match expected MOSS references'
+            f'tts_mode={report_from_manifest.get("tts_mode")} is not video-api-audio-video'
         )
     urls = [item.get('url') for item in articles]
     if len(articles) < 8:
@@ -122,6 +116,8 @@ def main() -> int:
         deterministic_issues.append(f'html_bytes={len(html_bytes)} < 10240')
     if not 1_000_000 <= len(audio_bytes) <= 8 * 1024 * 1024:
         deterministic_issues.append(f'audio_bytes={len(audio_bytes)} outside allowed range')
+    if len(video_bytes) < 100_000:
+        deterministic_issues.append(f'video_bytes={len(video_bytes)} < 100000')
 
     api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
     if not api_key:

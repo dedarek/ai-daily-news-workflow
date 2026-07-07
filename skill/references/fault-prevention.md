@@ -68,7 +68,7 @@
    - ⚠️ 瞬时超时不等于 SMTP 不可用，禁止单次 `timeout 5` 直接判死
 3. **工具可用性测试**：
    - **删除 `miaoda-studio-cli` 强制检查**（已不在当前链路中使用）
-   - 当前播客链路实际依赖：`bash`、`ffmpeg`、`curl`；SiliconFlow 合成示例位于仓库根目录
+   - 当前播客链路实际依赖：`bash`、`ffmpeg`、外部 Video API；生成脚本通过 `AI_DAILY_VIDEO_API_TOKEN` 鉴权
 4. **磁盘空间检查**：`df -h /tmp | tail -1` 确认有足够空间（>100MB 可用）
 5. **日期确认**：输出 `今天是 YYYY-MM-DD`，后续所有 URL 使用该日期
 
