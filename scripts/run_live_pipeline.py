@@ -411,17 +411,7 @@ def llm_provider_chain(
 ) -> list[dict[str, object]]:
     if thinking_enabled is None:
         thinking_enabled = os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}
-    providers: list[dict[str, object]] = [
-        {
-            'name': 'nvidia',
-            'endpoint': endpoint,
-            'models': models,
-            'api_key': normalize_bearer_token(api_key),
-            'chat_template_kwargs': {'thinking': True}
-            if thinking_enabled
-            else None,
-        }
-    ]
+    providers: list[dict[str, object]] = []
     lenovo_api_key = normalize_bearer_token(
         os.environ.get('LENOVO_LLM_API_KEY')
         or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY', '')
@@ -441,7 +431,27 @@ def llm_provider_chain(
                 'api_key': lenovo_api_key,
                 'chat_template_kwargs': {'enable_thinking': False},
             })
+    nvidia_api_key = normalize_bearer_token(api_key)
+    if nvidia_api_key:
+        providers.append({
+            'name': 'nvidia',
+            'endpoint': endpoint,
+            'models': models,
+            'api_key': nvidia_api_key,
+            'chat_template_kwargs': {'thinking': True}
+            if thinking_enabled
+            else None,
+        })
     return providers
+
+
+def has_any_llm_api_key() -> bool:
+    return bool(
+        os.environ.get('LENOVO_LLM_API_KEY')
+        or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY')
+        or os.environ.get('NVIDIA_API_KEY')
+        or os.environ.get('OPENCODE_GO_API_KEY')
+    )
 
 
 def llm_stream_enabled() -> bool:
@@ -1733,9 +1743,9 @@ def main() -> int:
 
     content_date, source_url, raw_html = fetch_latest(args.date)
     candidates = parse_articles(raw_html)
-    llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
-    if not llm_api_key:
-        raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required; refusing to generate a non-LLM issue')
+    llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY') or ''
+    if not has_any_llm_api_key():
+        raise RuntimeError('LENOVO_LLM_API_KEY or NVIDIA_API_KEY is required; refusing to generate a non-LLM issue')
     articles, dialogue, digest_summary, llm_metadata = call_deepseek(candidates, llm_api_key, args.date)
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'

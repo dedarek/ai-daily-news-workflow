@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 from prompt_loader import prompt_template, render_prompt
-from run_live_pipeline import DEFAULT_LLM_BASE_URL, DEFAULT_LLM_MODELS, request_deepseek_json
+from run_live_pipeline import DEFAULT_LLM_BASE_URL, DEFAULT_LLM_MODELS, has_any_llm_api_key, request_deepseek_json
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = REPO_ROOT / 'skill'
@@ -126,9 +126,9 @@ def main() -> int:
     if video_bytes is not None and len(video_bytes) < 100_000:
         deterministic_issues.append(f'video_bytes={len(video_bytes)} < 100000')
 
-    api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
-    if not api_key:
-        raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required for afternoon quality review')
+    api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY') or ''
+    if not has_any_llm_api_key():
+        raise RuntimeError('LENOVO_LLM_API_KEY or NVIDIA_API_KEY is required for afternoon quality review')
     endpoint = (
         os.environ.get('NVIDIA_LLM_BASE_URL')
         or os.environ.get('OPENCODE_GO_BASE_URL')

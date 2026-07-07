@@ -114,7 +114,7 @@ jobs:
           LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}
           LENOVO_LLM_MODELS: ${{ vars.LENOVO_LLM_MODELS || 'qwen35-122b-a10b-fp8' }}
         run: |
-          test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret NVIDIA_API_KEY"; exit 1; }
+          test -n "$LENOVO_LLM_API_KEY" || test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret LENOVO_LLM_API_KEY or NVIDIA_API_KEY"; exit 1; }
           python3 scripts/prepare_review_delivery.py \
             --date "${{ steps.issue.outputs.date }}" \
             --base-url "$CONTENT_BASE_URL" \

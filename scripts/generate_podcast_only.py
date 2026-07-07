@@ -17,6 +17,7 @@ from run_live_pipeline import (  # noqa: E402
     duration,
     generate_video_api_media,
     generate_podcast_dialogue,
+    has_any_llm_api_key,
     moss_dialogue_input,
 )
 
@@ -83,9 +84,9 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     articles, articles_source = load_articles(args.articles)
-    llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY', '')
-    if not llm_api_key:
-        raise RuntimeError('NVIDIA_API_KEY or OPENCODE_GO_API_KEY is required to generate podcast dialogue')
+    llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY') or ''
+    if not has_any_llm_api_key():
+        raise RuntimeError('LENOVO_LLM_API_KEY or NVIDIA_API_KEY is required to generate podcast dialogue')
 
     dialogue, podcast_metadata = generate_podcast_dialogue(articles, llm_api_key)
 
