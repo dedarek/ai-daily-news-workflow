@@ -61,7 +61,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 | 项 | 值 |
 |----|-----|
 | Token | `AI_DAILY_VIDEO_API_TOKEN` |
-| Endpoint | `POST https://8.137.39.142:8011/video-api/api/videos/generate` |
+| Endpoint | `POST http://8.137.39.142:8011/video-api/api/videos/generate` |
 | 输入 | `podcast-script-YYYY-MM-DD.txt` |
 | 输出 | 下载 job zip，并提取 MP3 + MP4 |
 

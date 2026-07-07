@@ -36,7 +36,7 @@ DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
 DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2'
 DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
 DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
-DEFAULT_VIDEO_API_BASE_URL = 'https://8.137.39.142:8011/video-api/api'
+DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:8011/video-api/api'
 DEFAULT_VIDEO_API_TITLE = 'AI热点新闻'
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
@@ -1267,6 +1267,23 @@ def video_api_base_url() -> str:
     return os.environ.get('AI_DAILY_VIDEO_API_BASE_URL', DEFAULT_VIDEO_API_BASE_URL).rstrip('/')
 
 
+def video_api_base_url_candidates() -> list[str]:
+    configured = video_api_base_url()
+    candidates = [configured]
+    if configured.startswith('https://'):
+        candidates.append('http://' + configured[len('https://'):])
+    deduped: list[str] = []
+    for item in candidates:
+        if item not in deduped:
+            deduped.append(item)
+    return deduped
+
+
+def is_tls_protocol_error(exc: Exception) -> bool:
+    text = str(getattr(exc, 'reason', exc)).lower()
+    return 'wrong_version_number' in text or 'wrong version number' in text
+
+
 def video_api_token() -> str:
     return (
         os.environ.get('AI_DAILY_VIDEO_API_TOKEN')
@@ -1289,7 +1306,7 @@ def video_api_json(url: str, token: str, *, timeout: float = 60) -> dict:
         return json.loads(response.read().decode('utf-8'))
 
 
-def submit_video_api_job(script_path: Path, issue_date: str, token: str) -> tuple[str, dict]:
+def submit_video_api_job(script_path: Path, issue_date: str, token: str, base_url: str) -> tuple[str, dict]:
     if not script_path.is_file():
         raise RuntimeError(f'video API script file missing: {script_path}')
     title = os.environ.get('AI_DAILY_VIDEO_API_TITLE', DEFAULT_VIDEO_API_TITLE)
@@ -1298,7 +1315,7 @@ def submit_video_api_job(script_path: Path, issue_date: str, token: str) -> tupl
         files={'script_file': script_path},
     )
     request = Request(
-        f'{video_api_base_url()}/videos/generate',
+        f'{base_url.rstrip("/")}/videos/generate',
         data=body,
         headers={
             'Authorization': f'Bearer {token}',
@@ -1316,13 +1333,13 @@ def submit_video_api_job(script_path: Path, issue_date: str, token: str) -> tupl
     return job_id, payload
 
 
-def wait_video_api_job(job_id: str, token: str) -> dict:
+def wait_video_api_job(job_id: str, token: str, base_url: str) -> dict:
     timeout_seconds = float(os.environ.get('AI_DAILY_VIDEO_API_TIMEOUT_SECONDS', '1800'))
     poll_seconds = float(os.environ.get('AI_DAILY_VIDEO_API_POLL_SECONDS', '5'))
     deadline = time.time() + timeout_seconds
     last_payload: dict = {}
     while time.time() < deadline:
-        payload = video_api_json(f'{video_api_base_url()}/jobs/{job_id}', token, timeout=60)
+        payload = video_api_json(f'{base_url.rstrip("/")}/jobs/{job_id}', token, timeout=60)
         last_payload = payload
         status = str(payload.get('status') or '').strip().lower()
         print(f'VIDEO_API job={job_id} status={status}', flush=True)
@@ -1334,9 +1351,9 @@ def wait_video_api_job(job_id: str, token: str) -> dict:
     raise RuntimeError(f'video API job timed out after {timeout_seconds}s: {last_payload}')
 
 
-def download_video_api_zip(job_id: str, token: str, zip_path: Path) -> None:
+def download_video_api_zip(job_id: str, token: str, zip_path: Path, base_url: str) -> None:
     request = Request(
-        f'{video_api_base_url()}/jobs/{job_id}/download',
+        f'{base_url.rstrip("/")}/jobs/{job_id}/download',
         headers={'Authorization': f'Bearer {token}', 'User-Agent': 'ai-daily-news-workflow/1.0'},
     )
     with urlopen(request, timeout=float(os.environ.get('AI_DAILY_VIDEO_API_DOWNLOAD_TIMEOUT_SECONDS', '300'))) as response:
@@ -1372,10 +1389,29 @@ def generate_video_api_media(
     token = video_api_token()
     if not token:
         raise RuntimeError('AI_DAILY_VIDEO_API_TOKEN is required; refusing to generate podcast audio/video')
-    job_id, submit_payload = submit_video_api_job(script_path, issue_date, token)
-    final_payload = wait_video_api_job(job_id, token)
+    submit_error: Exception | None = None
+    used_base_url = ''
+    for candidate_base_url in video_api_base_url_candidates():
+        try:
+            job_id, submit_payload = submit_video_api_job(script_path, issue_date, token, candidate_base_url)
+            used_base_url = candidate_base_url.rstrip('/')
+            break
+        except URLError as exc:
+            submit_error = exc
+            if candidate_base_url.startswith('https://') and is_tls_protocol_error(exc):
+                print(
+                    'WARN video_api_tls_protocol_error '
+                    f'base_url={candidate_base_url}; retrying with http fallback',
+                    flush=True,
+                )
+                continue
+            raise
+    else:
+        raise RuntimeError(f'video API submit failed: {submit_error}')
+
+    final_payload = wait_video_api_job(job_id, token, used_base_url)
     zip_path = audio_path.with_name(f'video-api-result-{issue_date}.zip')
-    download_video_api_zip(job_id, token, zip_path)
+    download_video_api_zip(job_id, token, zip_path, used_base_url)
     extract_largest_zip_member(zip_path, '.mp3', audio_path)
     extract_largest_zip_member(zip_path, '.mp4', video_path)
     compress_audio_if_large(audio_path)
@@ -1392,7 +1428,7 @@ def generate_video_api_media(
     voice_path.write_text(json.dumps(voice_manifest, ensure_ascii=False, indent=2), encoding='utf-8')
     return voice_manifest, {
         'provider': 'video-api',
-        'base_url': video_api_base_url(),
+        'base_url': used_base_url,
         'job_id': job_id,
         'submit_response': submit_payload,
         'final_response': final_payload,
