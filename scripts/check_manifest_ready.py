@@ -21,13 +21,8 @@ def is_ready(manifest_path: Path) -> tuple[bool, str]:
     if manifest.get('status') != 'ready':
         return False, f"manifest status is {manifest.get('status')!r}, expected 'ready'"
     published = manifest.get('published_artifacts')
-    if (
-        not isinstance(published, dict)
-        or not published.get('html')
-        or not published.get('audio')
-        or not published.get('video')
-    ):
-        return False, 'manifest missing published html/audio/video artifacts'
+    if not isinstance(published, dict) or not published.get('html') or not published.get('audio'):
+        return False, 'manifest missing published html/audio artifacts'
     return True, 'ready'
 
 

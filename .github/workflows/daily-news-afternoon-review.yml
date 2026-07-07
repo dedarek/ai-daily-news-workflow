@@ -27,6 +27,7 @@ permissions:
 
 jobs:
   review-and-send:
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
@@ -128,23 +129,7 @@ jobs:
           REASON="Afternoon review failed before delivery."
           REPORT="review-dist/quality-review-${{ steps.issue.outputs.date }}.json"
           if [ -f "$REPORT" ]; then
-            REASON=$(python3 - "$REPORT" <<'PY'
-import json
-import sys
-from pathlib import Path
-
-report = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
-reasons = report.get('blocking_reasons') or []
-review = report.get('llm_review') or {}
-issues = review.get('issues') or []
-parts = []
-if reasons:
-    parts.append('Blocking reasons: ' + '; '.join(map(str, reasons)))
-if issues:
-    parts.append('Review issues: ' + '; '.join(map(str, issues[:3])))
-print(' | '.join(parts) or 'Afternoon review blocked delivery.')
-PY
-)
+            REASON=$(python3 scripts/summarize_review_block.py "$REPORT")
           fi
           python3 scripts/send_admin_alert.py \
             --date "${{ steps.issue.outputs.date }}" \

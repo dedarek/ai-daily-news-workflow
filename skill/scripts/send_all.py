@@ -50,6 +50,14 @@ def resolve_artifact(artifact_dir: Path, date_str: str, names: list[str]) -> Pat
     raise FileNotFoundError(f'Missing artifact. Tried: {expected}')
 
 
+def resolve_optional_artifact(artifact_dir: Path, date_str: str, names: list[str]) -> Path | None:
+    for name in names:
+        path = artifact_dir / name.format(date=date_str)
+        if path.is_file():
+            return path
+    return None
+
+
 def read_send_email_config() -> dict:
     try:
         configured = json.loads(SEND_EMAIL_CONFIG_FILE.read_text(encoding='utf-8'))
@@ -211,7 +219,7 @@ def main() -> int:
             'ai-daily-news-podcast-{date}.mp3',
         ],
     )
-    mp4_path = resolve_artifact(
+    mp4_path = resolve_optional_artifact(
         artifact_dir,
         args.date,
         [

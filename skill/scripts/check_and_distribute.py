@@ -228,13 +228,13 @@ def main() -> int:
         if not (MIN_MP3_BYTES <= mp3_size <= MAX_MP3_BYTES):
             failures.append(f'MP3_SIZE_OUT_OF_RANGE: {mp3_path} = {mp3_size} bytes not in [{MIN_MP3_BYTES}, {MAX_MP3_BYTES}]')
 
-    if not mp4_path.exists():
-        failures.append(f'MISSING: {mp4_path}')
-    else:
+    if mp4_path.exists():
         mp4_size = mp4_path.stat().st_size
         facts.append(f'MP4: {mp4_path} ({mp4_size} bytes)')
         if mp4_size < MIN_MP4_BYTES:
             failures.append(f'MP4_TOO_SMALL: {mp4_path} = {mp4_size} bytes < {MIN_MP4_BYTES}')
+    else:
+        facts.append(f'MP4: optional missing ({mp4_path})')
 
     if sample_path is not None:
         if not sample_path.exists():
