@@ -83,19 +83,38 @@ def public_video_url(date_str: str) -> str:
     return f'{base_url}/video/{date_str}.mp4'
 
 
-def append_video_link(html_content: str, date_str: str) -> str:
-    video_url = public_video_url(date_str)
-    block = (
-        '<div style="max-width:700px;margin:16px auto;padding:12px 16px;'
-        'background:#f8fafc;border:1px solid #dbeafe;border-radius:8px;'
-        'font-size:13px;line-height:1.7;color:#334155;">'
-        '视频文件较大，邮件不附带 MP4。'
-        f'<a href="{video_url}" style="color:#2563EB;text-decoration:none;">点击查看视频版</a>'
-        '</div>'
-    )
+def insert_after_summary(html_content: str, block: str) -> str:
+    if 'data-role="video-entry"' in html_content:
+        return html_content
+    marker = 'padding:22px 36px 18px;'
+    start = html_content.find(marker)
+    if start >= 0:
+        end = html_content.find('</td></tr>', start)
+        if end >= 0:
+            return html_content[:end] + block + html_content[end:]
     if '</body>' in html_content:
         return html_content.replace('</body>', block + '</body>')
     return html_content + block
+
+
+def append_video_link(html_content: str, date_str: str) -> str:
+    video_url = public_video_url(date_str)
+    block = (
+        '<table data-role="video-entry" width="100%" cellpadding="0" cellspacing="0" '
+        'style="margin:16px 0 0;border:1px solid #bfdbfe;border-radius:12px;'
+        'overflow:hidden;background-color:#eff6ff;">'
+        '<tr><td style="padding:14px 16px;">'
+        '<p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#1e3a8a;">'
+        '🎬 视频版日报已生成</p>'
+        '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#334155;">'
+        'MP4 文件较大，邮件不附带视频附件。可在浏览器中在线播放或下载。</p>'
+        f'<a href="{video_url}" style="display:inline-block;background-color:#2563EB;'
+        'color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;'
+        'padding:8px 14px;border-radius:999px;">打开视频版</a>'
+        f'<p style="margin:10px 0 0;font-size:12px;line-height:1.6;color:#64748b;word-break:break-all;">{video_url}</p>'
+        '</td></tr></table>'
+    )
+    return insert_after_summary(html_content, block)
 
 
 def read_send_email_config() -> dict:

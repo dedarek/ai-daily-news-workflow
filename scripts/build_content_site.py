@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import shutil
 from datetime import datetime, timezone
@@ -21,6 +22,40 @@ def write_json(path: Path, data) -> None:
 
 def absolute(base_url: str, path: str) -> str:
     return f"{base_url.rstrip('/')}/{path.lstrip('/')}"
+
+
+def insert_after_summary(html_content: str, block: str) -> str:
+    if 'data-role="video-player"' in html_content:
+        return html_content
+    marker = 'padding:22px 36px 18px;'
+    start = html_content.find(marker)
+    if start >= 0:
+        end = html_content.find('</td></tr>', start)
+        if end >= 0:
+            return html_content[:end] + block + html_content[end:]
+    if '</body>' in html_content:
+        return html_content.replace('</body>', block + '</body>')
+    return html_content + block
+
+
+def insert_video_player_after_summary(html_content: str, video_url: str) -> str:
+    escaped_url = html.escape(video_url, quote=True)
+    block = (
+        '<table data-role="video-player" width="100%" cellpadding="0" cellspacing="0" '
+        'style="margin:18px 0 0;border:1px solid #bfdbfe;border-radius:14px;'
+        'overflow:hidden;background:#eff6ff;">'
+        '<tr><td style="padding:16px 18px;">'
+        '<p style="margin:0 0 10px;font-size:15px;font-weight:700;color:#1e3a8a;">'
+        '🎬 视频版日报</p>'
+        f'<video controls preload="metadata" style="width:100%;max-height:420px;'
+        'display:block;border-radius:10px;background:#020617;" src="'
+        f'{escaped_url}">当前浏览器不支持在线播放，请使用下方链接打开视频。</video>'
+        f'<p style="margin:10px 0 0;font-size:13px;line-height:1.7;color:#334155;">'
+        f'<a href="{escaped_url}" style="color:#2563EB;text-decoration:none;font-weight:700;">打开或下载 MP4 视频</a>'
+        '</p>'
+        '</td></tr></table>'
+    )
+    return insert_after_summary(html_content, block)
 
 
 def first_existing(paths: list[Path], label: str) -> Path:
@@ -179,6 +214,10 @@ def main() -> int:
         'audio_url': absolute(args.base_url, f'audio/{args.date}.mp3'),
         'video_url': absolute(args.base_url, f'video/{args.date}.mp4'),
     }
+    published_html.write_text(
+        insert_video_player_after_summary(published_html.read_text(encoding='utf-8'), issue['video_url']),
+        encoding='utf-8',
+    )
     voice['audio'] = issue['audio_url']
     voice['video'] = issue['video_url']
     write_json(issue_root / 'voice.json', voice)
