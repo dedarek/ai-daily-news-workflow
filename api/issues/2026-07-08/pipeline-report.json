@@ -1,0 +1,192 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-07-08",
+  "content_date": "2026-07-08",
+  "source_url": "https://hex2077.dev/docs/2026-07/2026-07-08/",
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 15,
+  "candidate_data_file": "candidate-news-2026-07-08.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 7,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1 首句直接抛出宏大结论，缺乏自然切入，建议增加一句对当日行业氛围的简短描述作为过渡。",
+              "S2 第 10 轮关于 HeRo 水印的发言略显平铺直叙，建议增加一句对‘分级’概念的具体应用场景追问，以增强互动感。",
+              "S1 第 11 轮关于三星利润的发言中，‘亚洲竞争对手’指代稍显模糊，虽未新增事实，但口播时可微调为‘日韩及中国台湾厂商’以增强清晰度（基于日报中‘日本、中国及台湾’的表述）。"
+            ],
+            "repair_instruction": "1. 修改 S1 首句：在‘今天 AI 行业的核心矛盾……'前增加‘刚看完今天的日报，感觉……'作为自然过渡。2. 优化 S2 第 10 轮：在介绍 HeRo 技术后，追加一句‘这种分级权限在实际商业场景中，比如企业内网对外发布时，具体怎么落地？’以体现追问。3. 微调 S1 第 11 轮：将‘亚洲竞争对手’改为‘日韩及中国台湾的竞争对手’，使口播指代更精准，符合日报原文细节。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1 首句直接抛出宏大结论，缺乏自然切入，建议增加一句对当日行业氛围的简短描述作为过渡。",
+          "S2 第 10 轮关于 HeRo 水印的发言略显平铺直叙，建议增加一句对‘分级’概念的具体应用场景追问，以增强互动感。",
+          "S1 第 11 轮关于三星利润的发言中，‘亚洲竞争对手’指代稍显模糊，虽未新增事实，但口播时可微调为‘日韩及中国台湾厂商’以增强清晰度（基于日报中‘日本、中国及台湾’的表述）。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今日新闻揭示AI正从单纯生成转向具备自主检索与技能进化的智能体，但AGI安全验证被证不可行，迫使防御下沉至内核层。算力紧缺推高硬件利润，而隐私争议与法律指控凸显数据合规压力。行业需在技术激进扩张与结构性安全、法律风险间寻找新平衡。",
+  "podcast_turns": 20,
+  "podcast_script_file": "podcast-script-2026-07-08.json",
+  "podcast_script_text_file": "podcast-script-2026-07-08.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-07-08.txt",
+  "voice_file": "voice-2026-07-08.json",
+  "voice_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_synthesis_mode": "external_video_api",
+  "voice_timing_source": "estimated_text_weight",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_leading_silence_seconds": 0,
+  "tts_reference_files": null,
+  "video_api": {
+    "provider": "video-api",
+    "base_url": "http://8.137.39.142:8011/video-api/api",
+    "job_id": "72ba79460377430a8825d45ebcff753a",
+    "submit_response": {
+      "job_id": "72ba79460377430a8825d45ebcff753a",
+      "job_type": "video",
+      "status": "running",
+      "created_at": "2026-07-08T05:51:52",
+      "updated_at": "2026-07-08T05:51:52",
+      "day": "2026-07-08-1351",
+      "title": "AI热点新闻",
+      "script_path": "/data/heyj17/news_audio_video/outputs/jobs/uploads/72ba79460377430a8825d45ebcff753a/3_podcast-script-2026-07-08.txt",
+      "skip_tts": false,
+      "output_dir": "/data/heyj17/news_audio_video/outputs",
+      "audio_dir": "/data/heyj17/news_audio_video/outputs/audio",
+      "timeline_dir": "/data/heyj17/news_audio_video/outputs/timeline",
+      "out_dir": "/data/heyj17/news_audio_video/outputs/video",
+      "output_path": "/data/heyj17/news_audio_video/outputs/video/2026-07-08-1351.mp4",
+      "audio_path": "/data/heyj17/news_audio_video/outputs/audio/2026-07-08-1351.mp3",
+      "timeline_path": "/data/heyj17/news_audio_video/outputs/timeline/2026-07-08-1351.json",
+      "log_path": "/data/heyj17/news_audio_video/outputs/jobs/72ba79460377430a8825d45ebcff753a.log",
+      "ffmpeg": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffmpeg",
+      "ffprobe": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffprobe",
+      "ffmpeg_video_codec": "h264_nvenc",
+      "ffmpeg_video_preset": "p5",
+      "ffmpeg_video_quality_flag": "-cq",
+      "ffmpeg_video_quality": "23",
+      "ffmpeg_video_fallback_codec": "libx264",
+      "ffmpeg_video_fallback_preset": "fast",
+      "ffmpeg_video_fallback_quality_flag": "-crf",
+      "ffmpeg_video_fallback_quality": "23",
+      "tts_model_dir": "pretrained_models/Fun-CosyVoice3-0.5B-2512",
+      "tts_voice_config": "/data/heyj17/news_audio_video/config/voices.json",
+      "tts_gap_seconds": 0.16,
+      "tts_load_vllm": false,
+      "tts_load_trt": false,
+      "tts_fp16": true,
+      "character_pack": "characters-p3",
+      "video_renderer": "remotion",
+      "remotion_concurrency": 8,
+      "started_at": "2026-07-08T05:51:52"
+    },
+    "final_response": {
+      "job_id": "72ba79460377430a8825d45ebcff753a",
+      "job_type": "video",
+      "status": "succeeded",
+      "created_at": "2026-07-08T05:51:52",
+      "updated_at": "2026-07-08T06:03:21",
+      "day": "2026-07-08-1351",
+      "title": "AI热点新闻",
+      "script_path": "/data/heyj17/news_audio_video/outputs/jobs/uploads/72ba79460377430a8825d45ebcff753a/3_podcast-script-2026-07-08.txt",
+      "skip_tts": false,
+      "output_dir": "/data/heyj17/news_audio_video/outputs",
+      "audio_dir": "/data/heyj17/news_audio_video/outputs/audio",
+      "timeline_dir": "/data/heyj17/news_audio_video/outputs/timeline",
+      "out_dir": "/data/heyj17/news_audio_video/outputs/video",
+      "output_path": "/data/heyj17/news_audio_video/outputs/video/2026-07-08-1351.mp4",
+      "audio_path": "/data/heyj17/news_audio_video/outputs/audio/2026-07-08-1351.mp3",
+      "timeline_path": "/data/heyj17/news_audio_video/outputs/timeline/2026-07-08-1351.json",
+      "log_path": "/data/heyj17/news_audio_video/outputs/jobs/72ba79460377430a8825d45ebcff753a.log",
+      "ffmpeg": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffmpeg",
+      "ffprobe": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffprobe",
+      "ffmpeg_video_codec": "h264_nvenc",
+      "ffmpeg_video_preset": "p5",
+      "ffmpeg_video_quality_flag": "-cq",
+      "ffmpeg_video_quality": "23",
+      "ffmpeg_video_fallback_codec": "libx264",
+      "ffmpeg_video_fallback_preset": "fast",
+      "ffmpeg_video_fallback_quality_flag": "-crf",
+      "ffmpeg_video_fallback_quality": "23",
+      "tts_model_dir": "pretrained_models/Fun-CosyVoice3-0.5B-2512",
+      "tts_voice_config": "/data/heyj17/news_audio_video/config/voices.json",
+      "tts_gap_seconds": 0.16,
+      "tts_load_vllm": false,
+      "tts_load_trt": false,
+      "tts_fp16": true,
+      "character_pack": "characters-p3",
+      "video_renderer": "remotion",
+      "remotion_concurrency": 8,
+      "started_at": "2026-07-08T05:51:52",
+      "finished_at": "2026-07-08T06:03:21",
+      "duration_seconds": 688.28,
+      "download_url": "/api/jobs/72ba79460377430a8825d45ebcff753a/download"
+    },
+    "zip_file": "video-api-result-2026-07-08.zip",
+    "video_file": "ai-daily-news-video-2026-07-08.mp4"
+  },
+  "html_bytes": 24661,
+  "podcast_bytes": 5269965,
+  "video_bytes": 69071883,
+  "podcast_duration_seconds": 263.47
+}

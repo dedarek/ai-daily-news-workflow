@@ -1,0 +1,137 @@
+[
+  {
+    "title": "智能生成社交媒体人像照片",
+    "summary": "社交巨头脸书推出了最新的图像生成模型。用户可以通过 软件合成好友照片。这个智能合成好友照片工具已支持多平台. 该模型具备智能体特性并且会自主思考。系统甚至可以 🔍 检索网页来辅助绘图。",
+    "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "快捷部署云端开发实例",
+    "summary": "拥抱脸与亚马逊云合作推出了快捷部署。开发者可以 一键开启云端开发。云端一键部署服务已受到广泛好评。系统能够显著优化模型训练 💻 流程。用户在界面上可以直接配置算力资源。",
+    "url": "https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "通用智能对齐数学证明",
+    "summary": "科学家成功证明了通用智能对齐屏障。安全验证存在着无法逾越的 🤯 理论壁垒。阅读安全对齐前沿新进展可以看清当前现状。任何算法都很难 🛡️ 证明系统的自我修改。人类在未来需要重新制定安全防御红线。",
+    "url": "https://arxiv.org/abs/2606.28639",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "大模型分级安全水印技术",
+    "summary": "科研团队提出了全新的分级水印框架。不同的用户 🔒 只能解密自己权限的内容。大模型分级水印技术的论文已正式发表。实验证明新方法 能够有效降低延迟。系统在保护隐私的同时还能保证文本质量。",
+    "url": "https://arxiv.org/abs/2607.05353",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能体内核层级安全网关",
+    "summary": "安全专家开发出了智能体安全系统。该系统在 🛡️ 内核层级拦截外部调用。智能体安全系统论文提供了设计方案。实验显示防御 👻 恶意攻击的效率倍增。新技术能彻底防止应用层被恶意绕过。",
+    "url": "https://arxiv.org/abs/2604.16870",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "自主进化智能体技能管理",
+    "summary": "团队发布了智能体演进的新框架。机器可以自主学习并且 🤖 管理技能。智能体演进新论文中包含多种实验。自学技能 of 效率 🔥 已经超越了人类专家。系统让智能体助手拥有了长效记忆。",
+    "url": "https://arxiv.org/abs/2605.27366",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "自动会议记录工具隐私争议",
+    "summary": "自动记录工具引发了隐私合规讨论。许多人 🤔 反对在私密聊天中使用它。会议录音隐私争议引发了网民热烈讨论。医疗问诊记录 😟 面临着严重泄露风险。厂商需要用本地模型来保护数据安全。",
+    "url": "https://newshacker.me/story?id=48823024",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "车内驾驶员监控隐私边界",
+    "summary": "欧盟要求新车必须配备车内摄像头。监控系统经常 🚗 发生令人烦恼的误报。新车监控争议报告详述了具体民意。车主 😟 担心个人注意力数据会被上传。汽车厂商必须处理好安全与隐私边界。",
+    "url": "https://newshacker.me/story?id=48823557",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "算力芯片爆发推动三星利润",
+    "summary": "算力芯片需求推动半导体巨头利润暴增。三星电子的营业利润 增长了十八倍。三星电子财报分析显示出市场变化。全球高性能硬件 ⚡ 订单正在亚洲积聚。芯片厂商正全力扩建数据中心产能。",
+    "url": "https://www.bbc.com/zhongwen/articles/c1jy100x235o/trad",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国内评估顶尖模型出口限制",
+    "summary": "监管部门正在探讨出海限制新政策。顶尖模型出口 🛡️ 最终需要接受合规审查。中国模型监管动向表明规则收紧。此举旨在保护国内的技术自主权。中美两国的人工智能格局可能会分化。",
+    "url": "https://www.reuters.com/technology/artificial-intelligence/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模型蒸馏引起技术产权争端",
+    "summary": "美国大模型公司指责对手非法抄袭。对方被指通过 😡 虚假账户获取训练数据。技术产权争端事件已被多家媒体报道。模型蒸馏技术在行业里存在较大争议。国际科技竞争 ⚖️ 在未来将变得更复杂。",
+    "url": "https://cn.nytimes.com/business/20260707/ai-distillation-china/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "芯片巨头海力士在美上市",
+    "summary": "芯片巨头正在启动美国上市计划。估值高达 二百八十亿美元极具规模。半导体巨头上市新闻引起了广泛关注。内存芯片在模型推理中起到关键作用。全球市场正在 ⚡ 加快布局硬件供应链。",
+    "url": "https://www.bloomberg.com/ai",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "人工智能普及面临程序员失业",
+    "summary": "社交媒体上关于技术失业的帖子爆火。程序员 😟 可能会成为工业革命的纺织女工。开发人员遭遇裁员引起了圈内的大量讨论。传闻某大厂部门今年将裁员一半。人工智能普及对传统职业造成了冲击。",
+    "url": "https://x.com/Wangduanniao/status/2074416894837444614",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能社交平台数据总结工具",
+    "summary": "社区推出了一款聚合搜索代理插件。软件能够 搜遍主流的海外社交平台。智能搜索总结工具的代码已经开源。该项目目前斩获了4.9万星的推荐。聚合技术 🔍 解决了跨平台搜索的烦恼。",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开源智能书签自动打标签应用",
+    "summary": "开发者开源了最新的智能书签应用。软件能够 📂 帮助用户实现自动打标签。开源书签管理工具已支持本地部署。目前项目在社区已揽获26.8k星关注。系统还 💡 支持生成精美的图片笔记。",
+    "url": "https://github.com/karakeep-app/karakeep",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

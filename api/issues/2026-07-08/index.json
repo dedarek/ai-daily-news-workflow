@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-07-08",
+  "content_date": "2026-07-08",
+  "published_at": "2026-07-08T06:05:28.179124+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 7,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1 首句直接抛出宏大结论，缺乏自然切入，建议增加一句对当日行业氛围的简短描述作为过渡。",
+              "S2 第 10 轮关于 HeRo 水印的发言略显平铺直叙，建议增加一句对‘分级’概念的具体应用场景追问，以增强互动感。",
+              "S1 第 11 轮关于三星利润的发言中，‘亚洲竞争对手’指代稍显模糊，虽未新增事实，但口播时可微调为‘日韩及中国台湾厂商’以增强清晰度（基于日报中‘日本、中国及台湾’的表述）。"
+            ],
+            "repair_instruction": "1. 修改 S1 首句：在‘今天 AI 行业的核心矛盾……'前增加‘刚看完今天的日报，感觉……'作为自然过渡。2. 优化 S2 第 10 轮：在介绍 HeRo 技术后，追加一句‘这种分级权限在实际商业场景中，比如企业内网对外发布时，具体怎么落地？’以体现追问。3. 微调 S1 第 11 轮：将‘亚洲竞争对手’改为‘日韩及中国台湾的竞争对手’，使口播指代更精准，符合日报原文细节。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1 首句直接抛出宏大结论，缺乏自然切入，建议增加一句对当日行业氛围的简短描述作为过渡。",
+          "S2 第 10 轮关于 HeRo 水印的发言略显平铺直叙，建议增加一句对‘分级’概念的具体应用场景追问，以增强互动感。",
+          "S1 第 11 轮关于三星利润的发言中，‘亚洲竞争对手’指代稍显模糊，虽未新增事实，但口播时可微调为‘日韩及中国台湾厂商’以增强清晰度（基于日报中‘日本、中国及台湾’的表述）。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-08/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-08/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-08/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-08/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-08.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-08/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-08/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-08.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-08/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-08.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-08.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-08.mp4"
+}
