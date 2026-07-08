@@ -1,12 +1,10 @@
 {
   "phases": {
     "morning": {
-      "audience": "admins",
-      "subject_suffix": ""
+      "audience": "admins"
     },
     "afternoon": {
-      "audience": "all",
-      "subject_suffix": "（14:30 LLM复审通过）"
+      "audience": "all"
     }
   },
   "send_delay_seconds": 8,

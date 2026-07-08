@@ -33,11 +33,6 @@ def parse_args() -> argparse.Namespace:
         '--audience',
         help='Override recipient audience key from recipients.json, for example admins or all',
     )
-    parser.add_argument(
-        '--subject-suffix',
-        default=None,
-        help='Override text appended to the email subject. Defaults to the phase config.',
-    )
     parser.add_argument('--dry-run', action='store_true', help='Build and validate messages without SMTP delivery')
     return parser.parse_args()
 
@@ -108,9 +103,7 @@ def append_video_link(html_content: str, date_str: str) -> str:
         '每日AI热点新闻播客</p>'
         f'<video controls preload="metadata" src="{video_url}" '
         'style="width:100%;max-height:360px;display:block;margin:0 0 12px;'
-        'border-radius:10px;background-color:#020617;">'
-        '当前邮件客户端不支持视频播放，请点击下方按钮打开。'
-        '</video>'
+        'border-radius:10px;background-color:#020617;"></video>'
         f'<a href="{video_url}" style="display:inline-block;background-color:#2563EB;'
         'color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;'
         'padding:8px 16px;border-radius:999px;">播放视频</a>'
@@ -131,7 +124,7 @@ def read_send_email_config() -> dict:
     return configured
 
 
-def resolve_delivery_options(args: argparse.Namespace, config: dict) -> tuple[str, str, float, float, int, float]:
+def resolve_delivery_options(args: argparse.Namespace, config: dict) -> tuple[str, float, float, int, float]:
     phase_config: dict = {}
     if args.phase:
         phases = config.get('phases')
@@ -146,19 +139,13 @@ def resolve_delivery_options(args: argparse.Namespace, config: dict) -> tuple[st
     if not isinstance(audience, str) or not audience.strip():
         raise RuntimeError('Missing recipient audience. Pass --phase or --audience.')
 
-    subject_suffix = args.subject_suffix
-    if subject_suffix is None:
-        subject_suffix = phase_config.get('subject_suffix', '')
-    if not isinstance(subject_suffix, str):
-        raise RuntimeError('subject_suffix must be a string')
-
     delay = float(os.environ.get('AI_DAILY_SEND_DELAY', config.get('send_delay_seconds', 8)))
     batch_pause = float(os.environ.get('AI_DAILY_BATCH_PAUSE', config.get('batch_pause_seconds', 30)))
     retry_attempts = int(os.environ.get('AI_DAILY_SEND_RETRY_ATTEMPTS', config.get('retry_attempts', 3)))
     retry_delay = float(os.environ.get('AI_DAILY_SEND_RETRY_DELAY', config.get('retry_delay_seconds', 60)))
     if retry_attempts < 1:
         raise RuntimeError('retry_attempts must be >= 1')
-    return audience.strip(), subject_suffix, delay, batch_pause, retry_attempts, retry_delay
+    return audience.strip(), delay, batch_pause, retry_attempts, retry_delay
 
 
 def read_smtp_config() -> tuple[str, int, str, str]:
@@ -219,10 +206,9 @@ def build_message(
     html_content: str,
     mp3_path: Path,
     mp4_path: Path | None = None,
-    subject_suffix: str = '',
 ) -> MIMEMultipart:
     message = MIMEMultipart('mixed')
-    message['Subject'] = f'每日AI热点新闻（试运营）— {date_str}{subject_suffix}'
+    message['Subject'] = f'每日AI热点新闻（博客试运营）— {date_str}'
     message['From'] = sender
     message['To'] = recipient
 
@@ -259,7 +245,7 @@ def send_one(host: str, port: int, sender: str, password: str, recipient: str, m
 def main() -> int:
     args = parse_args()
     email_config = read_send_email_config()
-    audience, subject_suffix, delay, batch_pause, retry_attempts, retry_delay = resolve_delivery_options(
+    audience, delay, batch_pause, retry_attempts, retry_delay = resolve_delivery_options(
         args,
         email_config,
     )
@@ -321,7 +307,6 @@ def main() -> int:
             html_content,
             mp3_path,
             mp4_path if attach_mp4 else None,
-            subject_suffix,
         )
         if args.dry_run:
             print(f'OK [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)

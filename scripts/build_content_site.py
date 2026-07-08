@@ -49,7 +49,7 @@ def insert_video_player_after_summary(html_content: str, video_url: str) -> str:
         '每日AI热点新闻播客</p>'
         f'<video controls preload="metadata" style="width:100%;max-height:420px;'
         'display:block;border-radius:10px;background:#020617;" src="'
-        f'{escaped_url}">当前浏览器不支持在线播放，请使用下方链接打开视频。</video>'
+        f'{escaped_url}"></video>'
         f'<p style="margin:10px 0 0;font-size:13px;line-height:1.7;color:#334155;">'
         f'<a href="{escaped_url}" style="color:#2563EB;text-decoration:none;font-weight:700;">播放视频</a>'
         '</p>'
