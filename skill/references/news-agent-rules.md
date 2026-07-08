@@ -57,7 +57,8 @@ The repair loop follows Deep Agent Loop principles (带记忆的持续优化，�
 3. **Repair with accumulated trajectory** — If Harness says `pass: false`, the *entire history* of past attempts and their issues is fed back into the next generation call. The agent iterates with memory and must not repeat earlier mistakes, rather than reacting to a single isolated instruction.
 4. **Keep the best** — The loop always tracks the *best* attempt so far (fewest structural + review issues), not just the latest one.
 5. **Converge, don't spin** — The attempt budget (currently 5) is only a guardrail. The loop stops early when it stalls (no improvement across two consecutive rounds); it is not a fixed mechanical count.
-6. **Honest fallback** — If no attempt passes the Harness, the loop returns the *best* attempt (not the last) and marks `harness.final_pass = false`, `harness.loop_exhausted = true` in the manifest metadata (`llm.call_details.podcast_harness`) so downstream review and humans can see it. The pipeline does not crash and does not pretend success.
+6. **Provider fallback** — If the default provider chain converges without passing the Harness and an NVIDIA key is available, retry only the podcast stage with the NVIDIA provider. This keeps Lenovo as the fast default while preserving a stronger fallback for dialogue quality.
+7. **Hard stop before media** — If no attempt passes the Harness after provider fallback, keep the best failed attempt only for diagnostics and raise an error before calling the external video API. Do not upload low-quality or structurally invalid dialogue to the media service.
 
 Code-level hard blocks are reserved only for truly broken output:
 

@@ -559,6 +559,7 @@ def request_deepseek_json(
     user_prompt: str,
     thinking_enabled: bool | None = None,
     task_name: str = 'unknown',
+    provider_filter: str | None = None,
 ) -> tuple[dict, dict, str]:
     if not models:
         raise RuntimeError('LLM API model list is empty')
@@ -568,6 +569,14 @@ def request_deepseek_json(
         request_timeout = 600
     model_errors: list[str] = []
     providers = llm_provider_chain(endpoint, models, api_key, thinking_enabled=thinking_enabled)
+    if provider_filter:
+        providers = [
+            provider
+            for provider in providers
+            if str(provider.get('name') or '') == provider_filter
+        ]
+        if not providers:
+            raise RuntimeError(f'LLM provider unavailable for task={task_name}: {provider_filter}')
     for provider_index, provider in enumerate(providers):
         provider_name = str(provider['name'])
         provider_endpoint = str(provider['endpoint'])
@@ -904,6 +913,7 @@ def generate_podcast_dialogue_once(
     articles: list[Article],
     repair_instruction: str = '',
     attempt: int = 1,
+    provider_filter: str | None = None,
 ) -> tuple[list[dict[str, str]], dict, str]:
     podcast_prompt = build_podcast_prompt(articles, repair_instruction)
     podcast_result, podcast_usage, podcast_model = request_deepseek_json(
@@ -913,6 +923,7 @@ def generate_podcast_dialogue_once(
         system_prompt=prompt_template('podcast_generation_system'),
         user_prompt=podcast_prompt,
         task_name=f'podcast_generation_attempt_{attempt}',
+        provider_filter=provider_filter,
     )
     return parse_podcast_dialogue(podcast_result), podcast_usage, podcast_model
 
@@ -926,6 +937,7 @@ def review_podcast_dialogue(
     dialogue: list[dict[str, str]],
     structure_issues: list[str],
     attempt: int = 1,
+    provider_filter: str | None = None,
 ) -> tuple[dict, dict, str]:
     review_prompt = render_prompt(
         'podcast_review_user',
@@ -940,6 +952,7 @@ def review_podcast_dialogue(
         system_prompt=prompt_template('podcast_review_system'),
         user_prompt=review_prompt,
         task_name=f'podcast_review_attempt_{attempt}',
+        provider_filter=provider_filter,
     )
     issues = review.get('issues')
     if not isinstance(issues, list):
@@ -975,9 +988,18 @@ def build_cumulative_repair_instruction(trajectory: list[dict]) -> str:
     return '\n'.join(lines)
 
 
-def _podcast_metadata(models: list[str], endpoint: str, attempts: list[dict], best: dict, harness: dict) -> dict:
+def _podcast_metadata(
+    models: list[str],
+    endpoint: str,
+    attempts: list[dict],
+    best: dict,
+    harness: dict,
+    *,
+    provider_filter: str | None = None,
+) -> dict:
     return {
         'provider': 'opencode-go',
+        'provider_filter': provider_filter or 'default',
         'model_chain': models,
         'endpoint': endpoint,
         'calls': len(attempts) * 2,
@@ -990,7 +1012,12 @@ def _podcast_metadata(models: list[str], endpoint: str, attempts: list[dict], be
     }
 
 
-def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
+def _generate_podcast_dialogue_loop(
+    articles: list[Article],
+    api_key: str,
+    *,
+    provider_filter: str | None = None,
+) -> tuple[list[dict[str, str]], dict]:
     """
     生成 & 审核播客对话的 Deep Agent Loop 实现。
 
@@ -1022,6 +1049,7 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             articles=articles,
             repair_instruction=repair_instruction,
             attempt=attempt,
+            provider_filter=provider_filter,
         )
         structure_issues = validate_podcast_dialogue(dialogue)
         review, review_usage, review_model = review_podcast_dialogue(
@@ -1032,6 +1060,7 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
             dialogue=dialogue,
             structure_issues=structure_issues,
             attempt=attempt,
+            provider_filter=provider_filter,
         )
 
         attempts.append({
@@ -1070,7 +1099,14 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
                 'loop_exhausted': False,
                 'converged': False,
             }
-            return dialogue, _podcast_metadata(models, endpoint, attempts, candidate, harness)
+            return dialogue, _podcast_metadata(
+                models,
+                endpoint,
+                attempts,
+                candidate,
+                harness,
+                provider_filter=provider_filter,
+            )
 
         # 把本轮问题并入累积轨迹，供下一轮 agent 带记忆优化
         trajectory.append({
@@ -1107,10 +1143,82 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
     }
     print(
         f'warning: podcast dialogue loop did not pass after {len(attempts)} attempts; '
-        f'returning best attempt #{best["attempt"]} (score={best["score"]}) for downstream review',
+        f'returning best attempt #{best["attempt"]} (score={best["score"]}) for fallback decision',
         flush=True,
     )
-    return best['dialogue'], _podcast_metadata(models, endpoint, attempts, best, harness)
+    return best['dialogue'], _podcast_metadata(
+        models,
+        endpoint,
+        attempts,
+        best,
+        harness,
+        provider_filter=provider_filter,
+    )
+
+
+def podcast_harness_passed(metadata: dict) -> bool:
+    return bool((metadata.get('harness') or {}).get('final_pass') is True)
+
+
+def podcast_metadata_used_provider(metadata: dict, provider_name: str) -> bool:
+    attempts = ((metadata.get('call_details') or {}).get('podcast_attempts') or [])
+    prefix = f'{provider_name}:'
+    for attempt in attempts:
+        generation = attempt.get('generation') or {}
+        if str(generation.get('model') or '').startswith(prefix):
+            return True
+        if str(attempt.get('review_model') or '').startswith(prefix):
+            return True
+    return False
+
+
+def podcast_failure_summary(metadata: dict) -> str:
+    harness = metadata.get('harness') or {}
+    issues = harness.get('final_issues') or []
+    structure_issues = harness.get('structure_issues') or []
+    parts = [
+        f'provider_filter={metadata.get("provider_filter") or "default"}',
+        f'attempts={harness.get("attempts")}',
+        f'best_attempt={harness.get("best_attempt")}',
+    ]
+    if structure_issues:
+        parts.append('structure_issues=' + '; '.join(str(item) for item in structure_issues[:3]))
+    if issues:
+        parts.append('issues=' + '; '.join(str(item) for item in issues[:3]))
+    return ' | '.join(parts)
+
+
+def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[list[dict[str, str]], dict]:
+    dialogue, metadata = _generate_podcast_dialogue_loop(articles, api_key)
+    if podcast_harness_passed(metadata):
+        return dialogue, metadata
+
+    used_nvidia = podcast_metadata_used_provider(metadata, 'nvidia')
+    if api_key and not used_nvidia:
+        print(
+            'WARN podcast harness failed with default provider chain; retrying podcast stage with nvidia only. '
+            + podcast_failure_summary(metadata),
+            flush=True,
+        )
+        fallback_dialogue, fallback_metadata = _generate_podcast_dialogue_loop(
+            articles,
+            api_key,
+            provider_filter='nvidia',
+        )
+        fallback_metadata['calls'] = int(metadata.get('calls') or 0) + int(fallback_metadata.get('calls') or 0)
+        fallback_metadata.setdefault('call_details', {})['podcast_fallback_from'] = {
+            'provider_filter': metadata.get('provider_filter'),
+            'harness': metadata.get('harness'),
+            'attempts': (metadata.get('call_details') or {}).get('podcast_attempts'),
+        }
+        if podcast_harness_passed(fallback_metadata):
+            return fallback_dialogue, fallback_metadata
+        metadata = fallback_metadata
+
+    raise RuntimeError(
+        'podcast dialogue harness failed; refusing to call video API. '
+        + podcast_failure_summary(metadata)
+    )
 
 
 def render_html(
