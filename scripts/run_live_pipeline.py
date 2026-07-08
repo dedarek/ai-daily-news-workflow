@@ -39,6 +39,7 @@ DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
 DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:8011/video-api/api'
 DEFAULT_VIDEO_API_TITLE = 'AI热点新闻'
 VIDEO_API_TRANSIENT_HTTP_CODES = {408, 429, 500, 502, 503, 504}
+DEFAULT_MAX_PUBLISHED_VIDEO_BYTES = 49 * 1024 * 1024
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
 DEFAULT_TTS_LEADING_SILENCE_SECONDS = 0.35
@@ -1474,7 +1475,7 @@ def submit_video_api_job(script_path: Path, issue_date: str, token: str, base_ur
 
 def wait_video_api_job(job_id: str, token: str, base_url: str) -> dict:
     timeout_seconds = float(os.environ.get('AI_DAILY_VIDEO_API_TIMEOUT_SECONDS', '1800'))
-    poll_seconds = float(os.environ.get('AI_DAILY_VIDEO_API_POLL_SECONDS', '5'))
+    poll_seconds = float(os.environ.get('AI_DAILY_VIDEO_API_POLL_SECONDS', '60'))
     deadline = time.time() + timeout_seconds
     last_payload: dict = {}
     while time.time() < deadline:
@@ -1620,6 +1621,7 @@ def generate_video_api_media(
     extract_largest_zip_member(zip_path, '.mp3', audio_path)
     extract_largest_zip_member(zip_path, '.mp4', video_path)
     compress_audio_if_large(audio_path)
+    compress_video_if_large(video_path)
 
     total_duration = duration(audio_path)
     voice_manifest = {
@@ -1744,6 +1746,87 @@ def compress_audio_if_large(path: Path, *, max_bytes: int = 8 * 1024 * 1024) -> 
         compressed.replace(path)
     elif compressed.exists():
         compressed.unlink()
+
+
+def max_published_video_bytes() -> int:
+    raw = os.environ.get('AI_DAILY_MAX_PUBLISHED_VIDEO_BYTES')
+    if not raw:
+        return DEFAULT_MAX_PUBLISHED_VIDEO_BYTES
+    try:
+        return max(1_000_000, int(raw))
+    except ValueError:
+        return DEFAULT_MAX_PUBLISHED_VIDEO_BYTES
+
+
+def compress_video_if_large(path: Path, *, max_bytes: int | None = None) -> None:
+    if os.environ.get('AI_DAILY_COMPRESS_VIDEO', 'true').lower() in {'0', 'false', 'no'}:
+        return
+    if max_bytes is None:
+        max_bytes = max_published_video_bytes()
+    if not path.exists() or path.stat().st_size <= max_bytes:
+        return
+    original_size = path.stat().st_size
+    try:
+        video_duration = max(1.0, duration(path))
+    except Exception as exc:
+        print(f'WARN video_compress_skipped cannot probe duration: {exc}', flush=True)
+        return
+
+    try:
+        audio_bps = max(16000, int(os.environ.get('AI_DAILY_VIDEO_AUDIO_BITRATE_BPS', '64000')))
+    except ValueError:
+        audio_bps = 64000
+    target_total_bps = int(max_bytes * 8 * 0.85 / video_duration)
+    target_video_bps = max(200_000, target_total_bps - audio_bps)
+    target_video_kbps = max(200, target_video_bps // 1000)
+    compressed = path.with_name(path.stem + '-compressed.mp4')
+    print(
+        f'WARN video_too_large size={original_size} max={max_bytes}; '
+        f'reencoding target_video_bitrate={target_video_kbps}k',
+        flush=True,
+    )
+    result = subprocess.run(
+        [
+            'ffmpeg',
+            '-y',
+            '-i',
+            str(path),
+            '-c:v',
+            'libx264',
+            '-preset',
+            os.environ.get('AI_DAILY_VIDEO_COMPRESS_PRESET', 'veryfast'),
+            '-b:v',
+            f'{target_video_kbps}k',
+            '-maxrate',
+            f'{target_video_kbps}k',
+            '-bufsize',
+            f'{target_video_kbps * 2}k',
+            '-c:a',
+            'aac',
+            '-b:a',
+            f'{audio_bps // 1000}k',
+            '-movflags',
+            '+faststart',
+            str(compressed),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(f'WARN video_compress_failed: {result.stderr[-1000:]}', flush=True)
+        compressed.unlink(missing_ok=True)
+        return
+    if not compressed.exists() or compressed.stat().st_size <= 0:
+        print('WARN video_compress_failed: empty output', flush=True)
+        compressed.unlink(missing_ok=True)
+        return
+    compressed_size = compressed.stat().st_size
+    if compressed_size < original_size:
+        compressed.replace(path)
+        print(f'VIDEO_COMPRESSED original={original_size} compressed={compressed_size}', flush=True)
+        return
+    print(f'WARN video_compress_not_smaller original={original_size} compressed={compressed_size}', flush=True)
+    compressed.unlink(missing_ok=True)
 
 
 def synthesize_siliconflow_moss(

@@ -65,7 +65,11 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 | 输入 | `podcast-script-YYYY-MM-DD.txt` |
 | 输出 | 下载 job zip，并提取 MP3 + MP4 |
 
-可用 `AI_DAILY_VIDEO_API_BASE_URL` 覆盖默认 API 地址。
+可用 `AI_DAILY_VIDEO_API_BASE_URL` 覆盖默认 API 地址。轮询间隔默认 60 秒，可用
+`AI_DAILY_VIDEO_API_POLL_SECONDS` 覆盖。MP4 发布前若超过 49MB，会尝试用
+ffmpeg 重编码压缩；上限可用 `AI_DAILY_MAX_PUBLISHED_VIDEO_BYTES` 覆盖。
+邮件默认不附带 MP4，只在正文中提供 GitHub Pages 视频链接；若必须附带，可设置
+`AI_DAILY_EMAIL_ATTACH_MP4=true`，但不建议这样做。
 
 底层调用等价于：
 
@@ -84,7 +88,7 @@ while true; do
   echo "$STATUS"
   [ "$STATUS" = "succeeded" ] && break
   [ "$STATUS" = "failed" ] && exit 1
-  sleep 5
+  sleep "${AI_DAILY_VIDEO_API_POLL_SECONDS:-60}"
 done
 
 curl -L "http://8.137.39.142:8011/video-api/api/jobs/$JOB/download" \
