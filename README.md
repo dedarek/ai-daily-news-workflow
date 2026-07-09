@@ -71,6 +71,10 @@ ffmpeg 重编码压缩；上限可用 `AI_DAILY_MAX_PUBLISHED_VIDEO_BYTES` 覆�
 邮件默认不附带 MP4，只在正文中提供 GitHub Pages 视频链接；若必须附带，可设置
 `AI_DAILY_EMAIL_ATTACH_MP4=true`，但不建议这样做。
 
+日报默认只采集 `issue_date` 当天源页。若当天源页不可用，流水线会失败并等待重跑，
+不会自动回退使用前一天内容。仅在显式回填或调试时可设置
+`AI_DAILY_ALLOW_SOURCE_DATE_FALLBACK=true`。
+
 底层调用等价于：
 
 ```bash

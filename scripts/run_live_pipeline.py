@@ -235,7 +235,14 @@ def expand_summary(title: str, raw: str) -> str:
 def fetch_latest(issue_date: str) -> tuple[str, str, str]:
     start = datetime.strptime(issue_date, '%Y-%m-%d').date()
     errors: list[str] = []
-    for offset in range(4):
+    allow_date_fallback = os.environ.get('AI_DAILY_ALLOW_SOURCE_DATE_FALLBACK', 'false').lower() in {
+        '1',
+        'true',
+        'yes',
+        'on',
+    }
+    max_offset = 3 if allow_date_fallback else 0
+    for offset in range(max_offset + 1):
         candidate = start - timedelta(days=offset)
         candidate_str = candidate.isoformat()
         url = f'{SOURCE_ROOT}/{candidate_str[:7]}/{candidate_str}/'
@@ -245,9 +252,16 @@ def fetch_latest(issue_date: str) -> tuple[str, str, str]:
                 raw = response.read().decode('utf-8', errors='replace')
             if len(raw) > 10_000:
                 return candidate_str, url, raw
+            errors.append(f'{candidate_str}: source page too small ({len(raw)} bytes)')
         except Exception as exc:
             errors.append(f'{candidate_str}: {type(exc).__name__}')
-    raise RuntimeError('No daily source page available: ' + ', '.join(errors))
+    if allow_date_fallback:
+        raise RuntimeError('No daily source page available: ' + ', '.join(errors))
+    raise RuntimeError(
+        f'Daily source page for {issue_date} is not available; refusing to use an older source date. '
+        'Set AI_DAILY_ALLOW_SOURCE_DATE_FALLBACK=true only for explicit backfill/debug runs. '
+        + ', '.join(errors)
+    )
 
 
 def extract_source_text(raw_html: str) -> str:
