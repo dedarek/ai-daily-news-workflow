@@ -3,6 +3,122 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-07-09",
+      "content_date": "2026-07-08",
+      "published_at": "2026-07-09T03:23:58.892412+00:00",
+      "article_count": 12,
+      "podcast_turns": 21,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "deepseek-ai/deepseek-v4-pro",
+          "moonshotai/kimi-k2.6",
+          "z-ai/glm-5.2"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 17,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "多轮发言字数超标：第1轮126字（超过120字），第2轮105字，第3轮100字，第8轮99字，第9轮100字，第10轮100字，第13轮101字，第17轮100字，均超过95字上限。",
+                  "对话覆盖新闻条目过多（超过10条），未聚焦5-7条核心新闻，导致讨论略显散乱。"
+                ],
+                "repair_instruction": "请精简超标轮次的发言，将每轮字数控制在35-95字之间，尤其第1轮需大幅压缩至95字以内。同时建议聚焦5-7条最重要的新闻（如安全对齐、Muse Image、三星业绩、蒸馏指控、隐私争议、内核网关），将其他新闻（如Karakeep、last30days、MUSE-Autoskill、HeRo）作为简要提及或合并讨论，避免信息过载。"
+              },
+              "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+              "review_usage": {}
+            },
+            {
+              "attempt": 2,
+              "generation": {
+                "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "部分轮次字数偏短（如第1、2、4轮等），略低于建议的35字口播下限，可能影响节奏",
+                  "覆盖新闻条数略多（9条），可能分散讨论深度，建议聚焦5-7条核心新闻"
+                ],
+                "repair_instruction": "请将开场两轮合并为更充实的切入，例如将S1的趋势判断与S2的论文震撼合并为一轮；将Karakeep和Hugging Face等次要新闻融入隐私或部署话题的讨论中，减少独立新闻条目；确保每轮发言字数在35-95字之间，适当扩充短轮次内容，如补充具体影响或过渡语句。"
+              },
+              "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 2,
+            "best_attempt": 2,
+            "final_pass": true,
+            "final_issues": [
+              "部分轮次字数偏短（如第1、2、4轮等），略低于建议的35字口播下限，可能影响节奏",
+              "覆盖新闻条数略多（9条），可能分散讨论深度，建议聚焦5-7条核心新闻"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-09/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-09/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-09/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-09/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-09.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-09/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-09/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-09.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-09/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-09.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-09.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-09.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-07-08",
       "content_date": "2026-07-08",
       "published_at": "2026-07-08T06:12:00.479361+00:00",
