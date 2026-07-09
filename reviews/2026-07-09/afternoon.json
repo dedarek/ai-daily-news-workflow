@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-07-09",
+  "reviewed_at": "2026-07-09T11:44:17.119252+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容结构严谨，新闻与锐评逻辑自洽，播客对话自然流畅且深度覆盖了核心议题，仅在个别技术细节表述上存在微小瑕疵。",
+    "issues": [
+      "播客对话中 S2 提到 Hugging Face 与 AWS 合作时，将‘一键部署’直接等同于‘权限预配置’，虽意图表达便捷性带来的风险，但表述略显绝对，建议更精确地描述为‘自动化的权限配置流程’。",
+      "新闻标题中‘Muse Image’的发布日期（2026年）为未来时间，虽符合设定背景，但在‘确定性检查结果’为空的情况下，需确认是否为预设的虚构场景而非事实错误。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
