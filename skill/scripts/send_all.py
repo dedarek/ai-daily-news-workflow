@@ -61,8 +61,12 @@ def env_truthy(name: str, default: bool = False) -> bool:
     return value.strip().lower() in {'1', 'true', 'yes', 'on'}
 
 
-def email_mp4_attachment_limit_bytes() -> int:
-    raw = os.environ.get('AI_DAILY_EMAIL_MP4_ATTACHMENT_LIMIT_BYTES', str(20 * 1024 * 1024))
+def email_video_attachment_limit_bytes() -> int:
+    raw = (
+        os.environ.get('AI_DAILY_EMAIL_VIDEO_ATTACHMENT_LIMIT_BYTES')
+        or os.environ.get('AI_DAILY_EMAIL_MP4_ATTACHMENT_LIMIT_BYTES')
+        or str(20 * 1024 * 1024)
+    )
     try:
         return max(1, int(raw))
     except ValueError:
@@ -204,8 +208,8 @@ def build_message(
     sender: str,
     recipient: str,
     html_content: str,
-    mp3_path: Path,
-    mp4_path: Path | None = None,
+    media_path: Path,
+    media_kind: str,
 ) -> MIMEMultipart:
     message = MIMEMultipart('mixed')
     message['Subject'] = f'每日AI热点新闻（博客试运营）— {date_str}'
@@ -219,19 +223,18 @@ def build_message(
     alternative.attach(MIMEText(html_content, 'html', 'utf-8'))
     message.attach(alternative)
 
-    with mp3_path.open('rb') as audio_file:
-        audio = MIMEBase('audio', 'mpeg')
-        audio.set_payload(audio_file.read())
-    encoders.encode_base64(audio)
-    audio.add_header('Content-Disposition', 'attachment', filename=f'ai-daily-news-{date_str}.mp3')
-    message.attach(audio)
-    if mp4_path is not None:
-        with mp4_path.open('rb') as video_file:
-            video = MIMEBase('video', 'mp4')
-            video.set_payload(video_file.read())
-        encoders.encode_base64(video)
-        video.add_header('Content-Disposition', 'attachment', filename=f'ai-daily-news-{date_str}.mp4')
-        message.attach(video)
+    if media_kind == 'video':
+        maintype, subtype, filename = 'video', 'mp4', f'ai-daily-news-{date_str}.mp4'
+    elif media_kind == 'audio':
+        maintype, subtype, filename = 'audio', 'mpeg', f'ai-daily-news-{date_str}.mp3'
+    else:
+        raise RuntimeError(f'Unknown media attachment kind: {media_kind}')
+    with media_path.open('rb') as media_file:
+        attachment = MIMEBase(maintype, subtype)
+        attachment.set_payload(media_file.read())
+    encoders.encode_base64(attachment)
+    attachment.add_header('Content-Disposition', 'attachment', filename=filename)
+    message.attach(attachment)
     return message
 
 
@@ -276,21 +279,26 @@ def main() -> int:
     )
 
     html_content = html_path.read_text(encoding='utf-8')
-    attach_mp4 = env_truthy('AI_DAILY_EMAIL_ATTACH_MP4', False)
-    if mp4_path is not None and attach_mp4 and mp4_path.stat().st_size > email_mp4_attachment_limit_bytes():
-        print(
-            f'WARN mp4_attachment_skipped size={mp4_path.stat().st_size} '
-            f'limit={email_mp4_attachment_limit_bytes()} path={mp4_path}',
-            flush=True,
-        )
-        attach_mp4 = False
-    if mp4_path is not None and not attach_mp4:
-        print(
-            f'MP4_ATTACHMENT_SKIPPED path={mp4_path} size={mp4_path.stat().st_size} '
-            f'url={public_video_url(args.date)}',
-            flush=True,
-        )
+    media_path = mp3_path
+    media_kind = 'audio'
+    if mp4_path is not None:
         html_content = append_video_link(html_content, args.date)
+        video_limit = email_video_attachment_limit_bytes()
+        mp4_size = mp4_path.stat().st_size
+        if env_truthy('AI_DAILY_EMAIL_ATTACH_VIDEO', True) and mp4_size <= video_limit:
+            media_path = mp4_path
+            media_kind = 'video'
+        else:
+            reason = 'disabled' if not env_truthy('AI_DAILY_EMAIL_ATTACH_VIDEO', True) else f'size={mp4_size} limit={video_limit}'
+            print(
+                f'MP4_ATTACHMENT_SKIPPED reason={reason} path={mp4_path} '
+                f'url={public_video_url(args.date)}',
+                flush=True,
+            )
+    print(
+        f'MEDIA_ATTACHMENT_SELECTED kind={media_kind} path={media_path} size={media_path.stat().st_size}',
+        flush=True,
+    )
     recipients = read_recipients(audience)
     host, port, sender, password = read_smtp_config()
     success = 0
@@ -305,8 +313,8 @@ def main() -> int:
             sender,
             recipient,
             html_content,
-            mp3_path,
-            mp4_path if attach_mp4 else None,
+            media_path,
+            media_kind,
         )
         if args.dry_run:
             print(f'OK [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)
