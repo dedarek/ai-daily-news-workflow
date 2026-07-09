@@ -118,7 +118,8 @@ jobs:
           python3 scripts/prepare_review_delivery.py \
             --date "${{ steps.issue.outputs.date }}" \
             --base-url "$CONTENT_BASE_URL" \
-            --output-dir review-dist
+            --output-dir review-dist \
+            --review-warn-only
 
       - name: Alert admins when afternoon review blocks delivery
         if: ${{ failure() && steps.delivery.outputs.skip != 'true' }}

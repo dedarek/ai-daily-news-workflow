@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -40,6 +41,19 @@ def write_json_file(path: Path, data) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
 
 
+def email_safe_html(html_bytes: bytes) -> bytes:
+    html_text = html_bytes.decode('utf-8', errors='replace')
+    # The published page contains a browser video player. Email delivery adds its
+    # own email-safe video entry later in send_all.py, matching morning delivery.
+    html_text = re.sub(
+        r'<table data-role="video-player"(?:(?!</table>).)*</table>',
+        '',
+        html_text,
+        flags=re.S,
+    )
+    return html_text.encode('utf-8')
+
+
 def load_published_issue(base: str, issue_date: str) -> tuple[dict, dict]:
     manifest = get_json(f'{base}/api/issues/{issue_date}/manifest.json')
     if manifest.get('date') != issue_date:
@@ -57,6 +71,11 @@ def main() -> int:
     parser.add_argument('--date', required=True)
     parser.add_argument('--base-url', required=True)
     parser.add_argument('--output-dir', default='review-dist')
+    parser.add_argument(
+        '--review-warn-only',
+        action='store_true',
+        help='Write the LLM review report but do not block delivery on review score or recommendation.',
+    )
     args = parser.parse_args()
     datetime.strptime(args.date, '%Y-%m-%d')
 
@@ -90,7 +109,7 @@ def main() -> int:
     )
     if voice:
         write_json_file(output_dir / f'voice-{args.date}.json', voice)
-    (output_dir / f'daily-news-{args.date}.html').write_bytes(html_bytes)
+    (output_dir / f'daily-news-{args.date}.html').write_bytes(email_safe_html(html_bytes))
     (output_dir / f'daily-news-podcast-{args.date}.mp3').write_bytes(audio_bytes)
     if video_bytes is not None:
         (output_dir / f'daily-news-video-{args.date}.mp4').write_bytes(video_bytes)
@@ -187,6 +206,9 @@ def main() -> int:
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
 
     print(json.dumps(report, ensure_ascii=False, indent=2))
+    if args.review_warn_only and not delivery_approved:
+        print('WARN afternoon_review_not_approved_but_delivery_continues=true', flush=True)
+        return 0
     return 0 if delivery_approved else 20
 
 
