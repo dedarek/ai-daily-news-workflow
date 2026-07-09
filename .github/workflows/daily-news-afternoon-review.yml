@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       send_email:
-        description: "Send the reviewed issue using the afternoon phase in send-email-config.json"
+        description: "Send the reviewed issue to the afternoon audience"
         required: true
         type: boolean
-        default: false
+        default: true
       send_files:
         description: "Run file upload before optional email delivery"
         required: true
