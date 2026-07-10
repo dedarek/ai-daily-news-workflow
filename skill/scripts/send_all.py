@@ -8,10 +8,10 @@ import re
 import smtplib
 import ssl
 import time
-from email import encoders
-from email.mime.base import MIMEBase
+from email.message import EmailMessage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.policy import SMTP
 from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
@@ -105,9 +105,6 @@ def append_video_link(html_content: str, date_str: str) -> str:
         '<tr><td style="padding:16px 18px;">'
         '<p style="margin:0 0 12px;font-size:15px;font-weight:700;color:#1e3a8a;">'
         '每日AI热点新闻播客</p>'
-        f'<video controls preload="metadata" src="{video_url}" '
-        'style="width:100%;max-height:360px;display:block;margin:0 0 12px;'
-        'border-radius:10px;background-color:#020617;"></video>'
         f'<a href="{video_url}" style="display:inline-block;background-color:#2563EB;'
         'color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;'
         'padding:8px 16px;border-radius:999px;">播放视频</a>'
@@ -211,29 +208,32 @@ def build_message(
     media_path: Path,
     media_kind: str,
 ) -> MIMEMultipart:
-    message = MIMEMultipart('mixed')
+    message = MIMEMultipart('mixed', policy=SMTP)
     message['Subject'] = f'每日AI热点新闻（博客试运营）— {date_str}'
     message['From'] = sender
     message['To'] = recipient
 
-    alternative = MIMEMultipart('alternative')
+    alternative = MIMEMultipart('alternative', policy=SMTP)
     plain = re.sub(r'<[^>]+>', ' ', html_content)
     plain = re.sub(r'\s+', ' ', plain).strip()
     alternative.attach(MIMEText(plain, 'plain', 'utf-8'))
     alternative.attach(MIMEText(html_content, 'html', 'utf-8'))
     message.attach(alternative)
 
+    attachment = EmailMessage(policy=SMTP)
     if media_kind == 'video':
         maintype, subtype, filename = 'video', 'mp4', f'ai-daily-news-{date_str}.mp4'
-    elif media_kind == 'audio':
-        maintype, subtype, filename = 'audio', 'mpeg', f'ai-daily-news-{date_str}.mp3'
     else:
-        raise RuntimeError(f'Unknown media attachment kind: {media_kind}')
-    with media_path.open('rb') as media_file:
-        attachment = MIMEBase(maintype, subtype)
-        attachment.set_payload(media_file.read())
-    encoders.encode_base64(attachment)
-    attachment.add_header('Content-Disposition', 'attachment', filename=filename)
+        if media_kind != 'audio':
+            raise RuntimeError(f'Unknown media attachment kind: {media_kind}')
+        maintype, subtype, filename = 'audio', 'mpeg', f'ai-daily-news-{date_str}.mp3'
+    attachment.add_attachment(
+        media_path.read_bytes(),
+        maintype=maintype,
+        subtype=subtype,
+        filename=filename,
+        disposition='attachment',
+    )
     message.attach(attachment)
     return message
 
@@ -242,7 +242,7 @@ def send_one(host: str, port: int, sender: str, password: str, recipient: str, m
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(host, port, context=context, timeout=30) as server:
         server.login(sender, password)
-        server.sendmail(sender, [recipient], message.as_string())
+        server.sendmail(sender, [recipient], message.as_bytes(policy=SMTP))
 
 
 def main() -> int:
