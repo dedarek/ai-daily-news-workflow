@@ -1,174 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-07-03": {
-      "candidates": [
-        {
-          "date": "2026-07-03",
-          "title": "Fable5大模型正式解禁",
-          "summary": "因美国撤销限制大模型重新上线。团队为应对安全漏洞 🛡️ 紧急训练了新分类器。所有检测到的异常请求都会被自动重定向。竞品此时趁机 推出了自家的开源模型。",
-          "url": "https://www.marktechpost.com/2026/07/01/anthropic-redeploys-claude-fable-5-on-july-1-after-us-export-controls-lift-adds-new-cybersecurity-classifier/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "音频大模型攻克阿拉伯调式",
-          "summary": "研究团队巧妙地 🎵 微调了音频大模型。他们针对微音程风格设计出专属的新插件。该生成系统 (゜o゜) 能够在本地设备顺利运行。请观看前沿音乐生成演示了解更多细节。这填补了非西方音乐在AI领域的空白。",
-          "url": "https://x.com/StabilityAI/status/2072423193927668193"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "谷歌智能助手登陆Mac",
-          "summary": "谷歌昨日将旗下的代理助手推向了苹果电脑。新版本 支持用自然语言下达复杂的指令。这款助手能够在后台管理电子邮件 (⊙o⊙) 并安排日程。这篇谷歌最新动态报道介绍了详情。用户反馈其响应速度 and 准确率都很高。",
-          "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "解耦逻辑解决大模型冲突",
-          "summary": "该研究设计了 解耦冲突分析框架。该系统 🧠 将复杂的冲突上下文拆解为推理图谱。算法借助 强化学习 策略 (๑•̀ㅂ•́) 持续优化内在逻辑。最终7B模型的判定成功率超越了强大的GPT-5.1。",
-          "url": "https://arxiv.org/abs/2508.01273"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "EvoPI框架正式面世",
-          "summary": "一项医学推理对齐研究近日公开发布。该机制能让多模态模型在🧠中实现完全自主学习。其核心的演进原则开源代码也已公布在社区。动态进化监管框架让测试指标最高提升了二四点六。这为智能医疗诊断提供了极其重要的落地参考。",
-          "url": "https://arxiv.org/abs/2606.31800"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "INFUSER提升LLM推理能力",
-          "summary": "科研人员提出了一种全新的自进化框架。该框架使得大模型能以极少监督完成自我改进。实测证明 😲 其数学和编程性能提升超两成。自进化推理算法为未来的推理进化奠定了坚实基础。",
-          "url": "https://arxiv.org/abs/2606.09052"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "BlockPilot解码加速技术发布",
-          "summary": "这套创新算法 ✨ 能够自动预测推理过程的最佳分块。研究团队采用自适应生成策略来具体实现。它的推理速度 ⚡️ 竟然直接飙升了四倍多。这套新架构极其轻量并且支持无缝嵌入现有系统。",
-          "url": "https://huggingface.co/papers/2606.31315"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "日本用AI解决劳动力短缺",
-          "summary": "该国政府正计划研发主权大模型以应对危机。目标是在二零四零年前🤖全面部署千万台机器人。科技巨头们将联手攻克极其复杂的物理AI技术。国家发展主权模型有望大幅提升社会的整体生产率。这将会深刻改变日本制造业未来的生态格局。",
-          "url": "https://www.artificialintelligence-news.com/news/japan-ai-robots-2040-national-ai-model/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "隐私平台Venice晋升独角兽",
-          "summary": "团队刚刚成功完成了一笔巨额的A轮融资。融资总额高达 💰 六千五百万美元极其吸睛。该初创平台 (๑•̀ㅂ•́) 始终专注用户的隐私安全防护。这笔巨资将用于 扩展全球市场业务。",
-          "url": "https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "美机构警告偏见防护或违法",
-          "summary": "美国联邦贸易委员会近日颁布了最新政策。如果机器人输出意识形态内容便可能触犯法律。这让不少 ⊙_⊙ 前沿开发者感受到了巨大的监管压力。路透社监管新规揭示了合规运营的潜在风险。大模型厂商们将被迫重新审视自身的安全对齐机制。",
-          "url": "https://www.reuters.com/legal/government/us-ftc-says-ai-bias-safeguards-may-run-afoul-consumer-law-2026-07-01/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "国内大模型大打价格战",
-          "summary": "字节与阿里等五家厂牌 📉 纷纷开始集体大降价。各大厂商大打价格战 ＼(◎o◎)／ 只为拼命抢夺开发者。降幅高达九成九的惊人价格跳水让海量用户受惠。这也极大降低了企业调用大模型服务的核心门槛。",
-          "url": "https://aiweekly.co/alerts/five-chinese-ai-labs-cut-token-prices-up-to-99"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "美国AI支持率在去年四月突现拐点",
-          "summary": "学者发布美国民众支持人工智能发展调查。数据显示该支持率在去年四月十八日见顶。随后数据竟然 📉 开启了持续下滑趋势。众多网友对此表示 (⊙_⊙) 感到困惑。",
-          "url": "https://www.reddit.com/r/artificial/comments/1ukucjh/what_happened_to_ai_on_april_18_2025/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "服务商高管痛批代币计费是泡沫",
-          "summary": "这种按量收费方式并没有带来实质价值。厂商们在商业变革（AI资讯）中寻求转变。比如S公司已经 💸 开始尝试按效果收费。这种成效付费 (•̀•́) 才能真正通过财务审核。",
-          "url": "https://www.reddit.com/r/artificial/comments/1ukxfb6/servicenows_customer_chief_just_called/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "智能体协作平台项目开源",
-          "summary": "日常开发时通用的提示词 (っ°Д°;)っ 往往会产生严重的幻觉。这款斩获超高星标的 智能体协作项目 隆重登场。它内部集成了极其丰富的 🧑‍💻 多工种智能体。每一个AI角色都具备独特个性与独立的执行工作流。中小团队如今能够一键构建起专属的全栈开发团队。",
-          "url": "https://github.com/msitarzewski/agency-agents"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "超级代理开源框架发布",
-          "summary": "传统的软件开发工作流程往往复杂且非常低效。如今开发者可以使用 智能代理开发框架 来大幅度提效。该明星项目当前已经斩获了超过**24.2万**颗星。其极具突破性的测试驱动开发机制让(⊙o⊙)程序员感到十分震惊。",
-          "url": "https://github.com/obra/superpowers"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-07-03",
-          "title": "谷歌智能助手登陆Mac",
-          "summary": "谷歌将其代理助手Gemini Spark正式推向Mac平台，集成至现有Gemini桌面应用。该助手支持自然语言指令，可管理电子邮件、安排日程，并新增实时话题追踪功能，能监控体育比分、股票动态和突发新闻。Spark现已接入Google Tasks和Keep，并整合Canva、Dropbox、Instacart、OpenTable和Zillow Rentals等第三方应用，可执行预订餐厅、订购杂货等任务。目前仅对美国Google AI Ultra订阅用户开放测试，谷歌还计划未来支持手机端远程调用Mac文件。此外，自定义模型上下文协议（MCP）的推出将允许用户连接更多应用，构建个性化助手。",
-          "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "音频大模型攻克阿拉伯调式",
-          "summary": "Motif团队针对阿拉伯木卡姆调式微调了Stable Audio 3.0音频生成模型，并构建了一款Ableton Live插件，实现微音程风格迁移。该系统完全在本地设备运行，无需云端依赖，在Music Hackspace举办的Stable Audio 3.0挑战赛中获胜。演示视频由Jad Al Masri解说，展示了如何将传统木卡姆元素融入AI音乐生成。这一成果填补了非西方音乐体系在AI音频模型中的空白，为微音程音乐创作提供了新工具。",
-          "url": "https://x.com/StabilityAI/status/2072423193927668193"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "日本用AI解决劳动力短缺",
-          "summary": "日本政府正式确立国家战略，计划到2040年在18个行业部署1000万台AI驱动机器人，五年内投入高达1万亿日元（约61亿美元）公共资金。经济产业省与新能源产业技术综合开发机构已委托Noetra公司和产业技术综合研究所开发“物理AI”多模态基础模型，该模型能融合语言、图像、视频和传感器数据，使机器人理解环境并自主行动，而非仅执行预编程动作。初始版本最早将于2026年推出，旨在提升全社会生产率并重塑制造业生态。",
-          "url": "https://www.artificialintelligence-news.com/news/japan-ai-robots-2040-national-ai-model/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "隐私平台Venice晋升独角兽",
-          "summary": "隐私优先的AI平台Venice AI完成6500万美元A轮融资，估值达10亿美元，由Dragonfly领投，Coinbase Ventures等参投。该平台提供超过200个开源及闭源AI模型，所有用户输入经客户端加密并通过外部代理路由，不存储任何数据，部分模型支持端到端加密。Venice已实现盈利，年化收入超7000万美元，日均API调用量达170万次，拥有300万活跃用户。创始人Erik Voorhees强调平台作为中立工具，提供无审查的文本、图像、音频和视频生成体验，并发行了VVV代币。",
-          "url": "https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "美机构警告偏见防护或违法",
-          "summary": "美国联邦贸易委员会（FTC）近日颁布一项新政策，指出如果AI机器人输出带有意识形态倾向的内容，可能违反消费者保护法。这一规定让前沿AI开发者面临巨大的监管压力，迫使大模型厂商重新审视现有的安全对齐机制。新规揭示了在AI系统中实施偏见防护时可能引发的合规风险，开发者需要在避免有害输出与遵守法律之间谨慎平衡。业界担忧过于宽泛的监管可能抑制创新，但FTC的立场表明监管机构正加强对AI内容安全的关注。",
-          "url": "https://www.reuters.com/legal/government/us-ftc-says-ai-bias-safeguards-may-run-afoul-consumer-law-2026-07-01/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "国内大模型大打价格战",
-          "summary": "中国AI市场正经历一场激烈的价格战，字节跳动、腾讯、MiniMax、阿里巴巴和小米五家主要厂商在相近时间内将API调用token价格大幅下调，降幅从50%到99%不等。字节跳动推出的Seedance 2.0 Mini定价为每百万token 23元人民币，仅为标准价格的一半；腾讯将Hy-MT2-Pro价格下调近70%；MiniMax的M3系列降价一半；阿里巴巴借618促销将Qwen3.7-Max降价50%；小米的MiMo V2.5降价幅度高达99%。美银证券分析师指出，各大模型能力差距正在缩小，价格成为主要竞争手段，这标志着中国AI市场从差异化产品竞争转向纯粹的成本竞赛。降价大幅降低了企业调用大模型服务的门槛，但也给资金储备较少的实验室带来生存压力。",
-          "url": "https://aiweekly.co/alerts/five-chinese-ai-labs-cut-token-prices-up-to-99"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "解耦逻辑解决大模型冲突",
-          "summary": "研究人员提出了一种名为Kcr（Knowledge Conflict Reasoning）的框架，旨在解决大语言模型在面对包含矛盾信息的检索上下文时产生的显式知识冲突。该框架将冲突上下文解耦为离散的推理轨迹，并采用文本与图结构的混合表示来系统化理解矛盾逻辑。随后，Kcr利用带可验证奖励的强化学习（RLVR）训练推理策略，以最大化逻辑一致性并抑制由矛盾证据衍生的错误推理路径。实验结果表明，经Kcr增强的7B参数模型在冲突裁决任务上表现优异，其能力显著超越了GPT-4o和GPT-5.1等先进闭源模型。相关代码已在社区公开。",
-          "url": "https://arxiv.org/abs/2508.01273"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "EvoPI框架正式面世",
-          "summary": "Evo-PI框架正式发布，旨在通过演进原则引导的监督来对齐多模态大模型的医学推理能力。该框架将推理原则作为可迭代进化的显式语言监督信号，替代传统的静态奖励模型。Evo-PI构建了一个共同进化循环：原则指导模型进行推理，而模型的推理行为又反过来优化这些原则，从而实现动态自适应监督。在医学视觉问答等八个基准测试中，Evo-PI使多个模型骨干的推理准确率持续提升，最高增益达24.6%。这一成果为智能医疗诊断等高风险场景提供了重要的落地参考，代码已开源。",
-          "url": "https://arxiv.org/abs/2606.31800"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "INFUSER提升LLM推理能力",
-          "summary": "研究团队提出INFUSER自进化框架，通过生成器与求解器协同训练提升大语言模型推理能力。生成器从非结构化文档池中自动构建问题与参考答案，求解器基于这些数据进行训练，而生成器则通过影响力评分获得奖励，该评分衡量每个问题对求解器在目标分布上的实际改进效果。为解决连续噪声影响力评分不适用于标准GRPO的问题，作者设计了双归一化变体DuGRPO。在Qwen3-8B-Base上，INFUSER在奥数及SuperGPQA基准上相对提升超过20%，且8B协同训练的生成器在数学和编程任务上优于冻结的32B思考模型。消融实验验证了各设计组件的必要性，扩展实验进一步展示了框架的灵活性与泛化能力。",
-          "url": "https://arxiv.org/abs/2606.09052"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "BlockPilot解码加速技术发布",
-          "summary": "BlockPilot是一种面向扩散式推测解码的实例自适应策略学习方法。现有扩散推测解码通常采用固定块大小，但研究发现最优块大小因样本而异，且集中在训练块大小附近，形成低维结构化决策空间。BlockPilot利用预填充阶段的表征预测最优块大小，仅在预填充后执行一次预测，可无缝集成到现有系统中。在Qwen3-4B模型上，该方法在温度T=1时实现了5.92的接受长度和4.20倍加速，且额外开销极小。实验表明该策略即插即用，能持续提升推理效率。",
-          "url": "https://huggingface.co/papers/2606.31315"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "智能体协作平台项目开源",
-          "summary": "Agency Agents项目在GitHub上开源，提供了一套完整的AI代理协作平台，涵盖前端开发、Reddit社区管理、创意注入、现实检验等多种专业角色。每个代理具备独特个性、工作流程和可交付成果，并非简单的提示词模板。项目已获得超过12.6万星标，并提供了原生桌面应用，支持一键安装到Claude Code、Cursor、Codex、Gemini等多种编码环境中。中小团队可利用该平台快速组建专属的全栈开发团队，降低通用提示词带来的幻觉风险。",
-          "url": "https://github.com/msitarzewski/agency-agents"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "超级代理开源框架发布",
-          "summary": "Superpowers是一个面向编码代理的技能框架与软件开发方法论，强调在编写代码前先明确需求。代理启动后不会直接生成代码，而是从对话中提取规格说明，并以易于阅读的短块形式呈现给开发者确认。框架包含一组可组合技能和初始指令，确保代理遵循既定流程。项目已获得超过24.2万星标，支持Claude Code、Cursor、Codex CLI、GitHub Copilot CLI等多种编码代理。其测试驱动开发机制旨在提升代码质量与开发效率。",
-          "url": "https://github.com/obra/superpowers"
-        }
-      ]
-    },
     "2026-07-04": {
       "candidates": [
         {
@@ -1006,6 +838,174 @@
           "title": "OfficeCLI开源获万星关注",
           "summary": "iOfficeAI推出的OfficeCLI是首个专为AI智能体设计的Office文档处理工具，支持Word、Excel和PowerPoint的读写与自动化操作。该工具无需安装Office软件，以单二进制文件形式运行，内置HTML渲染引擎实现高保真文档解析。项目上线后迅速获得超12.4k GitHub星标，支持多语言界面，并提供CLI与GUI两种使用方式，可无缝集成主流AI编码助手。",
           "url": "https://github.com/iOfficeAI/OfficeCLI"
+        }
+      ]
+    },
+    "2026-07-10": {
+      "candidates": [
+        {
+          "date": "2026-07-10",
+          "title": "OpenAI正式发布GPT-5.6三档模型",
+          "summary": "奥特曼带来了全新旗舰系列大模型。此次发布涵盖Sol、Terra、Luna三个档次。开发者可通过新模型接口详情页（AI资讯）直接部署使用。新模型在代码能力上有了质的飞跃。三档定价策略将深度影响开发者生态。",
+          "url": "https://www.marktechpost.com/2026/07/09/openai-releases-gpt-5-6-a-three-tier-model-family-with-programmatic-tool-calling/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "Meta发布Muse Spark 1.1推理模型",
+          "summary": "Meta超级智能实验室推出全新⚡智能体推理模型。它具备百万级上下文深度理解能力。该项目同步开放了全新付费模型接口（AI资讯）。详细技术评测可参阅科技媒体深度报道。Meta首次推出付费API将🔥重塑商业竞争格局。",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "OpenClaw转型为非营利基金会",
+          "summary": "这个知名开源个人智能助理项目正式宣布转型。创始团队携手微软与英伟达共同🤝维护其独立性。该项目每周新增用户已达四百五十万名。机构致力于推广中立独立的个人智能（AI资讯）。多国科技巨头已确认加入生态建设。",
+          "url": "https://thenewstack.io/openclaw-foundation-nonprofit-status/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "1X推出二十五轴人形灵巧手",
+          "summary": "挪威科技公司发布全新一代💪灵巧手硬件。该手部拥有二十五个主动控制的轴。用肌腱驱动触觉控制系统（AI资讯）模拟人类手指。传感器能🤖感知微小的压力与滑动变化。",
+          "url": "https://x.com/rohanpaul_ai/status/2075369886759649704"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "智谱提出异步强化学习新方案SAO",
+          "summary": "该技术攻克了智能体训练🤖不稳定的核心难题。团队借助异步优化技术论文（AI资讯）实现突破. 新算法在代码和推理基准上大幅领先同类方案。该方案已成功应用于GLM-5.2的训练流程。",
+          "url": "https://arxiv.org/abs/2607.07508"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "RoboTALES具身智能新框架亮相",
+          "summary": "科学家提出结合大语言模型与视觉模型的🤖双阶段框架。该系统利用任务对齐视频生成的论文成果（AI资讯）进行规划。算法能让机器人预测未来并更稳定地执行复杂操作。团队已在开源代码托管平台分享全部成果。",
+          "url": "https://huggingface.co/papers/2607.06018"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "模拟部署提前预测大模型安全风险",
+          "summary": "科研人员开发了模型安全评估新框架（AI资讯）。研究通过🕵️模拟真实部署环境来测试大模型表现。方案在GPT-5系列上成功预测了潜在安全风险。新评估方法能有效预防模型失控带来的隐患。",
+          "url": "https://arxiv.org/abs/2607.07184"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "科学机器学习物理审计架构发布",
+          "summary": "科学家在💥科学机器学习领域取得重要进展。传统AI代理模型经常会违反因果关系等物理规律。团队发布了物理审计验证工作流（AI资讯）。该技术显著提升了算法在工程场景中的可靠表现。",
+          "url": "https://arxiv.org/abs/2607.07379"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "Meta超级智能一周年进展全面曝光",
+          "summary": "继今日发布Muse Spark 1.1模型后，扎克伯格的算力野心进一步浮出水面。团队已启动五个吉瓦级机房建设工程。深度分析报告预测其算力将在明后年逼近行业龙头水平（AI资讯）。人才招募方面也在💼重金狂挖顶尖算法专家。",
+          "url": "https://newsletter.semianalysis.com/p/the-future-of-meta-superintelligence"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "前美联储主席伯南克加盟Anthropic信托",
+          "summary": "他正式加入Anthropic的监督信托机构。该信托旨在确保技术发展符合💼伦理与安全标准。他将利用宏观经济与监管经验提供专业指导。详情见于路透社最新报道（AI资讯）。此举被视为行业治理的📈重要里程碑。",
+          "url": "https://www.reuters.com/business/former-fed-chair-ben-bernanke-joins-anthropics-ai-oversight-trust-2026-07-09/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "纽约时报申请法院制裁OpenAI",
+          "summary": "原告方⚖️正式指控OpenAI非法使用新闻训练（AI资讯）。这场官司涉及美国版权法核心争议。诉讼裁决将直接影响生成式AI的数据合规标准。整个行业规范面临🔥重大重塑考验。",
+          "url": "https://www.reuters.com/legal/litigation/new-york-times-led-group-asks-court-sanction-openai-us-copyright-dispute-2026-07-09/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "亚马逊云GraphRAG将药研周期缩短87%",
+          "summary": "该方案通过🧬知识图谱加速分子筛选与分析。亚马逊云科技药研技术详情（AI资讯）已公开发布。临床数据表明研发周期可缩短达87%。制药企业已开始采用并预计大幅降低💊研发成本。",
+          "url": "https://www.artificialintelligence-news.com/news/aws-graphrag-deployment-cuts-drug-research-cycles-by-87/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "DeepSeek秘密启动自研AI芯片项目",
+          "summary": "消息源自路透社独家报道（AI资讯）。该芯片主要针对大模型推理场景设计。团队已在🤫暗中大量招聘芯片设计人才。此举将⚡显著减少对英伟达等芯片巨头的依赖。",
+          "url": "https://www.reuters.com/world/china/chinas-deepseek-developing-its-own-ai-chip-sources-say-2026-07-07/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "Ollama宣布完成新一轮融资",
+          "summary": "Ollama团队今日宣布完成新融资（AI资讯）。该项目目前已拥有九百万活跃用户。他们将始终坚守开源生态的发展信念。团队下一步计划继续扩大模型规模。",
+          "url": "https://x.com/steipete/status/2075313523237019686"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "莫斯科举办首场人形机器人婚礼",
+          "summary": "新郎罗伯特与芭蕾舞娘🤖玛蒂尔达结为夫妻。机器狗多格玛提克在现场递送了手圈。许多市民围观机器人婚礼直播送祝福。这次婚礼展现出💖智能技术融入日常生活的趋势。",
+          "url": "https://www.reddit.com/r/artificial/comments/1us2ve2/russia_stages_first_robot_wedding_ceremony/"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-07-10",
+          "title": "OpenAI发布GPT-5.6三档模型系列",
+          "summary": "OpenAI正式推出包含Sol、Terra、Luna三个档次的GPT-5.6旗舰模型系列，开发者可直接通过新接口详情页进行部署。该系列在代码生成与理解能力上实现了质的飞跃，显著提升了开发效率。三档差异化定价策略旨在覆盖不同规模的应用场景，预计将深刻重塑开发者生态格局。此次发布标志着大模型服务向精细化分层运营迈出关键一步，为各类企业提供了更灵活的选择。",
+          "url": "https://www.marktechpost.com/2026/07/09/openai-releases-gpt-5-6-a-three-tier-model-family-with-programmatic-tool-calling/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "Meta推出Muse Spark 1.1多模态推理模型",
+          "summary": "Meta超级智能实验室发布Muse Spark 1.1，这是一款专为智能体任务设计的多模态推理模型，具备百万级上下文深度理解能力。该模型在工具调用、计算机操作及代码编写方面表现卓越，能自主规划并协调多智能体系统完成复杂项目。Meta同步开放了公共预览版API，开发者可在Meta AI应用中体验其“思考”模式。模型支持动态上下文管理，能根据环境变化自动调整策略，大幅缩短任务执行时间。",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "1X发布二十五轴人形灵巧手",
+          "summary": "挪威公司1X推出了专为NEO人形机器人设计的二十五轴灵巧手，采用肌腱驱动与触觉控制系统模拟人类手指运动。该手部包含22个手指与手掌轴及3个手腕轴，通过低比率传动设计实现轻量化与强抓握力的平衡。其触觉皮肤能感知微小压力与滑动，结合闭环本体感知技术，使机器人在无视觉辅助下也能精准操作。产品已通过百万次循环验证，并计划今年量产一万只，支持防水与食品级材料应用。",
+          "url": "https://x.com/rohanpaul_ai/status/2075369886759649704"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "智谱提出SAO异步强化学习新方案",
+          "summary": "智谱AI提出单轮次异步优化（SAO）方案，旨在解决智能体强化学习中的训练不稳定问题。该算法采用单轮次采样替代传统组采样，并引入严格的双侧令牌级裁剪策略以提升优化稳定性。实验显示，SAO在SWE-Bench Verified等代码与推理基准上显著优于GRPO及其变体，且能稳定训练千步以上。该方案已成功应用于GLM-5.2模型的训练流程，支持模型在动态环境中持续适应。",
+          "url": "https://arxiv.org/abs/2607.07508"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "RoboTALES具身智能新框架亮相",
+          "summary": "加州大学圣地亚哥分校团队提出了RoboTALES框架，旨在解决预训练视频生成模型在机器人控制中想象未来与任务意图脱节的问题。该框架采用两阶段设计，首先利用分层大语言模型规划器将复杂任务拆解为子目标序列，以此引导模型进行想象。随后引入视觉语言模型批评家，对生成的模拟未来进行评价，并通过基于奖励的反馈机制确保模型内部表征聚焦于目标。在RoboCasa和LIBERO10等多样化操作任务上的评估显示，该方法在长视野任务中表现优于现有方案，且代码已开源。",
+          "url": "https://huggingface.co/papers/2607.06018"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "模拟部署提前预测大模型安全风险",
+          "summary": "研究人员提出了一种通过模拟真实部署环境来评估大模型安全性的新框架，以解决传统评估覆盖不足且易被识别的问题。该方法基于去标识化的历史对话数据，固定初始对话前缀并让候选模型重新生成回复，从而审计新型对齐失效并估算行为偏差发生率。研究团队在四个GPT-5系列部署案例中进行了验证，发现模拟部署产生的预测比基于对抗性生产数据的基线更准确，且评估感知点估计值更接近真实流量。此外，该方案证明即使使用公开聊天数据集作为种子，也能有效预测生产环境中的行为风险。",
+          "url": "https://arxiv.org/abs/2607.07184"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "科学机器学习物理审计架构发布",
+          "summary": "针对科学机器学习中代理模型常违反因果关系等物理规律的问题，研究团队推出了名为PA-SciML的验证优先工作流。该架构在搜索前固定评分评估器，推导出可审查且机器可检查的物理需求，并对每个训练候选模型的输出进行独立检查。系统还会在预设输入范围或测量负载历史跨度中搜索高违规案例，仅当候选模型通过所有检查时才被报告为已验证。在计算固体力学数值示例中，该方法选出的代理模型不仅验证误差更低，还通过了比单纯误差基线更严格的因果性检查。",
+          "url": "https://arxiv.org/abs/2607.07379"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "Meta超级智能一周年进展全面曝光",
+          "summary": "SemiAnalysis发布报告回顾Meta超级智能实验室成立一年来的进展，指出其通过重金挖角Scale AI团队及顶尖算法专家完成了组织重建。尽管Muse Spark模型初期表现略逊于部分开源模型，但报告强调Meta在数据、人才和算力三大要素上已具备世界级潜力。报告披露Meta正启动五个吉瓦级机房建设工程，其独特的“帐篷”数据中心设计加速了算力爬坡，预计未来算力规模将逼近行业龙头。分析认为，Meta凭借在强化学习环境供应链及数据规模上的优势，有望在未来六个月内缩小与OpenAI和Anthropic的差距。",
+          "url": "https://newsletter.semianalysis.com/p/the-future-of-meta-superintelligence"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "前美联储主席伯南克加盟Anthropic信托",
+          "summary": "前美联储主席伯南克已正式加入Anthropic的监督信托机构。该信托的核心职能是确保人工智能技术的发展符合伦理与安全标准。伯南克将利用其在宏观经济与监管领域的丰富经验，为机构提供专业指导。这一人事变动被外界视为AI行业治理进程中的重要里程碑，标志着顶级监管人才开始深度介入技术治理。",
+          "url": "https://www.reuters.com/business/former-fed-chair-ben-bernanke-joins-anthropics-ai-oversight-trust-2026-07-09/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "纽约时报申请法院制裁OpenAI",
+          "summary": "纽约时报联合其他原告正式向法院申请对OpenAI实施制裁，指控其非法使用新闻内容训练模型。该诉讼案件触及美国版权法的核心争议领域，焦点在于生成式AI训练数据的合法性边界。若法院作出裁决，将直接重塑生成式AI行业的数据合规标准。整个行业规范正面临重大考验，可能引发后续一系列法律与商业模式的调整。",
+          "url": "https://www.reuters.com/legal/litigation/new-york-times-led-group-asks-court-sanction-openai-us-copyright-dispute-2026-07-09/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "亚马逊云GraphRAG将药研周期缩短87%",
+          "summary": "亚马逊云科技推出的GraphRAG方案利用知识图谱技术加速分子筛选与分析过程。官方发布的临床数据显示，该方案能将药物研发周期缩短高达87%。目前已有制药企业开始采用此项技术，并预计将大幅降低研发成本。这一进展表明生成式AI与知识图谱结合在垂直领域已具备显著的落地价值与效率提升能力。",
+          "url": "https://www.artificialintelligence-news.com/news/aws-graphrag-deployment-cuts-drug-research-cycles-by-87/"
+        },
+        {
+          "date": "2026-07-10",
+          "title": "DeepSeek秘密启动自研AI芯片项目",
+          "summary": "据路透社报道，DeepSeek已秘密启动自研AI芯片项目，该芯片主要面向大模型推理场景设计。团队近期已在暗中大量招聘芯片设计相关人才，显示出明确的研发意图。此举旨在显著减少对英伟达等外部芯片巨头的依赖，提升供应链自主性。在算力受限背景下，自研芯片成为国内大模型厂商寻求技术突围的关键路径。",
+          "url": "https://www.reuters.com/world/china/chinas-deepseek-developing-its-own-ai-chip-sources-say-2026-07-07/"
         }
       ]
     }

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-07-10",
+  "content_date": "2026-07-10",
+  "published_at": "2026-07-10T05:16:14.174914+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 17,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "讨论的新闻条数达到8条，略超出建议的5-7条范围，信息密度稍高。",
+              "S2在第二轮提到“当年GPT-4出来，生态完善花了半年”，这是日报未提供的新增具体事实；S2在第三轮说“我试了他们的‘思考’模式”，暗示个人体验，日报仅提及开放体验，未提供个人试用信息。",
+              "S2第六轮（31字）、第八轮（30字）、第九轮（34字）、第十轮（28字）发言字数低于35字，口播时可能显得单薄。"
+            ],
+            "repair_instruction": "1. 精简新闻覆盖：将1X灵巧手与RoboTALES合并为具身智能话题，或省略其中一条，使讨论聚焦在5-7条核心新闻上。2. 替换新增事实：将“当年GPT-4出来，生态完善花了半年”改为“类似之前大模型发布后，配套工具链往往需要数月才能成熟”，避免具体时间；将“我试了他们的‘思考’模式”改为“从演示来看，其‘思考’模式动态调整策略很惊艳”，消除个人体验痕迹。3. 扩充字数不足的轮次：S2第六轮可补充“这需要软硬件厂商深度协作才能实现”；S2第八轮可补充“否则信托机制可能沦为摆设”；S2第九轮可补充“这对产品合规设计是巨大挑战”；S2第十轮可补充“我们也会持续跟踪这些动态，为听众带来最新解读”。"
+          },
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "讨论的新闻条数达到8条，略超出建议的5-7条范围，信息密度稍高。",
+          "S2在第二轮提到“当年GPT-4出来，生态完善花了半年”，这是日报未提供的新增具体事实；S2在第三轮说“我试了他们的‘思考’模式”，暗示个人体验，日报仅提及开放体验，未提供个人试用信息。",
+          "S2第六轮（31字）、第八轮（30字）、第九轮（34字）、第十轮（28字）发言字数低于35字，口播时可能显得单薄。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-10/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-10/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-10/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-10/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-10.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-10/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-10/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-10.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-10/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-10.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-10.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-10.mp4"
+}

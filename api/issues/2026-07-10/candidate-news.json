@@ -1,0 +1,137 @@
+[
+  {
+    "title": "OpenAI正式发布GPT-5.6三档模型",
+    "summary": "奥特曼带来了全新旗舰系列大模型。此次发布涵盖Sol、Terra、Luna三个档次。开发者可通过新模型接口详情页（AI资讯）直接部署使用。新模型在代码能力上有了质的飞跃。三档定价策略将深度影响开发者生态。",
+    "url": "https://www.marktechpost.com/2026/07/09/openai-releases-gpt-5-6-a-three-tier-model-family-with-programmatic-tool-calling/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta发布Muse Spark 1.1推理模型",
+    "summary": "Meta超级智能实验室推出全新⚡智能体推理模型。它具备百万级上下文深度理解能力。该项目同步开放了全新付费模型接口（AI资讯）。详细技术评测可参阅科技媒体深度报道。Meta首次推出付费API将🔥重塑商业竞争格局。",
+    "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenClaw转型为非营利基金会",
+    "summary": "这个知名开源个人智能助理项目正式宣布转型。创始团队携手微软与英伟达共同🤝维护其独立性。该项目每周新增用户已达四百五十万名。机构致力于推广中立独立的个人智能（AI资讯）。多国科技巨头已确认加入生态建设。",
+    "url": "https://thenewstack.io/openclaw-foundation-nonprofit-status/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "1X推出二十五轴人形灵巧手",
+    "summary": "挪威科技公司发布全新一代💪灵巧手硬件。该手部拥有二十五个主动控制的轴。用肌腱驱动触觉控制系统（AI资讯）模拟人类手指。传感器能🤖感知微小的压力与滑动变化。",
+    "url": "https://x.com/rohanpaul_ai/status/2075369886759649704",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智谱提出异步强化学习新方案SAO",
+    "summary": "该技术攻克了智能体训练🤖不稳定的核心难题。团队借助异步优化技术论文（AI资讯）实现突破. 新算法在代码和推理基准上大幅领先同类方案。该方案已成功应用于GLM-5.2的训练流程。",
+    "url": "https://arxiv.org/abs/2607.07508",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "RoboTALES具身智能新框架亮相",
+    "summary": "科学家提出结合大语言模型与视觉模型的🤖双阶段框架。该系统利用任务对齐视频生成的论文成果（AI资讯）进行规划。算法能让机器人预测未来并更稳定地执行复杂操作。团队已在开源代码托管平台分享全部成果。",
+    "url": "https://huggingface.co/papers/2607.06018",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模拟部署提前预测大模型安全风险",
+    "summary": "科研人员开发了模型安全评估新框架（AI资讯）。研究通过🕵️模拟真实部署环境来测试大模型表现。方案在GPT-5系列上成功预测了潜在安全风险。新评估方法能有效预防模型失控带来的隐患。",
+    "url": "https://arxiv.org/abs/2607.07184",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "科学机器学习物理审计架构发布",
+    "summary": "科学家在💥科学机器学习领域取得重要进展。传统AI代理模型经常会违反因果关系等物理规律。团队发布了物理审计验证工作流（AI资讯）。该技术显著提升了算法在工程场景中的可靠表现。",
+    "url": "https://arxiv.org/abs/2607.07379",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta超级智能一周年进展全面曝光",
+    "summary": "继今日发布Muse Spark 1.1模型后，扎克伯格的算力野心进一步浮出水面。团队已启动五个吉瓦级机房建设工程。深度分析报告预测其算力将在明后年逼近行业龙头水平（AI资讯）。人才招募方面也在💼重金狂挖顶尖算法专家。",
+    "url": "https://newsletter.semianalysis.com/p/the-future-of-meta-superintelligence",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "前美联储主席伯南克加盟Anthropic信托",
+    "summary": "他正式加入Anthropic的监督信托机构。该信托旨在确保技术发展符合💼伦理与安全标准。他将利用宏观经济与监管经验提供专业指导。详情见于路透社最新报道（AI资讯）。此举被视为行业治理的📈重要里程碑。",
+    "url": "https://www.reuters.com/business/former-fed-chair-ben-bernanke-joins-anthropics-ai-oversight-trust-2026-07-09/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "纽约时报申请法院制裁OpenAI",
+    "summary": "原告方⚖️正式指控OpenAI非法使用新闻训练（AI资讯）。这场官司涉及美国版权法核心争议。诉讼裁决将直接影响生成式AI的数据合规标准。整个行业规范面临🔥重大重塑考验。",
+    "url": "https://www.reuters.com/legal/litigation/new-york-times-led-group-asks-court-sanction-openai-us-copyright-dispute-2026-07-09/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "亚马逊云GraphRAG将药研周期缩短87%",
+    "summary": "该方案通过🧬知识图谱加速分子筛选与分析。亚马逊云科技药研技术详情（AI资讯）已公开发布。临床数据表明研发周期可缩短达87%。制药企业已开始采用并预计大幅降低💊研发成本。",
+    "url": "https://www.artificialintelligence-news.com/news/aws-graphrag-deployment-cuts-drug-research-cycles-by-87/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek秘密启动自研AI芯片项目",
+    "summary": "消息源自路透社独家报道（AI资讯）。该芯片主要针对大模型推理场景设计。团队已在🤫暗中大量招聘芯片设计人才。此举将⚡显著减少对英伟达等芯片巨头的依赖。",
+    "url": "https://www.reuters.com/world/china/chinas-deepseek-developing-its-own-ai-chip-sources-say-2026-07-07/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Ollama宣布完成新一轮融资",
+    "summary": "Ollama团队今日宣布完成新融资（AI资讯）。该项目目前已拥有九百万活跃用户。他们将始终坚守开源生态的发展信念。团队下一步计划继续扩大模型规模。",
+    "url": "https://x.com/steipete/status/2075313523237019686",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "莫斯科举办首场人形机器人婚礼",
+    "summary": "新郎罗伯特与芭蕾舞娘🤖玛蒂尔达结为夫妻。机器狗多格玛提克在现场递送了手圈。许多市民围观机器人婚礼直播送祝福。这次婚礼展现出💖智能技术融入日常生活的趋势。",
+    "url": "https://www.reddit.com/r/artificial/comments/1us2ve2/russia_stages_first_robot_wedding_ceremony/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
