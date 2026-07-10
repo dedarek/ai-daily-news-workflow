@@ -108,6 +108,9 @@ def append_video_link(html_content: str, date_str: str) -> str:
         f'<a href="{video_url}" style="display:inline-block;background-color:#2563EB;'
         'color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;'
         'padding:8px 16px;border-radius:999px;">播放视频</a>'
+        '<p style="margin:10px 0 0;font-size:12px;line-height:1.6;color:#64748b;">'
+        'Outlook 用户如无法加载附件，可点击上方按钮跳转在线播放。'
+        '</p>'
         '</td></tr></table>'
     )
     return insert_after_summary(html_content, block)
