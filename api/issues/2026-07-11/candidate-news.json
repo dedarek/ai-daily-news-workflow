@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Cursor编辑器重磅更新",
+    "summary": "这款工具最新引入了强大的侧边聊天功能。用户现在能够利用它 💬 开展多线程编程思考。新增的云端钩子可以帮助开发者 🔄 实现自我纠错。前往官网浏览最新的工具升级详情。",
+    "url": "https://cursor.com/changelog/side-chat",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI下周开启开发者周，GPT-5.6将迎来直播首秀",
+    "summary": "奥特曼下周一要举办重磅的开发者周活动。官方在 开发者推特动态 公布了 🔥 两场直播。大家能直接去 官方线上直播首秀平台 预约。届时会展示最新的 Codex 代码模型。备受期待的 GPT-5.6 也将首次亮相。",
+    "url": "https://x.com/OpenAIDevs/status/2075716750822551688",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI正式关停自研浏览器",
+    "summary": "OpenAI决定😭放弃这款Atlas浏览器。该项目发布仅存活了八个月。可随时获取最新行业动态（AI资讯）报道。新功能已被🔌融入谷歌浏览器侧边栏。",
+    "url": "https://the-decoder.com/openai-kills-its-atlas-browser-after-just-eight-months-and-folds-everything-into-chatgpt/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI新模型成功证明半世纪数学难题",
+    "summary": "Sol大模型使用六十四个🧠子智能体。仅耗时一小时就证明啦数学猜想。团队分享了最新数学突破。期待大家用该模型创造更多✨奇迹。",
+    "url": "https://x.com/OpenAI/status/2075644390689898690",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "克劳德桌面端新增内置浏览器功能",
+    "summary": "新版 克劳德官方开发者社区 已经上线此功能。用户可通过 内置浏览器官方指南文档 ⚙️ 置配沙箱。该工具支持 直接阅读并交互 本地项目。可点击 新功能实际效果演示视频 🎬 观看操作。",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1usx952/claude_code_on_desktop_now_has_an_inapp_browser/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "实时视频生成模型问世",
+    "summary": "新系统完美支持通过语音控制虚拟数字人物。用户能够使用语音指令 🗣️ 实时操控画面内容。该模型在消费显卡上能输出无限长视频。查阅最新发表的互动视频生成论文。",
+    "url": "https://huggingface.co/papers/2607.03118",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Jet-Long长文本技术发布",
+    "summary": "这项技术无需微调就能极大扩展模型上下文。它采用创新的动态双焦机制来提升性能。算法在H100显卡上 ⚡ 运行速度表现极其惊人。前往学习这篇前沿的长文本扩展论文。",
+    "url": "https://huggingface.co/papers/2607.07740",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI制药模型迎来重大升级",
+    "summary": "科研人员发布了最新的药物生成算法研究。它能结合疾病本体 and 目标蛋白 🧬 精准生成分子。生成的全新分子亲和力 🧪 全面超越现有传统药。研读这篇极具价值的新型药物生成算法。",
+    "url": "https://huggingface.co/papers/2607.08404",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "离线音频生成框架面世",
+    "summary": "科学家最新推出了一款无依赖的本地框架。系统可以在树莓派上 📱 高效生成高质量音乐。先进的量化技术显著降低了硬件的内存负载。查看这篇新颖的端侧音频生成模型论文。",
+    "url": "https://github.com/matteospanio/aria",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "新算法突破大模型训练瓶颈",
+    "summary": "大模型通常利用强化学习提升复杂推理能力。传统的训练框架常常面临训练不稳定的 🔥 难题。新方案通过不对称设计彻底优化了训练过程。学习这篇精妙的无界正向非对称优化论文。",
+    "url": "https://huggingface.co/papers/2607.06987",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "苹果公司正式起诉OpenAI",
+    "summary": "指控前员工离职时窃取了核心商业机密。这些机密涉嫌用于 🤖 开发全新人工智能硬件。目前苹果已经向法院 ⚖️ 提起了正式索赔诉讼。查阅这起商业纠纷案件详细报道。",
+    "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "内存巨头海力士美股上市",
+    "summary": "这家英伟达核心供应商已成功登陆美国股市。此次交易的募资规模 📈 创下了历史最高纪录。近期人工智能热潮大幅推高了相关芯片需求。点击了解详细的内存巨头上市详情。",
+    "url": "https://www.theverge.com/tech/964121/sk-hynix-nvidia-ram-stock-market-debut",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "数学巨匠加盟大模型",
+    "summary": "线性代数知名教授斯特朗正式加入安全巨头。他将改变教书育人的目标转为 🤖 训练大模型。重磅消息引发了整个学术界 😲 的激烈讨论。关注这则引爆圈子的知名大佬加盟行业动态。",
+    "url": "https://x.com/huangyun_122/status/2075689618658537504",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌大模型推理框架遭曝光",
+    "summary": "用户在测试该模型时遇到了意外的异常报错。系统意外输出了内部草稿纸和组件渲染逻辑。泄露的数据 🔍 包含了海量知识图谱实体及标签。快去参与这篇火爆的大模型异常报错讨论。",
+    "url": "https://www.reddit.com/r/artificial/comments/1ut0ugr/leaked_gemini_internal_reasoning_ui_schema/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中西网民AI态度分化",
+    "summary": "社交平台正在热议全球不同地区对AI的态度。西方网友普遍认为人工智能存在着伦理原罪。许多人会出于原则去 🛑 抵制AI生成的内容。查看这篇热门的中外人工智能认知讨论。",
+    "url": "https://www.reddit.com/r/artificial/comments/1usujdx/why_chinese_people_embrace_ai_while_europeans_and/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
