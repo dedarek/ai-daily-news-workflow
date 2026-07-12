@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-07-12",
+  "content_date": "2026-07-12",
+  "published_at": "2026-07-12T04:39:11.286220+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 13,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "对话覆盖了9条新闻，略多于建议的5-7条，可能影响讨论深度。建议精简至5-7条核心新闻，例如将APIVOT和EgoWAM两篇前沿研究合并为一句提及，或省略其中一条，以便更聚焦于产品发布和行业动态等重大新闻。"
+            ],
+            "repair_instruction": "请将机器人学习部分的两篇论文（APIVOT和EgoWAM）合并为一轮简要提及，例如“今天还有研究尝试用视觉想象和三维运动流解决跨模态对齐问题”，然后直接过渡到编码模型，从而将总新闻条数控制在7条以内，确保每条核心新闻有足够的讨论轮次。"
+          },
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "对话覆盖了9条新闻，略多于建议的5-7条，可能影响讨论深度。建议精简至5-7条核心新闻，例如将APIVOT和EgoWAM两篇前沿研究合并为一句提及，或省略其中一条，以便更聚焦于产品发布和行业动态等重大新闻。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-12/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-12/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-12/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-12/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-12.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-12/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-12/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-12.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-12/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-12.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-12.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-12.mp4"
+}

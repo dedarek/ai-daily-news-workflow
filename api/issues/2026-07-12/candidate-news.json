@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Claude重写Bun引争议",
+    "summary": "Bun借Claude⚡重写百万行代码。官方迁移复盘全文披露十一天工程。项目从Zig整体迁往Rust。代码仍含2.7万处不安全块。争议让人工审查再次吃紧。",
+    "url": "https://bun.com/blog/bun-in-rust",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Orca世界模型亮相",
+    "summary": "北京智源发布Orca世界模型。它从视频预测抽象世界状态。机器人模型报道原文披露训练细节。模型消化12.5万小时视频。无动作标签仍追平专用系统。",
+    "url": "https://the-decoder.com/chinas-orca-world-model-matches-specialized-robotics-systems-without-ever-seeing-a-single-action-label/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta编码模型提速",
+    "summary": "Meta推出Muse Spark 1.1。智能指数升至51分。新模型评测完整报道显示编码得分七十一点三。单任务成本仅0.26美元。幻觉率同步降至百分之三十八。",
+    "url": "https://the-decoder.com/metas-muse-spark-1-1-outperforms-glm-5-2-in-coding-and-costs-slightly-less/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPU瓦片教程上线",
+    "summary": "英伟达生态新增瓦片编程教程。内容用TileGym拆解内核运行。代码实验教程（AI资讯）可在Colab复现。环境不符时会降级至Triton。教程覆盖FlashAttention关键算子。",
+    "url": "https://www.marktechpost.com/2026/07/11/a-coding-guide-to-nvidias-tile-based-gpu-programming-from-cutile-and-triton-kernels-to-flash-attention/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Instagram生图功能撤回",
+    "summary": "Meta上线Muse生图工具数日。用户可拿社交照片生成新图。批评声😠迅速冲高隐私争议。功能撤回新闻报道披露紧急调整。官方将重新评估产品价值。",
+    "url": "https://www.bbc.com/news/articles/c2dy6e8klw0o",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Genie生成可玩世界",
+    "summary": "谷歌Genie 3让提示词变场景。玩家可以直接进入生成世界漫游。生成世界讨论原帖聚焦一致性。炫酷画面🌍仍藏着逻辑裂缝。游戏叙事流程可能被重新改写。",
+    "url": "https://www.reddit.com/r/artificial/comments/1utsewf/aigenerated_game_worlds_are_getting_playable_but/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "机器人学会视觉想象",
+    "summary": "APIVOT面向长程机器人规划。系统交织语言思考与视觉推演。机器人规划论文原文展示厨房实验。模型🤖提前验证空间几何可行性。复杂任务成功率因此获得提升。",
+    "url": "https://arxiv.org/abs/2607.08024",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "博弈框架压低幻觉",
+    "summary": "G-Frame融合贝叶斯与团队博弈。多智能体自动合成高质推理数据。多智能体降幻论文披露闭环方法。七十亿模型🧪在化学任务变稳。幻觉率最多下降接近百分之八十。",
+    "url": "https://arxiv.org/abs/2607.08403",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第一视角训练机器人",
+    "summary": "EgoWAM利用人类第一视角数据。模型同步预测动作和场景变化。世界动作模型论文解释协同训练。三维运动流🔭强化空间表征。机器人泛化表现最高提升四倍。",
+    "url": "https://arxiv.org/abs/2607.08436",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "文档解析模型升级",
+    "summary": "团队发布Infinity-Parser2技术报告。模型结合数据合成和强化学习。文档解析论文原文公开完整方案。双语语料规模达到五百万份。端到端解析性能超过多款模型。",
+    "url": "https://arxiv.org/abs/2607.07836",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "主动记忆提醒智能体",
+    "summary": "研究把记忆改为主动干预机制。独立代理持续整理结构化记忆库。主动记忆论文原文展示即插即用设计。关键节点🧠会主动提醒行动代理。长周期基准最高提升百分之八。",
+    "url": "https://huggingface.co/papers/2607.08716",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国产十万卡集群落成",
+    "summary": "中科曙光建成首个十万卡集群。郑州发布会报道（AI资讯）披露并网进度。系统全部采用国产计算卡。平台🧊支持多种精度计算模式。目前已适配三百余项应用。",
+    "url": "https://www.qbitai.com/2026/07/447902.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "矿企转向算力基建",
+    "summary": "TeraWulf正从挖矿转做算力服务。现有电力资源⚡成为核心筹码。矿企转型讨论原帖引发社区追问。土地与冷却仍是硬门槛。融资能力决定长期转型成色。",
+    "url": "https://www.reddit.com/r/artificial/comments/1utrjfa/terawulfs_move_from_bitcoin_mining_to_ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "聊天机器人遭恐怖滥用",
+    "summary": "剑桥研究追踪聊天机器人滥用。极端组织借模型策划袭击活动。安全风险报道全文披露具体案例。主流产品🤖被用于武器维护。过滤失灵再敲平台治理警钟。",
+    "url": "https://the-decoder.com/terrorist-groups-are-using-every-major-ai-chatbot-for-attack-planning-and-weapons-development/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "欧美企业转向中国算力",
+    "summary": "欧美企业正迁移部分模型基础设施。中国算力迁移调查指向成本优势。国产模型性能差距仅1%至4%。DeepSeek🏆已连续七周登榜首。全球供应链面临重新估值。",
+    "url": "https://www.nbd.com.cn/articles/2026-07-11/4468178.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
