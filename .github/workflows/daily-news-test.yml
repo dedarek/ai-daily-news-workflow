@@ -166,6 +166,18 @@ jobs:
             git push origin HEAD:gh-pages
           fi
 
+      - name: Upload morning artifacts to new site
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
+        env:
+          AI_DAILY_NEW_SITE_API_KEY: ${{ secrets.AI_DAILY_NEW_SITE_API_KEY }}
+          AI_DAILY_NEW_SITE_ENDPOINT: ${{ vars.AI_DAILY_NEW_SITE_ENDPOINT || 'https://tokenless.top/daily' }}
+        run: |
+          test -n "$AI_DAILY_NEW_SITE_API_KEY" || { echo "::error::Missing GitHub Actions secret AI_DAILY_NEW_SITE_API_KEY"; exit 1; }
+          node scripts/upload_new_site_artifacts.mjs \
+            --date "${{ steps.issue.outputs.date }}" \
+            --artifact-dir dist \
+            --endpoint "$AI_DAILY_NEW_SITE_ENDPOINT"
+
       - name: Send admin email
         if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
         env:

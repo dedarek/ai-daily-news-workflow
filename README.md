@@ -82,6 +82,19 @@ ffmpeg 重编码压缩；上限可用 `AI_DAILY_MAX_PUBLISHED_VIDEO_BYTES` 覆�
 `AI_DAILY_VIDEO_SEND_DELAY`、`AI_DAILY_VIDEO_BATCH_PAUSE`、
 `AI_DAILY_FLOW_LIMIT_COOLDOWN_SECONDS` 覆盖。
 
+Morning workflow 会在发布 GitHub Pages 后，把日报正文、音频、视频加密上传到新网站。
+上传由固定脚本 `scripts/upload_new_site_artifacts.mjs` 执行，不由 Agent 决定。
+需要配置：
+
+| 配置 | 类型 | 说明 |
+|------|------|------|
+| `AI_DAILY_NEW_SITE_API_KEY` | GitHub Secret | 新网站上传 API Key |
+| `AI_DAILY_NEW_SITE_ENDPOINT` | GitHub Variable | 新网站 endpoint，默认 `https://tokenless.top/daily` |
+
+实际上传 URL 为：`{AI_DAILY_NEW_SITE_ENDPOINT}/api/upload`。脚本会从
+`articles-YYYY-MM-DD.json` 自动生成 `daily-news-text-YYYY-MM-DD.txt`，并连同
+`daily-news-podcast-YYYY-MM-DD.mp3`、`daily-news-video-YYYY-MM-DD.mp4` 一起加密上传。
+
 日报默认只采集 `issue_date` 当天源页。若当天源页不可用，流水线会失败并等待重跑，
 不会自动回退使用前一天内容。仅在显式回填或调试时可设置
 `AI_DAILY_ALLOW_SOURCE_DATE_FALLBACK=true`。
