@@ -73,6 +73,18 @@ def email_video_attachment_limit_bytes() -> int:
         return 20 * 1024 * 1024
 
 
+def flow_limit_cooldown_seconds() -> float:
+    raw = os.environ.get('AI_DAILY_FLOW_LIMIT_COOLDOWN_SECONDS', '900')
+    try:
+        return max(60.0, float(raw))
+    except ValueError:
+        return 900.0
+
+
+def is_flow_limit_error(exc: Exception) -> bool:
+    return 'flow over limit' in str(exc).lower()
+
+
 def public_video_url(date_str: str) -> str:
     base_url = (
         os.environ.get('AI_DAILY_PUBLIC_BASE_URL')
@@ -304,6 +316,13 @@ def main() -> int:
         f'MEDIA_ATTACHMENT_SELECTED kind={media_kind} path={media_path} size={media_path.stat().st_size}',
         flush=True,
     )
+    if media_kind == 'video':
+        delay = max(delay, float(os.environ.get('AI_DAILY_VIDEO_SEND_DELAY', '90')))
+        batch_pause = max(batch_pause, float(os.environ.get('AI_DAILY_VIDEO_BATCH_PAUSE', '600')))
+        print(
+            f'VIDEO_ATTACHMENT_THROTTLE send_delay={delay}s batch_pause={batch_pause}s',
+            flush=True,
+        )
     recipients = read_recipients(audience)
     host, port, sender, password = read_smtp_config()
     success = 0
@@ -338,7 +357,13 @@ def main() -> int:
                 last_error = exc
                 print(f'WARN [{index}/{len(recipients)}] attempt={attempt} {recipient}: {exc}', flush=True)
                 if attempt < retry_attempts:
-                    time.sleep(retry_delay)
+                    sleep_seconds = flow_limit_cooldown_seconds() if is_flow_limit_error(exc) else retry_delay
+                    if is_flow_limit_error(exc):
+                        print(
+                            f'WARN smtp_flow_limit_cooldown recipient={recipient} sleep={sleep_seconds}s',
+                            flush=True,
+                        )
+                    time.sleep(sleep_seconds)
         if last_error is not None:
             print(f'FAIL {recipient}: {last_error}', flush=True)
 

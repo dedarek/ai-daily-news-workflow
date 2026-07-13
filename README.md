@@ -72,6 +72,10 @@ ffmpeg 重编码压缩；上限可用 `AI_DAILY_MAX_PUBLISHED_VIDEO_BYTES` 覆�
 音频和视频。默认视频附件阈值为 20MB，可用
 `AI_DAILY_EMAIL_VIDEO_ATTACHMENT_LIMIT_BYTES` 覆盖；若需要完全禁用视频附件，可设置
 `AI_DAILY_EMAIL_ATTACH_VIDEO=false`。邮件正文始终提供 GitHub Pages 视频入口。
+发送视频附件时会自动降速，默认至少每封间隔 90 秒、每 10 封暂停 10 分钟；遇到
+SMTP `flow over limit` 会冷却 15 分钟后重试。可用
+`AI_DAILY_VIDEO_SEND_DELAY`、`AI_DAILY_VIDEO_BATCH_PAUSE`、
+`AI_DAILY_FLOW_LIMIT_COOLDOWN_SECONDS` 覆盖。
 
 日报默认只采集 `issue_date` 当天源页。若当天源页不可用，流水线会失败并等待重跑，
 不会自动回退使用前一天内容。仅在显式回填或调试时可设置
