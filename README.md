@@ -72,8 +72,8 @@ ffmpeg 重编码压缩；上限可用 `AI_DAILY_MAX_PUBLISHED_VIDEO_BYTES` 覆�
 音频和视频。默认视频附件阈值为 20MB，可用
 `AI_DAILY_EMAIL_VIDEO_ATTACHMENT_LIMIT_BYTES` 覆盖；若需要完全禁用视频附件，可设置
 `AI_DAILY_EMAIL_ATTACH_VIDEO=false`。邮件正文始终提供 GitHub Pages 视频入口。
-Afternoon workflow 默认不附带视频附件；如需恢复下午邮件视频附件，在 GitHub
-Actions Variables 中设置 `AI_DAILY_AFTERNOON_ATTACH_VIDEO=true`。
+Afternoon workflow 默认附带视频附件；如需临时关闭下午邮件视频附件，在 GitHub
+Actions Variables 中设置 `AI_DAILY_AFTERNOON_ATTACH_VIDEO=false`。
 发送视频附件时默认按 BCC 批量发送，每批 10 人，只上传一次视频附件；可用
 `AI_DAILY_VIDEO_RECIPIENT_BATCH_SIZE` 调整视频批大小，或用
 `AI_DAILY_RECIPIENT_BATCH_SIZE` 覆盖所有媒体类型。发送视频附件时会自动降速，
