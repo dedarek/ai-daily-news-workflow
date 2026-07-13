@@ -3,6 +3,104 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-07-13",
+      "content_date": "2026-07-13",
+      "published_at": "2026-07-13T04:42:19.409670+00:00",
+      "article_count": 12,
+      "podcast_turns": 20,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "deepseek-ai/deepseek-v4-pro",
+          "moonshotai/kimi-k2.6",
+          "z-ai/glm-5.2"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 17,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "第1轮S1发言仅28字，虽未低于15字底线，但明显短于建议的35-95字口播长度，信息密度偏低。",
+                  "结尾轮S2使用固定结束语“今天就聊到这儿，我们下期再见”，属于应避免的固定寒暄模式。"
+                ],
+                "repair_instruction": "1. 扩充第1轮S1发言：在“必然结果”后补充一句对事件影响的概括，例如“这再次证明高权限Agent在缺乏沙箱和人工干预时破坏力极大”，使字数达到35字以上。2. 修改结尾轮：去掉“今天就聊到这儿，我们下期再见”，改为与内容相关的自然收束，如“这些约束机制和基础设施的进展，才是决定AI能否安全落地的关键，我们持续关注。”"
+              },
+              "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "第1轮S1发言仅28字，虽未低于15字底线，但明显短于建议的35-95字口播长度，信息密度偏低。",
+              "结尾轮S2使用固定结束语“今天就聊到这儿，我们下期再见”，属于应避免的固定寒暄模式。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-13/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-13/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-13/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-13/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-13.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-13/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-13/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-13.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-13/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-13.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-13.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-13.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-07-12",
       "content_date": "2026-07-12",
       "published_at": "2026-07-12T04:39:11.286220+00:00",

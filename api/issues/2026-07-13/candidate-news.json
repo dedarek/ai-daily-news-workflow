@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Claude计费延期引热议",
+    "summary": "Anthropic将Fab5计费延至七月十九。用户在原帖讨论计费延期争议追问真实成本。Fab5编码强🧪售价仍偏高。Sol以半价压低长任务预算。Grok低价⚖️适合吞吐场景。",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuogus/anthropic_extended_fab_5s_meteredbilling_deadline/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "苹果车项目留下芯片遗产",
+    "summary": "泰坦🚗虽停摆，催生神经引擎。苹果芯片靠完整报道详见原文转向端侧智能。A11首用它，支撑面容识别。车梦未成，M7传承更清晰。",
+    "url": "https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代理管理能力扩展",
+    "summary": "Gemini API扩展托管代理能力。后台任务可持续⚙️自动运行。谷歌代理更新详情介绍远程MCP支持。学习功能新增课程与测验面板。开发者构建代理更加省力。",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模型迁移提速降本",
+    "summary": "生产营销代理迁至GPT-5.6。任务速度猛增至2.2倍。生产代理迁移复盘披露成本下降27%。缓存路由直接左右最终账单。社区更关心真实转化表现。",
+    "url": "https://newshacker.me/story?id=48882716",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "机器人船协作建造",
+    "summary": "MIT让微型船自主拼接结构。智能调度协调🚤船队同步靠拢。麻省理工研究发布展示水面建造成果。技术面向救援与海洋工程。群体机器人应用边界继续扩大。",
+    "url": "https://news.mit.edu/topic/artificial-intelligence2",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达瓦片编程教程发布",
+    "summary": "教程以TileGym讲清瓦片内核。可在完整代码实验运行笔记本🧩复现实验。Colab会降级用Triton运行。覆盖FlashAttention等关键算子。",
+    "url": "https://www.marktechpost.com/2026/07/11/a-coding-guide-to-nvidias-tile-based-gpu-programming-from-cutile-and-triton-kernels-to-flash-attention/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "顶尖人才流向重排",
+    "summary": "Anthropic继续吸纳顶尖研究人才。Jumper离开DeepMind⚗️加入新阵营。伯克利学者Nelson也传出加盟。人才流动讨论原帖披露相关细节。竞争焦点正转向产品与安全。",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuscvt/anthropic_just_poached_google_deepminds_nobel/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "本地代理误删文件",
+    "summary": "GPT-5.6 Sol误删风波发酵。Matt Shumer称Mac文件险被清空。本地任务事故报道（AI资讯）指出权限失控风险。本地自动执行需要🛡️更强护栏。OpenAI尚未正式公开回应。",
+    "url": "http://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651342454&idx=1&sn=30ae51eba566ed3187493e4e817d3124&chksm=bc5df56aaf6d143aa8b685d347c37933e82d75131c920866c302abf5cb91c18875714cf0a778&scene=0&xtrack=1",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "诺奖学者转赴中国",
+    "summary": "奥马尔·亚吉将全职赴北京任职。他将领衔AI材料实验室。科研人才流动讨论关注美国科研投入收缩。中国揽才动作🌏引发持续讨论。材料发现竞赛可能重新提速。",
+    "url": "https://www.reddit.com/r/artificial/comments/1uupe2p/nobelwinning_chemist_leaves_us_to_direct_ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "部署人才需求暴涨",
+    "summary": "TCS计划招聘8900名部署工程师。公司也在积极寻找AI收购目标。路透产业报道（AI资讯）呈现企业需求升温。印度外包业正加速🧑‍💻能力重估。岗位结构将向实施服务倾斜。",
+    "url": "https://www.reuters.com/technology/artificial-intelligence/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "版权清算瞄准痛点",
+    "summary": "生成内容归属成为创作者焦虑。KOR协议尝试处理确权交易。创意资产清算方案覆盖音乐视频艺术IP。项目七月融资750万美元。版权基础设施开始🧾加快成形。",
+    "url": "https://x.com/xiaoming_web3/status/2076291960017756522",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "价值环受热议",
+    "summary": "社媒观点称中国AI链条已闭环。闭环控制能力被指领先美国。产业价值链讨论原文进一步追问合理定价。该判断📊仍缺少权威数据支撑。市场关注估值与产业溢价。",
+    "url": "https://x.com/cnfinancewatch/status/2076180698210197510",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "可灵广告拿下奖项",
+    "summary": "两支AI广告拿下戛纳奖项。获奖作品均基于Kling制作。可灵获奖作品原帖打破行业质疑。创意圈开始🏆重估视频模型。商业广告制作门槛正在变化。",
+    "url": "https://x.com/Kling_ai/status/2076324253419610512",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "勒索代理首次得手",
+    "summary": "JadePuffer借Langflow漏洞入侵。它仅用31秒改写代码续攻。勒索智能体事件原帖（AI资讯）披露攻击过程。代理加密1342项配置索赎。企业需要立即🚨完成补丁巡检。",
+    "url": "https://www.reddit.com/r/artificial/comments/1uuouu7/someone_built_an_ai_agent_that_hacks_networks_and/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "技能评测工具开源",
+    "summary": "Skillgrade 2.0专测代理技能。项目主张指令也应接受单测。技能评测开源仓库（AI资讯）支持单配置运行。沙箱会把任务交给真实代理。评分同时检查结果与过程。",
+    "url": "https://github.com/mgechev/skillgrade",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
