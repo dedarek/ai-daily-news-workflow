@@ -162,6 +162,7 @@ jobs:
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+          AI_DAILY_EMAIL_ATTACH_VIDEO: ${{ vars.AI_DAILY_AFTERNOON_ATTACH_VIDEO || 'false' }}
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
@@ -201,6 +202,7 @@ jobs:
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+          AI_DAILY_EMAIL_ATTACH_VIDEO: ${{ vars.AI_DAILY_AFTERNOON_ATTACH_VIDEO || 'false' }}
         run: |
           python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
