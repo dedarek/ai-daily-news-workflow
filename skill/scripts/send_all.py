@@ -196,9 +196,11 @@ def read_recipients(audience: str) -> list[str]:
             raise RuntimeError(f'Recipient audience "{audience}" contains blank entry: {RECIPIENTS_FILE}')
         if not re.fullmatch(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', recipient):
             raise RuntimeError(f'Invalid recipient address in {RECIPIENTS_FILE}: {recipient}')
-        if recipient in seen:
-            raise RuntimeError(f'Duplicate recipient in audience "{audience}": {recipient}')
-        seen.add(recipient)
+        dedupe_key = recipient.lower()
+        if dedupe_key in seen:
+            print(f'WARN duplicate_recipient_skipped audience={audience} recipient={recipient}', flush=True)
+            continue
+        seen.add(dedupe_key)
         validated.append(recipient)
     return validated
 
