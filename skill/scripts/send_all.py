@@ -8,6 +8,7 @@ import re
 import smtplib
 import ssl
 import time
+from datetime import datetime, timezone
 from email.message import EmailMessage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -79,6 +80,73 @@ def flow_limit_cooldown_seconds() -> float:
         return max(60.0, float(raw))
     except ValueError:
         return 900.0
+
+
+def recipient_batch_size(media_kind: str) -> int:
+    raw = os.environ.get('AI_DAILY_RECIPIENT_BATCH_SIZE')
+    if raw is None and media_kind == 'video':
+        raw = os.environ.get('AI_DAILY_VIDEO_RECIPIENT_BATCH_SIZE', '10')
+    if raw is None:
+        raw = '1'
+    try:
+        return max(1, int(raw))
+    except ValueError:
+        return 10 if media_kind == 'video' else 1
+
+
+def chunked(items: list[str], size: int) -> list[list[str]]:
+    return [items[index:index + size] for index in range(0, len(items), size)]
+
+
+def delivery_status_path(artifact_dir: Path, date_str: str, phase: str | None) -> Path:
+    phase_name = phase or 'manual'
+    return artifact_dir / f'delivery-status-{phase_name}-{date_str}.json'
+
+
+def load_delivery_status(path: Path, date_str: str, phase: str | None, audience: str) -> dict:
+    default = {
+        'date': date_str,
+        'phase': phase or 'manual',
+        'audience': audience,
+        'sent': {},
+        'failed': {},
+    }
+    if not path.is_file() or env_truthy('AI_DAILY_IGNORE_DELIVERY_STATUS', False):
+        return default
+    try:
+        loaded = json.loads(path.read_text(encoding='utf-8'))
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f'Invalid delivery status JSON in {path}: {exc}') from exc
+    if not isinstance(loaded, dict):
+        raise RuntimeError(f'Delivery status must be a JSON object: {path}')
+    if loaded.get('date') != date_str or loaded.get('phase') != (phase or 'manual'):
+        raise RuntimeError(f'Delivery status does not match this run: {path}')
+    loaded.setdefault('audience', audience)
+    loaded.setdefault('sent', {})
+    loaded.setdefault('failed', {})
+    if not isinstance(loaded['sent'], dict) or not isinstance(loaded['failed'], dict):
+        raise RuntimeError(f'Delivery status sent/failed must be objects: {path}')
+    return loaded
+
+
+def write_delivery_status(path: Path, status: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def mark_delivery_status(status: dict, recipients: list[str], state: str, error: Exception | None = None) -> None:
+    now = datetime.now(timezone.utc).isoformat()
+    target = status['sent'] if state == 'sent' else status['failed']
+    for recipient in recipients:
+        key = recipient.lower()
+        target[key] = {
+            'recipient': recipient,
+            f'{state}_at': now,
+        }
+        if error is not None:
+            target[key]['error'] = str(error)
+        if state == 'sent':
+            status['failed'].pop(key, None)
 
 
 def is_flow_limit_error(exc: Exception) -> bool:
@@ -220,7 +288,7 @@ def read_recipients(audience: str) -> list[str]:
 def build_message(
     date_str: str,
     sender: str,
-    recipient: str,
+    to_header: str,
     html_content: str,
     media_path: Path,
     media_kind: str,
@@ -228,7 +296,7 @@ def build_message(
     message = MIMEMultipart('mixed', policy=SMTP)
     message['Subject'] = f'每日AI热点新闻（博客试运营）— {date_str}'
     message['From'] = sender
-    message['To'] = recipient
+    message['To'] = to_header
 
     alternative = MIMEMultipart('alternative', policy=SMTP)
     plain = re.sub(r'<[^>]+>', ' ', html_content)
@@ -255,11 +323,13 @@ def build_message(
     return message
 
 
-def send_one(host: str, port: int, sender: str, password: str, recipient: str, message: MIMEMultipart) -> None:
+def send_batch(host: str, port: int, sender: str, password: str, recipients: list[str], message: MIMEMultipart) -> None:
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(host, port, context=context, timeout=30) as server:
         server.login(sender, password)
-        server.sendmail(sender, [recipient], message.as_bytes(policy=SMTP))
+        refused = server.sendmail(sender, recipients, message.as_bytes(policy=SMTP))
+        if refused:
+            raise smtplib.SMTPRecipientsRefused(refused)
 
 
 def main() -> int:
@@ -324,50 +394,88 @@ def main() -> int:
             flush=True,
         )
     recipients = read_recipients(audience)
-    host, port, sender, password = read_smtp_config()
-    success = 0
+    status_path = delivery_status_path(artifact_dir, args.date, args.phase)
+    delivery_status = load_delivery_status(status_path, args.date, args.phase, audience)
+    already_sent = set(delivery_status['sent'])
+    pending_recipients = [recipient for recipient in recipients if recipient.lower() not in already_sent]
+    skipped = len(recipients) - len(pending_recipients)
+    if skipped:
+        print(
+            f'DELIVERY_STATUS_RESTORED path={status_path} already_sent={skipped} pending={len(pending_recipients)}',
+            flush=True,
+        )
+    batch_size = recipient_batch_size(media_kind)
+    recipient_batches = chunked(pending_recipients, batch_size)
+    success = skipped
 
     if args.phase:
         print(f'Phase: {args.phase}', flush=True)
     print(f'Audience: {audience}', flush=True)
+    print(
+        f'RECIPIENT_BATCHING batch_size={batch_size} batches={len(recipient_batches)} '
+        f'pending={len(pending_recipients)} total={len(recipients)}',
+        flush=True,
+    )
+    if not recipient_batches:
+        write_delivery_status(status_path, delivery_status)
+        print(f'NO_PENDING_RECIPIENTS status={status_path}', flush=True)
+        print(f'成功: {success} / {len(recipients)}', flush=True)
+        return 0
+    host, port, sender, password = read_smtp_config()
 
-    for index, recipient in enumerate(recipients, start=1):
+    for index, batch in enumerate(recipient_batches, start=1):
+        to_header = batch[0] if len(batch) == 1 else 'undisclosed-recipients:;'
+        batch_label = ','.join(batch)
         message = build_message(
             args.date,
             sender,
-            recipient,
+            to_header,
             html_content,
             media_path,
             media_kind,
         )
         if args.dry_run:
-            print(f'OK [{index}/{len(recipients)}] DRY-RUN {recipient}', flush=True)
-            success += 1
+            print(
+                f'OK [{index}/{len(recipient_batches)}] DRY-RUN batch_size={len(batch)} recipients={batch_label}',
+                flush=True,
+            )
+            success += len(batch)
             continue
 
         last_error: Exception | None = None
         for attempt in range(1, retry_attempts + 1):
             try:
-                send_one(host, port, sender, password, recipient, message)
-                print(f'OK [{index}/{len(recipients)}] {recipient}', flush=True)
-                success += 1
+                send_batch(host, port, sender, password, batch, message)
+                print(
+                    f'OK [{index}/{len(recipient_batches)}] batch_size={len(batch)} recipients={batch_label}',
+                    flush=True,
+                )
+                success += len(batch)
+                mark_delivery_status(delivery_status, batch, 'sent')
+                write_delivery_status(status_path, delivery_status)
                 last_error = None
                 break
             except (smtplib.SMTPException, OSError) as exc:
                 last_error = exc
-                print(f'WARN [{index}/{len(recipients)}] attempt={attempt} {recipient}: {exc}', flush=True)
+                print(
+                    f'WARN [{index}/{len(recipient_batches)}] attempt={attempt} '
+                    f'batch_size={len(batch)} recipients={batch_label}: {exc}',
+                    flush=True,
+                )
                 if attempt < retry_attempts:
                     sleep_seconds = flow_limit_cooldown_seconds() if is_flow_limit_error(exc) else retry_delay
                     if is_flow_limit_error(exc):
                         print(
-                            f'WARN smtp_flow_limit_cooldown recipient={recipient} sleep={sleep_seconds}s',
+                            f'WARN smtp_flow_limit_cooldown recipients={batch_label} sleep={sleep_seconds}s',
                             flush=True,
                         )
                     time.sleep(sleep_seconds)
         if last_error is not None:
-            print(f'FAIL {recipient}: {last_error}', flush=True)
+            mark_delivery_status(delivery_status, batch, 'failed', last_error)
+            write_delivery_status(status_path, delivery_status)
+            print(f'FAIL batch_size={len(batch)} recipients={batch_label}: {last_error}', flush=True)
 
-        if index < len(recipients):
+        if index < len(recipient_batches):
             time.sleep(delay)
             if index % 10 == 0:
                 time.sleep(batch_pause)

@@ -138,6 +138,17 @@ jobs:
             --reason "$REASON" \
             --issue-url "$CONTENT_BASE_URL/api/issues/${{ steps.issue.outputs.date }}/manifest.json" || echo "::warning::Failed to send admin alert"
 
+      - name: Restore afternoon delivery progress
+        if: ${{ steps.delivery.outputs.skip != 'true' }}
+        run: |
+          STATUS="published-site/state/delivery-progress/${{ steps.issue.outputs.date }}/afternoon.json"
+          if [ -f "$STATUS" ]; then
+            cp "$STATUS" "review-dist/delivery-status-afternoon-${{ steps.issue.outputs.date }}.json"
+            echo "Restored afternoon delivery progress: $STATUS"
+          else
+            echo "No previous afternoon delivery progress"
+          fi
+
       - name: Run deterministic quality gate again
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
@@ -195,6 +206,27 @@ jobs:
             --date "${{ steps.issue.outputs.date }}" \
             --artifact-dir review-dist \
             --phase afternoon
+
+      - name: Publish afternoon delivery progress
+        if: ${{ always() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
+        run: |
+          STATUS_FILE="review-dist/delivery-status-afternoon-${{ steps.issue.outputs.date }}.json"
+          if [ ! -f "$STATUS_FILE" ]; then
+            echo "No afternoon delivery progress file"
+            exit 0
+          fi
+          mkdir -p "published-site/state/delivery-progress/${{ steps.issue.outputs.date }}"
+          cp "$STATUS_FILE" "published-site/state/delivery-progress/${{ steps.issue.outputs.date }}/afternoon.json"
+          cd published-site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "state/delivery-progress/${{ steps.issue.outputs.date }}/afternoon.json"
+          if git diff --cached --quiet; then
+            echo "No afternoon delivery progress changes"
+          else
+            git commit -m "Update afternoon delivery progress ${{ steps.issue.outputs.date }}"
+            git push origin HEAD:gh-pages
+          fi
 
       - name: Publish review report and delivery marker
         if: ${{ success() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
