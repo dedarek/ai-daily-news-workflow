@@ -5,7 +5,7 @@
       "schema_version": 1,
       "issue_date": "2026-07-13",
       "content_date": "2026-07-13",
-      "published_at": "2026-07-13T04:42:19.409670+00:00",
+      "published_at": "2026-07-13T10:42:30.860655+00:00",
       "article_count": 12,
       "podcast_turns": 20,
       "tts_mode": "video-api-audio-video",
@@ -20,7 +20,7 @@
           "z-ai/glm-5.2"
         ],
         "endpoint": "https://integrate.api.nvidia.com/v1",
-        "calls": 17,
+        "calls": 9,
         "call_details": {
           "selection": {
             "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -45,40 +45,61 @@
             "usage": {}
           },
           "podcast": {
-            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "model": "lenovo:qwen35-122b-a10b-fp8",
             "usage": {}
           },
           "podcast_review": {
-            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "model": "lenovo:qwen35-122b-a10b-fp8",
             "usage": {}
           },
           "podcast_attempts": [
             {
               "attempt": 1,
               "generation": {
-                "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次数量不足：当前对话共18轮，处于建议范围（18-22轮）的下限边缘，但内容密度较高，若需更充分展开5-7条新闻的深度讨论，建议适当增加1-2轮关于具体技术细节或案例的追问。",
+                  "部分段落字数偏少：S1第1轮（39字）、S2第2轮（42字）、S1第3轮（46字）等虽在35字以上，但接近下限，口播时可能显得急促，建议扩充背景描述或增加语气词以增强自然度。",
+                  "新闻覆盖略有不均：虽然覆盖了大部分新闻，但对“中国AI价值链闭环论”和“Skillgrade 2.0”的讨论略显仓促，仅各用1轮带过，缺乏更深入的交锋或补充。"
+                ],
+                "repair_instruction": "1. 在讨论‘中国AI价值链闭环论’时，增加一轮S1或S2的追问，具体询问‘郑州十万卡集群’的技术细节或市场反应，以平衡新闻覆盖深度。2. 将S1第1轮和S2第2轮的内容扩充至50字左右，加入如‘大家可能注意到了’或‘这其实反映了’等口语化连接词，使切入更自然。3. 在结尾前增加一轮关于‘Skillgrade 2.0’的具体应用场景讨论，例如询问‘这种单测理念能否直接用于企业级代理验收？’，以增强互动性和信息量。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            },
+            {
+              "attempt": 2,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
                 "usage": {}
               },
               "structure_issues": [],
               "review": {
                 "pass": true,
                 "issues": [
-                  "第1轮S1发言仅28字，虽未低于15字底线，但明显短于建议的35-95字口播长度，信息密度偏低。",
-                  "结尾轮S2使用固定结束语“今天就聊到这儿，我们下期再见”，属于应避免的固定寒暄模式。"
+                  "轮次统计为20轮，符合18-22轮的建议范围，但S1和S2的发言长度分布较为均匀，部分段落（如S2关于TCS和KOR的发言）接近95字上限，口播时需注意语速控制以防超时。",
+                  "S1在引入“中国AI全栈闭环”话题时，直接承接了S2关于诺奖得主的话题，转折略显生硬，建议增加一句过渡语（如“除了人才流动，舆论场也有新声音”）以增强自然度。",
+                  "S2在讨论Skillgrade 2.0时，连续两轮（第18、19轮）都在质疑沙箱局限性，略显重复，建议将第19轮的部分内容合并或转化为对S1的追问，使对话节奏更紧凑。"
                 ],
-                "repair_instruction": "1. 扩充第1轮S1发言：在“必然结果”后补充一句对事件影响的概括，例如“这再次证明高权限Agent在缺乏沙箱和人工干预时破坏力极大”，使字数达到35字以上。2. 修改结尾轮：去掉“今天就聊到这儿，我们下期再见”，改为与内容相关的自然收束，如“这些约束机制和基础设施的进展，才是决定AI能否安全落地的关键，我们持续关注。”"
+                "repair_instruction": "1. 在S1第11轮发言前（即S2第10轮后），增加过渡句：'除了人才流向，舆论场关于中国AI能力的讨论也引发了争议。'以平滑话题切换。2. 合并S2第18轮和第19轮关于Skillgrade的质疑，将第19轮改为追问：'那在真实复杂场景下，我们该如何平衡自动化评分与人工复核的关系？'，使对话更具互动性。3. 检查S2第14轮（TCS部分）和第16轮（KOR部分）的字数，若口播时语速较快，可微调删减冗余形容词，确保每轮控制在90字以内。"
               },
-              "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
               "review_usage": {}
             }
           ],
           "podcast_harness": {
-            "attempts": 1,
-            "best_attempt": 1,
+            "attempts": 2,
+            "best_attempt": 2,
             "final_pass": true,
             "final_issues": [
-              "第1轮S1发言仅28字，虽未低于15字底线，但明显短于建议的35-95字口播长度，信息密度偏低。",
-              "结尾轮S2使用固定结束语“今天就聊到这儿，我们下期再见”，属于应避免的固定寒暄模式。"
+              "轮次统计为20轮，符合18-22轮的建议范围，但S1和S2的发言长度分布较为均匀，部分段落（如S2关于TCS和KOR的发言）接近95字上限，口播时需注意语速控制以防超时。",
+              "S1在引入“中国AI全栈闭环”话题时，直接承接了S2关于诺奖得主的话题，转折略显生硬，建议增加一句过渡语（如“除了人才流动，舆论场也有新声音”）以增强自然度。",
+              "S2在讨论Skillgrade 2.0时，连续两轮（第18、19轮）都在质疑沙箱局限性，略显重复，建议将第19轮的部分内容合并或转化为对S1的追问，使对话节奏更紧凑。"
             ],
             "structure_issues": [],
             "loop_exhausted": false,
