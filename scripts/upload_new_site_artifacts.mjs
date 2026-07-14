@@ -258,6 +258,7 @@ async function main() {
   const report = await readJson(reportPath);
   if (!Array.isArray(articles)) throw new Error(`Articles JSON must be an array: ${articlesPath}`);
   const summary = report.digest_summary || report.summary || report.title || "";
+  await fs.mkdir(path.dirname(textPath), { recursive: true });
   await fs.writeFile(textPath, renderNewsText(date, articles, summary), "utf8");
 
   const raw = await fs.readFile(textPath, "utf8");
