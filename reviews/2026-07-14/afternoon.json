@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-07-14",
+  "reviewed_at": "2026-07-14T14:08:14.507042+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容结构完整，新闻与锐评逻辑自洽，播客对话自然流畅且观点深刻，仅存在少量未来时间线设定的事实性风险需留意。",
+    "issues": [
+      "新闻中出现的日期（2026年）及版本号（如GPT-5.6, iOS 27, Claude Opus 4.7）均为未来设定，若作为真实日报发布需确认是否为虚构/预测类内容，否则存在事实性幻觉风险。",
+      "播客中S2提到'有人过度使用都影响了健康'，虽基于新闻摘要，但表述略显夸张，建议在实际播报时补充具体案例或数据支撑以增强严谨性。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
