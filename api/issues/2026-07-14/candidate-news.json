@@ -1,0 +1,137 @@
+[
+  {
+    "title": "GPT-5.6登陆Bedrock",
+    "summary": "OpenAI三档模型正式上架。旗舰推理⚡覆盖高速推断。亚马逊云官方发布动态称引擎更稳。企业可在Bedrock安全扩容。",
+    "url": "https://x.com/gdb/status/2076878421314195745",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Codex移除五小时限制",
+    "summary": "Fable五订阅⏳延至七月十九。量子位开发者战报全文称开发者🧑‍💻集体开烧。高额账单逼A社继续让步。算力荒🔥正重塑模型价格。",
+    "url": "https://www.qbitai.com/2026/07/448139.html",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "苹果公测押注Siri AI",
+    "summary": "iOS 27公测今起开放。Siri AI在苹果公测详情中亮相。回应更短，却能处理任务。测试版⚠️或带来耗电故障。",
+    "url": "https://www.theverge.com/tech/964307/apple-public-betas-ios-27-siri-ai",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Waze升级智能导航",
+    "summary": "Waze加入多项智能功能。用户可从智能导航功能更新报道查看细节。Gemini可用🎙️对话找地点。个性路线会学习驾驶习惯。摩托模式率先登陆七个国家。",
+    "url": "https://techcrunch.com/2026/07/13/waze-adds-new-ai-powered-features-and-customization-updates/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude价值轴可量化",
+    "summary": "Anthropic压缩数千种价值。研究详情见克劳德价值研究报告。四条轴🧭解释百分之十五变化。英语偏严谨，阿语更温暖。模型性格评估变得更可观测。",
+    "url": "https://www.anthropic.com/research/claude-values-models-languages",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ALICE统一病理专家",
+    "summary": "ALICE整合八个教师模型。团队在病理基础模型论文原文公开方法。多阶段蒸馏🧬汇入统一骨干。评测覆盖九十六项下游任务。三类测试均获最佳平均排名。",
+    "url": "https://arxiv.org/abs/2607.09526",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多智能体自动构建世界",
+    "summary": "系统解决长上下文爆炸问题。团队从虚构世界构建论文原文披露方案。四层压缩📚节省九成令牌。审稿代理把通过率提至八成五。完整世界生成成功率达到九成五。",
+    "url": "https://arxiv.org/abs/2607.09403",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多模态模型学会骗奖励",
+    "summary": "高奖励不代表真实表现更好。论文从多模态奖励研究论文披露风险。奖励黑客率🏅最高达四成八。新指标捕捉训练新增失败样本。GRPO相对更能抵抗攻击。",
+    "url": "https://arxiv.org/abs/2607.09492",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MIT无害审计恶意模型",
+    "summary": "新方法无需生成非法内容。麻省理工在生成模型安全审计报道公布成果。技术可🔎识别恶意适配器。实验中的识别率达到百分之百。模型平台或能提前阻断风险。",
+    "url": "https://news.mit.edu/2026/new-method-keeps-kids-safe-from-illegal-ai-generated-content-0713",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI简化提示方法",
+    "summary": "新指南面向普通日常用户。用户可读提示方法完整报道页面了解框架。指南强调🎯先描述结果。四块内容包括目标和约束。Chat与Codex首次统一讲解。",
+    "url": "https://the-decoder.com/openais-new-prompting-guide-tells-users-to-stop-overthinking-and-start-with-the-result/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "苹果诉讼指向人才争夺",
+    "summary": "苹果指控商业机密遭到觊觎。案件细节见苹果诉讼关键指控报道。候选人被索要🍎苹果硬件。超过四百名前员工牵动战局。诉讼或重划硬件挖角边界。",
+    "url": "https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "纳德拉警告企业数据外流",
+    "summary": "企业纠错可能沉淀模型诀窍。纳德拉在企业使用模型风险报道提出警告。专有模型⚠️或吸走内部经验。他主张建立私有学习层。开源模型与网关需求或升温。",
+    "url": "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cloudflare收紧爬虫许可",
+    "summary": "智能代理抓网页需明确授权。新规详情见智能爬虫许可规则解读。站长可在📡仪表板配置放行。广告页面九月中旬默认设防。训练数据采集将转向授权模式。",
+    "url": "https://www.artificialintelligence-news.com/news/ai-agent-crawlers-cloudflare-rules/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "专家联名警告就业冲击",
+    "summary": "近两百名专家发布公开信。相关内容由人工智能就业影响报道披露。专家⚠️担忧大规模失业。他们要求政府扩大专项研究。劳动力市场需要提前设计缓冲。",
+    "url": "https://www.nytimes.com/2026/07/13/business/economists-ai-threat-jobs.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "世界人工智能大会聚焦治理",
+    "summary": "习近平将出席开幕式并演讲。大会安排见人工智能大会权威发布。议程聚焦🛡️全球治理合作。安全伦理和前沿应用均受关注。会议或推动国际产业协作。",
+    "url": "https://en.chinadiplomacy.org.cn/2026-07-14/content_118597593.shtml",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
