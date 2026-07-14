@@ -30,6 +30,9 @@ jobs:
   build-validate-send:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    outputs:
+      issue_date: ${{ steps.issue.outputs.date }}
+      skipped: ${{ steps.delivery.outputs.skip }}
     env:
       TZ: Asia/Shanghai
 
@@ -166,18 +169,6 @@ jobs:
             git push origin HEAD:gh-pages
           fi
 
-      - name: Upload morning artifacts to new site
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
-        env:
-          AI_DAILY_NEW_SITE_API_KEY: ${{ secrets.AI_DAILY_NEW_SITE_API_KEY }}
-          AI_DAILY_NEW_SITE_ENDPOINT: ${{ vars.AI_DAILY_NEW_SITE_ENDPOINT || 'https://tokenless.top/daily' }}
-        run: |
-          test -n "$AI_DAILY_NEW_SITE_API_KEY" || { echo "::error::Missing GitHub Actions secret AI_DAILY_NEW_SITE_API_KEY"; exit 1; }
-          node scripts/upload_new_site_artifacts.mjs \
-            --date "${{ steps.issue.outputs.date }}" \
-            --artifact-dir dist \
-            --endpoint "$AI_DAILY_NEW_SITE_ENDPOINT"
-
       - name: Send admin email
         if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
         env:
@@ -254,3 +245,37 @@ jobs:
           path: dist/
           if-no-files-found: warn
           retention-days: 14
+
+  upload-new-site:
+    needs: build-validate-send
+    if: ${{ needs.build-validate-send.result == 'success' && needs.build-validate-send.outputs.skipped != 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check out published content
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: published-site
+
+      - name: Upload morning artifacts to new site
+        env:
+          AI_DAILY_NEW_SITE_API_KEY: ${{ secrets.AI_DAILY_NEW_SITE_API_KEY }}
+          AI_DAILY_NEW_SITE_ENDPOINT: ${{ vars.AI_DAILY_NEW_SITE_ENDPOINT || 'https://tokenless.top/daily' }}
+        run: |
+          DATE="${{ needs.build-validate-send.outputs.issue_date }}"
+          test -n "$AI_DAILY_NEW_SITE_API_KEY" || { echo "::error::Missing GitHub Actions secret AI_DAILY_NEW_SITE_API_KEY"; exit 1; }
+          node scripts/upload_new_site_artifacts.mjs \
+            --date "$DATE" \
+            --artifact-dir upload-dist \
+            --articles "published-site/api/issues/$DATE/articles.json" \
+            --report "published-site/api/issues/$DATE/pipeline-report.json" \
+            --audio "published-site/audio/$DATE.mp3" \
+            --video "published-site/video/$DATE.mp4" \
+            --endpoint "$AI_DAILY_NEW_SITE_ENDPOINT"

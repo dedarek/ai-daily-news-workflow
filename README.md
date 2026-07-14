@@ -84,8 +84,9 @@ Actions Variables 中设置 `AI_DAILY_AFTERNOON_ATTACH_VIDEO=false`。
 `AI_DAILY_VIDEO_SEND_DELAY`、`AI_DAILY_VIDEO_BATCH_PAUSE`、
 `AI_DAILY_FLOW_LIMIT_COOLDOWN_SECONDS` 覆盖。
 
-Morning workflow 会在发布 GitHub Pages 后，把日报正文、音频、视频加密上传到新网站。
-上传由固定脚本 `scripts/upload_new_site_artifacts.mjs` 执行，不由 Agent 决定。
+Morning workflow 会在发布 GitHub Pages 后，由独立 job 把日报正文、音频、视频加密上传到新网站。
+上传由固定脚本 `scripts/upload_new_site_artifacts.mjs` 执行，不由 Agent 决定。若只需要重试上传，
+手动运行 `Upload AI Daily News To New Site` workflow，填写日期即可，不会重新生成日报，也不会发邮件。
 需要配置：
 
 | 配置 | 类型 | 说明 |
