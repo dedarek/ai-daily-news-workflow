@@ -87,6 +87,7 @@ Actions Variables 中设置 `AI_DAILY_AFTERNOON_ATTACH_VIDEO=false`。
 Morning workflow 会在发布 GitHub Pages 后，由独立 job 把日报正文、音频、视频加密上传到新网站。
 上传由固定脚本 `scripts/upload_new_site_artifacts.mjs` 执行，不由 Agent 决定。若只需要重试上传，
 手动运行 `Upload AI Daily News To New Site` workflow，填写日期即可，不会重新生成日报，也不会发邮件。
+发送给新站的 `daily-news-text-YYYY-MM-DD.txt` 会作为 workflow artifact 暂存 14 天。
 需要配置：
 
 | 配置 | 类型 | 说明 |
