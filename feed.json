@@ -3,6 +3,131 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-07-15",
+      "content_date": "2026-07-15",
+      "published_at": "2026-07-15T04:04:03.701024+00:00",
+      "article_count": 12,
+      "podcast_turns": 21,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "deepseek-ai/deepseek-v4-pro",
+          "moonshotai/kimi-k2.6",
+          "z-ai/glm-5.2"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 9,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次数量超标：当前对话共21轮，符合18-22轮建议范围，但需检查单轮字数是否合规。",
+                  "单轮字数异常：S1第1轮（59字）、S2第2轮（58字）等均在35-95字范围内，但S2第20轮（63字）和S1第21轮（66字）虽未超120字，但整体节奏偏紧凑，需确认是否适合口播停顿。",
+                  "内容覆盖完整：已覆盖GPT-5.6、Grok 4.5、OpenAI-Kalshi、高德ABot、Anthropic教师版、Vercel SDK、LibTV、OpenAI投资框架、以色列安全建议、纽约数据中心禁令、OpenCut、iOS 27 Siri等12条新闻，超出5-7条要求，但部分新闻（如OpenCut、iOS 27）讨论较浅。",
+                  "结构问题：无明显结构问题，但部分新闻（如OpenCut、iOS 27）的讨论深度不足，缺乏追问或分歧。",
+                  "事实准确性：所有事实均源自日报，无新增具体事实、数字或机构。",
+                  "自然度：S1切入话题自然，从GPT-5.6数学难题切入，符合真实讨论逻辑。",
+                  "信息量：大部分新闻有足够解释，但OpenCut和iOS 27的讨论较浅，缺乏深入分析。",
+                  "承接与追问：部分环节有承接（如S2对GPT-5.6的质疑），但部分环节（如OpenCut、iOS 27）缺乏追问或分歧。",
+                  "判断与分歧：有判断（如S1对“导演级技能”的质疑），但部分环节（如OpenCut、iOS 27）缺乏明显分歧。"
+                ],
+                "repair_instruction": "1. 精简新闻数量至5-7条，优先保留GPT-5.6、Grok 4.5、OpenAI-Kalshi、高德ABot、Anthropic教师版、Vercel SDK、LibTV等核心新闻，删除OpenCut和iOS 27的浅层讨论。2. 对保留的新闻增加追问和分歧，例如在讨论LibTV时，S2可追问“导演级技能”的具体案例，S1可提出不同看法。3. 调整部分轮次字数，确保每轮在35-95字之间，避免过短或过长。4. 增强S1和S2的互动，增加承接、追问、补充、分歧和判断，使对话更自然、有深度。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            },
+            {
+              "attempt": 2,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "轮次统计为21轮，处于建议的18-22轮范围内，但S1和S2的发言长度分布略显不均，部分轮次（如S1第1轮、S2第20轮）接近或略超95字建议上限，虽未超过120字红线，但口播节奏可进一步优化。",
+                  "S1切入话题直接引用新闻标题内容，虽无固定寒暄，但略显生硬，建议增加一句自然过渡语（如“刚看到一条重磅消息”）以增强对话真实感。",
+                  "关于GPT-5.6解决数学难题的讨论中，S2提到“误导用户过度期待”，但日报原文仅提及“网络发布阶段”和“需同行评审”，未明确提及“误导用户”，建议微调措辞以严格贴合事实。"
+                ],
+                "repair_instruction": "1. 在S1第一句前添加自然过渡语，例如：'刚看到一条重磅消息，今天AI圈最炸裂的莫过于...'，使切入更自然。2. 将S2关于GPT-5.6的发言中'误导用户过度期待'改为'可能引发未经证实的过度期待'，以严格贴合日报中'网络发布阶段'和'需同行评审'的事实描述。3. 检查S1和S2中接近95字的长句，适当拆分或精简，确保每轮发言更贴合35-95字的口播最佳长度，提升听觉流畅度。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 2,
+            "best_attempt": 2,
+            "final_pass": true,
+            "final_issues": [
+              "轮次统计为21轮，处于建议的18-22轮范围内，但S1和S2的发言长度分布略显不均，部分轮次（如S1第1轮、S2第20轮）接近或略超95字建议上限，虽未超过120字红线，但口播节奏可进一步优化。",
+              "S1切入话题直接引用新闻标题内容，虽无固定寒暄，但略显生硬，建议增加一句自然过渡语（如“刚看到一条重磅消息”）以增强对话真实感。",
+              "关于GPT-5.6解决数学难题的讨论中，S2提到“误导用户过度期待”，但日报原文仅提及“网络发布阶段”和“需同行评审”，未明确提及“误导用户”，建议微调措辞以严格贴合事实。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-15.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-15.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-15.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-15.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-15.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-07-14",
       "content_date": "2026-07-14",
       "published_at": "2026-07-14T05:58:59.257080+00:00",
