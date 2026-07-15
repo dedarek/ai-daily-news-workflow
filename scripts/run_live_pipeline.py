@@ -760,7 +760,7 @@ def generate_digest_summary(
         task_name='digest_summary',
     )
     summary = clean_text(str(result.get('summary', '')))
-    if not 30 <= len(summary) <= 140:
+    if not summary:
         summary = '今天的AI动态集中在模型能力、产品落地与开源生态的持续演进，企业应用和开发者工具仍是主要竞争焦点。'
     return summary, usage, model
 
