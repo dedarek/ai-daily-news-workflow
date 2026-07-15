@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-07-15",
   "status": "ready",
-  "created_at": "2026-07-15T04:04:03.315630+00:00",
+  "created_at": "2026-07-15T05:19:58.441286+00:00",
   "artifacts": {
     "candidate_articles": "dist/candidate-news-2026-07-15.json",
     "articles": "dist/articles-2026-07-15.json",
@@ -50,7 +50,7 @@
         "z-ai/glm-5.2"
       ],
       "endpoint": "https://integrate.api.nvidia.com/v1",
-      "calls": 9,
+      "calls": 11,
       "call_details": {
         "selection": {
           "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -93,17 +93,11 @@
             "review": {
               "pass": false,
               "issues": [
-                "轮次数量超标：当前对话共21轮，符合18-22轮建议范围，但需检查单轮字数是否合规。",
-                "单轮字数异常：S1第1轮（59字）、S2第2轮（58字）等均在35-95字范围内，但S2第20轮（63字）和S1第21轮（66字）虽未超120字，但整体节奏偏紧凑，需确认是否适合口播停顿。",
-                "内容覆盖完整：已覆盖GPT-5.6、Grok 4.5、OpenAI-Kalshi、高德ABot、Anthropic教师版、Vercel SDK、LibTV、OpenAI投资框架、以色列安全建议、纽约数据中心禁令、OpenCut、iOS 27 Siri等12条新闻，超出5-7条要求，但部分新闻（如OpenCut、iOS 27）讨论较浅。",
-                "结构问题：无明显结构问题，但部分新闻（如OpenCut、iOS 27）的讨论深度不足，缺乏追问或分歧。",
-                "事实准确性：所有事实均源自日报，无新增具体事实、数字或机构。",
-                "自然度：S1切入话题自然，从GPT-5.6数学难题切入，符合真实讨论逻辑。",
-                "信息量：大部分新闻有足够解释，但OpenCut和iOS 27的讨论较浅，缺乏深入分析。",
-                "承接与追问：部分环节有承接（如S2对GPT-5.6的质疑），但部分环节（如OpenCut、iOS 27）缺乏追问或分歧。",
-                "判断与分歧：有判断（如S1对“导演级技能”的质疑），但部分环节（如OpenCut、iOS 27）缺乏明显分歧。"
+                "轮次数量超标：当前对话共20轮，符合18-22轮建议，但结尾部分（S1和S2的最后两轮）属于典型的固定寒暄和总结陈词，违反了‘不应出现固定问候和寒暄’的禁令。",
+                "结尾生硬：最后两轮（S1的‘所以今天的结论就是...’和S2的‘同意...咱们下期再见’）是标准的播客结束语模板，缺乏真实讨论的延续性或自然收尾，显得刻意。",
+                "信息密度不均：虽然覆盖了多条新闻，但最后两轮未提供新信息，纯粹为了凑轮次和结束而存在，稀释了整体信息密度。"
               ],
-              "repair_instruction": "1. 精简新闻数量至5-7条，优先保留GPT-5.6、Grok 4.5、OpenAI-Kalshi、高德ABot、Anthropic教师版、Vercel SDK、LibTV等核心新闻，删除OpenCut和iOS 27的浅层讨论。2. 对保留的新闻增加追问和分歧，例如在讨论LibTV时，S2可追问“导演级技能”的具体案例，S1可提出不同看法。3. 调整部分轮次字数，确保每轮在35-95字之间，避免过短或过长。4. 增强S1和S2的互动，增加承接、追问、补充、分歧和判断，使对话更自然、有深度。"
+              "repair_instruction": "请删除最后两轮（S1和S2的结束语），将对话自然终止在S2关于‘数据安全和合规成本’的务实建议上。如果必须保留结束感，请让S1用一句简短的、基于前文讨论的洞察（如‘所以，治理和效率的平衡点才是关键’）作为自然收尾，严禁使用‘咱们下期再见’或‘今天的结论就是’等固定套话。确保总轮次控制在18-19轮之间，且最后一句必须是实质性的观点输出而非寒暄。"
             },
             "review_model": "lenovo:qwen35-122b-a10b-fp8",
             "review_usage": {}
@@ -116,26 +110,46 @@
             },
             "structure_issues": [],
             "review": {
+              "pass": false,
+              "issues": [
+                "轮次数量不足：当前对话仅18轮，处于建议范围（18-22轮）的下限边缘，但考虑到内容密度和深度，建议增加2-4轮以充分展开对新闻的讨论，避免显得仓促。",
+                "部分段落字数偏少：S1和S2的多轮发言字数接近或低于35字下限（如S2第2轮、S1第3轮等），口播时可能显得单薄，缺乏信息密度。",
+                "新闻覆盖不全：日报共12条新闻，当前对话仅深度讨论了约8条（如PixVerse估值、OpenCut开源项目未被提及），建议补充至少2条重要新闻的讨论。",
+                "缺乏具体数据支撑：部分观点（如“成本下降97%”）虽源自日报，但对话中未充分展开其影响，建议增加对数据背后含义的追问或补充。"
+              ],
+              "repair_instruction": "1. 增加2-4轮对话，重点补充对PixVerse估值和OpenCut开源项目的讨论，确保覆盖至少10条新闻。2. 扩充每轮发言字数至40-80字区间，避免过短导致信息量不足。3. 在讨论成本下降、合规风险等话题时，增加对数据影响的具体追问或案例补充，提升对话深度。4. 检查S1切入话题是否自然，确保无生硬转折，保持讨论流畅性。"
+            },
+            "review_model": "lenovo:qwen35-122b-a10b-fp8",
+            "review_usage": {}
+          },
+          {
+            "attempt": 3,
+            "generation": {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            "structure_issues": [],
+            "review": {
               "pass": true,
               "issues": [
-                "轮次统计为21轮，处于建议的18-22轮范围内，但S1和S2的发言长度分布略显不均，部分轮次（如S1第1轮、S2第20轮）接近或略超95字建议上限，虽未超过120字红线，但口播节奏可进一步优化。",
-                "S1切入话题直接引用新闻标题内容，虽无固定寒暄，但略显生硬，建议增加一句自然过渡语（如“刚看到一条重磅消息”）以增强对话真实感。",
-                "关于GPT-5.6解决数学难题的讨论中，S2提到“误导用户过度期待”，但日报原文仅提及“网络发布阶段”和“需同行评审”，未明确提及“误导用户”，建议微调措辞以严格贴合事实。"
+                "轮次为20轮，符合18-22轮的建议范围，但结尾部分（最后两轮）略显总结陈词，缺乏具体的新闻细节承接，稍显平淡。",
+                "S1首句直接抛出重磅新闻，虽无寒暄，但若能增加一句简短的引入语（如“今天的头条令人震惊”）会更自然，不过当前处理也可接受。",
+                "部分段落信息密度极高，S2在轮次14和16中同时提及两个不同新闻的对比或关联，口播时需注意语速和停顿，否则听众可能难以消化。"
               ],
-              "repair_instruction": "1. 在S1第一句前添加自然过渡语，例如：'刚看到一条重磅消息，今天AI圈最炸裂的莫过于...'，使切入更自然。2. 将S2关于GPT-5.6的发言中'误导用户过度期待'改为'可能引发未经证实的过度期待'，以严格贴合日报中'网络发布阶段'和'需同行评审'的事实描述。3. 检查S1和S2中接近95字的长句，适当拆分或精简，确保每轮发言更贴合35-95字的口播最佳长度，提升听觉流畅度。"
+              "repair_instruction": "1. 建议微调S1首句，增加半句过渡语，例如：'今天AI行业最震撼的莫过于GPT-5.6声称攻克了困扰学界五十年的厄多斯数学难题，这若属实，意味着推理能力发生了质变。' 可改为 '今天的头条令人震惊：GPT-5.6声称攻克了困扰学界五十年的厄多斯数学难题，这若属实，意味着推理能力发生了质变。' 以增强自然感。2. 建议将最后两轮（S1和S2的总结）稍微具体化，例如S1可提及'纽约禁令'或'以色列指南'的具体影响作为收尾的引子，避免纯理论升华；S2可补充一个具体的行动建议，如'企业应优先审查数据权限'，使结尾更具实操性。3. 检查S2在轮次14和16的长句，建议在'苹果从封闭走向开放'和'高德新推出的ABot'之间增加一个短暂的停顿标记或连接词，确保口播节奏清晰。"
             },
             "review_model": "lenovo:qwen35-122b-a10b-fp8",
             "review_usage": {}
           }
         ],
         "podcast_harness": {
-          "attempts": 2,
-          "best_attempt": 2,
+          "attempts": 3,
+          "best_attempt": 3,
           "final_pass": true,
           "final_issues": [
-            "轮次统计为21轮，处于建议的18-22轮范围内，但S1和S2的发言长度分布略显不均，部分轮次（如S1第1轮、S2第20轮）接近或略超95字建议上限，虽未超过120字红线，但口播节奏可进一步优化。",
-            "S1切入话题直接引用新闻标题内容，虽无固定寒暄，但略显生硬，建议增加一句自然过渡语（如“刚看到一条重磅消息”）以增强对话真实感。",
-            "关于GPT-5.6解决数学难题的讨论中，S2提到“误导用户过度期待”，但日报原文仅提及“网络发布阶段”和“需同行评审”，未明确提及“误导用户”，建议微调措辞以严格贴合事实。"
+            "轮次为20轮，符合18-22轮的建议范围，但结尾部分（最后两轮）略显总结陈词，缺乏具体的新闻细节承接，稍显平淡。",
+            "S1首句直接抛出重磅新闻，虽无寒暄，但若能增加一句简短的引入语（如“今天的头条令人震惊”）会更自然，不过当前处理也可接受。",
+            "部分段落信息密度极高，S2在轮次14和16中同时提及两个不同新闻的对比或关联，口播时需注意语速和停顿，否则听众可能难以消化。"
           ],
           "structure_issues": [],
           "loop_exhausted": false,
@@ -143,13 +157,13 @@
         }
       }
     },
-    "digest_summary": "今天的AI动态集中在模型能力、产品落地与开源生态的持续演进，企业应用和开发者工具仍是主要竞争焦点。",
-    "podcast_turns": 21,
+    "digest_summary": "今日新闻显示AI正从通用对话向垂直场景深度渗透，视频生成与教育应用加速落地。然而，纽约叫停高能耗数据中心、以色列发布代理安全建议及OpenAI强调治理优先，表明行业在算力扩张与隐私合规上面临严峻约束。企业需在技术突破与风险控制间寻找平衡，避免盲目扩张引发系统性隐患。",
+    "podcast_turns": 20,
     "podcast_script_file": "podcast-script-2026-07-15.json",
     "podcast_script_text_file": "podcast-script-2026-07-15.txt",
     "podcast_moss_input_file": "podcast-moss-input-2026-07-15.txt",
     "voice_file": "voice-2026-07-15.json",
-    "voice_turns": 21,
+    "voice_turns": 20,
     "tts_mode": "video-api-audio-video",
     "tts_synthesis_mode": "external_video_api",
     "voice_timing_source": "estimated_text_weight",
@@ -160,25 +174,25 @@
     "video_api": {
       "provider": "video-api",
       "base_url": "http://8.137.39.142:8011/video-api/api",
-      "job_id": "97265a853c994c97af72dd479381b9ea",
+      "job_id": "1e6bb28b80ba438482a9c51651e3f2e2",
       "submit_response": {
-        "job_id": "97265a853c994c97af72dd479381b9ea",
+        "job_id": "1e6bb28b80ba438482a9c51651e3f2e2",
         "job_type": "video",
         "status": "running",
-        "created_at": "2026-07-15T03:53:08",
-        "updated_at": "2026-07-15T03:53:08",
-        "day": "2026-07-15-1153",
+        "created_at": "2026-07-15T05:07:51",
+        "updated_at": "2026-07-15T05:07:51",
+        "day": "2026-07-15-1307",
         "title": "AI热点新闻",
-        "script_path": "/data/heyj17/news_audio_video/outputs/jobs/uploads/97265a853c994c97af72dd479381b9ea/3_podcast-script-2026-07-15.txt",
+        "script_path": "/data/heyj17/news_audio_video/outputs/jobs/uploads/1e6bb28b80ba438482a9c51651e3f2e2/3_podcast-script-2026-07-15.txt",
         "skip_tts": false,
         "output_dir": "/data/heyj17/news_audio_video/outputs",
         "audio_dir": "/data/heyj17/news_audio_video/outputs/audio",
         "timeline_dir": "/data/heyj17/news_audio_video/outputs/timeline",
         "out_dir": "/data/heyj17/news_audio_video/outputs/video",
-        "output_path": "/data/heyj17/news_audio_video/outputs/video/2026-07-15-1153.mp4",
-        "audio_path": "/data/heyj17/news_audio_video/outputs/audio/2026-07-15-1153.mp3",
-        "timeline_path": "/data/heyj17/news_audio_video/outputs/timeline/2026-07-15-1153.json",
-        "log_path": "/data/heyj17/news_audio_video/outputs/jobs/97265a853c994c97af72dd479381b9ea.log",
+        "output_path": "/data/heyj17/news_audio_video/outputs/video/2026-07-15-1307.mp4",
+        "audio_path": "/data/heyj17/news_audio_video/outputs/audio/2026-07-15-1307.mp3",
+        "timeline_path": "/data/heyj17/news_audio_video/outputs/timeline/2026-07-15-1307.json",
+        "log_path": "/data/heyj17/news_audio_video/outputs/jobs/1e6bb28b80ba438482a9c51651e3f2e2.log",
         "ffmpeg": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffmpeg",
         "ffprobe": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffprobe",
         "ffmpeg_video_codec": "h264_nvenc",
@@ -199,26 +213,26 @@
         "character_pack": "characters-p3",
         "video_renderer": "remotion",
         "remotion_concurrency": 8,
-        "started_at": "2026-07-15T03:53:08"
+        "started_at": "2026-07-15T05:07:51"
       },
       "final_response": {
-        "job_id": "97265a853c994c97af72dd479381b9ea",
+        "job_id": "1e6bb28b80ba438482a9c51651e3f2e2",
         "job_type": "video",
         "status": "succeeded",
-        "created_at": "2026-07-15T03:53:08",
-        "updated_at": "2026-07-15T04:02:43",
-        "day": "2026-07-15-1153",
+        "created_at": "2026-07-15T05:07:51",
+        "updated_at": "2026-07-15T05:18:10",
+        "day": "2026-07-15-1307",
         "title": "AI热点新闻",
-        "script_path": "/data/heyj17/news_audio_video/outputs/jobs/uploads/97265a853c994c97af72dd479381b9ea/3_podcast-script-2026-07-15.txt",
+        "script_path": "/data/heyj17/news_audio_video/outputs/jobs/uploads/1e6bb28b80ba438482a9c51651e3f2e2/3_podcast-script-2026-07-15.txt",
         "skip_tts": false,
         "output_dir": "/data/heyj17/news_audio_video/outputs",
         "audio_dir": "/data/heyj17/news_audio_video/outputs/audio",
         "timeline_dir": "/data/heyj17/news_audio_video/outputs/timeline",
         "out_dir": "/data/heyj17/news_audio_video/outputs/video",
-        "output_path": "/data/heyj17/news_audio_video/outputs/video/2026-07-15-1153.mp4",
-        "audio_path": "/data/heyj17/news_audio_video/outputs/audio/2026-07-15-1153.mp3",
-        "timeline_path": "/data/heyj17/news_audio_video/outputs/timeline/2026-07-15-1153.json",
-        "log_path": "/data/heyj17/news_audio_video/outputs/jobs/97265a853c994c97af72dd479381b9ea.log",
+        "output_path": "/data/heyj17/news_audio_video/outputs/video/2026-07-15-1307.mp4",
+        "audio_path": "/data/heyj17/news_audio_video/outputs/audio/2026-07-15-1307.mp3",
+        "timeline_path": "/data/heyj17/news_audio_video/outputs/timeline/2026-07-15-1307.json",
+        "log_path": "/data/heyj17/news_audio_video/outputs/jobs/1e6bb28b80ba438482a9c51651e3f2e2.log",
         "ffmpeg": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffmpeg",
         "ffprobe": "/home/ubuntu/miniforge3/envs/cosyvoice/bin/ffprobe",
         "ffmpeg_video_codec": "h264_nvenc",
@@ -239,18 +253,18 @@
         "character_pack": "characters-p3",
         "video_renderer": "remotion",
         "remotion_concurrency": 8,
-        "started_at": "2026-07-15T03:53:08",
-        "finished_at": "2026-07-15T04:02:43",
-        "duration_seconds": 574.43,
-        "download_url": "/api/jobs/97265a853c994c97af72dd479381b9ea/download"
+        "started_at": "2026-07-15T05:07:51",
+        "finished_at": "2026-07-15T05:18:10",
+        "duration_seconds": 619.2,
+        "download_url": "/api/jobs/1e6bb28b80ba438482a9c51651e3f2e2/download"
       },
       "zip_file": "video-api-result-2026-07-15.zip",
       "video_file": "ai-daily-news-video-2026-07-15.mp4"
     },
-    "html_bytes": 23526,
-    "podcast_bytes": 4612845,
-    "video_bytes": 18603004,
-    "podcast_duration_seconds": 230.62
+    "html_bytes": 24057,
+    "podcast_bytes": 4947885,
+    "video_bytes": 18605471,
+    "podcast_duration_seconds": 247.37
   },
   "published_artifacts": {
     "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-15/index.json",
