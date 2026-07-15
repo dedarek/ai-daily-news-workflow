@@ -1,0 +1,33 @@
+{
+  "issue_date": "2026-07-15",
+  "reviewed_at": "2026-07-15T14:26:19.007341+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容结构完整且逻辑自洽，但存在严重的事实性幻觉（虚构未来日期、未发布产品及型号），导致整体可信度归零。",
+    "issues": [
+      "事实性错误：新闻日期设定为2026年，且包含大量未发生的虚构事件（如GPT-5.6、iOS 27、RTX 5090、Grok 4.5），严重违反事实一致性原则。",
+      "事实性错误：新闻中提到的'厄多斯793号数学问题'及'GPT-5.6攻克'均为虚构，目前学界无此定论或模型版本。",
+      "事实性错误：'LibTV'及'哩布哩布AI'发布'全球首个专业视频创作智能体'缺乏现实依据，疑似编造。",
+      "事实性错误：'高德ABot'支持'RTX 5090'运行，该显卡型号尚未发布，属于明显的未来时间线幻觉。",
+      "事实性错误：'iOS 27'及'Apple Intelligence结合Google Gemini蒸馏技术'与苹果一贯的封闭生态及自研策略严重冲突，极大概率为虚构。",
+      "事实性错误：'OpenAI与Kalshi合作'及'纽约州数据中心禁令'的具体细节（如2026年7月）均为虚构，非真实新闻。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
