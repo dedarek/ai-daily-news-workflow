@@ -20,6 +20,7 @@ TMP = Path('/tmp')
 RECIPIENTS_FILE = SKILL_DIR / 'references' / 'recipients.json'
 SEND_EMAIL_CONFIG_FILE = SKILL_DIR / 'references' / 'send-email-config.json'
 DEFAULT_PUBLIC_BASE_URL = 'https://dedarek.github.io/ai-daily-news-workflow'
+DEFAULT_DAILY_SITE_URL = 'https://tokenless.top/daily'
 
 
 def parse_args() -> argparse.Namespace:
@@ -162,8 +163,15 @@ def public_video_url(date_str: str) -> str:
     return f'{base_url}/video/{date_str}.mp4'
 
 
+def public_daily_site_url() -> str:
+    return (
+        os.environ.get('AI_DAILY_NEW_SITE_PUBLIC_URL')
+        or DEFAULT_DAILY_SITE_URL
+    ).rstrip('/')
+
+
 def insert_after_summary(html_content: str, block: str) -> str:
-    if 'data-role="video-entry"' in html_content:
+    if 'data-role="daily-site-entry"' in html_content:
         return html_content
     marker = 'padding:22px 36px 18px;'
     start = html_content.find(marker)
@@ -176,21 +184,22 @@ def insert_after_summary(html_content: str, block: str) -> str:
     return html_content + block
 
 
-def append_video_link(html_content: str, date_str: str) -> str:
-    video_url = public_video_url(date_str)
+def append_daily_site_link(html_content: str) -> str:
+    site_url = public_daily_site_url()
     block = (
-        '<table data-role="video-entry" width="100%" cellpadding="0" cellspacing="0" '
-        'style="margin:16px 0 0;border:1px solid #bfdbfe;border-radius:12px;'
-        'overflow:hidden;background-color:#eff6ff;">'
-        '<tr><td style="padding:16px 18px;">'
-        '<p style="margin:0 0 12px;font-size:15px;font-weight:700;color:#1e3a8a;">'
-        '每日AI热点新闻播客</p>'
-        f'<a href="{video_url}" style="display:inline-block;background-color:#2563EB;'
-        'color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;'
-        'padding:8px 16px;border-radius:999px;">播放视频</a>'
-        '<p style="margin:10px 0 0;font-size:12px;line-height:1.6;color:#64748b;">'
-        'Outlook 用户如无法加载附件，可点击上方按钮跳转在线播放。'
-        '</p>'
+        '<table data-role="daily-site-entry" width="100%" cellpadding="0" cellspacing="0" '
+        'style="margin:18px 0 0;background-color:#eff6ff;border:1px solid #bfdbfe;'
+        'border-radius:6px;">'
+        '<tr><td style="padding:18px 20px;">'
+        '<p style="margin:0 0 7px;color:#1e3a8a;font-size:16px;font-weight:700;line-height:1.5;">'
+        '<span style="display:inline-block;margin-right:7px;padding:2px 7px;background-color:#2563eb;'
+        'color:#ffffff;font-size:10px;font-weight:700;line-height:1.5;border-radius:3px;'
+        'vertical-align:2px;">NEW</span>AI 日报网页版正式上线</p>'
+        '<p style="margin:0 0 14px;color:#475569;font-size:13px;line-height:1.7;">'
+        '图文、音频与视频内容现已同步更新，阅读更流畅，内容更完整。</p>'
+        f'<a href="{site_url}" style="display:inline-block;padding:9px 16px;background-color:#2563eb;'
+        'color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;line-height:1.5;'
+        'border-radius:5px;">立即体验网页版&nbsp;→</a>'
         '</td></tr></table>'
     )
     return insert_after_summary(html_content, block)
@@ -369,7 +378,7 @@ def main() -> int:
     media_path = mp3_path
     media_kind = 'audio'
     if mp4_path is not None:
-        html_content = append_video_link(html_content, args.date)
+        html_content = append_daily_site_link(html_content)
         video_limit = email_video_attachment_limit_bytes()
         mp4_size = mp4_path.stat().st_size
         if env_truthy('AI_DAILY_EMAIL_ATTACH_VIDEO', True) and mp4_size <= video_limit:
