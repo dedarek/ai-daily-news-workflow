@@ -131,7 +131,6 @@ function weekday(date) {
 }
 
 const KNOWN_CATEGORY_LABELS = new Set([
-  "今日焦点",
   "焦点",
   "产品发布",
   "行业动态",
@@ -142,10 +141,27 @@ const KNOWN_CATEGORY_LABELS = new Set([
   "商业融资",
 ]);
 
+const CATEGORY_EMOJI = {
+  "焦点": "🔥",
+  "产品发布": "🚀",
+  "行业动态": "💼",
+  "前沿研究": "💡",
+  "开源热榜": "🔓",
+  "Agent & 工具": "🤖",
+  "Agent&工具": "🤖",
+  "商业融资": "💰",
+};
+
 function normalizeCategoryLabel(value) {
   const label = String(value || "").replace(/^[🔥🚀💼💡🔓🤖💰]\s*/u, "").trim();
   if (!label) return "焦点";
-  return label === "焦点" ? "今日焦点" : label;
+  return label === "今日焦点" ? "焦点" : label;
+}
+
+function categoryTextHeading(category) {
+  const label = normalizeCategoryLabel(category);
+  const emoji = CATEGORY_EMOJI[label] || "🔥";
+  return `${emoji} ${label}`;
 }
 
 function categoryHeading(line) {
@@ -190,7 +206,7 @@ function renderNewsText(date, articles, summary) {
     if (!title) continue;
     const category = categoryLabel(article);
     if (category !== currentCategory) {
-      lines.push(category);
+      lines.push(categoryTextHeading(category));
       lines.push("");
       currentCategory = category;
     }

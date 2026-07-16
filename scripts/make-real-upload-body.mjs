@@ -85,7 +85,6 @@ async function readMedia(file) {
 }
 
 const KNOWN_CATEGORY_LABELS = new Set([
-  "今日焦点",
   "焦点",
   "产品发布",
   "行业动态",
@@ -99,7 +98,7 @@ const KNOWN_CATEGORY_LABELS = new Set([
 function normalizeCategoryLabel(value) {
   const label = String(value || "").replace(/^[🔥🚀💼💡🔓🤖💰]\s*/u, "").trim();
   if (!label) return "焦点";
-  return label === "焦点" ? "今日焦点" : label;
+  return label === "今日焦点" ? "焦点" : label;
 }
 
 function categoryHeading(line) {
