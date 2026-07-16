@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-07-16",
+  "reviewed_at": "2026-07-16T14:40:02.974963+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 96,
+    "summary": "日报内容结构严谨，新闻与锐评逻辑自洽，播客对话自然流畅且观点深入，仅存在极轻微的措辞冗余。",
+    "issues": [
+      "播客对话中部分转折词（如‘确实’、‘没错’）略显重复，可进一步精简以提升节奏感。",
+      "新闻条目中关于‘iPhone 17 Pro Max’的表述基于未来假设（当前为2024年），虽符合日报设定的2026年语境，但需确保受众理解这是基于新闻原文的引用而非事实性错误。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
