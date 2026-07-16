@@ -344,18 +344,33 @@ async function main() {
     return;
   }
 
-  const response = await fetch(uploadUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key-id": envelope.apiKeyId,
-      "x-timestamp": envelope.ts,
-      "x-nonce": envelope.nonce,
-      "x-signature": envelope.signature,
-      "User-Agent": "ai-daily-news-workflow/1.0",
-    },
-    body: envelope.body,
-  });
+  let response;
+  try {
+    response = await fetch(uploadUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key-id": envelope.apiKeyId,
+        "x-timestamp": envelope.ts,
+        "x-nonce": envelope.nonce,
+        "x-signature": envelope.signature,
+        "User-Agent": "ai-daily-news-workflow/1.0",
+      },
+      body: envelope.body,
+    });
+  } catch (error) {
+    console.error(JSON.stringify({
+      upload_url: uploadUrl,
+      request_bytes: envelope.requestBytes,
+      payload_bytes: envelope.plainBytes,
+      error_name: error.name,
+      error_message: error.message,
+      cause_name: error.cause?.name,
+      cause_code: error.cause?.code,
+      cause_message: error.cause?.message,
+    }, null, 2));
+    throw error;
+  }
   const text = await response.text();
   let body;
   try {
