@@ -22,6 +22,19 @@ function parseArgs() {
   return args;
 }
 
+function envFalse(value) {
+  return ["0", "false", "no", "off"].includes(String(value || "").trim().toLowerCase());
+}
+
+function maxRequestBytes(args) {
+  const raw = args["max-request-bytes"] || process.env.AI_DAILY_NEW_SITE_MAX_REQUEST_BYTES || "67108864";
+  const parsed = Number.parseInt(raw, 10);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    throw new Error(`Invalid max request bytes: ${raw}`);
+  }
+  return parsed;
+}
+
 function requireDate(date) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) {
     throw new Error("--date is required and must be YYYY-MM-DD");
@@ -82,6 +95,30 @@ function encrypt(plain, key) {
 
 function hmacSign(data, key) {
   return createHmac("sha256", key).update(data).digest("hex");
+}
+
+function buildUploadEnvelope(payload, apiKey) {
+  const plain = Buffer.from(JSON.stringify(payload), "utf8");
+  if (plain.length > 45 * 1024 * 1024) {
+    throw new Error(`payload too large: ${plain.length} bytes > 45MB`);
+  }
+
+  const { apiKeyId, encKey, macKey } = buildKeys(apiKey);
+  const { iv, tag, ct } = encrypt(plain, encKey);
+  const ts = Date.now().toString();
+  const nonce = randomBytes(16).toString("hex");
+  const signaturePayload = `${apiKeyId}|${ts}|${nonce}|${iv.toString("base64")}|${ct.toString("base64")}|${tag.toString("base64")}`;
+  const signature = hmacSign(signaturePayload, macKey);
+  const body = JSON.stringify({
+    v: 1,
+    apiKeyId,
+    ts,
+    nonce,
+    iv: iv.toString("base64"),
+    tag: tag.toString("base64"),
+    ct: ct.toString("base64"),
+  });
+  return { apiKeyId, ts, nonce, signature, body, plainBytes: plain.length, requestBytes: Buffer.byteLength(body) };
 }
 
 function displayDate(date) {
@@ -222,7 +259,7 @@ async function main() {
   const date = args.date;
   requireDate(date);
 
-  const endpoint = (args.endpoint || process.env.AI_DAILY_NEW_SITE_ENDPOINT || "https://tokenless.top/daily").replace(/\/$/, "");
+  const endpoint = (args.endpoint || process.env.AI_DAILY_NEW_SITE_ENDPOINT || "http://47.108.192.42:4000/daily").replace(/\/$/, "");
   const apiKey = args["api-key"] || process.env.AI_DAILY_NEW_SITE_API_KEY;
   if (!apiKey) throw new Error("AI_DAILY_NEW_SITE_API_KEY is required");
 
@@ -264,8 +301,9 @@ async function main() {
   const raw = await fs.readFile(textPath, "utf8");
   const parsed = parseNewsText(raw);
   const audio = await readMedia(audioPath);
-  const video = await readMedia(videoPath);
-  const payload = {
+  const uploadVideo = !envFalse(args["upload-video"] || process.env.AI_DAILY_NEW_SITE_UPLOAD_VIDEO || "true");
+  const video = uploadVideo ? await readMedia(videoPath) : null;
+  let payload = {
     date,
     title: args.title || `AI 晚报：${date} 行业要闻速览`,
     intro: parsed.intro,
@@ -275,17 +313,19 @@ async function main() {
     video,
     items: parsed.items,
   };
-  const plain = Buffer.from(JSON.stringify(payload), "utf8");
-  if (plain.length > 45 * 1024 * 1024) {
-    throw new Error(`payload too large: ${plain.length} bytes > 45MB`);
-  }
 
-  const { apiKeyId, encKey, macKey } = buildKeys(apiKey);
-  const { iv, tag, ct } = encrypt(plain, encKey);
-  const ts = Date.now().toString();
-  const nonce = randomBytes(16).toString("hex");
-  const signaturePayload = `${apiKeyId}|${ts}|${nonce}|${iv.toString("base64")}|${ct.toString("base64")}|${tag.toString("base64")}`;
-  const signature = hmacSign(signaturePayload, macKey);
+  const requestLimit = maxRequestBytes(args);
+  let envelope = buildUploadEnvelope(payload, apiKey);
+  if (video && envelope.requestBytes > requestLimit) {
+    console.warn(
+      `UPLOAD_VIDEO_SKIPPED reason=request_too_large request_bytes=${envelope.requestBytes} limit=${requestLimit} video_bytes=${video.bytes}`,
+    );
+    payload = { ...payload, video: null };
+    envelope = buildUploadEnvelope(payload, apiKey);
+  }
+  if (envelope.requestBytes > requestLimit) {
+    throw new Error(`upload request too large: ${envelope.requestBytes} bytes > ${requestLimit} bytes`);
+  }
   const uploadUrl = `${endpoint}/api/upload`;
 
   console.log(JSON.stringify({
@@ -294,8 +334,9 @@ async function main() {
     text: textPath,
     items: parsed.items.length,
     audio_bytes: audio.bytes,
-    video_bytes: video.bytes,
-    payload_bytes: plain.length,
+    video_bytes: payload.video ? payload.video.bytes : 0,
+    payload_bytes: envelope.plainBytes,
+    request_bytes: envelope.requestBytes,
   }, null, 2));
 
   if (args["dry-run"] === "true") {
@@ -307,21 +348,13 @@ async function main() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key-id": apiKeyId,
-      "x-timestamp": ts,
-      "x-nonce": nonce,
-      "x-signature": signature,
+      "x-api-key-id": envelope.apiKeyId,
+      "x-timestamp": envelope.ts,
+      "x-nonce": envelope.nonce,
+      "x-signature": envelope.signature,
       "User-Agent": "ai-daily-news-workflow/1.0",
     },
-    body: JSON.stringify({
-      v: 1,
-      apiKeyId,
-      ts,
-      nonce,
-      iv: iv.toString("base64"),
-      tag: tag.toString("base64"),
-      ct: ct.toString("base64"),
-    }),
+    body: envelope.body,
   });
   const text = await response.text();
   let body;

@@ -93,11 +93,13 @@ Morning workflow 会在发布 GitHub Pages 后，由独立 job 把日报正文�
 | 配置 | 类型 | 说明 |
 |------|------|------|
 | `AI_DAILY_NEW_SITE_API_KEY` | GitHub Secret | 新网站上传 API Key |
-| `AI_DAILY_NEW_SITE_ENDPOINT` | GitHub Variable | 新网站 endpoint，默认 `https://tokenless.top/daily` |
+| `AI_DAILY_NEW_SITE_ENDPOINT` | GitHub Variable | 新网站 endpoint，默认 `http://47.108.192.42:4000/daily` |
 
 实际上传 URL 为：`{AI_DAILY_NEW_SITE_ENDPOINT}/api/upload`。脚本会从
 `articles-YYYY-MM-DD.json` 自动生成 `daily-news-text-YYYY-MM-DD.txt`，并连同
 `daily-news-podcast-YYYY-MM-DD.mp3`、`daily-news-video-YYYY-MM-DD.mp4` 一起加密上传。
+如果加密后的请求体超过 `AI_DAILY_NEW_SITE_MAX_REQUEST_BYTES`（默认 64 MiB），脚本会自动跳过视频嵌入，
+只上传正文和音频，避免 nginx `413 Request Entity Too Large`；视频文件仍保留在 GitHub Pages `/video/YYYY-MM-DD.mp4`。
 
 日报默认只采集 `issue_date` 当天源页。若当天源页不可用，流水线会失败并等待重跑，
 不会自动回退使用前一天内容。仅在显式回填或调试时可设置

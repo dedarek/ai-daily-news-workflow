@@ -268,7 +268,7 @@ jobs:
         id: upload_new_site
         env:
           AI_DAILY_NEW_SITE_API_KEY: ${{ secrets.AI_DAILY_NEW_SITE_API_KEY }}
-          AI_DAILY_NEW_SITE_ENDPOINT: ${{ vars.AI_DAILY_NEW_SITE_ENDPOINT || 'https://tokenless.top/daily' }}
+          AI_DAILY_NEW_SITE_ENDPOINT: ${{ vars.AI_DAILY_NEW_SITE_ENDPOINT || 'http://47.108.192.42:4000/daily' }}
         run: |
           DATE="${{ needs.build-validate-send.outputs.issue_date }}"
           test -n "$AI_DAILY_NEW_SITE_API_KEY" || { echo "::error::Missing GitHub Actions secret AI_DAILY_NEW_SITE_API_KEY"; exit 1; }
