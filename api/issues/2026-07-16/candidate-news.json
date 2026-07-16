@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Thinking Machines发布大模型Inkling",
+    "summary": "前谷歌研究员创立的公司推出新模型。大家可在模型主页查看详情。这款975B参数🧠模型激活了41B。它是首个支持多模态的开源模型。用户可在Tinker平台🔧定制微调。",
+    "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Bonsai 27B模型实现手机端侧运行",
+    "summary": "PrismML成功将27B大模型压到4GB内。这一成果实现了在📱iPhone本地流畅运行。其在数学和代码测试中仍保留九成性能。苹果据称正测试端侧大模型。该技术将极大 ヾ(≧▽≦*)o 补强端侧体验。",
+    "url": "https://the-decoder.com/bonsai-27b-is-a-full-open-reasoning-model-that-fits-on-an-iphone/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI联合发布智能体小键盘",
+    "summary": "官方推出首款面向开发者的控制硬件。这一键盘专为管理Codex智能体设计。它的旋钮可以调节💻推理等级。我们能用按键联动进行调试 and 代码重构。点击智能体开发动态查看详情。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/965901/openai-hardware-codex-micro-launch",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Code正式接入连接器",
+    "summary": "开发工具现已支持直接调用MCP连接器。这一更新允许根据用户需求📡实时抓取信息。开发者可以用它搭建个性化仪表盘 and 应用。该功能目前已面向Pro和企业计划开放。欢迎查阅官方发布详情了解玩法。",
+    "url": "https://x.com/bcherny/status/2077519049148260526",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "xAI宣布开源Grok Build开发框架",
+    "summary": "马斯克旗下的AI公司正式开源了开发框架。开发者现在可以免费下载🔧命令行工具。社区成员能共同参与打造更稳定的测试套件. 官方同时为所有用户重置了额度用量。详细说明请点击开源页面详情查看。",
+    "url": "https://x.ai/open-source",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI利用红队模型实现自我防御",
+    "summary": "团队开发了GPT-Red🛡️自动寻找漏洞。新模型在测试中取得了高达84%的破防率。相比之下人类安全员的成功率则要低得多。对抗训练的数据将被直接用于加固新版模型。大家可阅读安全审计报告获取安全详情。",
+    "url": "https://the-decoder.com/openai-is-now-using-ai-to-attack-its-own-ai-and-its-working-better-than-humans-ever-did/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Elorian AI主张直接使用图像思考",
+    "summary": "前谷歌研究员创办的公司获五千万美元融资。他们认为现有的语言模型存在结构缺陷。未来系统应该🧠直接以图像而非文本进行推理。这样可以有效避免转换过程中的核心信息损耗。点击阅读视觉推理观点了解路线图。",
+    "url": "https://technews.tw/2026/07/15/elorian-ai-argues-future-ai-should-think-in-images/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MonkeyOCRv2大幅提升文档解析表现",
+    "summary": "团队用一亿张图像训练了全新多模态底座📄。该模型支持多达十七种不同语言的文档解析。他们通过文档模型论文公开了预训练方案。较小的参数成功击败了主流的同类闭源系统。这有助于实现高效且高精度的文字表格电子化。",
+    "url": "https://arxiv.org/abs/2607.11562",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AMID多智能体框架重塑医学影像建模",
+    "summary": "团队推出一套用于医学影像的智能体系统🧭。它能够通过数据分析自动规划网络架构 and 参数。特有的两阶段优化机制对实验过程进行严密验证。其成果在二十项专业任务中接近了人类表现。点击查阅医学影像建模获取详细系统架构。",
+    "url": "https://arxiv.org/abs/2607.10522",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SpectraReward将文生图提示词还原为奖励",
+    "summary": "新方案在强化学习算法网页中正式发表。系统评估生成图像对原始描述的图文似然🧭。它不再需要昂贵的人工标注和偏好微调流程。自奖励机制更是能够让模型⚙️实现完全自对齐。实验在多项生成基准上验证了其稳定提升成效。",
+    "url": "https://arxiv.org/abs/2607.11886",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Suno音乐大模型数据集来源遭黑客曝光",
+    "summary": "泄露的黑客资料揭示了该系统的训练歌库🎧。其中包含各大音频平台数百万首歌曲 and 歌词。这一披露数据为当前的版权诉讼提供关键证据。行业协会将围绕合理使用展开严厉审判。原文引自音乐版权争议报道的最新披露。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "xAI起诉利用Grok生成违规图像的用户",
+    "summary": "诉状指控被告绕过安全防护来制作违禁图像。该男子目前正面临八项重罪的刑事起诉。这一案件强调了防范安全绕过🛡️的急迫性。官方强调将追究恶意利用模型产生的法律责任。大家可查阅生成模型法规热评来获取详情。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic联手私募巨头推出Ode",
+    "summary": "新成立的服务公司估值已达十五亿美元🧩。实体重点协助大企业部署大模型及解决方案。合作旨在加速传统行业的自动化升级步伐。庞大的资本规模有望撬动商业AI的竞争格局。欢迎阅读企业服务商市场分析了解更多。",
+    "url": "https://aiweekly.co/alerts/anthropic-blackstone-launch-15b-ode-enterprise-services-firm",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "苹果智能服务正式获批入华",
+    "summary": "苹果的AI system已通过我国监管部门审批。该系统将与阿里巴巴的通义千问合作。本地化助手将支持文本及图像生成功能。官方承诺会严格保障用户🔐数据隐私。大家可查阅苹果中国业务获批相关报道。",
+    "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软AI安全补丁数量打破纪录",
+    "summary": "微软利用AI模型🔍揪出大量潜在系统缺陷。此次补丁共修复了五百余项产品漏洞。Windows和Office等主力软件均获防护。零日风险警告促使企业用户尽快更新。想要了解更多请点击微软补丁报道。",
+    "url": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
