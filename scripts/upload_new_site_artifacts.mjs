@@ -130,8 +130,35 @@ function weekday(date) {
   return ["周日", "周一", "周二", "周三", "周四", "周五", "周六"][new Date(`${date}T00:00:00+08:00`).getDay()];
 }
 
+const KNOWN_CATEGORY_LABELS = new Set([
+  "今日焦点",
+  "焦点",
+  "产品发布",
+  "行业动态",
+  "前沿研究",
+  "开源热榜",
+  "Agent & 工具",
+  "Agent&工具",
+  "商业融资",
+]);
+
+function normalizeCategoryLabel(value) {
+  const label = String(value || "").replace(/^[🔥🚀💼💡🔓🤖💰]\s*/u, "").trim();
+  if (!label) return "焦点";
+  return label === "焦点" ? "今日焦点" : label;
+}
+
+function categoryHeading(line) {
+  const trimmed = line.trim();
+  const emojiMatch = trimmed.match(/^([🔥🚀💼💡🔓🤖💰])\s*(.*)$/u);
+  if (emojiMatch) {
+    return normalizeCategoryLabel(emojiMatch[2] || "焦点");
+  }
+  return KNOWN_CATEGORY_LABELS.has(trimmed) ? normalizeCategoryLabel(trimmed) : null;
+}
+
 function categoryLabel(article) {
-  return article.category || article.section || article.topic || "焦点";
+  return normalizeCategoryLabel(article.category || article.section || article.topic || "焦点");
 }
 
 function articleTitle(article) {
@@ -157,11 +184,16 @@ function renderNewsText(date, articles, summary) {
     lines.push(intro);
     lines.push("");
   }
-  lines.push("今日焦点");
-  lines.push("");
+  let currentCategory = "";
   for (const article of articles) {
     const title = articleTitle(article);
     if (!title) continue;
+    const category = categoryLabel(article);
+    if (category !== currentCategory) {
+      lines.push(category);
+      lines.push("");
+      currentCategory = category;
+    }
     lines.push(title);
     const body = articleBody(article);
     if (body) lines.push(body);
@@ -171,7 +203,7 @@ function renderNewsText(date, articles, summary) {
     if (url) lines.push(`🔗 ${url}`);
     lines.push("");
   }
-  if (lines.length <= 3) {
+  if (!currentCategory) {
     throw new Error(`No uploadable article text rendered for ${date}`);
   }
   return `${lines.join("\n").trim()}\n`;
@@ -208,9 +240,10 @@ function parseNewsText(raw) {
       collectingComment = false;
       continue;
     }
-    if (/^[🔥🚀💼💡🔓🤖💰]/u.test(line) || /^今日/.test(line)) {
+    const heading = categoryHeading(line);
+    if (heading) {
       flush();
-      activeCategory = line.replace(/^[🔥🚀💼💡🔓🤖💰]\s*/u, "").trim() || activeCategory;
+      activeCategory = heading;
       current = null;
       comment = "";
       collectingComment = false;
