@@ -1,0 +1,161 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-07-17",
+  "content_date": "2026-07-17",
+  "source_url": "https://hex2077.dev/docs/2026-07/2026-07-17/",
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 15,
+  "candidate_data_file": "candidate-news-2026-07-17.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 9,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话共21轮，符合18-22轮的建议范围，但S2在结尾处的总结（第20轮）与S1的收尾（第21轮）略显仓促，且S2在第19轮将富士通新闻作为S1观点的补充，导致新闻覆盖逻辑稍显混乱，建议重新梳理新闻承接顺序。",
+              "信息密度不均：S1在第1轮和第20轮发言过长（接近或超过95字上限风险），尤其是第1轮包含过多背景描述，建议拆分或精简以符合口播节奏（35-95字）。",
+              "新闻覆盖遗漏：对话中未明确提及“矩阵分解技术助力压缩”这一条重要新闻，导致5-7条新闻的覆盖不完整，需补充该条目的讨论。",
+              "结构衔接生硬：S2在第19轮突然引入富士通新闻作为对S1关于“伦理标准”观点的补充，逻辑跳跃较大，缺乏自然的过渡句，建议调整新闻顺序或增加承接语。"
+            ],
+            "repair_instruction": "1. 补充‘矩阵分解技术’相关讨论：在S2第14轮（JEPA理论）之后或S1第15轮之前，插入关于三值矩阵量化算法的简短对话，强调其在显存与精度间的平衡。2. 调整富士通新闻位置：将富士通新闻移至S2第18轮（全球治理）之后，作为‘产业落地’的独立案例，避免与‘伦理标准’强行捆绑，增加过渡句如‘除了治理，产业端的物理AI也在加速’。3. 精简S1第1轮发言：删除‘这算是把开源的天花板又捅破了一层’等修饰性长句，保留核心事实（2.8万亿参数、开放模型），控制在60字以内。4. 优化结尾：S2第20轮总结应更具体地呼应新增的矩阵分解新闻，避免泛泛而谈。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "轮次为22轮，处于建议的18-22轮区间上限，内容密度较高，需确保口播节奏紧凑。",
+              "部分段落（如S1关于SPINE框架和S2关于四足机器人的发言）信息密度较大，若语速过快可能影响听众理解，建议适当拆分或增加语气停顿提示。",
+              "S1在引入Codex Dream Skin时转折稍显生硬（“相比之下”），可优化为更自然的对比逻辑，例如强调“开源社区在个性化方面的灵活尝试”。"
+            ],
+            "repair_instruction": "1. 将S1关于SPINE框架的发言拆分为两句，中间加入‘不过’等连接词，降低单句信息密度。2. 修改S1引入Codex Dream Skin的过渡句，将‘相比之下’改为‘而在开源社区，开发者们则尝试通过...’，使话题转换更自然。3. 检查S2关于四足机器人的发言，若语速较快，建议在‘强化学习潜力巨大’后增加短暂停顿标记，以增强节奏感。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 2,
+        "best_attempt": 2,
+        "final_pass": true,
+        "final_issues": [
+          "轮次为22轮，处于建议的18-22轮区间上限，内容密度较高，需确保口播节奏紧凑。",
+          "部分段落（如S1关于SPINE框架和S2关于四足机器人的发言）信息密度较大，若语速过快可能影响听众理解，建议适当拆分或增加语气停顿提示。",
+          "S1在引入Codex Dream Skin时转折稍显生硬（“相比之下”），可优化为更自然的对比逻辑，例如强调“开源社区在个性化方面的灵活尝试”。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今日新闻显示AI正从单纯对话转向复杂任务执行与物理世界交互。月之暗面、谷歌及具身智能研究分别推动模型规模、应用联动与机器人自主能力，同时安全隔离与成本压缩技术同步跟进。行业重心已移至解决落地中的安全、效率及跨域协同难题，商业化进程加速但面临部署挑战。",
+  "podcast_turns": 22,
+  "podcast_script_file": "podcast-script-2026-07-17.json",
+  "podcast_script_text_file": "podcast-script-2026-07-17.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-07-17.txt",
+  "voice_file": "voice-2026-07-17.json",
+  "voice_turns": 22,
+  "tts_mode": "video-api-audio-video",
+  "tts_synthesis_mode": "external_video_api",
+  "voice_timing_source": "estimated_text_weight",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_leading_silence_seconds": 0,
+  "tts_reference_files": null,
+  "video_api": {
+    "provider": "video-api",
+    "base_url": "http://8.137.39.142:8011/video-api/api",
+    "job_id": "e6e8d685-dc43-44fd-add1-e1fceeb0f7a2",
+    "submit_response": {
+      "job_id": "e6e8d685-dc43-44fd-add1-e1fceeb0f7a2",
+      "job_type": "video",
+      "status": "queued",
+      "created_at": "2026-07-17T06:26:22.689Z",
+      "updated_at": "2026-07-17T06:26:22.689Z",
+      "started_at": null,
+      "finished_at": null,
+      "day": "2026-07-17-1426",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": null,
+      "download_url": null,
+      "error": null
+    },
+    "final_response": {
+      "job_id": "e6e8d685-dc43-44fd-add1-e1fceeb0f7a2",
+      "job_type": "video",
+      "status": "succeeded",
+      "created_at": "2026-07-17T06:26:22.689Z",
+      "updated_at": "2026-07-17T06:39:14.584Z",
+      "started_at": "2026-07-17T06:32:07.817Z",
+      "finished_at": "2026-07-17T06:39:14.584Z",
+      "day": "2026-07-17-1426",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": 426.77,
+      "download_url": "/api/jobs/e6e8d685-dc43-44fd-add1-e1fceeb0f7a2/download",
+      "error": null
+    },
+    "zip_file": "video-api-result-2026-07-17.zip",
+    "video_file": "ai-daily-news-video-2026-07-17.mp4"
+  },
+  "html_bytes": 24608,
+  "podcast_bytes": 5351565,
+  "video_bytes": 19452187,
+  "podcast_duration_seconds": 267.55
+}

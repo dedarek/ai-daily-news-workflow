@@ -1,0 +1,137 @@
+[
+  {
+    "title": "月之暗面发布Kimi K3",
+    "summary": "它以2.8T参数冲刺开放MoE。原生视觉⚡接入百万上下文。KDA称可让长文解码提速6.3倍。开发者可从月之暗面技术发布博客试用🧪API。",
+    "url": "https://www.kimi.com/blog/kimi-k3",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "1Password 安全凭证隔离方案上线",
+    "summary": "密码管理工具发布安全加固方案。代理安全登录凭证方案保障了密码隔离.智能代理 🔐 能够在后台代为执行登录。验证码信息 (^_^) 完全不会传输给模型。新功能现已向各类用户端全面开放。",
+    "url": "https://bit.ly/4bLP5EJ",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能助手打通跨界壁垒",
+    "summary": "谷歌智能助手打通了应用跨界壁垒。应用互联更新官方公告展示了新体验。购物助手 🛒 能够自动将商品放购物车。首批推送 (´･ω･`) 目前已在北美展开。系统的自动化调度正走向实用阶段。",
+    "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Codex皮肤玩法走红",
+    "summary": "原帖称🎨提示词即可换肤。项目见开源皮肤设计项目仓库。Imagen内置生成新界面。QQ皮肤梗😂又被翻新。热帖由相关社媒原文链接传播。",
+    "url": "https://github.com/Fei-Away/Codex-Dream-Skin",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "排障框架打破校准限制",
+    "summary": "专家校准限制了具身智能部署。排障调试论文（AI资讯）提出方案。智能体调试框架 🦾 降低操作门槛.新手测试 (´ω｀*) 调通率成功升至百点。系统在不同双臂机器人上表现稳定。",
+    "url": "https://arxiv.org/abs/2607.13049",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "科学家成功重释世界模型",
+    "summary": "科学家成功重释了世界模型目标。自由能世界模型论文原文推导了公式。正则化工具 ⚙️ 让熵缺口成功归零。核心代数定理 (^_^) 已通过软件验证。主动推断理论获得新的数学支撑。",
+    "url": "https://arxiv.org/abs/2607.13612",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "遥感路径规划迎来新基准",
+    "summary": "遥感领域迎来全新路径规划基准。神经符号路径规划基准包含万余样本。自动生成框架 📡 提供最优解参考.评估过程 (o^▽^o) 覆盖多个评测维度。测试结果显示主流大模型仍有欠缺。",
+    "url": "https://arxiv.org/abs/2603.16307",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "四足机器人实现野外疾行",
+    "summary": "四足机器人实现了复杂地形疾行。越野步态控制研究论文采用单策略.车载感知 🦾 能够适应野生环境。真机测试 (★^O^★) 最高速度达六米。楼梯与乱石等障碍物均轻松越过。",
+    "url": "https://arxiv.org/abs/2607.13579",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "矩阵分解技术助力压缩",
+    "summary": "矩阵分解技术助力模型压缩研究。三值矩阵量化技术说明公开了算法.内秩调整 📈 可以无限逼近高精度。转换后的 (＾▽＾) 困惑度表现优秀.小幅增加显存换来更高精度的控制。",
+    "url": "https://arxiv.org/pdf/2607.13511",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "奈飞披露生成式技术数据",
+    "summary": "奈飞在最新财报中披露数据。约三百部影视作品已使用技术。团队在 奈飞流媒体智能制作 探索后期。复杂战争场景 🎬 实现快速生成。制作成本和制作周期 o(≧▽≦)o 大幅缩减。",
+    "url": "https://www.theverge.com/streaming/966633/netflix-ai-titles-q2-2026-earnings",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中国大模型曝光新估值",
+    "summary": "监管文件曝光中国大模型新估值。路透社估值报道完整详情引来关注。公司凭借 📈 低成本模型获得追捧。投资机构 (≧∇≦) 通过大额注资持股。估值大涨进一步推动了其上市预期。",
+    "url": "https://www.reuters.com/world/asia-pacific/chinese-filing-implies-deepseek-valuation-around-52-billion-2026-07-16/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多国协议成立协作机构",
+    "summary": "多国签署协议成立全球协作机构.官方在 全球智能协定官方报道 披露细节。合作体 🔗 旨在推动技术安全共享.伦理标准 (^_^) 将深刻影响竞赛。组织总部未来计划落户在上海地区。",
+    "url": "https://www.reuters.com/world/china/twenty-nine-countries-sign-agreement-establish-global-ai-cooperation-body-2026-07-16/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "工业巨头联合推进物理AI",
+    "summary": "工业巨头联合推进物理智能实施.富士通在 物理智能进展官方公告 宣布合作.团队 ⚙️ 将引入英伟达的最新技术。协同控制 (´• ω •`) 系统面向工业.日本机器人生态的落地速度将加快。",
+    "url": "https://global.fujitsu/ja-jp/pr/news/2026/07/16-01",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国内外主流厂商开启抢客",
+    "summary": "国内外主流厂商开启用户争夺大战。行业观察在 厂商流量竞争观察原贴 引起热议。补贴 💸 以及额度送出额创新纪录。如此密集的 (・∀贴) 抢客行为很罕见。流量入口的争夺战已经进入白热化。",
+    "url": "https://x.com/_FORAB/status/2077622119807201686",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "视频生成技术颠覆成人产业",
+    "summary": "视频生成技术将率先颠覆成人产业。生成成人视频行业探讨发表了看法。无题材限制 🔥 激发了创作者想象。现实中 (๑•̀ㅂ•́) 难拍画面能低价做.新商业模式或将彻底改变内容生态。",
+    "url": "https://x.com/wolfyxbt/status/2077604140147232985",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
