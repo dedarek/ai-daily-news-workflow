@@ -380,6 +380,7 @@ async function main() {
   console.log(JSON.stringify({
     upload_url: uploadUrl,
     date,
+    api_key_id: envelope.apiKeyId,
     text: textPath,
     items: parsed.items.length,
     audio_bytes: audio.bytes,
@@ -437,3 +438,4 @@ main().catch((error) => {
   console.error(`UPLOAD_NEW_SITE_FAILED: ${error.message}`);
   process.exit(1);
 });
+
