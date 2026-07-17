@@ -1,0 +1,28 @@
+{
+  "issue_date": "2026-07-17",
+  "reviewed_at": "2026-07-17T16:07:20.762999+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容结构完整，新闻、锐评与播客对话逻辑自洽，覆盖了从模型发布到产业落地的关键动态，但在部分事实表述的严谨性上略有瑕疵。",
+    "issues": [
+      "Kimi K3 新闻中提及'完整权重预计于2026年7月27日发布'，对于一款刚发布的模型而言，具体到日的权重发布时间点显得过于绝对且缺乏来源支撑，存在事实存疑风险。",
+      "播客对话中关于'29国协议总部设在上海'的表述，虽源自输入文本，但在现实地缘政治背景下属于高度敏感且极可能为虚构或误读的信息，建议核实来源真实性。",
+      "播客对话中'Codex Dream Skin'项目描述略显简略，未充分展开其'桥本有菜'主题可能涉及的成人内容合规风险，作为AI日报应更强调合规警示。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
