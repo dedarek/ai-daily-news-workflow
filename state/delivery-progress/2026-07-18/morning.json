@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-18",
+  "phase": "morning",
+  "audience": "admins",
+  "sent": {
+    "yyc54321@126.com": {
+      "recipient": "yyc54321@126.com",
+      "sent_at": "2026-07-18T04:45:42.340338+00:00"
+    },
+    "heyj17@lenovo.com": {
+      "recipient": "heyj17@lenovo.com",
+      "sent_at": "2026-07-18T04:45:42.340338+00:00"
+    }
+  },
+  "failed": {}
+}
