@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-07-17",
-  "content_date": "2026-07-17",
-  "published_at": "2026-07-17T06:40:21.946716+00:00",
+  "issue_date": "2026-07-18",
+  "content_date": "2026-07-18",
+  "published_at": "2026-07-18T04:45:29.023230+00:00",
   "article_count": 12,
-  "podcast_turns": 22,
+  "podcast_turns": 21,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -17,7 +17,7 @@
       "z-ai/glm-5.2"
     ],
     "endpoint": "https://integrate.api.nvidia.com/v1",
-    "calls": 9,
+    "calls": 13,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -42,79 +42,51 @@
         "usage": {}
       },
       "podcast": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
         "usage": {}
       },
       "podcast_review": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
         "usage": {}
       },
       "podcast_attempts": [
         {
           "attempt": 1,
           "generation": {
-            "model": "lenovo:qwen35-122b-a10b-fp8",
-            "usage": {}
-          },
-          "structure_issues": [],
-          "review": {
-            "pass": false,
-            "issues": [
-              "轮次数量不足：当前对话共21轮，符合18-22轮的建议范围，但S2在结尾处的总结（第20轮）与S1的收尾（第21轮）略显仓促，且S2在第19轮将富士通新闻作为S1观点的补充，导致新闻覆盖逻辑稍显混乱，建议重新梳理新闻承接顺序。",
-              "信息密度不均：S1在第1轮和第20轮发言过长（接近或超过95字上限风险），尤其是第1轮包含过多背景描述，建议拆分或精简以符合口播节奏（35-95字）。",
-              "新闻覆盖遗漏：对话中未明确提及“矩阵分解技术助力压缩”这一条重要新闻，导致5-7条新闻的覆盖不完整，需补充该条目的讨论。",
-              "结构衔接生硬：S2在第19轮突然引入富士通新闻作为对S1关于“伦理标准”观点的补充，逻辑跳跃较大，缺乏自然的过渡句，建议调整新闻顺序或增加承接语。"
-            ],
-            "repair_instruction": "1. 补充‘矩阵分解技术’相关讨论：在S2第14轮（JEPA理论）之后或S1第15轮之前，插入关于三值矩阵量化算法的简短对话，强调其在显存与精度间的平衡。2. 调整富士通新闻位置：将富士通新闻移至S2第18轮（全球治理）之后，作为‘产业落地’的独立案例，避免与‘伦理标准’强行捆绑，增加过渡句如‘除了治理，产业端的物理AI也在加速’。3. 精简S1第1轮发言：删除‘这算是把开源的天花板又捅破了一层’等修饰性长句，保留核心事实（2.8万亿参数、开放模型），控制在60字以内。4. 优化结尾：S2第20轮总结应更具体地呼应新增的矩阵分解新闻，避免泛泛而谈。"
-          },
-          "review_model": "lenovo:qwen35-122b-a10b-fp8",
-          "review_usage": {}
-        },
-        {
-          "attempt": 2,
-          "generation": {
-            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
             "usage": {}
           },
           "structure_issues": [],
           "review": {
             "pass": true,
-            "issues": [
-              "轮次为22轮，处于建议的18-22轮区间上限，内容密度较高，需确保口播节奏紧凑。",
-              "部分段落（如S1关于SPINE框架和S2关于四足机器人的发言）信息密度较大，若语速过快可能影响听众理解，建议适当拆分或增加语气停顿提示。",
-              "S1在引入Codex Dream Skin时转折稍显生硬（“相比之下”），可优化为更自然的对比逻辑，例如强调“开源社区在个性化方面的灵活尝试”。"
-            ],
-            "repair_instruction": "1. 将S1关于SPINE框架的发言拆分为两句，中间加入‘不过’等连接词，降低单句信息密度。2. 修改S1引入Codex Dream Skin的过渡句，将‘相比之下’改为‘而在开源社区，开发者们则尝试通过...’，使话题转换更自然。3. 检查S2关于四足机器人的发言，若语速较快，建议在‘强化学习潜力巨大’后增加短暂停顿标记，以增强节奏感。"
+            "issues": [],
+            "repair_instruction": ""
           },
-          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
           "review_usage": {}
         }
       ],
       "podcast_harness": {
-        "attempts": 2,
-        "best_attempt": 2,
+        "attempts": 1,
+        "best_attempt": 1,
         "final_pass": true,
-        "final_issues": [
-          "轮次为22轮，处于建议的18-22轮区间上限，内容密度较高，需确保口播节奏紧凑。",
-          "部分段落（如S1关于SPINE框架和S2关于四足机器人的发言）信息密度较大，若语速过快可能影响听众理解，建议适当拆分或增加语气停顿提示。",
-          "S1在引入Codex Dream Skin时转折稍显生硬（“相比之下”），可优化为更自然的对比逻辑，例如强调“开源社区在个性化方面的灵活尝试”。"
-        ],
+        "final_issues": [],
         "structure_issues": [],
         "loop_exhausted": false,
         "converged": false
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-17/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-17/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-17/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-17/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-17.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-17/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-17/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-17.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-17/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-17.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-17.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-17.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-18.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-18.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-18.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-18.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-18.mp4"
 }

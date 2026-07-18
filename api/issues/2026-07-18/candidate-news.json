@@ -1,0 +1,137 @@
+[
+  {
+    "title": "PPIO上线智能模型网关",
+    "summary": "PPIO发布智能网关新品。网关⚙️按任务动态分配模型。量子位发布报道（AI资讯）披露日调用超1.2万亿。综合成本可降五至六成。智能水平据称提升两成。",
+    "url": "https://www.qbitai.com/2026/07/453467.html",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "StaffDeck管理数字员工",
+    "summary": "面壁智能开源数字员工平台。企业可给智能体分配工号岗位。项目开源仓库（AI资讯）现有129。状态机🧩约束业务执行流程。量子位产品报道详解反馈闭环。",
+    "url": "https://github.com/OpenBMB/StaffDeck",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能体手机完成备案",
+    "summary": "中国企业推出智能体手机新品。设备🤖能够自主拆解执行任务。智能体手机消息（AI资讯）称模型已备案。个性化交互深入移动系统。软硬融合📱迈入新阶段。",
+    "url": "https://sukoharjonews.com/perusahaan-ai-china-luncurkan-ponsel-pintar-agen-pertama-di-dunia/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "RoboTTT记住八千步",
+    "summary": "英伟达提出RoboTTT机器人策略。模型🦾可处理八千步历史。机器人策略论文（AI资讯）披露快权重机制。真机任务成绩提升百分之八十七。十阶段装配首次完整跑通。",
+    "url": "https://huggingface.co/papers/2607.15275",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "万颂生成五分钟长歌",
+    "summary": "万颂采用纯扩散音乐架构。模型🎼单次生成五分钟歌曲。万颂技术报告原文披露多语种能力。人声与伴奏可同步分轨输出。蒸馏⚡进一步缩短推理时间。",
+    "url": "https://huggingface.co/papers/2607.14749",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SearchOS重做协作搜索",
+    "summary": "SearchOS记录共享搜索状态。证据图🗺️持续追踪任务缺口。协作搜索论文原文介绍失败记忆设计。并行调度减少重复搜索循环。两项评测📈均领先现有基线。",
+    "url": "https://huggingface.co/papers/2607.15257",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "世界模型转向游戏状态",
+    "summary": "论文重审生成式游戏引擎。动作与状态🎮形成循环主线。互动世界建模论文梳理四项关键能力。团队采集九十小时悟空数据。实时生成⚡更接近可玩世界。",
+    "url": "https://huggingface.co/papers/2607.14076",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国产算力进入系统战",
+    "summary": "国产芯片竞争不再只看参数。真正门槛🧱转向软件生态。量子位现场观察直指CUDA壁垒。清微用四千卡超节点组网。RAISA🧭降低模型迁移成本。",
+    "url": "https://www.qbitai.com/2026/07/453352.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI认知外包争议升温",
+    "summary": "社区重新讨论认知外包风险。批评者🧠担忧写作记忆退化。支持者认为模型提升学习效率。黑客新闻讨论纪要收录双方观点。人机交互方式也面临重做。",
+    "url": "https://newshacker.me/story?id=48952445",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta筹划出租富余算力",
+    "summary": "Meta计划盘活数据中心算力。Anthropic或成🏗️首位大客户。算力租赁报道详情披露洽谈消息。机房资源可能转向云端生意。训练成本⚡格局或被重新改写。",
+    "url": "https://the-decoder.com/zuckerbergs-plan-to-sell-excess-ai-compute-could-finds-its-first-big-customer-in-anthropic/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中国提出全球治理愿景",
+    "summary": "上海大会聚焦开放合作议题。中国提出⚖️推动公平治理规则。路透社大会报道记录主旨内容。人工智能普惠成为核心方向。国际标准竞争进入新阶段。",
+    "url": "https://www.reuters.com/world/asia-pacific/chinas-xi-promotes-chinas-commitment-ai-access-speech-shanghai-conference-2026-07-17/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Patreon封堵模型爬虫",
+    "summary": "Patreon开始采用技术封锁。平台🛡️保护创作者原创内容。平台封锁措施报道披露策略变化。未经许可的训练取材将变难。内容平台态度明显变硬。",
+    "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "WAIC展区突破十万平",
+    "summary": "上海大会展出三千余项成果。展区🏟️首次突破十万平方米。大会镇馆展品报道呈现探馆现场。人形机器人承担接待导览。蛋白设计⚡周期大幅缩短。",
+    "url": "https://www.jwview.com/jingwei/html/m/07-17/679722.shtml",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "WAIC首迎国家领导人",
+    "summary": "现场发言强调开源合作。人工智能📡进入高度活跃阶段。大会现场分享原帖记录讲话重点。中方反对泛化安全概念。五千培训名额将支持发展中国家。",
+    "url": "https://x.com/_FORAB/status/2077996620206227676",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Copilot SDK接入多端",
+    "summary": "GitHub开放Copilot SDK。开发者🧩可将代理嵌入应用。代理开发工具仓库已有9.8k。项目今日新增二百三十三星。多端智能体生态继续扩张。",
+    "url": "https://github.com/github/copilot-sdk",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

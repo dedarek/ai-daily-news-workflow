@@ -1,0 +1,133 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-07-18",
+  "content_date": "2026-07-18",
+  "source_url": "https://hex2077.dev/docs/2026-07/2026-07-18/",
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 15,
+  "candidate_data_file": "candidate-news-2026-07-18.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 13,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [],
+            "repair_instruction": ""
+          },
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今日新闻聚焦AI从单点工具向系统化组织资产与自主服务演进。PPIO与面壁智能分别通过成本优化和数字员工身份化，推动Agent规模化落地；StepX Neo与RoboTTT则探索软硬协同及长程记忆新范式。行业压力转向生态构建与长任务鲁棒性，同时认知外包风险与算力成本博弈凸显，技术竞争正从参数比拼转向系统级能力与治理规则争夺。",
+  "podcast_turns": 21,
+  "podcast_script_file": "podcast-script-2026-07-18.json",
+  "podcast_script_text_file": "podcast-script-2026-07-18.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-07-18.txt",
+  "voice_file": "voice-2026-07-18.json",
+  "voice_turns": 21,
+  "tts_mode": "video-api-audio-video",
+  "tts_synthesis_mode": "external_video_api",
+  "voice_timing_source": "estimated_text_weight",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_leading_silence_seconds": 0,
+  "tts_reference_files": null,
+  "video_api": {
+    "provider": "video-api",
+    "base_url": "http://8.137.39.142:8011/video-api/api",
+    "job_id": "03bf5a43-c95f-49c7-b5e0-b11f59830550",
+    "submit_response": {
+      "job_id": "03bf5a43-c95f-49c7-b5e0-b11f59830550",
+      "job_type": "video",
+      "status": "running",
+      "created_at": "2026-07-18T04:37:44.273Z",
+      "updated_at": "2026-07-18T04:37:44.273Z",
+      "started_at": "2026-07-18T04:37:44.273Z",
+      "finished_at": null,
+      "day": "2026-07-18-1237",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": null,
+      "download_url": null,
+      "error": null
+    },
+    "final_response": {
+      "job_id": "03bf5a43-c95f-49c7-b5e0-b11f59830550",
+      "job_type": "video",
+      "status": "succeeded",
+      "created_at": "2026-07-18T04:37:44.273Z",
+      "updated_at": "2026-07-18T04:44:11.333Z",
+      "started_at": "2026-07-18T04:37:44.273Z",
+      "finished_at": "2026-07-18T04:44:11.333Z",
+      "day": "2026-07-18-1237",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": 387.06,
+      "download_url": "/api/jobs/03bf5a43-c95f-49c7-b5e0-b11f59830550/download",
+      "error": null
+    },
+    "zip_file": "video-api-result-2026-07-18.zip",
+    "video_file": "ai-daily-news-video-2026-07-18.mp4"
+  },
+  "html_bytes": 24915,
+  "podcast_bytes": 5119725,
+  "video_bytes": 20048859,
+  "podcast_duration_seconds": 255.96
+}
