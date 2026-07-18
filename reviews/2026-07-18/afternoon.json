@@ -1,0 +1,28 @@
+{
+  "issue_date": "2026-07-18",
+  "reviewed_at": "2026-07-18T14:26:42.674345+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容结构完整，新闻覆盖全面且锐评深刻，播客对话自然流畅，但在部分新闻摘要中存在明显的文本重复和格式冗余问题，需优化。",
+    "issues": [
+      "新闻'AI认知外包争议升温'的summary字段中，正文后重复出现了简略版摘要，造成信息冗余。",
+      "新闻'中国提出全球治理愿景'的summary字段同样存在正文后重复简略版摘要的问题。",
+      "部分新闻标题与正文细节的对应关系可进一步精炼，如StepFun手机标题强调'备案'，正文中虽提及但可更突出其作为'首款'的市场意义。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
