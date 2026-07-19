@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-07-18",
-  "content_date": "2026-07-18",
-  "published_at": "2026-07-18T04:45:29.023230+00:00",
+  "issue_date": "2026-07-19",
+  "content_date": "2026-07-19",
+  "published_at": "2026-07-19T04:41:35.424968+00:00",
   "article_count": 12,
-  "podcast_turns": 21,
+  "podcast_turns": 19,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -42,7 +42,7 @@
         "usage": {}
       },
       "podcast": {
-        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "model": "nvidia:z-ai/glm-5.2",
         "usage": {}
       },
       "podcast_review": {
@@ -53,7 +53,7 @@
         {
           "attempt": 1,
           "generation": {
-            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "model": "nvidia:z-ai/glm-5.2",
             "usage": {}
           },
           "structure_issues": [],
@@ -77,16 +77,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-18.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-18.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-18/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-18.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-18.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-18.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-19.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-19.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-19.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-19.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-19.mp4"
 }

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-19",
+  "status": "ready",
+  "created_at": "2026-07-19T04:41:35.027583+00:00",
+  "artifacts": {
+    "candidate_articles": "dist/candidate-news-2026-07-19.json",
+    "articles": "dist/articles-2026-07-19.json",
+    "legacy_articles": "dist/news-data-2026-07-19.json",
+    "html": "dist/daily-news-2026-07-19.html",
+    "legacy_html": "dist/ai-daily-news-html-2026-07-19.html",
+    "podcast_script": "dist/podcast-script-2026-07-19.json",
+    "podcast_script_text": "dist/podcast-script-2026-07-19.txt",
+    "podcast_moss_input": "dist/podcast-moss-input-2026-07-19.txt",
+    "voice": "dist/voice-2026-07-19.json",
+    "audio": "dist/daily-news-podcast-2026-07-19.mp3",
+    "legacy_audio": "dist/ai-daily-news-podcast-2026-07-19.mp3",
+    "video": "dist/daily-news-video-2026-07-19.mp4",
+    "legacy_video": "dist/ai-daily-news-video-2026-07-19.mp4",
+    "pipeline_report": "dist/pipeline-report-2026-07-19.json"
+  },
+  "quality": {
+    "deterministic": "pass",
+    "agent_review": "not_run",
+    "issues": []
+  },
+  "repair": {
+    "attempts": 0,
+    "items": []
+  },
+  "memory_update": {
+    "candidate_count": 15,
+    "selected_count": 12
+  },
+  "agent": null,
+  "pipeline_report": {
+    "mode": "live-collection",
+    "issue_date": "2026-07-19",
+    "content_date": "2026-07-19",
+    "source_url": "https://hex2077.dev/docs/2026-07/2026-07-19/",
+    "recipient": "yyc54321@126.com",
+    "article_count": 12,
+    "candidate_count": 15,
+    "candidate_data_file": "candidate-news-2026-07-19.json",
+    "llm": {
+      "provider": "opencode-go",
+      "model_chain": [
+        "deepseek-ai/deepseek-v4-pro",
+        "moonshotai/kimi-k2.6",
+        "z-ai/glm-5.2"
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1",
+      "calls": 13,
+      "call_details": {
+        "selection": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        "editorial_batches": [
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          }
+        ],
+        "digest_summary": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        "podcast": {
+          "model": "nvidia:z-ai/glm-5.2",
+          "usage": {}
+        },
+        "podcast_review": {
+          "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "usage": {}
+        },
+        "podcast_attempts": [
+          {
+            "attempt": 1,
+            "generation": {
+              "model": "nvidia:z-ai/glm-5.2",
+              "usage": {}
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": true,
+              "issues": [],
+              "repair_instruction": ""
+            },
+            "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "review_usage": {}
+          }
+        ],
+        "podcast_harness": {
+          "attempts": 1,
+          "best_attempt": 1,
+          "final_pass": true,
+          "final_issues": [],
+          "structure_issues": [],
+          "loop_exhausted": false,
+          "converged": false
+        }
+      }
+    },
+    "digest_summary": "今日新闻显示AI正从单纯追求模型参数转向解决物理交互、实时响应与本地部署的落地瓶颈。通义视频模型与优理奇触觉技术突破延迟与感知短板，AirLLM降低硬件门槛，但开源模型安全差距缩小、记忆漏洞及监管收紧暴露了能力扩散下的风险。行业竞争核心已转向组织重构与真实场景可靠性。",
+    "podcast_turns": 19,
+    "podcast_script_file": "podcast-script-2026-07-19.json",
+    "podcast_script_text_file": "podcast-script-2026-07-19.txt",
+    "podcast_moss_input_file": "podcast-moss-input-2026-07-19.txt",
+    "voice_file": "voice-2026-07-19.json",
+    "voice_turns": 19,
+    "tts_mode": "video-api-audio-video",
+    "tts_synthesis_mode": "external_video_api",
+    "voice_timing_source": "estimated_text_weight",
+    "tts_model": null,
+    "tts_speed": null,
+    "tts_leading_silence_seconds": 0,
+    "tts_reference_files": null,
+    "video_api": {
+      "provider": "video-api",
+      "base_url": "http://8.137.39.142:8011/video-api/api",
+      "job_id": "c50c4590-5e87-4f40-8fbb-4bfd784497c1",
+      "submit_response": {
+        "job_id": "c50c4590-5e87-4f40-8fbb-4bfd784497c1",
+        "job_type": "video",
+        "status": "running",
+        "created_at": "2026-07-19T04:34:48.158Z",
+        "updated_at": "2026-07-19T04:34:48.158Z",
+        "started_at": "2026-07-19T04:34:48.158Z",
+        "finished_at": null,
+        "day": "2026-07-19-1234",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": null,
+        "download_url": null,
+        "error": null
+      },
+      "final_response": {
+        "job_id": "c50c4590-5e87-4f40-8fbb-4bfd784497c1",
+        "job_type": "video",
+        "status": "succeeded",
+        "created_at": "2026-07-19T04:34:48.158Z",
+        "updated_at": "2026-07-19T04:40:15.006Z",
+        "started_at": "2026-07-19T04:34:48.158Z",
+        "finished_at": "2026-07-19T04:40:15.006Z",
+        "day": "2026-07-19-1234",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": 326.85,
+        "download_url": "/api/jobs/c50c4590-5e87-4f40-8fbb-4bfd784497c1/download",
+        "error": null
+      },
+      "zip_file": "video-api-result-2026-07-19.zip",
+      "video_file": "ai-daily-news-video-2026-07-19.mp4"
+    },
+    "html_bytes": 25786,
+    "podcast_bytes": 3954765,
+    "video_bytes": 15046012,
+    "podcast_duration_seconds": 197.71
+  },
+  "published_artifacts": {
+    "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/index.json",
+    "candidate_articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/candidate-news.json",
+    "articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/articles.json",
+    "podcast_script": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/podcast-script.json",
+    "podcast_script_text": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/podcast-script.txt",
+    "podcast_dialogue_text": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-19.txt",
+    "podcast_moss_input": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/podcast-moss-input.txt",
+    "voice": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/voice.json",
+    "voice_timeline": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-19.json",
+    "html": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-19.html",
+    "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-19.mp3",
+    "video": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-19.mp4",
+    "pipeline_report": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-19/pipeline-report.json"
+  }
+}
