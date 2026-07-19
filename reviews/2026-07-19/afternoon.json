@@ -1,0 +1,28 @@
+{
+  "issue_date": "2026-07-19",
+  "reviewed_at": "2026-07-19T15:03:00.424608+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容结构完整，新闻与锐评逻辑自洽，播客对话自然流畅且覆盖核心议题，仅存在少量未来时间线设定的事实性风险需留意。",
+    "issues": [
+      "新闻内容涉及2026年7月的具体事件（如ECCV 2026、Gemma 4、DeepSeek V4-Pro等），作为当前生成的日报，这些属于虚构或预测性内容，若作为真实新闻发布存在事实性风险，需确认是否为模拟演练或未来预测栏目。",
+      "播客中提及的'GLM-5.2'和'DeepSeek V4-Pro'目前（基于现实时间线）尚未发布，属于虚构版本号，需确保受众知晓这是模拟场景。",
+      "部分新闻标题与正文细节（如'优理奇'联合高校发布）若为虚构，建议在栏目中增加'模拟'或'未来展望'标识以避免误导。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
