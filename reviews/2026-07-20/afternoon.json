@@ -1,0 +1,28 @@
+{
+  "issue_date": "2026-07-20",
+  "reviewed_at": "2026-07-20T15:40:20.973236+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实、逻辑自洽，锐评深刻且播客对话自然流畅，仅在部分新闻标题的表述严谨性上略有瑕疵。",
+    "issues": [
+      "新闻标题‘通义千问3.8开源’与正文‘开源权重预计即将发布’存在轻微时态矛盾，建议改为‘通义千问3.8即将开源’或‘通义千问3.8参数曝光’。",
+      "新闻标题‘SQRL模型先查库再写SQL’略显口语化，建议优化为‘SQRL模型引入先查库机制’以提升专业度。",
+      "播客对话中部分转折略显生硬，如从‘三星利润’直接跳到‘一人公司’，可增加一句过渡语增强连贯性。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
