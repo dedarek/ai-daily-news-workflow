@@ -3,6 +3,167 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-07-20",
+      "content_date": "2026-07-20",
+      "published_at": "2026-07-20T04:36:56.751446+00:00",
+      "article_count": 12,
+      "podcast_turns": 20,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "deepseek-ai/deepseek-v4-pro",
+          "moonshotai/kimi-k2.6",
+          "z-ai/glm-5.2"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 13,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次数量不足：当前对话共21轮，符合18-22轮建议范围，但S1和S2的交替过于机械，缺乏自然的打断或追问，导致讨论深度略显不足。",
+                  "信息密度不均：部分轮次（如S1第1轮、S2第18轮）字数偏少（低于35字），而S1第19轮和S2第20轮字数接近上限，整体节奏不够平稳。",
+                  "话题衔接生硬：从“奈飞收购”直接跳到“英伟达日本合作”，缺乏过渡句，显得话题切换突兀。",
+                  "事实引用风险：S1第1轮提到“直接叫板Fable 5”，但日报原文仅称“性能仅次于Fable 5”，用词稍显夸张，可能误导听众。",
+                  "结构问题：未出现明显的分歧或判断性观点，多数为复述和简单认同，缺乏深度交锋。"
+                ],
+                "repair_instruction": "1. 调整S1第1轮措辞，将“直接叫板”改为“宣称性能仅次于”，确保与日报事实一致；2. 在S2第8轮与S1第9轮之间增加一句过渡，如“除了影视行业，硬件生态也在剧烈变动”，以平滑话题切换；3. 扩充S1第1轮和S2第18轮内容，增加对新闻背景的简要补充，使字数达到40字以上；4. 在S2第14轮后增加S1的追问，如“那自托管模型是否意味着企业必须自建安全团队？”，以增强讨论深度和分歧感；5. 检查所有轮次字数，确保每轮在35-95字之间，避免过短或过长。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            },
+            {
+              "attempt": 2,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次数量不足：当前对话共20轮，符合18-22轮的建议范围，但内容密度在后期略显单薄，需检查是否因压缩导致信息缺失。",
+                  "S1切入话题生硬：第一轮直接抛出“通义千问3.8”且无自然过渡，缺乏对“今日焦点”或行业背景的铺垫，显得突兀。",
+                  "部分段落字数过短：第19轮S1发言仅约45字，虽在35-95字范围内，但信息密度低，且与前后轮次衔接不够紧密，略显仓促。",
+                  "新闻覆盖不全：日报中“三星电子利润激增”与“Voicebox”被合并在一轮中讨论，导致“三星”新闻缺乏独立展开，信息量不足。",
+                  "缺乏深度追问：在讨论“奈飞收购”和“Hugging Face安全事件”时，S1和S2多为观点陈述，缺少针对具体技术细节或商业影响的深入追问。"
+                ],
+                "repair_instruction": "1. 重写S1首句：增加对‘今日焦点’或‘AI圈动态’的简短引入，使通义千问3.8的发布更自然地切入，避免突兀。2. 拆分第19轮：将‘三星利润’与‘Voicebox’分开讨论，为三星新闻增加独立轮次，补充其股价波动及供应链紧张的具体影响。3. 深化追问：在奈飞收购和Hugging Face安全事件中，S1应增加针对‘伦理边界’或‘中小企业成本压力’的具体追问，而非仅陈述观点。4. 扩充第19轮内容：若保留合并，需增加对三星股价波动原因及Voicebox滥用风险的具体描述，确保字数和信息量达标。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            },
+            {
+              "attempt": 3,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次数量超标：当前对话共22轮，处于建议范围（18-22轮）的上限边缘，但结合内容密度，结尾部分略显拖沓，建议精简至20轮以内以增强紧凑感。",
+                  "结尾生硬：最后一轮S2的发言（'今天的讨论很深刻...留给听众的思考是...'）属于典型的固定总结式寒暄，违反了'不应出现固定问候和寒暄'及'像真实讨论'的要求，破坏了播客的自然收尾。",
+                  "信息密度不均：前段关于通义千问和SQRL的讨论较为深入，但后半段关于三星和开源项目的切换略显仓促，部分轮次（如S1关于商汤的发言）信息量略低于35字下限的临界值，需微调以平衡节奏。"
+                ],
+                "repair_instruction": "1. 删除最后一轮S2的总结性陈词（'今天的讨论很深刻...'），改为由S1或S2直接抛出一个开放性的、与最新新闻（如Hugging Face安全事件或Voicebox滥用风险）相关的具体疑问或简短判断作为自然收尾，避免说教。2. 检查S1关于商汤的发言，若字数过少，可补充一句关于'混合推理对国产算力生态的具体影响'的简短判断，确保每轮字数在35-95字区间。3. 将总轮次压缩至20轮左右，合并部分过渡性语句，使讨论更聚焦于新闻本身的冲突点（如'主权算力'的脆弱性或'合成数据'的鲁棒性）。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            },
+            {
+              "attempt": 4,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "轮次统计为20轮，符合18-22轮的建议范围，但S1在第13轮与S2在第12轮关于商汤混合推理的讨论略显重复，建议合并或精简其中一轮以增强节奏感。",
+                  "S1第1轮开场直接切入通义千问3.8，虽无寒暄但略显突兀，建议增加一句简短的背景引入（如“今天头条是阿里的大动作”）以增强自然度。",
+                  "部分段落（如S2第18轮）字数接近95字上限，口播时需注意语速控制，避免信息过载。"
+                ],
+                "repair_instruction": "1. 在S1第1轮开头增加‘今天头条是阿里的大动作’作为自然过渡，避免直接抛出参数显得生硬。2. 合并S2第12轮与S1第13轮中关于商汤混合推理的重复观点，保留S2关于‘国产卡依赖’的判断，删除S1第13轮中‘单纯靠架构优化可能不够’的冗余表述，将内容压缩至一轮内。3. 检查S2第18轮（Voicebox相关）字数，若超过90字，建议删减‘身份验证和内容溯源机制得赶紧跟上’中的修饰词，改为‘身份验证和溯源机制需尽快完善’以控制时长。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 4,
+            "best_attempt": 4,
+            "final_pass": true,
+            "final_issues": [
+              "轮次统计为20轮，符合18-22轮的建议范围，但S1在第13轮与S2在第12轮关于商汤混合推理的讨论略显重复，建议合并或精简其中一轮以增强节奏感。",
+              "S1第1轮开场直接切入通义千问3.8，虽无寒暄但略显突兀，建议增加一句简短的背景引入（如“今天头条是阿里的大动作”）以增强自然度。",
+              "部分段落（如S2第18轮）字数接近95字上限，口播时需注意语速控制，避免信息过载。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-20/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-20/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-20/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-20/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-20.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-20/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-20/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-20.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-20/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-20.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-20.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-20.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-07-19",
       "content_date": "2026-07-19",
       "published_at": "2026-07-19T04:41:35.424968+00:00",

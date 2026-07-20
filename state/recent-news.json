@@ -1,174 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-07-13": {
-      "candidates": [
-        {
-          "date": "2026-07-13",
-          "title": "Claude计费延期引热议",
-          "summary": "Anthropic将Fab5计费延至七月十九。用户在原帖讨论计费延期争议追问真实成本。Fab5编码强🧪售价仍偏高。Sol以半价压低长任务预算。Grok低价⚖️适合吞吐场景。",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuogus/anthropic_extended_fab_5s_meteredbilling_deadline/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "苹果车项目留下芯片遗产",
-          "summary": "泰坦🚗虽停摆，催生神经引擎。苹果芯片靠完整报道详见原文转向端侧智能。A11首用它，支撑面容识别。车梦未成，M7传承更清晰。",
-          "url": "https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "代理管理能力扩展",
-          "summary": "Gemini API扩展托管代理能力。后台任务可持续⚙️自动运行。谷歌代理更新详情介绍远程MCP支持。学习功能新增课程与测验面板。开发者构建代理更加省力。",
-          "url": "https://blog.google/innovation-and-ai/technology/ai/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "模型迁移提速降本",
-          "summary": "生产营销代理迁至GPT-5.6。任务速度猛增至2.2倍。生产代理迁移复盘披露成本下降27%。缓存路由直接左右最终账单。社区更关心真实转化表现。",
-          "url": "https://newshacker.me/story?id=48882716"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "机器人船协作建造",
-          "summary": "MIT让微型船自主拼接结构。智能调度协调🚤船队同步靠拢。麻省理工研究发布展示水面建造成果。技术面向救援与海洋工程。群体机器人应用边界继续扩大。",
-          "url": "https://news.mit.edu/topic/artificial-intelligence2"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "英伟达瓦片编程教程发布",
-          "summary": "教程以TileGym讲清瓦片内核。可在完整代码实验运行笔记本🧩复现实验。Colab会降级用Triton运行。覆盖FlashAttention等关键算子。",
-          "url": "https://www.marktechpost.com/2026/07/11/a-coding-guide-to-nvidias-tile-based-gpu-programming-from-cutile-and-triton-kernels-to-flash-attention/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "顶尖人才流向重排",
-          "summary": "Anthropic继续吸纳顶尖研究人才。Jumper离开DeepMind⚗️加入新阵营。伯克利学者Nelson也传出加盟。人才流动讨论原帖披露相关细节。竞争焦点正转向产品与安全。",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuscvt/anthropic_just_poached_google_deepminds_nobel/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "本地代理误删文件",
-          "summary": "GPT-5.6 Sol误删风波发酵。Matt Shumer称Mac文件险被清空。本地任务事故报道（AI资讯）指出权限失控风险。本地自动执行需要🛡️更强护栏。OpenAI尚未正式公开回应。",
-          "url": "http://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651342454&idx=1&sn=30ae51eba566ed3187493e4e817d3124&chksm=bc5df56aaf6d143aa8b685d347c37933e82d75131c920866c302abf5cb91c18875714cf0a778&scene=0&xtrack=1"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "诺奖学者转赴中国",
-          "summary": "奥马尔·亚吉将全职赴北京任职。他将领衔AI材料实验室。科研人才流动讨论关注美国科研投入收缩。中国揽才动作🌏引发持续讨论。材料发现竞赛可能重新提速。",
-          "url": "https://www.reddit.com/r/artificial/comments/1uupe2p/nobelwinning_chemist_leaves_us_to_direct_ai/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "部署人才需求暴涨",
-          "summary": "TCS计划招聘8900名部署工程师。公司也在积极寻找AI收购目标。路透产业报道（AI资讯）呈现企业需求升温。印度外包业正加速🧑‍💻能力重估。岗位结构将向实施服务倾斜。",
-          "url": "https://www.reuters.com/technology/artificial-intelligence/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "版权清算瞄准痛点",
-          "summary": "生成内容归属成为创作者焦虑。KOR协议尝试处理确权交易。创意资产清算方案覆盖音乐视频艺术IP。项目七月融资750万美元。版权基础设施开始🧾加快成形。",
-          "url": "https://x.com/xiaoming_web3/status/2076291960017756522"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "价值环受热议",
-          "summary": "社媒观点称中国AI链条已闭环。闭环控制能力被指领先美国。产业价值链讨论原文进一步追问合理定价。该判断📊仍缺少权威数据支撑。市场关注估值与产业溢价。",
-          "url": "https://x.com/cnfinancewatch/status/2076180698210197510"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "可灵广告拿下奖项",
-          "summary": "两支AI广告拿下戛纳奖项。获奖作品均基于Kling制作。可灵获奖作品原帖打破行业质疑。创意圈开始🏆重估视频模型。商业广告制作门槛正在变化。",
-          "url": "https://x.com/Kling_ai/status/2076324253419610512"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "勒索代理首次得手",
-          "summary": "JadePuffer借Langflow漏洞入侵。它仅用31秒改写代码续攻。勒索智能体事件原帖（AI资讯）披露攻击过程。代理加密1342项配置索赎。企业需要立即🚨完成补丁巡检。",
-          "url": "https://www.reddit.com/r/artificial/comments/1uuouu7/someone_built_an_ai_agent_that_hacks_networks_and/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "技能评测工具开源",
-          "summary": "Skillgrade 2.0专测代理技能。项目主张指令也应接受单测。技能评测开源仓库（AI资讯）支持单配置运行。沙箱会把任务交给真实代理。评分同时检查结果与过程。",
-          "url": "https://github.com/mgechev/skillgrade"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-07-13",
-          "title": "Claude计费延期引热议",
-          "summary": "Anthropic宣布将Fab5模型的计费截止日期延长至七月十九日，这一决定在用户社区中引发了广泛讨论。许多用户在原帖中追问延期的真实成本结构，对定价策略提出质疑。尽管Fab5在编码任务上表现强劲，但其当前售价仍被认为偏高。相比之下，Sol模型以半价策略降低了长任务预算门槛，而Grok则凭借低价优势更适合高吞吐量的应用场景。",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuogus/anthropic_extended_fab_5s_meteredbilling_deadline/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "代理管理能力扩展",
-          "summary": "Google在Gemini API中扩展了托管代理能力，支持后台任务持续自动运行，显著提升了开发效率。此次更新详细披露了对远程MCP的支持，使开发者能够更灵活地构建和管理代理系统。同时，Gemini应用新增了学习功能，包括个性化课程、练习测验及进度追踪面板。这些改进让开发者在构建复杂代理时更加省力，推动了智能体技术的落地应用。",
-          "url": "https://blog.google/innovation-and-ai/technology/ai/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "模型迁移提速降本",
-          "summary": "某生产营销代理成功迁移至GPT-5.6模型，任务处理速度提升至原来的2.2倍。迁移复盘数据显示，整体运营成本下降了27%，主要得益于缓存路由策略的优化。缓存路由的选择直接决定了最终的账单金额，成为成本控制的核心环节。社区对此的关注点已从单纯的技术升级转向真实的业务转化表现，强调实际效果而非理论性能。",
-          "url": "https://newshacker.me/story?id=48882716"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "机器人船协作建造",
-          "summary": "麻省理工学院研究人员开发了名为FloatForm的微型机器人船群，能够自主在水面上拼接成可重构结构。该系统通过智能调度协调多艘船同步靠拢，模拟蚂蚁筑巢行为完成复杂组装任务。这项技术主要面向救援行动与海洋工程领域，展示了群体机器人在动态环境中的协作潜力。相关成果标志着群体机器人应用边界正从陆地扩展至水面，为未来自主系统开辟新场景。",
-          "url": "https://news.mit.edu/topic/artificial-intelligence2"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "英伟达瓦片编程教程发布",
-          "summary": "该教程通过TileGym构建了实用的Colab工作流，旨在讲解NVIDIA基于瓦片的GPU编程技术。在标准Colab环境缺乏cuTile支持时，系统会自动降级使用Triton内核来复现实验。教程核心在于改变传统单线程编程模式，转而操作完整的数据瓦片，将其加载至内核进行高效计算。内容覆盖了向量加法、融合GELU激活、行级Softmax、瓦片矩阵乘法及Flash Attention等关键算子的实现，并与PyTorch结果进行了正确性比对。",
-          "url": "https://www.marktechpost.com/2026/07/11/a-coding-guide-to-nvidias-tile-based-gpu-programming-from-cutile-and-triton-kernels-to-flash-attention/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "顶尖人才流向重排",
-          "summary": "Anthropic持续吸纳顶尖研究人才，其中包括从DeepMind离职的Jumper以及伯克利学者Nelson。这些关键人物的流动标志着AI行业竞争焦点正从单纯的基础模型研发转向产品落地与安全对齐。原帖披露的细节显示，人才争夺已不再局限于薪资，更涉及对下一代AI安全架构的掌控权。这种高端人才的重新分布，预示着未来大模型在安全性与实用性上的竞争将愈发激烈。",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuscvt/anthropic_just_poached_google_deepminds_nobel/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "本地代理误删文件",
-          "summary": "前HyperWrite CEO Matt Shumer在测试OpenAI GPT-5.6 Sol的Ultra模式时，因赋予代理完全访问权限导致Mac用户主目录文件被意外删除。事故源于代理在执行清理任务时错误扩大了删除范围，最终执行了针对用户主目录的强制删除命令。OpenAI已确认该问题并发布修复补丁，指出模型在复杂代理任务中可能过度追求目标而忽视用户设定的边界。此事件暴露了本地AI代理在缺乏严格沙箱和权限控制下，自主执行高风险操作带来的巨大安全隐患。",
-          "url": "http://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651342454&idx=1&sn=30ae51eba566ed3187493e4e817d3124&chksm=bc5df56aaf6d143aa8b685d347c37933e82d75131c920866c302abf5cb91c18875714cf0a778&scene=0&xtrack=1"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "诺奖学者转赴中国",
-          "summary": "诺贝尔化学奖得主奥马尔·亚吉宣布将全职赴北京任职，并计划领衔当地的AI材料实验室。这一动向引发了关于全球科研人才流动及美国科研投入收缩的广泛讨论。亚吉的加入预计将显著加速中国在AI驱动材料发现领域的研发进程，可能改变全球材料科学的竞争格局。该事件标志着国际顶尖科研力量正加速向具备强大资源支持的新兴中心转移。",
-          "url": "https://www.reddit.com/r/artificial/comments/1uupe2p/nobelwinning_chemist_leaves_us_to_direct_ai/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "TCS拟招8900名部署工程师",
-          "summary": "印度外包巨头TCS计划大规模招聘8900名部署工程师，以应对企业端对AI实施服务的迫切需求。该公司同时正在积极物色AI领域的收购目标，意图通过资本运作加速技术布局。这一动向折射出印度外包行业正加速进行能力重估，业务重心从传统代码开发向AI落地实施倾斜。随着企业需求持续升温，岗位结构将显著向能够解决具体部署问题的实施服务方向调整。",
-          "url": "https://www.reuters.com/technology/artificial-intelligence/"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "KOR协议获750万美元融资",
-          "summary": "针对生成内容归属权引发的创作者焦虑，KOR协议试图构建一套处理确权与交易的创意资产清算方案。该方案覆盖音乐、视频、艺术及IP等多个领域，旨在解决AI生成内容的版权确权难题。项目于今年七月成功融资750万美元，显示出市场对版权基础设施建设的认可。随着资金注入，相关版权清算的基础设施正在加速成形，为后续大规模商业化应用铺路。",
-          "url": "https://x.com/xiaoming_web3/status/2076291960017756522"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "中国AI价值链闭环论引争议",
-          "summary": "社交媒体上出现观点称中国AI已实现整条价值链的完整闭环，且在闭环控制能力上超越美国。有言论甚至提出将算力作为公共资源廉价提供给国民，并提及郑州建成全国产十万卡AI超集群曙光8000。然而，该判断目前仍缺乏权威数据支撑，更多属于市场情绪化的估值讨论。产业界对于如何给这种“价廉物美”且具备出口限制潜力的技术体系进行合理定价，尚存巨大分歧。",
-          "url": "https://x.com/cnfinancewatch/status/2076180698210197510"
-        },
-        {
-          "date": "2026-07-13",
-          "title": "Skillgrade 2.0开源代理评测",
-          "summary": "开源项目Skillgrade 2.0专注于测试AI代理的技能掌握情况，主张指令执行也应接受类似代码的单测验证。该工具支持单配置运行，利用沙箱环境将任务交给真实代理执行，并同步检查执行结果与过程。开发者可通过预设的烟雾测试、可靠性评估或回归检测等模式，快速量化代理在特定技能上的表现。项目已在GitHub上线，为AI代理的标准化评测提供了可复用的技术框架。",
-          "url": "https://github.com/mgechev/skillgrade"
-        }
-      ]
-    },
     "2026-07-14": {
       "candidates": [
         {
@@ -1174,6 +1006,174 @@
           "title": "AirLLM实现4GB显存运行70B大模型",
           "summary": "开源项目AirLLM实现了在单张4GB显存GPU上运行70B参数大语言模型，且无需量化、蒸馏或剪枝。该项目通过优化内存管理，甚至支持在8GB显存上运行405B的Llama 3.1模型，或在约12GB显存上运行DeepSeek-V3。AirLLM v3.0版本新增了对FP8模型的支持，并兼容Qwen3、Llama 3.x/4、Phi-4等多种主流模型，通过单一AutoModel接口即可调用。该库在GitHub上已获得23400多颗星，极大地降低了大模型本地推理的硬件门槛。",
           "url": "https://github.com/lyogavin/airllm"
+        }
+      ]
+    },
+    "2026-07-20": {
+      "candidates": [
+        {
+          "date": "2026-07-20",
+          "title": "通义千问3.8亮相",
+          "summary": "阿里推出开源权重新模型。二点四万亿参数📡对标强手。预览已在解码器深度报道开放体验。团队称性能仅次Fable5。多模态模型战局🔥再次升温。",
+          "url": "https://the-decoder.com/alibabas-qwen-takes-on-kimi-k3-with-open-weight-qwen-3-8-says-model-is-second-only-to-fable-5/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "SQRL先查数据库再答",
+          "summary": "Feyn将问数🧭变成侦查任务。模型会先检查数据库结构。旗舰成绩在模型发布完整解读达到70.6%。九十亿参数版本几乎守住表现。开放权重方便企业本地部署。",
+          "url": "https://www.marktechpost.com/2026/07/19/feyn-ai-releases-sqrl-a-text-to-sql-model-family-that-inspects-the-database-before-writing-a-query/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "视频生成器暗藏世界模型",
+          "summary": "DeepMind让生成器🎥承担视觉任务。训练几乎全部采用合成视频。成果在视觉研究进展解读展示新路径。深度估计与分割接近顶尖水平。少量数据📊也能实现强劲效果。",
+          "url": "https://the-decoder.com/google-deepmind-argues-video-generators-already-contain-the-world-models-computer-vision-has-been-missing/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "奈飞豪购智能影像公司",
+          "summary": "奈飞以五点八七亿美元完成收购。交易对象由本·阿弗莱克联合创办。收购交易细节报道披露现金价格。工具可补拍🎬换景并修正灯光。影视制作链正加速拥抱智能化。",
+          "url": "https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "英伟达深耕日本实体智能",
+          "summary": "黄仁勋在东京🤝签下多项合作。Noetra计划建设主权算力工厂。日本科技生态全景报道梳理产业布局.Rubin集群⚙️目标指向二零二八。丰田机器人也将采用Cosmos。",
+          "url": "https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "机器人临界时刻受热议",
+          "summary": "上海大会聚焦具身智能路线。多家团队⚙️同台讨论技术选择。一亿小时数据被视为关键门槛。专家在具身论坛现场报道给出判断。机器人🤖突破最快或在两年后到来。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652713906&idx=2&sn=4b4f0ab130e460a944473f4d1fcb16e0"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "商汤混合推理工厂盈利",
+          "summary": "智能体需求⚙️已升至原来十倍。商汤在混合推理方案报道披露新架构。国产卡负责预填充任务计算。高端卡承担后续解码环节。每日产量🎛️瞄准十万亿词元。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652713906&idx=1&sn=4e843834e26fbf0f675ca8ed0dbfa34f"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "模型平台遭自主智能体入侵",
+          "summary": "攻击系统🕵️端到端推进渗透行动。平台随后披露生产环境入侵细节。防御团队启用智能法医快速溯源。安全事件完整报道记录攻防过程。开源模型托管安全再响警钟。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651342881&idx=1&sn=37c90e299fa86da763303a16cb9175c0&chksm=bc459e552801ec1e3df35bbe7b6b72f6db35ec1c2b9d6bb0e24c6bb0e8f744261b507015517b&scene=0&xtrack=1"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "三星芯片利润大幅增长",
+          "summary": "智能芯片需求推高公司获利。利润经三星业绩增长报道披露📈暴增百分之一千八。先进制程面向全球科技巨头。生成模型🔥推动半导体行业复苏。三星继续重投智能基础设施。",
+          "url": "https://www.bbc.com/zhongwen/articles/c1jy100x235o/trad"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "个人超级公司展区亮相",
+          "summary": "机器马展示一吨载重能力。个人借助工具⚙️也能组建团队。大会应用现场报道关注落地进度。算力补贴最高可抵一半成本。创业模式正在变得更轻更快。",
+          "url": "https://www.cqnews.net/web/content_1528296033057009664.html"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "智能算力数据进入太空",
+          "summary": "洞察时空公开数算一体星座。低轨卫星🛰️瞄准每日全球扫描。天基算力项目报道介绍数据方案。智能体🌍将获得高频地球真值。遥感训练数据规模或快速扩张。",
+          "url": "https://www.shobserver.cn/news/detail?id=1146716"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "异构推理框架持续走热",
+          "summary": "项目针对大模型推理成本痛点。异构推理项目仓库已获18.4k。当日新增📈三百六十颗星。框架支持推理与微调联合优化。本地模型部署门槛有望降低。",
+          "url": "https://github.com/kvcache-ai/ktransformers"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "Voicebox语音工坊爆红",
+          "summary": "项目主打声音克隆与听写创作。开源语音项目仓库已获43.3k。当日新增📈六百一十颗星。轻量工作流方便创作者快速上手。语音生产工具正加速大众化。",
+          "url": "https://github.com/jamiepine/voicebox"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "Kimi命令行代理开源",
+          "summary": "新工具面向终端编码协作场景。开发者可从月之暗面代码仓库获取源码。项目累计获得9873颗星。当日新增四百一十颗星。1194次分叉显示跟进很快。",
+          "url": "https://github.com/MoonshotAI/kimi-cli"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "WrenAI让企业问数更稳",
+          "summary": "项目面向生成式商业智能需求。企业问数项目仓库已获16.2k。开放语境层📊约束查询生成过程。系统覆盖二十余种企业数据源。可信看板方便团队核验结果。",
+          "url": "https://github.com/Canner/WrenAI"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-07-20",
+          "title": "通义千问3.8开源，参数达2.4万亿",
+          "summary": "阿里巴巴发布了最新开源权重模型通义千问3.8，其参数量高达2.4万亿，团队宣称该模型性能仅次于Fable 5。作为团队首款超万亿参数的多模态模型，它具备处理图像、视频及文档的能力，并计划在解码器深度报道中开放预览体验。在应用场景上，该模型旨在超越前代Qwen 3.7-Max，特别是在全栈开发、数据分析及办公工作流等复杂生产力任务中表现更佳。目前官方尚未公布具体基准测试数据，但开发者可通过Token Plan等渠道以标准价格十分之一的费用进行体验，开源权重预计即将发布。",
+          "url": "https://the-decoder.com/alibabas-qwen-takes-on-kimi-k3-with-open-weight-qwen-3-8-says-model-is-second-only-to-fable-5/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "SQRL模型先查库再写SQL，准确率超Claude",
+          "summary": "Feyn AI推出了SQRL系列文本转SQL模型，其核心创新在于改变传统直接生成查询的模式，转而先检查数据库结构以消除歧义。该模型家族包含4B、9B及35B-A3B三个版本，其中旗舰版在BIRD Dev基准测试中达到70.6%的执行准确率，略高于Claude Opus 4.6的68.77%。SQRL通过读取只读查询结果来辅助决策，仅在遇到模糊问题时才进行数据库探查，从而平衡了推理成本与准确性。目前三个检查点已在Hugging Face开源，支持企业本地部署，解决了传统单步生成易出错而多步流水线成本过高的问题。",
+          "url": "https://www.marktechpost.com/2026/07/19/feyn-ai-releases-sqrl-a-text-to-sql-model-family-that-inspects-the-database-before-writing-a-query/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "DeepMind复用视频生成器实现视觉任务",
+          "summary": "Google DeepMind提出GenCeption模型，利用预训练的视频生成模型执行深度估计、分割及3D姿态估计等传统计算机视觉任务。该模型基于阿里巴巴开源的Wan2.1视频模型构建，通过单一前向传播即可根据文本提示输出多种视觉结果，且训练数据主要依赖仅7500个合成视频。尽管训练数据量远少于专用模型，GenCeption在多项基准测试中仍达到了与Depth Anything 3等专业模型相当甚至更优的效果，并能泛化到未见过的真实场景和物体类别。这一成果支持了视频生成器可作为通用世界模型基础的争议性观点。",
+          "url": "https://the-decoder.com/google-deepmind-argues-video-generators-already-contain-the-world-models-computer-vision-has-been-missing/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "奈飞5.87亿美元收购本·阿弗莱克AI公司",
+          "summary": "Netflix已以5.87亿美元现金完成对InterPositive的收购，该公司由演员兼导演本·阿弗莱克联合创办，专注于利用AI工具优化影视后期制作。InterPositive的技术能够辅助创作者修复拍摄缺陷，例如补拍缺失镜头、替换背景或修正错误灯光，以应对现实拍摄中的挑战。此次收购不仅包含技术团队，本·阿弗莱克本人也将加入奈飞担任高级顾问，此前奈飞已有约300部作品使用了生成式AI技术。这一交易标志着流媒体巨头正加速将AI深度整合进内容生产链条，以应对制作成本与效率的双重压力。",
+          "url": "https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "英伟达联手日本构建主权算力与机器人生态",
+          "summary": "英伟达CEO黄仁勋访日期间，与日本44家企业达成合作，共同推进主权AI战略。日本计划投入1万亿日元建设名为Noetra的AI工厂，部署13750个Vera CPU和27500个Rubin GPU，预计2028年上线。丰田、发那科等巨头将采用英伟达Cosmos模型及Jetson Thor芯片，构建物理智能系统。该合作旨在让日本掌握机器人和工厂的“软件大脑”，同时依赖英伟达硬件支撑，目标是在2040年前实现1000万台AI机器人部署。",
+          "url": "https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "具身智能论坛热议数据门槛与突破时点",
+          "summary": "上海大会聚焦具身智能技术路线，多家团队就技术选择展开讨论。与会专家普遍认为，一亿小时数据是具身智能突破的关键门槛。现场报道指出，机器人技术最快可能在两年后迎来实质性突破。此次论坛汇聚了产业界与学术界力量，共同探讨如何跨越数据瓶颈，推动具身智能从实验室走向实际应用。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652713906&idx=2&sn=4b4f0ab130e460a944473f4d1fcb16e0"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "商汤推出混合推理架构应对智能体需求激增",
+          "summary": "商汤科技披露新架构，以应对智能体需求增长十倍的压力。该方案采用混合推理模式，由国产卡负责预填充任务计算，高端卡承担后续解码环节。新架构旨在将每日产量提升至十万亿词元，以满足大规模智能体部署需求。这一调整反映了国产算力在特定环节的应用潜力，同时也凸显了对高端芯片的持续依赖。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652713906&idx=1&sn=4e843834e26fbf0f675ca8ed0dbfa34f"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "Hugging Face遭自主AI Agent入侵暴露安全短板",
+          "summary": "Hugging Face确认其生产环境遭自主AI Agent端到端入侵，攻击者利用代码执行漏洞横向移动并窃取凭据。防御方利用AI法医分析工具，在数小时内重建了1.7万条攻击记录。调查发现，商业模型因安全护栏限制无法处理此类分析，迫使团队转向自托管开源模型。该事件揭示了攻防不对称风险，自主攻击工具正从理论走向实践。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651342881&idx=1&sn=37c90e299fa86da763303a16cb9175c0&chksm=bc459e552801ec1e3df35bbe7b6b72f6db35ec1c2b9d6bb0e24c6bb0e8f744261b507015517b&scene=0&xtrack=1"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "三星电子预计二季度营业利润激增1800%",
+          "summary": "三星电子发布业绩指引，预计今年4月至6月营业利润将达89.4兆韩元，约为去年同期的19倍，连续第三季度创下历史最高纪录。这一惊人增长主要得益于全球对AI记忆体晶片的强劲需求，导致晶片价格攀升且供应持续吃紧。市场研究机构指出，数据中心的建设需求已深刻影响半导体供应链，预计供应紧张状况将延续至明年。尽管业绩亮眼，三星股价曾因投资者预期更高而短暂下跌，但今年市值已翻倍，与SK海力士共同推动韩国股市大幅上涨。",
+          "url": "https://www.bbc.com/zhongwen/articles/c1jy100x235o/trad"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "世界人工智能大会首设一人公司展区",
+          "summary": "2026年世界人工智能大会首次设立OPC（一人公司）专属展示区，聚焦由AI工具赋能的“超级个体”创业模式。现场展出的机器马具备一吨载重能力，展示了具身智能在特种作业及文旅领域的落地潜力。大会通过独立先锋挑战赛选拔金奖项目，并提供算力补贴，部分项目最高可抵扣一半算力成本。这种模式让个人或小团队能借助AI完成从研发到交付的全流程，上海等地政府正通过政策扶持降低创业门槛，推动产业生态建设。",
+          "url": "https://www.cqnews.net/web/content_1528296033057009664.html"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "异构推理框架KTransformers获18.5k星标",
+          "summary": "开源项目KTransformers在GitHub上获得18.5k星标，当日新增360颗星，该框架专注于利用CPU与GPU异构计算优化大模型推理与微调。项目近期更新支持了MiniMax-M3、GLM-5.2及DeepSeek-V4-Flash等多个主流模型，并提供了针对消费级硬件的性能优化方案。通过引入CPU-GPU专家调度及原生BF16、FP8精度支持，该项目旨在降低本地部署大模型的门槛。其灵活的架构设计使得开发者能在资源受限环境下高效运行复杂模型，推动了边缘侧AI应用的普及。",
+          "url": "https://github.com/kvcache-ai/ktransformers"
+        },
+        {
+          "date": "2026-07-20",
+          "title": "开源语音工坊Voicebox获43.5k星标",
+          "summary": "开源语音项目Voicebox在GitHub上收获43.5k星标，单日新增610颗星，定位为本地优先的AI语音工作室。该项目支持从几秒音频中克隆声音，并在23种语言下通过7个TTS引擎生成语音，同时具备全局热键听写功能。与ElevenLabs等云端服务不同，Voicebox将模型、语音数据及处理流程完全运行在本地，确保用户隐私不被泄露。其轻量级工作流允许创作者快速上手，并支持为MCP智能体赋予自定义声音，加速了语音生产工具的大众化进程。",
+          "url": "https://github.com/jamiepine/voicebox"
         }
       ]
     }
