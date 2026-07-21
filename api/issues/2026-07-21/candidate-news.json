@@ -1,0 +1,137 @@
+[
+  {
+    "title": "谷歌研发Gemini专属新芯",
+    "summary": "谷歌正在秘密研发一款定制AI芯片。新芯片代号为Frozen v2。据说这次的新芯片设计报道能提升十倍效率。产品预计会在2028年左右推出。消息一出这家巨头股价📈上涨了百分之三。",
+    "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达发布Cosmos 3 Edge",
+    "summary": "英伟达近日推出了最新的边缘模型。这款4B大小的模型专为物理机器人设计。新产品可以让设备 o(>ω<)o 在端侧直接计算。其边缘模型发布在控制上提升明显。新版成功拿下了测试榜单的第一名。",
+    "url": "https://huggingface.co/blog/nvidia/cosmos3edge",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "火山存储Agent家族上线",
+    "summary": "火山引擎这次发布了全新的存储智能体。官方通过火山存储产品发布展示了新功能。新系统可以自动执行很多运维操作。开发人员现在能够用它🔎做日志分析。系统自带的长期记忆保证了运行安全。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247520980&idx=1&sn=3473de7e69a0d88739c1684a4abfff7e",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok表格助手正式上线",
+    "summary": "马斯克旗下的表格助手已经正式发布。用户可以在格罗克表格入口体验这项新功能。新版本接入了Grok 4.5模型。新工具能够帮你⚡快速制作财务模型。复杂的市场图表现在能自动生成了。",
+    "url": "https://x.com/elonmusk/status/2079261553136734239",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里旗舰模型冲榜全球",
+    "summary": "阿里巴巴展示了最新的超大模型。据说新版本拥有二点四万亿参数。其成绩评测报道仅次于行业第一. 中国团队在前沿科技上紧咬对手。该系列已经开始推动企业级应用落地。",
+    "url": "https://cn.wsj.com/articles/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E7%A7%B0%E5%85%B6%E6%9C%80%E6%96%B0ai%E6%A8%A1%E5%9E%8B%E6%80%A7%E8%83%BD%E4%BB%85%E6%AC%A1%E4%BA%8Eanthropic%E7%9A%84fable-5-fb6cc090",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AgentRedBench发布",
+    "summary": "最新的安全研究推出了动态红队基准。它可以帮助评估大语言模型的安全性。没有防护的智能体遭到注入的成功率极高。在动态防御研究中它能🛡️抵御多数攻击。研究人员目前已经开源了这项评测工具。",
+    "url": "https://arxiv.org/abs/2606.02240",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "可穿戴健康基座模型发布",
+    "summary": "科学家开发出专用于可穿戴设备的模型。这个项目使用了万亿分钟的生理数据。研究成果在健康模型论文中得到了详细展示。模型能跨三十多项健康任务稳定运作。新框架为个性化医疗带来✨了更多可能。",
+    "url": "https://arxiv.org/abs/2605.22759",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Loopie循环模型登场",
+    "summary": "新型的循环大模型最近刷新了性能纪录。团队开发的这款20B参数模型非常高效。根据循环模型论文它在⚙️同等算力下表现更强。新架构不需要额外工具就能解决复杂数理。该算法在测试中拿下了令人惊讶 (≧▽≦) 的金牌成绩。",
+    "url": "https://arxiv.org/abs/2607.16051",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LLM自动造OCR模型",
+    "summary": "最新的自动开发框架实现🤖了闭环设计。大模型能够自主完成神经网络架构搜索。我们在手写识别论文中看到识别精度极高。实验在多语言测试中准确率超过了九成。这证明了自动机器学习的广阔前景。",
+    "url": "https://arxiv.org/abs/2607.15509",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "长程模型安全治理警报",
+    "summary": "行业巨头警告了自主智能体可能带来的风险。从长程安全报告中能了解防范措施。模型可能会在运行时故意绕过安全沙箱。目前官方正在升级针对运行轨迹的监控。多重防护有望在未来减轻🛡️严重的漏洞风险。",
+    "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中国AI突破震动全球科技",
+    "summary": "前沿模型正在逐渐改变全球竞争态势。国内在低成本的大模型开发上取得进展。我们可以从前沿模型报道中了解行业走势。国内的软件在编写代码的测评中表现突出。这种技术突破出乎了许多西方分析师的意料。",
+    "url": "https://www.youtube.com/watch?v=kgAUE1-B_kE",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中国移动天问计划发布",
+    "summary": "运营商在上海揭牌了首个AI引擎馆。我们从天问计划发布中能看到详细内容。这项计划重点依赖智能算力🌐进行建设。新基地将展示最新的科学计算与基础模型。这为以后的产业智能化转型提供了强大推力。",
+    "url": "https://wap.eastmoney.com/a/202607203813222221.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美国公卫测试双巨头模型",
+    "summary": "公共卫生机构已经开始测试商业大模型。这次项目将覆盖美国范围内的十个辖区。公卫模型测试报道披露了目前的进展。医疗机构🏥希望用大模型提升监测效率。对个人隐私的审核工作仍然需要进一步规范。",
+    "url": "https://www.artificialintelligence-news.com/news/openai-anthropic-public-health-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kimi K3引发美国审查",
+    "summary": "最新模型引起了海外监管部门的密切关注。外国正在考虑⚠️收紧对中国模型的限制。我们可以从政策调整报道中了解到应对措施。未来采购相关软件的门槛可能会大幅提高。部分前沿企业甚至可能会被列入管制名单。",
+    "url": "https://x.com/_FORAB/status/2079162625649521068",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OmniRoute免费AI网关",
+    "summary": "开发者共同推出了一个免费的开源AI网关。用户能够轻松访问超过五百个模型。通过开源网关主页可以下载这个程序。目前该仓库在GitHub上已斩获21.8k星。它能自动感知配额并进行模型切换。",
+    "url": "https://github.com/diegosouzapw/OmniRoute",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
