@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-07-21",
-  "content_date": "2026-07-21",
-  "published_at": "2026-07-21T04:19:26.596205+00:00",
+  "issue_date": "2026-07-22",
+  "content_date": "2026-07-22",
+  "published_at": "2026-07-22T04:16:40.959390+00:00",
   "article_count": 12,
-  "podcast_turns": 20,
+  "podcast_turns": 16,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -42,31 +42,30 @@
         "usage": {}
       },
       "podcast": {
-        "model": "nvidia:z-ai/glm-5.2",
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
         "usage": {}
       },
       "podcast_review": {
-        "model": "nvidia:z-ai/glm-5.2",
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
         "usage": {}
       },
       "podcast_attempts": [
         {
           "attempt": 1,
           "generation": {
-            "model": "nvidia:z-ai/glm-5.2",
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
             "usage": {}
           },
           "structure_issues": [],
           "review": {
             "pass": true,
             "issues": [
-              "对话覆盖了全部12条新闻，远超5-7条的建议范围，导致多数话题仅一笔带过（如可穿戴健康模型、Loopie、中国移动天问计划各只有半轮讨论），信息密度不足",
-              "最后两轮（19-20）均为总结性收尾，缺乏新信息或观点碰撞，更像套话式结语而非自然讨论",
-              "S1第3轮提到'仅次于Anthropic'，但该机构名仅出现在日报URL中，summary和review均写'仅次于行业领先者'，存在从URL提取具体机构名的风险"
+              "轮次为16轮，略低于建议的18-22轮，节奏稍显紧凑。",
+              "讨论覆盖了11条新闻，超出建议的5-7条，部分新闻讨论较浅，焦点不够集中。"
             ],
-            "repair_instruction": "1) 精简至6-7条核心新闻展开讨论，建议重点保留：谷歌Frozen v2、OmniRoute、Cosmos 3 Edge、AgentRedBench、Grok for Excel、火山引擎存储智能体；可穿戴健康模型、Loopie、天问计划等可一句话带过或直接删去，腾出轮次给重点话题做更深入的追问和分歧。2) 将最后两轮合并为一轮自然收尾，或替换为对某个重点话题的补充判断，避免双轮纯总结。3) S1第3轮'仅次于Anthropic'改为'仅次于行业领先者'，与日报summary表述保持一致。"
+            "repair_instruction": "建议在现有对话基础上增加2-3轮，对其中2-3条核心新闻（如多智能体安全漏洞、通义千问图像3.0或反洗钱系统）进行更深入的追问或分歧探讨，同时将部分关联性较弱的新闻（如自动驾驶长尾数据）合并或精简，使总轮次达到18-22轮，并确保讨论围绕5-7条重点新闻展开。"
           },
-          "review_model": "nvidia:z-ai/glm-5.2",
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
           "review_usage": {}
         }
       ],
@@ -75,9 +74,8 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "对话覆盖了全部12条新闻，远超5-7条的建议范围，导致多数话题仅一笔带过（如可穿戴健康模型、Loopie、中国移动天问计划各只有半轮讨论），信息密度不足",
-          "最后两轮（19-20）均为总结性收尾，缺乏新信息或观点碰撞，更像套话式结语而非自然讨论",
-          "S1第3轮提到'仅次于Anthropic'，但该机构名仅出现在日报URL中，summary和review均写'仅次于行业领先者'，存在从URL提取具体机构名的风险"
+          "轮次为16轮，略低于建议的18-22轮，节奏稍显紧凑。",
+          "讨论覆盖了11条新闻，超出建议的5-7条，部分新闻讨论较浅，焦点不够集中。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -85,16 +83,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-21/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-21/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-21/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-21/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-21.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-21/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-21/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-21.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-21/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-21.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-21.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-21.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-22.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-22.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-22.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-22.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-22.mp4"
 }
