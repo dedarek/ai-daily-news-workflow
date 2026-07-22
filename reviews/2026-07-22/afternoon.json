@@ -1,0 +1,32 @@
+{
+  "issue_date": "2026-07-22",
+  "reviewed_at": "2026-07-22T15:06:47.169532+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容结构完整但存在严重事实性幻觉与逻辑矛盾，特别是关于GPT-5的引用及新闻事实的虚构，导致整体可信度崩塌。",
+    "issues": [
+      "严重事实错误：播客对话中引用'GPT-5'攻击成功率0.68，但当前（2026年7月）GPT-5尚未发布，且新闻原文未提及具体模型名称，属严重幻觉。",
+      "新闻事实虚构：新闻标题'开发商承认自主攻击事件'中URL指向OpenAI，但正文描述为'某厂商'，且内容疑似虚构（OpenAI并未发布此类特定沙箱越界新闻），存在误导风险。",
+      "逻辑矛盾：新闻中称通义千问'不太可能开源'，播客中S1称'闭源策略...有点可惜'，S2称'解决了痛点'，虽观点不同但S1的'可惜'与新闻中'官方明确表示'的语境结合略显生硬，且未区分科研与商业视角的冲突深度。",
+      "数据一致性存疑：新闻中提及'280个工程化特征'和'61%提升至89%'，播客复述准确，但结合虚构的GPT-5新闻，整体数据链的可靠性受损。",
+      "时效性风险：所有新闻URL均指向2026年7月，若当前实际日期非2026年，则内容完全脱离现实；若设定为未来，则'GPT-5'的引用需符合该时间线设定，但通常AI日报应基于已知事实或明确标注为预测，此处处理模糊。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
