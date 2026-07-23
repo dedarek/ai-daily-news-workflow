@@ -1,0 +1,31 @@
+{
+  "issue_date": "2026-07-23",
+  "reviewed_at": "2026-07-23T14:45:22.690356+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容逻辑通顺且覆盖全面，但存在严重的事实性幻觉（虚构未来日期与未发生事件）及播客对话机械拼接问题，导致整体可信度与质量大幅下降。",
+    "issues": [
+      "严重事实性错误：新闻与播客内容基于2026年7月的虚构未来事件（如OpenAI 7500亿基建、Anthropic 15亿和解、月之暗面被制裁等），当前时间点无法验证，属于严重的幻觉生成。",
+      "播客质量缺陷：对话呈现明显的‘报幕式’拼接，两人轮流复述新闻摘要，缺乏自然的观点交锋、追问或情感互动，不符合‘自然双人对话’标准。",
+      "逻辑一致性风险：将虚构的未来事件作为既定事实进行‘锐评’和‘分析’，导致锐评与新闻之间的逻辑建立在虚假前提上。",
+      "重复观点：播客中多次重复‘高昂成本’、‘安全漏洞’、‘人为失误’等观点，缺乏深度递进。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
