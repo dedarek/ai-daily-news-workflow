@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-07-22",
-  "content_date": "2026-07-22",
-  "published_at": "2026-07-22T04:16:40.959390+00:00",
+  "issue_date": "2026-07-23",
+  "content_date": "2026-07-23",
+  "published_at": "2026-07-23T05:09:57.715222+00:00",
   "article_count": 12,
-  "podcast_turns": 16,
+  "podcast_turns": 20,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -17,7 +17,7 @@
       "z-ai/glm-5.2"
     ],
     "endpoint": "https://integrate.api.nvidia.com/v1",
-    "calls": 17,
+    "calls": 13,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -42,40 +42,101 @@
         "usage": {}
       },
       "podcast": {
-        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "model": "lenovo:qwen35-122b-a10b-fp8",
         "usage": {}
       },
       "podcast_review": {
-        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+        "model": "lenovo:qwen35-122b-a10b-fp8",
         "usage": {}
       },
       "podcast_attempts": [
         {
           "attempt": 1,
           "generation": {
-            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话共20轮，符合18-22轮的建议范围，但内容密度分布不均，部分轮次信息量偏低。",
+              "S1切入话题略显生硬：首句直接抛出宏观矛盾，缺乏自然引入，建议增加一句简短的过渡或背景铺垫。",
+              "部分轮次字数偏少：如S2第18轮（关于worldmonitor）仅约45字，虽在35-95字范围内，但信息密度较低，建议补充具体应用场景或风险提示。",
+              "缺乏明显分歧或追问：整体对话偏向共识推进，缺少对某一观点的质疑或深入追问，建议在某处增加S1或S2的反对意见或挑战性问题。",
+              "未充分展开NexForge与CWind的技术细节：这两项前沿研究仅一笔带过，建议增加一句解释其核心机制或实验数据，以增强信息量。"
+            ],
+            "repair_instruction": "1. 在S1首句前增加一句自然过渡，如'今天AI圈最热的两个话题，一个是英伟达的芯片，一个是OpenAI的基建'，使切入更自然。2. 在S2第18轮补充worldmonitor的实际应用案例或数据延迟的具体影响，提升信息量。3. 在S1第15轮后增加S2对NexForge的质疑，如'自动生成任务真的能覆盖真实世界的复杂性吗？'，制造分歧。4. 在S1第14轮和S2第15轮中，分别补充CWind的调度机制细节和NexForge的实验数据，增强技术深度。5. 检查所有轮次字数，确保每轮在40-90字之间，避免过短或过长。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量超标：当前对话共21轮，符合18-22轮建议范围，但S1和S2的结尾部分（最后两轮）明显带有总结陈词性质，略显生硬，不够自然。",
+              "内容衔接生硬：S1在讨论TARA框架后，突然转折到美国财政部制裁月之暗面，缺乏逻辑过渡，显得话题跳跃。",
+              "信息密度不均：部分轮次（如S2关于worldmonitor的描述）信息量偏少，仅复述摘要，缺乏深度追问或补充。",
+              "事实准确性风险：S1提到“实测在64-GPU上把P99延迟降低了52%，还能减少98%的延迟波动”，原文仅提到“减少98%的延迟”，未明确是“波动”，存在过度解读风险。"
+            ],
+            "repair_instruction": "1. 调整S1从TARA框架到月之暗面制裁的过渡，增加如‘技术优化之外，地缘政治也在影响AI发展’等连接句。2. 精简S2关于worldmonitor的发言，补充其局限性或实际应用场景的追问，避免单纯复述。3. 修正S1关于CWind框架的表述，将‘减少98%的延迟波动’改为‘减少98%的延迟’，严格依据日报原文。4. 重写最后两轮，去除总结性陈词，改为S1或S2提出一个开放性问题或对未来趋势的简短推测，使结尾更自然。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 3,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话共20轮，符合18-22轮建议，但需检查内容密度。",
+              "字数过短：S1第1轮（49字）、S2第2轮（53字）等部分轮次字数在35-95字范围内，但S1第15轮（46字）和S2第16轮（48字）略显单薄，需确认是否影响口播流畅度。",
+              "事实准确性存疑：S2第8轮提到CWind框架'减少98%的延迟'，日报原文为'相比传统方案减少98%的延迟'，此处表述可能引起歧义，需明确是'端到端延迟降低52%'还是'相比传统方案减少98%的延迟'。",
+              "结构问题：S1第15轮和S2第16轮关于日本物理AI和worldmonitor项目的讨论略显跳跃，缺乏自然过渡。"
+            ],
+            "repair_instruction": "1. 修正S2第8轮关于CWind框架延迟数据的表述，明确'相比传统方案减少98%的延迟'的具体含义。2. 在S1第15轮和S2第16轮之间增加过渡句，使日本物理AI和worldmonitor项目的讨论更自然。3. 检查所有轮次字数，确保每轮发言在35-95字范围内，避免过短或过长。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 4,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
             "usage": {}
           },
           "structure_issues": [],
           "review": {
             "pass": true,
             "issues": [
-              "轮次为16轮，略低于建议的18-22轮，节奏稍显紧凑。",
-              "讨论覆盖了11条新闻，超出建议的5-7条，部分新闻讨论较浅，焦点不够集中。"
+              "轮次为20轮，符合18-22轮建议范围，但S1在轮次13和15的发言略显跳跃，从日本物理AI直接跳到TARA框架，缺乏更自然的过渡衔接。",
+              "S2在轮次14对TARA框架的引入稍显突兀，前文讨论的是机器人落地成本，突然转向文生图提示词优化，话题转换可更平滑。"
             ],
-            "repair_instruction": "建议在现有对话基础上增加2-3轮，对其中2-3条核心新闻（如多智能体安全漏洞、通义千问图像3.0或反洗钱系统）进行更深入的追问或分歧探讨，同时将部分关联性较弱的新闻（如自动驾驶长尾数据）合并或精简，使总轮次达到18-22轮，并确保讨论围绕5-7条重点新闻展开。"
+            "repair_instruction": "建议在S1第13轮发言末尾增加一句过渡，如‘除了硬件部署，软件层面的提示词优化也在提升效率’，再引出TARA框架；同时S2在第14轮可先回应机器人‘懂’的需求，再自然引入TARA作为解决语义理解问题的工具，使话题流转更连贯。"
           },
-          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
           "review_usage": {}
         }
       ],
       "podcast_harness": {
-        "attempts": 1,
-        "best_attempt": 1,
+        "attempts": 4,
+        "best_attempt": 4,
         "final_pass": true,
         "final_issues": [
-          "轮次为16轮，略低于建议的18-22轮，节奏稍显紧凑。",
-          "讨论覆盖了11条新闻，超出建议的5-7条，部分新闻讨论较浅，焦点不够集中。"
+          "轮次为20轮，符合18-22轮建议范围，但S1在轮次13和15的发言略显跳跃，从日本物理AI直接跳到TARA框架，缺乏更自然的过渡衔接。",
+          "S2在轮次14对TARA框架的引入稍显突兀，前文讨论的是机器人落地成本，突然转向文生图提示词优化，话题转换可更平滑。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -83,16 +144,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-22.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-22.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-22/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-22.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-22.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-22.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-23/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-23/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-23/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-23/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-23.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-23/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-23/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-23.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-23/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-23.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-23.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-23.mp4"
 }
