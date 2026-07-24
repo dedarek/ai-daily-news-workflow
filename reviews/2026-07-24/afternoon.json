@@ -1,0 +1,30 @@
+{
+  "issue_date": "2026-07-24",
+  "reviewed_at": "2026-07-24T14:45:38.762694+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 85,
+    "summary": "内容整体质量高，逻辑连贯，但播客稿存在严重事实性错误，将新闻中的'OpenAI Presence'误读为'OpenAI推出的Presence'，且对话中未提及该新闻，导致关键信息缺失与事实偏差。",
+    "issues": [
+      "播客稿中S1提到'OpenAI推出的Presence'，但实际新闻标题为'OpenAI推出Presence'，且对话中未正确引用该新闻内容，导致事实性错误。",
+      "播客稿未覆盖'OpenAI推出Presence'这一重要新闻，导致内容完整性不足。",
+      "播客稿中部分对话略显模板化，如'从算力基建到应用落地，再到安全和隐私'等总结性语句缺乏具体细节支撑。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
