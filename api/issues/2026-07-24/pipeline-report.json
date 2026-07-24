@@ -1,0 +1,153 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-07-24",
+  "content_date": "2026-07-24",
+  "source_url": "https://hex2077.dev/docs/2026-07/2026-07-24/",
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 15,
+  "candidate_data_file": "candidate-news-2026-07-24.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 9,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量超标：当前对话共22轮，处于建议的18-22轮范围内，但结尾两轮（S1总结、S2升华）属于典型的“固定寒暄/总结”模式，缺乏实质性信息增量，且S1开场过于生硬，缺乏自然切入感。",
+              "开场生硬：S1第一句“今天算力基建的战场彻底变了”属于典型的AI生成式开场，缺乏真实播客主持人自然引入话题的过渡（如“刚看到一条重磅消息”或“今天有个大新闻”）。",
+              "结尾套路化：最后两轮（S1和S2）是对全篇的机械式总结，未体现真实讨论中的分歧、追问或具体判断，属于无效轮次。",
+              "信息密度不均：部分轮次（如S2关于Grok 4.5的评论）仅复述事实，缺乏深度追问或与其他新闻的关联分析。"
+            ],
+            "repair_instruction": "1. 重写S1首句：删除“今天算力基建的战场彻底变了”这种宏大叙事开场，改为更自然的引入，例如“刚看到AMD在旧金山的大会上直接甩出了Helios整机柜系统，这招明显是冲着英伟达来的。”\n2. 删除最后两轮（S1和S2的总结性发言），将对话控制在20轮以内，确保每一轮都有实质性的信息增量、追问或观点碰撞。\n3. 优化中间轮次：在讨论Grok 4.5或Flux 3时，增加一句具体的质疑或与其他新闻（如API路由黑箱）的关联，避免单纯复述摘要。\n4. 检查字数：确保每轮发言在35-95字之间，避免过短或过长。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [],
+            "repair_instruction": ""
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 2,
+        "best_attempt": 2,
+        "final_pass": true,
+        "final_issues": [],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今日新闻显示AI正从单点能力向全栈代理演进：算力竞争升级至机柜级，多模态与语音交互深化任务执行，企业级治理工具同步跟进。然而，模型路由黑箱引发合规危机，医疗建议嵌入聊天界面加剧责任风险，技术突破与落地隐患并存，行业亟需在加速代理化进程中重构安全与信任机制。",
+  "podcast_turns": 20,
+  "podcast_script_file": "podcast-script-2026-07-24.json",
+  "podcast_script_text_file": "podcast-script-2026-07-24.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-07-24.txt",
+  "voice_file": "voice-2026-07-24.json",
+  "voice_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_synthesis_mode": "external_video_api",
+  "voice_timing_source": "estimated_text_weight",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_leading_silence_seconds": 0,
+  "tts_reference_files": null,
+  "video_api": {
+    "provider": "video-api",
+    "base_url": "http://8.137.39.142:8011/video-api/api",
+    "job_id": "b531a9a2-fca3-4255-8f8a-a36fc3498453",
+    "submit_response": {
+      "job_id": "b531a9a2-fca3-4255-8f8a-a36fc3498453",
+      "job_type": "video",
+      "status": "running",
+      "created_at": "2026-07-24T04:01:00.061Z",
+      "updated_at": "2026-07-24T04:01:00.061Z",
+      "started_at": "2026-07-24T04:01:00.061Z",
+      "finished_at": null,
+      "day": "2026-07-24-1200",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": null,
+      "download_url": null,
+      "error": null
+    },
+    "final_response": {
+      "job_id": "b531a9a2-fca3-4255-8f8a-a36fc3498453",
+      "job_type": "video",
+      "status": "succeeded",
+      "created_at": "2026-07-24T04:01:00.061Z",
+      "updated_at": "2026-07-24T04:07:45.800Z",
+      "started_at": "2026-07-24T04:01:00.061Z",
+      "finished_at": "2026-07-24T04:07:45.800Z",
+      "day": "2026-07-24-1200",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": 405.74,
+      "download_url": "/api/jobs/b531a9a2-fca3-4255-8f8a-a36fc3498453/download",
+      "error": null
+    },
+    "zip_file": "video-api-result-2026-07-24.zip",
+    "video_file": "ai-daily-news-video-2026-07-24.mp4"
+  },
+  "html_bytes": 26111,
+  "podcast_bytes": 5137965,
+  "video_bytes": 19806600,
+  "podcast_duration_seconds": 256.87
+}

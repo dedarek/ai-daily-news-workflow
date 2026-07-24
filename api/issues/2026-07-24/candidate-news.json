@@ -1,0 +1,137 @@
+[
+  {
+    "title": "AMD Helios机柜系统直指英伟达",
+    "summary": "继英伟达垄断芯片市场后，苏姿丰放出大招。芯片巨头AMD ⚙️ 正式推出机柜级系统。微软等云端客户今年底就会首批接收。看英伟达对手机柜详情（AI资讯）了解参数。恐怖的算力集群简直 ヽ(°〇°)ﾉ 令人吃惊。",
+    "url": "https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Andrew Ng发布OpenWorker助手",
+    "summary": "继大模型聊天风潮后，工作流迎来实质变革。吴恩达发布开源本地桌面智能体 ✨ 工具。它可以直接交付最终成品而不是陪人聊天。用户可以通过开源本地桌面助手项目直接试用。新成果 (＠_＠) 让对话助手变成历史。",
+    "url": "https://github.com/andrewyng/openworker",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT健康功能面向美国开放",
+    "summary": "继测试版取得成功后，医疗服务迎来大普及。医疗助手ChatGPT Health 🩺 已全面上线。苹果健康等用户私密数据均可接入其中。看全美上线健康功能详情（AI资讯）了解详情。周问诊量突飞猛进，前景 w(ﾟД)w 让人期待。",
+    "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude语音模式升级Opus",
+    "summary": "继此前仅支持低阶模型后，语音版迎来升级。最强Opus和Sonnet已支持语音对话。深度互动能力 🗣️ 让办公协作更加顺畅。可参考语音功能官方最新报道获取细节。极致流畅的体验简直 o(≧▽≦)o 让人惊叹。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Flux 3原生音视频模型发布",
+    "summary": "继前代图像生成爆火后，多模态新版登场。团队发布全新多模态大模型Flux 3。它可以直接生成🎞️带原生音频的炫酷视频。最长二十秒的生成能力让人 ヽ(>∀<)ﾉ 直呼过瘾。详情可查阅音视频新模型发布详情。",
+    "url": "https://the-decoder.com/flux-3-generates-videos-with-native-audio-up-to-20-seconds-long-a-first-for-black-forest-labs/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Runway发布多模态媒体路由器",
+    "summary": "继生成式媒体运用于设计后，路由器上线。团队正式推出媒体路由工具管理系统。引擎可根据⚙️成本自动匹配最佳生成模型。可查阅媒体路由器最新独家报道了解方案。一站式管理让创作者 (⌒‿⌒) 大省心。",
+    "url": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok 4.5全平台上线",
+    "summary": "Grok发布4.5模型，称能力最强。新版据grok官方消息已登官网与X。iOS和安卓📱应用同步开放。多端覆盖或加速用户迁移。",
+    "url": "https://x.com/elonmusk/status/2080351573675544984",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI推出Presence",
+    "summary": "Presence盯住企业代理。企业代理治理要点称可接系统。用权限🛡️预防乱操作。先测难单再升级人工。语音聊天代理先开放。",
+    "url": "https://openai.com/index/introducing-openai-presence/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SGF算法突破长视频生成瓶颈",
+    "summary": "继短视频生成技术成熟后，长视频迎来突破。全新SGF算法有效补充了上下文记忆。团队在自梯度强制技术研究论文中提出新架构. 机制通过🧠反向训练写入了未来的记忆。数分钟稳定生成的成果 (￣▽￣) 已经实现。",
+    "url": "https://huggingface.co/papers/2607.20368",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "RIPO算法破解大模型探索坍塌",
+    "summary": "继强化学习在推理中普及后，坍塌难题被破。几何错配 🧭 经常导致传统剪裁陷入死胡同。团队在等距策略优化研究论文中探讨了方案。等距更新的方式让参数训练过程变得平稳。成功率最高暴涨了六成确实 (☆▽☆) 喜人。",
+    "url": "https://huggingface.co/papers/2607.10169",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "FVAttn自注意力系统加速视频生成",
+    "summary": "继自注意力机制遭遇瓶颈后，硬件开销大减。系统可以有效平摊 ⚖️ 显卡之间的计算压力。详情可以在稀疏自注意力研究论文中找到解析。推理速度飙升两倍多，画质依旧极其平稳。加速成果 o(>ω<)o 让开发者欢欣鼓舞。",
+    "url": "https://huggingface.co/papers/2607.16190",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DocOps文档操作基准发布",
+    "summary": "继智能体评测基准失效后，新版测试集公布。全面针对文档复杂操作的 🧪 可验证式评估。可访问文档操作基准学术论文获取具体信息。测试表明多数智能体仍在长程任务中迷失。目前的代理安全漏洞 ⊙﹏⊙ 不容忽视。",
+    "url": "https://huggingface.co/papers/2607.19865",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "路由黑箱揭示API模型替换问题",
+    "summary": "继闭源大模型爆发后，接口透明度饱受质疑。部分平台被爆出使用低级模型 ⚙️ 悄悄替换。阅读模型合规追踪报告（AI资讯）掌握内幕。量化推理导致接口返回的质量大打折扣。路由黑箱让客户 (︶^︶) 体验大打折扣。",
+    "url": "https://www.marktechpost.com/2026/07/23/you-didnt-get-the-ai-model-you-paid-for/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "安全公司AegisAI获大额融资",
+    "summary": "继生成式钓鱼邮件猖獗后，防护层迎来升级。团队获三千六百万美元投资防范袭击。可阅读防钓鱼安全网最新报道。前谷歌高管创办的新盾牌 🛡️ 能够看穿陷阱。反钓鱼成效 ٩(◕‿◕)۶ 受到大客户肯定。",
+    "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AMD联手Anthropic巨额押注算力",
+    "summary": "继云巨头争相建数据中心后，双方达成结盟。团队拟出资五十亿美金押注大模型研发。可在算力合作细节讨论帖子看网友热议。双方合作部署 ⚡ 两吉瓦显卡机柜支撑训练. 芯片争霸局面 ヽ(°〇°)ﾉ 变得愈发胶着。",
+    "url": "https://www.reddit.com/r/artificial/comments/1v4c3ve/amd_partners_with_claude_creators_anthropic/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
