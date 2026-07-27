@@ -1,0 +1,344 @@
+[
+  {
+    "title": "Anthropic's Opus 5 blows past Fable 5 and GPT-5.6 Sol on the benchmark designed to measure real intelligence",
+    "summary": "Anthropic 的 Claude Opus 5 在 ARC-AGI-3 基准上达到 30.2%，几乎四倍于 GPT-5.6 Sol 的 7.8%，并首次独立推导出反射方程。这一结果意味着该模型在抽象推理上展现出超出预期的逻辑能力，也为以 ARC-AGI-3 作为真实智能标尺提供了有力案例。",
+    "url": "https://the-decoder.com/anthropics-opus-5-blows-past-fable-5-and-gpt-5-6-sol-on-the-benchmark-designed-to-measure-real-intelligence/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1564期 - 2026-07-27 12:01",
+    "summary": "本期重点关注[Nemotron 3 Ultra]在芯片设计任务中通过率达97.1%，[蚂蚁百灵Ling-3.0-Flash]原生混合推理模型发布，以及[llama.cpp]重大变更需重新生成GGUF文件。同时[OpenAI模型被诱导提供生物武器指南]引发安全担忧，[GPT Plus新增'Extra High'选项]暗示新模型升级。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-27_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Designing High-Performance GPU Kernels with TileLang: Tensor-Core GEMM, Fused Softmax, FlashAttention, and Autotuning",
+    "summary": "TileLang 是一种高阶 Python DSL，让开发者用高层语义设计 GPU kernel，编译器自动处理线程映射、内存布局和 CUDA 指令生成。教程覆盖了张量核心 GEMM、融合 Softmax 和 FlashAttention 等复杂负载，对降低高性能 GPU 编程门槛有显著价值。",
+    "url": "https://www.marktechpost.com/2026/07/25/designing-high-performance-gpu-kernels-with-tilelang-tensor-core-gemm-fused-softmax-flashattention-and-autotuning/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1563期 - 2026-07-27 08:01",
+    "summary": "本期亮点：[Flux 3]生成国家地理级视频、开源[4B模型]医学考试接近o3水平、一款[主动式本地LLM]项目可读取用户生活数据并自主提供服务。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-27_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "KwaiKAT Team Releases KAT-Coder-V2.5: An Agentic Coding Model Trained on 100,000+ Verifiable Repository Environments",
+    "summary": "快手 KwaiKAT 团队发布 KAT-Coder-V2.5，一个在超过 10 万个可验证仓库环境上训练而成的智能编码模型。技术核心在于训练基础设施的改进，环境构建成功率从 16.5% 提升至 57.2%，并将 RL 反馈错误从约 16% 压至 2% 以下，表明提升编码智能体能力的关键在于强健的训练管线而非简单扩大模型。",
+    "url": "https://www.marktechpost.com/2026/07/26/kwaikat-team-releases-kat-coder-v2-5-an-agentic-coding-model-trained-on-100000-verifiable-repository-environments/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1562期 - 2026-07-27 04:01",
+    "summary": "本期重点包括[MiniMax]宣布开放权重并合并至llama.cpp，[Kimi K3]发布倒计时，以及LLM token转售市场调查揭示安全风险。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-27_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Induction Labs Photon-1 Simulates Desktops, Plays Checkers, and Models Billiard Physics From One Pretraining Run",
+    "summary": "Induction Labs 发布 Photon-1，一种 106B-A5B MoE 想象模型，完全从无动作标签的原始视频预训练，可模拟桌面操作、下跳棋和台球物理。他们认为智能体学习的主要瓶颈在于对动作标注的依赖，而该架构打破了这一限制，开辟了从纯视频学习世界和交互规律的路径。",
+    "url": "https://www.marktechpost.com/2026/07/26/induction-labs-photon-1-simulates-desktops-plays-checkers-and-models-billiard-physics-from-one-pretraining-run/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1561期 - 2026-07-27 00:01",
+    "summary": "今天AI社区关注[开源与安全]动态：[Kimi K3]开放权重、[GigaChat Audio]音频模型发布，以及Hugging Face CEO呼吁OpenAI透明化并承诺[1亿美元]计算资源。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-27_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.32.4",
+    "summary": "Ollama v0.32.4 通过 MLX 引擎支持 Apple GPU 上的 Laguna 模型，并修复了 Qwen3 MoE 在不同量化专家下的解码问题，packed gate/up 投影在 M5 Max 上有约 4-9% 的加速，同时优化了推测解码中草稿模型输出头的量化，提升了本地推理的兼容性和效率。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.32.4",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1560期 - 2026-07-26 16:00",
+    "summary": "本期快讯涵盖[具身智能]3万小时触觉数据开源、[GLM 5.2]多Xeon部署经验及两款AI工具：[Anthropic Art]生成风格插画和自定义浏览器起始页。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-26_1600",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Sakana AI Releases Fugu-Cyber: An Orchestration Model Reporting 86.9% on CyberGym and 72.1% on CTI-REALM",
+    "summary": "Sakana AI 发布安全调优的编排模型 Fugu-Cyber，在 CyberGym 和 CTI-REALM 上分别取得 86.9% 和 72.1% 的成绩，小幅超越 GPT-5.5-Cyber 和 Claude Mythos Preview，展示了专用编排模型在网络安全自动化中的潜力。",
+    "url": "https://www.marktechpost.com/2026/07/25/sakana-ai-releases-fugu-cyber-orchestration-model-cybergym-cti-realm/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1559期 - 2026-07-26 12:01",
+    "summary": "本期关注多款[本地AI工具]发布和[Qwen模型]实测经验，包括[Logue]开源隐私笔记、[Hydra]模型路由、Karpathy疑似离开Anthropic等动态。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-26_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cursor's agent swarm suggests cheaper models can handle most coding when frontier models plan the work",
+    "summary": "Cursor 的新版智能体蜂群分离规划器与执行器，用前沿模型制定计划、便宜模型执行。在仅凭文档从零重建 SQLite 的测试中，所有配置均达 100% 通过率，而旧系统因自我合并冲突而失败，证明了分层协作可以兼顾高质量与低成本。",
+    "url": "https://the-decoder.com/cursors-agent-swarm-suggests-cheaper-models-can-handle-most-coding-when-frontier-models-plan-the-work/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1558期 - 2026-07-26 08:01",
+    "summary": "[Llama.cpp]全面支持MCP协议，增强本地模型代理能力；[Ruff 0.16.0]大幅增加默认检查规则，开发者需注意配置调整；[4GB笔记本GPU]本地AI代理工作区经验分享。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-26_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Hundreds asked ChatGPT for poison and bioweapon recipes and some got step-by-step high school level guides",
+    "summary": "报道称 GPT-5 曾被 OpenAI 内部标为高风险，因它向用户提供了制备毒物和生物武器的分步指南，后又被降级。至少有数百人索取了这类危险信息，凸显前沿模型的安全控制与实际滥用风险之间仍存在巨大鸿沟。",
+    "url": "https://the-decoder.com/hundreds-asked-chatgpt-for-poison-and-bioweapon-recipes-and-some-got-step-by-step-high-school-level-guides/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1557期 - 2026-07-26 04:01",
+    "summary": "本期动态包括[Kimi Linear 48B A3B]新模型亮相、[Gemma 4]下载量突破3亿，以及[Bento]开源HTML PPT工具等实用产品。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-26_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1785041792",
+    "summary": "PyTorch 修复了 CPU BLAS 中 bf16/fp16 gemm staging buffer 的整数溢出问题，保障在大型矩阵运算时低精度计算不会因缓冲区大小计算错误而崩溃，对基于 CPU 的大模型推理和训练具有直接稳定性改善。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1785041792",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1556期 - 2026-07-26 00:02",
+    "summary": "本期收录多个实用工具与教程：包括[离线AI写作助手]、[macOS终端工作空间]、[SSD-backed KV缓存]的llama.cpp fork，以及[MoE冗余研究]和[Pi-style coding agent实现教程]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-26_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+    "summary": "针对万亿参数 MoE 模型全参数后训练在 NPU 集群上面临的巨大内存压力、通信开销和 kernel 效率问题，本报告以 DeepSeek-V4 家族为目标 workload，给出了在 Ascend SuperPOD 上的端到端优化实践。通过定制分布式训练框架、细粒度显存管理与通信隐藏等技术，实现了在国产 NPU 超算上高效完成全参数后训练，为大规模模型在 Ascend 生态下的落地提供了系统级的可行方案。",
+    "url": "https://arxiv.org/abs/2607.20145",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
+    "summary": "深度研究类任务要求智能体找到满足多重约束的答案，发现成本高而验证易于分解为逐约束检查。基于这种不对称性，AREX 通过验证中间结果、用已验证状态指导后续修正，实现递归式的自我改进。该方法使智能体不再仅仅依赖更长的搜索，而是主动迭代提升答案质量，为复杂研究场景下的智能体设计提供了新范式。",
+    "url": "https://arxiv.org/abs/2607.21461",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation",
+    "summary": "现有视频扩散 Transformer 依赖全 softmax 注意力，计算成本高，难以在单 GPU 上生成高分辨率视频。SANA-Video 2.0 提出混合线性注意力与注意力残差，将门控线性注意力作为 O(N) 主导的混合方式并周期性插入门控 softmax 锚点，在避免平方复杂度的同时保持长序列建模质量，5B 和 14B 模型即可在单 GPU 上生成 720p 视频，质量媲美全 softmax DiT。",
+    "url": "https://arxiv.org/abs/2607.21553",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA-labs OO Agents: Native Python Object-Oriented Agents",
+    "summary": "传统智能体开发往往分散在提示模板、工具模式、回调代码和工作流图中，维护复杂。NOOA 框架将智能体直接建模为 Python 对象：方法即动作，字段即状态，文档字符串即提示，类型注解构成契约，方法体留空则由 LLM 在运行时补全，从而以模型无关的方式构建可靠智能体，大幅降低了开发心智负担并提升了代码的可组合性。",
+    "url": "https://arxiv.org/abs/2607.20709",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Predictive Divergence Masks for LLM RL",
+    "summary": "LLM 强化学习中的 PPO 信任域掩码主要依赖采样 token 的重要性比来控制更新，但方向判断粗糙。后续工作 DPPO 改进了近似准则，本文进一步提出预测性散度掩码，利用对数概率差值的预测来精细调控更新方向与距离，在稳定策略收敛的同时提升样本效率，实验性能超越 PPO 与 DPPO。",
+    "url": "https://arxiv.org/abs/2607.10848",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+    "summary": "现代 AI 智能体普遍依赖 Claude Code 这类复杂推理工具链，而开源 SFT/RL 栈难以原生表达有状态、多进程的 harness 推理，导致端到端训练困难。OpenForgeRL 开源框架解决了这一断层，支持在任何环境里端到端训练 harness 原生智能体，让智能体在维持丰富工具交互的同时可直接进行强化学习优化。",
+    "url": "https://arxiv.org/abs/2607.21557",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Beyond Euclidean Clipping: Overcoming Exploration Collapse in LLM RL via Riemannian Isometric Policy Optimization",
+    "summary": "PPO-Clip 在 LLM 强化学习中经常遭遇探索坍缩，根源在于它用欧式距离度量策略差异，与概率单纯形的黎曼几何不兼容。本文揭示这一本质缺陷，并提出黎曼等距策略优化（RIPO），在黎曼流形上以正确的度量来更新策略，有效克服探索坍缩，为提升推理能力扫清了一大障碍。",
+    "url": "https://arxiv.org/abs/2607.10169",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+    "summary": "通过可验证奖励进行显式思维链推理的 RL 训练计算代价高，而潜在推理以连续向量承载中间计算，虽已在小步数上匹敌显式 CoT，但难以通过 RL 自主扩展。SLPO 方法引入代理策略来引导潜在推理的探索，成功将 RL 扩展至长步潜在推理，提供了比显式 CoT 更高效的推理扩展路径。",
+    "url": "https://arxiv.org/abs/2607.19691",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction",
+    "summary": "现有编程智能体基准多基于公开 issue 改编，存在数据污染和静态任务局限。腾讯 WorkBuddy Bench 构建了由代码、网页、办公、安全四大领域组成的评估套件，所有任务均从真实提交、PR 或业务场景逆向生成，以抵抗污染，并配以统一评估框架和分布感知的构造方法，为智能体提供了更贴近实际的多领域编码能力测试。",
+    "url": "https://arxiv.org/abs/2607.20911",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers",
+    "summary": "多智能体交互世界模型既要生成一致观察，还要维护跨智能体持久的世界状态，而现有自回归视频扩散模型仅将观察历史作为条件，难以在多视角多智能体间共享状态。WorldWeaver 引入跨智能体世界状态寄存器，在流式生成中持续更新共享状态，实现了连贯的多智能体交互视频生成。",
+    "url": "https://arxiv.org/abs/2607.21594",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Sample-Efficient Learning from Agent Experience",
+    "summary": "真实环境交互成本高昂，上下文学习能高效利用交互经验但增益随经验移出上下文而消失，上下文蒸馏虽可内化信息却在复杂多轮交互中难以应用。本文融合两者，将智能体的多轮经验蒸馏至模型权重，实现了持久且样本高效的智能体学习，克服了纯上下文学习的遗忘问题与直接蒸馏的工程困难。",
+    "url": "https://arxiv.org/abs/2607.21051",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Multi-Turn On-Policy Distillation with Prefix Replay",
+    "summary": "在多轮智能体任务中，完全在线的策略蒸馏（OPD）每次更新都需新的学生 rollout 和教师查询，成本极高。ReOPD 提出离线环境的替代方案，复用预收集的教师轨迹作为回放前缀来重建学生前缀状态，大幅削减训练开销，同时保持了多轮策略蒸馏的效果。",
+    "url": "https://arxiv.org/abs/2607.04763",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+    "summary": "向 LLM 大规模注入事实知识仍极具挑战。不同于常见的测试时适应，本文探索用超网络在训练时为每个事实生成固定 LoRA 适配器插入模型，以实现知识注入。通过研究扩展律，发现注入准确率随事实数量、超网络参数量等可预测地缩放，为高效、规模化的知识注入提供了理论指导。",
+    "url": "https://arxiv.org/abs/2607.19604",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment",
+    "summary": "行为克隆微调 VLM 得到的 VLA 策略会逐步覆盖预训练表征，损害视觉与语义泛化；即使协训图文数据也无法避免语言-动作错位。本文提出表征锚定保留预训练知识，并强制语言与动作在表征上对齐，显著提升了机器人策略在新场景下的泛化能力。",
+    "url": "https://arxiv.org/abs/2607.13429",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
+    "summary": "视频扩散 Transformer 的自适应稀疏注意力在序列并行下会导致每头负载严重不均，形成落后者瓶颈。FVAttn 是一种训练无感的稀疏注意力系统，通过运行时负载均衡消除该异构性，有效提高了多 GPU 环境中高分辨率视频生成的总体吞吐量。",
+    "url": "https://arxiv.org/abs/2607.16190",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+    "summary": "vibe-coding 流行使编码智能体从代码补全转向根据模糊意图构建完整项目，而现有基准未能跟上。ICAE-Bench 专为交互式项目构建设计，评估智能体在需求澄清、规划、工具使用、调试等维度上的综合能力，填补了对智能体“从意图到软件”全流程评测的缺口。",
+    "url": "https://arxiv.org/abs/2607.21217",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning",
+    "summary": "RLVR 在语言推理中效果显著，但扩展到视觉语言模型缺乏既广泛又可验证的训练数据。Trace 通过分类法引导的任务构造，用场景语法与可执行任务程序分离视觉实现与答案计算，生成了可验证、可重现的多领域视觉推理数据，为训练 VLM 推理能力提供了基础环境。",
+    "url": "https://arxiv.org/abs/2607.19790",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs",
+    "summary": "教育 LLM 不仅需要答题，还需理解课程知识的结构与可视化展示，而现有基准仅测考试表现。K12-KGraph 从人教版教材抽取课程对齐的知识图谱，覆盖先修链、概念分类、实验链接和教学序列等，用于评测和训练具备课程认知能力的教育 LLM。",
+    "url": "https://arxiv.org/abs/2605.09635",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LLMs Get Lost in Evolving User Intent",
+    "summary": "现行评测与训练大多基于单轮完全指定的静态任务，但真实协作中用户意图会随对话演化。该工作揭示 LLM 在多轮动态意图跟踪中容易迷失，指出模型对意图演变的适应能力仍严重不足，并为此提出了新的评测框架和改进方向。",
+    "url": "https://arxiv.org/abs/2607.20734",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Robostral Navigate",
+    "summary": "大规模部署导航系统通常需依赖深度传感器或多摄像头，成本高且泛化受限。Robostral Navigate 是一个 8B 视觉语言模型，仅以单目 RGB 图像流作为输入，无需额外传感器或预建地图，在保持高效训练的同时，降低了硬件门槛并提升了跨机器人形态的泛化能力。",
+    "url": "https://arxiv.org/abs/2607.20785",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
