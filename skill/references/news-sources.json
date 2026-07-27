@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "minimum_usable_candidates": 12,
+  "maximum_candidates": 60,
+  "sources": [
+    {
+      "id": "hex2077",
+      "name": "Hex2077 AI 日报",
+      "adapter": "hex2077",
+      "enabled": true,
+      "url": "https://hex2077.dev/docs/{year_month}/{date}/",
+      "minimum_items": 8,
+      "maximum_items": 20,
+      "minimum_bytes": 10000
+    },
+    {
+      "id": "satori",
+      "name": "Satori AI 每日速览",
+      "adapter": "satori",
+      "enabled": true,
+      "url": "https://satori-ai.cn/",
+      "minimum_items": 5,
+      "maximum_items": 40
+    },
+    {
+      "id": "daheiai",
+      "name": "大黑 AI 速报",
+      "adapter": "daheiai_rss",
+      "enabled": true,
+      "url": "https://news.daheiai.com/rss.php",
+      "minimum_items": 1,
+      "maximum_items": 25,
+      "maximum_bytes": 4000000
+    }
+  ]
+}

@@ -21,6 +21,7 @@ from urllib.parse import urlparse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from news_sources import collect_news_sources
 from prompt_loader import prompt_template as prompt_template_from_file
 from prompt_loader import render_prompt as render_prompt_from_file
 
@@ -29,6 +30,7 @@ SKILL_DIR = REPO_ROOT / 'skill'
 NEWS_PROMPTS_FILE = SKILL_DIR / 'references' / 'news-prompts.md'
 PODCAST_PROMPTS_FILE = SKILL_DIR / 'references' / 'podcast-prompts.md'
 STATE_PATH = REPO_ROOT / 'state' / 'recent-news.json'
+NEWS_SOURCES_FILE = SKILL_DIR / 'references' / 'news-sources.json'
 SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
@@ -2079,8 +2081,33 @@ def main() -> int:
     output_dir = (REPO_ROOT / args.output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    content_date, source_url, raw_html = fetch_latest(args.date)
-    candidates = parse_articles(raw_html)
+    source_candidates, source_health = collect_news_sources(args.date, NEWS_SOURCES_FILE)
+    source_health_path = output_dir / f'source-health-{args.date}.json'
+    source_health_path.write_text(
+        json.dumps(source_health, ensure_ascii=False, indent=2),
+        encoding='utf-8',
+    )
+    print(json.dumps(source_health, ensure_ascii=False, indent=2), flush=True)
+    if not source_health['pipeline_can_continue']:
+        raise RuntimeError(
+            'News sources did not provide enough usable candidates: '
+            f'{source_health["candidate_count_after_dedup"]} < '
+            f'{source_health["minimum_usable_candidates"]}'
+        )
+    candidates = [
+        Article(
+            title=item.title,
+            summary=item.summary,
+            url=item.url,
+            section=item.section,
+        )
+        for item in source_candidates
+    ]
+    content_date = args.date
+    successful_sources = [
+        item for item in source_health['sources'] if item['status'] == 'ok'
+    ]
+    source_url = successful_sources[0]['source_url']
     llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY') or ''
     if not has_any_llm_api_key():
         raise RuntimeError('LENOVO_LLM_API_KEY or NVIDIA_API_KEY is required; refusing to generate a non-LLM issue')
@@ -2145,6 +2172,9 @@ def main() -> int:
         'issue_date': args.date,
         'content_date': content_date,
         'source_url': source_url,
+        'source_urls': [item['source_url'] for item in successful_sources],
+        'source_health_file': source_health_path.name,
+        'source_health': source_health,
         'recipient': 'yyc54321@126.com',
         'article_count': len(articles),
         'candidate_count': len(candidates),

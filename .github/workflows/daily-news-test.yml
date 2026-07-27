@@ -115,6 +115,22 @@ jobs:
             --published-site-dir published-site \
             $FORCE_ARGS
 
+      - name: Alert on individual news source failures
+        if: ${{ always() && steps.delivery.outputs.skip != 'true' }}
+        continue-on-error: true
+        env:
+          AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
+          AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+        run: |
+          HEALTH_FILE="dist/source-health-${{ steps.issue.outputs.date }}.json"
+          if [ -f "$HEALTH_FILE" ]; then
+            python3 scripts/send_source_health_alert.py \
+              --date "${{ steps.issue.outputs.date }}" \
+              --health-report "$HEALTH_FILE"
+          else
+            echo "::warning::Source health report was not produced"
+          fi
+
       - name: Run complete quality gate
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
