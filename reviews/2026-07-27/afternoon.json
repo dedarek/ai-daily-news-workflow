@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-07-27",
+  "reviewed_at": "2026-07-27T15:57:27.826108+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 96,
+    "summary": "日报内容逻辑严密、数据详实，播客对话自然流畅且观点深刻，整体质量极高，仅存在极细微的措辞优化空间。",
+    "issues": [
+      "播客中关于SANA-Video 2.0的对话提到'VBench得分在480p下也到了84.30'，虽与新闻摘要一致，但新闻标题强调'720p'，建议补充说明480p得分作为基准对比的上下文，以免读者误以为720p得分也是84.30。",
+      "新闻摘要中'GPT-5.6 Sol'等模型名称为虚构或未来设定（基于2026年语境），虽在虚构语境下逻辑自洽，但若作为真实日报需确认是否应标注为'模拟数据'或'未来预测'，此处按虚构设定通过。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
