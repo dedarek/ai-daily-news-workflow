@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-07-27",
-  "content_date": "2026-07-27",
-  "published_at": "2026-07-27T07:51:23.238584+00:00",
+  "issue_date": "2026-07-28",
+  "content_date": "2026-07-28",
+  "published_at": "2026-07-28T05:05:28.184669+00:00",
   "article_count": 12,
-  "podcast_turns": 18,
+  "podcast_turns": 20,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -17,7 +17,7 @@
       "z-ai/glm-5.2"
     ],
     "endpoint": "https://integrate.api.nvidia.com/v1",
-    "calls": 15,
+    "calls": 13,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -42,30 +42,27 @@
         "usage": {}
       },
       "podcast": {
-        "model": "nvidia:z-ai/glm-5.2",
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
         "usage": {}
       },
       "podcast_review": {
-        "model": "nvidia:z-ai/glm-5.2",
+        "model": "nvidia:deepseek-ai/deepseek-v4-pro",
         "usage": {}
       },
       "podcast_attempts": [
         {
           "attempt": 1,
           "generation": {
-            "model": "nvidia:z-ai/glm-5.2",
+            "model": "nvidia:deepseek-ai/deepseek-v4-pro",
             "usage": {}
           },
           "structure_issues": [],
           "review": {
             "pass": true,
-            "issues": [
-              "最后两轮（17-18轮）偏向总结性收尾，虽然包含分析判断，但略显刻意，可更自然地以具体话题的追问或补充结束",
-              "18轮处于建议范围下限，可考虑增加1-2轮对AREX或Ollama等新闻的简短讨论使对话更饱满"
-            ],
-            "repair_instruction": "建议在第16轮后插入1-2轮对AREX递归自我改进或Ollama v0.32.4 Apple GPU优化的讨论，并将最后两轮的总结性表述改为针对具体新闻的追问或判断，减少明显的收束感。"
+            "issues": [],
+            "repair_instruction": ""
           },
-          "review_model": "nvidia:z-ai/glm-5.2",
+          "review_model": "nvidia:deepseek-ai/deepseek-v4-pro",
           "review_usage": {}
         }
       ],
@@ -73,26 +70,23 @@
         "attempts": 1,
         "best_attempt": 1,
         "final_pass": true,
-        "final_issues": [
-          "最后两轮（17-18轮）偏向总结性收尾，虽然包含分析判断，但略显刻意，可更自然地以具体话题的追问或补充结束",
-          "18轮处于建议范围下限，可考虑增加1-2轮对AREX或Ollama等新闻的简短讨论使对话更饱满"
-        ],
+        "final_issues": [],
         "structure_issues": [],
         "loop_exhausted": false,
         "converged": false
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-27/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-27/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-27/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-27/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-27.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-27/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-27/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-27.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-27/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-27.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-27.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-27.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-28/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-28/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-28/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-28/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-28.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-28/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-28/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-28.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-28/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-28.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-28.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-28.mp4"
 }
