@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-07-29",
+  "reviewed_at": "2026-07-29T15:18:09.422825+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容事实准确、逻辑严密，播客对话自然流畅且观点犀利，仅在个别新闻标题的措辞精准度上略有提升空间。",
+    "issues": [
+      "新闻标题'Claude 5降价突进'与正文中'Claude Opus 5'的命名存在细微不一致，建议统一为'Claude Opus 5'以增强专业性。",
+      "播客对话中关于'Grok接入Google Workspace'的讨论略显简略，若能补充一句关于具体集成技术（如API调用方式）的简短描述，会更具技术深度。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
