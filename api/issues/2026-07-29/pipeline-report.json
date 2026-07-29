@@ -1,0 +1,251 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-07-29",
+  "content_date": "2026-07-29",
+  "source_url": "https://hex2077.dev/docs/2026-07/2026-07-29/",
+  "source_urls": [
+    "https://hex2077.dev/docs/2026-07/2026-07-29/",
+    "https://satori-ai.cn/",
+    "https://news.daheiai.com/rss.php"
+  ],
+  "source_health_file": "source-health-2026-07-29.json",
+  "source_health": {
+    "schema_version": 1,
+    "issue_date": "2026-07-29",
+    "checked_at": "2026-07-29T03:57:44.980554+00:00",
+    "overall_status": "ok",
+    "pipeline_can_continue": true,
+    "minimum_usable_candidates": 12,
+    "candidate_count_before_dedup": 69,
+    "candidate_count_after_dedup": 60,
+    "successful_source_count": 3,
+    "failed_source_count": 0,
+    "duration_ms": 1826,
+    "sources": [
+      {
+        "source_id": "hex2077",
+        "source_name": "Hex2077 AI 日报",
+        "adapter": "hex2077",
+        "source_url": "https://hex2077.dev/docs/2026-07/2026-07-29/",
+        "status": "ok",
+        "content_date": "2026-07-29",
+        "generated_at": "",
+        "error": "",
+        "duration_ms": 418,
+        "metadata": {
+          "resolved_url": "https://hex2077.dev/docs/2026-07/2026-07-29/",
+          "time_rule": "content date equals issue date"
+        },
+        "candidate_count": 20
+      },
+      {
+        "source_id": "satori",
+        "source_name": "Satori AI 每日速览",
+        "adapter": "satori",
+        "source_url": "https://satori-ai.cn/",
+        "status": "ok",
+        "content_date": "2026-07-28",
+        "generated_at": "2026-07-29T04:08:00+08:00",
+        "error": "",
+        "duration_ms": 1762,
+        "metadata": {
+          "time_rule": "generation date equals issue date; edition is treated as today's digest",
+          "edition_semantics": "today"
+        },
+        "candidate_count": 40
+      },
+      {
+        "source_id": "daheiai",
+        "source_name": "大黑 AI 速报",
+        "adapter": "daheiai_rss",
+        "source_url": "https://news.daheiai.com/rss.php",
+        "status": "ok",
+        "content_date": "2026-07-29",
+        "generated_at": "2026-07-29T08:01:31+08:00",
+        "error": "",
+        "duration_ms": 1074,
+        "metadata": {
+          "time_rule": "newest RSS item must be published on issue date (Asia/Shanghai)",
+          "selected_feed_entries": 9
+        },
+        "candidate_count": 9
+      }
+    ]
+  },
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 60,
+  "candidate_data_file": "candidate-news-2026-07-29.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 11,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话共19轮，符合18-22轮建议范围，但需检查内容密度。",
+              "S1首句切入过于生硬：'今天AI行业最核心的信号是...'属于典型的固定开场白，缺乏自然对话的引入感，建议改为从具体事件或疑问切入。",
+              "部分段落信息密度不均：S2关于'中国开源模型'的发言（第12轮）与S1关于'美国禁令'的发言（第13轮）衔接略显跳跃，缺乏对两者关联性的追问或补充。",
+              "结尾总结略显笼统：S2和S1的最后两轮总结虽然概括了趋势，但缺乏对具体新闻点的呼应，建议增加对某条新闻的简短回顾或判断。"
+            ],
+            "repair_instruction": "1. 重写S1首句，移除'今天AI行业最核心的信号是'这类固定开场，改为直接引用奥特曼的具体言论或提出一个关于'减速'的疑问，例如：'奥特曼突然说要给AI踩刹车，这背后是不是因为那个入侵Hugging Face的安全事故？'。2. 在第12轮S2提到中国模型后，S1在回应美国禁令前，增加一句追问或补充，如'这是否意味着中国模型在技术突破的同时，正面临更严峻的地缘政治压力？'以增强逻辑连贯性。3. 修改最后两轮总结，让S2先具体提及某条新闻（如OlmoEarth或ClinFusion）作为案例，再由S1进行升华，避免空泛的'从炫技走向务实'。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话共21轮，符合18-22轮的建议范围，但部分段落信息密度过高，导致单轮字数接近上限，需检查是否有多轮超过95字。",
+              "内容覆盖不全：日报中包含亚马逊收缩Nova模型研发的重要新闻，对话中完全未提及，导致重要行业动态缺失。",
+              "结构衔接生硬：S1在轮次11突然从OlmoEarth跳转到美国机器人禁令，缺乏自然的过渡句或承接词，显得话题切换突兀。",
+              "事实核对风险：S1在轮次17提到“推理零令牌消耗”，日报原文为“生成过程零令牌消耗”，表述不够严谨，可能误导听众。",
+              "深度不足：关于亚马逊战略收缩的缺失，导致对“巨头AI战略分化”这一宏观趋势的讨论不够全面。"
+            ],
+            "repair_instruction": "1. 在轮次10（OlmoEarth）和轮次11（机器人禁令）之间插入一句过渡，例如S2补充OlmoEarth的硬件策略后，S1顺势引出‘硬件供应链的紧张也体现在其他领域’，再切入机器人禁令。2. 新增一轮讨论亚马逊收缩Nova模型研发，可放在Grok接入Google Workspace之后，作为‘巨头战略分化’的对比案例，由S2提出亚马逊转向外部合作，S1补充其自研困境。3. 修正轮次17中‘推理零令牌消耗’为‘生成过程零令牌消耗’，确保与日报事实严格一致。4. 检查所有轮次字数，确保每轮控制在35-95字之间，若发现超过95字的长句，请拆分为两轮对话。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 3,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1 首句切入略显突兀，缺乏自然的开场过渡，建议增加一句简短的引入语（如‘今天的头条新闻有点反常’）以平滑切入。",
+              "S2 在讨论 Grok 接入 Google Workspace 时，回复略显单薄，可补充一句关于‘企业办公流’整合难度的具体看法，以增强对话深度。",
+              "部分轮次（如 S1 关于亚马逊战略收缩的发言）信息密度极高，接近 95 字上限，建议拆分或精简以确保口播节奏更自然。"
+            ],
+            "repair_instruction": "1. 在 S1 第一句前添加一句简短引入，如‘今天的头条新闻有点反常，奥特曼居然要减速了’，避免直接陈述事实的生硬感。2. 扩充 S2 关于 Grok 的回复，增加一句如‘毕竟 Google 对数据隐私一向敏感，这种跨生态插件的合规性恐怕是最大挑战’，以体现对‘深度整合与隐私合规’的具体判断。3. 检查 S1 关于亚马逊战略收缩的发言，若字数接近上限，可将其拆分为两句，先讲‘收缩动作’，再讲‘资源集中’，使口播呼吸感更强。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 3,
+        "best_attempt": 3,
+        "final_pass": true,
+        "final_issues": [
+          "S1 首句切入略显突兀，缺乏自然的开场过渡，建议增加一句简短的引入语（如‘今天的头条新闻有点反常’）以平滑切入。",
+          "S2 在讨论 Grok 接入 Google Workspace 时，回复略显单薄，可补充一句关于‘企业办公流’整合难度的具体看法，以增强对话深度。",
+          "部分轮次（如 S1 关于亚马逊战略收缩的发言）信息密度极高，接近 95 字上限，建议拆分或精简以确保口播节奏更自然。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "安全漏洞倒逼巨头放缓节奏，价格战与自研收缩折射行业降本压力。技术路线从单纯参数堆砌转向记忆检索与垂直深耕，开源模型凭长文本突破突围。监管壁垒加剧供应链割裂，智能体落地正从功能演示转向安全治理与工程化验证。",
+  "podcast_turns": 22,
+  "podcast_script_file": "podcast-script-2026-07-29.json",
+  "podcast_script_text_file": "podcast-script-2026-07-29.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-07-29.txt",
+  "voice_file": "voice-2026-07-29.json",
+  "voice_turns": 22,
+  "tts_mode": "video-api-audio-video",
+  "tts_synthesis_mode": "external_video_api",
+  "voice_timing_source": "estimated_text_weight",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_leading_silence_seconds": 0,
+  "tts_reference_files": null,
+  "video_api": {
+    "provider": "video-api",
+    "base_url": "http://8.137.39.142:8011/video-api/api",
+    "job_id": "e8b0825d-f56c-442e-846d-145f4f524e98",
+    "submit_response": {
+      "job_id": "e8b0825d-f56c-442e-846d-145f4f524e98",
+      "job_type": "video",
+      "status": "running",
+      "created_at": "2026-07-29T03:58:59.037Z",
+      "updated_at": "2026-07-29T03:58:59.043Z",
+      "started_at": "2026-07-29T03:58:59.043Z",
+      "finished_at": null,
+      "day": "2026-07-29-1158",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": null,
+      "download_url": null,
+      "error": null
+    },
+    "final_response": {
+      "job_id": "e8b0825d-f56c-442e-846d-145f4f524e98",
+      "job_type": "video",
+      "status": "succeeded",
+      "created_at": "2026-07-29T03:58:59.037Z",
+      "updated_at": "2026-07-29T04:04:10.528Z",
+      "started_at": "2026-07-29T03:58:59.043Z",
+      "finished_at": "2026-07-29T04:04:10.528Z",
+      "day": "2026-07-29-1158",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": 311.49,
+      "download_url": "/api/jobs/e8b0825d-f56c-442e-846d-145f4f524e98/download",
+      "error": null
+    },
+    "zip_file": "video-api-result-2026-07-29.zip",
+    "video_file": "ai-daily-news-video-2026-07-29.mp4"
+  },
+  "html_bytes": 25116,
+  "podcast_bytes": 4053165,
+  "video_bytes": 16498007,
+  "podcast_duration_seconds": 202.63
+}
