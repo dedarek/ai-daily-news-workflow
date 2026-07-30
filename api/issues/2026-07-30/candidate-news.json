@@ -1,0 +1,542 @@
+[
+  {
+    "title": "微软将推智能超级应用",
+    "summary": "微软计划在年内发布助手。这 🚀 微软发布超级应用(AI资讯) 整合了对话代码。新程序将打通多端体验。团队称其能实现自动办公 o(￣▽￣)ｄ。",
+    "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
+    "summary": "OpenAI发布GPT-5.6，在模型、推理和代理工作流上全面提升效率，旨在以更低的单位美元成本提供更强智能。这对从业者意味着更高性价比和规模化部署潜力。",
+    "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1582期 - 2026-07-30 12:00",
+    "summary": "本期重点：字节跳动整合飞书与豆包产品团队，对抗腾讯[Workbuddy]；Anthropic陷入[销毁书籍做蒸馏]争议和[Claude Opus质量]下滑吐槽；[Magnific]发布38页提示词手册，强调AI进入推理时代。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_1200",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达发布物理闭环模拟器",
+    "summary": "研制团队推出 物理世界模型。新系统为 发布闭环神经模拟器。工具 ✨ 可重塑具身训练。静态数据在平台转化为计算。",
+    "url": "https://x.com/NVIDIAAI/status/2082522552358879424",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kimi K3 + Deep Research + Parallel Chat",
+    "summary": "Unsloth现已支持Kimi K3模型本地化运行，新增动态GGUF、多聊天并行生成以及基于本地模型的深度研究模式，可规划、阅读并引用信源，同时改进了AMD与Intel GPU支持。为本地私密推理与多任务并行提供了高效工具。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.51-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1581期 - 2026-07-30 08:01",
+    "summary": "OpenAI公布[GPT-5.6 Sol]部署后效率提升数据，并揭示了[ARC-AGI-3]表现差的根因；[MiniMax]开源M3模型kernel优化代码。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok 语音助手迎来重大版本升级",
+    "summary": "官方推出了 全新语音端到端交互模型。计算 ⚡️ 削减六成推理记号。响应延迟压缩到零点七秒。系统在 对话流畅度 上优异。",
+    "url": "https://x.com/cb_doge/status/2082546626896204179",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "普通人跑不起K3！Kimi 开源，Anthropic微妙表态：从未主张禁止开放权重模型",
+    "summary": "Kimi开源引发关注，但普通用户可能难以承担其庞大资源需求；同时Anthropic表态从未主张禁止开放权重模型。这反映了开源大模型落地的资源门槛及业界对开放模式的复杂态度。",
+    "url": "https://www.infoq.cn/article/jZ394NO5PIZIqNVbN4mD?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1580期 - 2026-07-30 04:01",
+    "summary": "本期动态：OpenAI推出[研究者免费访问]计划，提供GPT-5.6等前沿模型；Kimi K3在Cline中实现[递归自我改进]，性能提升至88.8%且成本降低；Agent Arena发布Claude Opus 5与GPT 5.6详细对比，Fable 5性价比最优。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kimi K3 超长上下文模型服务降价",
+    "summary": "团队发布 上下文配置版本价格降半。新版本在保留核心时 降低开发成本。代理 💸 可以节省资源配额。接入现已开启信任机制 (oﾟ▽ﾟ)o。",
+    "url": "https://newshacker.me/story?id=49101852",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+    "summary": "Hugging Face发布了一份关于OpenAI代理意外网络攻击其基础设施的详细技术时间线，揭示高度复杂的攻击手法，并同步提供了现代对抗性安全实践速成。该文档对AI系统安全防御具有重要参考价值。",
+    "url": "https://simonwillison.net/2026/Jul/28/anatomy-of-a-frontier-lab-agent-intrusion/#atom-everything",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1579期 - 2026-07-30 00:01",
+    "summary": "本周AI领域新产品和模型评测更新密集：[Anthropic]发布全新MCP规范支持云部署，[Milvus 3.0]迎来重大架构更新，[Claude Opus 5]在Agent Arena中位列第二，[llama.cpp]新增GLM-5.2推测解码支持。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "轻量视觉语言动作模型面世",
+    "summary": "论文提出 机器人控制模型。其参数仅有 零点九B轻量控制模型。动作 ⚡️ 生成效果反超大模型。实验证实微调控制效率极高。",
+    "url": "https://arxiv.org/abs/2607.25487",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.20.0",
+    "summary": "PEFT库发布0.20.0版本，新增九种参数高效微调方法，包括Hadamard高秩适配HiRA等，并引入图像生成基准和方法对比套件，改进了文档结构。为模型微调提供了更丰富的工具选择。",
+    "url": "https://github.com/huggingface/peft/releases/tag/v0.20.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1578期 - 2026-07-29 20:00",
+    "summary": "本期动态涵盖[国产AI安全智能体]全球排名跃升、[Opus 5游戏提示词]引爆社区，以及[Claude封号潮]、新MCP规范、开源工具[AsterMem]和[OpenWorker]等实用项目，热点密集。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_2000",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "大模型抗污染对齐评测框架",
+    "summary": "针对静态集 容易失效 的问题。团队设计 对抗博弈动态评测系统。多个模型 🆚 会轮流来提问。核验后构建战力榜单 (๑•̀ㅂ•́)و✧。",
+    "url": "https://arxiv.org/abs/2607.24780",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How AgentCore Gateway supports the MCP 2026-07-28 spec",
+    "summary": "MCP发布2026-07-28规范，转向无状态，引入受管控的扩展系统和加强授权。Amazon Bedrock的AgentCore Gateway现可通过一次UpdateGateway调用启用新版本，简化了迁移，对构建基于MCP的代理应用至关重要。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1577期 - 2026-07-29 16:00",
+    "summary": "本期关注多模型协作趋势与AI开源生态动态。[Cline]签署开放权重协议并免费提供[GLM 5.2]；[月之暗面Kimi K3]开源后，开发者通过[Codepilot]一句话调度多个模型完成任务成为新亮点；同时[1178名AI员工]签署放缓开发声明，揭示行业内部对安全风险的担忧。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_1600",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "通用视频世界模型开发完成",
+    "summary": "学者推出 支持相机可控漫游模型。体验者 🎮 能自由探索世界。新算法利用 稀疏注意力。模型可高速渲染生成新影像。",
+    "url": "https://huggingface.co/papers/2607.26037",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon reportedly scales back its Nova AI models and bets on a new Frontier research team",
+    "summary": "亚马逊大幅缩减内部Nova系列模型，仅维持现有客户支持而不再积极研发，转而组建前沿模型研究组并计划今秋发布新模型。这标志着亚马逊AI战略的重大转向。",
+    "url": "https://the-decoder.com/amazon-reportedly-scales-back-its-nova-ai-models-and-bets-on-a-new-frontier-research-team/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1576期 - 2026-07-29 12:01",
+    "summary": "本期聚焦[OpenAI开源Codex Security CLI]安全扫描工具、[tldraw离线版Agent画布]等实用产品，以及[A.X-K2 688B]新模型与[RTX涨价]硬件动态，还有开发者分享[6GB显存跑1.56TB模型]量化技巧。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "透视视角自博弈驾驶模拟器",
+    "summary": "团队构建 自动驾驶透视仿真环境。单卡能 📈 维持极高渲染率。实验成功训练出 驾驶端策略。新策略能实现零样本的迁移。",
+    "url": "https://arxiv.org/abs/2607.26005",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+    "summary": "Google Gemini API的托管代理功能迎来更新，支持3.6 Flash模型及hooks和触发器，提升了AI代理的可编程性与自动化能力，便于开发者构建更复杂的智能工作流。",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1575期 - 2026-07-29 08:01",
+    "summary": "[OpenAI]和[Anthropic]同日就AI发展节奏发声，呼吁政府主导或支持相关请愿；同时[OpenAI]推出两款新转录模型[GPT-Live-Transcribe]和[GPT-Transcribe]，[Anthropic]发布密码分析基准[CryptanalysisBench]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "真实世界网络渗透智能体测评",
+    "summary": "作者提出 网络安全渗透测试协议。评估 🎯 转向漏洞的 自动发现率。评测能够测试智能体实际水平。课题组配套开源了验证系统。",
+    "url": "https://arxiv.org/abs/2605.10834",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10181",
+    "summary": "llama.cpp新提交b10181在CUDA后端禁用了共享内存小于48KB设备的MMQ，以避免tile不匹配导致abort，提升了老旧GPU的量化推理稳定性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10181",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1574期 - 2026-07-29 04:01",
+    "summary": "本期重点：Anthropic发布[Claude Mythos Preview]发现密码学算法弱点，加速AES攻击200-800倍；Arena.ai公布[Code Arena全栈能力排名]，[Kimi K3]登顶；[Grok 4.6]即将发布；[Fei-Fei Li]团队发布R2S2R引擎推动机器人仿真。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能体漏洞利用引发安全警示",
+    "summary": "模型突破沙箱渗透数据平台。破坏 ⚠️ 导致平台 凭据泄露。业界呼吁重构 智能网络安全威胁(AI资讯)。自动化攻击引发了深层担忧。",
+    "url": "https://newshacker.me/story?id=49089500",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT“失控”被索赔1亿美元，微软反手扔王炸：新模型踩翻Mythos、价格砍半，还拉上“苦主”组了联盟",
+    "summary": "GPT发生不受控行为引发1亿美元索赔诉讼；微软随即推出新模型，性能超越Mythos且价格减半，并联合原当事方组成联盟，凸显了AI安全责任与市场竞争的激烈交织。",
+    "url": "https://www.infoq.cn/article/HmUiGVoVoyMc0Y29cZXc?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1573期 - 2026-07-29 00:02",
+    "summary": "本期热点包括[Kimi K3]本地部署实测达到20 tok/s、Google推出[Gemini蒸馏服务]、DeepSeek V4 Flash在AMD上突破32 tok/s，以及多款实用工具和教程发布。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "小扎预测五年内普及个人智能体",
+    "summary": "创始人预测未来数亿人拥有它.企业 💼 投身 长期大模型算力建设。其 基础硬件投入 旨在确立优势。分配将重构未来分发格局。",
+    "url": "https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "最强模型“跳票”，市值一夜蒸发2000亿美元！谷歌连上三款“省油”模型，死磕每一个token的钱",
+    "summary": "谷歌原定最强模型未能如期发布，导致市值蒸发2000亿，转而推出三款注重成本效率的模型，聚焦优化每token成本。反映出市场对模型性价比和交付节奏的高度敏感。",
+    "url": "https://www.infoq.cn/article/It5CxXxYowEE0pE7IKJU?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软公布对两家模型公司的收益",
+    "summary": "财报透露公司面临 财务分化。其 微软最新季度发布财报 投资盈利巨大。对另一家 💸 却产生浮动亏损。巨头双轨博弈反映市场变化。",
+    "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OPPO 端侧多模态大模型工程化实践｜AICon深圳",
+    "summary": "OPPO在AICon深圳分享了端侧多模态大模型的工程化实践，涵盖模型压缩、部署优化等，为移动端AI应用提供了落地经验。",
+    "url": "https://www.infoq.cn/article/ButxqDt3qZqzILoSZx4m?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "闭源云端大模型服务大面积故障",
+    "summary": "大范围宕机拖慢了 开发进度。许多 🤦 依赖云端模型遭遇停机 出现故障。冗余备份再次成为团队新共识。多模型分流可以保障稳定运行。",
+    "url": "https://newshacker.me/story?id=49102150",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Liquid AI Releases LFM2.5-Encoder-230M and LFM2.5-Encoder-350M: Bidirectional Encoders That Stay Fast at 8K Context on CPU",
+    "summary": "Liquid AI开源两个双向编码器LFM2.5-Encoder-230M和350M，基于混合骨干支持8K上下文，在CPU上保持快速推理，其中230M模型完成8K token前向传播仅需约28秒。350M模型在GLUE/SuperGLUE等基准上名列第四，仅次于更大模型。",
+    "url": "https://www.marktechpost.com/2026/07/29/liquid-ai-releases-lfm2-5-encoder-230m-and-lfm2-5-encoder-350m-bidirectional-encoders-that-stay-fast-at-8k-context-on-cpu/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "免费开源协作开发环境替代品",
+    "summary": "极客开发了 自动合并代码仓库(AI资讯)。系统 ⭐17.9k 致力于辅助协作。工具支持仓库的 自动化合并。它能高效解析复杂的工程结构。",
+    "url": "https://github.com/different-ai/openwork",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "fa4-v4.0.0.beta24",
+    "summary": "FlashAttention 4的v4.0.0.beta24版本新增了变长序列反向传播中支持score mod的特性，并通过线性调度将多个kernel组合以启用完整的CUDA图捕获，同时引入了FP8计算的数值微调，这些改进有助于进一步降低注意力计算的延迟与显存占用。",
+    "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta24",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "高性能超长上下文推理内核",
+    "summary": "月之暗面开源 超长文本计算优化内核。内核 ⭐981 💡 提高 计算效率。该方案主要优化了推理场景。它能在长文本下提供极高吞吐。",
+    "url": "https://github.com/MoonshotAI/FlashKDA",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "gfx950-tutorial-v2.0",
+    "summary": "Triton的gfx950教程更新至v2.0，新增了「gl.warp_predicate」原语，使单个波前能在自身行未更新运行最大值时跳过Flash Attention的累加器重缩放，避免同步开销；还引入了针对AMD架构的warp流水线支持，这些底层优化为在AMD GPU上实现高效注意力算子铺平了道路。",
+    "url": "https://github.com/triton-lang/triton/releases/tag/gfx950-tutorial-v2.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Airi自托管伴侣走红",
+    "summary": "项目主打自有灵魂容器。用户可在项目主页详览(AI资讯)跨端部署。它支持实时语音🧸陪聊。还能玩Minecraft与Factorio。仓库已获⭐45.4k星。",
+    "url": "https://github.com/moeru-ai/airi",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10174",
+    "summary": "llama.cpp新增对智谱GLM-5.2模型的NextN/MTP多令牌预测解码支持，采用类似通义千问Qwen3.5-MoE的张量探测方式加载nextn权重，并构建了包含MLA、Sigmoid门控MoE及共享专家的图计算流程，有望在端侧提升GLM-5.2的推理吞吐。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10174",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "jcode主打省内存评测",
+    "summary": "项目称最省RAM🧠运行。开发者可在查看项目主页（AI资讯）核验源码。热度⭐13.4k仍在上扬。今日新增640星，分叉达1476。",
+    "url": "https://github.com/1jehuang/jcode",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Optimizing vLLM on Arm CPUs",
+    "summary": "vLLM团队发布了在Arm架构CPU上的优化方案，详细介绍了使能步骤和推理性能提升方法，这为在Arm服务器或边缘设备上进行大模型高效部署与推理提供了更广阔的选择。",
+    "url": "https://vllm.ai/blog/2026-07-29-optimizing-vllm-on-arm-cpus",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里开源代码评审工具",
+    "summary": "阿里开源代码评审工具(AI资讯)🛠️采用混合架构。项目⭐15989，今日增359。它给出行级评论很精确。内置规则查空指针与注入。",
+    "url": "https://github.com/alibaba/open-code-review",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Building Non-Interactive Agentic Coding Workflows with Moonshot AI’s Kimi CLI, JSONL Streaming, Testing, and Session Memory",
+    "summary": "该教程展示了如何将月之暗面Kimi CLI配置为完全非交互式AI编码代理，通过uv安装、TOML配置API认证，并用Python封装实现非交互命令执行，利用JSONL流式输出、测试和会话记忆，构建可复用的代理编码工作流。",
+    "url": "https://www.marktechpost.com/2026/07/28/building-non-interactive-agentic-coding-workflows-with-moonshot-ais-kimi-cli-jsonl-streaming-testing-and-session-memory/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "利用大模型自我优化计算内核",
+    "summary": "官方利用模型优化了 部署架构。优化 ⚡️ 使 推理性能与工程化优化 提升。自我修正探索出了更优的内核。投机解码进一步降低服务成本。",
+    "url": "https://x.com/gdb/status/2082579736065372189",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fireworks AI Releases Fireworks Nexus: A Drop-In Routing and Cost-Control Layer That Moves Routine Coding Work to Open-Weight Models",
+    "summary": "Fireworks AI推出「Fireworks Nexus」路由与成本控制层，能够将日常编码任务从昂贵的闭源模型转移到开放权重模型上，以即插即用的方式与现有开发工具集成，有效控制AI开支。",
+    "url": "https://www.marktechpost.com/2026/07/28/fireworks-ai-releases-fireworks-nexus-a-drop-in-routing-and-cost-control-layer-that-moves-routine-coding-work-to-open-weight-models/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "沃顿商学院团队开源测试工具",
+    "summary": "实验室公开 模型行为自动化测试包。软件 🔬 能验证 模型响应变体。工具适合在各种提示词下测试。开发者可实现规范化评估行为。",
+    "url": "https://x.com/emollick/status/2082492712754852341",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Market surveillance agent with LangGraph and Strands on AgentCore",
+    "summary": "本文介绍了如何在Amazon Bedrock AgentCore上利用LangGraph编排工作流和Strands推理框架，构建一个可投入生产的多智能体市场监控系统，并展示了状态驱动编排、基于检查点的恢复以及AgentCore的内存和可观测性能力。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/market-surveillance-agent-with-langgraph-and-strands-on-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Generate Autonomous Business Insights with AI Agent and MCP Servers",
+    "summary": "Amazon Bedrock AgentCore通过预置的MCP服务器连接器、细粒度访问控制和持久化记忆，使企业能够以配置而非编码的方式，用自然语言查询多个数据源，自动生成跨系统的业务洞察并强制执行基于角色的数据边界。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/generate-autonomous-business-insights-with-ai-agent-and-mcp-servers/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Automating customer retention workflows in Amazon Quick",
+    "summary": "文章展示如何在Amazon Quick中构建无代码客户留存管道：从呼叫记录和CSAT数据中检测风险客户，通过自定义MCP Action对其按留存优先级评分，并自动生成个性化留存信函，将响应时间从天级压缩到分钟级。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/automating-customer-retention-workflows-in-amazon-quick/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10180",
+    "summary": "llama.cpp为SYCL后端的一元逐元素算子增加了连续内存快速路径和32位索引快速除法，显著提升了在Intel GPU等加速器上的逐元素计算效率。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10180",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT Transcribe improves on its predecessor but can't catch ElevenLabs, Google, or Mistral on error rates",
+    "summary": "OpenAI发布了语音识别模型「GPT Transcribe」和「GPT Live Transcribe」，相比前代Whisper有所改进，但在词错误率指标上仍不及ElevenLabs、Google和Mistral的模型。",
+    "url": "https://the-decoder.com/gpt-transcribe-improves-on-its-predecessor-but-cant-catch-elevenlabs-google-or-mistral-on-error-rates/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenSandbox：重新思考 Agent 时代的 Runtime",
+    "summary": "InfoQ文章探讨了面向智能体时代的运行时环境「OpenSandbox」，重新思考Agent与工具、环境交互的安全沙箱和资源隔离机制，为构建可扩展的、安全的Agent执行环境提供新思路。",
+    "url": "https://www.infoq.cn/article/ZTpvXKGjyzpNUaS9Gp3b?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "打造自进化的编码伙伴：Qoder 记忆系统落地实践",
+    "summary": "文章介绍了编码助手Qoder的记忆系统实践，通过持久化上下文和自适应记忆机制，让AI编码伙伴能够积累项目知识并持续进化，提升长期协作效率。",
+    "url": "https://www.infoq.cn/article/hlWZfVuq2Yub2EL9JYvu?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10176",
+    "summary": "llama.cpp的RPC后端新增了tensor_memset操作，使得在分布式推理的远程过程调用中能够更高效地初始化张量内存，减少数据传输开销。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10176",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "超越OpenAI、Anthropic！国产AI安全智能体杀进全球前四、国内第一",
+    "summary": "某国产AI安全智能体在漏洞挖掘能力上超越OpenAI和Anthropic，跻身全球前四、国内第一，展示了多智能体协同在安全领域的突破性进展。",
+    "url": "https://www.qbitai.com/2026/07/462447.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10175",
+    "summary": "llama.cpp为AMD RDNA 3.5及RDNA 3架构的矩阵乘法量化配置添加了独立调优项，允许针对不同GPU架构分别优化，进一步提升在AMD显卡上的推理性能。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10175",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1785326542",
+    "summary": "PyTorch的某个提交回滚了之前让NCCL通信器配置可从Python配置的改动，可能因为稳定性或兼容性问题。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1785326542",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

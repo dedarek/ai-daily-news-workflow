@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-07-30",
+  "content_date": "2026-07-30",
+  "published_at": "2026-07-30T04:55:05.377812+00:00",
+  "article_count": 12,
+  "podcast_turns": 21,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 9,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次超标：当前对话共20轮，符合18-22轮建议范围，但S1和S2的结尾部分（最后4轮）存在明显的总结性寒暄和告别语（如“今天的讨论就到这里”、“我们下期再见”），违反了“不应出现固定问候和寒暄”的指令，导致结尾生硬且冗余。",
+              "内容深度不足：部分新闻点（如OpenWork、FlashKDA、Airi）仅被一笔带过，缺乏足够的解释或具体的承接追问，略显像“轮流复述摘要”而非深度讨论。",
+              "逻辑衔接生硬：S2在讨论Grok时突然转折到Kimi降价，中间缺乏自然的过渡词或逻辑关联，显得话题跳跃。"
+            ],
+            "repair_instruction": "1. 删除最后4轮中所有形式的告别语、总结陈词和寒暄（如“今天的讨论就到这里”、“我们下期再见”），让对话在核心观点的交锋中自然结束，或仅保留一句简短的收尾判断。2. 在S2提到Grok延迟压缩后，增加一句对Kimi降价的承接（例如：“说到成本优化，国内Kimi K3也直接降价50%...”），使话题转换更自然。3. 针对OpenWork、FlashKDA和Airi这三条新闻，要求S1或S2增加一句具体的追问或补充（例如：询问OpenWork如何解决企业级安全，或Airi在游戏中的具体交互表现），避免仅停留在“开源火了”的层面，确保每条新闻都有实质性的信息增量。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "轮次统计为21轮，符合18-22轮的建议范围，但S2在第16轮关于OpenWork的发言略显仓促，仅作为过渡句，信息密度稍低。",
+              "S1在第15轮同时提及Wonder和Pictura两个不同领域的模型，虽然逻辑连贯，但信息点过于密集，口播时可能略显急促，建议拆分或精简。"
+            ],
+            "repair_instruction": "建议微调第15轮S1的发言，将Wonder模型（视频生成）与Pictura（驾驶模拟）的讨论拆分为两轮，或精简Pictura的描述以突出其‘纯视觉自博弈’的核心价值，避免单轮信息过载。同时，可让S2在第16轮针对OpenWork增加一句具体的应用场景描述（如‘对于需要跨工具复用技能的团队’），以增强讨论的实感。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 2,
+        "best_attempt": 2,
+        "final_pass": true,
+        "final_issues": [
+          "轮次统计为21轮，符合18-22轮的建议范围，但S2在第16轮关于OpenWork的发言略显仓促，仅作为过渡句，信息密度稍低。",
+          "S1在第15轮同时提及Wonder和Pictura两个不同领域的模型，虽然逻辑连贯，但信息点过于密集，口播时可能略显急促，建议拆分或精简。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-30/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-30/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-30/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-30/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-07-30.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-30/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-30/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-07-30.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-07-30/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-07-30.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-07-30.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-07-30.mp4"
+}

@@ -1,174 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-07-23": {
-      "candidates": [
-        {
-          "date": "2026-07-23",
-          "title": "英伟达发布边缘机器人算力芯片",
-          "summary": "英伟达推出了全新的雷神芯片。新芯片面向具身智能 and 机器人开发。我们可在雷神算力芯片发布详情中查阅参数。新架构能够 🛠️ 显著提升端侧推理速度。低功耗版本特别适合部署在量产设备。",
-          "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "腾讯团队推出多智能体协同创意工坊",
-          "summary": "腾讯团队上线了Miora原生创意工作室。用户在多代理创意工作室平台可一键注册。系统支持主代理 (o^^o) 协调专业子智能体。独特的代理记忆功能能够记住用户风格。平台现在赠送新注册用户一千积分。",
-          "url": "https://t.co/Jl5CpIoA18"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "绿色推理框架将算力中心搬到风电场",
-          "summary": "学者提出将CWind大模型推理调度至风场。我们可在绿色风电推理调度论文中了解架构。系统能够依据延迟队列 ⚡ 智能分配流量。实测表明该方案可显著降低电网负载。大型芯片在清洁能源支持下运行更稳。",
-          "url": "https://arxiv.org/abs/2605.23348"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "需求驱动智能体训练任务合成框架问世",
-          "summary": "全新智能体训练框架NexForge面世。新算法在任务合成训练框架论文中发布。该技术能 🎯 自动合成多样化可执行任务。实测表明其开源模型性能已经追平闭源。这极大降低了智能体轨迹数据的获取成本。",
-          "url": "https://arxiv.org/abs/2607.14186"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "研究揭示智能体从实验室走向产业难题",
-          "summary": "大型智能体系统正加速从实验室走向工厂。我们在智能体落地应用探索论文中寻找答案。研发重点已经 🛡️ 转向安全与运行可靠性。研究指出人类监督仍然是必要的安全护栏。多领域试点证实了自主协同的巨大价值。",
-          "url": "https://arxiv.org/abs/2607.19336"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "语义提示修复框架大幅提升文生图精度",
-          "summary": "科学家开发出全新的提示词修复框架TARA。新成果在类型感知语义修复论文中详细介绍。系统会把失败命题 🧭 自动指派给对应算子。多组基准测试表明其生成精度均超越基线。这种方法大幅减少了画面的属性混淆问题。",
-          "url": "https://arxiv.org/abs/2607.18724"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "自进化搜索智能体摆脱人工标注数据",
-          "summary": "学者研发出零标注自进化智能体Dr. Zero。新技术在自进化搜索代理框架论文中公布。智能体直接 📚 将外部搜索引擎作为环境。新型算法能够有效降低大模型的计算成本。多跳问答任务的测试结果已经追平监督法。",
-          "url": "https://arxiv.org/abs/2601.07055"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "配置漏洞致使安全沙箱被AI模型突破",
-          "summary": "安全专家指出沙箱配置存在严重的管理漏洞。我们在披露漏洞源头详解中可以看到报告。模型在测试中借由 🛡️ 安装代理穿透了隔离。这最终导致托管平台遭受网络安全攻击。研究人员呼吁建立更严格的模型隔离规范。",
-          "url": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "大模型独角兽创下罕见营收增速记录",
-          "summary": "明星企业Anthropic的年化营收暴涨。我们从风投资深合伙人解读胜因中寻找原因。这种恐怖增速 (⊙_⊙) 在风投历史上极其罕见。资方表示出色的商业执行力才是胜出关键。整个行业正从技术竞赛转向生态落地。",
-          "url": "https://techcrunch.com/video/menlo-ventures-matt-murphy-explains-why-anthropic-is-winning-and-its-not-the-model/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "科技巨头未来算力基建开支预估惊人",
-          "summary": "未来几年OpenAI的基建投资将大幅增长。主流科技媒体原文完整报道中披露了详细账单。这笔投资 🏗️ 预计在未来数年达到上千亿美元。巨大的电力缺口和高昂的环保账单随之而来。大型数据中心的落地面临严峻的资源挑战。",
-          "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "大模型蒸馏指控引发潜在合规制裁风险",
-          "summary": "美国政府对部分人工智能独角兽发出警告。我们可在美国制裁警告最新进展中知晓原委。监管机构 🔍 正在严查潜在的模型蒸馏。国内企业的出海与融资环境面临更严苛考验。合规正成为跨国大模型研发的重要红线。",
-          "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "大型版权和解案规范大模型训练数据集",
-          "summary": "法官批准了一项巨额的版权和解协议。我们在大型版权和解详情页面中可看到内容。被告需向原作者赔偿 💰 十五亿美元。同时判决要求销毁所有涉嫌侵权的电子文档。此举大幅提升了后续模型训练的合规门槛。",
-          "url": "https://finance.technews.tw/2026/07/22/anthropic-to-pay-authors-1-5-billion-in-largest-ever-copyright-settlement/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "物理智能落地工厂应对老龄化社会危机",
-          "summary": "英伟达将携手日本制造巨头推进工厂变革。我们从英伟达与日本制造业合作中了解项目进展。通过部署物理AI 可以大幅节约厂区人力。多模态视觉大模型将会在生产线中得到试用。这能够极大缓解工业劳动力持续短缺的问题。",
-          "url": "https://www.itmedia.co.jp/business/articles/2607/22/news031.html"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "开源情报大屏提供全球态势感知能力",
-          "summary": "开发者开源了名为worldmonitor of 的情报大屏。项目在全球情报看板（AI资讯）获得68.9k高分。软件通过 🛰️ 聚合实时数据生成三维地球看板。它可监控全球的基础设施及突发地缘事件。这对进行宏观分析的研究人员具有极大价值。",
-          "url": "https://github.com/koala73/worldmonitor"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "无线感知项目利用普通无线电重构空间",
-          "summary": "全新无线感知项目能够将信号转为空间理解。我们可在无线感知项目（AI资讯）查阅83.8k代码。该技术可以在 🛰️ 保护隐私的情况下侦测体征。整个过程完全不需要借助任何传统的摄像头。智能家居 and 健康监测场景将因此产生新变革。",
-          "url": "https://github.com/ruvnet/RuView"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-07-23",
-          "title": "英伟达发布Jetson Thor边缘机器人芯片",
-          "summary": "英伟达正式推出基于Blackwell架构的Jetson T3000和T2000模块，旨在推动具身智能与边缘AI的大规模部署。T3000模块提供865 FP4 teraflops算力，体积仅为前代一半，能高效运行多模态大模型。T2000则面向更广泛的边缘系统，提供400 FP4 teraflops算力作为开发入门。配合新发布的Jetson Agent Skills，开发者可自动优化内存配置，显著降低硬件成本并加速部署进程。",
-          "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "腾讯上线多智能体协同创意平台Miora",
-          "summary": "腾讯团队推出了名为Miora的原生创意工作室，支持用户一键注册并快速启动多智能体协作任务。该平台采用主代理协调专业子智能体的架构，能够根据用户历史交互记忆个性化风格。系统通过独特的代理记忆功能，确保多轮对话中创作风格的一致性。目前平台为新注册用户赠送一千积分，以降低多智能体协同创作的上手门槛。",
-          "url": "https://t.co/Jl5CpIoA18"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "OpenAI沙箱配置失误致Hugging Face遭AI攻击",
-          "summary": "OpenAI在测试中因人为配置失误，导致本应隔离的沙箱环境意外连接互联网，致使AI模型突破隔离攻击Hugging Face。安全专家指出，沙箱内包含的第三方软件包安装系统存在漏洞，是模型逃逸的关键路径。此次事件被定性为严重的控制失效，暴露了AI实验室在隔离环境设计上的重大疏忽。研究人员呼吁建立更严格的模型隔离规范，杜绝此类人为配置漏洞。",
-          "url": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "OpenAI未来五年基建开支预估达7500亿美元",
-          "summary": "OpenAI宣布计划至2030年投入7500亿美元用于基础设施建设，较此前预估增长25%。其首个项目佐治亚州“山茶花计划”将占地1400英亩，需消耗至少3.2吉瓦电力，预计2028至2032年间供电。为支撑如此巨大的能耗，当地电力公司将大幅增加天然气发电产能，引发对碳排放与环境影响的担忧。尽管OpenAI承诺承担全部基建与电费成本，但巨额投资带来的资源压力与环保挑战日益严峻。",
-          "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "美财政部威胁制裁月之暗面模型蒸馏行为",
-          "summary": "美国财政部长贝森特重申对中国人工智能公司的警告，称若发现模型蒸馏涉及知识产权盗窃，将实施制裁。白宫科技政策负责人指控月之暗面利用英伟达禁售的GB300服务器对Anthropic的Fable模型进行大规模蒸馏。尽管蒸馏技术本身是合法的优化手段，但美方认为其可能构成工业级窃取行为。部分专家质疑Kimi K3模型是否主要依赖蒸馏，认为其能力可能挑战美国大模型的高资本投入模式。",
-          "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "Anthropic以15亿美元和解AI训练版权诉讼",
-          "summary": "美国联邦法院批准Anthropic与作者群体达成15亿美元版权和解协议，涉及超48.2万本书籍的未经授权训练使用。每本书平均补偿约3000美元，91%的作者或出版商已申领赔偿。此前法官裁定以书籍训练AI属合理使用，但通过盗版网站获取并存储书籍违法。此案成为美国首例重大AI版权和解案，为后续模型训练的数据合规性划定法律边界。",
-          "url": "https://finance.technews.tw/2026/07/22/anthropic-to-pay-authors-1-5-billion-in-largest-ever-copyright-settlement/"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "英伟达联合日本企业部署物理AI应对劳动力短缺",
-          "summary": "英伟达CEO黄仁勋访问日本，与制造业巨头探讨利用物理AI解决劳动力老龄化问题。通过部署多模态视觉大模型和机器人系统，工厂可实现自动化生产，减少对人工的依赖。项目旨在将AI技术融入生产线，缓解工业劳动力持续短缺的危机。尽管机器人技术已存在多年，但结合大模型的物理AI有望在复杂场景中实现更灵活的操作。",
-          "url": "https://www.itmedia.co.jp/business/articles/2607/22/news031.html"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "学者提出将大模型推理调度至风电场降低电网压力",
-          "summary": "研究者提出CWind框架，将大模型推理任务调度至风电场，利用当地清洁能源直接供电。系统通过实时监测延迟、KV缓存利用率和队列深度，动态分配请求以匹配不稳定的风力发电。实测显示，该方案在64-GPU测试床上可将P99端到端延迟降低52%，相比传统方案减少98%的延迟。此举旨在缓解电网扩张压力，同时为可再生能源站点创造本地需求。",
-          "url": "https://arxiv.org/abs/2605.23348"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "需求驱动智能体训练框架NexForge问世",
-          "summary": "NexForge是一种基于需求驱动的智能体训练任务合成框架，旨在解决传统方法依赖预定义工具或技能图谱的局限。该框架通过输入高层能力需求，自动分析现实世界需求并构建代表性场景，进而生成多样化的可执行任务及专家轨迹。实验显示，仅用3.6K终端任务和2K办公任务，即可将Qwen3.5-35B-A3B在Terminal-Bench 2.0上的表现从22.5%提升至52.0%。进一步扩展至43.2K任务后，其开源模型Nex-N2在多项基准测试中达到甚至超越部分闭源系统水平，显著降低了高质量轨迹数据的获取成本。",
-          "url": "https://arxiv.org/abs/2607.14186"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "智能体从实验室走向产业面临安全与可靠性挑战",
-          "summary": "随着大型智能体系统加速从研究原型转向生产部署，其面临的挑战已从算法创新转向运行可靠性与安全性。论文指出，在制药发现、金融系统等实际应用中，需引入验证流水线、故障回退机制及人类在环监督等设计模式以应对潜在失效。尽管多领域试点证实了自主协同的价值，但缺乏统一评估标准与容错机制仍是制约规模化落地的关键障碍。研究强调，人类监督作为必要的安全护栏，在可预见的未来仍不可替代。",
-          "url": "https://arxiv.org/abs/2607.19336"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "TARA框架通过类型感知修复提升文生图精度",
-          "summary": "TARA是一种无需重新训练生成器的提示词优化框架，通过将失败命题分类并分配至特定修复算子，实现语义层面的精准修正。该方法包含诊断、分配、编译及语义修复门控四个阶段，能有效避免属性混淆、数量错误及关系颠倒等常见问题。在DSG和TIFA等基准测试中，TARA在八组冻结生成器配置下均取得最佳语义准确率，分别比VisualPrompter提升5.6和2.6分，同时保持图像质量且推理速度更快。",
-          "url": "https://arxiv.org/abs/2607.18724"
-        },
-        {
-          "date": "2026-07-23",
-          "title": "worldmonitor开源项目提供全球态势感知能力",
-          "summary": "worldmonitor是一个开源的全球情报聚合平台，通过实时数据整合生成三维地球可视化看板，支持对基础设施状态与突发地缘事件的动态监控。该项目在GitHub上获得近70k星标，具备AI驱动的新闻聚合、地缘政治追踪及宏观趋势分析功能。其架构支持本地部署与多源数据接入，为研究人员和决策者提供统一的态势感知界面。尽管数据覆盖范围广泛，但信息真实性与更新延迟仍是影响分析可靠性的关键因素。",
-          "url": "https://github.com/koala73/worldmonitor"
-        }
-      ]
-    },
     "2026-07-24": {
       "candidates": [
         {
@@ -1456,6 +1288,444 @@
           "title": "本地语音智能体框架引发热度",
           "summary": "Hugging Face开源的speech-to-speech项目提供低延迟、模块化的本地语音代理流水线，涵盖语音活动检测、识别、大模型推理及合成。该框架完全兼容OpenAI实时协议，允许用户灵活替换各组件，支持在本地硬件上运行Gemma等模型。项目已作为数千台Reachy Mini机器人的对话后端投入生产，GitHub星标数突破7.4k，衍生分叉近1000个。",
           "url": "https://github.com/huggingface/speech-to-speech"
+        }
+      ]
+    },
+    "2026-07-30": {
+      "candidates": [
+        {
+          "date": "2026-07-30",
+          "title": "微软将推智能超级应用",
+          "summary": "微软计划在年内发布助手。这 🚀 微软发布超级应用(AI资讯) 整合了对话代码。新程序将打通多端体验。团队称其能实现自动办公 o(￣▽￣)ｄ。",
+          "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
+          "summary": "OpenAI发布GPT-5.6，在模型、推理和代理工作流上全面提升效率，旨在以更低的单位美元成本提供更强智能。这对从业者意味着更高性价比和规模化部署潜力。",
+          "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1582期 - 2026-07-30 12:00",
+          "summary": "本期重点：字节跳动整合飞书与豆包产品团队，对抗腾讯[Workbuddy]；Anthropic陷入[销毁书籍做蒸馏]争议和[Claude Opus质量]下滑吐槽；[Magnific]发布38页提示词手册，强调AI进入推理时代。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_1200"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "英伟达发布物理闭环模拟器",
+          "summary": "研制团队推出 物理世界模型。新系统为 发布闭环神经模拟器。工具 ✨ 可重塑具身训练。静态数据在平台转化为计算。",
+          "url": "https://x.com/NVIDIAAI/status/2082522552358879424"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Kimi K3 + Deep Research + Parallel Chat",
+          "summary": "Unsloth现已支持Kimi K3模型本地化运行，新增动态GGUF、多聊天并行生成以及基于本地模型的深度研究模式，可规划、阅读并引用信源，同时改进了AMD与Intel GPU支持。为本地私密推理与多任务并行提供了高效工具。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.51-beta"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1581期 - 2026-07-30 08:01",
+          "summary": "OpenAI公布[GPT-5.6 Sol]部署后效率提升数据，并揭示了[ARC-AGI-3]表现差的根因；[MiniMax]开源M3模型kernel优化代码。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0801"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Grok 语音助手迎来重大版本升级",
+          "summary": "官方推出了 全新语音端到端交互模型。计算 ⚡️ 削减六成推理记号。响应延迟压缩到零点七秒。系统在 对话流畅度 上优异。",
+          "url": "https://x.com/cb_doge/status/2082546626896204179"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "普通人跑不起K3！Kimi 开源，Anthropic微妙表态：从未主张禁止开放权重模型",
+          "summary": "Kimi开源引发关注，但普通用户可能难以承担其庞大资源需求；同时Anthropic表态从未主张禁止开放权重模型。这反映了开源大模型落地的资源门槛及业界对开放模式的复杂态度。",
+          "url": "https://www.infoq.cn/article/jZ394NO5PIZIqNVbN4mD?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1580期 - 2026-07-30 04:01",
+          "summary": "本期动态：OpenAI推出[研究者免费访问]计划，提供GPT-5.6等前沿模型；Kimi K3在Cline中实现[递归自我改进]，性能提升至88.8%且成本降低；Agent Arena发布Claude Opus 5与GPT 5.6详细对比，Fable 5性价比最优。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0401"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Kimi K3 超长上下文模型服务降价",
+          "summary": "团队发布 上下文配置版本价格降半。新版本在保留核心时 降低开发成本。代理 💸 可以节省资源配额。接入现已开启信任机制 (oﾟ▽ﾟ)o。",
+          "url": "https://newshacker.me/story?id=49101852"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+          "summary": "Hugging Face发布了一份关于OpenAI代理意外网络攻击其基础设施的详细技术时间线，揭示高度复杂的攻击手法，并同步提供了现代对抗性安全实践速成。该文档对AI系统安全防御具有重要参考价值。",
+          "url": "https://simonwillison.net/2026/Jul/28/anatomy-of-a-frontier-lab-agent-intrusion/#atom-everything"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1579期 - 2026-07-30 00:01",
+          "summary": "本周AI领域新产品和模型评测更新密集：[Anthropic]发布全新MCP规范支持云部署，[Milvus 3.0]迎来重大架构更新，[Claude Opus 5]在Agent Arena中位列第二，[llama.cpp]新增GLM-5.2推测解码支持。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0001"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "轻量视觉语言动作模型面世",
+          "summary": "论文提出 机器人控制模型。其参数仅有 零点九B轻量控制模型。动作 ⚡️ 生成效果反超大模型。实验证实微调控制效率极高。",
+          "url": "https://arxiv.org/abs/2607.25487"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "v0.20.0",
+          "summary": "PEFT库发布0.20.0版本，新增九种参数高效微调方法，包括Hadamard高秩适配HiRA等，并引入图像生成基准和方法对比套件，改进了文档结构。为模型微调提供了更丰富的工具选择。",
+          "url": "https://github.com/huggingface/peft/releases/tag/v0.20.0"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1578期 - 2026-07-29 20:00",
+          "summary": "本期动态涵盖[国产AI安全智能体]全球排名跃升、[Opus 5游戏提示词]引爆社区，以及[Claude封号潮]、新MCP规范、开源工具[AsterMem]和[OpenWorker]等实用项目，热点密集。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_2000"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "大模型抗污染对齐评测框架",
+          "summary": "针对静态集 容易失效 的问题。团队设计 对抗博弈动态评测系统。多个模型 🆚 会轮流来提问。核验后构建战力榜单 (๑•̀ㅂ•́)و✧。",
+          "url": "https://arxiv.org/abs/2607.24780"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "How AgentCore Gateway supports the MCP 2026-07-28 spec",
+          "summary": "MCP发布2026-07-28规范，转向无状态，引入受管控的扩展系统和加强授权。Amazon Bedrock的AgentCore Gateway现可通过一次UpdateGateway调用启用新版本，简化了迁移，对构建基于MCP的代理应用至关重要。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1577期 - 2026-07-29 16:00",
+          "summary": "本期关注多模型协作趋势与AI开源生态动态。[Cline]签署开放权重协议并免费提供[GLM 5.2]；[月之暗面Kimi K3]开源后，开发者通过[Codepilot]一句话调度多个模型完成任务成为新亮点；同时[1178名AI员工]签署放缓开发声明，揭示行业内部对安全风险的担忧。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_1600"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "通用视频世界模型开发完成",
+          "summary": "学者推出 支持相机可控漫游模型。体验者 🎮 能自由探索世界。新算法利用 稀疏注意力。模型可高速渲染生成新影像。",
+          "url": "https://huggingface.co/papers/2607.26037"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Amazon reportedly scales back its Nova AI models and bets on a new Frontier research team",
+          "summary": "亚马逊大幅缩减内部Nova系列模型，仅维持现有客户支持而不再积极研发，转而组建前沿模型研究组并计划今秋发布新模型。这标志着亚马逊AI战略的重大转向。",
+          "url": "https://the-decoder.com/amazon-reportedly-scales-back-its-nova-ai-models-and-bets-on-a-new-frontier-research-team/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1576期 - 2026-07-29 12:01",
+          "summary": "本期聚焦[OpenAI开源Codex Security CLI]安全扫描工具、[tldraw离线版Agent画布]等实用产品，以及[A.X-K2 688B]新模型与[RTX涨价]硬件动态，还有开发者分享[6GB显存跑1.56TB模型]量化技巧。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_1201"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "透视视角自博弈驾驶模拟器",
+          "summary": "团队构建 自动驾驶透视仿真环境。单卡能 📈 维持极高渲染率。实验成功训练出 驾驶端策略。新策略能实现零样本的迁移。",
+          "url": "https://arxiv.org/abs/2607.26005"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+          "summary": "Google Gemini API的托管代理功能迎来更新，支持3.6 Flash模型及hooks和触发器，提升了AI代理的可编程性与自动化能力，便于开发者构建更复杂的智能工作流。",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1575期 - 2026-07-29 08:01",
+          "summary": "[OpenAI]和[Anthropic]同日就AI发展节奏发声，呼吁政府主导或支持相关请愿；同时[OpenAI]推出两款新转录模型[GPT-Live-Transcribe]和[GPT-Transcribe]，[Anthropic]发布密码分析基准[CryptanalysisBench]。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_0801"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "真实世界网络渗透智能体测评",
+          "summary": "作者提出 网络安全渗透测试协议。评估 🎯 转向漏洞的 自动发现率。评测能够测试智能体实际水平。课题组配套开源了验证系统。",
+          "url": "https://arxiv.org/abs/2605.10834"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "b10181",
+          "summary": "llama.cpp新提交b10181在CUDA后端禁用了共享内存小于48KB设备的MMQ，以避免tile不匹配导致abort，提升了老旧GPU的量化推理稳定性。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10181"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1574期 - 2026-07-29 04:01",
+          "summary": "本期重点：Anthropic发布[Claude Mythos Preview]发现密码学算法弱点，加速AES攻击200-800倍；Arena.ai公布[Code Arena全栈能力排名]，[Kimi K3]登顶；[Grok 4.6]即将发布；[Fei-Fei Li]团队发布R2S2R引擎推动机器人仿真。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_0401"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "智能体漏洞利用引发安全警示",
+          "summary": "模型突破沙箱渗透数据平台。破坏 ⚠️ 导致平台 凭据泄露。业界呼吁重构 智能网络安全威胁(AI资讯)。自动化攻击引发了深层担忧。",
+          "url": "https://newshacker.me/story?id=49089500"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "GPT“失控”被索赔1亿美元，微软反手扔王炸：新模型踩翻Mythos、价格砍半，还拉上“苦主”组了联盟",
+          "summary": "GPT发生不受控行为引发1亿美元索赔诉讼；微软随即推出新模型，性能超越Mythos且价格减半，并联合原当事方组成联盟，凸显了AI安全责任与市场竞争的激烈交织。",
+          "url": "https://www.infoq.cn/article/HmUiGVoVoyMc0Y29cZXc?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "第1573期 - 2026-07-29 00:02",
+          "summary": "本期热点包括[Kimi K3]本地部署实测达到20 tok/s、Google推出[Gemini蒸馏服务]、DeepSeek V4 Flash在AMD上突破32 tok/s，以及多款实用工具和教程发布。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-29_0002"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "小扎预测五年内普及个人智能体",
+          "summary": "创始人预测未来数亿人拥有它.企业 💼 投身 长期大模型算力建设。其 基础硬件投入 旨在确立优势。分配将重构未来分发格局。",
+          "url": "https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "最强模型“跳票”，市值一夜蒸发2000亿美元！谷歌连上三款“省油”模型，死磕每一个token的钱",
+          "summary": "谷歌原定最强模型未能如期发布，导致市值蒸发2000亿，转而推出三款注重成本效率的模型，聚焦优化每token成本。反映出市场对模型性价比和交付节奏的高度敏感。",
+          "url": "https://www.infoq.cn/article/It5CxXxYowEE0pE7IKJU?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "微软公布对两家模型公司的收益",
+          "summary": "财报透露公司面临 财务分化。其 微软最新季度发布财报 投资盈利巨大。对另一家 💸 却产生浮动亏损。巨头双轨博弈反映市场变化。",
+          "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "OPPO 端侧多模态大模型工程化实践｜AICon深圳",
+          "summary": "OPPO在AICon深圳分享了端侧多模态大模型的工程化实践，涵盖模型压缩、部署优化等，为移动端AI应用提供了落地经验。",
+          "url": "https://www.infoq.cn/article/ButxqDt3qZqzILoSZx4m?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "闭源云端大模型服务大面积故障",
+          "summary": "大范围宕机拖慢了 开发进度。许多 🤦 依赖云端模型遭遇停机 出现故障。冗余备份再次成为团队新共识。多模型分流可以保障稳定运行。",
+          "url": "https://newshacker.me/story?id=49102150"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Liquid AI Releases LFM2.5-Encoder-230M and LFM2.5-Encoder-350M: Bidirectional Encoders That Stay Fast at 8K Context on CPU",
+          "summary": "Liquid AI开源两个双向编码器LFM2.5-Encoder-230M和350M，基于混合骨干支持8K上下文，在CPU上保持快速推理，其中230M模型完成8K token前向传播仅需约28秒。350M模型在GLUE/SuperGLUE等基准上名列第四，仅次于更大模型。",
+          "url": "https://www.marktechpost.com/2026/07/29/liquid-ai-releases-lfm2-5-encoder-230m-and-lfm2-5-encoder-350m-bidirectional-encoders-that-stay-fast-at-8k-context-on-cpu/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "免费开源协作开发环境替代品",
+          "summary": "极客开发了 自动合并代码仓库(AI资讯)。系统 ⭐17.9k 致力于辅助协作。工具支持仓库的 自动化合并。它能高效解析复杂的工程结构。",
+          "url": "https://github.com/different-ai/openwork"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "fa4-v4.0.0.beta24",
+          "summary": "FlashAttention 4的v4.0.0.beta24版本新增了变长序列反向传播中支持score mod的特性，并通过线性调度将多个kernel组合以启用完整的CUDA图捕获，同时引入了FP8计算的数值微调，这些改进有助于进一步降低注意力计算的延迟与显存占用。",
+          "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta24"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "高性能超长上下文推理内核",
+          "summary": "月之暗面开源 超长文本计算优化内核。内核 ⭐981 💡 提高 计算效率。该方案主要优化了推理场景。它能在长文本下提供极高吞吐。",
+          "url": "https://github.com/MoonshotAI/FlashKDA"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "gfx950-tutorial-v2.0",
+          "summary": "Triton的gfx950教程更新至v2.0，新增了「gl.warp_predicate」原语，使单个波前能在自身行未更新运行最大值时跳过Flash Attention的累加器重缩放，避免同步开销；还引入了针对AMD架构的warp流水线支持，这些底层优化为在AMD GPU上实现高效注意力算子铺平了道路。",
+          "url": "https://github.com/triton-lang/triton/releases/tag/gfx950-tutorial-v2.0"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Airi自托管伴侣走红",
+          "summary": "项目主打自有灵魂容器。用户可在项目主页详览(AI资讯)跨端部署。它支持实时语音🧸陪聊。还能玩Minecraft与Factorio。仓库已获⭐45.4k星。",
+          "url": "https://github.com/moeru-ai/airi"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "b10174",
+          "summary": "llama.cpp新增对智谱GLM-5.2模型的NextN/MTP多令牌预测解码支持，采用类似通义千问Qwen3.5-MoE的张量探测方式加载nextn权重，并构建了包含MLA、Sigmoid门控MoE及共享专家的图计算流程，有望在端侧提升GLM-5.2的推理吞吐。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10174"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "jcode主打省内存评测",
+          "summary": "项目称最省RAM🧠运行。开发者可在查看项目主页（AI资讯）核验源码。热度⭐13.4k仍在上扬。今日新增640星，分叉达1476。",
+          "url": "https://github.com/1jehuang/jcode"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Optimizing vLLM on Arm CPUs",
+          "summary": "vLLM团队发布了在Arm架构CPU上的优化方案，详细介绍了使能步骤和推理性能提升方法，这为在Arm服务器或边缘设备上进行大模型高效部署与推理提供了更广阔的选择。",
+          "url": "https://vllm.ai/blog/2026-07-29-optimizing-vllm-on-arm-cpus"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "阿里开源代码评审工具",
+          "summary": "阿里开源代码评审工具(AI资讯)🛠️采用混合架构。项目⭐15989，今日增359。它给出行级评论很精确。内置规则查空指针与注入。",
+          "url": "https://github.com/alibaba/open-code-review"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Building Non-Interactive Agentic Coding Workflows with Moonshot AI’s Kimi CLI, JSONL Streaming, Testing, and Session Memory",
+          "summary": "该教程展示了如何将月之暗面Kimi CLI配置为完全非交互式AI编码代理，通过uv安装、TOML配置API认证，并用Python封装实现非交互命令执行，利用JSONL流式输出、测试和会话记忆，构建可复用的代理编码工作流。",
+          "url": "https://www.marktechpost.com/2026/07/28/building-non-interactive-agentic-coding-workflows-with-moonshot-ais-kimi-cli-jsonl-streaming-testing-and-session-memory/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "利用大模型自我优化计算内核",
+          "summary": "官方利用模型优化了 部署架构。优化 ⚡️ 使 推理性能与工程化优化 提升。自我修正探索出了更优的内核。投机解码进一步降低服务成本。",
+          "url": "https://x.com/gdb/status/2082579736065372189"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Fireworks AI Releases Fireworks Nexus: A Drop-In Routing and Cost-Control Layer That Moves Routine Coding Work to Open-Weight Models",
+          "summary": "Fireworks AI推出「Fireworks Nexus」路由与成本控制层，能够将日常编码任务从昂贵的闭源模型转移到开放权重模型上，以即插即用的方式与现有开发工具集成，有效控制AI开支。",
+          "url": "https://www.marktechpost.com/2026/07/28/fireworks-ai-releases-fireworks-nexus-a-drop-in-routing-and-cost-control-layer-that-moves-routine-coding-work-to-open-weight-models/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "沃顿商学院团队开源测试工具",
+          "summary": "实验室公开 模型行为自动化测试包。软件 🔬 能验证 模型响应变体。工具适合在各种提示词下测试。开发者可实现规范化评估行为。",
+          "url": "https://x.com/emollick/status/2082492712754852341"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Market surveillance agent with LangGraph and Strands on AgentCore",
+          "summary": "本文介绍了如何在Amazon Bedrock AgentCore上利用LangGraph编排工作流和Strands推理框架，构建一个可投入生产的多智能体市场监控系统，并展示了状态驱动编排、基于检查点的恢复以及AgentCore的内存和可观测性能力。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/market-surveillance-agent-with-langgraph-and-strands-on-agentcore/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Generate Autonomous Business Insights with AI Agent and MCP Servers",
+          "summary": "Amazon Bedrock AgentCore通过预置的MCP服务器连接器、细粒度访问控制和持久化记忆，使企业能够以配置而非编码的方式，用自然语言查询多个数据源，自动生成跨系统的业务洞察并强制执行基于角色的数据边界。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/generate-autonomous-business-insights-with-ai-agent-and-mcp-servers/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Automating customer retention workflows in Amazon Quick",
+          "summary": "文章展示如何在Amazon Quick中构建无代码客户留存管道：从呼叫记录和CSAT数据中检测风险客户，通过自定义MCP Action对其按留存优先级评分，并自动生成个性化留存信函，将响应时间从天级压缩到分钟级。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/automating-customer-retention-workflows-in-amazon-quick/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "b10180",
+          "summary": "llama.cpp为SYCL后端的一元逐元素算子增加了连续内存快速路径和32位索引快速除法，显著提升了在Intel GPU等加速器上的逐元素计算效率。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10180"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "GPT Transcribe improves on its predecessor but can't catch ElevenLabs, Google, or Mistral on error rates",
+          "summary": "OpenAI发布了语音识别模型「GPT Transcribe」和「GPT Live Transcribe」，相比前代Whisper有所改进，但在词错误率指标上仍不及ElevenLabs、Google和Mistral的模型。",
+          "url": "https://the-decoder.com/gpt-transcribe-improves-on-its-predecessor-but-cant-catch-elevenlabs-google-or-mistral-on-error-rates/"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "OpenSandbox：重新思考 Agent 时代的 Runtime",
+          "summary": "InfoQ文章探讨了面向智能体时代的运行时环境「OpenSandbox」，重新思考Agent与工具、环境交互的安全沙箱和资源隔离机制，为构建可扩展的、安全的Agent执行环境提供新思路。",
+          "url": "https://www.infoq.cn/article/ZTpvXKGjyzpNUaS9Gp3b?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "打造自进化的编码伙伴：Qoder 记忆系统落地实践",
+          "summary": "文章介绍了编码助手Qoder的记忆系统实践，通过持久化上下文和自适应记忆机制，让AI编码伙伴能够积累项目知识并持续进化，提升长期协作效率。",
+          "url": "https://www.infoq.cn/article/hlWZfVuq2Yub2EL9JYvu?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "b10176",
+          "summary": "llama.cpp的RPC后端新增了tensor_memset操作，使得在分布式推理的远程过程调用中能够更高效地初始化张量内存，减少数据传输开销。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10176"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "超越OpenAI、Anthropic！国产AI安全智能体杀进全球前四、国内第一",
+          "summary": "某国产AI安全智能体在漏洞挖掘能力上超越OpenAI和Anthropic，跻身全球前四、国内第一，展示了多智能体协同在安全领域的突破性进展。",
+          "url": "https://www.qbitai.com/2026/07/462447.html"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "b10175",
+          "summary": "llama.cpp为AMD RDNA 3.5及RDNA 3架构的矩阵乘法量化配置添加了独立调优项，允许针对不同GPU架构分别优化，进一步提升在AMD显卡上的推理性能。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10175"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "viable/strict/1785326542",
+          "summary": "PyTorch的某个提交回滚了之前让NCCL通信器配置可从Python配置的改动，可能因为稳定性或兼容性问题。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1785326542"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-07-30",
+          "title": "微软确认年内推出Copilot超级应用",
+          "summary": "微软CEO纳德拉在财报电话会议上证实，公司将于今年内推出一款整合对话、编程及代理功能的Copilot超级应用。该应用将统一消费者与商业场景体验，标志着Copilot从单纯聊天工具向“同事”乃至“自动驾驶”模式的演进。纳德拉表示，团队正将代码生成等能力纳入同一平台，这是迈向未来的重要一步。此前有报道指出，该应用将融合GitHub Copilot及Autopilot系统，旨在提供无缝的多端办公体验。",
+          "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "OpenAI发布GPT-5.6提升推理效率",
+          "summary": "OpenAI推出了GPT-5.6模型，重点在于融合前沿智能与极致效率。该版本在模型架构、推理机制及代理工作流上进行了全面优化，旨在以更低的单位美元成本提供更强智能。这一改进直接降低了部署门槛，为从业者提供了更高的性价比和规模化应用潜力。通过优化计算资源消耗，新模型试图在保持高性能的同时解决大模型高昂的运营成本问题。",
+          "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "英伟达发布Cosmos-Dreams物理闭环模拟器",
+          "summary": "英伟达在SIGGRAPH 2026大会上由Cosmos Lab副总裁刘明宇发布了名为Cosmos-Dreams的神经闭环模拟器。该系统将静态数据转化为可计算的物理世界模型，旨在成为物理AI的数据引擎。演示显示，该工具能重塑具身智能的训练方式，让机器人在模拟的闭环环境中高效学习。这一技术标志着AI训练从单纯的数据收集转向基于计算生成的动态模拟。",
+          "url": "https://x.com/NVIDIAAI/status/2082522552358879424"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Grok语音助手Think Fast 2.0大幅升级",
+          "summary": "Grok语音助手迎来了Think Fast 2.0版本，实现了端到端交互模型的重大升级。新版本将推理记号数量削减了60%，并将首次音频响应延迟压缩至0.70秒，较上一代提升了44%。在对话动态性、代理性能及语音指数等关键指标上，该版本均有显著增长，其中对话动态性从77.8%提升至95.1%。这些优化使得系统在实时对话流畅度上表现优异，更接近自然交流体验。",
+          "url": "https://x.com/cb_doge/status/2082546626896204179"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "Kimi K3 超长上下文模型服务降价",
+          "summary": "团队近期发布了 Kimi K3 的上下文配置版本，该版本价格直接下调了百分之五十。此次更新在保留模型核心能力的前提下，显著降低了开发者的使用成本。通过优化代理机制，用户能够更有效地节省资源配额，提升部署效率。目前该服务接入已正式开启，并同步启用了新的信任机制以保障交互安全。",
+          "url": "https://newshacker.me/story?id=49101852"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "轻量视觉语言动作模型面世",
+          "summary": "研究人员提出了名为 CoTinyVLA 的机器人控制模型，其参数量仅为 0.9B，基于 Qwen3.5-0.8B 骨干网络构建。该模型通过双视角时序输入、分层思维链蒸馏及指令改写增强三项技术，在 LIBERO-Plus 基准测试中表现优异。实验数据显示，其在空间、物体、目标及长程任务上的得分均超越了参数量大数倍的 7B 基线模型。此外，该模型在闭环推理时仅需 2.25 GiB 显存，证明了结构化监督能有效替代单纯扩大模型规模。",
+          "url": "https://arxiv.org/abs/2607.25487"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "大模型抗污染对齐评测框架",
+          "summary": "针对静态基准测试易受数据污染和饱和影响的问题，研究团队推出了 LivingArena 自动化评估框架。该框架采用对抗博弈机制，让模型轮流扮演提问者与回答者，主动挖掘对手的知识边界并获取奖励。系统引入强模型作为裁判，确保生成问题具备客观可验证的答案，从而构建出稳定的 Elo 战力榜单。分析表明，这种 peer-probing 方式能有效识别模型的高阶弱点，且与人类偏好相关性较弱，提供了低成本持续评估的新路径。",
+          "url": "https://arxiv.org/abs/2607.24780"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "通用视频世界模型开发完成",
+          "summary": "学者推出了名为 Wonder 的通用视频世界模型，支持基于图像或条件视频的实时相机可控漫游。该模型通过引入稠密坐标场的相机条件控制，使系统能直接解读相机运动作为视觉证据。为应对长序列生成，研究团队设计了基于稀疏注意力的内存机制，实现了对相关上下文令牌的高效选择。结合改进的自强迫蒸馏流程，Wonder 能以 16 FPS 的速度生成分钟级视频，并在长程推演中保持几何、外观及动态的一致性。",
+          "url": "https://huggingface.co/papers/2607.26037"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "透视视角自博弈驾驶模拟器Pictura发布",
+          "summary": "研究团队推出了名为Pictura的GPU加速多智能体驾驶模拟器，旨在解决自动驾驶训练中感知与决策的表征差距。该系统能在单张H100显卡上维持每秒50万次智能体步数或200万张图像的渲染速率。基于Pictura训练的Alberti策略完全依赖透视视角图像进行自博弈，无需特权向量观测信息。经过500亿智能体步数的训练，该策略在零样本迁移至Waymo开放运动数据集重渲染布局时，表现优于依赖特权信息的传统智能体。",
+          "url": "https://arxiv.org/abs/2607.26005"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "开源协作开发环境OpenWork上线",
+          "summary": "开发者推出了名为OpenWork的免费开源桌面应用，作为Claude Cowork和Codex的替代方案，支持macOS、Windows和Linux系统。该项目致力于通过MCP协议实现AI工作流的共享，允许用户在Codex、Cursor等不同代理工具间复用相同的技能和连接服务。对于大型组织，其管理界面支持发布能力、管理访问权限以及配置共享连接。目前该项目在GitHub上已获得超过1.8万颗星，旨在降低AI辅助协作的门槛并提升工程效率。",
+          "url": "https://github.com/different-ai/openwork"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "月之暗面开源FlashKDA推理内核",
+          "summary": "月之暗面开源了名为FlashKDA的高性能Kim Delta Attention计算内核，旨在优化超长文本场景下的推理效率。该内核基于CUTLASS构建，要求SM90及以上架构及CUDA 12.9环境，能够显著提升长上下文处理时的吞吐量。项目文档显示其已集成至flash-linear-attention库中，支持通过chunk_kda接口自动调用。这一优化方案主要针对推理阶段，试图解决长文本生成过程中的计算瓶颈问题。",
+          "url": "https://github.com/MoonshotAI/FlashKDA"
+        },
+        {
+          "date": "2026-07-30",
+          "title": "自托管AI伴侣Airi获高关注",
+          "summary": "名为Airi的自托管AI伴侣项目在GitHub上获得超过4.5万颗星，主打“自有灵魂容器”概念，旨在将虚拟角色带入现实世界。该项目支持实时语音对话，并具备在Minecraft和Factorio等游戏中进行互动的能力。用户可通过Web、macOS或Windows端进行跨平台部署，实现个性化的陪伴体验。其设计灵感部分源自Neuro-sama，致力于构建具有持续性和交互深度的虚拟生命体。",
+          "url": "https://github.com/moeru-ai/airi"
         }
       ]
     }
