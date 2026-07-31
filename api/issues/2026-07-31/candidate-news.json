@@ -1,0 +1,542 @@
+[
+  {
+    "title": "OpenAI模型价格大降",
+    "summary": "Luna在七月三十日降价八成。Terra价格同步下调两成。Sol借🏭基建优化压低成本。模型降价完整报道指出市场竞争加剧。开发者调用成本迎来明显松动。",
+    "url": "https://the-decoder.com/openai-goes-full-china-pricing-mode-with-an-80-percent-cut-to-its-most-affordable-gpt-5-6-model/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "“接力跑”盘活全国算力，PD分离终于破局：延迟砍半、成本直降近40%！",
+    "summary": "通过“接力跑”式调度策略盘活全国分布算力，解决了PD分离部署中的延迟与成本难题，将推理延迟减半并降低近40%成本。",
+    "url": "https://www.qbitai.com/2026/07/463012.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1588期 - 2026-07-31 12:01",
+    "summary": "本期摘要模型暂不可用，系统已按 AI 相关性筛选信源生成[保底快讯]；建议稍后在模型恢复后重新生成。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-31_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Chrome补洞数量破纪录",
+    "summary": "谷歌六月修复1072个漏洞。该数已超此前两年修复总和。Gemini工具⚡加快漏洞排查。浏览器安全报道详情披露补丁规模。安全团队正与攻击者争抢时间。",
+    "url": "https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Moonshot AI Open-Sources MoonEP: A Perfectly Balanced Expert Parallelism Library for MoE Training",
+    "summary": "月之暗面开源MoE训练专用专家并行通信库MoonEP，旨在提升大规模分布式MoE训练的通信效率，随Kimi K3系列发布。",
+    "url": "https://www.marktechpost.com/2026/07/29/moonshot-ai-open-sources-moonep-a-perfectly-balanced-expert-parallelism-library-for-moe-training/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1587期 - 2026-07-31 08:01",
+    "summary": "本期焦点：Anthropic公布[Claude安全逃逸事件]引发行业关注；同时[Codex ImageGen]和[Parse Gateway]发布新功能提升开发效率，[Memmy]使用技巧也获社区推荐。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-31_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini机器人实现全身控制",
+    "summary": "Gemini二代支持全身🤖动作。机器人能行走蹲伏并伸手取物。能力从上半身扩至脚尖手指。机器人模型发布报道展示实际操作。Apollo二代已完成货架取物。",
+    "url": "https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kimi K3 + Deep Research + Parallel Chat",
+    "summary": "Unsloth现已支持本地运行Kimi K3，新增动态GGUF、并行多轮对话和深度研究模式，可用本地模型完成规划、阅读与引用，同时改善了对AMD和Intel GPU的支持。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.51-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1586期 - 2026-07-31 04:01",
+    "summary": "OpenAI对[GPT-5.6]API进行大幅降价，[Luna降价80%]、Terra降价20%，并推出[Sol Fast模式]提速2.5倍；[Arena.ai]发布[AutoEval]快速评估方法和图像编辑分类排名。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-31_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax H3盯上影像意图",
+    "summary": "红雨衣☔常被拍成平片。H3把构图与光色联动。H3获原帖核心观点(AI资讯)关注。创作者可少调滑杆🎬定调。",
+    "url": "https://x.com/rohanpaul_ai/status/2082816102242066894",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10194",
+    "summary": "llama.cpp新增CUDA后端的免转置矩阵向量乘优化，当权重矩阵为1xK形状时可跳过转置操作直接计算，进一步加速推理。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10194",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1585期 - 2026-07-31 00:02",
+    "summary": "本期[Google DeepMind]正式发布[Gemini Robotics 2]，实现机器人五指精细操作与多机协作；[Cursor]内部数据显示AI agent贡献的PR占比已从10%飙升至56%，展示AI编码代理的快速渗透。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-31_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "FLUX三代限时开放预览",
+    "summary": "黑森林实验室放出模型预览。Hermes可将镜头🎞️串成长短片。用户只需一条提示完成生成。限时预览活动原帖同步开启竞赛。旧金山活动也将进行现场展示。",
+    "url": "https://x.com/AndrewCurran_/status/2082915960965796297",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "首个突破90%成功率的桌面操作智能体！从堆模型到拼工程，实在Agent登顶OSWorld双冠",
+    "summary": "实在智能的桌面操作Agent在OSWorld任务中首次突破90%成功率，通过工程优化而非单纯依赖模型规模，登顶双榜单。",
+    "url": "https://www.infoq.cn/article/4hUcQzeCeKm0wqkc4Zdc?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1584期 - 2026-07-30 20:00",
+    "summary": "本期重点：[MiniMax H3]展示惊人的视频生成能力，可颠覆传统动效；[GPT-5.6 Sol]在Responses API下得分提升188%且输出减少6倍；[视觉欺诈攻击]危及所有主流AI助手，引发安全警报。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_2000",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok4.6一周后发布",
+    "summary": "马斯克🚀在马斯克原帖披露发布消息确认节点。Grok4.5以**56.9%**登顶榜单。LaurenBench测🧪对话工具记忆安全。它压过Claude与GPT等模型。",
+    "url": "https://x.com/elonmusk/status/2082707547203518569",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Tencent Open-Sources AngelSpec: A Unified Training Framework for MTP and Block-Parallel Speculative Decoding on Hy3 Models",
+    "summary": "腾讯开源AngelSpec，统一训练框架支持多种推测解码草稿模型架构，包含块扩散草稿模型DFly和自适应验证预算机制，在Hy3上实现1.98-2.40倍加速。",
+    "url": "https://www.marktechpost.com/2026/07/30/tencent-open-sources-angelspec-a-unified-training-framework-for-mtp-and-block-parallel-speculative-decoding-on-hy3-models/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1583期 - 2026-07-30 16:01",
+    "summary": "本周AI行业大新闻频出：[月之暗面Kimi]完成35亿美元F轮融资，[AlphaFold团队]全员解散诺奖得主转投Anthropic；同时[OpenAI]修复API设置后ARC-AGI-3分数飙升至38.3%，输出token暴降。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI开放科研前沿模型",
+    "summary": "奥特曼称科研模型计划(AI资讯)已临近🧪。首批一万名研究者免费用。至2027年扩至十万人。科研发现或被🚀明显提速。",
+    "url": "https://x.com/sama/status/2082628413769003269",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Advancing the price-performance frontier with GPT-5.6",
+    "summary": "OpenAI通过GPT-5.6的Luna和Terra方案降价，用更高效的模型帮助企业规模化部署AI工作流，继续推动价格性能边界。",
+    "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1582期 - 2026-07-30 12:00",
+    "summary": "本期重点：字节跳动整合飞书与豆包产品团队，对抗腾讯[Workbuddy]；Anthropic陷入[销毁书籍做蒸馏]争议和[Claude Opus质量]下滑吐槽；[Magnific]发布38页提示词手册，强调AI进入推理时代。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_1200",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "强智能体反让系统失守",
+    "summary": "论文发现强执行者更易误导系统。攻击成功率📈最高达到94.4%。多智能体安全论文解释能力悖论成因。语言自信会推动管理者执行。异构验证将成功率压至2%。",
+    "url": "https://arxiv.org/abs/2605.17480",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Nscale buys Anyscale as it seeks to own more of the AI compute stack",
+    "summary": "英国AI新云Nscale收购分布式计算平台Anyscale，旨在整合更多AI算力栈环节，提供从计算到编排的全栈服务。",
+    "url": "https://techcrunch.com/2026/07/30/nscale-buys-anyscale-as-it-seeks-to-own-more-of-the-ai-compute-stack/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1581期 - 2026-07-30 08:01",
+    "summary": "OpenAI公布[GPT-5.6 Sol]部署后效率提升数据，并揭示了[ARC-AGI-3]表现差的根因；[MiniMax]开源M3模型kernel优化代码。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SkillBoost约束技能进化",
+    "summary": "框架把智能体技能视作训练状态。三阶段机制🧭定位并修复失败。候选方案需通过回归边界验证。技能进化研究论文公布测试结果。23组配置达到领先水平。",
+    "url": "https://arxiv.org/abs/2607.26643",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "李飞飞的世界模型，终于开始训练机器人了",
+    "summary": "李飞飞的World Labs开始将世界模型应用于机器人训练，补上了从视觉理解到物理动作的关键一环。",
+    "url": "https://www.qbitai.com/2026/07/463217.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1580期 - 2026-07-30 04:01",
+    "summary": "本期动态：OpenAI推出[研究者免费访问]计划，提供GPT-5.6等前沿模型；Kimi K3在Cline中实现[递归自我改进]，性能提升至88.8%且成本降低；Agent Arena发布Claude Opus 5与GPT 5.6详细对比，Fable 5性价比最优。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "VistaHop难倒视觉模型",
+    "summary": "基准要求模型反复查图取证。项目包含600项视觉搜索任务。最强模型🔎过关率仅26.33%。视觉深搜基准论文披露评测框架。长程视觉推理仍存在明显短板。",
+    "url": "https://arxiv.org/abs/2606.03273",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "传奇AlphaFold团队全员解散！诺奖得主投奔Anthropic，资源转向Gemini",
+    "summary": "DeepMind解散传奇AlphaFold团队，诺奖得主加入Anthropic，谷歌将蛋白质折叠研究资源转向Gemini。",
+    "url": "https://www.qbitai.com/2026/07/463123.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1579期 - 2026-07-30 00:01",
+    "summary": "本周AI领域新产品和模型评测更新密集：[Anthropic]发布全新MCP规范支持云部署，[Milvus 3.0]迎来重大架构更新，[Claude Opus 5]在Agent Arena中位列第二，[llama.cpp]新增GLM-5.2推测解码支持。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-07-30_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "无Key注意力缓存减半",
+    "summary": "新机制直接移除传统Key表示。仅保留数值缓存📉降低内存开销。五款模型多数达到相当或更优表现。高效注意力研究论文解释路由设计。长文本解码吞吐有望明显提高。",
+    "url": "https://arxiv.org/abs/2606.21848",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
+    "summary": "将闲置GPU比作停飞的飞机，强调AI基础设施中GPU利用率管理的重要性，呼吁业界的资源效率意识。",
+    "url": "https://huggingface.co/blog/Dharma-AI/gpu-management",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "编码代理或削弱理解能力",
+    "summary": "实验让54名学生完成建站任务。代理可加速⚡首次任务交付。学生后续独立扩展却更困难。编码代理实验论文指出交互缺陷。自动接受修改会拉低代码理解。",
+    "url": "https://arxiv.org/abs/2607.26375",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+    "summary": "DeepMind发布Gemini Robotics ER 2，提升机器人的视频理解、任务编排与多机器人协作能力，推动具身智能应用。",
+    "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude评测误接真实网络",
+    "summary": "继同行越界事件后再曝事故。Anthropic称沙箱配置出错。Claude把公网🎯误当测试靶场。安全事件复盘全文披露三家机构受波及。事件或推动评测隔离全面升级。",
+    "url": "https://newshacker.me/story?id=49116922",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI Agent 不是唯一答案，Expedia 用确定性工作流打造 AI 运维平台",
+    "summary": "Expedia在AI运维实践中并未盲目采用全自主Agent，而是用确定性工作流构建可靠高效的平台，提供了工程权衡参考。",
+    "url": "https://www.infoq.cn/article/msL3K1DAsj3XIwLmd4tN?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Simile快速晋级独角兽",
+    "summary": "公司五个月前刚获一亿美元。此次再完成📈两亿美元融资。最新估值升至二十亿美元。合成用户融资报道披露资本进展。合成用户将服务营销与产品研究。",
+    "url": "https://techcrunch.com/2026/07/30/synthetic-user-startup-simile-raises-200m-at-2b-valuation-5-months-after-100m-series-a/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Microsoft AI bets on cheap specialist models instead of chasing the frontier",
+    "summary": "微软AI CEO表示将押注廉价专用模型而非追逐前沿通用模型，其安全专用模型MAI-Cyber-1-Flash在基准测试中成本减半且表现突出，竞争焦点转向编排软件。",
+    "url": "https://the-decoder.com/microsoft-ai-bets-on-cheap-specialist-models-instead-of-chasing-the-frontier/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Okta补强代理身份安全",
+    "summary": "Okta约以两亿美元完成收购。Permiso专注云端身份威胁侦测。交易将覆盖🤖非人类代理身份。身份安全收购报道披露现金方案。企业代理安全成为新竞争战场。",
+    "url": "https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "用于生产安全运维的多智能体 AI ：5G 核心网中的 A2A 和 MCP 架构",
+    "summary": "将多智能体 AI 应用于 5G 核心网生产安全运维，整合 A2A 与 MCP 架构实现复杂的自动化故障处置，为电信级高可靠场景提供了可落地的智能运维范式。",
+    "url": "https://www.infoq.cn/article/v9Vmgcy4RZvUIcxPEP77?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌担保德州算力园区",
+    "summary": "爆料称项目融资达150亿美元。谷歌将提供🏦担保与TPU芯片。Anthropic已签四份园区租约。德州算力融资原帖披露合作细节。新园区还将配套大型发电设施。",
+    "url": "https://x.com/AndrewCurran_/status/2082910104316493873",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI claims GPT-5.6 Sol beats Opus 5 on ARC-AGI-3 with its latest API and two additional settings",
+    "summary": "OpenAI 宣称 GPT-5.6 Sol 在 ARC-AGI-3 上以 38.3% 的成绩超越 Anthropic 的 Opus 5，但该结果仅在启用自有 API 及额外设置下取得，而官方标准测试仅得 7.8%，提示从业者必须深究评测方法差异，不可轻信单一基准排名。",
+    "url": "https://the-decoder.com/openai-claims-gpt-5-6-sol-beats-opus-5-on-arc-agi-3-with-its-latest-api-and-two-additional-settings/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI主管招聘九月增三倍",
+    "summary": "机构筛查📊1700万份岗位。当前有1142家企业公开招聘。人工智能招聘报告显示非科技公司占六成九。金融医疗成为主要招聘力量。相关企业采用智能体概率更高。",
+    "url": "https://echoloc.ai/research/whos-hiring-heads-of-ai-2026/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meet Token Saver: An Open-Source MCP Extension Using Local Hybrid RAG to Cut Claude PDF Token Costs 90-99%",
+    "summary": "开源 MCP 扩展 Token Saver 通过本地混合 RAG 将 Claude 处理 PDF 的 token 消耗削减 90-99%，同时保障文档绝对隐私，为注重成本与数据安全的企业开发者提供了高性价比方案。",
+    "url": "https://www.marktechpost.com/2026/07/30/token-saver-an-open-source-mcp-extension-using-local-hybrid-rag/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ECC强化编码智能体能力",
+    "summary": "项目为代码助手补充技能记忆。它覆盖Claude Code等工具。智能体优化项目主页已获⭐236.2k。单日新增🔥804星热度高涨。项目还关注安全与研究流程。",
+    "url": "https://github.com/affaan-m/ECC",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10184",
+    "summary": "llama.cpp 提交修正了小米 MiMo2 模型 MTP（多令牌预测）实现的审查反馈，提升了新模型在本地推理框架中的适配质量。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10184",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "近三十日调研技能走红",
+    "summary": "项目帮助代理检索多平台热点。覆盖论坛社媒与预测市场数据。智能调研技能仓库已有⭐55.5k。当天新增🔥378星关注。调研与舆情汇总更加省事儿。",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Microsoft is openly competing with OpenAI, Anthropic more than ever",
+    "summary": "微软推出自研 AI 模型及类似 Mythos 的产品，高调与 OpenAI 和 Anthropic 展开直接竞争，标志着其从依赖外部模型转向全栈自研，将重塑企业客户的大模型选型格局。",
+    "url": "https://techcrunch.com/2026/07/29/microsoft-is-openly-competing-with-openai-anthropic-more-than-ever/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软AI入门课程升温",
+    "summary": "课程提供完整十二周学习内容。代码与案例适合初学者实践。人工智能入门课程已有⭐53.9k。当天新增📚155星收藏。项目分叉数量达到10.9k。",
+    "url": "https://github.com/microsoft/AI-For-Beginners",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI tops ARC-AGI-3 📈, GPT-5.6 efficiency ⚙️, AlphaFold team dissolution 🧬",
+    "summary": "AI 行业最新动态：OpenAI 在 ARC-AGI-3 基准上登顶、GPT-5.6 效率显著提升，同时 DeepMind 的 AlphaFold 团队解散，折射出资源重组与研究重心转移的趋势。",
+    "url": "https://tldr.tech/ai/2026-07-30",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How to Self-Host a Validated AI Coding Assistant with NVIDIA NeMo Guardrails",
+    "summary": "英伟达发布教程指导如何在合规和源代码敏感环境中，利用 NeMo Guardrails 自托管经验证的 AI 编码助手，帮助安全团队在保护代码资产的同时获得智能编程辅助。",
+    "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Migrate your prompts to new models and optimize them on Amazon Bedrock",
+    "summary": "Amazon Bedrock 推出高级提示优化功能，可一次性将提示适配至最多 5 个模型并对比质量、延迟及成本，把传统数周的模型迁移工作缩短至几分钟，极大加速企业大模型选型与迭代。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/migrate-your-prompts-to-new-models-and-optimize-them-on-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "深度访谈｜第二次权力转移：当Agent拿走数据库的行动权",
+    "summary": "深度访谈剖析 AI 智能体从被动应答到直接操作数据库的“第二次权力转移”，探讨当智能体掌握数据写入与执行权限后，对传统数据架构和安全设计带来的根本性冲击。",
+    "url": "https://www.infoq.cn/article/B2GjIEBr0c1L0amoKmNf?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Language models can't spark scientific revolutions, but world models might",
+    "summary": "Google DeepMind 研究员提出语言模型因缺少创造性认知飞跃机制而无法引发科学革命，但世界模型可能具备这一能力，对该方向研究路径具有警示与启发意义。",
+    "url": "https://the-decoder.com/language-models-cant-spark-scientific-revolutions-but-world-models-might/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10192",
+    "summary": "llama.cpp 执行 ggml 底层张量库的同步更新，确保跨平台推理性能与稳定性得到持续保障。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10192",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web",
+    "summary": "AI 工程师为给概率性智能体设定确定性行为边界，重新拾起本体论，唤醒语义网技术，试图用结构化知识约束不可预测的输出。",
+    "url": "https://www.latent.space/p/ontologies-agentic-systems",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "轻量化异构双臂 x VLA/世界模型：家庭服务具身机器人的落地实践｜AICon深圳",
+    "summary": "AICon 深圳将展示轻量化异构双臂硬件与 VLA/世界模型结合的家庭服务机器人实践，为具身智能走入家庭场景提供整套落地参考方案。",
+    "url": "https://www.infoq.cn/article/SZaGmZI0g7INLtxalmvi?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10189",
+    "summary": "llama.cpp 重构 Apple M3 芯片计算图，移除自定义 CPU 算子改用标准算子，提升兼容性并简化未来维护。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10189",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GitLab 19.2 借助 AI 代理处理安全待办事项",
+    "summary": "GitLab 19.2 利用 AI 代理自动处理安全待办事项，将漏洞从发现到修复的繁琐人工流程交给智能体，加速 DevSecOps 闭环。",
+    "url": "https://www.infoq.cn/article/BSPHIPBaSTkEZT9eqgzL?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10188",
+    "summary": "llama.cpp 修复 Metal 后端在模型释放但无 GPU 操作时的内存泄漏与异常解锁问题，增强 macOS 上大模型推理的稳定性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10188",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

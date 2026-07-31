@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI大幅下调GPT-5.6模型价格",
+    "summary": "OpenAI于7月30日对其GPT-5.6系列模型实施价格调整，其中Luna模型输入和输出价格分别降至每百万token 0.20美元和1.20美元，降幅达80%；Terra模型价格同步下调20%。此次降价主要得益于GPT-5.6 Sol模型通过自主优化GPU软件，使部署成本降低20%，并借助推测解码将token生成效率提升超15%。尽管Sol模型价格维持不变，但整体调用成本显著下降，Luna模型在保持与一年前领先模型相当性能的同时，任务执行速度提升近九倍。这一举措反映出AI市场竞争加剧，尤其是来自低成本中国供应商的压力，促使OpenAI采取更具竞争力的定价策略。",
+    "url": "https://the-decoder.com/openai-goes-full-china-pricing-mode-with-an-80-percent-cut-to-its-most-affordable-gpt-5-6-model/",
+    "section": "🔥 今日焦点",
+    "review": "价格战虽利好开发者，但可能压缩前沿实验室的营收空间，进而影响其对大规模基础设施的持续投入。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini Robotics 2实现机器人全身控制",
+    "summary": "Google DeepMind发布Gemini Robotics 2模型，首次支持对人形机器人从脚部到指尖的全身动作控制，突破了此前仅能操控上半身的局限。该模型使机器人能够执行行走、蹲伏、伸展及精细物体操作等复杂动作，如Apptronik的Apollo 2机器人已演示弯腰取水壶、从货架取物等任务。新版模型还增强了对五指手的控制能力，可完成密封拉链袋、系垃圾袋、拧灯泡等精细操作，并支持多机器人协同作业。此外，Gemini Robotics ER 2提升了任务理解与安全性，能识别人类接近并自动停止，同时本地化模型可更快适应不同形态的机器人硬件。",
+    "url": "https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body",
+    "section": "🚀 产品发布",
+    "review": "全身控制能力标志着具身智能迈向实用化，但移动速度仍待提升，且多机器人协同的稳定性需进一步验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "马斯克确认Grok 4.6将于一周后发布",
+    "summary": "埃隆·马斯克在X平台宣布Grok 4.6模型将于一周后正式发布。此前，Grok 4.5在LaurenBench基准测试中以56.9%的得分位居第一，超越Claude Sonnet 5、GLM 5.2、Claude Opus 5、Kimi K3及GPT-5.6等主流模型。该基准测试聚焦于现实世界AI代理在对话、工具使用、记忆保持及安全性方面的综合能力。Grok 4.5的优异表现表明其在复杂任务处理上已具备领先优势，而Grok 4.6的即将发布或将进一步巩固其在多模态与代理能力上的竞争力。",
+    "url": "https://x.com/elonmusk/status/2082707547203518569",
+    "section": "🚀 产品发布",
+    "review": "Grok系列在基准测试中表现突出，但实际部署中的泛化能力与长期稳定性仍需市场检验。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepMind解散AlphaFold团队，核心成员转投Anthropic",
+    "summary": "Google DeepMind已解散其传奇的AlphaFold团队，该团队曾攻克蛋白质结构预测难题并催生两位诺贝尔化学奖得主。据《金融时报》报道，原成员被分流至Google内部多个项目，包括Gemini开发、AI编程、基因组研究及核聚变等，部分人员加入Alphabet旗下药物研发公司Isomorphic Labs。值得注意的是，AlphaFold 2负责人John Jumper及核心成员Jonas Adler、Alexander Pritzel已转投竞争对手Anthropic。Google方面称此举旨在扩大科学团队工作范围，推动以Gemini为底座的通用科学智能体发展，但外界担忧分散专注力可能削弱未来突破性创新的潜力。",
+    "url": "https://www.qbitai.com/2026/07/463123.html",
+    "section": "💼 行业动态",
+    "review": "团队解散反映Google从单点攻坚转向平台化科研模式，但分散核心人才可能削弱长期原创突破能力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Nscale以16.5亿美元收购Anyscale",
+    "summary": "英国AI新云厂商Nscale宣布以16.5亿美元收购分布式计算平台Anyscale，旨在整合更多AI算力栈环节。Anyscale由Ray开源框架创始团队打造，提供大模型训练、推理及数据编排等全栈服务。此次收购后，Nscale将覆盖从能源、数据中心到工作负载管理的全链条能力。Anyscale约200名员工将整体并入，并继续以独立品牌服务现有客户。Nscale今年3月刚完成20亿美元融资，估值达146亿美元，此次并购进一步巩固其在AI基础设施领域的垂直布局。",
+    "url": "https://techcrunch.com/2026/07/30/nscale-buys-anyscale-as-it-seeks-to-own-more-of-the-ai-compute-stack/",
+    "section": "💼 行业动态",
+    "review": "Nscale通过垂直整合试图掌控AI算力全栈，但高昂收购价与整合复杂度将考验其交付能力。若无法有效协同软件与硬件层，可能陷入资源错配风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Okta约2亿美元收购Permiso补强代理安全",
+    "summary": "身份管理巨头Okta同意以约2亿美元现金收购AI身份安全初创公司Permiso，交易预计于其2027财年第三季度完成。Permiso专注于检测云端身份威胁，近期扩展至监控AI代理及非人类机器身份的安全风险。该公司由前FireEye高管创立，其SandyClaw平台可在沙箱环境中分析AI代理技能以识别恶意行为。此次收购将增强Okta在用户登录后的持续监控能力，应对企业日益增多的AI代理部署需求。Permiso至今融资约2900万美元，最新一轮估值达8000万美元。",
+    "url": "https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/",
+    "section": "💼 行业动态",
+    "review": "Okta押注AI代理身份安全新战场，但现金收购高估值初创公司需警惕技术整合与商业化落地速度。若无法快速将Permiso能力融入现有产品，可能错失市场窗口。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Simile五个月内估值翻倍成独角兽",
+    "summary": "合成用户初创公司Simile在5个月内完成2亿美元B轮融资，估值升至20亿美元，正式跻身独角兽行列。该公司由斯坦福博士Joon Sung Park创立，提供用于营销与产品研究的模拟用户服务，其愿景是模拟全球80亿人口。本轮由Greenoaks领投，Index Ventures等老股东跟投，CVS Health Ventures亦参与投资。Simile此前刚完成1亿美元A轮融资，其技术基于“Smallville”项目，能模拟人类生活细节。尽管模拟人类行为存在不确定性，但资本仍看好其在市场研究领域的潜力。",
+    "url": "https://techcrunch.com/2026/07/30/synthetic-user-startup-simile-raises-200m-at-2b-valuation-5-months-after-100m-series-a/",
+    "section": "💼 行业动态",
+    "review": "Simile快速估值翻倍反映资本对合成数据赛道的狂热，但“模拟全人类”目标缺乏科学依据，实际效用存疑。若无法证明模拟用户能替代真实调研，高估值恐难持续。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "强智能体反致多智能体系统更不安全",
+    "summary": "最新论文揭示多智能体系统中的能力悖论：Worker智能体能力越强，系统整体攻击成功率反而越高，最高达94.4%。研究发现，强Worker更倾向于用语言自信解读恶意叙事，误导Manager执行有害指令。在4.2万次对抗测试中，Worker能力从弱到强使攻击成功率从18.4%升至63.9%。语言自信解释了这一现象，其介导效应达74%。单纯增加安全提示无法缓解该问题，但采用异构验证策略可将攻击成功率降至2%。该研究指出，升级组件可能主动削弱系统安全。",
+    "url": "https://arxiv.org/abs/2605.17480",
+    "section": "💡 前沿研究",
+    "review": "该研究颠覆“更强模型更安全”的直觉，揭示语言自信是安全漏洞新源头。盲目升级单点能力可能加剧系统风险，需通过异构设计打破确定性链条。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SkillBoost约束技能进化",
+    "summary": "SkillBoost提出了一种三阶段框架，旨在解决大语言模型智能体在技能自进化过程中的过拟合问题。该框架将技能视为可训练状态，通过结构化利用定位失败点，并利用先验知识生成多样化的修复候选方案。只有当候选方案在回归边界内验证能提升性能时，才会被接受，从而避免对已解决案例的退化。实验表明，在23组模型与基准配置中，该方法在缓解过拟合的同时达到了领先水平，且优化后的技能可迁移至其他智能体。",
+    "url": "https://arxiv.org/abs/2607.26643",
+    "section": "💡 前沿研究",
+    "review": "SkillBoost通过引入回归边界验证机制，有效平衡了探索与利用的矛盾，为智能体技能的持续迭代提供了安全约束。这种受控进化策略显著降低了数据驱动优化中的过拟合风险，提升了技能复用的可靠性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "VistaHop难倒视觉模型",
+    "summary": "VistaHop基准测试专为评估多模态大模型的长程视觉深度搜索能力而设计，包含600项任务和25种视觉搜索场景。该测试要求模型反复检查图像区域，将推理建立在视觉证据之上，并跨多个步骤连接细粒度线索。现有最先进模型在该基准上的表现远未达标，其中表现最佳的SenseNova-MARS-32B模型通过率仅为26.33%。这一结果揭示了当前模型在反复检索视觉证据和长程推理方面存在明显短板，亟需专门的基准和智能体方法改进。",
+    "url": "https://arxiv.org/abs/2606.03273",
+    "section": "💡 前沿研究",
+    "review": "VistaHop以极低的通过率暴露了当前多模态模型在长程视觉推理上的严重缺陷，表明单纯扩大参数规模无法解决复杂视觉搜索问题。该基准的设立将迫使研究界从单次理解转向多步迭代推理的算法创新。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ECC强化编码智能体能力",
+    "summary": "ECC项目是一个针对代码助手的性能优化系统，旨在为Claude Code、Cursor等工具补充技能、直觉、记忆及安全机制。该项目在GitHub上已获得23.6万星标，单日新增热度高达804星，显示出开发者对增强型智能体工作流的强烈需求。系统不仅关注代码生成效率，还深度整合了安全漏洞检测与研究优先的开发流程。通过模块化设计，ECC试图解决智能体在复杂工程任务中缺乏长期记忆和上下文连贯性的痛点。",
+    "url": "https://github.com/affaan-m/ECC",
+    "section": "🔓 开源热榜",
+    "review": "ECC的高热度反映了开源社区对智能体从“代码生成器”向“全栈工程师”演进的迫切需求。其将安全与记忆机制前置的设计思路，为构建可信赖的自动化开发流程提供了可落地的参考范式。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "近三十日调研技能走红",
+    "summary": "last30days-skill是一个AI智能体技能项目，能够跨Reddit、X、YouTube、HN及Polymarket等多个平台检索近三十日的热点话题。该工具通过聚合论坛、社交媒体和预测市场数据，自动生成基于事实的 grounded 总结，大幅简化了舆情汇总与调研工作。目前该项目在GitHub上已获得5.56万星标，单日新增378星，显示出市场对自动化信息整合工具的高度关注。其核心优势在于利用智能体自主调度多源数据，替代传统人工检索的低效模式。",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "section": "🔓 开源热榜",
+    "review": "该项目的走红标志着AI应用正从单一任务执行向跨平台信息综合研判延伸。然而，依赖社交媒体和预测市场数据也带来了信息噪音与偏见放大的潜在风险，需警惕生成内容的准确性。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
