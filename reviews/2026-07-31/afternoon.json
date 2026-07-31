@@ -1,0 +1,31 @@
+{
+  "issue_date": "2026-07-31",
+  "reviewed_at": "2026-07-31T15:22:41.065453+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 75,
+    "summary": "内容整体质量高，但存在严重的事实性幻觉（虚构未来日期、模型版本及基准测试数据），且播客对话缺乏自然交互感，呈现机械复述特征。",
+    "issues": [
+      "事实性幻觉：新闻日期设定为2026年，且虚构了GPT-5.6、Grok 4.6、Gemini Robotics 2等尚未存在的模型版本及具体参数，严重违背事实一致性原则。",
+      "事实性幻觉：文中引用的LaurenBench基准测试及具体得分（56.9%）为虚构数据，不存在于当前现实世界。",
+      "播客质量缺陷：对话呈现为机械的“新闻播报接龙”，缺乏真实双人对话的互动、追问或观点碰撞，S1与S2的发言过于工整且无口语化特征。",
+      "逻辑连贯性：虽然内部逻辑自洽，但基于虚构前提的“锐评”失去了现实指导意义。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
