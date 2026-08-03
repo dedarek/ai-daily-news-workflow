@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-08-03",
+  "reviewed_at": "2026-08-03T16:06:51.969321+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容结构完整，新闻与锐评逻辑自洽，播客对话自然流畅且观点鲜明，仅在个别事实表述的严谨度上略有瑕疵。",
+    "issues": [
+      "播客中 S1 提到'AirLLM...运行Kimi K3'，但Kimi K3并非开源模型，且新闻原文仅提及'能在4GB以下显存运行Kimi K3等超大规模开源模型'，此处表述存在事实混淆风险，建议核实或改为'支持运行类似Kimi K3规模的模型'。",
+      "新闻标题'英伟达开源Molt智能体强化学习框架'中，Molt框架的开源性质在摘要中未明确强调'开源'二字（虽正文提及），建议标题或摘要补充'开源'以增强信息密度。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
