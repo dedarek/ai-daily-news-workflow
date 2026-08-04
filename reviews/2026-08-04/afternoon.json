@@ -1,0 +1,30 @@
+{
+  "issue_date": "2026-08-04",
+  "reviewed_at": "2026-08-04T15:12:20.211363+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容覆盖全面且观点犀利，但存在严重的事实性幻觉（虚构阿里Qwen3.8-Max及2.4万亿参数等未发生事件）及播客对话机械堆砌新闻点的问题。",
+    "issues": [
+      "事实性严重错误：新闻内容虚构了'Qwen3.8-Max'、'2.4万亿参数'、'16天自主编程'等未发生的重大事件，属于严重的AI幻觉，不符合日报真实性原则。",
+      "播客质量缺陷：对话呈现为机械的'新闻播报接力'，缺乏自然交流感、情绪起伏或深度探讨，两人轮流复述新闻摘要，不符合'自然双人对话'标准。",
+      "逻辑连贯性不足：播客对话中话题切换生硬，缺乏自然的过渡和互动，更像是将新闻列表朗读一遍而非讨论。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
