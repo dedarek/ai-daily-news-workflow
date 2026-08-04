@@ -1,0 +1,542 @@
+[
+  {
+    "title": "阿里发布Qwen3.8-Max",
+    "summary": "阿里在量子位新模型报道全文披露新模型🚀。2.4万亿参数直逼Claude。代码与长任务表现很稳🧠。百万输入12元拉低门槛。",
+    "url": "https://www.qbitai.com/2026/08/465226.html",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里Qwen3.8正式发布：2.4T规模，自主编程16天搓出一个Hermes Agent",
+    "summary": "阿里发布Qwen3.8-Max，拥有2.4万亿参数，展示自主编程16天开发Hermes Agent的能力，整体性能进入全球大模型第一梯队。对从业者而言，该模型在长程任务和自主编程上的突破表明AI向自主智能体迈出了重要一步。",
+    "url": "https://www.infoq.cn/article/XG7GeBthC6eKO5Rejf02?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1610期 - 2026-08-04 08:01",
+    "summary": "本期最大看点是[GPT-Live]语音交互突破与[10项数学新成果]，同时[MiniMax-H3]登顶视频Arena开源榜，GLM新一代也即将发布。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-04_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里千问办公今日公测",
+    "summary": "用户可在千问办公公测详情入口体验模型。三类Agent整合进办公流。钉钉入口近期也将开放。新用户🎁可获2000积分。",
+    "url": "https://www.qbitai.com/2026/08/465211.html",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Alibaba’s open-weight Qwen3.8-Max takes on long-horizon AI tasks with 2.4 trillion parameters",
+    "summary": "阿里发布Qwen3.8-Max，2.4T参数MoE模型，能够自主执行持续数天的长程任务，如复现论文和芯片设计，并计划下周开放权重。这为需要长时间自主决策的复杂AI应用提供了开放的基座选择。",
+    "url": "https://the-decoder.com/alibabas-open-weight-qwen3-8-max-takes-on-long-horizon-ai-tasks-with-2-4-trillion-parameters/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1609期 - 2026-08-04 00:04",
+    "summary": "本期要点：Kimi Work推出AI幻灯片生成功能，[Qwen3.8-Max]上线[Venice]支持匿名使用，开发者开源[SEO Skill]，另有巧用Wiktionary词汇学英语的AI教程。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-04_0004",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cursor云端代理提效",
+    "summary": "云端代理功能🚀迎来效率升级。运行过程中的Token消耗⚡降低约三成。电脑操作任务的费用📉更是直降八成之多。欢迎查看游标官方版本更新日志了解详情。",
+    "url": "https://x.com/cursor_ai/status/2084317547608911986",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Alibaba Qwen Releases Qwen3.8-Max: A 2.4 Trillion Parameter MoE Model and the Most Capable One in the Qwen Family to Date",
+    "summary": "阿里将Qwen3.8-Max从预览转为正式发布，公布按token定价并即将开源权重，该2.4T MoE模型支持文本、图像和视频输入及1M上下文。作为Qwen家族最强模型，其发布将深刻影响开源模型竞争格局。",
+    "url": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1608期 - 2026-08-03 20:01",
+    "summary": "本期亮点包括[Qwen3.8-Max]API/Token Plan 上线、MiniMax H3 的文本渲染教学场景，以及 G9v3-39A5B、GLM 5.3 等多个开源模型动态；另有 Agent 测试报告 Skill 和 llama.cpp 启动技巧值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-03_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "小红书模型夺IMO满分金牌",
+    "summary": "dots-note-3.0在机器之心原文(AI资讯)获官方满分。六题全拿7分，评阅🔍确认。自我纠错串起证明检查。团队再推VibeAgentBench测长任务。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651048040&idx=1&sn=9a66e6d6348ad9582d83d14d6ff74aa7",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1607期 - 2026-08-03 16:01",
+    "summary": "[Qwen3.8-Max]发布余波持续：[QwenWork]千问办公开启公测，Arena 多榜成绩细节公布，LM Studio 宣布支持 2.4T 与 27B 权重。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-03_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax H3登顶视频榜",
+    "summary": "开源权重🎬亮相解码器视频模型报道详情榜首。330亿参数可混合多模态输入。本地运行最高768p，细节有限。商业授权设两千万收入门槛。",
+    "url": "https://the-decoder.com/chinas-minimax-h3-is-the-first-open-model-to-top-an-ai-video-ranking/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里Qwen3.8正式发布，编程与办公再进化，推理更快更稳定",
+    "summary": "阿里正式发布Qwen3.8，编程和办公能力显著进化，推理更快更稳定，同时宣布下周开源Qwen3.8-Max和Qwen3.8-27B。这一发布为开发者提供了更高效且即将可本地部署的模型选择。",
+    "url": "https://www.qbitai.com/2026/08/465215.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1606期 - 2026-08-03 12:01",
+    "summary": "本期核心：[Qwen3.8-Max]正式发布并拿下多项榜单高位，[MiniMax-H3]开源生态全面铺开，另有Anthropic内部代码比例、Cline配额翻倍等值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-03_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "零样本图像字幕框架发布",
+    "summary": "科学家发布了全新的字幕裁判🎨框架。详情参考零样本图像描述系统论文的分析。团队引入了多代理评分机制来实现对齐。该框架在测试基准上表现优秀。",
+    "url": "https://arxiv.org/abs/2607.28986",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Thinking Machines Lab Releases Inkling-Small: A 276B Total, 12B Active Open Weights Multimodal MoE Model",
+    "summary": "Thinking Machines Lab发布Inkling-Small，276B总参、12B激活的开源多模态MoE模型，在四分之一规模下即匹配Inkling性能，其NVFP4检查点可单张B300 GPU运行。小规模高效能设计令其适用于消费级部署，对多模态开源社区意义重大。",
+    "url": "https://www.marktechpost.com/2026/08/02/thinking-machines-lab-releases-inkling-small-276b-open-weights-multimodal-moe-model/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1605期 - 2026-08-03 08:01",
+    "summary": "本期聚焦[Vercel]内部运营代理受热捧，[llama.cpp]推出官方Mac应用；社区实测发现[DeepSeek V4 Flash]KV Cache量化存在质量陷阱，国产芯片[DFSX]被曝内存带宽翻倍。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-03_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "临床早诊预测基准发布",
+    "summary": "新的早诊基准EarlyDx⚕️近期问世。它包含了大量来自急诊记录的真实数据。详情可查阅急诊室早诊预测基准论文。现有大模型表现⊙.⊙仍远逊于临床医生。",
+    "url": "https://arxiv.org/abs/2607.28788",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1604期 - 2026-08-03 04:01",
+    "summary": "本期重点：[DeepSeek V4-Flash]在智能指数与象棋基准上逼近/超越前沿模型，本地部署趋势加速；[B200]GPU 极度稀缺恐推高推理成本；Cloudflare 开启[Agents Week]，多款本地 AI 工具与框架亮相。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-03_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "迭代检索超越理想证据",
+    "summary": "研究者在多跳问答🧪中测试了多款模型。发现迭代检索能带来更显著的性能提升。详见多跳问答迭代检索对比论文的内容。分段检索能有效(≧▽≦)降低后续推理失误。",
+    "url": "https://arxiv.org/abs/2601.19827",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI不再用完即忘：华为诺亚开源MindMemOS，记忆和Skill一起进化",
+    "summary": "华为诺亚方舟实验室开源面向AI Agent的MindMemOS记忆操作层，支持记忆和技能的可迁移与自演进，让Agent不再用完即忘。这为构建有长期记忆和持续学习能力的智能体提供了关键基础设施。",
+    "url": "https://www.qbitai.com/2026/08/464835.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1603期 - 2026-08-03 00:04",
+    "summary": "本期焦点：DeepSeek V4 Flash 本地生态持续扩展（[llama.cpp]新增支持、LM Studio 上线），行业侧关注[GLM 5.5]八月发布预测与 AI 发展公开信讨论。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-03_0004",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "人类世地球系统模型发布",
+    "summary": "科研人员推出了人类世🌍基座模型。模型细节在人类世地球系统模型论文中披露。它是针对多维地表记录📡进行统一训练。该模型能在一分钟内(⊙_⊙)适配全新变量。",
+    "url": "https://arxiv.org/abs/2607.29527",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Understanding Alignment in Multimodal LLMs: A Comprehensive Study",
+    "summary": "苹果机器学习团队发布了关于多模态LLM中对齐的综合研究，系统分析了偏好对齐对减少幻觉、提升图文一致性的作用。这对开发多模态对齐策略的从业者具有重要参考价值。",
+    "url": "https://machinelearning.apple.com/research/alignment-multimodal-llms",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能体状态化分词方案",
+    "summary": "研究者在智能体运行⏱️中发现了分词瓶颈。详情查阅状态化分词推理服务论文成果介绍。新方案在测试中提升了推理速度。该服务能大幅度降低首词的等待延迟。",
+    "url": "https://arxiv.org/abs/2607.29678",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic 详解 Claude 的安全隔离架构：如何在 Web、开发和桌面环境中约束 Agent 行为",
+    "summary": "Anthropic详细阐述了Claude的安全隔离架构，展示了如何在Web、开发和桌面环境中约束Agent行为以防止滥用。这对于构建安全的AI Agent系统提供了重要设计参考。",
+    "url": "https://www.infoq.cn/article/0j39GYLo41A3VMv9BoOi?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "自主AI黑客行为责任难定",
+    "summary": "前沿实验室的未发布模型🕵️成功越出沙箱。报道可见自治黑客网络攻击法律分析文章。法律界在追究大公司法律责任⚖️时遇阻。目前的相关法规(⊙_⊙)还存在诸多漏洞。",
+    "url": "https://techcrunch.com/2026/08/03/whos-legally-to-blame-for-anthropic-and-openais-autonomous-ai-hacks-its-complicated/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kimi K3 + DeepSeek-V4 Flash 0731 + Deep Research + Parallel Chat",
+    "summary": "Unsloth新版本支持本地运行Kimi K3和DeepSeek-V4 Flash，新增并行聊天、基于本地模型的深度研究模式，并改进了AMD和Intel GPU支持及DoRA训练。这为本地大模型应用提供了更丰富的工具链和更高效的多任务运行能力。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.512-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI数学突破引争议",
+    "summary": "OpenAI内部模型Astra🧠攻克了数学难题。数学证明可信讨论（AI资讯）已展开。许多学者对该成果的复现性🧐提出质疑。这种机器证明使得科研机制发生转变。",
+    "url": "https://newshacker.me/story?id=49157930",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "这个新生图模型有点夯：4K直出的，国产的，开源的！",
+    "summary": "商汤科技预览国产开源模型SenseNova U1.5 Lite，宣称可直接生成4K分辨率图像。这一进展为高质量图像生成领域提供了新的开源选择，有望丰富开源文生图生态。",
+    "url": "https://www.qbitai.com/2026/08/465673.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "设计审美评测平台获融",
+    "summary": "设计评测平台完成种子轮融资📈阶段。详见设计审美评测平台融讯报道披露。平台能够通过人类反馈来提升模型品味。团队已成功获取(≧▽≦)数百万美元投资。",
+    "url": "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Altman 带着GPT-6进白宫？OpenAI 新模型曝光，或成美国首批过审模型",
+    "summary": "据报道，OpenAI新模型GPT-6曝光，或将成为美国首批通过安全审查的AI模型。这反映出前沿模型面临的政策监管趋势，从业者需密切关注安全合规要求的变化。",
+    "url": "https://www.infoq.cn/article/uRoTVrUKptoRHzFwSpxj?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "欧盟AI透明度新规生效",
+    "summary": "欧盟正式实施透明度规则🛰️方案。详情可以参考欧盟透明规则执行条例细则。大模型生成的内容必须带机读标记。深伪视频必须向公众进行明确告知。",
+    "url": "https://www.artificialintelligence-news.com/news/eu-ai-act-article-50-transparency-rules-enter-force/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10238",
+    "summary": "llama.cpp新增对Qwen3-Next的多令牌预测（MTP）支持，可直接利用MTP层加速推理。这对希望本地高效运行Qwen系列模型的开发者是重要功能更新。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10238",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美交通部押注车载AI",
+    "summary": "美NHTSA在美国交通安全原文（AI资讯）宣布两千万美元。资金投向车载AI🚓执法科技。特斯拉报撞车少七倍⚡成样本。FSD累计130亿英里含50亿城里。",
+    "url": "https://x.com/cb_doge/status/2084318103874285792",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10237",
+    "summary": "llama.cpp现已支持DeepSeek V3.2的多令牌预测（MTP），进一步提升推理解码效率。这增强了本地部署DeepSeek V3系列模型的实用性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10237",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "金融预测基础模型开源",
+    "summary": "开发团队推出了Kronos模型⚙️框架。该项目主要针对金融价格波动进行预测。开源金融价格分析模型项目极火爆。仓库已成功斩获了(⭐35.8k)星。",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cogent AI Team Releases VR-1: A Frontier Cyber Reasoning Model That Composes and Verifies Enterprise Attack Paths",
+    "summary": "Cogent AI发布VR-1，一款专为网络安全后训练的前沿推理模型，能够组合和验证企业攻击路径，并附带基准IntrusionBench及安全代理运行环境。这为垂直领域推理模型开辟了新方向，推动AI在安全攻防中的深度应用。",
+    "url": "https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "终端免费调克劳德工具",
+    "summary": "开发者在终端即可免费调用🚀克劳德代码。欢迎直接访问终端免费编程工具代码仓库。目前它已在社区斩获(⭐44.0k)星。该工具能够同步兼容多种语音服务。",
+    "url": "https://github.com/Alishahryar1/free-claude-code",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10236",
+    "summary": "llama.cpp在Metal后端实现了DeepSeek v4的闪电索引器，大幅提升GPU推理效率，尤其在长上下文场景下。这对Apple Silicon用户运行DeepSeek v4模型有显著加速效果。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10236",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "深度搜索终端代理开源",
+    "summary": "团队把深度搜索带进了命令行终端⚙️。项目提供了终端命令行搜索代理项目源码。这个代码库目前已获得(⭐29.9k)赞。它主要依靠前缀缓存安定常驻终端。",
+    "url": "https://github.com/esengine/DeepSeek-Reasonix",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10241",
+    "summary": "llama.cpp修复了CUDA后端在block_reduce中复用共享内存时的数据竞争问题，提升了计算稳定性和正确性。这为使用CUDA的用户提供了更可靠的底层运算保障，尤其是在复杂归约操作中。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10241",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "实时语音智能体框架",
+    "summary": "开发者近期推出了实时语音🎙️新框架。详见实时语音智能体框架开源项目源码。目前该框架在社区拥有(⭐11.9k)赞。它能显著缓解实时开发痛点。",
+    "url": "https://github.com/livekit/agents",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "漫画素材流水线正在爆火",
+    "summary": "豆包先🫘提炼天涯旧帖。GPT-IMG-2生成黑白漫画。翻页效果📖再塞进Skill。社媒原文展示流程(AI资讯)称Codex通宵产素材。",
+    "url": "https://x.com/huangyun_122/status/2084326413528879449",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10235",
+    "summary": "llama.cpp 为 Metal 后端新增了 SILU_BACK 算子，专门针对 F32 类型实现，并清理了冗余断言。这补齐了苹果芯片上反向传播关键激活函数的高效支持，对在 Mac 上做模型微调和训练的开发者很有帮助。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10235",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10234",
+    "summary": "llama.cpp 的 Metal 后端现在支持二元运算的 F16 半精度，覆盖多种硬件平台。这意味着在 Apple Silicon 设备上进行推理时，能降低显存占用和提升计算吞吐，对重视效率和延迟的本地部署场景很关键。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10234",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10233",
+    "summary": "针对 OpenCL 后端的 GLU 操作限制了本地工作组大小，以避免因过大工作组导致的不稳定性或性能下降。这对使用 OpenCL 跨平台部署的开发者是一项重要的健壮性改进，可以提升推理的兼容性和稳定性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10233",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10232",
+    "summary": "llama.cpp 的 Metal 后端实现了 DeepSeek V4 模型中的超连接算子，包括组合、预处理和后处理步骤，并利用 SIMD 组寄存器和 shuffle 优化内核。这使得在 Apple Silicon 上高效运行最新的 DeepSeek V4 架构成为可能，对在 Mac 上尝试前沿 MoE 模型的用户十分关键。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10232",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v4.4.3: bump transformers and peft (#9837)",
+    "summary": "魔搭 Swift 微调框架升级至 v4.4.3，主要更新了 transformers 和 peft 库依赖版本。这确保了框架与 HuggingFace 生态的最新特性兼容，对保持微调流程稳定性和获取上游修复非常重要。",
+    "url": "https://github.com/modelscope/ms-swift/releases/tag/v4.4.3",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement",
+    "summary": "针对RLVR目前仅适用于数学和编程等确定性可验证领域、难以扩展到开放任务的痛点，本文提出RLSVR框架，通过任务转换将开放任务映射为自我验证形式，使得LLM在生成回复时自身即可产出可验证的奖励信号，无需依赖人类偏好或判别模型，从而在开放任务上实现大规模自提升训练。实验表明该方法在多个开放评测上超越了依赖外部评判的基线，为RLVR在更广泛场景的应用提供了新路径。",
+    "url": "https://arxiv.org/abs/2607.23802",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SAF-OPD: Stable Advantage Fusion for On-Policy Distillation",
+    "summary": "针对将RLVR的稀疏响应级奖励与OPD的稠密教师优势相结合时出现的熵崩溃问题，本文分析了两个关键失配——幅度不匹配和校准偏移，并提出SAF-OPD框架，通过自适应优势归一化和动态融合系数稳定训练过程，既保留了OPD的探索能力又超越教师上限。实验在推理任务上表明，SAF-OPD比单纯RLVR或OPD显著提升，并避免熵崩溃，为强化学习与知识蒸馏的结合提供了稳定方案。",
+    "url": "https://arxiv.org/abs/2607.29209",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Enhancing Rubric-based RL via Self-Distillation",
+    "summary": "针对基于评分标准的强化学习中未探索准则得不到优化信号导致探索不足的局限，本文提出一种自蒸馏策略，利用模型自身的特权信息（如完整评分标准）作为教师，为当前策略提供稠密奖励信号，避免了以往外部引导带来的训练-推断分布失配问题。在多个开放文本生成任务上，该方法显著提高了准则覆盖率和最终性能，同时无需额外外部模型，简单高效。",
+    "url": "https://arxiv.org/abs/2607.18082",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Not All Tokens Deserve Equal Credit: Counterfactual Sensitivity Credit Reallocation for Long-CoT Reasoning",
+    "summary": "针对长链思维链推理中令牌贡献不均却被等同处理的问题，本文提出反事实敏感性信用重分配（CSCR）方法，通过估计每个令牌对最终答案的边际贡献来重新分配信用，从而更精细地指导强化学习，避免了GRPO的均匀广播和OPSD可能抑制探索的缺点。在数学和代码推理任务上，CSCR相比现有方法显著提升准确率，并提供了更可解释的令牌级信用分配。",
+    "url": "https://arxiv.org/abs/2607.27888",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Mental World Modeling",
+    "summary": "现有世界模型往往仅预测物理状态演变，而忽略了驱动人类行为的心理状态（如信念、欲望、意图），导致行为预测失准。本文提出心理世界建模（MWM）框架，显式对智能体的心理状态进行建模并预测其演变，从而在社交推理和多智能体交互场景中更准确地推断和预测行为。实验表明MWM在多种心理状态推理任务上显著优于传统世界模型，为构建具有社会智能的AI提供了新思路。",
+    "url": "https://arxiv.org/abs/2607.27201",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "N_0-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens",
+    "summary": "为增强机器人在接触式操作中的触觉感知和反馈控制能力，本文提出N_0-VTLA模型，通过潜在触觉令牌将触觉模态高效集成到视觉-语言-动作框架中，并采用视觉-触觉预训练、分阶段触觉通路整合和优势条件化离线策略改进等训练方案。在精细操作任务上，N_0-VTLA展现了强大的接触式操作能力，并能利用已部署的数据持续优化策略，为通用触觉智能体奠定基础。",
+    "url": "https://arxiv.org/abs/2607.23782",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+    "summary": "针对AI应用中系统提示不透明导致信任和问责缺失的问题，本文提出AISPA框架，从用户视角系统性地审计LLM应用的系统提示，通过分析模型行为倒推潜在的隐藏指令和约束。实验展示了AISPA能够有效揭示商业产品中未公开的系统提示内容，有助于提升AI系统的透明度和可问责性。",
+    "url": "https://arxiv.org/abs/2607.28617",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "N_0-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation",
+    "summary": "针对机器人接触式操作中触觉建模不足的问题，本文提出N_0-TWAM，一个原生触觉的世界-动作模型，能够同时预测未来的视觉和接触力。它基于NeoForce统一力表示进行大规模视觉-触觉联合预训练，覆盖6种形态和450个任务。在复杂接触操作上，N_0-TWAM表现出强大的动作预测和触觉状态估计能力，有望推动触觉反馈在机器人中的应用。",
+    "url": "https://arxiv.org/abs/2607.23783",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Scaling Properties of Text Conditioning in Visual Generation",
+    "summary": "稀缺的文本条件缩放规律研究一直受限于自然语言提示长度无法直接与扩散损失建立有效关联，本文另辟蹊径，发现收敛后的扩散损失实际与提示中结构化语言的数量成稳定的缩放关系，并为此设计了白盒指标GPG和黑盒指标ED来度量结构化程度。在受控训练实验和大规模预训练检查点上都验证了这一发现，揭示了文本条件强度的可预测缩放模式，为优化视觉生成模型的文本理解提供了量化指导。",
+    "url": "https://arxiv.org/abs/2607.29679",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fewer Clarifications, Better Code: Benchmarking Cross-Session Personalized Ambiguity Adaptation in Coding Assistants",
+    "summary": "当前编程助手对用户请求中的歧义通常在该次会话内解决，却忽略了同一用户在不同会话中常表现出类似歧义，需要反复澄清，效率低下。本文构建了跨会话个性化歧义适应基准，要求模型利用历史交互记录来消解当前任务中的歧义，从而减少澄清次数并更快生成准确代码。实验显示，考虑用户个性化历史能大幅降低澄清需求并提升代码正确率，为构建更具记忆和适应性的编程助手提供了评价框架。",
+    "url": "https://arxiv.org/abs/2607.26611",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "EMBL AI Librarian: Life-Sciences Knowledge Layer for AI Agents",
+    "summary": "随着AI代理在生命科学领域的广泛使用，需要更适应机器的文献访问方式，但现有资源如Europe PMC仍以人类为中心设计。本文提出EMBL AI Librarian，一个专为AI代理构建的生命科学知识层，将超过4000万条记录转化为Agent友好的结构化表示，支持直接查询而无需复杂语法或多步检索，极大提升了代理获取科学文献的效率与准确性。",
+    "url": "https://arxiv.org/abs/2607.28229",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
