@@ -1,0 +1,33 @@
+{
+  "issue_date": "2026-08-05",
+  "reviewed_at": "2026-08-05T15:13:39.095189+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容覆盖全面且逻辑连贯，但存在严重的事实性幻觉（虚构模型版本与参数）及正文中的非专业符号，导致无法通过终审。",
+    "issues": [
+      "事实性错误：通义千问（Qwen）目前最新公开版本为Qwen 2.5系列，文中虚构了'Qwen 3.8 Max'及'2.4万亿参数'，且'2.4T'与'3.8 Max'命名逻辑混乱，属于严重幻觉。",
+      "事实性错误：英伟达自动驾驶模型名为'Alpamayo'，但'Alpamayo 2 Super'及'LingoQA'基准测试均为虚构，真实基准为nuScenes等。",
+      "事实性错误：FLUX 3目前尚未发布，且文中提到的竞品版本号（如Runway Gen-4.5, Luma Ray 3.2）均为虚构。",
+      "格式/专业性错误：新闻摘要中出现'⊙o⊙'表情符号，严重破坏日报的专业性和严肃性。",
+      "事实性错误：谷歌ATLAS报告编号'arxiv.org/abs/2608.00038'中的年份'2608'明显错误（应为2024或2025），且报告细节存在编造嫌疑。",
+      "事实性错误：DeBERTa-Sentinel及AFlex框架的具体数据（如97.53%准确率、49%能耗降低）缺乏真实来源支撑，极大概率为模型幻觉生成的虚假数据。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "fail",
+      "editorial_quality": "fail",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
