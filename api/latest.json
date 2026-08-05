@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-08-04",
-  "content_date": "2026-08-04",
-  "published_at": "2026-08-04T04:07:27.081235+00:00",
+  "issue_date": "2026-08-05",
+  "content_date": "2026-08-05",
+  "published_at": "2026-08-05T03:59:40.955507+00:00",
   "article_count": 12,
   "podcast_turns": 22,
   "tts_mode": "video-api-audio-video",
@@ -17,7 +17,7 @@
       "z-ai/glm-5.2"
     ],
     "endpoint": "https://integrate.api.nvidia.com/v1",
-    "calls": 9,
+    "calls": 7,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -58,26 +58,6 @@
           },
           "structure_issues": [],
           "review": {
-            "pass": false,
-            "issues": [
-              "轮次数量不足：当前对话共20轮，符合18-22轮的建议范围，但内容密度分布不均，部分新闻（如TerraNova、Kronos、LiveKit）仅用一句话带过，缺乏深度探讨。",
-              "信息量不足：部分新闻（如TerraNova、Kronos、LiveKit）的讨论过于简略，未充分展开其技术细节或潜在影响，导致整体信息量不够丰富。",
-              "结构问题：对话后半部分（第13-20轮）多为总结性陈述，缺乏具体的承接、追问或分歧，导致讨论显得平淡，缺乏真实对话的张力。",
-              "自然度问题：S1和S2的发言在某些段落显得过于机械，缺乏自然的口语化表达，例如‘技术突破很快，但商业闭环需要更谨慎’这类表述略显生硬。"
-            ],
-            "repair_instruction": "1. 增加对TerraNova、Kronos、LiveKit等新闻的深度讨论，补充具体技术细节或应用场景，提升信息量。2. 在对话后半部分加入更多承接、追问或分歧，例如针对‘AI在专业场景的推理能力缺陷’提出不同观点或案例。3. 优化口语化表达，避免过于机械的总结性陈述，使对话更自然流畅。4. 确保每轮发言字数在35-95字之间，避免过短或过长。"
-          },
-          "review_model": "lenovo:qwen35-122b-a10b-fp8",
-          "review_usage": {}
-        },
-        {
-          "attempt": 2,
-          "generation": {
-            "model": "lenovo:qwen35-122b-a10b-fp8",
-            "usage": {}
-          },
-          "structure_issues": [],
-          "review": {
             "pass": true,
             "issues": [],
             "repair_instruction": ""
@@ -87,8 +67,8 @@
         }
       ],
       "podcast_harness": {
-        "attempts": 2,
-        "best_attempt": 2,
+        "attempts": 1,
+        "best_attempt": 1,
         "final_pass": true,
         "final_issues": [],
         "structure_issues": [],
@@ -97,16 +77,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-04/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-04/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-04/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-04/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-04.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-04/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-04/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-04.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-04/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-04.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-04.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-04.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-05/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-05/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-05/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-05/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-05.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-05/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-05/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-05.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-05/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-05.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-05.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-05.mp4"
 }
