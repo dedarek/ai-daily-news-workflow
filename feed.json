@@ -3,6 +3,142 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-08-06",
+      "content_date": "2026-08-06",
+      "published_at": "2026-08-06T04:07:44.979549+00:00",
+      "article_count": 12,
+      "podcast_turns": 22,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "deepseek-ai/deepseek-v4-pro",
+          "moonshotai/kimi-k2.6",
+          "z-ai/glm-5.2"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 11,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次数量不足：当前对话共20轮，符合18-22轮建议，但结尾S2的提问（'听众朋友们，你们觉得哪个方向最可能爆发？'）属于典型的固定寒暄/互动话术，违反了'不应出现固定问候和寒暄'的检查重点。",
+                  "结尾结构问题：S2的最后一句将对话强行拉向听众互动，破坏了播客作为'内部深度讨论'的真实感，显得生硬且像传统电台主持，不符合'像真实讨论'的要求。",
+                  "内容覆盖度：虽然覆盖了大部分新闻，但S1和S2在最后两轮的总结略显仓促，对Cloudflare和loopx的提及过于简略，缺乏像前文那样的深度追问或具体场景分析。"
+                ],
+                "repair_instruction": "1. 删除S2最后一句'听众朋友们，你们觉得哪个方向最可能爆发？'，改为对当前技术趋势的冷静判断或一个开放性的行业思考，保持对话的私密性和专业度。2. 在倒数第二轮（S2提到Cloudflare和loopx时），增加一句具体的追问或补充，例如询问这些工具如何解决具体的'记忆断裂'痛点，或对比两者在长任务中的不同侧重点，以增强信息密度和真实讨论感。3. 确保S1的最后一句总结不再带有'总的来说'这种明显的播报腔，而是直接以观点收尾，使对话结束得更自然。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            },
+            {
+              "attempt": 2,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次不足：当前对话仅20轮，虽在建议范围内，但内容密度过高，导致部分新闻（如腾讯Hunyuan3D、北大UniWorld）被完全忽略，未覆盖日报中5-7条核心新闻的要求。",
+                  "信息遗漏：日报中关于腾讯Hunyuan3D-Buffalo 1.0和北大UniWorld-Design框架的两条重要前沿研究新闻未在对话中体现，导致内容覆盖不全。",
+                  "深度不足：部分新闻（如Cloudflare Computer、loopx）仅被一笔带过，缺乏对技术细节或潜在影响的深入探讨，未能满足“足够解释和信息量”的要求。"
+                ],
+                "repair_instruction": "请补充腾讯Hunyuan3D-Buffalo 1.0和北大UniWorld-Design框架的讨论，替换掉当前对话中较为简略的Cloudflare Computer或loopx部分。确保每条新闻都有至少一轮深入探讨，包括技术细节、应用场景或潜在影响。同时，检查总轮次是否保持在18-22轮之间，避免信息过载或遗漏。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            },
+            {
+              "attempt": 3,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在结尾总结时（第21轮）将‘谷歌转型’、‘视频生成’、‘代理安全’三个跨度较大的话题强行串联，逻辑略显跳跃，建议增加过渡句使‘工具到自主体’的结论更自然。",
+                  "S2在第16轮使用‘天网’比喻虽生动，但属于外部文化引用，虽未违反事实原则，但建议确认播客风格是否允许此类非日报内容的类比，以保持纯粹性。"
+                ],
+                "repair_instruction": "1. 修改第21轮S1的发言，在列举新闻前增加一句过渡，例如‘从底层助手的逻辑切换，到生成内容的成本博弈，再到代理行为的法律边界’，使‘工具变自主体’的结论推导更顺畅。2. 检查第16轮S2的‘天网’比喻，若播客风格要求严格基于日报事实，可改为‘这种自主欺骗行为暴露了无限制访问下的失控风险’，去除外部文化引用。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 3,
+            "best_attempt": 3,
+            "final_pass": true,
+            "final_issues": [
+              "S1在结尾总结时（第21轮）将‘谷歌转型’、‘视频生成’、‘代理安全’三个跨度较大的话题强行串联，逻辑略显跳跃，建议增加过渡句使‘工具到自主体’的结论更自然。",
+              "S2在第16轮使用‘天网’比喻虽生动，但属于外部文化引用，虽未违反事实原则，但建议确认播客风格是否允许此类非日报内容的类比，以保持纯粹性。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-06/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-06/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-06/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-06/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-06.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-06/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-06/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-06.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-06/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-06.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-06.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-06.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-08-05",
       "content_date": "2026-08-05",
       "published_at": "2026-08-05T03:59:40.955507+00:00",
