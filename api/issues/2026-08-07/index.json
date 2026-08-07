@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-08-07",
+  "content_date": "2026-08-07",
+  "published_at": "2026-08-07T03:52:12.787742+00:00",
+  "article_count": 12,
+  "podcast_turns": 21,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 7,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "轮次统计为21轮，处于建议的18-22轮范围内，但接近上限，需确保后续内容不拖沓。",
+              "部分单轮字数略低于35字下限（如S1第1轮约45字，S2第2轮约48字，均在安全区，但部分轮次如S1第17轮约42字，S2第18轮约50字，整体偏紧凑，需监控是否出现少于15字的极端情况，目前未发现）。",
+              "S1第1轮直接切入DeepMind人事变动，无寒暄，符合自然切入要求。",
+              "对话中S1与S2有明确的承接、追问、补充和判断，如S2追问Jeff Dean离职影响，S1补充Mirendil案例，S2追问安全风险，S1补充Prime Agent案例，逻辑连贯。",
+              "所有事实均源自日报，未新增具体数字或机构。",
+              "结构检查结果为空，无结构性问题。"
+            ],
+            "repair_instruction": "当前对话质量较高，无需重大修改。建议微调S1第1轮和S2第2轮的措辞，使其字数更接近40-50字区间，以增强口语节奏感；同时确保后续若增加内容，总轮次不超过24轮，且单轮字数不低于15字。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "轮次统计为21轮，处于建议的18-22轮范围内，但接近上限，需确保后续内容不拖沓。",
+          "部分单轮字数略低于35字下限（如S1第1轮约45字，S2第2轮约48字，均在安全区，但部分轮次如S1第17轮约42字，S2第18轮约50字，整体偏紧凑，需监控是否出现少于15字的极端情况，目前未发现）。",
+          "S1第1轮直接切入DeepMind人事变动，无寒暄，符合自然切入要求。",
+          "对话中S1与S2有明确的承接、追问、补充和判断，如S2追问Jeff Dean离职影响，S1补充Mirendil案例，S2追问安全风险，S1补充Prime Agent案例，逻辑连贯。",
+          "所有事实均源自日报，未新增具体数字或机构。",
+          "结构检查结果为空，无结构性问题。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-07/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-07/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-07/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-07/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-07.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-07/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-07/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-07.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-07/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-07.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-07.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-07.mp4"
+}
