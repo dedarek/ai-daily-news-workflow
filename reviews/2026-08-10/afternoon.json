@@ -1,0 +1,31 @@
+{
+  "issue_date": "2026-08-10",
+  "reviewed_at": "2026-08-10T13:54:47.445782+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "新闻摘要质量尚可，但播客对话严重缺乏自然感，且存在多处事实性幻觉（如GPT-5.6、Gemma 4等未发布模型及虚构日期），导致整体可信度崩塌。",
+    "issues": [
+      "事实性错误：新闻与播客中多次提及'GPT-5.6'、'Gemma 4'等尚未发布的模型版本，属于严重幻觉。",
+      "事实性错误：新闻日期设定为2026年，且包含虚构的'10亿用户免费升级'等未发生事件，作为日报缺乏真实性基础。",
+      "播客质量失败：对话呈现明显的'报幕式'结构，两人轮流复述新闻摘要，缺乏自然交流、观点碰撞或口语化表达，机械感极强。",
+      "逻辑一致性风险：虽然标题与正文基本对应，但基于虚构事实的'锐评'失去了现实指导意义。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
