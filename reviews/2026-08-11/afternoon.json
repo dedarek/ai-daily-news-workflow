@@ -1,0 +1,32 @@
+{
+  "issue_date": "2026-08-11",
+  "reviewed_at": "2026-08-11T13:34:33.299526+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "播客口播稿存在严重事实性错误（版本号虚构、模型名称混淆），且部分新闻细节与正文描述存在逻辑冲突，导致整体可信度崩塌。",
+    "issues": [
+      "事实性错误：播客中提到的'GPT-5.6-Cyber'模型名称与新闻标题'GPT-5.6-Cyber'看似一致，但OpenAI目前并未发布GPT-5系列，且新闻摘要中未提及具体版本号'5.6'，极大概率为虚构或严重幻觉（新闻原文通常不会在未发布时精确到小数点后一位的特定安全版）。",
+      "事实性错误：播客中提到的'Granite-Switch'架构描述为'密集全注意力模型'，但新闻标题明确为'Granite-Switch'，且新闻摘要中描述其通过'控制Token动态选择内嵌的LoRA适配器'，这通常是混合专家（MoE）或适配器切换机制，而非传统'密集全注意力'，描述存在技术概念混淆。",
+      "逻辑矛盾：新闻1提到Meta模型在'桌面控制任务上落后于阿里的Qwen3.6'，但新闻4提到Om AI的VLX模型'超越英伟达和谷歌'，播客中老陈将两者混为一谈，暗示Meta落后是因为Om AI的超越，逻辑链条断裂。",
+      "重复与冗余：播客中关于'安全'的讨论过于分散，将健身课插队、Rovo劫持、Claude Code自动模式、GPT-5.6-Cyber四个不同维度的安全话题强行串联，导致对话缺乏焦点，且'双刃剑'观点重复出现。",
+      "版本虚构：新闻中提到的Transformers v5.15.0和Ollama v0.32.7在2026年8月11日的时间点可能过于超前（当前为2024年），若设定为未来日报需确保版本号逻辑自洽，但'v5.15.0'对于Transformers库而言版本号跳跃过大，不符合常规迭代规律，存在明显虚构嫌疑。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
