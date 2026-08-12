@@ -1,0 +1,28 @@
+{
+  "issue_date": "2026-08-12",
+  "reviewed_at": "2026-08-12T13:54:14.058266+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容结构完整，新闻与锐评逻辑自洽，播客对话自然流畅且覆盖核心热点，仅存在个别事实性表述需微调。",
+    "issues": [
+      "新闻1中关于'gpt-oss-120b'的命名疑似虚构或笔误（目前OpenAI未发布此命名模型），建议核实或改为'同类大模型'以避免事实性争议。",
+      "播客对话中S2提到'无人机导航成功率接近70亿参数模型'，原文数据为'与70亿参数基线相当'，表述略显模糊，建议更精确对应原文数据。",
+      "部分日期（如2026年）为未来时间，虽符合设定但需确保整体语境一致，避免读者混淆。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
