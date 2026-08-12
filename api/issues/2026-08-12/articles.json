@@ -1,0 +1,110 @@
+[
+  {
+    "title": "英伟达发布极速开源模型Nemotron 3.5 Lightning",
+    "summary": "英伟达推出了Nemotron 3.5 Lightning，这是一款拥有316亿总参数但仅激活36亿参数的开源权重模型。该模型在推理速度上表现惊人，测试中达到每秒670个词元，远超同类竞品。尽管参数量仅为OpenAI gpt-oss-120b的四分之一，其在智能基准测试中的得分却与之持平，均为24分。在代理任务基准测试中，该模型Elo评分达到824分，超越了gpt-oss-120b及英伟达自家的Nemotron 3 Super。目前模型已提供BF16和NVFP4两种权重版本，并支持百万级上下文窗口。",
+    "url": "https://the-decoder.com/nvidias-open-weight-nemotron-3-5-lightning-prioritizes-speed-over-maximum-intelligence/",
+    "section": "🔥 今日焦点",
+    "review": "该模型以牺牲部分通用智能为代价换取极致推理速度，精准切中了代理工作流对低延迟的刚需。其性能表现证明了小参数稀疏模型在特定场景下可替代大模型，但面对Qwen3.6等更聪明的同类模型，其综合智能仍有差距。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT桌面端上线工作同步功能",
+    "summary": "OpenAI在ChatGPT桌面应用中新增了工作同步功能，允许用户将来自其他智能体的项目、聊天记录、技能及插件直接导入。用户可以在设置中查看导入历史，并选择开启自动更新以保持工作流的一致性。这一功能旨在解决开发者在多设备或不同代理间切换时工作断档的问题。目前该功能已在桌面端全面可用，标志着OpenAI正致力于打通不同AI工具间的数据孤岛。",
+    "url": "https://x.com/OpenAIDevs/status/2087242829076791392",
+    "section": "🚀 产品发布",
+    "review": "同步功能的上线解决了多代理协作中的上下文割裂痛点，提升了工作流的连续性。但这同时也对数据隐私和跨平台状态管理的安全性提出了更高要求，需警惕敏感代码或数据在同步过程中的泄露风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Codex预览版登陆Linux桌面系统",
+    "summary": "OpenAI宣布ChatGPT桌面应用的预览版正式支持Linux系统，Codex编程助手随之登陆该平台。此次更新覆盖了Ubuntu 24.04/26.04 LTS、Debian 13以及Fedora 43/44等主流发行版，支持x64和ARM64架构。用户可通过.deb或.rpm安装包进行安装，将项目、开发工作流及浏览器工具整合在本地环境中。此举填补了OpenAI在Linux开发者生态中的空白，使得Linux用户也能享受与Windows和macOS同等的AI编程辅助体验。",
+    "url": "https://x.com/OpenAIDevs/status/2087231793682694410",
+    "section": "🚀 产品发布",
+    "review": "支持Linux是OpenAI拓展开发者生态的关键一步，直接回应了开源社区长期以来的需求。然而预览版在系统兼容性和资源占用上仍需验证，且需警惕在开源环境中引入闭源AI服务可能引发的社区信任危机。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌Gemini应用月活用户突破十亿",
+    "summary": "谷歌CEO皮查伊宣布Gemini应用月活跃用户数已突破10亿大关，成为谷歌第14款达到此规模的产品。数据显示，63%的用户倾向于通过语音直接与助手交互，且该应用每日生成图像数量超过1.5亿张。目前Gemini在iOS平台拥有超过1亿活跃用户，其增长主要得益于在搜索、Workspace及Android系统中的深度集成。这一里程碑紧随谷歌Q2财报发布，显示其AI战略在移动端生态中已取得显著成效。",
+    "url": "https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/",
+    "section": "💼 行业动态",
+    "review": "十亿用户规模确立了Gemini作为全球主流AI助手的地位，语音交互的高占比验证了多模态交互的普及趋势。但单纯的用户增长若无法转化为高价值商业场景，且面临ChatGPT的激烈竞争，其长期变现能力仍需观察。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "River AI成立两月获11亿美元融资",
+    "summary": "由xAI联合创始人Igor Babuschkin创立的River AI在成立仅两个月后，完成了由General Catalyst和AMP PBC领投的11亿美元种子轮及A轮融资。Nvidia、AMD Ventures、Y Combinator及淡马锡等机构参与投资。该公司旨在通过重构训练、模型及产品层，打造可被用户个人微调的专属智能体，而非单纯替代人类劳动力。其已推出的API支持开发者利用强化学习和低秩适配技术对开源模型进行微调，试图解决提示工程无法优化模型所有权的问题。",
+    "url": "https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/",
+    "section": "💼 行业动态",
+    "review": "11亿美元的天价融资凸显资本对“个人专属智能体”赛道的狂热押注，但初创公司能否在巨头林立的重构大模型领域兑现其技术承诺仍需验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic与Riot Platforms签署91亿美元数据中心协议",
+    "summary": "AI公司Anthropic与比特币矿商Riot Platforms签署了一份价值91亿美元的数据中心租赁协议，涉及得克萨斯州Rockdale场地的191兆瓦电力容量。该协议为期20年，包含两个延期选项，总价值最高可达161亿美元。Riot将负责建设符合Anthropic规格的数据中心并提供电力与冷却，而Anthropic需自行部署服务器和AI芯片。首批96兆瓦容量预计于2027年12月上线，其余部分将于2028年6月投入使用。",
+    "url": "https://the-decoder.com/anthropic-signs-9-1-billion-data-center-deal-with-bitcoin-miner-riot-platforms/",
+    "section": "💼 行业动态",
+    "review": "这笔巨额交易标志着AI算力竞争已从单纯的算法优化转向对电力与基础设施的疯狂圈地，高昂的长期成本可能成为初创模型公司的沉重负担。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DRIFT框架实现大模型无监督自进化",
+    "summary": "研究人员提出了名为DRIFT的大模型自进化训练优化框架，通过难度路由和节奏门控技术解决现有自蒸馏方法缺乏问题级学习追踪的缺陷。该框架利用难度路由动态分配自蒸馏与强化学习信号，并通过节奏门控在词元层面聚焦核心推理位置。结合成功缓冲区与两阶段课程学习策略，DRIFT在五个基准测试中的平均得分达到79.5%，显著优于GRPO和SDPO等现有方法。特别是在工具使用任务上，其准确率提升至79.2%，确立了新的最先进水平。",
+    "url": "https://arxiv.org/abs/2606.30345",
+    "section": "💡 前沿研究",
+    "review": "DRIFT通过算法机制有效缓解了自进化过程中的过拟合与探索不足问题，证明了无需外部专家监督即可实现模型稳定自我提升的可行性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AeroDPO实现轻量无人机自主导航突破",
+    "summary": "研究团队发布了AeroDPO技术，利用20亿参数模型配合高保真视觉感知，实现了与70亿参数基线相当的无人机导航成功率。针对纯行为克隆策略在分布外场景下碰撞率高的问题，该方案引入了零成本的自动化直接偏好优化流程。系统通过确定性物理仿真状态回滚自动提取碰撞因果错误，并合成避障偏好动作，无需额外人工标注。测试显示，在未建图场景中，该技术的导航成功率提升至49.16%，同时大幅降低了空中碰撞风险。",
+    "url": "https://arxiv.org/abs/2608.07557",
+    "section": "💡 前沿研究",
+    "review": "AeroDPO证明了感知质量对边缘端导航的重要性远超模型参数量，其自动生成的负反馈机制为低成本无人机部署提供了极具价值的技术路径。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CMU发布多车协同驾驶基准",
+    "summary": "卡内基梅隆大学推出了名为CMU-Drive的闭环端到端基准，旨在评估多辆联网自动驾驶汽车在安全关键场景下的协同能力。该研究提出了V2V-VLA模型，这是一种车对车视觉语言动作模型，能够在单次前向传播中联合生成驾驶动作、未来路径点、语言推理及通信策略。实验表明，CMU-Drive建立了首个协同VLA驾驶基准和基线，填补了现有方法主要面向单一智能体、缺乏协同感知与规划支持的空白。研究团队承诺将公开代码、基准数据和模型检查点，为未来多智能体闭环协同自动驾驶的开源研究奠定基础。",
+    "url": "https://arxiv.org/abs/2608.07621",
+    "section": "💡 前沿研究",
+    "review": "该基准将自动驾驶评估从单智能体扩展至多智能体协同，解决了复杂场景下联合推理的测试难题，但实际落地仍依赖车路通信设施的成熟度。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SGLang v0.5.17发布支持超巨型MoE模型",
+    "summary": "SGLang框架发布v0.5.17版本，原生支持Kimi K3这一拥有2.8万亿参数的多模态LatentMoE模型，该模型具备100万token上下文窗口及混合注意力层结构。新版本集成了DCP分布式检查点、DSpark推测解码、分块预填充与TP解码、KDA感知前缀缓存等大量推理优化特性，并在NVIDIA GB300和AMD MI35x等硬件上完成验证。此外，该版本还新增了对MiniMax-H3视频生成模型的支持，并初步实现了Rust前端，将网络入口至GPU调度器之间的服务器前半部分迁移至多线程Rust实现。",
+    "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.17",
+    "section": "🔓 开源热榜",
+    "review": "对2.8T参数模型的日级支持展示了推理引擎对超大规模稀疏架构的适配能力，但高显存占用与通信开销仍是超巨型模型部署的硬性瓶颈。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenMontage开源视频生成流水线获四万星",
+    "summary": "开源项目OpenMontage上线了首个代理式视频制作系统，目前已在GitHub获得超过4.7万颗星标。该系统内置12条生产流程和100多个核心处理工具，包含700多个代理技能及制作知识文件，旨在将AI编程助手转化为全功能的视频制作工作室。丰富的预设文件降低了使用门槛，使得普通用户也能快速上手进行原创内容剪辑与制作。该项目支持多种AI模型协作，通过代理机制自动完成从脚本到成片的复杂视频生产任务。",
+    "url": "https://github.com/calesthio/OpenMontage",
+    "section": "🔓 开源热榜",
+    "review": "代理式工作流显著降低了视频制作的技术门槛，但自动化生成的内容质量稳定性及版权合规性仍需在实际应用中进一步验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok Bot内测版亮相主打智能队友",
+    "summary": "X公司推出了Grok Bot内测版，定位为能深度集成到工作区的AI队友。该智能体能够安全登录外部软件，像人类员工一样操作工具并交付最终工作成果。Grok Bot具备持续学习能力，能通过日常使用主动习得团队的工作习惯与上下文信息。其设计目标是无缝集成至Slack等工作平台，通过虚拟同事的形式实现人机协同，标志着数字化工作模式向智能体深度参与的方向演进。",
+    "url": "https://x.com/AndrewCurran_/status/2087254786882302138",
+    "section": "🤖 Agent & 工具",
+    "review": "智能体直接操作外部软件的能力极大提升了自动化效率，但权限管理与数据安全风险将成为企业部署此类“虚拟员工”时的核心考量。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

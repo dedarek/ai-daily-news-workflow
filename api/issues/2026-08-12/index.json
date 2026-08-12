@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-08-12",
+  "content_date": "2026-08-12",
+  "published_at": "2026-08-12T03:25:19.396022+00:00",
+  "article_count": 12,
+  "podcast_turns": 18,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 7,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "轮次统计为18轮，处于建议的18-22轮范围内，但接近下限，内容密度较高，需确保听众消化时间。",
+              "S2在关于River AI的回应中，直接承接了S1的“资本看好”观点，缺乏一点具体的质疑或补充细节（如具体技术路径的可行性），对话张力可稍加强。",
+              "S1在总结Grok Bot时提到“风险确实存在”，但前文S2刚详细阐述了风险，此处略显重复，可改为直接探讨“如何平衡效率与风险”的实操建议。"
+            ],
+            "repair_instruction": "1. 在S2回应River AI融资时，增加一句对‘个人微调’技术落地难度的具体质疑（如数据隐私或算力成本），以增强观点的交锋感。2. 修改S1关于Grok Bot的过渡句，将‘风险确实存在’改为‘既然风险难避，企业该如何设计权限隔离机制？’，直接引导向解决方案的讨论，避免单纯重复前文。3. 检查S1和S2在总结段落（最后两轮）的字数，确保不超过95字，保持口播节奏紧凑。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "轮次统计为18轮，处于建议的18-22轮范围内，但接近下限，内容密度较高，需确保听众消化时间。",
+          "S2在关于River AI的回应中，直接承接了S1的“资本看好”观点，缺乏一点具体的质疑或补充细节（如具体技术路径的可行性），对话张力可稍加强。",
+          "S1在总结Grok Bot时提到“风险确实存在”，但前文S2刚详细阐述了风险，此处略显重复，可改为直接探讨“如何平衡效率与风险”的实操建议。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-12/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-12/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-12/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-12/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-12.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-12/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-12/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-12.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-12/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-12.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-12.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-12.mp4"
+}
