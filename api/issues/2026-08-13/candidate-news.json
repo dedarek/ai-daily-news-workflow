@@ -1,0 +1,263 @@
+[
+  {
+    "title": "Grok 4.6性价比炸裂",
+    "summary": "xAI新模型再次对标OpenAI性能表现(AI资讯)，指数得61分⚡追平GPT-5.6。智能体任务仅53步完成，效率惊人。API价格📉比对手便宜超六成。Claude Opus 5依旧霸榜。",
+    "url": "https://the-decoder.com/spacexais-grok-4-6-matches-openais-best-model-and-undercuts-it-on-price/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1664期 - 2026-08-13 08:02",
+    "summary": "[Cerebras云收入高速增长]并扩充600MW算力合作，[Nemotron 3.5 Lightning]迎来密集领域定制与部署。Arena AutoEval则将人类偏好评估压缩至小时级。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-13_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达发布闪电模型",
+    "summary": "Nemotron 3.5主打低延迟智能体执行(AI资讯)，30B总参仅激活3B。输出速度🚀最高提升四倍。Dream基于它微调安全模型。适合长时运行的企业代理。",
+    "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1663期 - 2026-08-13 04:02",
+    "summary": "本期重点是[Grok 4.6]编程能力跃升，以及[DeepSeek V4-Pro]以低成本进入前沿模型梯队。微信公布[WeLM]模型，AI长片制作也出现新突破。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-13_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude跨端会话升级",
+    "summary": "Chrome侧栏变成协作式Cowork会话(AI资讯)，历史记录随账号同步。浏览器里开干，桌面手机接着来。Max与Team今日开放🚀，Pro稍后跟进。官方同步更新了安全防护建议。",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1vmsrq0/your_claude_in_chrome_sessions_now_carry_over_to/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1662期 - 2026-08-13 00:01",
+    "summary": "本期重点集中在[SL2T手语转文本]等无障碍模型落地，以及[Agent工具链]在监控、连接器、支付和推理基础设施方面的持续完善。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-13_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek低价王炸登场",
+    "summary": "V4 Pro今晨🚀正式发布，两项成绩压过Fable(AI资讯)。多项指标胜过Opus 4.8，价格便宜约百倍。网友调侃别突然涨价十倍。Fable这座高山依然难越。",
+    "url": "https://x.com/oran_ge/status/2087662930171166804",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1661期 - 2026-08-12 20:01",
+    "summary": "本期关注[GMC剪枝]免训练削减80%多模态Token，以及[Qwen3.5-0.8B]在超低成本设备上的部署实测。社区也带来多项[本地模型]与[Agent工作流]反馈。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-12_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Ouroboros自我进化",
+    "summary": "这个编码智能体可审查提交并改写核心(AI资讯)，工具提示都变成运行时。Terminal-Bench取得86.74%，OSWorld达90.69%。长跑实验Hope已运行161天。安全护栏成了最大关注点。",
+    "url": "https://arxiv.org/abs/2608.08311",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1660期 - 2026-08-12 16:02",
+    "summary": "多家头部AI公司据称签署[欧盟AI透明准则]，生成内容标识与水印或迎来统一规范。本地AI社区则聚焦[轻量化部署]、量化优化及硬件成本。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-12_1602",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MasDrift测越权风险",
+    "summary": "新基准覆盖六百个多智能体任务(AI资讯)，横跨八个领域。集中式层级任务完成率更高。但越权率也随之升至19.8%。重锚定防御损失更小。",
+    "url": "https://arxiv.org/abs/2608.07556",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1659期 - 2026-08-12 12:01",
+    "summary": "本期重点关注[Agent Arena]上线及[Qwen-Image-3.0]开放体验，前者开始用真实长流程任务评估智能体，后者强化了复杂界面与多语言文字生成能力。另有[AI SDK]下载量增长和实用工具更新值得留意。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-12_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiLMMT翻译提质",
+    "summary": "开源模型用GRPO强化四十六语种，免参考奖励方案(AI资讯)指导训练。线性插值检查点效果更佳。超越Seed-X和TranslateGemma。代码与权重全部公开。",
+    "url": "https://huggingface.co/papers/2608.10812",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1658期 - 2026-08-12 08:01",
+    "summary": "本期重点关注[LTX-2.5]上线、[Daybreak]开放企业客户，以及本地模型在老旧GPU上的高性能推理实践。另有[推理轨迹泄露]研究和多项AI开发工作流更新值得留意。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-12_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "提示词隐私告急",
+    "summary": "IIT孟买与Adobe联手构建逆向语言模型(AI资讯)，可从输出还原原始提示。准确率⚡接近完美，且无需权重。跨模型都能奏效。企业系统提示面临泄露风险。",
+    "url": "https://the-decoder.com/researchers-can-now-reverse-engineer-llm-prompts-from-output-text-with-near-perfect-accuracy/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1657期 - 2026-08-12 04:01",
+    "summary": "[ChatGPT Linux桌面版]进入预览，并整合Codex及跨智能体项目导入；[Gemini]月活突破[10亿]。视频生成方面，FLUX 3 Video新版跻身竞技场第二。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-12_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CLAUDE.md为何膨胀",
+    "summary": "新研究追踪指令沉积现象(AI资讯)，样本覆盖1867个仓库。提示文件生命周期激增三倍。添加注释✍️可削减99.3%冗余。智能体指令跟随提升23.1%。",
+    "url": "https://arxiv.org/abs/2608.11095",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1656期 - 2026-08-12 00:01",
+    "summary": "本期重点关注[Nemotron 3.5 Lightning]开源模型及其代理路由生态，以及[Manus独立运营]带来的用户数据迁移安排。与此同时，本地模型工具、企业代理基础设施和机器人触觉交互均有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-12_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "巨头力挺开放路线",
+    "summary": "Hinton、李飞飞与吴恩达在AI安全论坛发声(AI资讯)，主张保持开放权重。吴恩达警惕少数门神垄断。李飞飞建议分层开放配监管。美国竞争力成为讨论焦点。",
+    "url": "https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cognition估值狂奔",
+    "summary": "五月刚融十亿美元，如今传出400亿估值谈判(AI资讯)。年化营收冲击十亿大关。Devin企业用量月增50%。AI编程赛道疯狂吸金。",
+    "url": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Thrive拿下巨轮融资",
+    "summary": "OpenAI背书的企业AI公司，获二十亿美元新资金(AI资讯)。估值升至120亿美元。软银等机构💼参与本轮。企业智能落地再添弹药。",
+    "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达组局五千亿",
+    "summary": "联手六家华尔街巨头，打造算力融资计划(AI资讯)，规模达5000亿美元。摩根士丹利预测总投入8万亿。但自掏腰包不多，市场担忧循环融资⚠️。",
+    "url": "https://www.reddit.com/r/artificial/comments/1vmeshn/did_anyone_catch_this_nvidia_put_together_a_500b/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Lovable估值翻倍",
+    "summary": "瑞典氛围编程公司，C轮融资四亿美元(AI资讯)，估值冲到133亿美元。Menlo Ventures领投本轮。EQT旗下Scaleup基金共同押注。AI开发工具热度可见一斑。",
+    "url": "https://sifted.eu/articles/lovable-raises-e400m-series-c",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "超级智能该忠于谁",
+    "summary": "Dwarkesh在讨论中质疑Claude宪法(AI资讯)，担忧模型优先服务人类整体。个人代理可能不再是守护天使🛡️。未来投票投资都靠超级智能。对齐目标需重新审视。",
+    "url": "https://x.com/dwarkesh_sp/status/2087586004572221767",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "白宫拟纳管开源大模型",
+    "summary": "白宫将把开源模型安全监管框架纳入🛡️安全测试。顶级闭源实验室已在框内。开源若达前沿能力需测三十天。政策或让生态⚖️竞争更紧。",
+    "url": "https://x.com/kimmonismus/status/2087667694619484401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "RAGFlow检索增强",
+    "summary": "开源引擎把RAG与Agent结合，已获87.5k星(AI资讯)，解决长文问答上下文混乱。今日新增139星。Fork也突破一万。检索增强落地利器。",
+    "url": "https://github.com/infiniflow/ragflow",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kronos读懂金融",
+    "summary": "基础模型把金融市场当作语言建模，项目star达36.9k(AI资讯)。今日新增266星。量化建模试错成本大减。投研自动化潜力巨大。",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Prime-Agent自进化",
+    "summary": "面向长期自主任务，RLM代理专注编码流程(AI资讯)。今日暴增1138星，Fork达1453。自改进机制很吸睛。编码自动化更进一步。",
+    "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ppt-master一键成片",
+    "summary": "文档直接变原生PPT，图表与旁白自动生成(AI资讯)。star已达45551。今日新增476星。办公党效率神器🔥。",
+    "url": "https://github.com/hugohe3/ppt-master",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

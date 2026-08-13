@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-08-13",
+  "content_date": "2026-08-13",
+  "published_at": "2026-08-13T03:28:50.872265+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 7,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "轮次刚好20轮，处于建议范围（18-22轮）内，但S1和S2的发言长度分布略显不均，部分轮次（如S2第16轮）接近字数上限，需确保口播节奏紧凑。",
+              "S1切入话题直接引用新闻标题，虽无寒暄但略显生硬，建议增加一句简短的过渡语（如“刚看到一条重磅消息”）以增强自然感。"
+            ],
+            "repair_instruction": "1. 修改S1第一句，在“今天AI圈最震撼的莫过于...”前增加“刚看到一条重磅消息，”以软化切入，避免直接复述标题的生硬感。\n2. 检查S2第16轮（关于开源社区），该轮字数接近95字上限，建议将“GitHub星标破8.7万，Prime-Agent专注编码自进化，单日增星超千”精简为“GitHub星标破8.7万，Prime-Agent单日增星超千”，确保口播流畅度。\n3. 保持现有逻辑结构，无需大幅调整，重点微调语气词和连接词，使对话更像真实讨论而非新闻播报。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "轮次刚好20轮，处于建议范围（18-22轮）内，但S1和S2的发言长度分布略显不均，部分轮次（如S2第16轮）接近字数上限，需确保口播节奏紧凑。",
+          "S1切入话题直接引用新闻标题，虽无寒暄但略显生硬，建议增加一句简短的过渡语（如“刚看到一条重磅消息”）以增强自然感。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-13.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-13.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-13.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-13.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-13.mp4"
+}
