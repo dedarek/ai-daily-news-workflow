@@ -1,0 +1,31 @@
+{
+  "issue_date": "2026-08-13",
+  "reviewed_at": "2026-08-13T13:56:36.336035+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容覆盖全面且逻辑自洽，但存在严重的事实性幻觉（虚构未来模型版本与日期）及播客对话机械重复问题，不符合真实日报标准。",
+    "issues": [
+      "事实性幻觉：新闻中出现的 'GPT-5.6'、'Claude Opus 5'、'Fable 5'、'DeepSeek V4 Pro' 等均为虚构的未来版本，当前（2024-2025）技术界不存在，且链接中的日期 '2026-08-12' 为未来时间，严重违反事实一致性。",
+      "播客质量：对话中 S1 和 S2 的发言呈现明显的‘报幕式’结构（一人提新闻，一人接话），缺乏自然交流感，且对每条新闻的评论过于机械地重复锐评内容，未体现真实对话的互动与深度。",
+      "重复观点：播客对话中关于‘价格战’、‘安全风险’、‘资本狂热’的讨论在不同段落间缺乏递进，存在观点重复堆砌现象。",
+      "链接有效性：提供的 URL 指向未来日期或虚构文章，无法验证真实性，作为日报来源不可靠。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
