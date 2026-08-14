@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-08-14",
+  "reviewed_at": "2026-08-14T13:54:39.595745+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容逻辑严密、信息密度高，播客对话自然流畅且观点犀利，仅存在一处明显的数值事实表述瑕疵。",
+    "issues": [
+      "新闻条目中关于Acrab融资的表述存在逻辑矛盾：标题称'获4.8亿美元融资'，但摘要中明确说明是'完成1.3亿美元B轮融资，累计融资额超4.8亿美元'。标题将'累计融资额'误写为'本轮融资额'，属于事实性表述错误，需修正标题或摘要以保持一致。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
