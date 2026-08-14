@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-08-13",
-  "content_date": "2026-08-13",
-  "published_at": "2026-08-13T03:28:50.872265+00:00",
+  "issue_date": "2026-08-14",
+  "content_date": "2026-08-14",
+  "published_at": "2026-08-14T03:33:47.086128+00:00",
   "article_count": 12,
   "podcast_turns": 20,
   "tts_mode": "video-api-audio-video",
@@ -17,7 +17,7 @@
       "z-ai/glm-5.2"
     ],
     "endpoint": "https://integrate.api.nvidia.com/v1",
-    "calls": 7,
+    "calls": 17,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -42,30 +42,31 @@
         "usage": {}
       },
       "podcast": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "nvidia:z-ai/glm-5.2",
         "usage": {}
       },
       "podcast_review": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "nvidia:z-ai/glm-5.2",
         "usage": {}
       },
       "podcast_attempts": [
         {
           "attempt": 1,
           "generation": {
-            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "model": "nvidia:z-ai/glm-5.2",
             "usage": {}
           },
           "structure_issues": [],
           "review": {
             "pass": true,
             "issues": [
-              "轮次刚好20轮，处于建议范围（18-22轮）内，但S1和S2的发言长度分布略显不均，部分轮次（如S2第16轮）接近字数上限，需确保口播节奏紧凑。",
-              "S1切入话题直接引用新闻标题，虽无寒暄但略显生硬，建议增加一句简短的过渡语（如“刚看到一条重磅消息”）以增强自然感。"
+              "对话覆盖了8条新闻，略超5-7条的建议范围，Databricks融资一条信息量较薄，可考虑合并或删减",
+              "全程以承接和补充为主，缺少真正的追问或分歧，S1和S2始终同向加码，讨论感偏弱",
+              "末轮S2的总结收尾略显套路化，'都提醒我们……必须同步跟上'像结论陈述而非自然对话"
             ],
-            "repair_instruction": "1. 修改S1第一句，在“今天AI圈最震撼的莫过于...”前增加“刚看到一条重磅消息，”以软化切入，避免直接复述标题的生硬感。\n2. 检查S2第16轮（关于开源社区），该轮字数接近95字上限，建议将“GitHub星标破8.7万，Prime-Agent专注编码自进化，单日增星超千”精简为“GitHub星标破8.7万，Prime-Agent单日增星超千”，确保口播流畅度。\n3. 保持现有逻辑结构，无需大幅调整，重点微调语气词和连接词，使对话更像真实讨论而非新闻播报。"
+            "repair_instruction": "1) 将Databricks融资与Acrab端侧芯片合并为一条'算力资本动态'轮次，把总条目压到7条以内；2) 在Anthropic多智能体或SSI的TTT方向处，让S1或S2提出一个质疑性追问（如'部署后更新权重会不会反而引入新的安全漏洞？'），另一方再回应，制造一次轻度分歧；3) 末轮去掉总结式收束，改为S2抛出一个具体延伸问题或判断（如'那你觉得冲突检测应该做在模型层还是编排层？'），让对话停在开放状态而非盖棺定论。"
           },
-          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_model": "nvidia:z-ai/glm-5.2",
           "review_usage": {}
         }
       ],
@@ -74,8 +75,9 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "轮次刚好20轮，处于建议范围（18-22轮）内，但S1和S2的发言长度分布略显不均，部分轮次（如S2第16轮）接近字数上限，需确保口播节奏紧凑。",
-          "S1切入话题直接引用新闻标题，虽无寒暄但略显生硬，建议增加一句简短的过渡语（如“刚看到一条重磅消息”）以增强自然感。"
+          "对话覆盖了8条新闻，略超5-7条的建议范围，Databricks融资一条信息量较薄，可考虑合并或删减",
+          "全程以承接和补充为主，缺少真正的追问或分歧，S1和S2始终同向加码，讨论感偏弱",
+          "末轮S2的总结收尾略显套路化，'都提醒我们……必须同步跟上'像结论陈述而非自然对话"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -83,16 +85,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-13.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-13.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-13/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-13.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-13.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-13.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-14/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-14/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-14/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-14/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-14.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-14/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-14/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-14.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-14/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-14.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-14.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-14.mp4"
 }
