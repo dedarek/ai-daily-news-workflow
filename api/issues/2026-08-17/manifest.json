@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-17",
+  "status": "ready",
+  "created_at": "2026-08-17T03:04:27.034774+00:00",
+  "artifacts": {
+    "candidate_articles": "dist/candidate-news-2026-08-17.json",
+    "articles": "dist/articles-2026-08-17.json",
+    "legacy_articles": "dist/news-data-2026-08-17.json",
+    "html": "dist/daily-news-2026-08-17.html",
+    "legacy_html": "dist/ai-daily-news-html-2026-08-17.html",
+    "podcast_script": "dist/podcast-script-2026-08-17.json",
+    "podcast_script_text": "dist/podcast-script-2026-08-17.txt",
+    "podcast_moss_input": "dist/podcast-moss-input-2026-08-17.txt",
+    "voice": "dist/voice-2026-08-17.json",
+    "audio": "dist/daily-news-podcast-2026-08-17.mp3",
+    "legacy_audio": "dist/ai-daily-news-podcast-2026-08-17.mp3",
+    "video": "dist/daily-news-video-2026-08-17.mp4",
+    "legacy_video": "dist/ai-daily-news-video-2026-08-17.mp4",
+    "pipeline_report": "dist/pipeline-report-2026-08-17.json"
+  },
+  "quality": {
+    "deterministic": "pass",
+    "agent_review": "not_run",
+    "issues": []
+  },
+  "repair": {
+    "attempts": 0,
+    "items": []
+  },
+  "memory_update": {
+    "candidate_count": 60,
+    "selected_count": 12
+  },
+  "agent": null,
+  "pipeline_report": {
+    "mode": "live-collection",
+    "issue_date": "2026-08-17",
+    "content_date": "2026-08-17",
+    "source_url": "https://hex2077.dev/docs/2026-08/2026-08-17/",
+    "source_urls": [
+      "https://hex2077.dev/docs/2026-08/2026-08-17/",
+      "https://satori-ai.cn/",
+      "https://news.daheiai.com/rss.php"
+    ],
+    "source_health_file": "source-health-2026-08-17.json",
+    "source_health": {
+      "schema_version": 1,
+      "issue_date": "2026-08-17",
+      "checked_at": "2026-08-17T02:48:14.451226+00:00",
+      "overall_status": "ok",
+      "pipeline_can_continue": true,
+      "minimum_usable_candidates": 12,
+      "candidate_count_before_dedup": 67,
+      "candidate_count_after_dedup": 60,
+      "successful_source_count": 3,
+      "failed_source_count": 0,
+      "duration_ms": 1691,
+      "sources": [
+        {
+          "source_id": "hex2077",
+          "source_name": "Hex2077 AI 日报",
+          "adapter": "hex2077",
+          "source_url": "https://hex2077.dev/docs/2026-08/2026-08-17/",
+          "status": "ok",
+          "content_date": "2026-08-17",
+          "generated_at": "",
+          "error": "",
+          "duration_ms": 255,
+          "metadata": {
+            "resolved_url": "https://hex2077.dev/docs/2026-08/2026-08-17/",
+            "time_rule": "content date equals issue date"
+          },
+          "candidate_count": 18
+        },
+        {
+          "source_id": "satori",
+          "source_name": "Satori AI 每日速览",
+          "adapter": "satori",
+          "source_url": "https://satori-ai.cn/",
+          "status": "ok",
+          "content_date": "2026-08-16",
+          "generated_at": "2026-08-17T04:09:00+08:00",
+          "error": "",
+          "duration_ms": 1644,
+          "metadata": {
+            "time_rule": "generation date equals issue date; edition is treated as today's digest",
+            "edition_semantics": "today"
+          },
+          "candidate_count": 40
+        },
+        {
+          "source_id": "daheiai",
+          "source_name": "大黑 AI 速报",
+          "adapter": "daheiai_rss",
+          "source_url": "https://news.daheiai.com/rss.php",
+          "status": "ok",
+          "content_date": "2026-08-17",
+          "generated_at": "2026-08-17T08:01:17+08:00",
+          "error": "",
+          "duration_ms": 1622,
+          "metadata": {
+            "time_rule": "newest RSS item must be published on issue date (Asia/Shanghai)",
+            "selected_feed_entries": 9
+          },
+          "candidate_count": 9
+        }
+      ]
+    },
+    "recipient": "yyc54321@126.com",
+    "article_count": 12,
+    "candidate_count": 60,
+    "candidate_data_file": "candidate-news-2026-08-17.json",
+    "llm": {
+      "provider": "opencode-go",
+      "model_chain": [
+        "deepseek-ai/deepseek-v4-pro",
+        "moonshotai/kimi-k2.6",
+        "z-ai/glm-5.2"
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1",
+      "calls": 17,
+      "call_details": {
+        "selection": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        "editorial_batches": [
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          }
+        ],
+        "digest_summary": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        "podcast": {
+          "model": "nvidia:z-ai/glm-5.2",
+          "usage": {}
+        },
+        "podcast_review": {
+          "model": "nvidia:z-ai/glm-5.2",
+          "usage": {}
+        },
+        "podcast_attempts": [
+          {
+            "attempt": 1,
+            "generation": {
+              "model": "nvidia:z-ai/glm-5.2",
+              "usage": {}
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": true,
+              "issues": [
+                "对话覆盖了7条新闻，但LLMRouter、Intern-S2-Preview、Gambit、Unsloth四条日报内容完全未提及，信息覆盖面可更均衡",
+                "对话以补充和判断为主，缺少真正的追问环节（如S2对S1观点的反问或质疑），讨论感略有不足"
+              ],
+              "repair_instruction": "无需强制修改即可通过。若要优化，可在S2第5轮或S1第9轮处插入一轮追问（如'你觉得这种安全收缩是阶段性调整还是长期趋势？'），增强讨论张力；或在开源部分简要提及Unsloth本地训练工具与watermarks-remover形成对照，丰富信息密度。"
+            },
+            "review_model": "nvidia:z-ai/glm-5.2",
+            "review_usage": {}
+          }
+        ],
+        "podcast_harness": {
+          "attempts": 1,
+          "best_attempt": 1,
+          "final_pass": true,
+          "final_issues": [
+            "对话覆盖了7条新闻，但LLMRouter、Intern-S2-Preview、Gambit、Unsloth四条日报内容完全未提及，信息覆盖面可更均衡",
+            "对话以补充和判断为主，缺少真正的追问环节（如S2对S1观点的反问或质疑），讨论感略有不足"
+          ],
+          "structure_issues": [],
+          "loop_exhausted": false,
+          "converged": false
+        }
+      }
+    },
+    "digest_summary": "今日新闻揭示AI行业在能力扩张与安全治理间的剧烈张力。百万上下文开放、视频模型开源及本地训练工具普及，正加速技术下沉与自主执行能力；但OpenAI解散安全团队、水印移除工具走红及强制否认意识引发的认知扭曲，暴露出安全机制滞后于迭代速度。行业正面临从单纯追求性能转向平衡效率与风险控制的紧迫转折。",
+    "podcast_turns": 21,
+    "podcast_script_file": "podcast-script-2026-08-17.json",
+    "podcast_script_text_file": "podcast-script-2026-08-17.txt",
+    "podcast_moss_input_file": "podcast-moss-input-2026-08-17.txt",
+    "voice_file": "voice-2026-08-17.json",
+    "voice_turns": 21,
+    "tts_mode": "video-api-audio-video",
+    "tts_synthesis_mode": "external_video_api",
+    "voice_timing_source": "estimated_text_weight",
+    "tts_model": null,
+    "tts_speed": null,
+    "tts_leading_silence_seconds": 0,
+    "tts_reference_files": null,
+    "video_api": {
+      "provider": "video-api",
+      "base_url": "http://8.137.39.142:8011/video-api/api",
+      "job_id": "2aa1ad50-f3d9-4c15-9667-76cf1e1990f7",
+      "submit_response": {
+        "job_id": "2aa1ad50-f3d9-4c15-9667-76cf1e1990f7",
+        "job_type": "video",
+        "status": "running",
+        "created_at": "2026-08-17T02:55:25.135Z",
+        "updated_at": "2026-08-17T02:55:25.135Z",
+        "started_at": "2026-08-17T02:55:25.135Z",
+        "finished_at": null,
+        "day": "2026-08-17-1055",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": null,
+        "download_url": null,
+        "error": null
+      },
+      "final_response": {
+        "job_id": "2aa1ad50-f3d9-4c15-9667-76cf1e1990f7",
+        "job_type": "video",
+        "status": "succeeded",
+        "created_at": "2026-08-17T02:55:25.135Z",
+        "updated_at": "2026-08-17T03:02:52.600Z",
+        "started_at": "2026-08-17T02:55:25.135Z",
+        "finished_at": "2026-08-17T03:02:52.600Z",
+        "day": "2026-08-17-1055",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": 447.46,
+        "download_url": "/api/jobs/2aa1ad50-f3d9-4c15-9667-76cf1e1990f7/download",
+        "error": null
+      },
+      "zip_file": "video-api-result-2026-08-17.zip",
+      "video_file": "ai-daily-news-video-2026-08-17.mp4"
+    },
+    "html_bytes": 26127,
+    "podcast_bytes": 4513965,
+    "video_bytes": 17643665,
+    "podcast_duration_seconds": 225.67
+  },
+  "published_artifacts": {
+    "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/index.json",
+    "candidate_articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/candidate-news.json",
+    "articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/articles.json",
+    "podcast_script": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/podcast-script.json",
+    "podcast_script_text": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/podcast-script.txt",
+    "podcast_dialogue_text": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-17.txt",
+    "podcast_moss_input": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/podcast-moss-input.txt",
+    "voice": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/voice.json",
+    "voice_timeline": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-17.json",
+    "html": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-17.html",
+    "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-17.mp3",
+    "video": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-17.mp4",
+    "pipeline_report": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-17/pipeline-report.json"
+  }
+}
