@@ -1,0 +1,31 @@
+{
+  "issue_date": "2026-08-17",
+  "reviewed_at": "2026-08-17T13:09:03.602100+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容存在严重的事实性幻觉（虚构未来日期、模型版本及参数），且新闻条目存在明显重复，导致整体可信度失效。",
+    "issues": [
+      "事实性错误：新闻与播客中大量出现虚构的未来信息，如'GPT-5.6 Sol'、'Qwen3.8'、'DeepSeek-V4'、'Kimi K3'、'2026年'的日期，当前时间点无法验证且极大概率为幻觉。",
+      "内容重复：'OpenAI解散安全准备团队'与'OpenAI解散灾难性风险团队'为同一事件的两条重复新闻，导致日报结构冗余。",
+      "逻辑矛盾：在虚构未来版本（如GPT-5.6）的同时，又引用了看似真实的旧闻（如OpenAI解散团队），造成时空错乱。",
+      "播客质量：虽然对话流畅，但基于虚假事实的讨论使得内容失去新闻价值，属于'一本正经地胡说八道'。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "fail",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
