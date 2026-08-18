@@ -3,6 +3,106 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-08-18",
+      "content_date": "2026-08-18",
+      "published_at": "2026-08-18T05:57:13.086383+00:00",
+      "article_count": 12,
+      "podcast_turns": 18,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "deepseek-ai/deepseek-v4-pro",
+          "moonshotai/kimi-k2.6",
+          "z-ai/glm-5.2"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 13,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "nvidia:z-ai/glm-5.2",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "nvidia:z-ai/glm-5.2",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "nvidia:z-ai/glm-5.2",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "缺少明显分歧：两人全程互相认同补充，没有观点碰撞，听感上偏向'双人朗读摘要'而非真实讨论",
+                  "S1第4轮和S2第4轮对Higgsfield的讨论偏列举数据，缺少个人判断和互动感，像在轮流读新闻",
+                  "S2第6轮将日报中'3.6至7.4个百分点'简化为'3到7个百分点'，口播可接受但不够精确"
+                ],
+                "repair_instruction": "1. 在Anthropic估值或Higgsfield估值处加入一处分歧，例如S2认为估值合理而S1表示怀疑，或反过来，让讨论有张力。2. S1第4轮不要直接罗列'54亿、7亿、390家'三个数字，改为先抛判断（如'视频生成赛道估值已经脱离基本面了'）再由S2追问引出数据，增加互动感。3. S2第6轮改为'3到8个百分点'或直接说'几个百分点'，避免与日报数字产生偏差。"
+              },
+              "review_model": "nvidia:z-ai/glm-5.2",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "缺少明显分歧：两人全程互相认同补充，没有观点碰撞，听感上偏向'双人朗读摘要'而非真实讨论",
+              "S1第4轮和S2第4轮对Higgsfield的讨论偏列举数据，缺少个人判断和互动感，像在轮流读新闻",
+              "S2第6轮将日报中'3.6至7.4个百分点'简化为'3到7个百分点'，口播可接受但不够精确"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-18/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-18/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-18/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-18/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-18.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-18/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-18/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-18.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-18/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-18.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-18.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-18.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-08-17",
       "content_date": "2026-08-17",
       "published_at": "2026-08-17T03:04:27.755085+00:00",

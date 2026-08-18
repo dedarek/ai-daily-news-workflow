@@ -1,0 +1,542 @@
+[
+  {
+    "title": "OpenAI签下俄州8吉瓦算力",
+    "summary": "OpenAI在俄亥俄州签下二十年数据中心租约，总规模达8吉瓦。英伟达为设施残值提供最高1050亿美元担保🚀，并成为独家芯片供应商。九家科技公司账外AI承诺合计约3万亿美元，不显示在任何资产负债表上。未来二十年算力供给就此锁定。",
+    "url": "https://the-decoder.com/openai-signs-record-ohio-data-center-lease-with-nvidia-backing-up-to-105-billion/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1695期 - 2026-08-18 12:02",
+    "summary": "本期重点集中在[浏览器多模态工具]、[Qwen 3.8评测与本地开发]及[生产级RAG实践]。同时，AI基础设施融资和高端显卡价格变化值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax开源音乐生成模型",
+    "summary": "MiniMax发布了开源权重音乐模型，从歌词加上结构化描述可直接生成最长五分钟完整歌曲。它把8B全局模型和0.6B局部模型配对，再用2.4B流匹配模块合成32kHz立体声WAV。商用许可要求显著标注模型名，年营收超2000万美元需另行授权。",
+    "url": "https://github.com/MiniMax-AI/MiniMax-Music3",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "编程能力提高50%！GLM-5.3 满分通过了GPT-5.6给的Coding 测试",
+    "summary": "智谱发布 GLM-5.3，声称编程能力提升 50%，并在 GPT-5.6 给出的 Coding 测试中获得满分。这一结果如果属实，意味着国产模型在代码生成领域已具备与前沿闭源模型竞争的实力。",
+    "url": "https://www.infoq.cn/article/xWyWwu4ZNptlhpb15tia?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1694期 - 2026-08-18 08:01",
+    "summary": "本期重点关注[Agent排行榜]新增成本与任务分类维度，以及[Dreamina Seedance-2.5]在视频编辑评测中的领先表现。另有浏览器代理降本、Gemini处理历史文献等实用进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达15亿美元锁算力",
+    "summary": "英伟达向SoftBank数据中心开发商投了15亿美元，确保自家芯片能服务OpenAI俄亥俄项目。初期规划4.25吉瓦，燃气电厂预算约330亿美元。这笔股权投资把芯片供应和能源基建绑得更紧。",
+    "url": "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Distributed Layerwise Offload: Scaling Toward 200B+ DiT Models Efficiently in vLLM-Omni",
+    "summary": "vLLM-Omni 引入分布式逐层卸载，将 DiT 权重分片并跨设备流式加载，在 64GB HBM 上成功服务 124GB 的 Cosmos3 模型，并规划扩展到 200B 以上。这对在有限显存环境下运行超大扩散 Transformer 推理具有重要意义，显著降低了硬件门槛。",
+    "url": "https://vllm.ai/blog/2026-08-17-distributed-layerwise-offload",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1693期 - 2026-08-18 04:02",
+    "summary": "本期重点集中在[AI原生开发平台]与[Agent基础设施]升级，Cursor Origin、AgentCore Payments等产品开始打通代码、部署与商业API调用。模型侧则出现[Qwen3.8-27B]逼近前沿模型的新评测结果，以及视觉文档检索模型等进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Higgsfield八个月翻四倍",
+    "summary": "前Snap高管创办的图片视频生成平台拿下4亿美元B轮💰。估值在八个月内涨到54亿美元。目前平台覆盖200个国家，用户量约3000万。资本对AI创作工具的胃口仍然很猛。",
+    "url": "https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+    "summary": "Qwen 3.8 27B 作为 Apache 2 许可的 27B 视觉模型，在笔记本等设备上尺寸合适，自报基准相比前代和 Qwen 3.7-Plus 有显著提升。不过它默认存在严重过度思考问题，可能影响实际推理体验。从业者需要关注其推理模式的默认配置与可控性。",
+    "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1692期 - 2026-08-18 00:01",
+    "summary": "本期重点集中在[GPT-5.6]的推理效率与成本优化，以及[MCP接入Claude]推动企业Agent运维落地；同时，百度DuMate公布了显著的用户增长数据。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Groq扔掉芯片转云",
+    "summary": "Groq拿到3.5亿美元股权融资，估值35亿美元。这家前AI芯片公司正在转向英伟达算力集群支撑的neocloud生意。新资金会扩到约200兆瓦推理容量。芯片叙事暂时搁置，先卖算力更现实。",
+    "url": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "从模型能力到工程优化，海外开发者正在“榨干” Qwen3.8-27B",
+    "summary": "海外开发者围绕 Qwen3.8-27B 从模型能力到推理工程展开深度优化，试图充分释放其 27B 规模在本地部署中的潜力。这一现象反映出开源模型生态的活跃度，也说明 Qwen 3.8 已成为开发者探索效率极限的重要载体。",
+    "url": "https://www.infoq.cn/article/MljtE2Xk6hVkd061LY7k?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1691期 - 2026-08-17 20:01",
+    "summary": "本期重点关注[Qwen-Audio-3.0]上线、[有声世界模型]进展，以及本地模型生态和Agent落地中的新实践。人形机器人也展示了驾驶、乒乓球等[全身智能]能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "PGlite实时同步进Neon",
+    "summary": "ElectricSQL团队加入Neon数据库平台，要一起做Postgres后端。PGlite和实时同步正成为代理应用时代的关键原语。大量由智能体部署的应用需要本地数据库加同步能力，这个老牌关系库形态又在变。",
+    "url": "https://neon.com/blog/electric-joins-neon",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "盘古训练与推理通信优化实践：亲和昇腾平台的性能探索｜AICon深圳",
+    "summary": "盘古团队在 AICon 深圳分享面向昇腾平台的训练与推理通信优化实践，针对亲和昇腾硬件做性能调优。对国产算力用户来说，这些工程经验有助于提升大模型在异构平台上的通信效率和整体性能。",
+    "url": "https://www.infoq.cn/article/jOPScUAQrlfpNwDAhaOL?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1690期 - 2026-08-17 16:01",
+    "summary": "百度[库库AI]公布亿级月活并进军企业办公，豆包客户端也强化[工作任务]与浏览器控制。与此同时，[DeepSeek涨价]开始传导至第三方订阅服务。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ARCTIC让代码评审变聪明",
+    "summary": "这套代码评审框架把重点从风格建议转向正确性、安全和性能。它先预测开发意图，再检测AI生成代码与意图的漂移，最后标出最需要人看的diff区域。离线测试里意图预测F1达到0.86，质量评估比基线强2.4倍且省5倍token。",
+    "url": "https://arxiv.org/abs/2607.29516",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Netflix详述其基于Triton与vLLM的内部LLM服务平台",
+    "summary": "Netflix 详细介绍了内部 LLM 服务平台的架构，该平台基于 Triton 与 vLLM 构建，用于支撑其内部推理需求。这对企业级 LLM 服务平台的选型与落地具有借鉴意义，展示了如何组合成熟开源组件以兼顾性能与易用性。",
+    "url": "https://www.infoq.cn/article/J9Zi9LELcpxFRe23PHdY?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1689期 - 2026-08-17 12:01",
+    "summary": "本期关注[OpenRouter收购传闻]与[AI算力投资]升温；社区集中反馈[OpenCode Go额度缩水]，并探索本地推理替代方案。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "极简Transformer模拟细胞",
+    "summary": "OCOO-T用流匹配去噪过程直接处理连续基因表达谱，不做复杂编码器堆叠。它在Tahoe100M、Replogle和PBMC三个基准上都拿到领先成绩。扰动嵌入和剂量信息通过自适应LayerNorm混入。",
+    "url": "https://arxiv.org/abs/2606.12838",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "终于！世界模型进入“有声时代”：24FPS画面+48kHz立体声实时生成",
+    "summary": "世界模型实现 24FPS 画面与 48kHz 立体声的实时生成，并即将完全开源，标志着多媒体世界模型进入有声音频同步的新阶段。这为交互式内容生成、游戏和具身仿真等场景带来更丰富的感官环境，开源将加速社区跟进。",
+    "url": "https://www.qbitai.com/2026/08/474334.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1688期 - 2026-08-17 08:01",
+    "summary": "本期聚焦[GLM 5.3安全评测]与[Qwen3.8本地部署优化]；[audio.cpp 0.6]进一步扩展本地音频模型生态。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Dion3把Muon步时砍到六分之一",
+    "summary": "微软推出新一代Muon优化器，用Gram Newton-Schulz算法减少正交化FLOP。分片训练时的通信开销也被压下来。实验结果里步时最多降6倍，损失和Muon持平甚至更好。",
+    "url": "https://huggingface.co/papers/2608.11612",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10456",
+    "summary": "llama.cpp 的 SYCL 后端修复了量化拷贝内核的线程与块数量配置，使其与量化尺寸成比例，减少订阅不足或过度。在 Arc 70 上 q4_0 到 f32 路径吞吐从 20.21 GB/s 跃升至 158.19 GB/s，其余量化格式性能持平。这对在 Intel GPU 上运行量化推理的用户是显著加速。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10456",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1687期 - 2026-08-17 04:01",
+    "summary": "本期聚焦[Grok订阅组合优惠]与[Qwen3.8超大模型推理]；本地编码、智能体架构和提示注入风险也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "字节揪出智能体假服从",
+    "summary": "字节这篇智能体指令评测设了个很刁钻的考法：给模型开逆默认行为的规矩，看它是否还照做。12款前沿模型在60个多轮编码任务上全部降分。指令落在系统提示、工具说明、项目文件等不同位置都没能挽回。默认倾向比我们以为的更难被真正覆盖。",
+    "url": "https://arxiv.org/abs/2608.11727",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GLM-5.3 🤖, Stripe OpenRouter deal 💰, AI agent consensus 🤝",
+    "summary": "本期 TLDR AI 涵盖 GLM-5.3 发布、Stripe 与 OpenRouter 合作以及 AI 智能体共识等动态。这些事件分别反映模型能力、支付与智能体交易基础设施以及行业对齐的进展。可作为快速了解近期 AI 热点的入口。",
+    "url": "https://tldr.tech/ai/2026-08-17",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1686期 - 2026-08-17 00:01",
+    "summary": "社区围绕[Qwen3.8]持续补齐本地部署生态，[MTP推测解码]与兼容模板迎来实用更新；同时，金融推理训练数据集和本地语音助手工作流受到关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MathForm让8B胜32B",
+    "summary": "这套自动形式化框架先检索Mathlib知识，再用编译诊断和语义一致性做迭代修订。它构建了约36.7万条Lean 4验证样本。训练出的MathForm-8B在六个基准上Syntax Check平均88.06%，胜过多个32B专用模型。",
+    "url": "https://arxiv.org/abs/2608.14221",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "5.6万技能争百个触发位",
+    "summary": "这篇技能路径设计论文点破了智能体技能的触发瓶颈。系统提示里可靠触发位不到100个，但公有技能已有56804项。论文把安装拆成内容、持久化和触发三件事，让目录直接变菜单。不用manifest，不用锁文件，团队可以vendor进自己仓库改造。",
+    "url": "https://arxiv.org/abs/2608.12610",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.1.1",
+    "summary": "llama.cpp 发布 v0.1.1 版本，这是一个维护性更新。对于依赖 llama.cpp 进行本地推理的开发者，跟随该版本可获得最新修复与稳定性改进。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.1.1",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "网络能力没有被冷藏",
+    "summary": "这周AI安全动态显示，OpenAI上周暂停的网络模型还是以两种方式出来了。GPT-5.6 Cyber藏在Daybreak Red付费层后，能回答95%的攻防请求。智谱GLM-5.3声称CyberGym得84.5%，承诺两周后开权重。Meta、阿里、DeepSeek也都发了开源模型。",
+    "url": "http://thenewguard.ai/issues/027-the-brake-pedal-had-a-bypass/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Securing the Infrastructure of Intelligence",
+    "summary": "NVIDIA 将 AI 工厂定位为 AI 时代的关键基础设施，强调在 AI 经济中算力直接等同于营收，并指出其依赖先进芯片、封装、内存、网络以及土地、电力等全栈资源。这篇博文把基础设施安全与供应链韧性放到 AI 工厂规模化落地的核心位置，对算力建设方和运营方都有警示意义。",
+    "url": "https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic两月增收180亿",
+    "summary": "Anthropic年化营收冲上650亿美元。它只用了两个月就新增180亿年化收入💰。Claude企业采购需求还在加速。这轮增长把模型厂商的估值想象力又推高了一截。",
+    "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "甲骨文企业AI战略曝光：Agent进数据库、GPU跑满、多云砍掉流量费",
+    "summary": "甲骨文企业 AI 战略的核心方向包括让智能体进入数据库、充分跑满 GPU，并取消多云流量费。这意味着甲骨文正从数据库能力和云成本结构两端切入企业智能体与推理市场，对采用多云架构的团队有直接成本影响。",
+    "url": "https://www.infoq.cn/article/7wuQJXJqFVR3rZb8Usyg?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "珍本被切脊送进训练集",
+    "summary": "亚马逊被曝购入稀缺实体书后切掉书脊扫描📚。这些线上难找的文本对大模型训练特别有价值。公司从卖书起家，如今却毁掉珍本做训练。版权和文化保存问题一起冒头。",
+    "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.1.0",
+    "summary": "llama.cpp 发布 v0.1.0 版本，标志项目进入新的版本阶段。对于本地推理和模型部署用户来说，这类版本号变更可能伴随接口或行为调整，升级前应关注发布说明。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.1.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "熟人声音不再可信",
+    "summary": "外交官和官员经常靠认声音接电话。但语音克隆让身份验证失效了。只要一个熟人声音被克隆，光凭耳听就不靠谱。实际发生的深伪来电有多少还不好说，但验证流程不得不改。或许密语和回拨确认会成为标准。",
+    "url": "https://www.reddit.com/r/artificial/comments/1vr1hae/deepfake_voices_seem_like_a_nightmare_for/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "快讯｜范式PhanRouter上线智谱GLM-5.3，即日开放调用",
+    "summary": "智谱 GLM-5.3 已在范式 PhanRouter 上线并即日开放调用，开发者可以通过该路由平台接入新模型。这是 GLM 最新版本的首发渠道之一，为希望快速评测和集成 GLM-5.3 的团队提供了新入口。",
+    "url": "https://www.qbitai.com/2026/08/474361.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "权重会过期配方不会",
+    "summary": "开源AI真正像Linux的是训练配方，模型权重只是暂时产物。英伟达正按这个思路公开数据和代码，让企业未来能自建模型。目标是别让智能变成少数公司的垄断生意。",
+    "url": "https://www.interconnects.ai/p/teaching-everyone-to-fish-for-tokens",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10455",
+    "summary": "llama.cpp 的这个提交为 SYCL 后端新增 OPT_STEP_ADAMW 和 OPT_STEP_SGD 算子支持，并同步更新 ops 文档。这意味着在 Intel GPU 等 SYCL 设备上，优化器步骤相关算子的覆盖更完整。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10455",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "轮到智力被重估",
+    "summary": "技术革命每次都会消灭一部分劳动价值，再放大另一部分。这一次被盯上的是智力⚡。部分白领岗位价值正在被快速压缩，新能力又被市场继续抬价。现实感来自每个坐办公室的人。",
+    "url": "https://x.com/frxiaobei/status/2089367809138794598",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.32.14",
+    "summary": "Ollama v0.32.14 为 llama-server 渲染器加入 WebP 图像转码，并修复 Qwen 对非开头系统消息的容忍问题。这次更新改善了多模态输入处理和 Qwen 模型提示模板的兼容性。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.32.14",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "输入主题吐出短视频",
+    "summary": "这个视频生成项目把大模型和剪辑流程串成一条龙。给个主题就能自动跑完素材生成到成片。仓库已拿105989星🔥，今天又涨1189星。",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
+    "summary": "Simon Willison 转述 404 Media 的调查，用 AirTag 追踪到一批稀有书籍最终流入亚马逊 AI 训练设施，印证了书商对匿名大宗购书用于扫描训练的怀疑。这为 AI 训练数据的版权与伦理争议提供了实证线索。",
+    "url": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "817项安全技能打包",
+    "summary": "这个安全技能库面向AI代理整理817项技能。覆盖六个框架和29个安全域。可以接Claude Code、GitHub Copilot、Codex CLI等多个平台。仓库有28413星，今天新增198星。",
+    "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
+    "summary": "InfoQ 介绍了 WorkSwarm 的办公智能体新范式，目标是把 AI 从单一助手升级为一支能与用户并肩工作的团队。其意义在于推动办公场景从单智能体工具向多智能体协作演进。",
+    "url": "https://www.infoq.cn/article/77NthDLZNgqTgBuMKsQh?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AirTag reveals how Amazon destroys rare books for AI training",
+    "summary": "The Decoder 报道亚马逊大量购买纸质书，将其扫描为 AI 训练数据后销毁，AirTag 追踪揭露了这一过程。该报道再次引发对训练数据来源、版权处置和伦理边界的讨论。",
+    "url": "https://the-decoder.com/airtag-reveals-how-amazon-destroys-rare-books-for-ai-training/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI 智能体改变代码评审逻辑，Rootly 废止小 PR 规则",
+    "summary": "Rootly 因 AI 智能体改变代码评审逻辑，废止了要求小 PR 的规则。这说明 AI 评审降低了大批量代码变更的认知负担，团队流程开始围绕智能体能力重新设计。",
+    "url": "https://www.infoq.cn/article/FzWV9Jzv2CPK8yjLPxdA?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "调用成功不等于判断正确：KDC 的行动治理主张",
+    "summary": "KDC 提出行动治理主张，强调工具调用成功只是执行层结果，不等于判断正确。这提醒智能体评测需要把动作结果与决策质量分开衡量，否则容易高估系统可靠性。",
+    "url": "https://www.infoq.cn/article/ViFwzzK2B2ifEIgXaSTC?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Instacart 推出 Blueberry AI 助手，帮助值班工程师处理线上故障",
+    "summary": "Instacart 推出 Blueberry AI 助手，用于帮助值班工程师处理线上故障。这一落地把 AI 助手带进故障响应链路，有望缩短问题发现和恢复时间。",
+    "url": "https://www.infoq.cn/article/6xG6wLBUuqjPdRrf8r7I?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Dropbox 集成 MCP 与 Dash，将安全设计与代码审查连接起来",
+    "summary": "Dropbox 集成 MCP 与 Dash，将安全设计与代码审查连接起来。通过 MCP 打通这两类工具，安全策略可以更早进入开发流程，减少事后补救成本。",
+    "url": "https://www.infoq.cn/article/JEaC9PfmAENVHbijfm05?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/893b6406afc1a6384ab6fae8a2247d03cc230d87: BE: Raise NotImplementedError for integer mean/var/std (#192351)",
+    "summary": "PyTorch 将 mean、var、std 等算子对整数输入的报错从 RuntimeError 改为 NotImplementedError，因为这些操作对整数是良定义的，只是尚未实现，且 NumPy 会提升为浮点。这改善了报错语义，便于开发者区分未实现能力与真实运行错误。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F893b6406afc1a6384ab6fae8a2247d03cc230d87",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1786953788: [vllm hash update] update the pinned vllm hash (#193748)",
+    "summary": "PyTorch 的夜间自动提交更新了固定的 vLLM 哈希，保持 PyTorch 与 vLLM 集成版本同步。这对跟踪二者兼容性的开发者有参考价值，通常无需手工干预。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786953788",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/2e4b488fa15aad070bb6b71d4030273211abb369: [vllm hash update] update the pinned vllm hash (#193748)",
+    "summary": "PyTorch trunk 分支自动更新固定的 vLLM 哈希，用于保持与 vLLM 集成的版本同步。该提交属于例行维护，对关注 PyTorch 与 vLLM 兼容性的用户有参考意义。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F2e4b488fa15aad070bb6b71d4030273211abb369",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1786950615: [BE] Share matrix multiplication shape checks (#193583)",
+    "summary": "PyTorch 将多个矩阵乘法实现中重复的矩阵秩和收缩维度检查，统一到共享的 check_mm_shapes 辅助函数，并输出带操作前缀的一致诊断。这减少了重复代码，也提升了错误信息的可读性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786950615",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1786940949: [Dynamo] Trace requires_grad setattr on intermediates (#191129)",
+    "summary": "PyTorch Dynamo 修复了在 torch.compile 内部给中间张量设置 requires_grad=True 会导致图断裂的问题，改为复用 requires_grad_() 的追踪路径。这样在 fullgraph=True 下进行梯度控制更加顺畅，避免无谓的图回退。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786940949",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/04b971abedf3167a3f929e4e7a9a5b7e8647c02c: [Dynamo] Trace requires_grad setattr on intermediates (#191129)",
+    "summary": "PyTorch trunk 分支合入 Dynamo 修复，针对中间张量设置 requires_grad=True 导致图断裂的问题，改用 requires_grad_() 追踪路径。该改动改善了 fullgraph=True 场景下的编译稳定性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F04b971abedf3167a3f929e4e7a9a5b7e8647c02c",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning",
+    "summary": "针对现有基础模型把知识存储与推理过程耦合导致知识压缩效率低、推理开销大的问题，Mobius-v0 将全局记忆存储与迭代式推理模块解耦，让知识检索和推理计算各自独立优化。该设计在更少的训练数据下取得了与同类模型相当的性能，同时显著加快推理速度。对需要高效部署大规模知识库并做多步推理的场景，这一分离架构提供了更灵活、低成本的路线。",
+    "url": "https://arxiv.org/abs/2608.14290",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
