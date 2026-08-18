@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-08-18",
+  "reviewed_at": "2026-08-18T14:02:55.367223+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容事实准确、逻辑自洽，播客对话自然流畅且深度提炼了新闻核心矛盾，整体质量极高，仅有极个别措辞可微调。",
+    "issues": [
+      "播客中 S1 提到'Groq 创始人团队已被英伟达收购'，原文新闻仅提及'创始人团队已被英伟达收购'（此处原文新闻本身表述可能存在歧义或事实需核实，若指创始人被收购则合理，若指团队整体被收购则需确认，但基于提供文本逻辑自洽，暂不判为事实错误，仅提示需二次核实新闻源准确性）",
+      "播客 S2 提到'Groq 拿了 3.5 亿融资'，原文新闻明确为'3.5 亿美元股权融资'，口语中省略'美元'单位虽不影响理解，但严谨编辑建议补全单位以防歧义。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
