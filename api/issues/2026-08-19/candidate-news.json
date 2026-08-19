@@ -1,0 +1,434 @@
+[
+  {
+    "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+    "summary": "Qwen 3.8 27B 在 Artificial Analysis 智能指数上得 52 分，与 GPT-5.6 Luna（max）持平，仅比 GLM-5.2（max）和 DeepSeek V4 Pro 0813（max）低 1 分，而后者参数量分别是 753B 和 1.7T，Luna 规模未知但大概率远大于 27B。一个 27B 模型能追平头部超大模型，说明小参数高效模型在推理能力上的进展非常显著，对部署成本和端侧场景是重要信号。",
+    "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1699期 - 2026-08-19 08:01",
+    "summary": "[Claude]设计的蛋白结合分子获湿实验验证，成功率明显高于行业水平；[GLM-5.3 API]上线，低价订阅同步开放。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-19_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GRPO Beyond English: A Large-Scale Study of GRPO in Non-English and Multilingual Settings",
+    "summary": "苹果机器学习团队对 GRPO 在非英语与多语言场景下进行了大规模实证研究，覆盖多种基座模型、训练语言和推理语言奖励设置，发现让模型用母语进行推理训练能带来更稳的收益。该结果为 RLVR 训练从英语中心走向多语言提供了系统依据，对在多语言市场部署推理模型很有参考价值。",
+    "url": "https://machinelearning.apple.com/research/grpo-beyond-english",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1698期 - 2026-08-19 04:02",
+    "summary": "本期聚焦[前沿模型训练安全]与[生产级Agent评估]：OpenAI暂停大型RL任务加固环境，NVIDIA与LangChain分别降低模型部署和智能体质检门槛。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-19_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Stripe buys OpenRouter for $7B",
+    "summary": "Stripe 以 70 亿美元收购 OpenRouter，后者不拥有 GPU 或自研智能体，核心资产是模型路由与分发基础设施。这一收购说明在模型层竞争之外，稳定的推理路由和开发者分发渠道正成为极具战略价值的中间层。",
+    "url": "https://www.latent.space/p/ainews-stripe-buys-openrouter-for",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1697期 - 2026-08-18 20:01",
+    "summary": "本期聚焦[本地AI]与[Agent工具链]：Qwen3.8-27B出现显著成本、速度实测，腾讯开源GUI Agent；同时[AI代码审查风险]再现真实事故。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+    "summary": "Hugging Face 博客分享了一个集群调度洞察：在相同硬件上仅通过调整任务执行顺序，就把利用率提升了 33 个百分点。对 AI Infra 团队来说，这意味着不增加 GPU 也能从现有集群中挤出可观算力，调度策略优化是低成本提效的关键。",
+    "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1696期 - 2026-08-18 16:02",
+    "summary": "本期重点关注[企业Agent上下文]与[AI基础设施自进化]进展，同时收录Claude Code、Gemini CLI等工具更新及Anthropic营收数据。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_1602",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Developing Nemotron 3.5 Lightning NVFP4 with QAD Using NVIDIA Model Optimizer",
+    "summary": "NVIDIA 发布使用 Model Optimizer 和 QAD 将 Nemotron 3.5 Lightning 量化为 NVFP4 的开发方法，帮助团队根据延迟、速度、内存和算力目标定制模型。NVFP4 代表了低精度推理在 NVIDIA 硬件上的进一步压缩，对高吞吐 agentic 工作负载降本有直接价值。",
+    "url": "https://developer.nvidia.com/blog/developing-nemotron-3-5-lightning-nvfp4-with-qad-using-nvidia-model-optimizer/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1695期 - 2026-08-18 12:02",
+    "summary": "本期重点集中在[浏览器多模态工具]、[Qwen 3.8评测与本地开发]及[生产级RAG实践]。同时，AI基础设施融资和高端显卡价格变化值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA Nemotron 3.5 Lightning now available in Amazon SageMaker JumpStart",
+    "summary": "AWS 宣布 NVIDIA Nemotron 3.5 Lightning 已上线 SageMaker JumpStart，30B 总参数、3B 活跃参数的 MoE 模型面向高容量 agentic 工作负载，提供最高 4 倍吞吐和高达 30% 的任务完成速度提升。这对在 AWS 上部署常驻智能体的团队意味着更快、更省地获得最新开放模型能力。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-lightning-now-available-in-amazon-sagemaker-jumpstart/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1694期 - 2026-08-18 08:01",
+    "summary": "本期重点关注[Agent排行榜]新增成本与任务分类维度，以及[Dreamina Seedance-2.5]在视频编辑评测中的领先表现。另有浏览器代理降本、Gemini处理历史文献等实用进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.1.2",
+    "summary": "llama.cpp 发布 v0.1.2，包含 ggml 版本提升到 0.20.2、构建修复、DGX Spark 上 dense 模型的 CUDA MMVQ 优化等，语义化版本仍在完善中。该版本继续打磨 CUDA 推理性能与构建稳定性，对本地部署用户是常规但值得跟进的更新。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.1.2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1693期 - 2026-08-18 04:02",
+    "summary": "本期重点集中在[AI原生开发平台]与[Agent基础设施]升级，Cursor Origin、AgentCore Payments等产品开始打通代码、部署与商业API调用。模型侧则出现[Qwen3.8-27B]逼近前沿模型的新评测结果，以及视觉文档检索模型等进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "人人都能写好听的歌，阿里发布AI音乐模型HappyShrimp",
+    "summary": "阿里巴巴于 8 月 17 日发布 AI 音乐模型 HappyShrimp，主打让普通用户也能生成好听的歌曲。这表明阿里在多模态生成领域继续扩展音乐创作场景，对消费级 AI 创作工具的普及有实际意义。",
+    "url": "https://www.qbitai.com/2026/08/474840.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1692期 - 2026-08-18 00:01",
+    "summary": "本期重点集中在[GPT-5.6]的推理效率与成本优化，以及[MCP接入Claude]推动企业Agent运维落地；同时，百度DuMate公布了显著的用户增长数据。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-18_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10481: CUDA: MMVQ nwarps=8 for bs=1 for dense models on DGX Spark (#26843)",
+    "summary": "llama.cpp 合并了针对 DGX Spark 上 dense 模型 batch size 为 1 场景的 CUDA MMVQ 优化，将 nwarps 设为 8，并跳过 MoE expert、根据 k 几何允许少量空闲尾部，同时把相关参数重命名为 GB10。该改动直接提升边缘设备上单样本推理效率，对本地低延迟场景有帮助。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10481",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing",
+    "summary": "Together AI 在 DeepSWE 上跑了 904 次 rollouts，对比 DeepSeek V4 Pro 0813 与 GPT-5.6 Sol：Sol 的 pass@1 领先 10 个百分点，但成本是 Pro 的 35 倍；Pro 在 pass@4 上反超，Pro-first 级联路由可冲到 83.0%。这说明用低成本模型做多轮验证或级联调度，能在软件工程任务上以极小预算获得接近或超过顶级模型的结果。",
+    "url": "https://www.together.ai/blog/deepseek-v4-pro-0813-vs-gpt-5-6-sol-on-deepswe-cost-coding-and-routing",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Build OpenClaw agents that transact with Amazon Bedrock AgentCore payments",
+    "summary": "AWS 介绍了如何给 OpenClaw 智能体接入 Amazon Bedrock AgentCore 支付能力，让自主智能体在设定消费护栏内为付费 API、MCP 服务器和网页内容付费。通过 x402 协议和 aws-agents-pay 插件，开发者可以让智能体完成有界、经人工批准的小额支付，为 agent 商业化闭环提供基础设施。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-openclaw-agents-that-transact-with-amazon-bedrock-agentcore-payments/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787070441: Match Triton Python float signatures for user-defined kernels (#190340)",
+    "summary": "PyTorch Inductor 修复了用户自定义 Triton kernel 的 wrapper codegen，使其 Python float 字面量启动参数遵循 Triton 标准 fp32 签名，而不是被强制走 Inductor 的 fp64 策略；普通 Inductor 签名仍保留 fp64 默认以保持精度。该改动对写自定义 kernel 的开发者来说减少类型不匹配问题，提升与 Triton 原生行为的兼容性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787070441",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787068774: [inductor] Preserve input placeholders during graph cleanup (#193708)",
+    "summary": "该修复针对 Inductor 图清理阶段误删输入占位符的问题：remove_redundant_views 会擦除所有零用户节点，包括占位符，导致编译函数参数数量减少而运行时仍按原参数调用，从而触发崩溃。修复方式是跳过占位符节点，与 FX 自身 eliminate_dead_code 对非纯节点的处理保持一致。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787068774",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787068166: Add IPC support for torch.xpu.Event (#192495)",
+    "summary": "为 torch.xpu.Event 增加 IPC 支持，使其可以跨进程共享事件对象。这对多进程 XPU 计算中的同步与通信场景有实际价值，扩展了 PyTorch 在 Intel GPU 上的分布式能力。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787068166",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10488",
+    "summary": "llama.cpp 将 OpenVINO 后端升级到 2026.3 并更新设备驱动，同时跳过 Nemotron-H 回滚测试，原因是 OpenVINO 不支持 SSM_SCAN 算子，导致循环状态回滚图被拆分后无法保持缓存输出形状。qwen35 的 OpenVINO 回滚覆盖仍被保留，其他后端测试不受影响。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10488",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Pacing model development in an era of cyber-critical capabilities",
+    "summary": "OpenAI 宣布正在加强对前沿模型在网络安全关键能力方面的监控、对齐和安全防护，以调节模型开发节奏。此举表明前沿实验室开始将网络滥用风险正式纳入发布治理框架。",
+    "url": "https://openai.com/index/pacing-model-development-cyber-capabilities",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10486",
+    "summary": "修复 mtmd 模块中 LFM2 图像分块阈值的错误，重构相关测试，并解决 Windows 上的构建问题。该修复直接影响多模态模型中图像切分与编码的正确性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10486",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10485",
+    "summary": "本提交仅同步 ggml 子模块，无具体功能变更，属于 llama.cpp 的常规依赖更新。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10485",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Code gets a /design command that lets developers create UI mockups right in the terminal",
+    "summary": "Claude Code 新增 /design 命令，开发者可以在写代码前直接在终端内生成 UI 设计稿或画板。Claude 还会读取现有代码库以匹配当前 UI 风格，把视觉设计融入终端工作流。",
+    "url": "https://the-decoder.com/claude-code-gets-a-design-command-that-lets-developers-create-ui-mockups-right-in-the-terminal/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10483",
+    "summary": "修复 xcframework 构建问题，移除 mtmd 中未使用的 include 路径，并在 CMake 中为所有 vendor 库添加带命名空间的别名目标，以绕开 CMake 对双冒号目标名的限制。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10483",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI systems quietly drop user instructions when they compress context",
+    "summary": "研究发现 AI 系统在压缩长对话时平均丢失 83% 的用户规则，例如未经批准不得发邮件这类限制。宾州州立大学团队基于 Qwen3.5-9B 提出一个轻量附加模块，可将这些限制保留率提升到 90% 以上，对依赖系统提示约束的 Agent 应用是个重要提醒。",
+    "url": "https://the-decoder.com/ai-systems-quietly-drop-user-instructions-when-they-compress-context/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787048801",
+    "summary": "PyTorch Inductor 在组合内核内存规划上改用调度优先的有界区域方案，旨在改善调度顺序与内存复用。标题未给出更多实现细节，但从 PR 方向看属于组合内核内存优化。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787048801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里杀进Agent上下文战场：钉钉聊天、企业文档、工作数据终于要被Agent吃进去了",
+    "summary": "阿里推出 MyContext，补上 Agent 的数据加工层，让钉钉聊天、企业文档和工作数据能够被 Agent 更有效地接入和消费。这对企业 Agent 落地时的上下文质量与数据准备是重要补位。",
+    "url": "https://www.qbitai.com/2026/08/474647.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787041685",
+    "summary": "PyTorch 为 CUDA 可扩展内存段引入按流粒度的预留缩容机制，允许在不同流上独立调整预留容量。该改动有望提升显存占用弹性，改善分配器在大规模推理或训练场景下的内存管理。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787041685",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787038138",
+    "summary": "为 QNNPACK 增加面向 aarch64 的 1 到 4 乘 8 动态量化 q8gemm 微内核，主要服务于小批量或窄矩阵的量化 GEMM 计算。该微内核可提升移动端和终端设备的动态量化推理效率。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787038138",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787032599: [Inductor][CUDA] Do not pad if using pointwise lowering (#192072)",
+    "summary": "修复 Inductor 在 CUDA 上小矩阵乘 pointwise lowering 测试的不稳定问题。原本自动调优会因 GPU 计时噪声偶发选择 padding，导致 decompose_mm_pointwise 计数不符合预期；现在采用 pointwise 降级时不再执行 padding 调优。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787032599",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers",
+    "summary": "HuggingFace 博客介绍如何在 Sentence Transformers 中使用多向量晚交互嵌入模型。这类模型保留更细粒度的 token 级交互，检索精度通常优于单向量，但会带来更高的存储和计算成本。",
+    "url": "https://huggingface.co/blog/multi-vector-encoder",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "当 AI 遇见 FinOps：Snowflake 如何为 AI 时代重新定义成本管理 | 技术趋势",
+    "summary": "InfoQ 文章讨论 Snowflake 如何将 FinOps 理念引入 AI 工作负载，重新定义数据与算力成本管理。对关注 AI 训练和推理成本控制的架构师有参考价值。",
+    "url": "https://www.infoq.cn/article/0MLCGOPXzzILTxB8CORk?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10472",
+    "summary": "llama.cpp 在 HIP 构建中跳过统一内存访问覆盖逻辑，原因是 AMD APU 可以通过 hipMemGetInfo 获得准确显存信息，而使用 MemAvailable 在小显存划拨系统上会过度承诺。该修复解决了相关已知问题。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10472",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon, which started off selling books, is destroying rare texts to train AI",
+    "summary": "TechCrunch 报道亚马逊正在销毁稀有实体书籍用于训练 AI，因为这些文本尚未出现在公开网络语料中，对扩充 LLM 训练数据具有稀缺价值。该行为引发版权和文化遗产保护方面的争议。",
+    "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Groq raises $350M to fuel its pivot from AI chips to neocloud",
+    "summary": "Groq 以 35 亿美元估值完成 3.5 亿美元融资，用于支持其从 AI 芯片公司向 neocloud 服务商转型，并扩大基于英伟达 GPU 的数据中心规模。这表明 Groq 不再完全押注自研 LPU，推理云竞争进一步加剧。",
+    "url": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里云的野心，不在 Agent Builder",
+    "summary": "InfoQ 文章提出阿里云的战略重心并非在应用层做 Agent Builder 工具，而是更聚焦底层平台与生态能力。这一视角有助于理解大厂在 Agent 浪潮中的差异化布局。",
+    "url": "https://www.infoq.cn/article/QekQuwv8UhxAcrOFgKM8?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "豆包视频通话升级，火山引擎多模态传输系统提供技术支撑",
+    "summary": "豆包视频通话完成能力升级，火山引擎的多模态传输系统提供底层技术支撑。这表明字节系在实时多模态交互上正加大基础设施投入。",
+    "url": "https://www.infoq.cn/article/kJK3qG9m7UEYtf7siCgU?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI launches a safer ChatGPT for teens — years after teens started using it",
+    "summary": "OpenAI 面向青少年推出更安全的 ChatGPT，加入适龄安全措施、家长控制和学习工具，以减少有害内容并防止青少年用 AI 作弊。不过产品上线时间远晚于青少年实际使用，存在明显滞后。",
+    "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek Harness 怎么入门？这套极简教程用一个项目给你讲清楚",
+    "summary": "InfoQ 发布入门教程，通过一个完整项目讲解 DeepSeek Harness 的基本用法，帮助开发者快速上手该工具。",
+    "url": "https://www.infoq.cn/article/1EP0hwuqRzccrWArR7GJ?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI launches a ChatGPT version built for teens",
+    "summary": "OpenAI 发布面向 13 至 17 岁用户的 ChatGPT 版本，强化保护机制与家长控制，定位为更适合青少年的学习工具。",
+    "url": "https://the-decoder.com/openai-launches-a-chatgpt-version-built-for-teens/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模型跑起来之后：视觉 AI 还需要哪些系统能力？",
+    "summary": "InfoQ 文章讨论视觉 AI 模型部署后除推理之外还需要补齐的系统能力，例如图像数据接入、处理管线、监控与运维等，为视觉 AI 的工程化落地提供思路。",
+    "url": "https://www.infoq.cn/article/LLrRNFqoYHPWGNSPslWm?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
+    "summary": "OpenAI 正式推出 ChatGPT for Teens，强调为青少年学习设计，内置更强保护、健康使用功能以及额外的家长控制，目标是帮助青少年更自信且安全地使用 AI。",
+    "url": "https://openai.com/index/chatgpt-for-teens",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic's per-token cost runs 4.4 times the average on Vercel, and developers keep paying",
+    "summary": "Anthropic 在 Vercel AI Gateway 七月数据中拿走了 65.1% 的营收，但仅占 30% 的 token 处理量，每 token 成本是竞争者的 4.4 倍，开发者仍持续买单。这显示出 Claude 在开发者端的品牌粘性和定价权。",
+    "url": "https://the-decoder.com/anthropics-per-token-cost-runs-4-4-times-the-average-on-vercel-and-developers-keep-paying/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "π0引用的中国团队，又出手了：世界仿真器新作发布",
+    "summary": "曾被 π0 引用的中国团队发布新的世界仿真器，目标是为机器人构建更接近真实的「第二世界」，以提升具身智能训练与测试环境的真实度。",
+    "url": "https://www.qbitai.com/2026/08/474838.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
