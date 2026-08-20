@@ -22,16 +22,45 @@ Edit text between markers. Keep placeholder names unchanged.
 - section只能是：{section_order_json}。
 - 第一项必须是“🔥 今日焦点”，全文仅允许一个“🔥 今日焦点”。
 - 尽量覆盖产品、行业、研究、开源或工具等中的至少4类。
-- 参考“最近7天记录”避免重复选择同一事件，尤其避免重复已选新闻。
+- 必须与“此前7天已发送新闻”逐条比较，不得重复选择同一事件。
 - 只把“同一事件/同一发布/同一研究结果”的新闻视为重复；相似主题但事件不同的新闻不能错过。
-- 最近记录中的每条都包含date/title/summary/url；比较时优先用title+summary判断事件是否相同。
+- 即使来源、URL、标题措辞、语言或报道角度不同，只要核心主体、动作和对象相同，就属于重复。
+- 此前记录中的每条都包含date/title/summary/url；比较时优先用title+summary判断事件是否相同。
 
-最近7天记录：
+此前7天已发送新闻：
 {recent_titles_json}
 
 候选：
 {candidates_json}
 <!-- prompt:selection_user:end -->
+
+## Cross-day Dedupe Review System Prompt
+
+<!-- prompt:cross_day_dedupe_system:start -->
+你是AI新闻事件去重审核员。你的唯一任务是判断今天拟发送的新闻，是否与此前7天已经发送的新闻属于同一底层事件。只输出单个合法JSON对象。
+<!-- prompt:cross_day_dedupe_system:end -->
+
+## Cross-day Dedupe Review User Prompt
+
+<!-- prompt:cross_day_dedupe_user:start -->
+逐条比较“今天拟发送”与“此前7天已发送”。即使媒体来源、URL、标题措辞、语言、报道角度或金额小幅更新不同，只要核心主体、动作和对象相同，仍视为同一事件。
+
+只有出现实质性新进展时才可视为新事件，例如正式发布相对于此前传闻、完成交易相对于此前谈判、发布新版本相对于旧版本。单纯换媒体复述、补充分析、价格口径修正或标题改写，不属于新进展。
+
+只输出：
+{"duplicates":[{"current_url":"今天拟发送中的原始URL","previous_url":"此前7天已发送中的原始URL","reason":"为何是同一事件"}]}
+
+要求：
+- 没有重复时输出 {"duplicates":[]}。
+- URL必须原样复制输入，不能创造或修改。
+- 只报告跨天重复，不比较今天内部的新闻。
+
+今天拟发送：
+{current_selection_json}
+
+此前7天已发送：
+{recent_sent_json}
+<!-- prompt:cross_day_dedupe_user:end -->
 
 ## Editorial Batch User Prompt
 

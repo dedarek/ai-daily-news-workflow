@@ -13,7 +13,7 @@ python3 skill/scripts/validate_html_quality.py \
   --date 2026-06-24 \
   --path skill/samples/2026-06-24.html
 
-python3 -m unittest discover -s scripts/tests -p 'test_news_sources.py'
+python3 -m unittest discover -s scripts/tests -p 'test_*.py'
 
 test -x "$(command -v ffmpeg)"
 test -x "$(command -v ffprobe)"

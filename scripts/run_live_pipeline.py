@@ -21,6 +21,12 @@ from urllib.parse import urlparse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from news_dedup import (
+    exact_recent_url_matches,
+    flatten_recent_sent,
+    high_confidence_event_matches,
+    recent_sent_articles,
+)
 from news_sources import collect_news_sources
 from prompt_loader import prompt_template as prompt_template_from_file
 from prompt_loader import render_prompt as render_prompt_from_file
@@ -361,44 +367,11 @@ def enrich_articles_with_source_text(articles: list[Article]) -> list[Article]:
     return enriched
 
 
-def load_recent_titles_for_selection(exclude_date: str) -> dict[str, dict[str, list[dict[str, str]]]]:
-    if not STATE_PATH.exists():
-        return {}
-    try:
-        state = json.loads(STATE_PATH.read_text(encoding='utf-8'))
-    except json.JSONDecodeError:
-        return {}
-    days = state.get('days') if isinstance(state, dict) else {}
-    if not isinstance(days, dict):
-        return {}
-
-    recent: dict[str, dict[str, list[dict[str, str]]]] = {}
-    for day, payload in sorted(days.items(), reverse=True):
-        if day == exclude_date or not isinstance(payload, dict):
-            continue
-        recent[day] = {
-            'candidates': [
-                {
-                    'date': str(item.get('date') or day),
-                    'title': str(item.get('title', '')).strip(),
-                    'summary': str(item.get('summary', '')).strip()[:260],
-                    'url': str(item.get('url', '')).strip(),
-                }
-                for item in payload.get('candidates', [])
-                if isinstance(item, dict) and str(item.get('title', '')).strip()
-            ],
-            'selected': [
-                {
-                    'date': str(item.get('date') or day),
-                    'title': str(item.get('title', '')).strip(),
-                    'summary': str(item.get('summary', '')).strip()[:260],
-                    'url': str(item.get('url', '')).strip(),
-                }
-                for item in payload.get('selected', [])
-                if isinstance(item, dict) and str(item.get('title', '')).strip()
-            ],
-        }
-    return recent
+def load_recent_titles_for_selection(exclude_date: str) -> dict[str, list[dict[str, str]]]:
+    # The restored state has already been filtered to successful delivery dates.
+    # Only compare against articles that actually entered those sent issues; old
+    # unselected candidates are irrelevant and previously overwhelmed the prompt.
+    return recent_sent_articles(STATE_PATH, exclude_date, window_days=7)
 
 
 def extract_json_object(text: str) -> dict:
@@ -767,51 +740,181 @@ def generate_digest_summary(
     return summary, usage, model
 
 
+def review_cross_day_duplicates(
+    *,
+    endpoint: str,
+    models: list[str],
+    api_key: str,
+    selected: list[tuple[Article, str]],
+    recent_sent: dict[str, list[dict[str, str]]],
+    attempt: int,
+) -> tuple[list[dict[str, str]], dict, str]:
+    current_payload = [
+        {
+            'title': source.title,
+            'summary': source.summary,
+            'url': source.url,
+            'section': section,
+        }
+        for source, section in selected
+    ]
+    recent_payload = flatten_recent_sent(recent_sent)
+    prompt = render_prompt_from_file(
+        NEWS_PROMPTS_FILE,
+        'cross_day_dedupe_user',
+        current_selection_json=json.dumps(current_payload, ensure_ascii=False),
+        recent_sent_json=json.dumps(recent_payload, ensure_ascii=False),
+    )
+    result, usage, model = request_deepseek_json(
+        endpoint=endpoint,
+        models=models,
+        api_key=api_key,
+        system_prompt=prompt_template_from_file(NEWS_PROMPTS_FILE, 'cross_day_dedupe_system'),
+        user_prompt=prompt,
+        task_name=f'cross_day_dedupe_review_{attempt}',
+        thinking_enabled=False,
+    )
+    raw_duplicates = result.get('duplicates')
+    if not isinstance(raw_duplicates, list):
+        raise RuntimeError('Cross-day dedupe review must return a duplicates array')
+
+    current_urls = {item['url'] for item in current_payload}
+    previous_urls = {item['url'] for item in recent_payload}
+    duplicates: list[dict[str, str]] = []
+    seen_current: set[str] = set()
+    for item in raw_duplicates:
+        if not isinstance(item, dict):
+            raise RuntimeError('Cross-day dedupe review returned a non-object duplicate')
+        current_url = str(item.get('current_url', '')).strip()
+        previous_url = str(item.get('previous_url', '')).strip()
+        reason = clean_text(str(item.get('reason', '')))
+        if current_url not in current_urls or previous_url not in previous_urls or not reason:
+            raise RuntimeError(
+                'Cross-day dedupe review returned an invalid URL or empty reason: '
+                f'{item!r}'
+            )
+        if current_url in seen_current:
+            continue
+        seen_current.add(current_url)
+        duplicates.append({
+            'current_url': current_url,
+            'previous_url': previous_url,
+            'reason': reason,
+        })
+    return duplicates, usage, model
+
+
 def call_deepseek(
     candidate_articles: list[Article],
     api_key: str,
     issue_date: str,
 ) -> tuple[list[Article], list[dict[str, str]], str, dict]:
     endpoint, models = llm_config()
-    candidates = [
-        {
-            'title': item.title,
-            'source_summary': item.summary,
-            'url': item.url,
-            'suggested_section': item.section,
-        }
-        for item in candidate_articles
-    ]
     system_prompt = prompt_template_from_file(NEWS_PROMPTS_FILE, 'editorial_system')
-    selection_prompt = render_prompt_from_file(
-        NEWS_PROMPTS_FILE,
-        'selection_user',
-        section_order_json=json.dumps(SECTION_ORDER, ensure_ascii=False),
-        recent_titles_json=json.dumps(load_recent_titles_for_selection(issue_date), ensure_ascii=False),
-        candidates_json=json.dumps(candidates, ensure_ascii=False),
+    recent_sent = load_recent_titles_for_selection(issue_date)
+    exact_matches = exact_recent_url_matches(
+        [item.url for item in candidate_articles],
+        recent_sent,
     )
-    selection_result, selection_usage, selection_model = request_deepseek_json(
-        endpoint=endpoint,
-        models=models,
-        api_key=api_key,
-        system_prompt=system_prompt,
-        user_prompt=selection_prompt,
-        task_name='selection',
+    event_matches = high_confidence_event_matches(
+        [
+            {'title': item.title, 'summary': item.summary, 'url': item.url}
+            for item in candidate_articles
+        ],
+        recent_sent,
     )
-    candidate_map = {item.url: item for item in candidate_articles}
+    blocked_urls = set(exact_matches) | set(event_matches)
+    selection_calls: list[dict] = []
+    dedupe_reviews: list[dict] = []
     selected: list[tuple[Article, str]] = []
-    seen_urls: set[str] = set()
-    for item in selection_result.get('selection', []):
-        url = str(item.get('url', '')).strip()
-        section = str(item.get('section', '')).strip()
-        if url in candidate_map and url not in seen_urls and section in SECTION_ORDER:
-            selected.append((candidate_map[url], section))
-            seen_urls.add(url)
-    if len(selected) != 12:
-        raise RuntimeError(f'LLM selected {len(selected)} valid articles; expected exactly 12')
-    focus_count = sum(section == '🔥 今日焦点' for _, section in selected)
-    if selected[0][1] != '🔥 今日焦点' or focus_count != 1:
-        raise RuntimeError(f'LLM selection focus validation failed: first={selected[0][1]}, count={focus_count}')
+    selection_usage: dict = {}
+    selection_model = ''
+
+    for selection_attempt in range(1, 4):
+        available_articles = [
+            item for item in candidate_articles if item.url not in blocked_urls
+        ]
+        if len(available_articles) < 12:
+            raise RuntimeError(
+                'Cross-day dedupe left fewer than 12 candidates: '
+                f'{len(available_articles)} available, {len(blocked_urls)} blocked'
+            )
+        candidates = [
+            {
+                'title': item.title,
+                'source_summary': item.summary,
+                'url': item.url,
+                'suggested_section': item.section,
+            }
+            for item in available_articles
+        ]
+        selection_prompt = render_prompt_from_file(
+            NEWS_PROMPTS_FILE,
+            'selection_user',
+            section_order_json=json.dumps(SECTION_ORDER, ensure_ascii=False),
+            recent_titles_json=json.dumps(recent_sent, ensure_ascii=False),
+            candidates_json=json.dumps(candidates, ensure_ascii=False),
+        )
+        selection_result, selection_usage, selection_model = request_deepseek_json(
+            endpoint=endpoint,
+            models=models,
+            api_key=api_key,
+            system_prompt=system_prompt,
+            user_prompt=selection_prompt,
+            task_name=f'selection_{selection_attempt}',
+        )
+        selection_calls.append({
+            'attempt': selection_attempt,
+            'model': selection_model,
+            'usage': selection_usage,
+            'candidate_count': len(available_articles),
+        })
+        candidate_map = {item.url: item for item in available_articles}
+        selected = []
+        seen_urls: set[str] = set()
+        for item in selection_result.get('selection', []):
+            url = str(item.get('url', '')).strip()
+            section = str(item.get('section', '')).strip()
+            if url in candidate_map and url not in seen_urls and section in SECTION_ORDER:
+                selected.append((candidate_map[url], section))
+                seen_urls.add(url)
+        if len(selected) != 12:
+            raise RuntimeError(f'LLM selected {len(selected)} valid articles; expected exactly 12')
+        focus_count = sum(section == '🔥 今日焦点' for _, section in selected)
+        if selected[0][1] != '🔥 今日焦点' or focus_count != 1:
+            raise RuntimeError(
+                f'LLM selection focus validation failed: first={selected[0][1]}, count={focus_count}'
+            )
+
+        duplicates: list[dict[str, str]] = []
+        review_usage: dict = {}
+        review_model = ''
+        if recent_sent:
+            duplicates, review_usage, review_model = review_cross_day_duplicates(
+                endpoint=endpoint,
+                models=models,
+                api_key=api_key,
+                selected=selected,
+                recent_sent=recent_sent,
+                attempt=selection_attempt,
+            )
+        dedupe_reviews.append({
+            'attempt': selection_attempt,
+            'model': review_model or None,
+            'usage': review_usage,
+            'duplicates': duplicates,
+        })
+        if not duplicates:
+            break
+        newly_blocked = {item['current_url'] for item in duplicates}
+        blocked_urls.update(newly_blocked)
+        print(
+            'WARN cross_day_duplicates_detected '
+            f'attempt={selection_attempt} blocked={json.dumps(sorted(newly_blocked), ensure_ascii=False)}',
+            flush=True,
+        )
+    else:
+        raise RuntimeError('Cross-day dedupe review failed after 3 selection attempts')
 
     selected_sections = [section for _, section in selected]
     selected_sources = enrich_articles_with_source_text([source for source, _ in selected])
@@ -884,9 +987,42 @@ def call_deepseek(
         'provider': 'opencode-go',
         'model_chain': models,
         'endpoint': endpoint,
-        'calls': 2 + len(editorial_calls) + int(podcast_metadata.get('calls', 1)),
+        'calls': (
+            len(selection_calls)
+            + sum(1 for item in dedupe_reviews if item.get('model'))
+            + 1
+            + len(editorial_calls)
+            + int(podcast_metadata.get('calls', 1))
+        ),
         'call_details': {
             'selection': {'model': selection_model, 'usage': selection_usage},
+            'selection_attempts': selection_calls,
+            'cross_day_dedupe': {
+                'window_days': 7,
+                'recent_sent_count': len(flatten_recent_sent(recent_sent)),
+                'exact_url_blocks': [
+                    {
+                        'current_url': current_url,
+                        'previous_url': previous.get('url', ''),
+                        'previous_date': previous.get('date', ''),
+                    }
+                    for current_url, previous in exact_matches.items()
+                ],
+                'high_confidence_event_blocks': [
+                    {
+                        'current_url': current_url,
+                        'previous_url': match['previous'].get('url', ''),
+                        'previous_date': match['previous'].get('date', ''),
+                        'actions': match['actions'],
+                        'entities': match['entities'],
+                    }
+                    for current_url, match in event_matches.items()
+                ],
+                'reviews': dedupe_reviews,
+                'final_pass': bool(dedupe_reviews and not dedupe_reviews[-1]['duplicates'])
+                if recent_sent
+                else True,
+            },
             'editorial_batches': editorial_calls,
             'digest_summary': {'model': digest_model, 'usage': digest_usage},
             'podcast': podcast_details.get('podcast'),

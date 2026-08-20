@@ -16,12 +16,19 @@ The issue must include:
 
 - Prefer current, concrete AI product, research, open-source, policy, and industry news.
 - Keep the selection event-based. Do not include multiple articles about the same event.
-- Read only date, title, summary, and URL from `state/recent-news.json` for the last seven days.
-- Use the recent state as an advisory dedupe signal, not a hard global block.
-- If two records look similar, compare event identity from title and summary before dropping either.
+- Read only date, title, summary, and URL from the `selected` records in
+  `state/recent-news.json` for the seven complete calendar days before the issue.
+- Only dates with a successful morning or afternoon delivery marker count as sent history;
+  generated-but-unsent issues must not enter cross-day dedupe.
+- Cross-day dedupe is a hard gate. Block canonical URL matches before selection, then run a
+  focused event-identity review after selection. If a different URL or rewritten title reports
+  the same underlying event, block it and select a replacement before continuing.
+- Similar topics are not automatically duplicates. A materially new event or development may
+  be retained, but a new article angle, analysis, translation, or minor fact correction is not
+  a new event.
 - Similar but materially different events must not be dropped.
 - Candidate and selected date/title/summary/URL records must be written back through the supervisor state update.
-- Memory is persisted across days on the `gh-pages` branch. Before generation the supervisor restores `state/recent-news.json` from the published site (`restore_memory_from_site`); after updating it, the supervisor writes it back to the published site (`sync_memory_to_site`) so the publish step commits it. This closed loop is what makes the seven-day dedupe actually effective — without it the memory would stay empty every run.
+- Memory is persisted across days on the `gh-pages` branch. Before generation the supervisor restores `state/recent-news.json` from the published site (`restore_memory_from_site`) and filters it through `state/deliveries/YYYY-MM-DD/{morning,afternoon}.json`; after updating it, the supervisor writes it back to the published site (`sync_memory_to_site`) so the publish step commits it. This closed loop is what makes the seven-day dedupe actually effective — without it the memory would stay empty every run.
 
 ## Article Rules
 

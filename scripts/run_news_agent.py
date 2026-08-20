@@ -11,6 +11,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from news_dedup import filter_state_to_delivered
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STATE_PATH = REPO_ROOT / 'state' / 'recent-news.json'
 
@@ -262,8 +264,15 @@ def restore_memory_from_site(site_dir: Path) -> bool:
     src = site_dir / 'state' / 'recent-news.json'
     if not src.exists():
         return False
+    try:
+        restored_state = read_json(src)
+    except (json.JSONDecodeError, OSError):
+        return False
+    if not isinstance(restored_state, dict):
+        return False
+    restored_state = filter_state_to_delivered(restored_state, site_dir)
     STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, STATE_PATH)
+    write_json(STATE_PATH, restored_state)
     return True
 
 
@@ -289,7 +298,9 @@ def update_recent_state(issue_date: str, paths: dict[str, Path]) -> dict[str, in
         'selected': compact_title_items(paths['articles'], issue_date),
     }
 
-    cutoff = datetime.strptime(issue_date, '%Y-%m-%d').date() - timedelta(days=window_days - 1)
+    # Keep today's issue plus the seven complete calendar days before it. The
+    # selection stage excludes today, so this preserves a true previous-7-day window.
+    cutoff = datetime.strptime(issue_date, '%Y-%m-%d').date() - timedelta(days=window_days)
     for day in list(days):
         try:
             parsed = datetime.strptime(day, '%Y-%m-%d').date()

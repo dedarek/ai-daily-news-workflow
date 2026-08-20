@@ -132,6 +132,11 @@ Allowed manifest status values:
 
 ## `state/recent-news.json`
 
+The state keeps the current issue plus the seven complete calendar days before
+it. Cross-day dedupe reads only `selected` records from dates that also have a
+successful delivery marker under `state/deliveries/YYYY-MM-DD/`; `candidates`
+remain diagnostic history and are not treated as sent news.
+
 ```json
 {
   "window_days": 7,
