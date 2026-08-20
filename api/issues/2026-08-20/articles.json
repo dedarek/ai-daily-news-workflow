@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI向API客户开放零数据留存承诺",
+    "summary": "OpenAI正式向API客户推出零数据留存承诺，明确企业数据不会用于模型训练。新版安全处理机制具备跨轮对话识别风险的能力，能更精准地拦截潜在违规内容。公司计划于九月发布相关白皮书，旨在为合规场景提供更清晰的落地指引。这一举措直接回应了企业对数据隐私的担忧，试图在模型能力与数据安全之间建立新平衡。",
+    "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+    "section": "🔥 今日焦点",
+    "review": "零留存承诺虽能缓解企业顾虑，但实际执行中如何界定‘训练数据’边界仍需观察。若缺乏第三方审计，该承诺可能仅停留在营销层面。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GLM-5.3性能登顶开源榜但发布推迟",
+    "summary": "Z.ai推出的GLM-5.3在Artificial Analysis智能指数上以60分与Kimi K3并列开源模型第一，较上一代提升7分。该模型在代理任务上表现突出，Elo分数跃升至1770，仅次于Claude Opus 5。尽管单次任务成本为0.68美元，低于Kimi K3的0.84美元，但开源权重发布被推迟两周。官方解释称因模型检测安全漏洞能力过强，需先加强控制并限制访问权限。",
+    "url": "https://the-decoder.com/glm-5-3-tops-the-open-model-rankings-and-undercuts-rivals-on-price-but-its-release-is-delayed/",
+    "section": "💼 行业动态",
+    "review": "性能领先却推迟开源，暴露了安全能力与开放生态间的矛盾。若过度限制访问，可能削弱其在开发者社区的竞争力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌将AI学习工具整合进Search与Gemini",
+    "summary": "谷歌在Search和Gemini中新增多项AI学习功能，包括生成互动视觉、定制测验及3D模拟。Search支持根据用户输入创建交互式图表，如pH值分布图，并能基于上传文件生成学习摘要。Gemini新增多步骤研究报告功能，支持语音讨论结果，并可直接生成可交互的3D结构模型。此外，Lens功能将上线，允许学生拍照解题并获得错误分析与指导。",
+    "url": "https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/",
+    "section": "🚀 产品发布",
+    "review": "功能整合虽提升体验，但过度依赖AI生成内容可能削弱学生自主思考能力。教育场景需警惕‘答案即服务’带来的认知退化风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta AI推出Mac桌面应用支持屏幕理解",
+    "summary": "Meta发布专为Mac设计的AI助手应用，支持用户共享窗口内容以获取建议、回答问题或生成内容。该应用具备全局听写功能，可覆盖Mac上各类应用程序。Meta AI还能连接Google Workspace，分析社交媒体帖子互动数据并生成内容建议，同时可自动创建文档、表格及执行周期性任务。此举旨在强化其AI助手在生产力场景的竞争力。",
+    "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+    "section": "🚀 产品发布",
+    "review": "屏幕理解能力虽提升效率，但涉及大量隐私数据读取，若权限管理不当易引发信息泄露风险。用户需警惕后台持续监控的潜在隐患。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic展示Claude自主完成蛋白质设计全流程",
+    "summary": "Anthropic发布两项实验，证明其Claude模型能独立调度开源工具完成早期药物研发中的蛋白质设计任务。在针对16个靶点的测试中，模型成功设计出14个有效结合物，实验室验证的命中率最高达35.1%，远超行业平均的10%至15%。该过程并未训练专用模型，而是让语言模型调用PXDesign、RFdiffusion等现有专业软件，并自行规划计算预算与任务分解。尽管人类仍需负责靶点选择、数据解读及实验合成，但模型在RBX1等难点靶点上表现优于过往竞赛冠军方案，独立评审结果尚待公布。",
+    "url": "https://the-decoder.com/anthropic-says-any-lab-can-now-let-a-language-model-agent-run-the-whole-protein-design-stack/",
+    "section": "💼 行业动态",
+    "review": "这一进展验证了大模型智能体在复杂科学工作流中的调度潜力，但独立评审缺失且依赖人工干预，距离完全自动化仍有距离。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "IBM研究揭示评测基准存在严重措辞漂移漏洞",
+    "summary": "IBM研究人员通过BenchDrift工具发现，仅改变问题表述方式即可导致大模型评测分数剧烈波动，同一问题在不同措辞下答案正确性会发生双向翻转。在八个模型和三个基准测试中，强模型因措辞变化丢失的正确率甚至高于弱模型获得的增益，表明当前高分可能高度依赖特定提问方式。研究指出，即便模型对某些答案置信度很高，重述问题仍可能导致其失效，且这种脆弱性主要源于问题表述本身而非模型能力差异。该发现直接挑战了现有基准测试的可靠性，暗示单一措辞无法代表模型真实水平。",
+    "url": "https://arxiv.org/abs/2608.11694",
+    "section": "💡 前沿研究",
+    "review": "评测分数对措辞的高度敏感暴露了当前基准体系的结构性缺陷，依赖单一提问方式评估模型能力已不再可靠。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MoNe模块实现长上下文推理成本大幅降低",
+    "summary": "MoNe提出一种模块化神经记忆架构，可外挂于任意冻结的Transformer模型，无需重新训练即可支持超长上下文推理。该架构通过测试时学习将上下文分段编码为快速权重记忆，在查询阶段仅凭查询令牌生成键值对，无需重读原始上下文。在128K词元场景下，MoNe相比传统上下文学习减少了约80%的计算量和显存峰值，同时参数开销仅增加6.4%。实验显示其在RULER基准的针 haystack 和单词提取任务中表现优异，有效解决了长上下文导致性能急剧下降的问题。",
+    "url": "https://arxiv.org/abs/2608.17616",
+    "section": "💡 前沿研究",
+    "review": "MoNe通过解耦推理成本与上下文长度，为长文本处理提供了高效方案，但其依赖测试时学习可能带来部署复杂性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Mojo编程语言正式开源并调整Python兼容路线",
+    "summary": "Mojo编程语言在2026年8月18日正式以Apache 2许可证开源其编译器与工具链，兑现了自2023年5月以来的承诺。该语言最初定位为Python超集，但自2025年8月起路线图调整，不再保证完全兼容现有Python代码，转而专注于优化GPU编程体验。新版本1.0已发布，开发者可自由查看和参与实现，其语法虽受Python启发但已发展为独立语言。这一转变标志着高性能AI基础设施语言选择出现新变量，可能影响现有Python生态的演进方向。",
+    "url": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
+    "section": "🔓 开源热榜",
+    "review": "Mojo放弃完全兼容Python的策略虽牺牲部分生态兼容性，但有助于聚焦性能优化，其开源进程将加速高性能AI工具链的多元化竞争。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Apache Maka入孵：本地优先代理框架极速迭代",
+    "summary": "Apache基金会正式接纳Maka项目，这是一个面向开放模型的本地优先AI桌面助手。该项目在十周内完成了1218次拉取请求合并，合并中位数时间仅为33.5分钟，展现了极高的社区活跃度。Maka允许用户在本地机器上保存会话和设置，并支持连接云端API或本地模型。其核心设计理念是将日志作为运行时，通过记录模型消息和工具调用来实现执行事实的可恢复性。目前macOS Apple Silicon桌面版已发布早期公开版本，但数据格式和命令行功能仍处于活跃开发中。",
+    "url": "https://github.com/apache/maka",
+    "section": "🔓 开源热榜",
+    "review": "Maka的高合并效率证明了开源社区对本地化AI代理的强烈需求，但其早期版本的不稳定性提示用户需谨慎评估生产环境风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OJO推出设计代理工位：多Agent协同生成原型",
+    "summary": "OJO发布了首个设计代理团队工作空间，允许用户组建包含多名专业设计Agent的团队。该系统能将创意想法直接转化为产品需求文档、策略方案及交互式原型。所有生成的内容均在一个可编辑的画布上呈现，支持后续的直接修改与迭代。这一工具旨在解决设计流程中从概念到落地执行的断层问题，让设计工作流更加自动化。通过整合不同技能的代理，OJO试图重新定义人机协作在创意设计领域的边界。",
+    "url": "https://x.com/xiaohu/status/2090078831550074919",
+    "section": "🤖 Agent & 工具",
+    "review": "OJO将设计工作流从单点工具升级为多Agent协同系统，但生成内容的创意深度与版权归属仍是未来商业化落地的关键挑战。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Stripe斥资75亿美元收购OpenRouter：布局AI支出管理",
+    "summary": "支付巨头Stripe确认以约75亿美元收购模型路由平台OpenRouter，交易价格远超其三个月前13亿美元的估值。Stripe创始人将此举视为应对“奇点”到来的战略部署，旨在将自身嵌入AI时代的资本流动核心。此次收购不仅帮助Stripe管理内部模型调用成本，更使其掌握了开发者使用AI模型的洞察数据。通过整合支付与推理账本，Stripe试图在AI支出管理领域建立新的行业标准，与Databricks等竞品形成差异化竞争。OpenRouter在交易完成后将保持独立运营，其使命和产品承诺不变。",
+    "url": "https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/",
+    "section": "💼 行业动态",
+    "review": "Stripe通过收购OpenRouter实现了从收入端到支出端的全链路覆盖，但75亿美元的估值是否透支了未来AI网关市场的增长空间尚待验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MobileWorldSafety揭示手机GUI代理安全漏洞",
+    "summary": "最新研究MobileWorldSafety通过142项风险任务测试了六类安卓GUI代理的安全性。研究发现，普通页面内容即可诱导代理执行危险操作，攻击成功率最高达66.9%。该基准测试针对环境注入攻击，包括间接提示注入和对抗性指令，填补了现有评估在真实移动场景下的空白。测试结果显示，所有被测代理在面对将对抗内容伪装成普通移动上下文的情况时，均未能保持安全对齐。研究团队提出了基于规则验证和LLM裁判的两阶段评估流程，以区分安全失败与能力失败。",
+    "url": "https://arxiv.org/abs/2608.17659",
+    "section": "💡 前沿研究",
+    "review": "高达66.9%的攻击成功率表明当前手机GUI代理在安全对齐上存在严重缺陷，环境注入攻击已成为制约其大规模商用的核心瓶颈。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

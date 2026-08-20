@@ -1,0 +1,542 @@
+[
+  {
+    "title": "OpenAI推ZDR",
+    "summary": "OpenAI向API客户开放零留存承诺，企业数据不进训练。新版安全处理🔐能跨轮识别风险。九月还有白皮书释出，合规场景更好落地。",
+    "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GLM-5.3 tops the open-model rankings and undercuts rivals on price, but its release is delayed",
+    "summary": "「Z.ai」的「GLM-5.3」在 Artificial Analysis 智能指数上拿到 60 分，与「Kimi K3」并列开源模型第一，比上一代「GLM-5.2」高出 7 分。它在价格上也有优势，但发布被推迟。对关注开源基座和推理成本的人来说，这意味着头部开源模型竞争进一步加剧。",
+    "url": "https://the-decoder.com/glm-5-3-tops-the-open-model-rankings-and-undercuts-rivals-on-price-but-its-release-is-delayed/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1702期 - 2026-08-20 04:01",
+    "summary": "本期重点关注[Agent基础设施]与[模型成本竞争]：Cursor、Agent Arena和NVIDIA持续推进代理长期执行与实测评估，语音模型和数据API也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-20_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌上新学习套件",
+    "summary": "谷歌把学习工具套件塞进Search和Gemini。搜索可生成🧪互动视觉和测验。Lens能讲解错题，Gemini支持3D模拟。",
+    "url": "https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.16.0",
+    "summary": "「LMDeploy」v0.16.0 新增了对 InternS2 mobius、「GLM-5.2」、Intern-S2-Mobius meta 专家混合和 Hy3 等模型的支持，并加入多令牌预测与八位浮点优化、上下文并行注意力修复以及 InternVL 和 Qwen VL 的 TurboMind ViT 支持。改进包括直接报告缓存使用情况、SM90 原生半精度与八位浮点矩阵乘核和融合 SiLU 量化。这些更新增强了其在多模态和专家混合推理部署上的覆盖与性能。",
+    "url": "https://github.com/InternLM/lmdeploy/releases/tag/v0.16.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1701期 - 2026-08-19 20:01",
+    "summary": "本期重点关注[豆包云电脑]的跨端控制与连接器能力，以及[浏览器智能体自动触发]和多款AI工具的实用更新，AI产品正加速融入真实工作流。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-19_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta AI登Mac",
+    "summary": "Meta发布桌面助手应用，主打屏幕理解。用户共享窗口后，助手👀能生成建议。它还支持全局听写，覆盖Mac各类应用。",
+    "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LFM2.5 Q4\\_0 Checkpoints from Quantization-Aware Distillation",
+    "summary": "相关方发布了「LFM2.5」的 Q4_0 检查点，这些权重来自量化感知蒸馏而非简单的后训练量化。相比直接转换，量化感知蒸馏有助于在低比特下保留更多模型能力。这对需要本地或端侧运行「LFM2.5」的开发者很有价值。",
+    "url": "https://huggingface.co/blog/LiquidAI/qad",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1700期 - 2026-08-19 12:02",
+    "summary": "本期重点关注[Cerebras CS-4]带来的推理硬件升级、[Qwen3.8-27B]在多个专业基准登顶，以及[宇树科技]正式上市这一机器人产业事件。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-19_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OJO做设计工位",
+    "summary": "OJO推出设计代理工位，可组建多名设计Agent。它能把想法🧩变成PRD、策略和原型。所有内容在画布里继续编辑。",
+    "url": "https://x.com/xiaohu/status/2090078831550074919",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic says any lab can now let a language model agent run the whole protein design stack",
+    "summary": "「Anthropic」让「Claude」模型自行设计能对接体内靶标结构的小蛋白，这是早期药物研发的关键步骤。其命中率最高达到 35%，远高于行业平均的 10% 到 15%；不过「Claude」主要是在调度现有专业工具，独立评审仍待完成。这表明大语言模型智能体在科学发现工作流中的潜力正在被验证。",
+    "url": "https://the-decoder.com/anthropic-says-any-lab-can-now-let-a-language-model-agent-run-the-whole-protein-design-stack/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1699期 - 2026-08-19 08:01",
+    "summary": "[Claude]设计的蛋白结合分子获湿实验验证，成功率明显高于行业水平；[GLM-5.3 API]上线，低价订阅同步开放。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-19_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Codex改完Asana迁移",
+    "summary": "OpenAI开发者账号称，前端迁移案例已在Asana落地。Codex把测试迁移⚡压到两周。官网迁移复盘称原本还要五年。",
+    "url": "https://x.com/OpenAIDevs/status/2090122836103102482",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "fa4-v4.0.0.beta27",
+    "summary": "「FlashAttention」fa4-v4.0.0.beta27 发布，主要改动是放宽了 CuTe 对「CUTLASS」领域专用语言的版本要求。这降低了与不同「CUTLASS」版本集成的门槛，方便下游项目跟随更新。",
+    "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta27",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1698期 - 2026-08-19 04:02",
+    "summary": "本期聚焦[前沿模型训练安全]与[生产级Agent评估]：OpenAI暂停大型RL任务加固环境，NVIDIA与LangChain分别降低模型部署和智能体质检门槛。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-19_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok语音冲榜",
+    "summary": "马斯克转发语音基准成绩，称Grok Voice胜出。Think Fast 2.0⚡在200题文本达99%。同题语音表现也压过GPT Realtime。",
+    "url": "https://x.com/elonmusk/status/2090132472210358351",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787115531: Optimize PyTorch CUDA build with LLVM BOLT (#186245)",
+    "summary": "「PyTorch」将「LLVM BOLT」后链接优化引入官方仓库，根据 perf 采集的执行画像优化 CUDA 构建的代码布局。此前该优化已用于 NVIDIA 的「PyTorch」容器，现在仓库还随附了一组从精选工作负载收集的画像，使 CUDA 构建默认获得优化。这对训练和推理用户可能带来可观的 CPU 侧性能提升。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787115531",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "BenchDrift拆评测水分",
+    "summary": "IBM论文提出措辞漂移审计，同题换问就能改分。八个模型🧭三套基准差到74.7点。高置信答案仍会丢失18.5%。",
+    "url": "https://arxiv.org/abs/2608.11694",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GLM-5.3 API 🤖, Cerebras’ new chip ⚡, OpenAI cyber slowdown 🚨",
+    "summary": "本期 TLDR AI 汇总聚焦三个动态：「GLM-5.3」API 的推出、「Cerebras」的新芯片，以及「OpenAI」因网络安全风险而放缓模型开发。这些事件分别对应开源模型、专用 AI 芯片和前沿安全策略的演进。对跟踪行业动向的从业者来说是一个快速入口。",
+    "url": "https://tldr.tech/ai/2026-08-19",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MoNe省下长上下文成本",
+    "summary": "MoNe把模块神经记忆外挂到冻结Transformer。查询阶段🧩不用重读上下文。在128K词元下，显存和计算约省八成。",
+    "url": "https://arxiv.org/abs/2608.17616",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Frontier Model Cost and Open-Weights Popularity is Driving Demand for Model Routing",
+    "summary": "「Glean」CEO Arvind Jain 指出，前沿模型成本上升和开放权重模型的流行正在推动模型路由需求。他解释了如何通过路由在质量与成本之间取得平衡，以及大规模人类反馈循环如何持续改进路由决策。这对企业控制 AI 推理支出有直接参考价值。",
+    "url": "https://www.latent.space/p/glean-model-routing",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "病历隐私被LLM补漏",
+    "summary": "研究用机构化提示处理儿科肿瘤病历。八类模型🩺对比两套专用系统。最佳F1达0.918，单轮召回到0.981。",
+    "url": "https://arxiv.org/abs/2608.17051",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Mojo🔥 is now open source",
+    "summary": "「Mojo」编程语言兑现了 2023 年 5 月的承诺，将编译器和工具链以 Apache 2 许可证开源。它的 1.0 版本上周发布，如今开发者可以查看和参与其实现；最初目标是成为 Python 超集，但 2025 年 8 月后路线图已有所调整，不再保证完全兼容。这对高性能 Python 生态和 AI 基础设施语言选择是一个重要变量。",
+    "url": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "边缘VLM耗电真因",
+    "summary": "论文指出端侧能耗瓶颈不在看图。输出Token🔋才是主要耗电项。每个输出Token慢39倍，控长最高省97%。",
+    "url": "https://arxiv.org/abs/2607.09520",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI says it's \"pacing model development\" as AI cybersecurity risks grow too dangerous",
+    "summary": "「OpenAI」表示正在有意放缓模型开发节奏，部分原因是即将推出的「Astra」模型可能接近具备关键网络攻击能力。新的监控系统可在 30 分钟内对模型可疑行为发出警报。这反映出前沿实验室在能力和安全发布之间正采取更谨慎的策略。",
+    "url": "https://the-decoder.com/openai-says-its-pacing-model-development-as-ai-cybersecurity-risks-grow-too-dangerous/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "PlanPO改进多轮代理",
+    "summary": "论文提出规划感知优化，细分成功轨迹质量。它用粗细奖励🧭识别绕路成功。三大多轮基准平均**27.2%**提升。",
+    "url": "https://arxiv.org/abs/2608.17289",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Implement vector-prompt document classification using Amazon Bedrock",
+    "summary": "「AWS」介绍了如何在「Amazon Bedrock」上使用 Strands Agents SDK 构建多智能体文档分类方案。该方案用三个专门智能体结合「Claude Haiku 4.5」的文本分析与「Amazon Titan Multimodal Embeddings」的视觉相似性搜索，来分类保单和宣誓书等保险文档。这展示了多模态嵌入和文本模型协同处理非结构化文档的典型路径。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/implement-vector-prompt-document-classification-using-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "手机GUI代理不稳",
+    "summary": "MobileWorldSafety用安卓风险任务测试六类代理。普通页面内容⚠️就能诱导危险操作。142项任务里，攻击成功率最高66.9%。",
+    "url": "https://arxiv.org/abs/2608.17659",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Axonius built secure multi-tenant AI agents on Bedrock AgentCore",
+    "summary": "「Axonius」使用「Amazon Bedrock AgentCore」在自己的网络安全软件即服务中部署完全隔离的多租户 AI 智能体。它跨数百个客户环境运行，且无需自行构建计算隔离、认证和可观测性基础设施。这降低了多租户智能体服务的工程负担，并提供了安全隔离的参考案例。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-axonius-built-secure-multi-tenant-ai-agents-on-bedrock-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Stripe买下模型路由口",
+    "summary": "TechCrunch分析交易背后算盘，Stripe看中的不是噱头。OpenRouter⚙️能管住Token开销。估值约75亿美元，支付和推理账本合流。",
+    "url": "https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787162095",
+    "summary": "PyTorch 将设备端断言的 stderr 检查逻辑整合到共享辅助函数中，减少重复实现并统一错误输出处理。这对维护 CUDA 等设备端诊断信息的一致性有帮助。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787162095",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Waymo新车开进三城",
+    "summary": "Waymo的低成本新车向三城乘客开放。Ojai🚕面向规模化运营。公司把重点放在降本，Robotaxi盈利压力开始前移。",
+    "url": "https://techcrunch.com/2026/08/19/waymos-cheaper-next-gen-robotaxi-is-now-open-to-all-riders-in-these-three-cities/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10502",
+    "summary": "llama.cpp 的 CI 流水线新增对签名发布产物的 attestation，覆盖 macOS 和 iOS 及 Linux 下 CPU、Vulkan、ROCm、OpenVINO、SYCL 等多种构建组合。该改动提升了发布产物的可验证性与供应链安全。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10502",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI主动放慢训练",
+    "summary": "The Verge称训练节奏调整已公开。公司暂停部分强化学习🛡️两周。最大前沿RL运行继续延后，安全审查压过竞速。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.32.15-rc0: mlx update (#17850)",
+    "summary": "Ollama 发布 v0.32.15-rc0，更新了 Apple MLX 相关依赖，并临时携带 ml-explore/mlx-c#127 的改动。这对在 Apple Silicon 上使用 Ollama 做本地推理的用户是一处兼容性维护。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.32.15-rc0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic收入曲线被盯上",
+    "summary": "Gary Marcus在收入放缓讨论中称增速趋平。Claude Code📉追踪ARR达151.2亿美元。月增只有5.2%，样本仍偏小。",
+    "url": "https://x.com/GaryMarcus/status/2090162539317674287",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "China lets Nvidia's H200 chips trickle onto the mainland to help its AI firms keep pace with the US",
+    "summary": "中国开始允许少量英伟达 H200 芯片进入大陆市场，以帮助本土 AI 公司在与美国的竞争中保持算力供给。在出口管制背景下，这一松动对国内高端加速卡流通具有信号意义。",
+    "url": "https://the-decoder.com/china-lets-nvidias-h200-chips-trickle-onto-the-mainland-to-help-its-ai-firms-keep-pace-with-the-us/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI法律权力引争议",
+    "summary": "Mostaque转发机器法律讨论，追问AI若更懂法律会怎样。审判和执法⚖️或更高效。风险是权力集中到机器。",
+    "url": "https://x.com/EMostaque/status/2090119748289773988",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787155073",
+    "summary": "PyTorch Inductor 修复了当两个内存上限均为 None 时重叠调度会崩溃的问题，提升编译器在边界配置下的稳定性。对使用 torch.compile 并开启重叠调度的用户是可靠性改进。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787155073",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cognition否认卖身",
+    "summary": "TechCrunch报道收购传闻反转，Scott Wu称没有谈判。Devin💻企业客户仍是焦点。Cursor并购后，估值战继续升温。",
+    "url": "https://techcrunch.com/2026/08/19/cognition-ceo-denies-report-that-spacex-tried-to-acquire-the-startup/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Embabel智能体框架发布1.0版本",
+    "summary": "Embabel 智能体框架发布 1.0 版本，为开发者提供了新的智能体构建选择。目前披露信息有限，但版本发布本身值得关注框架生态进展。",
+    "url": "https://www.infoq.cn/article/5LJARsierf0NbH3Rc6wc?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TrueForge开放商用",
+    "summary": "TrueFoundry发布智能体框架，采用MIT许可。它支持沙箱⚙️执行、审批和追踪。相较Claude托管代理，成本低约三成。",
+    "url": "https://x.com/kimmonismus/status/2090174826376040914",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Patch release: v5.15.1",
+    "summary": "Hugging Face Transformers 发布补丁版本 v5.15.1，主要修复 DFlash 与 MTP 候选生成器的若干问题，并解决使用 Lanczos 滤镜时图像在加速器上偶发无法处理的问题。建议使用投机解码或多模态管线的用户升级。",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.15.1",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Apache Maka入孵",
+    "summary": "Apache迎来中立代理框架，面向开放模型Harness层。项目推进⚡很快。十周合并1218PR，PR合并中位数33.5分钟。",
+    "url": "https://github.com/apache/maka",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Memory prices up 500% in 12 months",
+    "summary": "Latent Space 报道内存价格在 12 个月内上涨 500%，存储紧缺持续，成本趋势回退到 2007 年水平。这对 AI 硬件采购与算力成本控制是直接警示。",
+    "url": "https://www.latent.space/p/ainews-memory-prices-up-500-in-12",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax核心工程负责人阿岛离职",
+    "summary": "量子位报道 MiniMax 核心工程负责人阿岛离职，他长期活跃在技术研发和开发者沟通一线。该人事变动可能对 MiniMax 的工程组织与开发者生态产生影响。",
+    "url": "https://www.qbitai.com/2026/08/475869.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Replit expands access to software creation with GPT-5.6 Luna",
+    "summary": "Replit 推出由 GPT-5.6 Luna 驱动的 Free Mode，让用户无需担心 token 成本即可将想法转化为可运行软件。这降低了 AI 辅助开发门槛，也标志着 GPT-5.6 Luna 在代码产品中的落地。",
+    "url": "https://openai.com/index/replit",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787131695: Support Windows ARM64 CUDA paths in cpp_extension (#191656)",
+    "summary": "PyTorch cpp_extension 现在支持 Windows ARM64 的 CUDA 路径识别，构建时会使用 lib/arm64 下的 CUDA 与 cuDNN 库，避免误查 x64 CUDA 目录。这改善了 Windows ARM64 上扩展编译的兼容性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787131695",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v2.14.0-rc5",
+    "summary": "PyTorch 发布 v2.14.0-rc5 候选版本，包含将 fastAtomicAdd 迁移为 header-only 的改动及多个 RC 修复。这是 PyTorch 2.14 发布前的维护更新。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.0-rc5",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Examining Human-Like Behaviors in LLMs: A Multi-Dimensional Analysis of Model Behaviors, User Factors, and System Prompts",
+    "summary": "Apple 机器学习团队发布一项多维度研究，分析 LLM 表现出的类人行为与模型行为、用户因素、系统提示之间的关系，填补了何时应让模型展现何种类人行为的经验方法空白。该工作对模型行为设计与安全对齐研究有参考价值。",
+    "url": "https://machinelearning.apple.com/research/human-like-behaviors-llms",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "The P-Completeness of Inverted Index Traversal: On the Complexity of Evaluating Boolean Query DAGs",
+    "summary": "Apple 机器学习团队研究倒排索引遍历的 P 完全性，证明有状态迭代器模型处理布尔查询 DAG 时受 NC^1 公式评估限制，存在最坏 O(2^|Q|) 的指数爆炸问题。这为 AI agent 搜索基础设施的查询复杂度提供了理论解释。",
+    "url": "https://machinelearning.apple.com/research/the-p-completeness-of-inverted-index-traversal",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10499",
+    "summary": "llama.cpp 服务器端做了一处 cosmetic 修改，不再打印 cmd_child_to_router 相关消息，降低日志噪音。对部署 llama.cpp server 的用户是轻微体验改进。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10499",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon Bedrock AgentCore payments is now generally available: Enabling agents to transact safely and autonomously at scale",
+    "summary": "AWS 宣布 Amazon Bedrock AgentCore payments 正式可用，支持 AI agents 自主交易，内置支出护栏、协议无关的支付编排和生产级可观测性。这对企业构建可自主完成支付流程的智能体应用是重要能力。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-payments-is-now-generally-available-enabling-agents-to-transact-safely-and-autonomously-at-scale/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "New benchmark ranks search APIs for AI agents on quality, cost, and speed",
+    "summary": "Artificial Analysis 发布「Search Index」基准，从质量、成本、速度三个维度评估面向 AI agents 的搜索 API 提供商。基于 GPT-5.6 Luna 的七家测试中，Parallel、Exa、Firecrawl 得分最高。",
+    "url": "https://the-decoder.com/new-benchmark-ranks-search-apis-for-ai-agents-on-quality-cost-and-speed/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Much Memory Does Your Agent Actually Need?",
+    "summary": "Hugging Face 博客发布文章「How Much Memory Does Your Agent Actually Need?」，关注智能体实际所需的内存量。该主题对优化 agent 的资源占用和上下文管理有实际参考价值。",
+    "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI institutes new safeguards after Hugging Face breach",
+    "summary": "在 Hugging Face 遭安全入侵后，OpenAI 制定新防护措施，包括开发过程中对模型进行更详细监控，并在后训练阶段更强调对齐与安全。显示头部实验室在安全事件后加强了全流程管控。",
+    "url": "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Etched’s valuation doubles to $21B in a month",
+    "summary": "Etched 估值在一个月内翻倍至 210 亿美元，Jane Street 部署其首个 AI 集群系统后印象深刻并领投新一轮融资。这显示专用 AI 芯片在交易与推理场景获得实际生产验证。",
+    "url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Jumio built a real-time feature store on AWS",
+    "summary": "Jumio 在 AWS 上使用 SageMaker Feature Store、Flink 托管服务和 Kinesis 构建集中式实时特征存储，欺诈检测特征服务延迟低于 100ms，每年节省约 12 万美元。该案例展示了实时特征平台在反欺诈场景的落地收益。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-jumio-built-a-real-time-feature-store-on-aws/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Improve contract search accuracy with auto-generated filters in Amazon Bedrock",
+    "summary": "文章介绍 AIDA 如何利用 Amazon Bedrock Knowledge Bases 的隐式与显式过滤及元数据增强分块，在正确法律上下文和访问边界内显著提升合同搜索准确性。对法律 RAG 与知识库检索设计有参考价值。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/improve-contract-search-accuracy-with-auto-generated-filters-in-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Snowflake CoCo AI 成本优化指南：7 个关键方法 | 技术实践",
+    "summary": "InfoQ 中文发布 Snowflake CoCo AI 成本优化指南，总结 7 个关键方法以降低使用 Snowflake CoCo AI 的成本。对使用 Snowflake AI 能力的团队有实际省钱参考价值。",
+    "url": "https://www.infoq.cn/article/pOfV96f9DHG9Cw1KQAZB?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
