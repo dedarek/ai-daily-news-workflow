@@ -1,0 +1,28 @@
+{
+  "issue_date": "2026-08-20",
+  "reviewed_at": "2026-08-20T13:05:11.579471+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 85,
+    "summary": "内容整体质量高，但播客对话存在明显的机械报幕感，缺乏自然交流的温度与互动逻辑。",
+    "issues": [
+      "播客对话呈现为‘新闻摘要接力’模式，S1与S2的发言多为单向陈述新闻要点后接一句评论，缺乏真正的观点碰撞、追问或自然的情感交流，读起来像两人轮流朗读新闻稿，而非真实对话。",
+      "部分对话转折生硬，如从‘OpenAI数据留存’直接跳到‘GLM-5.3推迟发布’，缺乏自然的过渡词或逻辑连接，显得机械。",
+      "S2在对话中多次使用‘确实’、‘没错’、‘不过’等连接词，但后续内容多为复述新闻而非表达个人见解，削弱了‘产品与应用视角’的人设深度。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
