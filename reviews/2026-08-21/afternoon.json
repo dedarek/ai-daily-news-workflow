@@ -1,0 +1,32 @@
+{
+  "issue_date": "2026-08-21",
+  "reviewed_at": "2026-08-21T13:05:21.096876+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 75,
+    "summary": "新闻摘要质量高且逻辑自洽，但播客口播稿存在严重事实性错误（将未发布的模型版本作为既定事实讨论）及逻辑矛盾，导致整体交付不合格。",
+    "issues": [
+      "播客稿中 S1 和 S2 将 'Kimi K3' 和 'GLM-5.3' 作为已发布的成熟模型进行确定性讨论，但新闻内容显示这些多为实验性结果或未来预测（如 '逼近 Opus 5'），且 'Opus 5'、'GPT-5.6' 等版本在 2026 年 8 月的语境下属于高度推测或虚构的未来版本，缺乏事实依据，构成严重幻觉。",
+      "播客稿中 S2 称 'Kimi K3 配合多智能体框架...仅比 Opus 5 慢 10 步'，将新闻中的 '实验显示' 和 '逼近' 表述为既定事实，忽略了新闻中 '实验' 和 '逼近' 的限定条件，存在事实夸大。",
+      "播客稿中 S1 提到 'Z.ai CEO 提出的后训练缩放定律'，但新闻中 Z.ai CEO 是 Jie Tang，且新闻标题为 'Z.ai CEO 提出...'，此处虽未直接错误，但结合前文对未发布模型的讨论，整体语境显得像是在报道已发生的行业定论，而非前瞻性分析，语气过于绝对。",
+      "播客稿中 S2 提到 'Apple 提出了 LINK 方法...无需平行语料'，新闻中确实提到 '无需额外模型训练或平行语料'，但 S2 将其表述为 '用双语词汇表替换'，虽然逻辑通顺，但结合前文对未发布模型的讨论，整体播客稿在事实准确性上存在风险。",
+      "播客稿中 S1 和 S2 的对话逻辑虽然流畅，但缺乏对新闻中 '实验'、'逼近'、'未发布' 等关键限定词的体现，导致听众可能误以为这些技术突破已经全面落地，存在误导风险。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
