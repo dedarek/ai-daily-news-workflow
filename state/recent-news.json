@@ -2004,6 +2004,348 @@
           "url": "https://arxiv.org/abs/2608.17659"
         }
       ]
+    },
+    "2026-08-21": {
+      "candidates": [
+        {
+          "date": "2026-08-21",
+          "title": "闭源RSI的严父：18个Agent自主科研，Kimi K3靠Harness逼近Opus 5",
+          "summary": "该新闻指出 Kimi K3 通过包含 18 个智能体的自主科研 Harness，能力逼近闭源 Opus 5，经典 RSI（递归自我改进）剧本开始动摇。对从业者而言，这显示大规模多智能体科研流程正在成为缩小与闭源前沿模型差距的有效路线。",
+          "url": "https://www.qbitai.com/2026/08/476199.html"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "第1705期 - 2026-08-21 08:01",
+          "summary": "本期重点关注[GPT-Image-2透明背景]、[OpenAI协作功能]等产品更新，以及浏览器代理、代码Agent的[评测与实用技巧]。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-21_0801"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "[AINews] Death of Params: Z.ai CEO Jie Tang on GLM 5.3 and the new Post-training Scaling Law",
+          "summary": "Z.ai 首席执行官 Jie Tang 讨论 GLM 5.3 和新的后训练缩放定律，提出参数规模作为核心扩展轴正在让位于后训练。这对关注大模型训练策略和算力配置的团队有重要信号意义。",
+          "url": "https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "第1704期 - 2026-08-21 04:01",
+          "summary": "本期重点聚焦[智能体开发工具]与[模型部署优化]：OpenAI、LangChain、Devin持续完善协作和发布流程，Muse Spark 1.2则在长时程Agent评测中取得明显进步。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-21_0401"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "NVIDIA Megatron Core 0.19.0",
+          "summary": "NVIDIA Megatron Core 0.19.0 发布，新增 MoE Quantile Balancing 路由器，利用分位数估计的专家路由偏置实现无辅助损失的负载均衡；同时加入共享专家融合 MLP、打包序列 MoE 分发以及训练和推理路由 trace 分析。这些特性对 MoE 模型的大规模训练和分布式推理优化很有价值。",
+          "url": "https://github.com/NVIDIA/Megatron-LM/releases/tag/core_v0.19.0"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "第1703期 - 2026-08-20 12:01",
+          "summary": "本期重点关注[Agent真实评测]与[具身智能]进展：DeepSeek-V4-Pro在Agent Arena表现和成本均有突破，机器人模型正从单点能力走向长程任务执行。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-20_1201"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Frontier Radar #4: China has caught up, so what's left of the Western AI lead?",
+          "summary": "The Decoder 第四期 Frontier Radar 分析中国模型 Kimi K3 和 GLM-5.3 已接近美国最佳模型水平，西方实验室将部分原因归于蒸馏，且文中认为有实际证据支撑。其核心结论是模型领先无法防御，并对哪些能力仍可构成壁垒进行讨论。",
+          "url": "https://the-decoder.com/frontier-radar-4-china-has-caught-up-so-whats-left-of-the-western-ai-lead/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "第1702期 - 2026-08-20 04:01",
+          "summary": "本期重点关注[Agent基础设施]与[模型成本竞争]：Cursor、Agent Arena和NVIDIA持续推进代理长期执行与实测评估，语音模型和数据API也有新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-20_0401"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "KI-Pioneer Sutton calls synthetic data a \"big mistake\" in the face of an infinitely complex world",
+          "summary": "图灵奖得主 Richard Sutton 认为用合成数据扩展大模型是「大错误」，因为世界无限复杂，任何对世界的模拟都过于微小，人类专业知识还会成为真正扩展的瓶颈。他主张智能体应当持续从自身经验中学习，而不是依赖固定的冻结模型。",
+          "url": "https://the-decoder.com/ki-pioneer-sutton-calls-synthetic-data-a-big-mistake-in-the-face-of-an-infinitely-complex-world/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "b10514",
+          "summary": "llama.cpp 更新 b10514，新增对 GraniteSWAForCausalLM 和 GraniteMoeSWAForCausalLM 模型的支持，并加入 rope_pattern 数组的转换基础设施。这对希望在本地或边缘端部署 IBM Granite SWA 系列模型的开发者很有用。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10514"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Scaling Laws for Mixture Pretraining Under Data Constraints",
+          "summary": "Apple 机器学习团队发布数据受限条件下混合预训练的缩放定律研究，分析稀缺目标数据与丰富通用数据混合时的权衡：目标数据比例过低会导致领域欠拟合，过高则重复样本过多、收益递减。这对低资源语言和垂直领域预训练具有直接指导意义。",
+          "url": "https://machinelearning.apple.com/research/scaling-laws-mixture-pretraining"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "OpenAI 因安全问题突然停训GPT-6！网友：当你造出一个神，就不可能再给它拴上绳子",
+          "summary": "该报道称 OpenAI 因安全问题突然停止训练 GPT-6，并引发关于强模型可控性的广泛讨论。不过信息主要来自标题和网友评论，从业者应谨慎看待未经官方证实的说法。",
+          "url": "https://www.infoq.cn/article/BLfF9zUGrzpqJ5QbSBJD?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
+          "summary": "NVIDIA 发布关于对 Cosmos 3 Edge 进行后训练并用于端侧机器人控制的方案，强调机器人策略需要适配传感器、环境和任务，同时运行在车载计算硬件上。这对具身智能边缘部署和世界模型后训练有实用参考价值。",
+          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "将Pod作为worker而非智能体：在Kubernetes上重新思考AI智能体的部署单元",
+          "summary": "InfoQ 中文文章讨论在 Kubernetes 上部署 AI 智能体时应将 Pod 视为 worker 而非智能体本身，重新思考部署单元的抽象方式。这会影响多智能体系统的编排、资源调度和故障恢复设计。",
+          "url": "https://www.infoq.cn/article/u2O9k3QiZkeIbqJ7GsPw?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "viable/strict/1787236083: Fix int64-indexing bugs in Triton grouped_mm for large inputs (#192649)",
+          "summary": "该 PyTorch PR 修复了 Triton grouped_mm kernel 在大张量下因内部计数器位宽不足导致溢出的 int64 索引 bug，并增加对超大输入跳过不支持硬件模式的保护，同时补充单元测试。这对大规模矩阵分组乘法的训练和推理稳定性有改善。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787236083"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "pre-split-full: Merge main into studio-mmproj-fit",
+          "summary": "Unsloth 仓库将 main 合并到 studio-mmproj-fit 分支，解决了三个小冲突，包括 llama_cpp.py 中两组独立新增、mmproj 回退测试以及 image-input-support.ts 的导入。其中缺失 .ts 后缀是此前前端测试失败的原因，上游已修复。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/pre-split-full"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "viable/strict/1787231279: [MPS] fail loudly on large reductions (#194082)",
+          "summary": "该 PyTorch PR 修复了 MPS 后端在 2.14 版本中大型张量 reduction 从原先部分报错、部分静默错误变为全部静默失败的问题，改为显式 loud 报错。这对 Mac GPU 上的训练和推理用户有稳定性意义。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787231279"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Anthropic's most capable model, codenamed \"Model 2,\" is for internal use only",
+          "summary": "The Decoder 报道 Anthropic 内部使用一个未发布的模型，代号「Model 2」，其能力超过任何公开可用的 Claude 版本。这说明前沿实验室最先进的模型能力可能长期保留在内部，不对外公开，对产业竞争格局有参考意义。",
+          "url": "https://the-decoder.com/anthropic-uses-an-unpublished-ai-model-called-model-2-internally/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "保存历史不等于形成记忆：KDC 的长期运行主张",
+          "summary": "文章讨论长期运行智能体或知识系统中，仅保存历史交互记录并不等于形成有效记忆。KDC 主张需要构建可提取、可索引、可应用的记忆层，才能支撑长程任务中的上下文利用与决策。",
+          "url": "https://www.infoq.cn/article/EF97eR5oivR50UqIINsP?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "v0.28.0rc1",
+          "summary": "vLLM 发布 v0.28.0rc1 候选版本，包含安全修复，对加载 OpenVINO 2 处理器相关逻辑增加远程信任解析保护。升级可降低推理服务中远程代码执行风险。",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0rc1"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Auditing Preference Biases and Fine-Tuning Language Models with Direct Preference Optimization on Anthropic HH-RLHF Using TRL and LoRA",
+          "summary": "这篇教程给出用 DPO 在 Anthropic HH-RLHF 数据集上微调语言模型的端到端流程：先审计数据中的结构与长度偏好偏差，再用 TRL 和 LoRA 构建训练管线，最后评估模型是否真正学到偏好而非依赖词法捷径。",
+          "url": "https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "viable/strict/1787221610",
+          "summary": "PyTorch 移除了阻止部分 vmap 分解注册的条件，使更多算子能够注册 vmap 分解规则。这扩大了 functorch 的函数式变换覆盖范围，减少自定义算子的兼容障碍。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787221610"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "OpenAI builds safety system that catches misuse without storing customer data",
+          "summary": "OpenAI 计划向企业客户提供最先进模型，同时上线不存储客户数据的安全系统，仍能检测滥用行为。这对金融、医疗等敏感行业采用前沿模型有吸引力，缓解数据隐私与安全合规矛盾。",
+          "url": "https://the-decoder.com/openai-builds-safety-system-that-catches-misuse-without-storing-customer-data/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "viable/strict/1787218092",
+          "summary": "PyTorch FX 对符号二元算术的结果表达式引入缓存，避免重复构造相同符号表达式。这降低了动态形状或导出场景下的编译开销，提升符号推导效率。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787218092"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "b10509",
+          "summary": "llama.cpp 新增 ggml_rope_set_offset 算子，并在 Metal、CUDA、Vulkan 等后端实现支持，同时补充测试与参数传递。这为动态调整 RoPE 位置偏移提供跨后端能力，便于长上下文或序列拼接场景。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10509"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "b10524",
+          "summary": "llama.cpp 在 OpenCL 后端对 MoE 专家散播操作做了确定性修复，避免并行执行导致结果不确定。对需要可复现推理或调试 MoE 模型的用户很重要。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10524"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "b10507",
+          "summary": "llama.cpp 多模态模块新增 mtmd_bitmap_set_mergeable 接口，允许位图对象在合并时标记为可合并。这提升了多模态处理中内存或元数据管理的灵活性。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10507"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "b10506",
+          "summary": "llama.cpp 在 Metal 后端使用 packed types 优化 q8_0 量化的反量化操作。这可以提升 Apple Silicon 上 q8_0 模型推理性能，减少访存或指令开销。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10506"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "b10505",
+          "summary": "llama.cpp 的 server 新增 dedup-cache-models 预设选项，用于在缓存中去除重复模型加载，优化多模型服务时的内存占用和启动效率。有利于部署多个模型的运维场景。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10505"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "墨奇亮相WRC：一台机器人长程任务实战背后的“具身大脑”革命",
+          "summary": "墨奇智能在 WRC 上首次国内系统亮相，公开展示新发布的具身智能模型架构 MoRA，并在真实机器人上完成长程任务实战。这标志其具身大脑技术从模型走向整机部署。",
+          "url": "https://www.qbitai.com/2026/08/476078.html"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "华尔街实测8款全球主流Agent：千问办公综合排名第一",
+          "summary": "华尔街对 8 款主流 Agent 进行实测，阿里千问在办公场景综合排名第一，同时指出成本正成为 Agent 商业化的重要考量因素。这表明国产模型在办公智能体赛道具竞争力，也提示关注推理成本与商业闭环。",
+          "url": "https://www.qbitai.com/2026/08/476070.html"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Multilingual Knowledge Transfer under Data Constraints via Lexical Interventions",
+          "summary": "Apple 提出一种在目标语言数据受限时通过词汇干预增强多语言知识迁移的方法，帮助低资源语言从高资源语言获取科学推理、常识和世界知识。相比需要大规模数据的方法，该思路能缓解数据约束。",
+          "url": "https://machinelearning.apple.com/research/multilingual-knowledge-transfer-lexical-interventions"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Building Federated Multimodal AI Workflows with NVIDIA FLARE",
+          "summary": "NVIDIA 开发者博客介绍使用 NVIDIA FLARE 构建联邦多模态 AI 工作流，使视觉语言模型能在数据不出域的情况下完成训练或推理。这解决了医疗、金融等场景的数据隐私与合规问题。",
+          "url": "https://developer.nvidia.com/blog/building-federated-multimodal-ai-workflows-with-nvidia-flare/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Meet the startup helping Wall Street put a price on AI compute",
+          "summary": "创业公司 Silicon Data 试图为 AI 算力定价，并让华尔街机构能对冲算力价格波动风险。随着数据中心和 GPU 支出成为 AI 产品最大成本，这为算力金融化提供了新工具。",
+          "url": "https://techcrunch.com/video/meet-the-startup-helping-wall-street-put-a-price-on-ai-compute/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Evaluating AI Agent Skill Performance with NVIDIA SkillEvaluator",
+          "summary": "NVIDIA 推出 SkillEvaluator，用于评估 AI Agent 的技能执行效果，特别是上下文质量对任务效率的影响。它帮助开发者量化 Agent 在步骤效率、信息检索等方面的表现。",
+          "url": "https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "viable/strict/1787248611: fix-193938-align-randn bug (#194118)",
+          "summary": "PyTorch 修复了 CUDA 上编译后的 torch.randn 和 torch.randn_like 在启用 align_random_eager 时被错误降级为均匀随机的问题，现在只对 rand 模式使用 eager 对齐路径，保证编译模型与 eager 行为一致。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787248611"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "viable/strict/1787243284",
+          "summary": "PyTorch 将 CPU 的 ideep 后端回退到 torch 2.13 版本，以解决性能回退问题。这说明新版 ideep 在部分场景引入性能损失，维护者选择保守回退。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787243284"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "b10516",
+          "summary": "llama.cpp 在 Vulkan 后端命令池清理函数中增加空指针检查，防止空队列指针导致崩溃。这是稳定性修复，尤其保护资源释放边界条件。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10516"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Introducing AI Futures",
+          "summary": "OpenAI 推出新博客「AI Futures」，专注探讨变革性 AI 对权力、治理、经济和个体自由的影响。这表明 OpenAI 将更公开参与 AI 社会影响与政策讨论。",
+          "url": "https://openai.com/index/introducing-ai-futures"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
+          "summary": "Simon Willison 使用 Claude 对 smolmachines/smolvm 进行测试，评估其作为不可信 Python 和 JavaScript 代码的安全沙箱能力，重点考察 CPU/内存限制、禁止网络访问和文件系统白名单。",
+          "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Domain and publish date filters for Web Search on AgentCore",
+          "summary": "Amazon Bedrock AgentCore 的 Web Search 新增域名和发布日期过滤，开发者可在每次调用时控制允许的网站来源和内容时效，并由服务端强制生效。该功能同时扩展到欧洲（爱尔兰）和亚太（东京）区域。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/domain-and-publish-date-filters-for-web-search-on-agentcore/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "OpenAI seeks to one-up Anthropic with new customer privacy protections",
+          "summary": "OpenAI 与 Anthropic 正在竞争谁能为企业客户提供更好的数据隐私保护，OpenAI 试图通过新隐私功能超越对手。这反映大模型厂商将企业数据合规作为差异化卖点，影响企业选型。",
+          "url": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Asynchronous patterns for calling Amazon Bedrock AgentCore agents in serverless pipelines",
+          "summary": "AWS 介绍在 Step Functions 流水线中异步调用 Bedrock AgentCore Agent 的三种无服务器模式：任务令牌回调、直接服务集成和持久函数，可在 Agent 处理请求期间消除空闲计算成本。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/asynchronous-patterns-for-calling-amazon-bedrock-agentcore-agents-in-serverless-pipelines/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "How Fanatics Betting and Gaming built a multi-agent customer support system",
+          "summary": "Fanatics Betting and Gaming 在 AWS 上构建多智能体客服系统，应对体育博彩中州级法规差异、实时负责任博彩检查和重大赛事流量高峰。文章阐述架构与 AWS 服务组合，为多智能体客服提供模式借鉴。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/how-fanatics-betting-and-gaming-built-a-multi-agent-customer-support-system/"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-08-21",
+          "title": "Kimi K3借多智能体Harness逼近Opus 5",
+          "summary": "开源AI基础设施公司Prime Intellect通过多智能体Harness系统，让18个前沿模型参与nanoGPT优化器速通实验。其中开源权重的Kimi K3在搭配该框架后，以2930步的成绩超越GPT-5.6 Sol，仅比闭源旗舰Opus 5的2920步多10步。实验显示，模型间的差距不再取决于是否拥有全新算法，而在于试错吞吐量与对噪声信号的捕捉能力。这一结果动摇了“最强闭源模型通过递归自我改进实现赢家通吃”的传统剧本，证明高效的基础设施能让开源模型以低成本快速追赶。",
+          "url": "https://www.qbitai.com/2026/08/476199.html"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "OpenAI推隐私安全新方案对抗Anthropic",
+          "summary": "OpenAI推出名为Private Safety Processing的新服务，旨在通过不保留用户数据的方式监控跨会话的滥用行为，以此在隐私保护上超越竞争对手Anthropic。该方案利用代理系统分析多轮对话输入输出，仅在检测到恶意活动时发送窄信号，避免了Anthropic因保留30天用户数据而引发的企业客户担忧。此举标志着大模型厂商将企业数据合规与隐私安全作为核心差异化卖点，直接影响了企业的选型决策。OpenAI试图通过这种“零数据保留”下的长视野安全监控，解决跨会话攻击检测难题，同时维护客户信任。",
+          "url": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "中国模型逼近西方前沿，模型领先优势难守",
+          "summary": "The Decoder最新分析指出，Kimi K3和GLM-5.3等中国模型在多项基准测试中已接近美国最佳模型水平，西方实验室所谓的领先优势正在迅速消退。尽管有观点指责中国模型通过蒸馏技术获取优势，但实际证据显示其在长程任务、代码生成及工具协调等复杂场景下表现稳健。模型性能的快速收敛使得单纯依靠模型能力构建商业壁垒变得困难，投资者开始担忧开源模型对闭源商业模式的冲击。行业护城河正从模型本身转向围绕模型迭代的整体系统能力，包括数据飞轮与工程化效率。",
+          "url": "https://the-decoder.com/frontier-radar-4-china-has-caught-up-so-whats-left-of-the-western-ai-lead/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Z.ai CEO提出后训练缩放定律取代参数规模",
+          "summary": "Z.ai首席执行官Jie Tang提出参数规模不再是衡量模型能力的唯一核心，后训练数据量与有效深度才是决定模型推理能力的关键。GLM-5.3的显著进步完全源于在长周期真实工作流环境中的强化学习，而非单纯增加参数量。为了规模化这一过程，团队构建了能合成任务环境与验证器的自动化管道，使模型能独立承担从诊断瓶颈到优化执行的全流程工作。Jie Tang强调，高级技能如寻找软件漏洞需要长因果链推理，这依赖于环境构建能力而非单纯的参数堆叠，标志着大模型训练策略进入后训练缩放新阶段。",
+          "url": "https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "华尔街实测8款Agent：千问办公综合第一",
+          "summary": "杰富瑞分析师对八款全球主流AI Agent进行了真实办公任务实测，阿里千问在综合得分上排名第一，超越了Claude Cowork和Codex等美国产品。测试涵盖年报摘要、数据检索、浏览器操作、PPT制作及海报生成五项任务，千问是唯一在所有维度均获90分以上的产品。报告指出，千问的“隐含Harness分”位居首位，显示其在工程机制与模型协同上的优势。此外，千问底层模型API价格较低，结合多轮推理与长链路任务执行，展现出显著的性能与成本优势，正推动企业级Agent竞争转向工作流与生态协同。",
+          "url": "https://www.qbitai.com/2026/08/476070.html"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Anthropic内部代号Model 2模型未对外发布",
+          "summary": "根据Anthropic 2026年8月发布的风险报告，公司内部正在使用一个代号为“Model 2”的未发布模型，其整体能力略强于公开版Claude Mythos 5。该模型被归类为Mythos级别，在内部能力指数AECI上比Mythos 5高出约1.5分，但未出现类似Opus 4.6到Mythos那样的巨大飞跃。目前Model 2主要用于代码编写、数据生成及研发工程，部分通过持续运行的Agent执行任务。尽管经过内部审查，但其测试深度不及Mythos 5，公司评估其对齐风险为“低”，且暂无对外发布计划。",
+          "url": "https://the-decoder.com/anthropic-uses-an-unpublished-ai-model-called-model-2-internally/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Apple发布数据受限下混合预训练缩放定律",
+          "summary": "Apple机器学习团队研究了在数据受限条件下混合预训练的缩放规律，分析了稀缺目标数据与丰富通用数据混合时的权衡关系。研究发现，目标数据比例过低会导致领域欠拟合，过高则因重复样本过多而收益递减。通过超过2000次训练实验，团队提出目标数据可重复使用15至20次，具体次数取决于数据规模、计算预算和模型大小。基于此，他们引入了一种考虑重复价值递减和通用数据正则化作用的“重复感知混合缩放定律”，为低资源语言和垂直领域预训练提供了可操作的数据配置方案。",
+          "url": "https://machinelearning.apple.com/research/scaling-laws-mixture-pretraining"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Apple提出词汇干预提升多语言知识迁移",
+          "summary": "Apple提出一种名为LINK的数据级干预方法，通过在预训练阶段对高资源语言数据中的词汇进行双语替换，增强低资源语言的知识迁移能力。该方法无需额外模型训练或平行语料，仅需双语词汇表即可实现，适用于科学推理、常识推断和世界知识等任务。在八种语言和五种模型规模的评估中，LINK显著提升了目标语言任务表现，最高实现训练速度两倍提升。该研究为缺乏大规模数据的语言提供了低成本、高效率的知识迁移路径，缓解了多语言模型训练中的资源不均衡问题。",
+          "url": "https://machinelearning.apple.com/research/multilingual-knowledge-transfer-lexical-interventions"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "NVIDIA Megatron Core 0.19.0 发布 MoE 优化新特性",
+          "summary": "NVIDIA 正式推出 Megatron Core 0.19.0 版本，核心更新聚焦于混合专家模型（MoE）的训练与推理效率提升。该版本引入了基于分位数估计的无辅助损失负载均衡路由器，有效解决了专家路由偏置问题。同时新增共享专家融合 MLP 及打包序列分发功能，显著优化了大规模分布式训练中的计算与通信开销。此外，框架还集成了训练与推理的路由追踪分析工具，并支持 DeepSeek v4 迁移至新一代 HybridModel 架构，为复杂模型部署提供了更灵活的底层支持。",
+          "url": "https://github.com/NVIDIA/Megatron-LM/releases/tag/core_v0.19.0"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "llama.cpp 新增对 IBM Granite SWA 系列模型支持",
+          "summary": "llama.cpp 发布 b10514 版本，正式增加了对 IBM GraniteSWAForCausalLM 及 GraniteMoeSWAForCausalLM 模型的本地化支持。此次更新不仅包含模型转换基础设施，还引入了针对 rope_pattern 数组的转换逻辑，解决了滑动窗口注意力机制在量化推理中的适配难题。开发者现在可以直接在本地或边缘设备上加载并运行 IBM 的 Granite 系列模型，无需依赖云端算力。该版本还修复了非 RoPE 层的支持逻辑，并完善了 MoE 参数的可选加载机制，进一步提升了推理框架的兼容性与稳定性。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10514"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "NVIDIA 演示 Cosmos 3 Edge 端侧机器人控制方案",
+          "summary": "NVIDIA 发布了基于 Cosmos 3 Edge 模型的端侧机器人控制后训练方案，旨在解决世界模型在车载硬件上的部署难题。该 40 亿参数模型经过微调后，可直接在 NVIDIA Jetson Thor 平台上运行，无需依赖数据中心 GPU。实测数据显示，在 Jetson AGX Thor T5000 上，该策略能以 15Hz 频率生成动作块，单次推理耗时约 1.53 秒，实现了闭环控制下的连续运动。该方案利用预训练物理交互知识，仅需少量遥操作数据即可训练出具备实时响应能力的机器人策略，在 RoboLab 任务中达到了 22.9% 的成功率。",
+          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Amazon Bedrock AgentCore 增强 Web 搜索过滤能力",
+          "summary": "Amazon Bedrock AgentCore 的 Web Search 功能新增域名与发布日期过滤选项，允许开发者在每次调用时精确控制信息源与时效性。该功能由服务端强制生效，确保智能体仅能访问指定网站或特定时间范围内的内容，有效规避了过时或不可信信息的干扰。此次更新同步扩展至欧洲（爱尔兰）和亚太（东京）区域，提升了全球开发者的使用便利性。通过限制搜索范围，开发者能够更严格地约束智能体的知识边界，满足企业级应用对数据合规性与准确性的严苛要求。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/domain-and-publish-date-filters-for-web-search-on-agentcore/"
+        }
+      ]
     }
   }
 }

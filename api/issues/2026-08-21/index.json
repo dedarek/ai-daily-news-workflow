@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-08-21",
+  "content_date": "2026-08-21",
+  "published_at": "2026-08-21T02:25:46.898012+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "deepseek-ai/deepseek-v4-pro",
+      "moonshotai/kimi-k2.6",
+      "z-ai/glm-5.2"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 10,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 44
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 60,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "nvidia:z-ai/glm-5.2",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话共18轮，虽在建议范围内（18-22），但内容密度过高，导致部分关键新闻（如Apple的LINK方法、Amazon的过滤功能）仅被一笔带过，缺乏深入探讨或追问，显得像快速罗列而非真实讨论。",
+              "缺乏自然承接与分歧：对话多为S1提出观点、S2简单附和或补充，缺乏真正的追问、质疑或不同视角的碰撞，整体节奏过于平滑，像“轮流复述摘要”而非“真实讨论”。",
+              "部分发言过长：S1第1轮（96字）和S2第14轮（98字）接近上限，虽未超标，但结合整体节奏，建议拆分或精简以提升口播流畅度。",
+              "结构问题：未出现固定问候，但结尾判断（S2第18轮）略显突兀，缺乏对前文讨论的自然收束。"
+            ],
+            "repair_instruction": "1. 将S1第1轮和S2第14轮拆分为两轮，增加中间追问或补充细节，使每轮控制在35-95字内；2. 在S2第6轮后增加S1对OpenAI策略的质疑（如“零数据保留是否真能解决跨会话攻击？”），制造分歧点；3. 将Apple的LINK方法（S2第12轮）与Amazon的过滤功能（S2第14轮）合并讨论，增加“数据控制 vs 知识迁移”的对比视角；4. 结尾S2第18轮前增加S1对“工程化能力”的具体案例追问，使结论更自然。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "轮次为20轮，符合18-22轮的建议范围，但结尾略显仓促，可考虑增加一轮对NVIDIA Cosmos 3端侧机器人方案的简要提及，以平衡‘Agent & 工具’板块的覆盖度。",
+              "S1在第15轮引入Amazon新闻时转折稍显生硬，建议增加一句承接语（如‘除了数据迁移，数据边界控制也很重要’）以增强逻辑流畅度。",
+              "S2在第16轮将Apple与Amazon对比时，‘一个开源一个封闭’的表述不够严谨（Apple和Amazon均为商业公司，非开源/封闭模型对比），建议改为‘一个侧重知识迁移效率，一个侧重访问边界控制’。"
+            ],
+            "repair_instruction": "1. 在第15轮S1发言前，S2或S1增加一句过渡语，如‘除了提升数据迁移效率，如何控制数据访问边界同样关键’，使Amazon新闻引入更自然。2. 修改第16轮S2中‘一个开源一个封闭’的表述，改为‘一个侧重知识迁移效率，一个侧重访问边界控制’，确保事实准确。3. 在结尾前（第19轮后）增加一轮简短讨论，提及NVIDIA Cosmos 3端侧机器人方案（4B模型在Jetson Thor上运行），以覆盖‘Agent & 工具’板块，使6条核心新闻（Kimi、OpenAI、Z.ai、Apple、Amazon、NVIDIA）覆盖更均衡，同时保持总轮次在21轮左右。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 2,
+        "best_attempt": 2,
+        "final_pass": true,
+        "final_issues": [
+          "轮次为20轮，符合18-22轮的建议范围，但结尾略显仓促，可考虑增加一轮对NVIDIA Cosmos 3端侧机器人方案的简要提及，以平衡‘Agent & 工具’板块的覆盖度。",
+          "S1在第15轮引入Amazon新闻时转折稍显生硬，建议增加一句承接语（如‘除了数据迁移，数据边界控制也很重要’）以增强逻辑流畅度。",
+          "S2在第16轮将Apple与Amazon对比时，‘一个开源一个封闭’的表述不够严谨（Apple和Amazon均为商业公司，非开源/封闭模型对比），建议改为‘一个侧重知识迁移效率，一个侧重访问边界控制’。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-21/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-21/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-21/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-21/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-21.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-21/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-21/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-21.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-21/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-21.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-21.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-21.mp4"
+}
