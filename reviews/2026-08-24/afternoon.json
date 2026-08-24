@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-08-24",
+  "reviewed_at": "2026-08-24T17:08:59.231375+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 96,
+    "summary": "日报内容逻辑严密、数据详实，播客对话自然流畅且观点犀利，整体质量极高，仅有个别日期表述可微调。",
+    "issues": [
+      "播客对话中S1提到'从去年2月到现在'，结合新闻背景（2025年2月6日起），建议明确为'从去年2月'或'从2025年2月'以避免听众对时间跨度的歧义，虽不影响事实但可更精准。",
+      "新闻标题'τ_0-VLA'中的希腊字母在部分纯文本环境下可能显示异常，建议确认发布平台的渲染兼容性。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
