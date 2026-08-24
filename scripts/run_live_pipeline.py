@@ -765,42 +765,64 @@ def review_cross_day_duplicates(
         current_selection_json=json.dumps(current_payload, ensure_ascii=False),
         recent_sent_json=json.dumps(recent_payload, ensure_ascii=False),
     )
-    result, usage, model = request_deepseek_json(
-        endpoint=endpoint,
-        models=models,
-        api_key=api_key,
-        system_prompt=prompt_template_from_file(NEWS_PROMPTS_FILE, 'cross_day_dedupe_system'),
-        user_prompt=prompt,
-        task_name=f'cross_day_dedupe_review_{attempt}',
-        thinking_enabled=False,
-    )
-    raw_duplicates = result.get('duplicates')
-    if not isinstance(raw_duplicates, list):
-        raise RuntimeError('Cross-day dedupe review must return a duplicates array')
-
     current_urls = {item['url'] for item in current_payload}
     previous_urls = {item['url'] for item in recent_payload}
-    duplicates: list[dict[str, str]] = []
-    seen_current: set[str] = set()
-    for item in raw_duplicates:
-        if not isinstance(item, dict):
-            raise RuntimeError('Cross-day dedupe review returned a non-object duplicate')
-        current_url = str(item.get('current_url', '')).strip()
-        previous_url = str(item.get('previous_url', '')).strip()
-        reason = clean_text(str(item.get('reason', '')))
-        if current_url not in current_urls or previous_url not in previous_urls or not reason:
-            raise RuntimeError(
-                'Cross-day dedupe review returned an invalid URL or empty reason: '
-                f'{item!r}'
+    system_prompt = prompt_template_from_file(NEWS_PROMPTS_FILE, 'cross_day_dedupe_system')
+
+    usage: dict = {}
+    model = ''
+    for review_attempt in range(1, 3):
+        result, usage, model = request_deepseek_json(
+            endpoint=endpoint,
+            models=models,
+            api_key=api_key,
+            system_prompt=system_prompt,
+            user_prompt=prompt,
+            task_name=f'cross_day_dedupe_review_{attempt}_{review_attempt}',
+            thinking_enabled=False,
+        )
+        raw_duplicates = result.get('duplicates')
+        if not isinstance(raw_duplicates, list):
+            invalid_items: list = [raw_duplicates]
+            duplicates = []
+        else:
+            duplicates = []
+            invalid_items = []
+            seen_current: set[str] = set()
+            for item in raw_duplicates:
+                if not isinstance(item, dict):
+                    invalid_items.append(item)
+                    continue
+                current_url = str(item.get('current_url', '')).strip()
+                previous_url = str(item.get('previous_url', '')).strip()
+                reason = clean_text(str(item.get('reason', '')))
+                if current_url not in current_urls or previous_url not in previous_urls or not reason:
+                    invalid_items.append(item)
+                    continue
+                if current_url in seen_current:
+                    continue
+                seen_current.add(current_url)
+                duplicates.append({
+                    'current_url': current_url,
+                    'previous_url': previous_url,
+                    'reason': reason,
+                })
+        if not invalid_items:
+            return duplicates, usage, model
+        if review_attempt < 2:
+            print(
+                'WARN cross_day_dedupe_invalid_retry '
+                f'attempt={attempt} review_attempt={review_attempt} '
+                f'invalid={json.dumps(invalid_items, ensure_ascii=False)}',
+                flush=True,
             )
-        if current_url in seen_current:
             continue
-        seen_current.add(current_url)
-        duplicates.append({
-            'current_url': current_url,
-            'previous_url': previous_url,
-            'reason': reason,
-        })
+        print(
+            'WARN cross_day_dedupe_invalid_dropped '
+            f'attempt={attempt} kept={len(duplicates)} '
+            f'invalid={json.dumps(invalid_items, ensure_ascii=False)}',
+            flush=True,
+        )
     return duplicates, usage, model
 
 
