@@ -41,7 +41,7 @@ SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
 DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
-DEFAULT_LLM_MODELS = 'deepseek-ai/deepseek-v4-pro,moonshotai/kimi-k2.6,z-ai/glm-5.2'
+DEFAULT_LLM_MODELS = 'moonshotai/kimi-k3,deepseek-ai/deepseek-v4-flash-0731,openai/gpt-oss-120b'
 DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
 DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
 DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:8011/video-api/api'
@@ -772,15 +772,30 @@ def review_cross_day_duplicates(
     usage: dict = {}
     model = ''
     for review_attempt in range(1, 3):
-        result, usage, model = request_deepseek_json(
-            endpoint=endpoint,
-            models=models,
-            api_key=api_key,
-            system_prompt=system_prompt,
-            user_prompt=prompt,
-            task_name=f'cross_day_dedupe_review_{attempt}_{review_attempt}',
-            thinking_enabled=False,
-        )
+        try:
+            result, usage, model = request_deepseek_json(
+                endpoint=endpoint,
+                models=models,
+                api_key=api_key,
+                system_prompt=system_prompt,
+                user_prompt=prompt,
+                task_name=f'cross_day_dedupe_review_{attempt}_{review_attempt}',
+                thinking_enabled=False,
+            )
+        except Exception as exc:
+            if review_attempt < 2:
+                print(
+                    'WARN cross_day_dedupe_error_retry '
+                    f'attempt={attempt} review_attempt={review_attempt} error={exc}',
+                    flush=True,
+                )
+                continue
+            print(
+                'WARN cross_day_dedupe_skipped '
+                f'attempt={attempt} error={exc}',
+                flush=True,
+            )
+            return [], usage, model
         raw_duplicates = result.get('duplicates')
         if not isinstance(raw_duplicates, list):
             invalid_items: list = [raw_duplicates]
