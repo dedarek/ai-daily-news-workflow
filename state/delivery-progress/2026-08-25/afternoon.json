@@ -207,17 +207,17 @@
   "failed": {
     "duanxg2@lenovo.com": {
       "recipient": "duanxg2@lenovo.com",
-      "failed_at": "2026-08-25T06:14:11.080930+00:00",
+      "failed_at": "2026-08-25T07:47:29.278042+00:00",
       "error": "(550, b'Requested action aborted: flow over limit')"
     },
     "duzg2@lenovo.com": {
       "recipient": "duzg2@lenovo.com",
-      "failed_at": "2026-08-25T06:44:37.893270+00:00",
+      "failed_at": "2026-08-25T08:17:56.904266+00:00",
       "error": "(550, b'Requested action aborted: flow over limit')"
     },
     "wangcy57@lenovo.com": {
       "recipient": "wangcy57@lenovo.com",
-      "failed_at": "2026-08-25T07:15:04.546169+00:00",
+      "failed_at": "2026-08-25T08:48:21.502194+00:00",
       "error": "(550, b'Requested action aborted: flow over limit')"
     }
   }
