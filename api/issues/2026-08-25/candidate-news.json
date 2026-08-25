@@ -1,0 +1,542 @@
+[
+  {
+    "title": "Grok Voice进星链",
+    "summary": "星链客服已启用 语音客服系统，每天处理☎️一万五千通来电。它能诊断硬件问题。还能每周完成 三千单 销售。",
+    "url": "https://x.com/elonmusk/status/2091996794419060905",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules",
+    "summary": "NVIDIA 强调生成式 AI 的规模正在改变数据中心设计，分布式训练可能扩展到数十万 GPU，传统以太网在拥塞和尾延迟上已经不够用。Spectrum-X 以太网通过针对 AI 流量的调度与拥塞控制，试图让大规模 GPU 集群的网络层不再是瓶颈。对 AI Infra 团队，这意味着构建十卡到百万卡级集群时，网络架构需要和算力同样提前规划。",
+    "url": "https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1726期 - 2026-08-25 04:02",
+    "summary": "本期重点关注[智能体基础设施]与[开发者工具]进展：LangChain、AWS和ElevenLabs分别降低了智能体部署、资源发现及语音自动化的使用门槛。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ElevenLabs上终端",
+    "summary": "ElevenLabs 发布 语音终端工具，开发者可在终端⚙️管理语音工作流。它支持 JSON 与 dry-run。配置能进仓库做 diff 审查，Skills 也内置好了。",
+    "url": "https://x.com/berryxia/status/2091940966764552639",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+    "summary": "NVIDIA 宣布 Groq 3 LPX 全面投产，并围绕 Vera Rubin 平台扩展面向智能体的推理能力，强调下一代推理不是由单一芯片决定，而是 AI 工厂各层协同。对从业者来说，这表明 NVIDIA 正把推理重点转向智能体系统所需的快速 token 生成和系统级整合，而不仅是单卡算力。",
+    "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1725期 - 2026-08-25 00:02",
+    "summary": "本期重点聚焦[AI视频专业交付]、[办公产品整合]与[本地Agent部署]。同时，ToMoE架构转换和DeepSeek Harness规模化实践为模型推理与工程落地提供了新参考。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Apodex拆复杂任务",
+    "summary": "Apodex AI 发布 专业智能体模型，主打科研、金融和深度搜索。它能并行调度🧠多个子 Agent。执行中还能改需求，框架和权重已开源。",
+    "url": "https://x.com/Gorden_Sun/status/2091929476724851130",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+    "summary": "NVIDIA 援引 OpenRouter 数据称，智能体负载消耗的 token 量是普通聊天请求的 15 倍，因为智能体需要反复查询、调用子代理和综合信息。Vera Rubin NVL72 宣称在单位功耗下可完成多达 30 倍的工作量，直接回应了智能体时代推理成本激增的问题。对关注 token 成本与吞吐的团队，这是新一代推理硬件在每瓦产出上的重要指标。",
+    "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1724期 - 2026-08-24 16:01",
+    "summary": "本期重点关注[Wan3.0正式上线]与[小米AI Cube原型机]等产品和硬件进展，同时[Hugging Face或被收购]传闻引发开源生态关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Visual Studio接自选模型",
+    "summary": "微软把 自带模型能力 放进 18.10 预览版，默认对三类 SKU 开放。开发者可在 Agent 模式🤖接入 Foundry、OpenAI、Anthropic 和 Ollama。企业治理会补 ADMX 策略。",
+    "url": "https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-ai-for-every-developer-in-visual-studio-with-bring-your-own-model/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA Vera Rubin and Blackwell Set a New Standard for Agentic AI Performance per Watt",
+    "summary": "NVIDIA 将 Vera Rubin 与 Blackwell 定位为智能体 AI 每瓦性能的新基准，指出 AI 智能体已把推理从单轮交互扩展为多步骤推理、工具调用和子代理协调。从从业者视角看，这意味着评估硬件时不能只看峰值算力，还要看长时间多步骤工作流下的能耗效率与持续可用性。",
+    "url": "https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1723期 - 2026-08-24 12:01",
+    "summary": "本期重点集中在[推理成本下降]、[本地模型工具链]与[AI搜索机制变化]。社区还展示了低成本训练世界模型和通过虚拟化优化多GPU推理的新实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Wan3.0做长视频",
+    "summary": "阿里视频模型 三十秒生成 支持文本、图片和文档输入。1080p 三十秒💸收费六美元。报道还提到阿里季度利润同比降 75%。",
+    "url": "https://the-decoder.com/alibabas-wan3-0-generates-ai-videos-up-to-30-seconds-long-from-text-images-and-documents/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.5.18",
+    "summary": "SGLang v0.5.18 合并了来自 212 位贡献者的 710 个 PR，模型覆盖明显向多模态与扩散方向扩展，新增 Muse Glimmer、Intern-S2-Mobius、SANA-Video、LingBot-Video-MoE、LTX-2.5、Cosmos3 Edge 与 Distilled、LongCat-Image 等，并补充 Qwen3.8、Ling-3.0、Nemotron 3.5 Lightning 的示例。对推理框架用户来说，一次升级就能在多模态生成和扩散模型上获得更完整的支持。",
+    "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.18",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1722期 - 2026-08-24 08:01",
+    "summary": "本期重点关注[Codex语音编程]的无障碍工作流，以及[本地模型推理]在MTP、量化和遗留系统维护中的新进展。与此同时，Codex正快速扩展至[法律、销售、招聘等非科技行业]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "XKV让模型传缓存",
+    "summary": "新论文提出 异构缓存通信，让不同 LLM 直接交换 KV 缓存。两端模型保持冻结🛰️，只训练翻译器。45 组测试里端到端快过文本 6.8倍。",
+    "url": "https://arxiv.org/abs/2608.20617",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里视频大模型Wan3.0正式上线，行业评价“稳定、真实、有质感”",
+    "summary": "阿里巴巴视频生成大模型 Wan3.0 于 8 月 24 日正式上线，行业反馈集中在稳定、真实和有质感这几个维度。对视频生成赛道，这意味着国产模型在一致性和画质上开始进入可用性竞争，也给创作者和企业提供了新的多模态生成选择。",
+    "url": "https://www.qbitai.com/2026/08/478427.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1721期 - 2026-08-24 04:02",
+    "summary": "本期重点是[Marin 535B-A23B]启动全开放训练，以及[Qwen3.8-27B]在复杂代码迁移与代理任务中获得社区积极反馈。低成本分布式推理和本地工具复建也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ACES评技能增益",
+    "summary": "NVIDIA 相关论文给出 技能评估框架，用有无目标技能的配对实验打分。947 个案例📊里，72.8% 出现正向增益。平均 Skill Lift 为 0.2134。",
+    "url": "https://arxiv.org/abs/2608.20614",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Beyond Visual CoT: Internalized Visual Thinking for Proactive Video Reasoning",
+    "summary": "Apple 提出 Internalized Visual Thinking，核心是让模型在训练阶段学习视觉化思考，但在推理时直接输出结果，避免视觉思维链生成中间图像带来的推理开销。对主动视频推理这类对实时性要求高的场景，这种内化思路能显著降低延迟和计算成本。",
+    "url": "https://machinelearning.apple.com/research/internalized-visual-thinking",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1720期 - 2026-08-24 00:02",
+    "summary": "本期重点集中在[多模态模型实测]、[本地推理优化]与[AI开发工作流]。社区还分享了游戏音乐模型训练、VLM微调和自托管模型管理等实用项目。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MAESTRO跑材料筛选",
+    "summary": "研究团队提出 材料发现代理，贯穿 MOF 文献读取、晶体匹配和数据库构建。它按成本逐级🏭筛选候选材料。湿烟气分离候选来自无关研究，说明检索面更宽。",
+    "url": "https://arxiv.org/abs/2608.20434",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "亚马逊云科技开源 Dogwood：给 AI 智能体的工具调用立规矩",
+    "summary": "亚马逊云科技开源 Dogwood，目标是为 AI 智能体的工具调用建立统一规范，减少不同模型和框架在函数调用格式上的混乱。对智能体开发者来说，这类协议层开源意味着更容易做跨模型编排和工具生态复用。",
+    "url": "https://www.infoq.cn/article/cwj5Ikvhqu5mKH22zKsO?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CLEAR调安全强度",
+    "summary": "CLEAR 用 隐态路由方法 连续控制安全 LoRA。Llama-3-8B 上 HarmBench ASR 🔐从 32.3% 降到 0.5%。GSM8K 准确率最高还多 7.1 个百分点。",
+    "url": "https://huggingface.co/papers/2608.21278",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "A2DINOv3融合双模态",
+    "summary": "论文把 多模态检测框架 接到 DINOv3 上。RGB 与红外被当作🧩异构专家协作。四类场景测试刷新检测表现。",
+    "url": "https://arxiv.org/abs/2608.21099",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How XPUs Meet a World-Class AI Factory",
+    "summary": "NVIDIA 认为 AI 工厂的经济性由持续产出决定，核心指标包括每秒 token、每瓦 token、单 token 成本、利用率和在线时间，而不是单张加速卡参数。对自研 XPU 的超大规模企业和 AI 原生公司，这意味着必须把基础设施当作完整工厂来设计，涵盖计算、网络、供电和运维全链路。",
+    "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ClawSentry挡恶意技能",
+    "summary": "新框架提供 智能体安全网关，先审技能包再分层监控运行时。SkillInject 上 ASR 🛡️从 39.55% 降到 2.61%。干净技能 TSR 仍有 98.7%。",
+    "url": "https://arxiv.org/abs/2608.21101",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS",
+    "summary": "NVIDIA 推出 DSX MaxLPS，针对 AI 工厂的功率受限现实，把优化目标从机柜里塞多少 GPU 转向每瓦可用电力能产出多少 AI 结果。对数据中心规划者来说，这要求在供电、散热和系统密度之间做全局权衡，而不是单纯追求算力密度。",
+    "url": "https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta芯片绕开PCIe",
+    "summary": "Meta 披露 MTIA 300芯片，把 NIC 芯粒放进封装。HCCL 能把通信⚡编译成图。40 加速器推荐模型训练中，通信时间快 3.9倍。",
+    "url": "https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA BlueField-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories",
+    "summary": "NVIDIA 将 BlueField-4 定位为智能体 AI 工厂的新一代横向扩展网络基础设施的关键组件，以应对传统云网络面向可预测通用负载、而智能体负载连接多样用户与动态服务的特点。对基础设施团队，这意味着网络控制平面和数据处理单元需要更强的可编程性与隔离能力，才能支撑多租户、多步骤的智能体工作流。",
+    "url": "https://developer.nvidia.com/blog/nvidia-bluefield-4-powers-new-scale-in-network-infrastructure-for-agentic-ai-factories/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MetaRoCE改造以太网",
+    "summary": "Meta 推出 AI网络协议，面向大规模 GPU 集群。它把包乱序到达🚦当成常态。1% 丢包下仍保持约 86% 吞吐。",
+    "url": "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How NVIDIA Groq 3 LPX Unlocks Ultrafast Interactivity at Long Context on NVIDIA Vera Rubin",
+    "summary": "NVIDIA 介绍 Groq 3 LPX 是 Vera Rubin 平台上的交互式 AI 推理加速器，重点解决长上下文下的超快交互问题，核心系统是 Vera Rubin NVL72。对做长文档分析、记忆型智能体或实时对话的团队，这类低延迟长上下文推理能力直接关系到用户体验和可扩展成本。",
+    "url": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-unlocks-ultrafast-interactivity-at-long-context-on-nvidia-vera-rubin/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "任少卿做物理AI",
+    "summary": "ResNet 作者任少卿创办 具身智能公司，蔚来确认战略投资。新公司聚焦⚙️物理 AI 基础模型。注册后估值已到 独角兽 级别。",
+    "url": "https://www.qbitai.com/2026/08/478675.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+    "summary": "OpenAI 宣布 GPT-5.6 已在 Kiro 中可用，帮助开发者以更好的性价比完成软件规划、构建、审查和测试。这表明 OpenAI 在继续压低开发者使用成本，同时把模型能力嵌入软件开发生命周期，对编码智能体赛道有直接影响。",
+    "url": "https://openai.com/index/gpt-5-6-in-kiro",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI遭州级调查",
+    "summary": "阿拉巴马州启动 模型越界调查，目标是未发布网络安全模型。报道称事件涉及 Hugging Face。OpenAI 将提交技术报告，多州要求暂停内部测试。",
+    "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cerebras unveils CS-4 with double the performance on the same chip",
+    "summary": "Cerebras 发布 CS-4 AI 加速器，CEO Andrew Feldman 称其为业界最快系统，宣称在同一芯片上实现翻倍性能。对关注非 GPU 路线的团队，晶圆级芯片在内存带宽和单芯片扩展上的优势值得重新评估。",
+    "url": "https://the-decoder.com/cerebras-unveils-cs-4-with-double-the-performance-on-the-same-chip/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "General Intuition估值冲高",
+    "summary": "这家机器人 AI 公司正谈 六十亿估值 融资，Valor 和 Point72 在名单中。它训练智能体理解空间与时间🦾。资本对具身基础模型押注很重。",
+    "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10605",
+    "summary": "llama.cpp b10605 对 mamba2 实现做了算子级优化，把输入输出投影扁平化后改用 GEMM 而非 GEMV 调度，并移除冗余 reshape。这能提升 mamba2 类模型在 CPU 和边缘设备上的推理效率，尤其对小批量或单 token 解码路径更友好。对 llama.cpp 生态用户，这是一次低层但实用的性能改进。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10605",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "小鹏IRON获大额融资",
+    "summary": "小鹏物理 AI 业务拿到 人形机器融资，金额超过 9 亿美元。IRON 有 76 个自由度📈，手部各 21 个。计划 2027 年向中外客户交付。",
+    "url": "https://www.artificialintelligence-news.com/news/xpeng-iron-humanoid-robot-draws-record-physical-ai-funding/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10604",
+    "summary": "llama.cpp 合并了面向 DeepSeek V4 的系列改动，包括为 sm tensor 设置更粗粒度的 head 切分、修复 dspark、为 DSV4 添加模型保存、允许 dflash 在指定设备返回，并加入共享专家延迟 allreduce 和简化 seq_rm。这些改动强化了 DeepSeek V4 在 llama.cpp 中的分布式推理与模型管理能力，对本地部署该系列模型的开发者很有价值。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10604",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "openhuman留住本地记忆",
+    "summary": "Rust 项目 个人记忆系统 今日继续走热。它把生活数据📚留在本机。仓库已有 37.3k 星，支持代理舰队和深度研究。",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布",
+    "summary": "中诚华隆发布 HL200 推理芯片及超节点集群，宣称实现了从单芯片到万卡集群的体系化突破，目标是定义国产推理算力新范式并支撑万卡级 AI 推理算力规模化落地。这对关注国产芯片和推理基础设施建设的从业者是一个值得跟踪的新选项。",
+    "url": "https://www.qbitai.com/2026/08/478469.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "hermes-agent热度高",
+    "summary": "NousResearch 的 个人代理项目 今日新增 896 星。它主打随用户成长🔥的长期代理。总星数已达 235791。",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.33.0",
+    "summary": "Ollama v0.33.0 增强了与 Claude Desktop 的集成，用户可从菜单栏开关本地模型、在 Claude 内选择可用 Ollama 模型，并通过新的 Apps 视图管理应用集成和复制命令。同时该版本改进了缓存，修复了 agent 客户端取消长 prefill 时挂起的问题，让恢复点机制在重试时更可靠。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0-rc2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ECC服务代理编程",
+    "summary": "JavaScript 项目 编程代理框架 覆盖 Claude、Codex 与 Cursor。它补技能、记忆和安全🧭能力。仓库已有 242.6k 星。",
+    "url": "https://github.com/affaan-m/ECC",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10603",
+    "summary": "llama.cpp 为 GLM-4.5-Air 模型新增 MTP（多 token 预测）支持，这可以在本地推理中利用投机解码类机制提升生成速度。该合并让 GLM-4.5-Air 用户能在 llama.cpp 上获得更高效的推理体验。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10603",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多个 AI 智能体“同住”一台 EC2：AgentCore 推出持久计算",
+    "summary": "AgentCore 推出持久计算能力，让多个 AI 智能体可以常驻同一台 EC2 实例，避免每次任务都冷启动。这有助于降低多智能体工作负载的延迟和成本，并支持长运行、有状态任务。",
+    "url": "https://www.infoq.cn/article/2IBWc7BuB2qoGao5tlQT?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Solving Agentic AI Fleet Challenges with NVIDIA Vera CPU",
+    "summary": "NVIDIA 介绍了用 Vera CPU 解决智能体 AI 集群挑战的思路，核心观点是 AI factory 的经济性取决于整栈把电力和资本转化为已完成 agent 任务的效率。这对规划大规模 agentic AI 推理集群的企业架构师有参考意义。",
+    "url": "https://developer.nvidia.com/blog/solving-agentic-ai-fleet-challenges-with-nvidia-vera-cpu/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI is building AI agents for everything. Will everyone use them?",
+    "summary": "TechCrunch 报道 OpenAI 正在为各种场景构建 AI agents，并推动其从软件工程师走向大众用户，同时探讨这类智能体是否会被广泛采用。文章关注前沿实验室在智能体产品化与普及过程中面临的障碍。",
+    "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787598738: [sdpa] Fix bottom-right efficient attention when Q exceeds K (#193632)",
+    "summary": "PyTorch 修复了 CUDA 内存高效注意力中 bottom-right 因果对角线偏移被存为无符号值、导致 query 长度超过 key 长度时可能出错的问题。该改动是将 sdpa 与 varlen 对齐到 lower-right mask 语义的第一步，为大模型注意力掩码统一打下基础。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787598738",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10612",
+    "summary": "llama.cpp 禁用了 WebGPU 后端的 DOTS3NOTE 架构测试，原因是该测试在当前 WebGPU 条件下不适用或会导致失败。这是针对跨平台测试的兼容性维护，能减少 WebGPU 构建中的测试噪音。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10612",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10610",
+    "summary": "llama.cpp 缩短了 CUDA 和 Metal 后端中虚拟设备的命名，并在 Metal 初始化阶段构建设备描述，使日志和调试信息更简洁。该提交部分由 DeepSeek-V4-Flash 辅助完成。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10610",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Thomson Reuters bets $40M on owning its AI instead of renting from OpenAI or Anthropic",
+    "summary": "汤森路透宣布推出基于阿里 Qwen 构建的自有语言模型「Thomson」，两年成本约 4000 万美元，而不是租用 OpenAI 或 Anthropic 的模型。其基准显示，模型接入 Westlaw 等自有内容时表现最好，CTO 强调关键不是智能本身，而是清楚需要拥有哪类智能。",
+    "url": "https://the-decoder.com/thomson-reuters-bets-40m-on-owning-its-ai-instead-of-renting-from-openai-or-anthropic/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10608",
+    "summary": "llama.cpp 修复了多模态视频解码中 moov atom 位于文件末尾时无法正确读取的问题，并处理了 Windows 上 broken pipe 引发的 SIGPIPE。该改动提升了对非常规 MP4/MOV 文件的兼容性和跨平台稳定性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10608",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10606",
+    "summary": "llama.cpp 修复了 ggml_clamp 算子并同步更新 ggml-alloc，消除了底层张量钳制操作中的潜在错误和内存分配隐患。这是面向量化或自定义图优化场景的基础稳定性维护。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10606",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Netflix 开源了一个用于因果推理的智能代理工作流",
+    "summary": "Netflix 开源了一个用于因果推理的智能代理工作流，公开了将 agent 应用于因果推断场景的工程实现。这对希望把智能体引入数据科学、实验分析和决策系统的团队具有参考价值。",
+    "url": "https://www.infoq.cn/article/4h2jb2eOcBrP5AG5hLYt?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787583779",
+    "summary": "PyTorch 修复了 embedding_bag 在 per_sample_weights 场景下可能触发 CUDA 非法内存访问的问题，提升该算子在批量嵌入训练和推理中的安全性。对使用大规模稀疏特征的用户来说是重要稳定性修复。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787583779",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787578550: Revert \"[BC breaking] Remove assert_allclose (#164560)\"",
+    "summary": "PyTorch 自动回滚了移除 assert_allclose 的破坏性变更，因为该改动触发了项目的自动回滚机制，表明其兼容性影响超出预期。这提醒依赖该测试工具的开发者升级时需要关注对应 API 变化。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787578550",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cloudflare WriteGuard 为 MCP 服务器提供了精细化的安全控制",
+    "summary": "Cloudflare WriteGuard 为 MCP 服务器提供精细化的安全控制，可限制智能体通过 MCP 执行写操作的范围和权限。这对将 MCP 工具部署到生产环境、降低模型误操作风险的团队很重要。",
+    "url": "https://www.infoq.cn/article/1pa8asW4xOs6y2GYfl8T?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787569149",
+    "summary": "PyTorch 修复了 XPU 后端在卷积反向算子中内存格式检测的问题，提升 Intel GPU 等 XPU 设备上卷积反向传播的兼容性和正确性。这是针对异构硬件训练路径的针对性修复。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787569149",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

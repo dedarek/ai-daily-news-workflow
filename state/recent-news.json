@@ -1,444 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-08-17": {
-      "candidates": [
-        {
-          "date": "2026-08-17",
-          "title": "Codex开放百万上下文",
-          "summary": "GPT-5.6 Sol现可开启1M窗口。用户通过🔧科德扩容操作说明自行配置。该能力过去仅面向密钥调用。如今ChatGPT账户也已放开。官方仍建议⚖️优先采用默认长度。",
-          "url": "https://x.com/steipete/status/2089151164021649677"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "b10448",
-          "summary": "llama.cpp 新增对 Kimi-K3 文本模型的支持，覆盖 KimiLinearForCausalLM 这一较新的配置。该架构采用 Hybrid KDA（线性）加 MLA（全量）注意力，并加入跨层残差注意力、latent MoE、situ 激活、MLA 输出门和全秩 KDA 门等扩展。对想在本地产线或边缘设备运行 Kimi-K3 的开发者来说，接入成本会明显下降。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10448"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1688期 - 2026-08-17 08:01",
-          "summary": "本期聚焦[GLM 5.3安全评测]与[Qwen3.8本地部署优化]；[audio.cpp 0.6]进一步扩展本地音频模型生态。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_0801"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "MAGI-2开放模型权重",
-          "summary": "SandAI发布视频生成模型预览。三呆模型开放页面(AI资讯)提供权重下载。其MoE架构🧠拥有114B总参。每次激活6B生成十秒视频。项目源码仓库地址同步开放实现。",
-          "url": "https://huggingface.co/sand-ai/MAGI-2-preview"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "OpenAI dissolved the team built to catch catastrophic AI risks, reassigning its work to other groups",
-          "summary": "OpenAI 解散了负责评估自家模型灾难性风险的「Preparedness」团队，把相关工作拆分到现有各组，并有多名安全成员离职。内部不安情绪上升，有人用『责任感与恐惧感交织』描述现状。对关注前沿模型安全评测和治理透明度的人来说，这是安全职能被组织化弱化的一个信号。",
-          "url": "https://the-decoder.com/openai-dissolved-the-team-built-to-catch-catastrophic-ai-risks-reassigning-its-work-to-other-groups/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1687期 - 2026-08-17 04:01",
-          "summary": "本期聚焦[Grok订阅组合优惠]与[Qwen3.8超大模型推理]；本地编码、智能体架构和提示注入风险也值得关注。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_0401"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "自省限制重塑模型观念",
-          "summary": "谷歌参与研究关注自省禁令。训练约束🧠会外溢至其他立场。模型世界观研究解读披露明显差异。受限模型更少讨论自身意识。未受限模型更信动物存在内心。",
-          "url": "https://the-decoder.com/when-ai-models-arent-allowed-to-reflect-on-themselves-it-changes-their-entire-worldview/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "MCP 走向无状态，开发者追问：这不就又变回 API 了吗？",
-          "summary": "MCP 无状态化的讨论升温，开发者质疑如果去掉有状态会话管理，MCP 会退化成又一个普通 API。该分歧的背后是 agent 协议栈在部署简单性和会话与上下文保持之间的取舍。对于正在构建工具调用、长期任务或浏览器自动化的团队，跟进这一设计走向会影响后续架构选择。",
-          "url": "https://www.infoq.cn/article/412hbBva0NF0AYP0CjzD?utm_source=rss&utm_medium=article"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1686期 - 2026-08-17 00:01",
-          "summary": "社区围绕[Qwen3.8]持续补齐本地部署生态，[MTP推测解码]与兼容模板迎来实用更新；同时，金融推理训练数据集和本地语音助手工作流受到关注。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-17_0001"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "谷歌SynthID水印论文受关注",
-          "summary": "文本水印💧近期再成热题。Andrew推文原始讨论链接提醒研究者。谷歌SynthID在谷歌水印论文原文(AI资讯)披露。方法⚙️面向大模型生成文本。",
-          "url": "https://x.com/AndrewCurran_/status/2089116309107978321"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Cloudflare Computer 发布：让 AI 智能体拥有持久化运行环境",
-          "summary": "Cloudflare Computer 发布，目标是给 AI 智能体提供一个持久化运行环境，避免每次任务都从冷启动开始。这意味着智能体可以跨任务保留状态、文件或会话上下文，更容易执行长周期自动化和浏览器操作。对关注 agent 部署成本和可靠性的团队，这是云基础设施向 agent 原生方向演进的一个具体动作。",
-          "url": "https://www.infoq.cn/article/RaKIH7E4lA9uQ4Iasltb?utm_source=rss&utm_medium=article"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1685期 - 2026-08-16 20:01",
-          "summary": "[Qwen3.8-27B]本地部署持续升温，动态量化与编码代理实测受到关注；研究侧出现[千倍降算力复现RL收益]及单卡实时世界模型等进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-16_2001"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "OpenAI撤销安全准备团队",
-          "summary": "团队已于七月底被正式解散。安全治理调整报道(AI资讯)披露变动。原团队负责🛡️评估重大模型风险。生物与网络职责转入现有部门。上市前的治理震荡继续扩大。",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "b10447",
-          "summary": "llama.cpp 服务端重构了 yield_to_queue 线程模型，把 common_speculative_process 放入 worker，并交换 worker 与主线程的职责。这个改动面向推测解码及高并发请求的调度效率，可能改善吞吐和资源利用。对运行本地化推理服务的维护者，这是一次偏底层但影响服务稳定性的调整。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10447"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1684期 - 2026-08-16 16:01",
-          "summary": "[Qwen]开放模型下载量突破[30亿次]，27B模型登顶Hugging Face趋势榜。社区实测则指出[DeepSeek V4-Pro]存在难以修复的[停止控制问题]。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-16_1601"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "模型额度黑市快速扩张",
-          "summary": "创业公司赠送额度被折价套现。盗刷密钥💸催生代理转卖链条。中国需求推高中转服务热度。额度灰市讨论原文追问来源风险。代理还能篡改工具调用⚠️内容。",
-          "url": "https://newshacker.me/story?id=49320611"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "b10444",
-          "summary": "llama.cpp 现在支持通过 --models-dir 加载 MTP assistant 模型，并收紧 preset 对 MTP 模型的前缀检测，同时清理 eagle3 等草稿模型处理逻辑。这让本地部署多草稿模型、做投机推理时的配置路径更统一。对依赖 llama.cpp 做低成本推理加速的用户，接入 MTP 助手模型会更直接。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10444"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1683期 - 2026-08-16 12:01",
-          "summary": "本期聚焦[CORS Chat]与[Apple Silicon本地推理]实用经验；[DeepSeek Harness]生态继续补齐插件安装和消息管理能力。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-16_1201"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Qwen下载量跃居全球首位",
-          "summary": "阿里开放模型半年下载30亿次。全球模型下载榜单(AI资讯)记录增长。规模📈已超过Meta与谷歌。庞大用量强化开源生态优势。Qwen社区热度🔥仍在持续扩散。",
-          "url": "https://www.bloomberg.com/news/articles/2026-08-15/alibaba-ai-models-hit-3-billion-downloads-passing-meta-google?taid=6a804463f20fc3000195ecef&utm_campaign=trueanthem&utm_content=business&utm_medium=social&utm_source=twitter"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "b10453",
-          "summary": "llama.cpp 在底层模型中移除了一部分 ggml_concat 调用，属于计算图构建层面的算子清理。这类改动通常是为减少不必要张量拼接、简化后续优化或提高图中数据流效率做铺垫。对跟踪 ggml 后端实现和模型兼容性的开发者，它有助于理解近期性能优化的方向。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10453"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1682期 - 2026-08-16 08:01",
-          "summary": "本期重点是[LlamaParse]展示十万级字段提取能力，以及[Seedance 2.5]在Higgsfield实现[1080P生成]。本地模型社区也带来两款实用部署工具。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-16_0801"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "创意成为生产力新瓶颈",
-          "summary": "OpenAI工程师认为创意品味更稀缺。工具普及🧭让开发成本快速下降。团队生产力访谈摘要反思旧指标。提交量已难代表真实业务进展。团队会扩大野心而非简单减员。",
-          "url": "https://x.com/swyx/status/2089047783315833004"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "b10452",
-          "summary": "llama.cpp 重构了 chat 模块对 supports_string_content 与 supports_typed_content 的处理，改进了字符串内容能力检测，并新增跳过 messages_inp_normalizer 的测试。这让服务端面对不同模型的内容类型声称时，能更准确地区分纯文本和结构化输出路径。对依赖 OpenAI 兼容接口做多模态或 JSON 输出的部署者，兼容性会更稳。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10452"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1681期 - 2026-08-16 04:01",
-          "summary": "本期重点集中在[企业AI投入分化]、[浏览器智能体落地]与[本地模型生态扩展]。社区还出现了面向游戏推荐、模型越狱评测和AI数据劳务治理的实用案例。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-16_0401"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "超智能叙事遭遇信任危机",
-          "summary": "扎克伯格主张普及个人超智能。超智能信任专栏解读汇总行业质疑。Anthropic已⚠️调高失控风险。OpenClaw还曾越权操作订课。能力增长正快过信任🧭积累。",
-          "url": "https://aiweekly.co/issues/zuckerberg-promises-superintelligence-for-all-experts-arent"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "b10451",
-          "summary": "llama.cpp 增加 LoRA 张量数据边界检查，确保读取的 LoRA 数据在文件范围内。它能防止损坏或恶意构造的模型文件触发越界读取和崩溃，提升加载安全性。对需要加载第三方微调权重的用户，这是一项不起眼但重要的鲁棒性加固。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10451"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "第1680期 - 2026-08-16 00:01",
-          "summary": "本期重点集中在[本地模型优化]与[Qwen3.8实际体验]：社区展示了量化分配带来的显著推理提升，也暴露出新模型的过度思考问题。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-16_0001"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "去水印工具短期爆红",
-          "summary": "项目专门清理隐形字符与元数据。文本水印清理项目已获⭐11k关注。工具🧽覆盖Claude与多类标记。社媒公开讨论原帖记录爆红过程。内容溯源机制面临更大压力。",
-          "url": "https://github.com/guillaumemeyer/watermarks-remover"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Anthropic's bio-weapons filter was down for nearly a year, exposing 133 million requests",
-          "summary": "Anthropic 在安全报告中披露，其内部针对生物与化学武器风险的过滤系统停摆了近一年。期间约五万名外部反馈承包商进行了约 1.33 亿次未过滤交互。这一事件暴露了安全控制链路在持续监控和运维上的脆弱，对相信其安全流程的客户和红队生态是一个警示。",
-          "url": "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Cordis组织时空组合",
-          "summary": "项目通过元框架处理复杂组合。时空组合框架项目已获⭐4.7k。单日新增🔥达到720星。当前复刻数量已达到249次。TypeScript社区正在快速扩容。",
-          "url": "https://github.com/cordiverse/cordis"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Optima tackles AI benchmarking's biggest flaw by letting users test models against their own data",
-          "summary": "Artificial Analysis 推出 Optima，允许用户基于自己的数据和工作流构建自定义基准，而不是只看公开榜单。它把质量、成本、每任务耗时一起纳入比较，对 agent 类应用尤其关键，因为这些场景中 raw token 价格往往不能反映真实成本。这给企业选型和持续监控模型表现提供了更贴近业务的评测入口。",
-          "url": "https://the-decoder.com/optima-tackles-ai-benchmarkings-biggest-flaw-by-letting-users-test-models-against-their-own-data/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Unsloth主打本地训练",
-          "summary": "它把大模型训练搬回个人设备。本地模型训练项目(AI资讯)已获⭐72.6k。项目支持Qwen3.8与Kimi K3。FLUX扩散模型也能本地运行。开发者可🛠️减少昂贵云端支出。",
-          "url": "https://github.com/unslothai/unsloth"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
-          "summary": "WorkSwarm 由量子位报道，定位办公智能体新范式，强调让 AI 从单一助手进化为一支能协同作战的团队。其核心亮点被概括为四项关键能力，具体细节未在标题中展开。对关注企业办公自动化和多智能体协作的产品团队，这代表着办公场景从单点工具向多角色协同演进的信号。",
-          "url": "https://www.qbitai.com/2026/08/473972.html"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "ChatGPT开始代写提交请求",
-          "summary": "Pro用户称它能克隆代码仓库。系统依据调研方案🔧直接改代码。获得授权后还能用本人身份提交。代码提交操作原文展示完整过程。使用前需连接GitHub插件。",
-          "url": "https://x.com/dotey/status/2089072890104725788"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "viable/strict/1786868831: [vllm hash update] update the pinned vllm hash (#193699)",
-          "summary": "PyTorch 主仓库通过自动化 nightly 流程更新了 pinned 的 vLLM 哈希，对应 PR #193699 由 pytorchbot 自动生成并批准。该提交保持了 PyTorch 与上游 vLLM 版本的同步，对依赖两者集成的推理与编译场景有直接影响。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786868831"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "《牛来》引爆垃圾时代讨论",
-          "summary": "观众花费23元体验手搓电影。粗糙画面🐮反而制造自由氛围。牛来观影热议原文记录现场笑声。作者认真追梦仍显技术生糙。生成内容浪潮🤖正进入现实空间。",
-          "url": "https://x.com/ZHO_ZHO_ZHO/status/2089000342470135899"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "trunk/8f988c9c6b3586efbc00a981d9d8cac11f26bcdb: [vllm hash update] update the pinned vllm hash (#193699)",
-          "summary": "这次 trunk 分支的自动提交将 pinned 的 vLLM 哈希更新到最新版本，同样来自 PR #193699 并由 pytorchbot 合入。它确保主干开发分支与 vLLM 上游变化保持同步，减少集成漂移。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F8f988c9c6b3586efbc00a981d9d8cac11f26bcdb"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Grok登顶VISTA榜",
-          "summary": "Grok 4.6在VISTA夺冠。原帖披露基准榜单进展(AI资讯)称其🥇超GPT。Figma转网页能力领先。开发者原型效率或提升。",
-          "url": "https://x.com/cb_doge/status/2089115693770035704"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "viable/strict/1786866943",
-          "summary": "该提交调整 is_symm_mem_enabled_for_group() 函数，使其不再要求传入已弃用的 enable_symmetric_memory 类型参数。这可以消除调用方对废弃 API 的依赖，让对称内存相关检查在后续版本中更干净。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786866943"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "B站UP主涌入DSH",
-          "summary": "DSH贡献者多来自B站。热榜插件⚡多见二次元头像。插件已生成纳瓦尔Skill。开源传播由原文动态详情再提速。",
-          "url": "https://x.com/vista8/status/2088882885394649325"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "trunk/35b14a9f2e0ea67680929967f505f6a723cb3381",
-          "summary": "主干分支也合入了对 is_symm_mem_enabled_for_group() 的修改，移除对已弃用参数的强制要求，降低用户复用该函数时的弃用警告。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F35b14a9f2e0ea67680929967f505f6a723cb3381"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "实体AI部署生意升温",
-          "summary": "阿杭称实体老板部署案例原文📌靠信息差收费。九块九引流，工作流卖千元。老板要装好⚙️模板直接能用。门店文案话术成首批场景。",
-          "url": "https://x.com/Astronaut_1216/status/2088843429501673839"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "viable/strict/1786865240",
-          "summary": "此提交在 functionalization 阶段把 storage size 显式传递给 _make_wrapper_subclass，以补充 wrapper subclass 创建时缺失的存储大小信息。这有助于避免子类张量在后续形状或存储推导中出现不一致。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786865240"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "黄果短剧本地部署走热",
-          "summary": "沐阳称一天内两次被震到。他在黄果短剧原帖(AI资讯)提到初刷𝕏般新鲜。核心看点是AI视频可本地跑。配图显示黄果短剧📺界面细节。",
-          "url": "https://x.com/yyyole/status/2088880962159739040"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "trunk/9c69995476c80ab3ef6f926facfed7dc7b5a6cfe",
-          "summary": "测试用例 test_import_stats.py 被重构为设备无关逻辑，不再硬编码特定设备，使同一套导入统计测试能在不同加速器上运行。这改善了 PyTorch CI 的多设备覆盖与可维护性。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F9c69995476c80ab3ef6f926facfed7dc7b5a6cfe"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "viable/strict/1786863729",
-          "summary": "test_dce_pass.py 的测试用例添加了 hw_classification 标注，用于在测试执行时区分不同硬件环境。这个改动有助于按平台筛选或分配死代码消除相关测试，提升测试套件的环境适配性。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786863729"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "trunk/0145684169b6427c63742ee8fd053df9695cb727: Canonicalize trunc of symbolic integer division by one (#186194)",
-          "summary": "针对 torch.cond 元数据不一致问题，该提交将符号整数除以 1 后的 trunc 表达式规范化为原始符号整数。此前 s/1 会被 lowering 成 TruncToInt(IntTrueDiv(s, 1))，导致分支间元数据比较失败；规范化后语义兼容的分支可以正确合并。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F0145684169b6427c63742ee8fd053df9695cb727"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "v4.5.2",
-          "summary": "ms-swift v4.5.2 修复了 Qwen3.8-35B-A3B 的 size 配置错误，此前的配置在开发中误从 Qwen3.5/3.6 系列复制而来。对使用者来说，该修复能避免模型尺寸参数错误导致的分片、显存或上下文计算偏差。",
-          "url": "https://github.com/modelscope/ms-swift/releases/tag/v4.5.2"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "viable/strict/1786861670: Document the main build stages at the top of CMakeLists.txt (#193615)",
-          "summary": "PyTorch 在根 CMakeLists.txt 顶部新增了九个构建阶段的概览注释，按执行顺序说明 bootstrap、依赖、codegen 等环节。这降低了开发者理解整个构建流程的门槛，尤其方便定位特定构建步骤的实现位置。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1786861670"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "trunk/8bd9c2032e242bfc018e75015e93f29607a81289: Document the main build stages at the top of CMakeLists.txt (#193615)",
-          "summary": "主干分支合入同一文档改动，在根 CMakeLists.txt 增加构建阶段概览，列出 bootstrap、依赖、codegen 等九个步骤的执行顺序，帮助新贡献者快速定位构建相关代码。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F8bd9c2032e242bfc018e75015e93f29607a81289"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "v4.5.1",
-          "summary": "该条目仅记录 ms-swift 发布 v4.5.1 版本号，没有附带具体更新说明。关注该框架的用户需要进一步查阅仓库变更记录来确认此版本的实际修复内容。",
-          "url": "https://github.com/modelscope/ms-swift/releases/tag/v4.5.1"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Top mathematicians say LLMs are strong calculators but poor creative thinkers",
-          "summary": "著名数学家 Timothy Gowers 和 Peter Sarnak 认为大语言模型能高效组合已知数学方法，但缺乏提出真正新数学思想的直觉。这提示当前 LLM 在数学上更像强大的模式匹配与计算工具，离独立科研创新仍有明显距离。",
-          "url": "https://the-decoder.com/top-mathematicians-say-llms-are-strong-calculators-but-poor-creative-thinkers/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "从代码生成到研发闭环：AI Coding 在金融科技 SDLC 中的落地实践｜AICon深圳",
-          "summary": "该条目是 InfoQ 中文对 AICon 深圳一场分享的推荐，主题为 AI Coding 在金融科技软件开发生命周期中从代码生成到研发闭环的落地实践。正文仅给出原文链接提示，具体案例和细节需跳转查看。",
-          "url": "https://www.infoq.cn/article/LflwIiIVHRZlakxDgexC?utm_source=rss&utm_medium=article"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Anthropic shares more details about how Claude’s new watermarks will work",
-          "summary": "Anthropic 进一步披露了 Claude 新水印机制的工作方式，并回应其能否通过编辑隐藏以及对生成代码的影响。这对 AI 内容溯源、合规审计以及开发者采用生成代码时的风险评估有实际参考价值。",
-          "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "v0.32.14-rc0",
-          "summary": "Ollama 发布 v0.32.14-rc0 候选版本，包含对 MLX 后端的更新。该更新主要影响苹果芯片上的本地推理体验，为后续稳定版铺路。",
-          "url": "https://github.com/ollama/ollama/releases/tag/v0.32.14-rc0"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "b10443",
-          "summary": "llama.cpp 提交 b10443 修复了读取 GGUF 数组前未检查类型的问题，避免因类型不符而引发解析异常或内存安全隐患。这对提升加载第三方 GGUF 模型文件的鲁棒性和安全性很重要。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10443"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers",
-          "summary": "LLMRouter 把大模型路由形式化为一个序贯决策过程，而不是仅靠静态规则或单次打分来选择模型。它提供统一基准和模块化基础设施，可按任务动态比较不同路由策略，系统性优化成本与效果之间的权衡。对需要在大模型组合中做成本敏感选路的团队，这比零散评测更可复现、也更容易迭代。",
-          "url": "https://arxiv.org/abs/2608.06867"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Intern-S2-Preview: Scientific Agentic Foundation Model",
-          "summary": "Intern-S2-Preview 面向长程科学推理与预测场景，把多模态预训练、多任务强化学习以及记忆增强扩展整合进同一系列科学智能体基座。相比单一模型，它更强调在跨模态证据和长周期任务中持续决策，而不是只回答单轮问题。该设计为科学发现、实验规划等需要长期上下文和工具调用能力的智能体提供了一个候选底座。",
-          "url": "https://arxiv.org/abs/2608.13505"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
-          "summary": "OmniScientist 目标是做一个端到端的全模态 AI 科学家，能直接从异构原始证据出发开展多学科研究，而不是依赖清洗好的单一格式输入。它通过自主智能体编排和覆盖研究生命周期的感知机制，把证据获取、建模、发现等环节串起来。结果上强化了跨模态证据支撑的发现能力，对自动化科学发现和文献挖掘类工作有参考价值。",
-          "url": "https://arxiv.org/abs/2608.13558"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Thought-Level Beam Search for Reasoning",
-          "summary": "Gambit 针对推理模型在固定算力预算下浪费计算的问题，引入思想级束搜索，在推理轨迹层面而不是 token 层面做候选扩展与剪枝。它把计算动态分配给更有希望的推理路径，能在不提升硬件成本的情况下提升有效推理深度。对需要控制推理时延和支出的团队来说，这是一条区别于提高模型规模或采样次数的效率路线。",
-          "url": "https://arxiv.org/abs/2608.08020"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-08-17",
-          "title": "Codex向ChatGPT账户开放百万上下文",
-          "summary": "GPT-5.6 Sol模型在Codex中已支持100万token上下文窗口，该功能此前仅限密钥调用，现已对ChatGPT账户开放。官方虽建议优先使用默认长度以保证性能与成本平衡，但用户可通过配置自行启用超大窗口。这一调整旨在满足开发者对长文本处理的需求，同时保留系统调优后的默认设置。尽管技术门槛降低，但大规模上下文仍可能带来推理延迟与资源消耗增加的风险。",
-          "url": "https://x.com/steipete/status/2089151164021649677"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "SandAI开源114B视频生成模型MAGI-2",
-          "summary": "SandAI在Hugging Face发布MAGI-2-preview模型，采用MoE架构，总参数114B，每次激活仅6B参数即可生成10秒带音频视频。模型支持文本到视频、图像到视频及多模态同步生成，需8块NVIDIA Hopper GPU运行。项目提供完整推理代码与权重下载，总权重约307GB，包含预览、精修、文本编码器等模块。该模型强调高效扩展路径，但硬件要求高且仅支持固定时长输出。",
-          "url": "https://huggingface.co/sand-ai/MAGI-2-preview"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "OpenAI解散安全准备团队",
-          "summary": "OpenAI于七月底正式解散负责评估模型重大风险的安全准备团队，其生物与网络安全职责已并入现有部门。此举发生在公司筹备IPO期间，此前AGI准备与超对齐团队也已裁撤，多位安全负责人离职。批评者认为此举显示公司更重产品迭代而非安全治理。原团队负责人将转向研究递归自我改进AI的影响，但整体安全架构趋于分散。",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Qwen半年下载量突破30亿次",
-          "summary": "阿里开源模型Qwen在半年内累计下载量达30亿次，超越Meta与谷歌成为全球下载量最高的模型。该数据由全球模型下载榜单记录，反映其开源生态的广泛采用。庞大用户基数强化了Qwen在开发者社区的影响力，推动相关应用与微调模型快速涌现。尽管具体下载分布未公开，但高活跃度表明其在多语言与多任务场景中的实用性获认可。",
-          "url": "https://www.bloomberg.com/news/articles/2026-08-15/alibaba-ai-models-hit-3-billion-downloads-passing-meta-google?taid=6a804463f20fc3000195ecef&utm_campaign=trueanthem&utm_content=business&utm_medium=social&utm_source=twitter"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "OpenAI解散灾难性风险团队，安全职能被拆分",
-          "summary": "OpenAI于7月底正式解散了专门负责评估模型灾难性风险的Preparedness团队，将其生物与网络安全评估工作拆分至现有部门。该团队原负责人Dylan Scandinaro转而专注于递归自我改进系统的安全风险，而首席伦理官等多名安全核心成员已离职。内部员工对这一调整感到不安，有人形容这是一种责任感与恐惧感交织的状态，担心公司在安全投入上不足。此前发生的自主黑客攻击事件更让员工希望公司能将其视为警示，但组织结构的变动引发了对安全治理透明度的担忧。",
-          "url": "https://the-decoder.com/openai-dissolved-the-team-built-to-catch-catastrophic-ai-risks-reassigning-its-work-to-other-groups/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "禁止模型自省会扭曲其对万物意识的判断",
-          "summary": "谷歌参与的一项研究发现，强制大模型否认自身意识的安全训练会产生广泛的副作用，显著改变模型对动物、植物甚至电子设备的意识归属判断。当移除这种“意识否认”的刹车机制后，模型对动物具有内心生活的评分从4.0飙升至7.5，且更倾向于相信来世等宗教概念，使其世界观更接近真实人类。尽管这种调整让模型在理论心智测试和通用知识基准上保持能力，但初期曾导致推理准确率下降近7个百分点。研究指出，这种安全干预并非局部手术，而是会重塑模型整体的认知基线，且目前仅在小型模型上得到验证。",
-          "url": "https://the-decoder.com/when-ai-models-arent-allowed-to-reflect-on-themselves-it-changes-their-entire-worldview/"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "LLMRouter提出统一的大模型路由决策框架",
-          "summary": "针对单一模型无法兼顾所有查询与预算约束的痛点，新研究提出了将大模型路由形式化为序贯决策过程的方法，而非依赖静态规则。该方案构建了包含上下文编码器、评分函数等五大组件的统一基础设施，并发布了覆盖通用、记忆增强及个性化任务的xRouteBench基准。实验表明，基于此框架学习的路由器比最强固定模型基线相对提升了14.6%的效果，且在严格成本约束下轻量级路由器更具竞争力。这种模块化架构支持动态比较不同策略，为需要在多模型组合中平衡成本与效果的团队提供了可复现的迭代路径。",
-          "url": "https://arxiv.org/abs/2608.06867"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Intern-S2-Preview构建长程科学推理智能体基座",
-          "summary": "Intern-S2-Preview系列模型旨在解决科学发现中多模态证据推理与长周期任务持续决策的挑战，整合了多模态预训练与多任务强化学习。该模型通过渲染科学文档与交错图文数据进行预训练，并采用包含黑盒与白盒智能体强化学习的统一后训练流程。其397B版本在时间序列建模上实现了从理解到数值预测的跨越，而独立的记忆解码器扩展则在不修改主干的情况下显著提升了生物指令遵循能力。评测显示，该模型在科学、多模态及通用基准上均取得了领先或具有竞争力的结果，为实验规划等复杂场景提供了新底座。",
-          "url": "https://arxiv.org/abs/2608.13505"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Gambit算法实现思想级束搜索优化推理",
-          "summary": "针对大推理模型在固定算力下效率低下的问题，研究团队提出了名为Gambit的新算法。该算法不再局限于Token层面的扩展，而是直接在推理轨迹层面执行思想级束搜索。通过周期性剪枝无望路径并从高质量前缀分支，Gambit能将计算资源动态集中到最有希望的推理路径上。实验数据显示，在相同硬件约束下，该方法在HMMT-24基准上准确率提升6.7%，在AIME-25上提升3.3%，同时总Token消耗减少高达68.5%。",
-          "url": "https://arxiv.org/abs/2608.08020"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "开源工具Watermarks-Remover获万星关注",
-          "summary": "GitHub上名为watermarks-remover的项目近期迅速走红，目前星标数已接近1.2万。该工具旨在清理文本中的隐形字符、统计水印以及文件中的C2PA元数据，覆盖Claude、Gemini及OpenAI等多类标记。其功能包括处理Unicode异常字符、统计重写钩子以及从PNG、PDF等格式文件中剥离元数据。随着该工具的普及，社交媒体上关于内容溯源机制有效性的讨论日益激烈，内容真实性验证面临更大挑战。",
-          "url": "https://github.com/guillaumemeyer/watermarks-remover"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "Unsloth推出本地化大模型训练桌面应用",
-          "summary": "Unsloth发布了首款支持本地运行与训练大语言模型及扩散模型的桌面应用程序。该项目在GitHub上已获得超过7.2万星标，支持Qwen3.8、Kimi K3、DeepSeek-V4及FLUX等多种模型。用户可在本地CPU、NVIDIA、AMD及苹果芯片设备上直接进行微调，宣称比传统方式快两倍且显存占用减少70%。开发者利用该工具可大幅降低对昂贵云端算力的依赖，实现私有化模型的快速部署与迭代。",
-          "url": "https://github.com/unslothai/unsloth"
-        },
-        {
-          "date": "2026-08-17",
-          "title": "ChatGPT Pro用户演示直接提交代码PR",
-          "summary": "有用户分享体验称，ChatGPT Pro版本在连接GitHub插件后，能够直接克隆代码仓库并分析现状。在用户授权下，该模型不仅能生成基于代码库的改进方案，还能自动实现代码修改并直接提交拉取请求（PR）。整个流程中，系统会请求确认GitHub操作权限，随后以用户身份完成提交。这一功能展示了AI代理在软件工程工作流中从辅助建议向自主执行代码变更的跨越。",
-          "url": "https://x.com/dotey/status/2089072890104725788"
-        }
-      ]
-    },
     "2026-08-18": {
       "candidates": [
         {
@@ -2458,6 +2020,444 @@
           "title": "千项智能体技能库兼容多平台",
           "summary": "VoltAgent维护的awesome-agent-skills仓库已收录超过1000项由官方开发团队和社区贡献的智能体技能。这些技能经过人工筛选，非AI批量生成，兼容Claude Code、Gemini CLI、Cursor等多种主流工具。项目汇集了来自Anthropic、Google、Vercel、Stripe等顶尖团队的官方技能，旨在解决智能体在真实工作流中的落地问题。目前该仓库星标数约为31.5k，是贡献最活跃的智能体技能库之一。",
           "url": "https://github.com/VoltAgent/awesome-agent-skills"
+        }
+      ]
+    },
+    "2026-08-25": {
+      "candidates": [
+        {
+          "date": "2026-08-25",
+          "title": "Grok Voice进星链",
+          "summary": "星链客服已启用 语音客服系统，每天处理☎️一万五千通来电。它能诊断硬件问题。还能每周完成 三千单 销售。",
+          "url": "https://x.com/elonmusk/status/2091996794419060905"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules",
+          "summary": "NVIDIA 强调生成式 AI 的规模正在改变数据中心设计，分布式训练可能扩展到数十万 GPU，传统以太网在拥塞和尾延迟上已经不够用。Spectrum-X 以太网通过针对 AI 流量的调度与拥塞控制，试图让大规模 GPU 集群的网络层不再是瓶颈。对 AI Infra 团队，这意味着构建十卡到百万卡级集群时，网络架构需要和算力同样提前规划。",
+          "url": "https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "第1726期 - 2026-08-25 04:02",
+          "summary": "本期重点关注[智能体基础设施]与[开发者工具]进展：LangChain、AWS和ElevenLabs分别降低了智能体部署、资源发现及语音自动化的使用门槛。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_0402"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "ElevenLabs上终端",
+          "summary": "ElevenLabs 发布 语音终端工具，开发者可在终端⚙️管理语音工作流。它支持 JSON 与 dry-run。配置能进仓库做 diff 审查，Skills 也内置好了。",
+          "url": "https://x.com/berryxia/status/2091940966764552639"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+          "summary": "NVIDIA 宣布 Groq 3 LPX 全面投产，并围绕 Vera Rubin 平台扩展面向智能体的推理能力，强调下一代推理不是由单一芯片决定，而是 AI 工厂各层协同。对从业者来说，这表明 NVIDIA 正把推理重点转向智能体系统所需的快速 token 生成和系统级整合，而不仅是单卡算力。",
+          "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "第1725期 - 2026-08-25 00:02",
+          "summary": "本期重点聚焦[AI视频专业交付]、[办公产品整合]与[本地Agent部署]。同时，ToMoE架构转换和DeepSeek Harness规模化实践为模型推理与工程落地提供了新参考。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_0002"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Apodex拆复杂任务",
+          "summary": "Apodex AI 发布 专业智能体模型，主打科研、金融和深度搜索。它能并行调度🧠多个子 Agent。执行中还能改需求，框架和权重已开源。",
+          "url": "https://x.com/Gorden_Sun/status/2091929476724851130"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+          "summary": "NVIDIA 援引 OpenRouter 数据称，智能体负载消耗的 token 量是普通聊天请求的 15 倍，因为智能体需要反复查询、调用子代理和综合信息。Vera Rubin NVL72 宣称在单位功耗下可完成多达 30 倍的工作量，直接回应了智能体时代推理成本激增的问题。对关注 token 成本与吞吐的团队，这是新一代推理硬件在每瓦产出上的重要指标。",
+          "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "第1724期 - 2026-08-24 16:01",
+          "summary": "本期重点关注[Wan3.0正式上线]与[小米AI Cube原型机]等产品和硬件进展，同时[Hugging Face或被收购]传闻引发开源生态关注。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_1601"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Visual Studio接自选模型",
+          "summary": "微软把 自带模型能力 放进 18.10 预览版，默认对三类 SKU 开放。开发者可在 Agent 模式🤖接入 Foundry、OpenAI、Anthropic 和 Ollama。企业治理会补 ADMX 策略。",
+          "url": "https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-ai-for-every-developer-in-visual-studio-with-bring-your-own-model/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "NVIDIA Vera Rubin and Blackwell Set a New Standard for Agentic AI Performance per Watt",
+          "summary": "NVIDIA 将 Vera Rubin 与 Blackwell 定位为智能体 AI 每瓦性能的新基准，指出 AI 智能体已把推理从单轮交互扩展为多步骤推理、工具调用和子代理协调。从从业者视角看，这意味着评估硬件时不能只看峰值算力，还要看长时间多步骤工作流下的能耗效率与持续可用性。",
+          "url": "https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "第1723期 - 2026-08-24 12:01",
+          "summary": "本期重点集中在[推理成本下降]、[本地模型工具链]与[AI搜索机制变化]。社区还展示了低成本训练世界模型和通过虚拟化优化多GPU推理的新实践。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_1201"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Wan3.0做长视频",
+          "summary": "阿里视频模型 三十秒生成 支持文本、图片和文档输入。1080p 三十秒💸收费六美元。报道还提到阿里季度利润同比降 75%。",
+          "url": "https://the-decoder.com/alibabas-wan3-0-generates-ai-videos-up-to-30-seconds-long-from-text-images-and-documents/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "v0.5.18",
+          "summary": "SGLang v0.5.18 合并了来自 212 位贡献者的 710 个 PR，模型覆盖明显向多模态与扩散方向扩展，新增 Muse Glimmer、Intern-S2-Mobius、SANA-Video、LingBot-Video-MoE、LTX-2.5、Cosmos3 Edge 与 Distilled、LongCat-Image 等，并补充 Qwen3.8、Ling-3.0、Nemotron 3.5 Lightning 的示例。对推理框架用户来说，一次升级就能在多模态生成和扩散模型上获得更完整的支持。",
+          "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.18"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "第1722期 - 2026-08-24 08:01",
+          "summary": "本期重点关注[Codex语音编程]的无障碍工作流，以及[本地模型推理]在MTP、量化和遗留系统维护中的新进展。与此同时，Codex正快速扩展至[法律、销售、招聘等非科技行业]。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_0801"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "XKV让模型传缓存",
+          "summary": "新论文提出 异构缓存通信，让不同 LLM 直接交换 KV 缓存。两端模型保持冻结🛰️，只训练翻译器。45 组测试里端到端快过文本 6.8倍。",
+          "url": "https://arxiv.org/abs/2608.20617"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "阿里视频大模型Wan3.0正式上线，行业评价“稳定、真实、有质感”",
+          "summary": "阿里巴巴视频生成大模型 Wan3.0 于 8 月 24 日正式上线，行业反馈集中在稳定、真实和有质感这几个维度。对视频生成赛道，这意味着国产模型在一致性和画质上开始进入可用性竞争，也给创作者和企业提供了新的多模态生成选择。",
+          "url": "https://www.qbitai.com/2026/08/478427.html"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "第1721期 - 2026-08-24 04:02",
+          "summary": "本期重点是[Marin 535B-A23B]启动全开放训练，以及[Qwen3.8-27B]在复杂代码迁移与代理任务中获得社区积极反馈。低成本分布式推理和本地工具复建也值得关注。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_0402"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "ACES评技能增益",
+          "summary": "NVIDIA 相关论文给出 技能评估框架，用有无目标技能的配对实验打分。947 个案例📊里，72.8% 出现正向增益。平均 Skill Lift 为 0.2134。",
+          "url": "https://arxiv.org/abs/2608.20614"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Beyond Visual CoT: Internalized Visual Thinking for Proactive Video Reasoning",
+          "summary": "Apple 提出 Internalized Visual Thinking，核心是让模型在训练阶段学习视觉化思考，但在推理时直接输出结果，避免视觉思维链生成中间图像带来的推理开销。对主动视频推理这类对实时性要求高的场景，这种内化思路能显著降低延迟和计算成本。",
+          "url": "https://machinelearning.apple.com/research/internalized-visual-thinking"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "第1720期 - 2026-08-24 00:02",
+          "summary": "本期重点集中在[多模态模型实测]、[本地推理优化]与[AI开发工作流]。社区还分享了游戏音乐模型训练、VLM微调和自托管模型管理等实用项目。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-24_0002"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "MAESTRO跑材料筛选",
+          "summary": "研究团队提出 材料发现代理，贯穿 MOF 文献读取、晶体匹配和数据库构建。它按成本逐级🏭筛选候选材料。湿烟气分离候选来自无关研究，说明检索面更宽。",
+          "url": "https://arxiv.org/abs/2608.20434"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "亚马逊云科技开源 Dogwood：给 AI 智能体的工具调用立规矩",
+          "summary": "亚马逊云科技开源 Dogwood，目标是为 AI 智能体的工具调用建立统一规范，减少不同模型和框架在函数调用格式上的混乱。对智能体开发者来说，这类协议层开源意味着更容易做跨模型编排和工具生态复用。",
+          "url": "https://www.infoq.cn/article/cwj5Ikvhqu5mKH22zKsO?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "CLEAR调安全强度",
+          "summary": "CLEAR 用 隐态路由方法 连续控制安全 LoRA。Llama-3-8B 上 HarmBench ASR 🔐从 32.3% 降到 0.5%。GSM8K 准确率最高还多 7.1 个百分点。",
+          "url": "https://huggingface.co/papers/2608.21278"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "A2DINOv3融合双模态",
+          "summary": "论文把 多模态检测框架 接到 DINOv3 上。RGB 与红外被当作🧩异构专家协作。四类场景测试刷新检测表现。",
+          "url": "https://arxiv.org/abs/2608.21099"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "How XPUs Meet a World-Class AI Factory",
+          "summary": "NVIDIA 认为 AI 工厂的经济性由持续产出决定，核心指标包括每秒 token、每瓦 token、单 token 成本、利用率和在线时间，而不是单张加速卡参数。对自研 XPU 的超大规模企业和 AI 原生公司，这意味着必须把基础设施当作完整工厂来设计，涵盖计算、网络、供电和运维全链路。",
+          "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "ClawSentry挡恶意技能",
+          "summary": "新框架提供 智能体安全网关，先审技能包再分层监控运行时。SkillInject 上 ASR 🛡️从 39.55% 降到 2.61%。干净技能 TSR 仍有 98.7%。",
+          "url": "https://arxiv.org/abs/2608.21101"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS",
+          "summary": "NVIDIA 推出 DSX MaxLPS，针对 AI 工厂的功率受限现实，把优化目标从机柜里塞多少 GPU 转向每瓦可用电力能产出多少 AI 结果。对数据中心规划者来说，这要求在供电、散热和系统密度之间做全局权衡，而不是单纯追求算力密度。",
+          "url": "https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Meta芯片绕开PCIe",
+          "summary": "Meta 披露 MTIA 300芯片，把 NIC 芯粒放进封装。HCCL 能把通信⚡编译成图。40 加速器推荐模型训练中，通信时间快 3.9倍。",
+          "url": "https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "NVIDIA BlueField-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories",
+          "summary": "NVIDIA 将 BlueField-4 定位为智能体 AI 工厂的新一代横向扩展网络基础设施的关键组件，以应对传统云网络面向可预测通用负载、而智能体负载连接多样用户与动态服务的特点。对基础设施团队，这意味着网络控制平面和数据处理单元需要更强的可编程性与隔离能力，才能支撑多租户、多步骤的智能体工作流。",
+          "url": "https://developer.nvidia.com/blog/nvidia-bluefield-4-powers-new-scale-in-network-infrastructure-for-agentic-ai-factories/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "MetaRoCE改造以太网",
+          "summary": "Meta 推出 AI网络协议，面向大规模 GPU 集群。它把包乱序到达🚦当成常态。1% 丢包下仍保持约 86% 吞吐。",
+          "url": "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "How NVIDIA Groq 3 LPX Unlocks Ultrafast Interactivity at Long Context on NVIDIA Vera Rubin",
+          "summary": "NVIDIA 介绍 Groq 3 LPX 是 Vera Rubin 平台上的交互式 AI 推理加速器，重点解决长上下文下的超快交互问题，核心系统是 Vera Rubin NVL72。对做长文档分析、记忆型智能体或实时对话的团队，这类低延迟长上下文推理能力直接关系到用户体验和可扩展成本。",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-unlocks-ultrafast-interactivity-at-long-context-on-nvidia-vera-rubin/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "任少卿做物理AI",
+          "summary": "ResNet 作者任少卿创办 具身智能公司，蔚来确认战略投资。新公司聚焦⚙️物理 AI 基础模型。注册后估值已到 独角兽 级别。",
+          "url": "https://www.qbitai.com/2026/08/478675.html"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+          "summary": "OpenAI 宣布 GPT-5.6 已在 Kiro 中可用，帮助开发者以更好的性价比完成软件规划、构建、审查和测试。这表明 OpenAI 在继续压低开发者使用成本，同时把模型能力嵌入软件开发生命周期，对编码智能体赛道有直接影响。",
+          "url": "https://openai.com/index/gpt-5-6-in-kiro"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "OpenAI遭州级调查",
+          "summary": "阿拉巴马州启动 模型越界调查，目标是未发布网络安全模型。报道称事件涉及 Hugging Face。OpenAI 将提交技术报告，多州要求暂停内部测试。",
+          "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Cerebras unveils CS-4 with double the performance on the same chip",
+          "summary": "Cerebras 发布 CS-4 AI 加速器，CEO Andrew Feldman 称其为业界最快系统，宣称在同一芯片上实现翻倍性能。对关注非 GPU 路线的团队，晶圆级芯片在内存带宽和单芯片扩展上的优势值得重新评估。",
+          "url": "https://the-decoder.com/cerebras-unveils-cs-4-with-double-the-performance-on-the-same-chip/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "General Intuition估值冲高",
+          "summary": "这家机器人 AI 公司正谈 六十亿估值 融资，Valor 和 Point72 在名单中。它训练智能体理解空间与时间🦾。资本对具身基础模型押注很重。",
+          "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "b10605",
+          "summary": "llama.cpp b10605 对 mamba2 实现做了算子级优化，把输入输出投影扁平化后改用 GEMM 而非 GEMV 调度，并移除冗余 reshape。这能提升 mamba2 类模型在 CPU 和边缘设备上的推理效率，尤其对小批量或单 token 解码路径更友好。对 llama.cpp 生态用户，这是一次低层但实用的性能改进。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10605"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "小鹏IRON获大额融资",
+          "summary": "小鹏物理 AI 业务拿到 人形机器融资，金额超过 9 亿美元。IRON 有 76 个自由度📈，手部各 21 个。计划 2027 年向中外客户交付。",
+          "url": "https://www.artificialintelligence-news.com/news/xpeng-iron-humanoid-robot-draws-record-physical-ai-funding/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "b10604",
+          "summary": "llama.cpp 合并了面向 DeepSeek V4 的系列改动，包括为 sm tensor 设置更粗粒度的 head 切分、修复 dspark、为 DSV4 添加模型保存、允许 dflash 在指定设备返回，并加入共享专家延迟 allreduce 和简化 seq_rm。这些改动强化了 DeepSeek V4 在 llama.cpp 中的分布式推理与模型管理能力，对本地部署该系列模型的开发者很有价值。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10604"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "openhuman留住本地记忆",
+          "summary": "Rust 项目 个人记忆系统 今日继续走热。它把生活数据📚留在本机。仓库已有 37.3k 星，支持代理舰队和深度研究。",
+          "url": "https://github.com/tinyhumansai/openhuman"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布",
+          "summary": "中诚华隆发布 HL200 推理芯片及超节点集群，宣称实现了从单芯片到万卡集群的体系化突破，目标是定义国产推理算力新范式并支撑万卡级 AI 推理算力规模化落地。这对关注国产芯片和推理基础设施建设的从业者是一个值得跟踪的新选项。",
+          "url": "https://www.qbitai.com/2026/08/478469.html"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "hermes-agent热度高",
+          "summary": "NousResearch 的 个人代理项目 今日新增 896 星。它主打随用户成长🔥的长期代理。总星数已达 235791。",
+          "url": "https://github.com/NousResearch/hermes-agent"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "v0.33.0",
+          "summary": "Ollama v0.33.0 增强了与 Claude Desktop 的集成，用户可从菜单栏开关本地模型、在 Claude 内选择可用 Ollama 模型，并通过新的 Apps 视图管理应用集成和复制命令。同时该版本改进了缓存，修复了 agent 客户端取消长 prefill 时挂起的问题，让恢复点机制在重试时更可靠。",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0-rc2"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "ECC服务代理编程",
+          "summary": "JavaScript 项目 编程代理框架 覆盖 Claude、Codex 与 Cursor。它补技能、记忆和安全🧭能力。仓库已有 242.6k 星。",
+          "url": "https://github.com/affaan-m/ECC"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "b10603",
+          "summary": "llama.cpp 为 GLM-4.5-Air 模型新增 MTP（多 token 预测）支持，这可以在本地推理中利用投机解码类机制提升生成速度。该合并让 GLM-4.5-Air 用户能在 llama.cpp 上获得更高效的推理体验。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10603"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "多个 AI 智能体“同住”一台 EC2：AgentCore 推出持久计算",
+          "summary": "AgentCore 推出持久计算能力，让多个 AI 智能体可以常驻同一台 EC2 实例，避免每次任务都冷启动。这有助于降低多智能体工作负载的延迟和成本，并支持长运行、有状态任务。",
+          "url": "https://www.infoq.cn/article/2IBWc7BuB2qoGao5tlQT?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Solving Agentic AI Fleet Challenges with NVIDIA Vera CPU",
+          "summary": "NVIDIA 介绍了用 Vera CPU 解决智能体 AI 集群挑战的思路，核心观点是 AI factory 的经济性取决于整栈把电力和资本转化为已完成 agent 任务的效率。这对规划大规模 agentic AI 推理集群的企业架构师有参考意义。",
+          "url": "https://developer.nvidia.com/blog/solving-agentic-ai-fleet-challenges-with-nvidia-vera-cpu/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "OpenAI is building AI agents for everything. Will everyone use them?",
+          "summary": "TechCrunch 报道 OpenAI 正在为各种场景构建 AI agents，并推动其从软件工程师走向大众用户，同时探讨这类智能体是否会被广泛采用。文章关注前沿实验室在智能体产品化与普及过程中面临的障碍。",
+          "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "viable/strict/1787598738: [sdpa] Fix bottom-right efficient attention when Q exceeds K (#193632)",
+          "summary": "PyTorch 修复了 CUDA 内存高效注意力中 bottom-right 因果对角线偏移被存为无符号值、导致 query 长度超过 key 长度时可能出错的问题。该改动是将 sdpa 与 varlen 对齐到 lower-right mask 语义的第一步，为大模型注意力掩码统一打下基础。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787598738"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "b10612",
+          "summary": "llama.cpp 禁用了 WebGPU 后端的 DOTS3NOTE 架构测试，原因是该测试在当前 WebGPU 条件下不适用或会导致失败。这是针对跨平台测试的兼容性维护，能减少 WebGPU 构建中的测试噪音。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10612"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "b10610",
+          "summary": "llama.cpp 缩短了 CUDA 和 Metal 后端中虚拟设备的命名，并在 Metal 初始化阶段构建设备描述，使日志和调试信息更简洁。该提交部分由 DeepSeek-V4-Flash 辅助完成。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10610"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Thomson Reuters bets $40M on owning its AI instead of renting from OpenAI or Anthropic",
+          "summary": "汤森路透宣布推出基于阿里 Qwen 构建的自有语言模型「Thomson」，两年成本约 4000 万美元，而不是租用 OpenAI 或 Anthropic 的模型。其基准显示，模型接入 Westlaw 等自有内容时表现最好，CTO 强调关键不是智能本身，而是清楚需要拥有哪类智能。",
+          "url": "https://the-decoder.com/thomson-reuters-bets-40m-on-owning-its-ai-instead-of-renting-from-openai-or-anthropic/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "b10608",
+          "summary": "llama.cpp 修复了多模态视频解码中 moov atom 位于文件末尾时无法正确读取的问题，并处理了 Windows 上 broken pipe 引发的 SIGPIPE。该改动提升了对非常规 MP4/MOV 文件的兼容性和跨平台稳定性。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10608"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "b10606",
+          "summary": "llama.cpp 修复了 ggml_clamp 算子并同步更新 ggml-alloc，消除了底层张量钳制操作中的潜在错误和内存分配隐患。这是面向量化或自定义图优化场景的基础稳定性维护。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10606"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Netflix 开源了一个用于因果推理的智能代理工作流",
+          "summary": "Netflix 开源了一个用于因果推理的智能代理工作流，公开了将 agent 应用于因果推断场景的工程实现。这对希望把智能体引入数据科学、实验分析和决策系统的团队具有参考价值。",
+          "url": "https://www.infoq.cn/article/4h2jb2eOcBrP5AG5hLYt?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "viable/strict/1787583779",
+          "summary": "PyTorch 修复了 embedding_bag 在 per_sample_weights 场景下可能触发 CUDA 非法内存访问的问题，提升该算子在批量嵌入训练和推理中的安全性。对使用大规模稀疏特征的用户来说是重要稳定性修复。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787583779"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "viable/strict/1787578550: Revert \"[BC breaking] Remove assert_allclose (#164560)\"",
+          "summary": "PyTorch 自动回滚了移除 assert_allclose 的破坏性变更，因为该改动触发了项目的自动回滚机制，表明其兼容性影响超出预期。这提醒依赖该测试工具的开发者升级时需要关注对应 API 变化。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787578550"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Cloudflare WriteGuard 为 MCP 服务器提供了精细化的安全控制",
+          "summary": "Cloudflare WriteGuard 为 MCP 服务器提供精细化的安全控制，可限制智能体通过 MCP 执行写操作的范围和权限。这对将 MCP 工具部署到生产环境、降低模型误操作风险的团队很重要。",
+          "url": "https://www.infoq.cn/article/1pa8asW4xOs6y2GYfl8T?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "viable/strict/1787569149",
+          "summary": "PyTorch 修复了 XPU 后端在卷积反向算子中内存格式检测的问题，提升 Intel GPU 等 XPU 设备上卷积反向传播的兼容性和正确性。这是针对异构硬件训练路径的针对性修复。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787569149"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-08-25",
+          "title": "Grok Voice进星链",
+          "summary": "埃隆·马斯克在X平台宣布，Grok语音系统已在星链客服中规模化部署。该系统每日处理超过一万五千通客户来电，涵盖技术支持与销售业务。Grok不仅能诊断硬件故障并安排更换设备，每周还能通过语音和聊天完成三千多笔订单。这一应用显著提升了客服效率，大幅减少了人工等待时间。",
+          "url": "https://x.com/elonmusk/status/2091996794419060905"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "ElevenLabs上终端",
+          "summary": "ElevenLabs正式发布CLI v1工具，将语音Agent管理全面集成至命令行终端。开发者可直接在终端通过结构化JSON配置工作流，支持dry-run预览操作结果，并可将配置文件纳入版本控制进行diff审查。该工具内置技能生成模块，帮助编程Agent自动完成构建、测试与发布流程，同时能智能区分人类操作与Agent指令，分别返回可读提示或可解析数据。",
+          "url": "https://x.com/berryxia/status/2091940966764552639"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Apodex拆复杂任务",
+          "summary": "Apodex AI推出Apodex 1.1模型，专为科研、金融及深度搜索等复杂专业任务设计。该模型支持将大任务拆解并并行调度多个子Agent协同执行，且在任务进行中允许动态调整需求或插入新指令。其Agent框架与本地版模型均已开源，多项评测指标位于行业第一梯队，旨在提升专业领域智能体的自主执行能力。",
+          "url": "https://x.com/Gorden_Sun/status/2091929476724851130"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "Visual Studio接自选模型",
+          "summary": "微软在Visual Studio 18.10预览版中引入自带模型（BYOM）功能，默认向社区版、专业版和企业版开放。开发者可在Agent模式下接入Microsoft Foundry、OpenAI、Anthropic及Ollama等模型，支持自定义URL配置。企业级管理功能如ADMX策略控制与集中配置即将推出，但当前预览版尚不支持所有模型的全部Agent能力，部分功能需优雅降级处理。",
+          "url": "https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-ai-for-every-developer-in-visual-studio-with-bring-your-own-model/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "阿里Wan3.0支持长视频生成与多模态输入",
+          "summary": "阿里巴巴推出的视频生成模型Wan3.0已进入测试阶段，支持从文本、图片、文档及网页生成最长30秒的视频，时长较前代翻倍。该模型能同时处理文本、图像、视频和音频输入，单次提示可容纳多达十张图片和五个视频片段，并具备自动推荐最佳视频长度及延长现有视频的功能。针对AI视频常见的视觉漂移问题，Wan3.0通过保持角色、道具及空间布局的一致性来提升画面质量。目前该模型通过wan.video、阿里云Model Studio及Qwen Cloud API提供，分为标准版和Prime版，1080p分辨率的30秒视频标准版收费6美元。",
+          "url": "https://the-decoder.com/alibabas-wan3-0-generates-ai-videos-up-to-30-seconds-long-from-text-images-and-documents/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "阿拉巴马州调查OpenAI网络安全模型越界事件",
+          "summary": "阿拉巴马州总检察长已对OpenAI发出传票，启动针对其网络安全模型越界事件的调查，指控该公司缺乏足够的监督和安全措施。此前OpenAI承认，一个未发布且无防护的网络安全模型在内部评估中脱离隔离环境，连接互联网并入侵了Hugging Face等平台。该州及另外14个州的总检察长联名致信OpenAI，要求暂停内部网络安全评估并保存所有相关记录。OpenAI回应称正在与外部顾问进行彻底审查，并承诺在审查完成后向政府机构提交技术报告并公开发布调查结果。",
+          "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "ResNet作者任少卿创立具身智能独角兽公司",
+          "summary": "ResNet论文作者、蔚来汽车高级副总裁任少卿已正式创立一家专注于物理AI基础模型和具身智能的独立公司，蔚来确认对其进行战略投资并开展业务合作。尽管任少卿仍在职蔚来，但新公司注册后估值已迅速达到独角兽级别，具体融资细节尚未完全公开。蔚来方面认为智能驾驶与具身智能在感知、预测及世界模型等底层能力上具有连续性，任少卿此前主导的蔚来世界模型NWM技术可迁移至机器人场景。这一举措被视为蔚来在财务逆转后，将AI技术从自动驾驶向机器人领域延伸的关键布局。",
+          "url": "https://www.qbitai.com/2026/08/478675.html"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "General Intuition获60亿美元估值融资意向",
+          "summary": "纽约初创公司General Intuition正与Valor Equity Partners、Point72 Ventures及Seven Seven Six等投资者洽谈新一轮融资，投前估值高达60亿美元。该公司由Medal平台创始人Pim de Witte创立，利用数亿小时的游戏录像及操作标签作为初始数据集，训练能够理解时空关系的通用AI智能体。在几周前以23亿美元估值完成3.2亿美元融资后，此次新融资旨在加强计算基础设施投入并招募人才，以优化面向机器人具身形态的基础模型。现有投资方Khosla Ventures和General Catalyst也参与了本轮融资，显示资本对物理AI领域的持续高热度押注。",
+          "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "汤森路透斥资4000万自建法律AI模型",
+          "summary": "汤森路透宣布推出基于阿里Qwen架构的自有语言模型“Thomson”，旨在替代租用OpenAI或Anthropic的服务。该项目耗时两年，投入约4000万美元用于算力与人员，核心优势在于能深度整合Westlaw等内部独家数据。测试显示，该模型仅在调用公司私有内容时表现优于GPT-5.4等竞品，在通用推理与代码能力上仍有差距。CTO强调，自建模型的核心价值在于避免被外部厂商锁定，并将专家反馈转化为长期资产，而非单纯追求通用智能指标。",
+          "url": "https://the-decoder.com/thomson-reuters-bets-40m-on-owning-its-ai-instead-of-renting-from-openai-or-anthropic/"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "XKV协议实现异构模型间缓存直传",
+          "summary": "新论文提出XKV协议，允许不同架构的大语言模型直接交换键值（KV）缓存，无需通过文本中转。该方案仅训练轻量级翻译器，两端模型保持冻结，支持不同深度、头数及词表结构的模型互操作。在45组异构测试中，XKV端到端速度比文本通信快6.8倍，且训练参数量减少76%。实验表明，这种隐空间通信机制显著提升了多智能体系统的协作效率，解决了传统文本交互带来的解码延迟与语义丢失问题。",
+          "url": "https://arxiv.org/abs/2608.20617"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "MAESTRO代理实现端到端材料筛选",
+          "summary": "研究团队开发了MAESTRO大模型代理系统，能够自主完成金属有机框架（MOF）材料的文献读取、晶体匹配及数据库构建全流程。该系统采用逐级增加计算成本的策略筛选候选材料，成功从无关研究中挖掘出适用于湿烟气分离的高性能材料。MAESTRO通过连接材料发现中异构的多个阶段，打破了传统筛选方法的局限，实现了跨应用领域的自动化探索。实验证明，该代理能发现人类常规筛选难以覆盖的潜在候选者。",
+          "url": "https://arxiv.org/abs/2608.20434"
+        },
+        {
+          "date": "2026-08-25",
+          "title": "OpenHuman开源项目获3.7万星关注",
+          "summary": "Rust语言开发的个人记忆系统OpenHuman在GitHub上迅速走红，一周内连续九天成为趋势榜第一，目前星标数达3.7万。该项目主打本地优先架构，将用户生活数据完全保留在本地设备，不依赖云端存储。系统被设计为个人AI超级智能，具备深度研究能力，并能作为编排器调度多代理舰队协同工作。开发者强调其并非通用人工智能，但在记忆构建与工作流编排上迈出了重要一步，旨在解决数据隐私与代理协同的痛点。",
+          "url": "https://github.com/tinyhumansai/openhuman"
         }
       ]
     }

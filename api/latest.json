@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-08-24",
-  "content_date": "2026-08-24",
-  "published_at": "2026-08-24T08:43:39.607806+00:00",
+  "issue_date": "2026-08-25",
+  "content_date": "2026-08-25",
+  "published_at": "2026-08-25T03:29:10.644536+00:00",
   "article_count": 12,
-  "podcast_turns": 23,
+  "podcast_turns": 22,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -17,7 +17,7 @@
       "openai/gpt-oss-120b"
     ],
     "endpoint": "https://integrate.api.nvidia.com/v1",
-    "calls": 14,
+    "calls": 10,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen35-122b-a10b-fp8",
@@ -65,67 +65,80 @@
         "usage": {}
       },
       "podcast": {
-        "model": "nvidia:moonshotai/kimi-k3",
-        "usage": {
-          "prompt_tokens": 2923,
-          "completion_tokens": 924,
-          "total_tokens": 3847,
-          "prompt_tokens_details": {
-            "audio_tokens": null,
-            "cached_tokens": 0
-          }
-        }
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
       },
       "podcast_review": {
-        "model": "nvidia:deepseek-ai/deepseek-v4-flash-0731",
+        "model": "lenovo:qwen35-122b-a10b-fp8",
         "usage": {}
       },
       "podcast_attempts": [
         {
           "attempt": 1,
           "generation": {
-            "model": "nvidia:moonshotai/kimi-k3",
-            "usage": {
-              "prompt_tokens": 2923,
-              "completion_tokens": 924,
-              "total_tokens": 3847,
-              "prompt_tokens_details": {
-                "audio_tokens": null,
-                "cached_tokens": 0
-              }
-            }
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话共20轮，符合18-22轮建议，但需检查内容密度是否足够支撑。",
+              "S1切入话题略显生硬：首句直接抛出Grok数据，缺乏自然过渡或背景铺垫，建议增加一句引入语。",
+              "部分段落信息密度不均：如第15轮S1关于OpenHuman的发言，虽提及3.7万星，但未深入解释其技术路径或市场意义，略显单薄。",
+              "结尾略显仓促：最后两轮（S1和S2）总结过于简略，缺乏对前文讨论的升华或具体展望。",
+              "未充分展开分歧与判断：如关于监管收紧是否影响创新，S1和S2观点趋同，缺乏真正交锋或不同视角的补充。"
+            ],
+            "repair_instruction": "1. 在S1首句前增加一句自然引入，如'今天AI圈最炸裂的消息，莫过于...'。2. 扩充第15轮S1关于OpenHuman的讨论，加入其本地优先架构如何解决隐私痛点的具体案例。3. 在监管话题中，让S2提出相反观点，如'但过度监管可能扼杀初创企业活力'，形成真正分歧。4. 重写结尾两轮，将'跑得更稳、更久'具体化为'在客服、科研、法律等场景的落地案例'，并展望Q4可能爆发的技术方向。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
           },
           "structure_issues": [],
           "review": {
             "pass": true,
-            "issues": [],
-            "repair_instruction": ""
+            "issues": [
+              "轮次为22轮，处于建议范围（18-22轮）的上限，内容密度较高，需注意语速控制。",
+              "S1在开头直接切入话题，符合无寒暄要求，但“暴力实测”一词略显夸张，虽符合口语风格但需确保不误导听众对技术成熟度的判断。",
+              "关于OpenAI越界事件的讨论中，S2提到“阿拉巴马州都发传票调查了”，S1回应“监管大棒挥下来”，此处对监管力度的描述稍显主观，但基于日报事实（阿拉巴马州总检察长发出传票），未构成事实错误。"
+            ],
+            "repair_instruction": "建议S1在提及Grok语音部署时，将“暴力实测”微调为“大规模实战验证”，以更准确反映日报中“规模化部署”的客观描述，避免过度渲染技术风险。同时，检查S2关于监管的表述，确保不将“调查”直接等同于“全面叫停”，可补充说明“目前处于审查阶段，尚未有最终处罚决定”，以保持讨论的严谨性。"
           },
-          "review_model": "nvidia:deepseek-ai/deepseek-v4-flash-0731",
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
           "review_usage": {}
         }
       ],
       "podcast_harness": {
-        "attempts": 1,
-        "best_attempt": 1,
+        "attempts": 2,
+        "best_attempt": 2,
         "final_pass": true,
-        "final_issues": [],
+        "final_issues": [
+          "轮次为22轮，处于建议范围（18-22轮）的上限，内容密度较高，需注意语速控制。",
+          "S1在开头直接切入话题，符合无寒暄要求，但“暴力实测”一词略显夸张，虽符合口语风格但需确保不误导听众对技术成熟度的判断。",
+          "关于OpenAI越界事件的讨论中，S2提到“阿拉巴马州都发传票调查了”，S1回应“监管大棒挥下来”，此处对监管力度的描述稍显主观，但基于日报事实（阿拉巴马州总检察长发出传票），未构成事实错误。"
+        ],
         "structure_issues": [],
         "loop_exhausted": false,
         "converged": false
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-24/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-24/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-24/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-24/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-24.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-24/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-24/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-24.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-24/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-24.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-24.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-24.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-25/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-25/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-25/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-25/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-25.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-25/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-25/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-25.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-25/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-25.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-25.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-25.mp4"
 }
