@@ -3,6 +3,165 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-08-26",
+      "content_date": "2026-08-26",
+      "published_at": "2026-08-26T03:10:23.652389+00:00",
+      "article_count": 12,
+      "podcast_turns": 23,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "moonshotai/kimi-k3",
+          "deepseek-ai/deepseek-v4-flash-0731",
+          "openai/gpt-oss-120b"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 14,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {},
+              "candidate_count": 59
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 60,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+                "previous_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+                "previous_date": "2026-08-24"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 2836,
+              "completion_tokens": 1106,
+              "total_tokens": 3942,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            }
+          },
+          "podcast_review": {
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 3911,
+              "completion_tokens": 246,
+              "total_tokens": 4157,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            }
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "nvidia:moonshotai/kimi-k3",
+                "usage": {
+                  "prompt_tokens": 2836,
+                  "completion_tokens": 1106,
+                  "total_tokens": 3942,
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cached_tokens": 0
+                  }
+                }
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "共23轮，略超建议的18-22轮区间，可考虑合并第19-20轮关于评测研究的讨论以精简节奏",
+                  "S1第15轮'提到医疗'的转场稍显刻意，与前一轮SparseRead的效率话题衔接可以更自然"
+                ],
+                "repair_instruction": "将第19轮（S1提出评测研究）与第20轮（S2回应）中重复引用的数据合并为一轮，由S1提出观点、S2直接给出'榜单是噪声'的判断并补充95.7%数据，总轮次降至22；第15轮开头改为'效率省下来的成本，在医疗场景反而是次要矛盾'，自然过渡到BioMed-Agent-RL的可靠性讨论。"
+              },
+              "review_model": "nvidia:moonshotai/kimi-k3",
+              "review_usage": {
+                "prompt_tokens": 3911,
+                "completion_tokens": 246,
+                "total_tokens": 4157,
+                "prompt_tokens_details": {
+                  "audio_tokens": null,
+                  "cached_tokens": 0
+                }
+              }
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "共23轮，略超建议的18-22轮区间，可考虑合并第19-20轮关于评测研究的讨论以精简节奏",
+              "S1第15轮'提到医疗'的转场稍显刻意，与前一轮SparseRead的效率话题衔接可以更自然"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-26.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-26.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-26.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-26.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-26.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-08-25",
       "content_date": "2026-08-25",
       "published_at": "2026-08-25T03:29:10.644536+00:00",
