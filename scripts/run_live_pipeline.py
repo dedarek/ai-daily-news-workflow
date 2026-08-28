@@ -44,7 +44,8 @@ DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
 DEFAULT_LLM_MODELS = 'moonshotai/kimi-k3,deepseek-ai/deepseek-v4-flash-0731,openai/gpt-oss-120b'
 DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
 DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
-DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:8011/video-api/api'
+DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:1234/video-api/api'
+DEFAULT_VIDEO_API_TOKEN = 'lenovo-ssg-aics-tsd-tic-cd'
 DEFAULT_VIDEO_API_TITLE = 'AI热点新闻'
 VIDEO_API_TRANSIENT_HTTP_CODES = {408, 429, 500, 502, 503, 504}
 DEFAULT_MAX_PUBLISHED_VIDEO_BYTES = 49 * 1024 * 1024
@@ -1608,7 +1609,7 @@ def video_api_token() -> str:
         os.environ.get('AI_DAILY_VIDEO_API_TOKEN')
         or os.environ.get('VIDEO_API_TOKEN')
         or os.environ.get('YOUR_TOKEN')
-        or ''
+        or DEFAULT_VIDEO_API_TOKEN
     ).strip()
 
 

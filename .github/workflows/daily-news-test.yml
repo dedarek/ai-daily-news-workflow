@@ -88,7 +88,7 @@ jobs:
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           AI_DAILY_VIDEO_API_TOKEN: ${{ secrets.AI_DAILY_VIDEO_API_TOKEN || vars.AI_DAILY_VIDEO_API_TOKEN }}
-          AI_DAILY_VIDEO_API_BASE_URL: ${{ vars.AI_DAILY_VIDEO_API_BASE_URL || 'http://8.137.39.142:8011/video-api/api' }}
+          AI_DAILY_VIDEO_API_BASE_URL: ${{ vars.AI_DAILY_VIDEO_API_BASE_URL || 'http://8.137.39.142:1234/video-api/api' }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           NVIDIA_LLM_BASE_URL: https://integrate.api.nvidia.com/v1

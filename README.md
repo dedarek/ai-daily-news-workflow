@@ -61,7 +61,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 | 项 | 值 |
 |----|-----|
 | Token | `AI_DAILY_VIDEO_API_TOKEN` |
-| Endpoint | `POST http://8.137.39.142:8011/video-api/api/videos/generate` |
+| Endpoint | `POST http://8.137.39.142:1234/video-api/api/videos/generate` |
 | 输入 | `podcast-script-YYYY-MM-DD.txt` |
 | 输出 | 下载 job zip，并提取 MP3 + MP4 |
 
@@ -108,7 +108,7 @@ Morning workflow 会在发布 GitHub Pages 后，由独立 job 把日报正文�
 底层调用等价于：
 
 ```bash
-JOB=$(curl -s -X POST http://8.137.39.142:8011/video-api/api/videos/generate \
+JOB=$(curl -s -X POST http://8.137.39.142:1234/video-api/api/videos/generate \
   -H "Authorization: Bearer $AI_DAILY_VIDEO_API_TOKEN" \
   -F script_file=@dist/podcast-script-YYYY-MM-DD.txt \
   -F day=YYYY-MM-DD-HHMM \
@@ -116,7 +116,7 @@ JOB=$(curl -s -X POST http://8.137.39.142:8011/video-api/api/videos/generate \
   | python3 -c "import sys,json;print(json.load(sys.stdin)['job_id'])")
 
 while true; do
-  STATUS=$(curl -s "http://8.137.39.142:8011/video-api/api/jobs/$JOB" \
+  STATUS=$(curl -s "http://8.137.39.142:1234/video-api/api/jobs/$JOB" \
     -H "Authorization: Bearer $AI_DAILY_VIDEO_API_TOKEN" \
     | python3 -c "import sys,json;print(json.load(sys.stdin)['status'])")
   echo "$STATUS"
@@ -125,7 +125,7 @@ while true; do
   sleep "${AI_DAILY_VIDEO_API_POLL_SECONDS:-60}"
 done
 
-curl -L "http://8.137.39.142:8011/video-api/api/jobs/$JOB/download" \
+curl -L "http://8.137.39.142:1234/video-api/api/jobs/$JOB/download" \
   -H "Authorization: Bearer $AI_DAILY_VIDEO_API_TOKEN" \
   -o result.zip
 ```
