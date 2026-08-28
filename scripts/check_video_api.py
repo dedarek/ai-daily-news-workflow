@@ -15,7 +15,7 @@ import sys
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-DEFAULT_BASE_URL = 'http://8.137.39.142:1234/video-api/api'
+DEFAULT_BASE_URL = 'http://8.137.39.142:1234/api'
 DEFAULT_TOKEN = 'lenovo-ssg-aics-tsd-tic-cd'
 
 
