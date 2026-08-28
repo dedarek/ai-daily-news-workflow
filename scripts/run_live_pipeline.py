@@ -404,6 +404,19 @@ def llm_provider_chain(
     if thinking_enabled is None:
         thinking_enabled = os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}
     providers: list[dict[str, object]] = []
+    # NVIDIA is the primary provider. Keep Lenovo last so it remains available
+    # as the final fallback after every configured NVIDIA model is exhausted.
+    nvidia_api_key = normalize_bearer_token(api_key)
+    if nvidia_api_key:
+        providers.append({
+            'name': 'nvidia',
+            'endpoint': endpoint,
+            'models': models,
+            'api_key': nvidia_api_key,
+            'chat_template_kwargs': {'thinking': True}
+            if thinking_enabled
+            else None,
+        })
     lenovo_api_key = normalize_bearer_token(
         os.environ.get('LENOVO_LLM_API_KEY')
         or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY', '')
@@ -423,18 +436,23 @@ def llm_provider_chain(
                 'api_key': lenovo_api_key,
                 'chat_template_kwargs': {'enable_thinking': False},
             })
-    nvidia_api_key = normalize_bearer_token(api_key)
-    if nvidia_api_key:
-        providers.append({
-            'name': 'nvidia',
-            'endpoint': endpoint,
-            'models': models,
-            'api_key': nvidia_api_key,
-            'chat_template_kwargs': {'thinking': True}
-            if thinking_enabled
-            else None,
-        })
     return providers
+
+
+def selection_provider_plan(
+    endpoint: str,
+    models: list[str],
+    api_key: str,
+) -> list[str | None]:
+    """Return normal selection attempts plus a final Lenovo-only fallback."""
+    provider_names = {
+        str(provider.get('name') or '')
+        for provider in llm_provider_chain(endpoint, models, api_key)
+    }
+    plan: list[str | None] = [None, None, None]
+    if {'nvidia', 'lenovo'} <= provider_names:
+        plan.append('lenovo')
+    return plan
 
 
 def has_any_llm_api_key() -> bool:
@@ -749,6 +767,7 @@ def review_cross_day_duplicates(
     selected: list[tuple[Article, str]],
     recent_sent: dict[str, list[dict[str, str]]],
     attempt: int,
+    provider_filter: str | None = None,
 ) -> tuple[list[dict[str, str]], dict, str]:
     current_payload = [
         {
@@ -782,6 +801,7 @@ def review_cross_day_duplicates(
                 user_prompt=prompt,
                 task_name=f'cross_day_dedupe_review_{attempt}_{review_attempt}',
                 thinking_enabled=False,
+                provider_filter=provider_filter,
             )
         except Exception as exc:
             if review_attempt < 2:
@@ -868,7 +888,8 @@ def call_deepseek(
     selection_usage: dict = {}
     selection_model = ''
 
-    for selection_attempt in range(1, 4):
+    provider_plan = selection_provider_plan(endpoint, models, api_key)
+    for selection_attempt, provider_filter in enumerate(provider_plan, start=1):
         available_articles = [
             item for item in candidate_articles if item.url not in blocked_urls
         ]
@@ -900,6 +921,7 @@ def call_deepseek(
             system_prompt=system_prompt,
             user_prompt=selection_prompt,
             task_name=f'selection_{selection_attempt}',
+            provider_filter=provider_filter,
         )
         selection_calls.append({
             'attempt': selection_attempt,
@@ -935,6 +957,7 @@ def call_deepseek(
                 selected=selected,
                 recent_sent=recent_sent,
                 attempt=selection_attempt,
+                provider_filter=provider_filter,
             )
         dedupe_reviews.append({
             'attempt': selection_attempt,
@@ -952,7 +975,11 @@ def call_deepseek(
             flush=True,
         )
     else:
-        raise RuntimeError('Cross-day dedupe review failed after 3 selection attempts')
+        fallback_suffix = ' including final Lenovo fallback' if provider_plan[-1] == 'lenovo' else ''
+        raise RuntimeError(
+            f'Cross-day dedupe review failed after {len(provider_plan)} selection attempts'
+            f'{fallback_suffix}'
+        )
 
     selected_sections = [section for _, section in selected]
     selected_sources = enrich_articles_with_source_text([source for source, _ in selected])
