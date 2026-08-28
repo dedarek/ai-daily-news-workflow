@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Google发布Gemini Omni 1.1 Flash提升生成视频控制",
+    "summary": "Google于2026年8月27日发布了Gemini Omni 1.1 Flash，这是面向开发者的生成视频模型更新。新版支持将场景延伸至40秒，并可手动设定首尾帧，实现平滑的镜头切换。预览分辨率降至360p，加速原型迭代并降低成本；最终输出可升级至4K专业画质。开发者可通过Google AI Studio或Gemini Enterprise Agent Platform直接调用该模型。",
+    "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+    "section": "🔥 今日焦点",
+    "review": "提供细粒度帧控制和4K输出，提升生成视频的专业度，但仍属实验性技术，商业落地需观察成本与质量平衡。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Nvidia斥资129亿美元收购开源平台Hugging Face",
+    "summary": "Nvidia宣布以129亿美元收购开源AI平台Hugging Face。Hugging Face年收入约1.5亿美元，收购估值约为其80倍，且已接近盈利。此举与Nvidia此前五年投入260亿美元发展开源模型的战略相呼应。同时，OpenAI、Anthropic等闭源实验室正自行研发芯片，降低对Nvidia硬件的依赖。收购后Nvidia可能将Hugging Face打造为开放模型的云服务入口，进一步推动自家芯片销量。",
+    "url": "https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away/",
+    "section": "💼 行业动态",
+    "review": "收购强化Nvidia在开源模型生态的布局，可能加速硬件需求，但高估值与竞争芯片自研带来财务与市场风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Z.ai推出GLM-5.3-Flash：国产芯片上高性价比大模型",
+    "summary": "Z.ai发布了新模型GLM-5.3-Flash，拥有3200亿参数，激活参数仅18亿，支持一百万token上下文。在Artificial Analysis的智能指数上得分57，仅比更大版本GLM-5.3低3分，已接近GPT-5.6等水平。每任务成本0.09美元，约为同类模型0.68美元的七分之一，形成显著的性价比优势。该模型全部在国产AI芯片上运行，Z.ai自研软件的吞吐量比首次尝试提升三倍，效能可与Nvidia GPU相当。其在OpenCode和OpenRouter平台上成为当周最受欢迎模型，展示了非Nvidia硬件的可行性。",
+    "url": "https://the-decoder.com/the-chinese-ai-model-glm-5-3-flash-runs-without-nvidia-and-costs-a-fraction-of-what-the-competition-does/",
+    "section": "💼 行业动态",
+    "review": "在国产芯片上实现高性能大模型，显著降低成本，展示了去除Nvidia依赖的可行性，但仍需验证长期稳定性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic推出Claude科研团队计划 免费供科学家使用",
+    "summary": "Anthropic推出Claude科研团队计划，面向全球约一万名学术和非营利研究者免费提供Claude服务。标准席位完全免费，高级席位每月收费15美元，但配备5倍于免费额度的使用配额。Claude可生成并检验假设、编写代码、执行数据分析，并能在笔记本到数百GPU的计算资源间弹性扩展。平台会引用来源、展示计算过程，并在证据不足时主动回退，帮助科研保持可追溯性。支持天体物理、生物、化学、量子计算、统计和材料科学等多领域，并可连接文献数据库和生产力工具。",
+    "url": "https://claude.com/programs/team-plan-for-scientists",
+    "section": "🚀 产品发布",
+    "review": "免费面向科研用户降低AI使用门槛，提升实验 reproducibility，然而付费高级席位的使用限制可能影响大规模项目。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT Work支持代用户登录网站办事",
+    "summary": "OpenAI宣布ChatGPT Work新增能力，可在网页和移动端使用浏览器登录网站并代为操作，且全程不会看到用户的用户名和密码。官方列举的场景包括为新公寓开通水电等公用事业、预约车管所或护照办理、查询报销进度等。有用户转发称，ChatGPT现在可以帮忙买杂货、叫Uber、预约理发，且凭证保持安全。另有用户反馈称，确实通过该功能成功预约并完成了理发。这意味着ChatGPT正从对话工具转向能实际操作用户账户的代理。凭证不暴露给模型的设计是其安全叙事的核心。",
+    "url": "https://x.com/thsottiaux/status/2093074717590921245",
+    "section": "🚀 产品发布",
+    "review": "代理直接操作用户账户把安全风险从内容层面推到交易层面，凭证不可见只是第一步，误操作与授权边界的责任划分仍无答案。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Hugging Face开售399美元开源鸭子机器人Microduck",
+    "summary": "Hugging Face发布开源机器人Microduck，售价399美元，圣诞节前发货。这款25厘米高的鸭子机器人能摇摆行走、用喙抓取最重800克的物品、跌倒后自行起身、蹲下甚至滑旱冰。它配备摄像头、激光雷达和两个惯性测量单元感知环境，行为可在仿真中训练后直接部署到实体，SDK、仿真和完整强化学习训练栈均在GitHub开放。CEO Clem Delangue称其为可用强化学习教新技能的开源机器人，意在降低物理AI门槛。隐私方面，开源虽提供可审计性，但第三方应用仍可经摄像头和麦克风外传数据。",
+    "url": "https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/",
+    "section": "🚀 产品发布",
+    "review": "399美元把具身智能实验门槛拉到消费级，但摄像头进家庭后，开源可审计并不等于数据不出设备，隐私承诺取决于上层应用生态。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic发布MHS研究预览，让AI代理标准化操控实验设备",
+    "summary": "Anthropic开放模型硬件标准（MHS）研究预览，首批面向科研实验室和先进制造机构。MHS让AI代理能并行操作显微镜、液体处理设备、机械臂等仪器，执行从药物发现实验到量子计算机激光校准的任务。传统设备集成通常耗时数周甚至数月，MHS通过标准化驱动程序将其压缩到数小时或数分钟。驱动用读写等简单原语翻译设备指令，并允许用户以自然语言写入设备特性与安全限制，自动生成参考文件供代理使用。代理可通过MCP、命令行和代码文件控制设备，实时调整参数并从部分硬件错误中恢复。该标准模型无关，计划先行共建安全评估再开源。",
+    "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+    "section": "🤖 Agent & 工具",
+    "review": "把设备集成从数周压到分钟级对自动化实验室是实质提速，但让模型直接驱动激光和机械臂，安全限制写进驱动只是底线，真实风险要等开源后接受检验。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "JIT-Agent按需生成智能体Harness，小模型反超GPT-5.6",
+    "summary": "新加坡国立大学团队提出JIT-Agent，一个专为即时生成智能体Harness而训练的模型。研究指出，智能体能力不仅取决于底座模型，记忆管理、规划策略、行动协议和工具编排构成的Harness贡献可能更大，但现有Harness靠手工设计、难以扩展。JIT-Agent将Harness形式化为四模块协议，可针对任务定制、修复并自我演化。配备JIT-Agent后，DeepSeek-V4-Flash在DeepSearchQA上反超GPT-5.6达9.1分，在OdysseyBench上领先4.3分，GLM-5.2最高提升20.2分。生成的Harness与OpenCode、Claude Code等成熟运行时表现相当。",
+    "url": "https://huggingface.co/papers/2608.25593",
+    "section": "💡 前沿研究",
+    "review": "把Harness从手工工程变成可训练能力，等于给弱模型开了外挂，但提升幅度依赖特定基准，能否迁移到真实长任务还需独立验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "StreamPI：为单帧VLA模型补上流式时序记忆",
+    "summary": "针对pi0.5等主流视觉-语言-动作模型只能处理单帧、无法保留历史观测的问题，研究者提出StreamPI流式多模态时序建模框架。其核心是指令锚定时序建模：将每个视觉观测与语言指令组成原子时序单元，单元内部用双向注意力完成跨模态融合，单元之间用因果注意力保持自回归流式推理，使语言指令在任务全程充当持续的语义锚点。为弥合同步训练与真机异步部署的差距，框架引入随机间隔流式训练策略，例如每3帧取一帧可让动作执行更快更平滑，随机化间隔还提升了对帧时序扰动的鲁棒性。借助LLM主干的长度外推能力，StreamPI无需新增参数即可继承单帧预训练权重，并灵活支持单帧与多帧推理。在记忆依赖、精细感知类真机任务及LIBERO仿真基准上，其表现均超过pi0.5。",
+    "url": "https://huggingface.co/papers/2608.26067",
+    "section": "💡 前沿研究",
+    "review": "不增加参数就给单帧VLA装上时序记忆，工程代价低、可直接复用现有权重，这是它最实际的价值。但超越pi0.5的结论目前仅来自论文自报的LIBERO与真机实验，独立复现和更复杂长程任务上的表现仍待验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenMontage：把AI编码助手变成视频制片棚",
+    "summary": "开源项目OpenMontage自称是首个智能体化视频制作系统，目标是把AI编码助手直接变成完整的视频制作工作室。项目内置12条制作管线、100多个工具以及700多个智能体技能与制作知识文件，覆盖视频生产的多个环节。仓库采用AGPL-3.0许可证，目录中包含面向Claude、Codex、Cursor等多种编码助手的适配配置文件，方便不同工具接入。项目已获得超过5.2万星标和6.6千次Fork，单日新增星标超过1200个，社区热度较高。仓库还提供快速上手、提示词示例和渲染演示脚本，降低了试用门槛。",
+    "url": "https://github.com/calesthio/OpenMontage",
+    "section": "🔓 开源热榜",
+    "review": "把视频制作流程封装成智能体可调用的管线，是编码助手能力外溢到内容生产的一个信号。但AGPL许可以及大量技能文件的维护成本，意味着它能否从星标热度转化为稳定生产力，还要看实际产出质量。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "claude-mem：为AI代理提供跨会话持久记忆",
+    "summary": "开源项目claude-mem为AI编码代理提供跨会话的持久上下文能力，解决代理每次会话结束后丢失工作记忆的问题。它会自动捕获代理在会话中的工具调用与操作记录，用AI将其压缩为语义摘要，再在后续会话中把相关上下文重新注入，让代理保持知识连续性。项目最初为Claude Code构建，现已支持OpenClaw、Codex、Gemini、Copilot、OpenCode等多种代理工具。仓库采用Apache-2.0许可证，提供多语言文档，已获得超过9.2万星标和8.1千次Fork，累计提交超过2400次，迭代活跃。",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "section": "🔓 开源热榜",
+    "review": "记忆层正成为代理工具链的标配组件，claude-mem用压缩加回灌的思路成本低、适配面广。风险在于会话内容被持续记录和摘要，隐私敏感场景下的数据边界需要使用者自己把关。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达首款面向智能体的CPU Vera开始规模出货",
+    "summary": "英伟达宣布其首款专为智能体工作负载设计的CPU Vera已开始规模出货，副总裁Ian Buck亲自向生态伙伴交付系统。AWS已收到首台Vera CPU服务器和Vera Rubin GPU，此前Buck还向甲骨文云基础设施以及Anthropic、OpenAI、SpaceXAI三家AI实验室交付了Vera系统。英伟达的逻辑是：智能体AI中大量工作如沙箱运行、工具调用、编排和长上下文检索都依赖CPU而非GPU，传统以核心密度为中心的设计并不适配。Vera集成88个自研Olympus核心，内存带宽达1.2TB/s，在智能体负载上单核性能最高提升1.8倍。OCI计划从2026年起部署数十万颗Vera CPU，成为首个超大规模部署该芯片的云厂商。",
+    "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
+    "section": "💼 行业动态",
+    "review": "英伟达把智能体时代的算力叙事从GPU延伸到CPU，是在为自家生态锁定整机柜话语权。1.8倍性能提升来自官方口径，真实负载下的性价比和与x86、Arm竞品的对比，要等云厂商大规模部署后才能检验。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

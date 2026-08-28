@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-08-26",
-  "content_date": "2026-08-26",
-  "published_at": "2026-08-26T03:10:23.652389+00:00",
+  "issue_date": "2026-08-28",
+  "content_date": "2026-08-28",
+  "published_at": "2026-08-28T09:35:25.814641+00:00",
   "article_count": 12,
-  "podcast_turns": 23,
+  "podcast_turns": 24,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -17,36 +17,54 @@
       "openai/gpt-oss-120b"
     ],
     "endpoint": "https://integrate.api.nvidia.com/v1",
-    "calls": 14,
+    "calls": 8,
     "call_details": {
       "selection": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
-        "usage": {}
+        "model": "nvidia:moonshotai/kimi-k3",
+        "usage": {
+          "prompt_tokens": 15493,
+          "completion_tokens": 529,
+          "total_tokens": 16022,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        }
       },
       "selection_attempts": [
         {
           "attempt": 1,
-          "model": "lenovo:qwen35-122b-a10b-fp8",
-          "usage": {},
-          "candidate_count": 59
+          "model": "nvidia:moonshotai/kimi-k3",
+          "usage": {
+            "prompt_tokens": 15493,
+            "completion_tokens": 529,
+            "total_tokens": 16022,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          },
+          "candidate_count": 60
         }
       ],
       "cross_day_dedupe": {
         "window_days": 7,
-        "recent_sent_count": 60,
-        "exact_url_blocks": [
-          {
-            "current_url": "https://github.com/freestylefly/awesome-gpt-image-2",
-            "previous_url": "https://github.com/freestylefly/awesome-gpt-image-2",
-            "previous_date": "2026-08-24"
-          }
-        ],
+        "recent_sent_count": 48,
+        "exact_url_blocks": [],
         "high_confidence_event_blocks": [],
         "reviews": [
           {
             "attempt": 1,
-            "model": "lenovo:qwen35-122b-a10b-fp8",
-            "usage": {},
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 9413,
+              "completion_tokens": 82,
+              "total_tokens": 9495,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            },
             "duplicates": []
           }
         ],
@@ -54,28 +72,56 @@
       },
       "editorial_batches": [
         {
-          "model": "lenovo:qwen35-122b-a10b-fp8",
-          "usage": {}
+          "model": "nvidia:openai/gpt-oss-120b",
+          "usage": {
+            "prompt_tokens": 5073,
+            "total_tokens": 7605,
+            "completion_tokens": 2532
+          }
         },
         {
-          "model": "lenovo:qwen35-122b-a10b-fp8",
-          "usage": {}
+          "model": "nvidia:moonshotai/kimi-k3",
+          "usage": {
+            "prompt_tokens": 4812,
+            "completion_tokens": 787,
+            "total_tokens": 5599,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          }
         },
         {
-          "model": "lenovo:qwen35-122b-a10b-fp8",
-          "usage": {}
+          "model": "nvidia:moonshotai/kimi-k3",
+          "usage": {
+            "prompt_tokens": 5513,
+            "completion_tokens": 962,
+            "total_tokens": 6475,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          }
         }
       ],
       "digest_summary": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
-        "usage": {}
+        "model": "nvidia:moonshotai/kimi-k3",
+        "usage": {
+          "prompt_tokens": 3234,
+          "completion_tokens": 140,
+          "total_tokens": 3374,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        }
       },
       "podcast": {
         "model": "nvidia:moonshotai/kimi-k3",
         "usage": {
-          "prompt_tokens": 2836,
-          "completion_tokens": 1106,
-          "total_tokens": 3942,
+          "prompt_tokens": 3384,
+          "completion_tokens": 1130,
+          "total_tokens": 4514,
           "prompt_tokens_details": {
             "audio_tokens": null,
             "cached_tokens": 0
@@ -85,9 +131,9 @@
       "podcast_review": {
         "model": "nvidia:moonshotai/kimi-k3",
         "usage": {
-          "prompt_tokens": 3911,
-          "completion_tokens": 246,
-          "total_tokens": 4157,
+          "prompt_tokens": 4457,
+          "completion_tokens": 200,
+          "total_tokens": 4657,
           "prompt_tokens_details": {
             "audio_tokens": null,
             "cached_tokens": 0
@@ -100,9 +146,9 @@
           "generation": {
             "model": "nvidia:moonshotai/kimi-k3",
             "usage": {
-              "prompt_tokens": 2836,
-              "completion_tokens": 1106,
-              "total_tokens": 3942,
+              "prompt_tokens": 3384,
+              "completion_tokens": 1130,
+              "total_tokens": 4514,
               "prompt_tokens_details": {
                 "audio_tokens": null,
                 "cached_tokens": 0
@@ -113,16 +159,16 @@
           "review": {
             "pass": true,
             "issues": [
-              "共23轮，略超建议的18-22轮区间，可考虑合并第19-20轮关于评测研究的讨论以精简节奏",
-              "S1第15轮'提到医疗'的转场稍显刻意，与前一轮SparseRead的效率话题衔接可以更自然"
+              "轮次为24轮，处于上限边缘，略偏长，可考虑精简1-2轮",
+              "S2第8轮'市场反馈是最直接的投票'表述略空泛，信息增量有限"
             ],
-            "repair_instruction": "将第19轮（S1提出评测研究）与第20轮（S2回应）中重复引用的数据合并为一轮，由S1提出观点、S2直接给出'榜单是噪声'的判断并补充95.7%数据，总轮次降至22；第15轮开头改为'效率省下来的成本，在医疗场景反而是次要矛盾'，自然过渡到BioMed-Agent-RL的可靠性讨论。"
+            "repair_instruction": "可将第7、8轮关于GLM-5.3-Flash市场反馈的两轮合并为一轮，把'OpenCode和OpenRouter最受欢迎模型'与'性价比吸引力'压缩进同一轮发言，将总轮次降至22-23轮；合并时保留'长期稳定性待观察'的保留意见，避免只唱赞歌。"
           },
           "review_model": "nvidia:moonshotai/kimi-k3",
           "review_usage": {
-            "prompt_tokens": 3911,
-            "completion_tokens": 246,
-            "total_tokens": 4157,
+            "prompt_tokens": 4457,
+            "completion_tokens": 200,
+            "total_tokens": 4657,
             "prompt_tokens_details": {
               "audio_tokens": null,
               "cached_tokens": 0
@@ -135,8 +181,8 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "共23轮，略超建议的18-22轮区间，可考虑合并第19-20轮关于评测研究的讨论以精简节奏",
-          "S1第15轮'提到医疗'的转场稍显刻意，与前一轮SparseRead的效率话题衔接可以更自然"
+          "轮次为24轮，处于上限边缘，略偏长，可考虑精简1-2轮",
+          "S2第8轮'市场反馈是最直接的投票'表述略空泛，信息增量有限"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -144,16 +190,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-26.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-26.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-26/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-26.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-26.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-26.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-28/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-28/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-28/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-28/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-28.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-28/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-28/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-28.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-28/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-28.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-28.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-28.mp4"
 }
