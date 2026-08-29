@@ -1,0 +1,37 @@
+{
+  "issue_date": "2026-08-29",
+  "reviewed_at": "2026-08-29T19:29:35.652774+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 88,
+    "summary": "整体质量较高：新闻事实与锐评一致、无重复事件，播客为自然双人对话且覆盖主要新闻，仅有少量术语和覆盖度瑕疵。",
+    "issues": [
+      "播客中“Hy4的激活仅49B算子”用词错误，应为“激活参数49B”，“算子”属于术语误用，建议修正。",
+      "播客未覆盖GlucoFM、CommerceAgentBench、GitNexus、Kitesurf四条新闻，覆盖度可接受但略偏重于头条与行业动态。",
+      "播客称Anthropic对齐研究“效率提升上万倍”，原文为“约为生产流程的1.5万倍”，表述基本一致但口语中建议保留量级限定词以免夸大。",
+      "个别锐评（如Co-Scientist条）信息密度高、句子偏长，可读性略有折损，但不构成阻断问题。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "nvidia:moonshotai/kimi-k3",
+  "usage": {
+    "prompt_tokens": 4445,
+    "completion_tokens": 324,
+    "total_tokens": 4769,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    }
+  }
+}
