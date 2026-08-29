@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-08-29",
+  "content_date": "2026-08-29",
+  "published_at": "2026-08-29T08:41:02.551923+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "moonshotai/kimi-k3",
+      "deepseek-ai/deepseek-v4-flash-0731",
+      "openai/gpt-oss-120b"
+    ],
+    "endpoint": "https://integrate.api.nvidia.com/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "nvidia:moonshotai/kimi-k3",
+        "usage": {
+          "prompt_tokens": 15063,
+          "completion_tokens": 1045,
+          "total_tokens": 16108,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        }
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "model": "nvidia:moonshotai/kimi-k3",
+          "usage": {
+            "prompt_tokens": 15063,
+            "completion_tokens": 1045,
+            "total_tokens": 16108,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          },
+          "candidate_count": 58
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 48,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+            "previous_url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+            "previous_date": "2026-08-28"
+          }
+        ],
+        "high_confidence_event_blocks": [
+          {
+            "current_url": "https://www.infoq.cn/article/Z9bIWfsMCIA9yiLUSDvJ?utm_source=rss&utm_medium=article",
+            "previous_url": "https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away/",
+            "previous_date": "2026-08-28",
+            "actions": [
+              "acquisition"
+            ],
+            "entities": [
+              "anthropic",
+              "face",
+              "hugging",
+              "openai"
+            ]
+          }
+        ],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 9458,
+              "completion_tokens": 67,
+              "total_tokens": 9525,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "nvidia:moonshotai/kimi-k3",
+          "usage": {
+            "prompt_tokens": 3559,
+            "completion_tokens": 791,
+            "total_tokens": 4350,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "nvidia:moonshotai/kimi-k3",
+          "usage": {
+            "prompt_tokens": 4985,
+            "completion_tokens": 981,
+            "total_tokens": 5966,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "nvidia:moonshotai/kimi-k3",
+          "usage": {
+            "prompt_tokens": 5585,
+            "completion_tokens": 846,
+            "total_tokens": 6431,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          }
+        }
+      ],
+      "digest_summary": {
+        "model": "nvidia:moonshotai/kimi-k3",
+        "usage": {
+          "prompt_tokens": 3470,
+          "completion_tokens": 139,
+          "total_tokens": 3609,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        }
+      },
+      "podcast": {
+        "model": "nvidia:openai/gpt-oss-120b",
+        "usage": {
+          "prompt_tokens": 4390,
+          "total_tokens": 6794,
+          "completion_tokens": 2404
+        }
+      },
+      "podcast_review": {
+        "model": "nvidia:moonshotai/kimi-k3",
+        "usage": {
+          "prompt_tokens": 4377,
+          "completion_tokens": 370,
+          "total_tokens": 4747,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        }
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "nvidia:openai/gpt-oss-120b",
+            "usage": {
+              "prompt_tokens": 4390,
+              "total_tokens": 6794,
+              "completion_tokens": 2404
+            }
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S2第10轮'激活仅49B算子'表述错误，日报原文为'每token激活49B'指激活参数量，'算子'属于概念误用，口播中会误导听众",
+              "S1第13轮'融资规模已达数十亿美元'表述模糊，日报中小鹏单轮融资超9亿美元、估值63亿美元，'数十亿'缺乏直接依据，建议改为'小鹏单轮融资超9亿美元'",
+              "S2第18轮与S1第19轮关于Co-Scientist的讨论略显重复，两轮都在说'需要外部验证'，信息增量不足"
+            ],
+            "repair_instruction": "1) 将S2第10轮'激活仅49B算子降低推理成本'改为'每token仅激活49B参数，控制了推理成本'；2) 将S1第13轮'融资规模已达数十亿美元'改为'小鹏机器人单轮融资超9亿美元、估值63亿美元'，与日报数字对齐；3) 合并或改写S2第18轮与S1第19轮，让其中一轮补充Co-Scientist的具体成果（如单次尝试长出MoS2单层半导体、30名专家双盲评审），避免两轮都在重复'需要外部复现'的结论。"
+          },
+          "review_model": "nvidia:moonshotai/kimi-k3",
+          "review_usage": {
+            "prompt_tokens": 4377,
+            "completion_tokens": 370,
+            "total_tokens": 4747,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0
+            }
+          }
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S2第10轮'激活仅49B算子'表述错误，日报原文为'每token激活49B'指激活参数量，'算子'属于概念误用，口播中会误导听众",
+          "S1第13轮'融资规模已达数十亿美元'表述模糊，日报中小鹏单轮融资超9亿美元、估值63亿美元，'数十亿'缺乏直接依据，建议改为'小鹏单轮融资超9亿美元'",
+          "S2第18轮与S1第19轮关于Co-Scientist的讨论略显重复，两轮都在说'需要外部验证'，信息增量不足"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-29/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-29/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-29/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-29/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-29.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-29/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-29/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-29.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-29/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-29.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-29.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-29.mp4"
+}
