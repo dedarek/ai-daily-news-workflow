@@ -1,0 +1,542 @@
+[
+  {
+    "title": "阿里Qoder上桌面",
+    "summary": "阿里把 编程桌面端 推到前台，桌宠可语音唤起🧩。它能规划、写码、运行再自检。量子位称已有 600万 用户，企业客户达10万家。",
+    "url": "https://www.qbitai.com/2026/08/480940.html",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LAION drops massive open video dataset with 10 million hours of footage for AI research",
+    "summary": "「LAION」发布「Big Video Dataset」，包含「8000」万个视频、「1000」万小时时长和「5500」万个自动描述片段，是目前规模最大的开放视频研究数据集之一。用该数据集训练的模型在基准上比「InternVid」最高提升「2.1」个百分点；法律上其非商业研究用途可能受「2024」年汉堡法院裁决支持。这对开源视频模型训练和数据生态是一大利好。",
+    "url": "https://the-decoder.com/laion-drops-massive-open-video-dataset-with-10-million-hours-of-footage-for-ai-research/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1752期 - 2026-08-30 16:01",
+    "summary": "本期重点集中在[本地大模型硬件与推理优化]：社区正推动老旧GPU、Mac和超大内存设备运行更大模型，同时[Gemini CLI]发布新夜间版本。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-30_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini Omni会控镜",
+    "summary": "谷歌发布 视频生成模型，Omni 1.1 Flash可延展 40秒 🎞️。模型读取10秒上下文。首尾帧能锁运镜，成片最高到 4K。",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "腾讯混元 Hy4 preview 开源，参与“训练自己”！WorkBuddy实测：有了小型团队交付实力，但还得有人盯",
+    "summary": "腾讯混元「Hy4 preview」宣布开源，并强调可通过「训练自己」机制持续进化；「InfoQ」的「WorkBuddy」实测结果显示，该模型已具备小型团队的交付能力，但在复杂任务中仍需人工盯防。这对关注国内大模型开源和智能体落地的从业者具有参考价值。",
+    "url": "https://www.infoq.cn/article/SxrNXURUimQf4hL83ybj?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1751期 - 2026-08-30 12:00",
+    "summary": "本期值得关注的是[互动式生成内容]的新形态，以及可直接提升信息获取效率的[AI RSS工具]和[Grok X连接器]。社区也在讨论如何用4000美元配置[本地AI硬件]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-30_1200",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "特斯拉Robotaxi扩区",
+    "summary": "马斯克转发 达拉斯扩区图，服务区增至 80平方英里 🚕。新版面积比旧区大158%。Sawyer称当地Robotaxi全程无人监督。",
+    "url": "https://x.com/elonmusk/status/2093763685382500594",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google's WikiSkill gives AI agents a persistent memory of past mistakes to sharpen future performance",
+    "summary": "「Google Research」推出「WikiSkill」框架，让「AI」智能体在每次运行后将失败与成功经验写入类「Wiki」的持久知识库，从而在后续任务中持续改进。实验显示，较大模型提升更明显，而配备「WikiSkill」的小模型也能达到未使用该框架的大模型性能，为智能体长期记忆与能力积累提供了实用方案。",
+    "url": "https://the-decoder.com/google-gives-ai-agents-their-own-wiki-so-they-can-learn-from-mistakes-and-successes/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1750期 - 2026-08-30 08:01",
+    "summary": "本期重点集中在[MiniMax H3 Max]的实时视频生成进展，以及社区对本地模型、量化方案和[Tenstorrent]硬件的实测。智能体开发方面，模型与运行框架解耦仍是降低供应商锁定的关键原则。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-30_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Neuralink演示意念操控",
+    "summary": "Neuralink相关账号放出 脑机演示视频，瘫痪男子用 意念 🧠控光标。现场能下棋。还能玩马里奥赛车，交互延迟看起来很低。",
+    "url": "https://x.com/cb_doge/status/2093648315271590138",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic wants to do for physical hardware what its Model Context Protocol did for software",
+    "summary": "「Anthropic」推出「Model Hardware Standard」，意图像「MCP」统一软件工具那样为机械臂、实验仪器等物理硬件提供统一的智能体接入接口。早期测试中设备集成时间从数周缩短到数小时，但「Claude」在物理因果理解上仍有局限，目前仍需人工监督，显示出软硬件智能体标准化的潜力与挑战。",
+    "url": "https://the-decoder.com/anthropic-wants-to-do-for-physical-hardware-what-its-model-context-protocol-did-for-software/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1749期 - 2026-08-30 04:01",
+    "summary": "本期重点集中在[开放模型竞争]与[本地推理优化]两条线：GLM-5.3在Terminal-Bench 4.0中击败GPT-5.6，社区则推进百万上下文与CPU/混合推理实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-30_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude插件目录开放",
+    "summary": "Anthropic在 插件目录仓库 放出官方集合，开发者筛选更快🧭。项目已有 35028 星。Fork达3936，插件信任成本会下降。",
+    "url": "https://github.com/anthropics/claude-plugins-official",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/4078ac41bdf75d5da306a8214384bfa54c85c4b6: [c10d] Make nccl2 the default NCCL backend (#192281)",
+    "summary": "「PyTorch」提交将「nccl2」设为默认「NCCL」后端，不再要求用户通过环境变量显式开启。未设置变量或设为「TORCH_DIST_USE_NCCL2=1」时走「nccl2」，设为「0」或显式指定「nccl-legacy」仍可回退；默认切换也暴露出包括跨「rank」复用设备「0」在内的若干兼容性缺口。该变更让新版「NCCL」后端成为分布式训练默认路径，有助于收敛性能与维护成本。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F4078ac41bdf75d5da306a8214384bfa54c85c4b6",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1748期 - 2026-08-30 00:01",
+    "summary": "本期重点是[Hy4官方1-bit量化]大幅降低部署体积，以及开源OCR实现[20ms PDF转Markdown]。此外，[Claude自训练]成本实验与本地推理硬件进展值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-30_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude自训Claude",
+    "summary": "Anthropic提出 AAR，Claude可查论文、提方案、造数据⚙️。量子位在 自动对齐研究 中称，API成本约每小时4美元。10类安全问题均有改善，监控仍发现作弊尝试。",
+    "url": "https://www.qbitai.com/2026/08/481223.html",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+    "summary": "「Anthropic」研究员展示了自我改进「AI」的初步成果：在「10」个针对特定错位行为的基准上，自动化系统均实现性能提升，同时未损害整体表现。这表明通过自动化优化循环可以在不牺牲通用能力的前提下针对性地修正模型行为，对「AI」安全与对齐研究有参考意义。",
+    "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1747期 - 2026-08-29 20:00",
+    "summary": "本期重点是[Midjourney风格代码]实用分享，以及社区对[DGX Spark]、[Qwen3.8-Next]本地推理性能的新实测；同时[Gemini CLI]和[Codex]发布了版本更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-29_2000",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "PILOT边跑边改",
+    "summary": "长程代理论文 提出PILOT，用主管实时纠偏🧭。执行经验会蒸馏成技能。Terminal-Bench 2.0最高提升 9.8点，输出令牌降42.9%。",
+    "url": "https://huggingface.co/papers/2608.26530",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google Deepmind's AI Co-Scientist now plans experiments, runs lab equipment, and writes scientific papers",
+    "summary": "「Google DeepMind」扩展「Co-Scientist」，使其从单纯的假设生成器发展为能规划实验、操作实验设备并撰写科学论文的实验室研究系统。在材料合成、医学「AI」架构自主开发等三个学科中，这个基于「Gemini」的多智能体系统均产出了经实验验证的结果，标志「AI」科学发现从辅助建议迈向闭环实验执行。",
+    "url": "https://the-decoder.com/google-deepminds-ai-co-scientist-now-plans-experiments-runs-lab-equipment-and-writes-scientific-papers/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1746期 - 2026-08-29 16:01",
+    "summary": "本期重点包括[GLM-5.3-Flash正式GA]及Terminal Bench 4.0新评测，显示模型部署与基准表现仍需结合基础设施观察。社区还分享了[本地推理提速]、非Transformer架构和自学习模型治理等实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-29_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Zero-WAM看视频干活",
+    "summary": "Zero-WAM通过 机器人泛化研究 展示人类视频指导机械臂🎥。HumanGen含 7.42万 配对。RoboTwin 2.0未见任务成功率47%，领先基线29.5点。",
+    "url": "https://huggingface.co/papers/2608.26103",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Triton 3.8.0 Release Notes",
+    "summary": "「Triton」发布「3.8.0」版本，涉及前端方言、编译器后端、「AMD/HIP」与「NVIDIA」后端、「Gluon」布局以及性能分析等多个模块的更新。其中「@triton.aggregate」和「@gluon.aggregate」成为公共「API」，聚合类型支持继承字段、默认值、生成构造函数和不可变实例等特性，为「GPU」内核开发提供更强抽象能力。该版本对使用「Triton」编写和优化高性能算子的一线开发者较为重要。",
+    "url": "https://github.com/triton-lang/triton/releases/tag/v3.8.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1745期 - 2026-08-29 12:03",
+    "summary": "本期焦点是[OpenAI拟终止Cursor模型接入]引发的生态竞争讨论，以及社区围绕[Qwen3.8 Flash Next本地推理优化]展开的新实践。端侧生成模型、专用本地AI硬件和数据标注工具也有进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-29_1203",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TTPO无标签提推理",
+    "summary": "策略优化论文 主打测试时训练，无需真值标签🧮。它蒸馏一致回答。Qwen3-1.7B从38.0%升至 45.2%。",
+    "url": "https://huggingface.co/papers/2608.27448",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Deploy an Open Model from Checkpoint to Inference in Two Commands with NVIDIA TensorRT Model Connect",
+    "summary": "「NVIDIA」推出「TensorRT Model Connect」，号称只需两条命令即可将开放模型从检查点部署到推理服务，省去模型特定转换和预处理等繁琐步骤。这对希望快速在原生应用中集成最新开源模型的开发者来说，降低了「TensorRT」推理栈的使用门槛。",
+    "url": "https://developer.nvidia.com/blog/deploy-an-open-model-from-checkpoint-to-inference-in-two-commands-with-nvidia-tensorrt-model-connect/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1744期 - 2026-08-29 04:01",
+    "summary": "本期重点关注[AI自主对齐]研究进展，以及[科研智能工作流]和[Agent生产化]的新实践。多家公司同时披露了智能体评测、成本控制与现实任务执行方面的落地案例。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-29_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "三维资产更可编辑",
+    "summary": "Procedura在 装配建模论文 中把3D形状写成代码🔧。Luce则用 重光资产研究 统一几何与 PBR。前者强调编译校验，后者FID提升28%。",
+    "url": "https://huggingface.co/papers/2608.26238",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10684",
+    "summary": "「llama.cpp」的「SYCL」后端改进了「--fit」算法，使其更好地遵循「--fit-target」，准确计算给定上下文大小下的实际峰值「VRAM」需求。修复后，报告的上下文大小可能下降但能避免「OOM」，同时减少因过度保守而预留过多显存的问题，该改动已在「Arc B70」上测试。这有助于「SYCL/Intel GPU」用户在显存有限时更合理地分配上下文。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10684",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1743期 - 2026-08-29 00:01",
+    "summary": "本期重点是[GLM-5.3正式开源权重]及[Gemini Omni 1.1 Flash]视频生成能力更新；同时，AI基础设施投资、GPU工具采用率和本地模型部署实践持续升温。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-29_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "世界模型开始严测",
+    "summary": "PAWBench用 概率对齐基准 检查视频模型🎲。GameWAM在 游戏动作模型 中预测画面和键鼠.UrbanGround用 城市智能体基准 复刻香港，远程导航仍会累错。",
+    "url": "https://huggingface.co/papers/2608.27345",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788032998",
+    "summary": "该「PyTorch」提交为流水线并行的调度动作添加「mark_kernels」注释，用于在「CUDA Graph」中标记内核边界。这一改动可改善流水线调度与「CUDA Graph」捕获的兼容性，降低训练时的内核启动开销，对使用「PyTorch」流水线并行的大模型训练用户有实际价值。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788032998",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "音乐版权火烧Anthropic",
+    "summary": "索尼与华纳在 音乐版权诉讼 中起诉Anthropic⚖️。它们指控训练数据侵权。若按最高额计算，索赔可能达 数十亿 美元。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10683",
+    "summary": "「llama.cpp」的「Vulkan」后端合并了重复的「fastdiv」函数，并重命名了用于小除数优化的版本，删除了多余实现。这是代码清理和小幅优化，有助于降低「Vulkan」后端维护复杂度并可能带来轻微性能收益，对使用「Vulkan」推理的用户影响有限但保持代码库健康。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10683",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达优势越过GPU",
+    "summary": "TechCrunch称 系统级优势 正成为英伟达新护城河🧭。Vera CPU统筹存储与流量。机架网络降低每瓦令牌，部分操作约 三倍 提升。",
+    "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10682",
+    "summary": "llama.cpp 合并了针对 M1 Max 的 Metal 后端 fa-vec 调优补丁，为 Apple Silicon 上的 flash attention 向量化路径增加特定优化。该变更纳入 macOS Apple Silicon 构建矩阵，有助于提升 M1 Max 设备上的推理吞吐。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10682",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10681",
+    "summary": "该提交将 Vulkan 后端的 mul_mat_id 内核 padding 策略从 N 维改为 K 维。因为该内核通过共享内存查找表间接访问行索引，不会产生行坐标越界，但 K 维缺少边界检查，改 padding 后可避免潜在越界。目前该修复已覆盖多组 Vulkan 构建矩阵。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10681",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中国人形机器人领跑",
+    "summary": "Rohan转述 机器人出货数据，称五家中企拿下 86% 份额🚀。上半年全球出货超2.2万台。同比接近300%，英伟达也在推机器人CUDA打法。",
+    "url": "https://x.com/rohanpaul_ai/status/2093771274480918724",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788028080",
+    "summary": "PyTorch ROCm 相关变更，为 native BMM 外积内核的启动增加保护，以规避 HIP 工作项在特定 shape 或参数下触发的问题。该 guard 主要提升 ROCm 平台上批量矩阵乘法路径的稳定性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788028080",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "推理栈让模型变笨",
+    "summary": "量子位在 本地部署实验 中指出，同权重也会漂移🔎。INT4 KV缓存会拖垮工具调用。一个vLLM镜像含 734 个依赖，任一差异都可能改token。",
+    "url": "https://www.qbitai.com/2026/08/481372.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788025796: [MPS] Fix linear backward SIGABRT with a 1-D weight (#187989)",
+    "summary": "修复 PyTorch MPS 后端在 linear 权重为 1-D 形状时的反向崩溃。前向已通过 unsqueeze 将权重扩展为 [1, in_features]，反向此前未镜像该处理，导致 rank-1 与 rank-1 非法 matmul，触发 MPSGraph 验证失败 SIGABRT。修复后 1-D 权重的线性层在 macOS GPU 上可正常求导训练。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788025796",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Code曝注入风险",
+    "summary": "报告称 提示注入测试 可劫持Auto Mode🕸️。普通网页摘要就可能诱导恶码。受限实验成功率达 60%至80%。",
+    "url": "http://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651345572&idx=2&sn=356e9141a2397aa45c544110576e4104&chksm=bc5bf490e6f1417988d37fc564d7327b2c6e91a38a0783b84d90d35843c31360a77a93e14618&scene=0&xtrack=1#rd",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/1782e8ec673e736ffda3414fd921f3c1b1b62002: [MPS] Fix linear backward SIGABRT with a 1-D weight (#187989)",
+    "summary": "与 #187989 相同的 MPS 修复合入 trunk：解决 linear 使用 1-D 权重时反向传播将 grad_input 与 grad_weight 降为非法 rank-1 matmul，从而避免 MPSGraph 验证阶段的 SIGABRT。该补丁对齐了前向的 unsqueeze 语义，使 macOS GPU 训练更稳定。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F1782e8ec673e736ffda3414fd921f3c1b1b62002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "scientific-agent-skills走红",
+    "summary": "科研技能库 把Agent变成科研助手🧪。项目已有 37.9k 星。内置165个技能，覆盖医药研发与科学数据库。",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788024140: Revert \"[c10d] Make nccl2 the default NCCL backend (#192281)\"",
+    "summary": "PyTorch 自动回滚了将 nccl2 设为默认 NCCL 后端的 PR #192281。该操作由 pytorch-auto-revert 自动触发，说明变更可能引发内部或 CI 问题，分布式训练用户可继续默认使用原有 NCCL 后端路径。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788024140",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenMontage做视频片场",
+    "summary": "开源视频工厂 覆盖十二条生产管线🛠️。百余工具可调度。七百个技能文件沉淀剪辑经验，项目已有 54k 星。",
+    "url": "https://github.com/calesthio/OpenMontage",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenMAIC做智能课堂",
+    "summary": "清华系 多智能体课堂 主打沉浸教学🎓。多个Agent协同讲授。项目已有 22.2k 星，一键体验降低上手门槛。",
+    "url": "https://github.com/THU-MAIC/OpenMAIC",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/454d00cb0b23ad1da94e7ca96a7af69fbe3e2269",
+    "summary": "PyTorch 修复 XPU Inductor loader fallback 路径中的外部运行库路径保留问题，可避免在 Intel GPU 等加速器上动态加载运行库时路径丢失。该变更提升 XPU 编译与运行时的库解析稳定性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F454d00cb0b23ad1da94e7ca96a7af69fbe3e2269",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/6060fdb0ae15b62cf04fd50d20fabf2eb84f33b2: Fix FakeTensor wrapping for meta tensor constructor (#186188)",
+    "summary": "修复 C++ meta tensor 构造函数在 Meta 快捷路径直接返回、绕过 FakeTensorMode 派发的问题。现在保留零 CPU 分配的快捷路径，同时继续走 lift_fresh 逻辑，并区分请求设备与实际构造设备，确保 storage-backed 输入在设备移动时正确。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F6060fdb0ae15b62cf04fd50d20fabf2eb84f33b2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787985328: Revert \"Drop unused includes in c10 (#194959)\"",
+    "summary": "回滚了 c10 清理未使用头文件的 PR #194959，因为移除 c10/util/Exception.cpp 中的头文件导致内部构建报错 std::cerr 未声明。说明即使静态分析提示 unused，仍可能隐藏实际的符号依赖。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787985328",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1787982632",
+    "summary": "PyTorch 刷新了 pr_time_benchmarks 中的 add_loop_eager_dynamic 和 add_loop_inductor 基准数据，用于跟踪 eager 与 Inductor 动态路径的性能变化。此类基准更新为持续性能回归监控提供基线。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787982632",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10680: snapdragon: python SDK setup (Windows) (#27903)",
+    "summary": "llama.cpp 将 Snapdragon 平台的 Windows SDK 安装脚本从 PowerShell 移植到 Python setup-sdk.py，方便安装 Hexagon 与 OpenCL SDK。同时重命名脚本并修正日志输出，提升高通平台在 Windows 上的开发体验。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10680",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10679",
+    "summary": "llama.cpp 的 bench 工具新增 --tensor-read-lazy 选项，并将相关 lazy mode 别名重命名为 LLAMA_LAZY_MODE_*。该选项有助于按需读取张量，可能降低测试或运行时的显存压力。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10679",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10678",
+    "summary": "llama.cpp 针对 qwen4exp 模型减少了计算图切分数量，以降低调度开销并提升推理效率。该优化对 Qwen 系列实验模型的部署性能有直接帮助。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10678",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components",
+    "summary": "Salesforce 借助 SageMaker Inference Component 的 SchedulingConfig 参数将模型副本分布到多个可用区，实现 Multi-AZ 高可用合规。该方法保留多模型共宿主机的成本优势，无需牺牲效率即可满足高可用要求。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/spreading-the-load-how-salesforce-met-multi-az-ha-with-sagemaker-inference-components/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Agent 时代，为什么有人开始重新造 Google？",
+    "summary": "InfoQ 中文讨论了 Agent 时代为什么有人开始重新构建类似 Google 的信息入口。随着智能体需要结构化、可调用的信息源，搜索和浏览的交互模式可能被重新定义，催生新的信息聚合平台。",
+    "url": "https://www.infoq.cn/article/KbbHdAQFxQM7AJIYMLqR?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.33.2",
+    "summary": "Ollama v0.33.2 发布，app 恢复跟随系统外观并修复深色模式，macOS 应用会正确交接给已运行实例，避免启动第二个进程。同时 Claude Desktop 代理在模型目录更新时不再中断进行中的请求。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.33.2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "下一层抽象：从UX角度思考Agentic OS的样貌",
+    "summary": "InfoQ 中文从用户体验角度探讨 Agentic OS 的下一层抽象，分析智能体操作系统在交互方式、界面组织和信息架构上应如何适配多智能体工作流。文章关注的是面向用户的操作系统层抽象而非底层框架。",
+    "url": "https://www.infoq.cn/article/c4zPz7WHXryL5Erw7xop?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Token消耗减少75%，千问办公创造了新的“省钱模式”",
+    "summary": "千问办公实现 Token 消耗减少 75%，形成新的成本节省模式。这对将千问用于文档处理、表格分析等办公场景的团队有直接参考价值，也在大模型推理成本优化上提供了实践案例。",
+    "url": "https://www.infoq.cn/article/70zHFKxwRRGIjBO8EUtC?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Decathlon runs demand forecasting at scale with Chronos-2",
+    "summary": "迪卡侬在 AWS 上部署 Chronos-2 进行大规模周度需求预测，覆盖数万种产品和多个大洲。该方案将预测准确率提升 11 到 15 个百分点，并在仅用 CPU 实例的情况下每周推理成本约 0.03 美元，同时降低运维复杂度。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

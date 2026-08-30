@@ -3,6 +3,221 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-08-30",
+      "content_date": "2026-08-30",
+      "published_at": "2026-08-30T08:39:28.089605+00:00",
+      "article_count": 12,
+      "podcast_turns": 22,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "moonshotai/kimi-k3",
+          "deepseek-ai/deepseek-v4-flash-0731",
+          "openai/gpt-oss-120b"
+        ],
+        "endpoint": "https://integrate.api.nvidia.com/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 18107,
+              "completion_tokens": 518,
+              "total_tokens": 18625,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            }
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "model": "nvidia:moonshotai/kimi-k3",
+              "usage": {
+                "prompt_tokens": 18107,
+                "completion_tokens": 518,
+                "total_tokens": 18625,
+                "prompt_tokens_details": {
+                  "audio_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "candidate_count": 59
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 60,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://github.com/calesthio/OpenMontage",
+                "previous_url": "https://github.com/calesthio/OpenMontage",
+                "previous_date": "2026-08-28"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "nvidia:moonshotai/kimi-k3",
+                "usage": {
+                  "prompt_tokens": 12062,
+                  "completion_tokens": 155,
+                  "total_tokens": 12217,
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cached_tokens": 0
+                  }
+                },
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "nvidia:moonshotai/kimi-k3",
+              "usage": {
+                "prompt_tokens": 4623,
+                "completion_tokens": 786,
+                "total_tokens": 5409,
+                "prompt_tokens_details": {
+                  "audio_tokens": null,
+                  "cached_tokens": 0
+                }
+              }
+            },
+            {
+              "model": "nvidia:moonshotai/kimi-k3",
+              "usage": {
+                "prompt_tokens": 5514,
+                "completion_tokens": 1017,
+                "total_tokens": 6531,
+                "prompt_tokens_details": {
+                  "audio_tokens": null,
+                  "cached_tokens": 0
+                }
+              }
+            },
+            {
+              "model": "nvidia:moonshotai/kimi-k3",
+              "usage": {
+                "prompt_tokens": 5180,
+                "completion_tokens": 879,
+                "total_tokens": 6059,
+                "prompt_tokens_details": {
+                  "audio_tokens": null,
+                  "cached_tokens": 0
+                }
+              }
+            }
+          ],
+          "digest_summary": {
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 3497,
+              "completion_tokens": 111,
+              "total_tokens": 3608,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            }
+          },
+          "podcast": {
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 3647,
+              "completion_tokens": 990,
+              "total_tokens": 4637,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            }
+          },
+          "podcast_review": {
+            "model": "nvidia:moonshotai/kimi-k3",
+            "usage": {
+              "prompt_tokens": 4603,
+              "completion_tokens": 211,
+              "total_tokens": 4814,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cached_tokens": 0
+              }
+            }
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "nvidia:moonshotai/kimi-k3",
+                "usage": {
+                  "prompt_tokens": 3647,
+                  "completion_tokens": 990,
+                  "total_tokens": 4637,
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cached_tokens": 0
+                  }
+                }
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S2第6轮'具体怎么运作的？'和第8轮'效果呢？'连续两轮短问句，略显采访腔，可合并为一轮追问",
+                  "结尾S2的takeaway稍长且偏总结陈词，口语感略弱"
+                ],
+                "repair_instruction": "将S2第6轮与第8轮合并为一轮追问（如'具体怎么运作的？效果怎么样？'），并把结尾S2的总结压缩到80字以内、去掉'takeaway'这类书面词，改为更口语的收束判断。"
+              },
+              "review_model": "nvidia:moonshotai/kimi-k3",
+              "review_usage": {
+                "prompt_tokens": 4603,
+                "completion_tokens": 211,
+                "total_tokens": 4814,
+                "prompt_tokens_details": {
+                  "audio_tokens": null,
+                  "cached_tokens": 0
+                }
+              }
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S2第6轮'具体怎么运作的？'和第8轮'效果呢？'连续两轮短问句，略显采访腔，可合并为一轮追问",
+              "结尾S2的takeaway稍长且偏总结陈词，口语感略弱"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-30/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-30/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-30/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-30/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-08-30.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-30/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-30/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-08-30.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-08-30/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-08-30.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-08-30.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-08-30.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-08-29",
       "content_date": "2026-08-29",
       "published_at": "2026-08-29T08:41:02.551923+00:00",
