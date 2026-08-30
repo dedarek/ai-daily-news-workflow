@@ -1,0 +1,36 @@
+{
+  "issue_date": "2026-08-30",
+  "reviewed_at": "2026-08-30T18:18:01.924351+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 88,
+    "summary": "整体质量较高：新闻事实与锐评一致、无重复，播客为自然双人对话且与新闻内容吻合，仅有少量细节瑕疵。",
+    "issues": [
+      "scientific-agent-skills 的锐评提到“19万科学家使用”这一数字，但该数字并未出现在对应新闻正文中，属于锐评引入了正文之外的信息，建议核实或在正文中补充来源。",
+      "播客未覆盖特斯拉Robotaxi、Neuralink、Anthropic插件目录、TTPO及两个开源项目，选题取舍可接受，但若日报定位是全量覆盖，可在口播中一句话带过未展开条目。",
+      "播客结尾收束自然，但S2最后一段的'takeaway'略带总结腔，口语化程度可再打磨。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "nvidia:moonshotai/kimi-k3",
+  "usage": {
+    "prompt_tokens": 4671,
+    "completion_tokens": 299,
+    "total_tokens": 4970,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    }
+  }
+}
