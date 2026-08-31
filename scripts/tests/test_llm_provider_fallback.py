@@ -35,14 +35,14 @@ class LlmProviderTests(unittest.TestCase):
         self.assertEqual(providers[0]['models'], ['lenovo-model'])
         self.assertEqual(providers[0]['chat_template_kwargs'], {'enable_thinking': False})
 
-    def test_selection_uses_three_lenovo_only_attempts(self) -> None:
+    def test_selection_uses_five_lenovo_only_attempts(self) -> None:
         plan = pipeline.selection_provider_plan(
             'https://lenovo.test/v1',
             ['lenovo-model'],
             'lenovo-key',
         )
 
-        self.assertEqual(plan, [None, None, None])
+        self.assertEqual(plan, [None, None, None, None, None])
 
     def test_request_uses_lenovo_even_when_nvidia_environment_exists(self) -> None:
         env = {

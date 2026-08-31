@@ -417,9 +417,9 @@ def selection_provider_plan(
     models: list[str],
     api_key: str,
 ) -> list[str | None]:
-    """Return the three Lenovo-only selection attempts."""
+    """Allow dedupe feedback to converge across five Lenovo-only selections."""
     del endpoint, models, api_key
-    return [None, None, None]
+    return [None] * 5
 
 
 def llm_api_key() -> str:
