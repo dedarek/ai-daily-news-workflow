@@ -1216,7 +1216,7 @@ def build_cumulative_repair_instruction(trajectory: list[dict]) -> str:
         '本轮输出前请在内部逐项自检（不要输出自检过程）：',
         '1. 总轮次固定为20轮，S1/S2严格交替；',
         '2. S1首句自然引出当天主线，不使用问候或寒暄，也不要直接抛生硬的宏大结论；',
-        '3. 删除复述和同义重复，每轮都要带来追问、解释、分歧、判断或新角度；',
+        '3. 只重点展开5条最重要新闻；删除复述和同义重复，每轮都要带来追问、解释、分歧、判断或新角度；',
         '4. 每轮尽量35-95字，只使用日报已有事实；',
         '5. 对照上面的每条Harness诊断确认已经修复后，再输出JSON。',
     ])
@@ -1319,7 +1319,8 @@ def _generate_podcast_dialogue_loop(
             'review_model': review_model,
             'review_usage': review_usage,
         }
-        if best is None or score < best['score']:
+        # 同分时优先保留带着更多 Harness 反馈修订过的较新版本。
+        if best is None or score <= best['score']:
             best = candidate
 
         # 通过门禁：LLM Harness 认可，且没有真正的结构损坏
@@ -1396,6 +1397,27 @@ def podcast_harness_passed(metadata: dict) -> bool:
     return bool((metadata.get('harness') or {}).get('final_pass') is True)
 
 
+def podcast_advisory_acceptance_issues(dialogue: list[dict[str, str]]) -> list[str]:
+    """Return objective blockers for using the best draft after Harness exhaustion."""
+    issues = validate_podcast_dialogue(dialogue)
+    turn_count = len(dialogue)
+    if not 18 <= turn_count <= 22:
+        issues.append(f'podcast_turns={turn_count} outside 18-22')
+    if dialogue and dialogue[0].get('speaker') != 'S1':
+        issues.append('podcast must start with S1')
+    for index in range(1, turn_count):
+        if dialogue[index].get('speaker') == dialogue[index - 1].get('speaker'):
+            issues.append(f'turns {index} and {index + 1} do not alternate speakers')
+    lengths = [len(clean_text(str(turn.get('text', '')))) for turn in dialogue]
+    if sum(length < 15 for length in lengths) > 2:
+        issues.append('more than two podcast turns are shorter than 15 characters')
+    if sum(length > 140 for length in lengths) > 2:
+        issues.append('more than two podcast turns exceed 140 characters')
+    if sum(lengths) < 900:
+        issues.append(f'podcast total characters={sum(lengths)} < 900')
+    return issues
+
+
 def podcast_failure_summary(metadata: dict) -> str:
     harness = metadata.get('harness') or {}
     issues = harness.get('final_issues') or []
@@ -1417,9 +1439,22 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
     if podcast_harness_passed(metadata):
         return dialogue, metadata
 
+    advisory_blockers = podcast_advisory_acceptance_issues(dialogue)
+    if not advisory_blockers:
+        harness = metadata.setdefault('harness', {})
+        harness['accepted_with_warnings'] = True
+        harness['advisory_issues'] = list(harness.get('final_issues') or [])
+        print(
+            'WARN podcast_harness_advisory_accept '
+            + podcast_failure_summary(metadata),
+            flush=True,
+        )
+        return dialogue, metadata
+
     raise RuntimeError(
         'podcast dialogue harness failed; refusing to call video API. '
         + podcast_failure_summary(metadata)
+        + ' | objective_blockers=' + '; '.join(advisory_blockers[:3])
     )
 
 

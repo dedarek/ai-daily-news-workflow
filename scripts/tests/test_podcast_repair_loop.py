@@ -13,6 +13,28 @@ import run_live_pipeline as pipeline  # noqa: E402
 
 
 class PodcastRepairLoopTests(unittest.TestCase):
+    def test_structurally_sound_dialogue_can_be_accepted_with_harness_warnings(self) -> None:
+        dialogue = [
+            {
+                'speaker': 'S1' if index % 2 == 0 else 'S2',
+                'text': '这是一段包含事实解释、观点承接和行业判断的自然播客发言，用来满足客观发布质量底线，并帮助听众理解新闻之间的联系与实际影响。',
+            }
+            for index in range(20)
+        ]
+
+        self.assertEqual(pipeline.podcast_advisory_acceptance_issues(dialogue), [])
+
+    def test_advisory_acceptance_rejects_short_or_non_alternating_dialogue(self) -> None:
+        dialogue = [
+            {'speaker': 'S1', 'text': '内容太短。'},
+            {'speaker': 'S1', 'text': '仍然太短。'},
+        ]
+
+        issues = pipeline.podcast_advisory_acceptance_issues(dialogue)
+
+        self.assertTrue(any('outside 18-22' in issue for issue in issues))
+        self.assertTrue(any('do not alternate' in issue for issue in issues))
+
     def test_repair_context_contains_failed_draft_and_harness_diagnostics(self) -> None:
         trajectory = [{
             'attempt': 1,
