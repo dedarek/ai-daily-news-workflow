@@ -33,7 +33,7 @@ def main() -> int:
     print(f'token    : {"from env" if env_token else "built-in default"}')
 
     probe_url = f'{base_url}/jobs/__healthcheck_probe__'
-    request = Request(probe_url, headers={'Authorization': token})
+    request = Request(probe_url, headers={'Authorization': f'Bearer {token}'})
     try:
         with urlopen(request, timeout=15) as response:
             print(f'HTTP {response.status}: unexpected success; service is reachable')
