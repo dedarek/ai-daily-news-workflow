@@ -1139,13 +1139,12 @@ def review_podcast_dialogue(
 
 
 def build_cumulative_repair_instruction(trajectory: list[dict]) -> str:
-    """把历次审查反馈汇总成累积修复指令，让 agent 带着完整轨迹持续优化，
-    而不是每轮孤立地只看上一条指令。"""
+    """把失败原稿和历次 Harness 诊断交给下一轮做定向修复。"""
     if not trajectory:
         return ''
     lines = [
-        f'这是第 {len(trajectory) + 1} 次生成。前几次的终审反馈如下，'
-        '请这一次一并解决所有历史问题，不要重复同样的错误：'
+        f'这是第 {len(trajectory) + 1} 次生成，任务是修订上一版，不是脱离诊断重新创作。',
+        '以下是历次 Harness 的完整诊断；本次必须逐项关闭仍然存在的问题：',
     ]
     for record in trajectory:
         parts: list[str] = []
@@ -1153,12 +1152,22 @@ def build_cumulative_repair_instruction(trajectory: list[dict]) -> str:
             parts.append('结构损坏：' + '；'.join(record['structure_issues']))
         if record.get('review_issues'):
             parts.append('质量问题：' + '；'.join(record['review_issues']))
+        if record.get('repair_instruction'):
+            parts.append('Harness修复指令：' + str(record['repair_instruction']))
         detail = '；'.join(parts) if parts else '（未记录具体问题）'
         lines.append(f'- 第{record["attempt"]}次：{detail}')
-    latest = trajectory[-1].get('repair_instruction')
-    if latest:
-        lines.append('最近一次审查给出的具体修复建议：' + latest)
-    lines.append('请在不新增任何事实的前提下，产出一版真正自然、有讨论深度、能通过终审的双人对话。')
+
+    latest = trajectory[-1]
+    lines.extend([
+        '上一版完整对话如下。请直接以它为修订底稿：',
+        json.dumps(latest.get('dialogue') or [], ensure_ascii=False),
+        '本轮输出前请在内部逐项自检（不要输出自检过程）：',
+        '1. 总轮次固定为20轮，S1/S2严格交替；',
+        '2. S1首句自然引出当天主线，不使用问候或寒暄，也不要直接抛生硬的宏大结论；',
+        '3. 删除复述和同义重复，每轮都要带来追问、解释、分歧、判断或新角度；',
+        '4. 每轮尽量35-95字，只使用日报已有事实；',
+        '5. 对照上面的每条Harness诊断确认已经修复后，再输出JSON。',
+    ])
     return '\n'.join(lines)
 
 
@@ -1172,7 +1181,7 @@ def _podcast_metadata(
     provider_filter: str | None = None,
 ) -> dict:
     return {
-        'provider': 'opencode-go',
+        'provider': 'lenovo',
         'provider_filter': provider_filter or 'default',
         'model_chain': models,
         'endpoint': endpoint,
@@ -1285,6 +1294,7 @@ def _generate_podcast_dialogue_loop(
         # 把本轮问题并入累积轨迹，供下一轮 agent 带记忆优化
         trajectory.append({
             'attempt': attempt,
+            'dialogue': dialogue,
             'structure_issues': structure_issues,
             'review_issues': review.get('issues') or [],
             'repair_instruction': review.get('repair_instruction') or '',
@@ -1317,7 +1327,7 @@ def _generate_podcast_dialogue_loop(
     }
     print(
         f'warning: podcast dialogue loop did not pass after {len(attempts)} attempts; '
-        f'returning best attempt #{best["attempt"]} (score={best["score"]}) for fallback decision',
+        f'returning best attempt #{best["attempt"]} (score={best["score"]}) for final failure decision',
         flush=True,
     )
     return best['dialogue'], _podcast_metadata(

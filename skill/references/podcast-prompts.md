@@ -39,6 +39,7 @@ Edit the text between markers. Keep placeholder names unchanged.
 上一版需要修复的问题：
 {repair_instruction}
 
+必须根据其中的上一版完整对话和 Harness 逐项诊断做定向修订，不要忽略诊断后从头自由生成。
 请只输出修复后的同结构JSON，不要解释。
 <!-- prompt:podcast_generation_repair:end -->
 
