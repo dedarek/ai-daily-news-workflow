@@ -40,6 +40,7 @@ NEWS_SOURCES_FILE = SKILL_DIR / 'references' / 'news-sources.json'
 SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
+SECTION_BY_NAME = {section.split(' ', 1)[-1]: section for section in SECTION_ORDER}
 DEFAULT_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
 DEFAULT_LLM_MODELS = 'qwen35-122b-a10b-fp8'
 DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:1234/api'
@@ -227,6 +228,41 @@ def section_for(source_heading: str, index: int) -> str:
     if any(word in source_heading for word in ('产品', '功能', '发布')):
         return '🚀 产品发布'
     return '💼 行业动态'
+
+
+def normalize_section_label(raw: object) -> str:
+    label = clean_text(str(raw or ''))
+    if label in SECTION_ORDER:
+        return label
+    plain_label = re.sub(r'^[^\w\u4e00-\u9fff]+', '', label).strip()
+    return SECTION_BY_NAME.get(plain_label, label)
+
+
+def parse_and_validate_selection(
+    selection_result: dict,
+    candidate_map: dict[str, Article],
+) -> tuple[list[tuple[Article, str]], list[str]]:
+    selected: list[tuple[Article, str]] = []
+    seen_urls: set[str] = set()
+    for item in selection_result.get('selection') or []:
+        if not isinstance(item, dict):
+            continue
+        url = str(item.get('url', '')).strip()
+        section = normalize_section_label(item.get('section'))
+        if url in candidate_map and url not in seen_urls and section in SECTION_ORDER:
+            selected.append((candidate_map[url], section))
+            seen_urls.add(url)
+
+    issues: list[str] = []
+    if len(selected) != 12:
+        issues.append(f'有效新闻数量为{len(selected)}，必须恰好为12')
+    focus_count = sum(section == '🔥 今日焦点' for _, section in selected)
+    first_section = selected[0][1] if selected else '缺失'
+    if first_section != '🔥 今日焦点':
+        issues.append(f'第一条栏目为{first_section}，必须是🔥 今日焦点')
+    if focus_count != 1:
+        issues.append(f'今日焦点数量为{focus_count}，必须恰好为1')
+    return selected, issues
 
 
 def expand_summary(title: str, raw: str) -> str:
@@ -865,43 +901,59 @@ def call_deepseek(
             }
             for item in available_articles
         ]
-        selection_prompt = render_prompt_from_file(
+        base_selection_prompt = render_prompt_from_file(
             NEWS_PROMPTS_FILE,
             'selection_user',
             section_order_json=json.dumps(SECTION_ORDER, ensure_ascii=False),
             recent_titles_json=json.dumps(recent_sent, ensure_ascii=False),
             candidates_json=json.dumps(candidates, ensure_ascii=False),
         )
-        selection_result, selection_usage, selection_model = request_deepseek_json(
-            endpoint=endpoint,
-            models=models,
-            api_key=api_key,
-            system_prompt=system_prompt,
-            user_prompt=selection_prompt,
-            task_name=f'selection_{selection_attempt}',
-            provider_filter=provider_filter,
-        )
-        selection_calls.append({
-            'attempt': selection_attempt,
-            'model': selection_model,
-            'usage': selection_usage,
-            'candidate_count': len(available_articles),
-        })
         candidate_map = {item.url: item for item in available_articles}
-        selected = []
-        seen_urls: set[str] = set()
-        for item in selection_result.get('selection', []):
-            url = str(item.get('url', '')).strip()
-            section = str(item.get('section', '')).strip()
-            if url in candidate_map and url not in seen_urls and section in SECTION_ORDER:
-                selected.append((candidate_map[url], section))
-                seen_urls.add(url)
-        if len(selected) != 12:
-            raise RuntimeError(f'LLM selected {len(selected)} valid articles; expected exactly 12')
-        focus_count = sum(section == '🔥 今日焦点' for _, section in selected)
-        if selected[0][1] != '🔥 今日焦点' or focus_count != 1:
+        selection_result: dict = {}
+        validation_issues: list[str] = []
+        for validation_attempt in range(1, 4):
+            selection_prompt = base_selection_prompt
+            if validation_issues:
+                selection_prompt += (
+                    '\n\n上一份输出未通过格式校验，请根据诊断重新选择。不得忽略诊断：\n'
+                    + json.dumps(validation_issues, ensure_ascii=False)
+                    + '\n上一份输出：\n'
+                    + json.dumps(selection_result, ensure_ascii=False)
+                )
+            task_name = f'selection_{selection_attempt}'
+            if validation_attempt > 1:
+                task_name += f'_retry_{validation_attempt - 1}'
+            selection_result, selection_usage, selection_model = request_deepseek_json(
+                endpoint=endpoint,
+                models=models,
+                api_key=api_key,
+                system_prompt=system_prompt,
+                user_prompt=selection_prompt,
+                task_name=task_name,
+                provider_filter=provider_filter,
+            )
+            selected, validation_issues = parse_and_validate_selection(selection_result, candidate_map)
+            selection_calls.append({
+                'attempt': selection_attempt,
+                'validation_attempt': validation_attempt,
+                'model': selection_model,
+                'usage': selection_usage,
+                'candidate_count': len(available_articles),
+                'validation_issues': validation_issues,
+            })
+            if not validation_issues:
+                break
+            if validation_attempt < 3:
+                print(
+                    'WARN selection_validation_retry '
+                    f'attempt={selection_attempt} validation_attempt={validation_attempt} '
+                    f'issues={json.dumps(validation_issues, ensure_ascii=False)}',
+                    flush=True,
+                )
+        else:
             raise RuntimeError(
-                f'LLM selection focus validation failed: first={selected[0][1]}, count={focus_count}'
+                'LLM selection validation failed after 3 retries: '
+                + '; '.join(validation_issues)
             )
 
         duplicates: list[dict[str, str]] = []

@@ -24,6 +24,30 @@ class FakeResponse(io.BytesIO):
 
 
 class LlmProviderTests(unittest.TestCase):
+    def test_selection_normalizes_section_labels_and_validates_focus(self) -> None:
+        candidate_map = {
+            f'https://example.test/{index}': pipeline.Article(
+                title=f'news-{index}',
+                summary='summary',
+                url=f'https://example.test/{index}',
+                section='产品发布',
+            )
+            for index in range(12)
+        }
+        result = {'selection': [
+            {
+                'url': f'https://example.test/{index}',
+                'section': '今日焦点' if index == 0 else ' 产品发布 ',
+            }
+            for index in range(12)
+        ]}
+
+        selected, issues = pipeline.parse_and_validate_selection(result, candidate_map)
+
+        self.assertEqual(issues, [])
+        self.assertEqual(selected[0][1], '🔥 今日焦点')
+        self.assertTrue(all(section in pipeline.SECTION_ORDER for _, section in selected))
+
     def test_provider_chain_is_lenovo_only(self) -> None:
         providers = pipeline.llm_provider_chain(
             'https://lenovo.test/v1',

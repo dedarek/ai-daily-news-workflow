@@ -75,6 +75,8 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 可用 `AI_DAILY_VIDEO_API_BASE_URL` 覆盖默认 API 地址。轮询间隔默认 60 秒，可用
 `AI_DAILY_VIDEO_API_POLL_SECONDS` 覆盖。MP4 发布前若超过 49MB，会尝试用
 ffmpeg 重编码压缩；上限可用 `AI_DAILY_MAX_PUBLISHED_VIDEO_BYTES` 覆盖。
+早间工作流会在新闻采集和 LLM 调用之前运行 `scripts/check_video_api.py`；Token 缺失或
+服务端返回 401/403 时立即终止，避免无效凭证消耗整轮 LLM 调用。
 邮件媒体附件只发送一种：优先 MP4，若 MP4 超过安全阈值则改发 MP3，避免同时发送
 音频和视频。默认视频附件阈值为 20MB，可用
 `AI_DAILY_EMAIL_VIDEO_ATTACHMENT_LIMIT_BYTES` 覆盖；若需要完全禁用视频附件，可设置
