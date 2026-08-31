@@ -40,10 +40,8 @@ NEWS_SOURCES_FILE = SKILL_DIR / 'references' / 'news-sources.json'
 SOURCE_ROOT = 'https://hex2077.dev/docs'
 FORBIDDEN_URL_PARTS = ('hex2077.dev', 'aibase.com', 'hubtoday', 'wappoc_appmsgcaptcha')
 SECTION_ORDER = ['🔥 今日焦点', '🚀 产品发布', '💼 行业动态', '💡 前沿研究', '🔓 开源热榜', '🤖 Agent & 工具']
-DEFAULT_LLM_BASE_URL = 'https://integrate.api.nvidia.com/v1'
-DEFAULT_LLM_MODELS = 'moonshotai/kimi-k3,deepseek-ai/deepseek-v4-flash-0731,openai/gpt-oss-120b'
-DEFAULT_LENOVO_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
-DEFAULT_LENOVO_LLM_MODEL = 'qwen35-122b-a10b-fp8'
+DEFAULT_LLM_BASE_URL = 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1'
+DEFAULT_LLM_MODELS = 'qwen35-122b-a10b-fp8'
 DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:1234/api'
 DEFAULT_VIDEO_API_TOKEN = 'lenovo-ssg-aics-tsd-tic-cd'
 DEFAULT_VIDEO_API_TITLE = 'AI热点新闻'
@@ -401,42 +399,17 @@ def llm_provider_chain(
     *,
     thinking_enabled: bool | None = None,
 ) -> list[dict[str, object]]:
-    if thinking_enabled is None:
-        thinking_enabled = os.environ.get('OPENCODE_GO_THINKING', 'true').lower() not in {'0', 'false', 'no'}
-    providers: list[dict[str, object]] = []
-    # NVIDIA is the primary provider. Keep Lenovo last so it remains available
-    # as the final fallback after every configured NVIDIA model is exhausted.
-    nvidia_api_key = normalize_bearer_token(api_key)
-    if nvidia_api_key:
-        providers.append({
-            'name': 'nvidia',
-            'endpoint': endpoint,
-            'models': models,
-            'api_key': nvidia_api_key,
-            'chat_template_kwargs': {'thinking': True}
-            if thinking_enabled
-            else None,
-        })
-    lenovo_api_key = normalize_bearer_token(
-        os.environ.get('LENOVO_LLM_API_KEY')
-        or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY', '')
-    )
-    if lenovo_api_key:
-        lenovo_endpoint = os.environ.get('LENOVO_LLM_BASE_URL', DEFAULT_LENOVO_LLM_BASE_URL).rstrip('/')
-        lenovo_models = [
-            item.strip()
-            for item in os.environ.get('LENOVO_LLM_MODELS', DEFAULT_LENOVO_LLM_MODEL).split(',')
-            if item.strip()
-        ]
-        if lenovo_models:
-            providers.append({
-                'name': 'lenovo',
-                'endpoint': lenovo_endpoint,
-                'models': lenovo_models,
-                'api_key': lenovo_api_key,
-                'chat_template_kwargs': {'enable_thinking': False},
-            })
-    return providers
+    del thinking_enabled
+    lenovo_api_key = normalize_bearer_token(api_key)
+    if not lenovo_api_key:
+        return []
+    return [{
+        'name': 'lenovo',
+        'endpoint': endpoint,
+        'models': models,
+        'api_key': lenovo_api_key,
+        'chat_template_kwargs': {'enable_thinking': False},
+    }]
 
 
 def selection_provider_plan(
@@ -444,24 +417,21 @@ def selection_provider_plan(
     models: list[str],
     api_key: str,
 ) -> list[str | None]:
-    """Return normal selection attempts plus a final Lenovo-only fallback."""
-    provider_names = {
-        str(provider.get('name') or '')
-        for provider in llm_provider_chain(endpoint, models, api_key)
-    }
-    plan: list[str | None] = [None, None, None]
-    if {'nvidia', 'lenovo'} <= provider_names:
-        plan.append('lenovo')
-    return plan
+    """Return the three Lenovo-only selection attempts."""
+    del endpoint, models, api_key
+    return [None, None, None]
+
+
+def llm_api_key() -> str:
+    return (
+        os.environ.get('LENOVO_LLM_API_KEY')
+        or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY')
+        or ''
+    )
 
 
 def has_any_llm_api_key() -> bool:
-    return bool(
-        os.environ.get('LENOVO_LLM_API_KEY')
-        or os.environ.get('AI_DAILY_LENOVO_LLM_API_KEY')
-        or os.environ.get('NVIDIA_API_KEY')
-        or os.environ.get('OPENCODE_GO_API_KEY')
-    )
+    return bool(llm_api_key())
 
 
 def llm_stream_enabled() -> bool:
@@ -716,20 +686,8 @@ def request_deepseek_json(
 
 
 def llm_config() -> tuple[str, list[str]]:
-    endpoint = (
-        os.environ.get('NVIDIA_LLM_BASE_URL')
-        or os.environ.get('OPENCODE_GO_BASE_URL')
-        or DEFAULT_LLM_BASE_URL
-    ).rstrip('/')
-    configured_models = (
-        os.environ.get('NVIDIA_LLM_MODELS')
-        or os.environ.get('OPENCODE_GO_MODELS')
-        or DEFAULT_LLM_MODELS
-    )
-    models = [model.strip() for model in configured_models.split(',') if model.strip()]
-    if not models:
-        raise RuntimeError('OPENCODE_GO_MODELS must contain at least one model')
-    return endpoint, models
+    endpoint = os.environ.get('LENOVO_LLM_BASE_URL', DEFAULT_LLM_BASE_URL).rstrip('/')
+    return endpoint, [DEFAULT_LLM_MODELS]
 
 
 def generate_digest_summary(
@@ -975,10 +933,8 @@ def call_deepseek(
             flush=True,
         )
     else:
-        fallback_suffix = ' including final Lenovo fallback' if provider_plan[-1] == 'lenovo' else ''
         raise RuntimeError(
-            f'Cross-day dedupe review failed after {len(provider_plan)} selection attempts'
-            f'{fallback_suffix}'
+            f'Cross-day dedupe review failed after {len(provider_plan)} Lenovo selection attempts'
         )
 
     selected_sections = [section for _, section in selected]
@@ -1378,18 +1334,6 @@ def podcast_harness_passed(metadata: dict) -> bool:
     return bool((metadata.get('harness') or {}).get('final_pass') is True)
 
 
-def podcast_metadata_used_provider(metadata: dict, provider_name: str) -> bool:
-    attempts = ((metadata.get('call_details') or {}).get('podcast_attempts') or [])
-    prefix = f'{provider_name}:'
-    for attempt in attempts:
-        generation = attempt.get('generation') or {}
-        if str(generation.get('model') or '').startswith(prefix):
-            return True
-        if str(attempt.get('review_model') or '').startswith(prefix):
-            return True
-    return False
-
-
 def podcast_failure_summary(metadata: dict) -> str:
     harness = metadata.get('harness') or {}
     issues = harness.get('final_issues') or []
@@ -1410,28 +1354,6 @@ def generate_podcast_dialogue(articles: list[Article], api_key: str) -> tuple[li
     dialogue, metadata = _generate_podcast_dialogue_loop(articles, api_key)
     if podcast_harness_passed(metadata):
         return dialogue, metadata
-
-    used_nvidia = podcast_metadata_used_provider(metadata, 'nvidia')
-    if api_key and not used_nvidia:
-        print(
-            'WARN podcast harness failed with default provider chain; retrying podcast stage with nvidia only. '
-            + podcast_failure_summary(metadata),
-            flush=True,
-        )
-        fallback_dialogue, fallback_metadata = _generate_podcast_dialogue_loop(
-            articles,
-            api_key,
-            provider_filter='nvidia',
-        )
-        fallback_metadata['calls'] = int(metadata.get('calls') or 0) + int(fallback_metadata.get('calls') or 0)
-        fallback_metadata.setdefault('call_details', {})['podcast_fallback_from'] = {
-            'provider_filter': metadata.get('provider_filter'),
-            'harness': metadata.get('harness'),
-            'attempts': (metadata.get('call_details') or {}).get('podcast_attempts'),
-        }
-        if podcast_harness_passed(fallback_metadata):
-            return fallback_dialogue, fallback_metadata
-        metadata = fallback_metadata
 
     raise RuntimeError(
         'podcast dialogue harness failed; refusing to call video API. '
@@ -2309,10 +2231,10 @@ def main() -> int:
         item for item in source_health['sources'] if item['status'] == 'ok'
     ]
     source_url = successful_sources[0]['source_url']
-    llm_api_key = os.environ.get('NVIDIA_API_KEY') or os.environ.get('OPENCODE_GO_API_KEY') or ''
-    if not has_any_llm_api_key():
-        raise RuntimeError('LENOVO_LLM_API_KEY or NVIDIA_API_KEY is required; refusing to generate a non-LLM issue')
-    articles, dialogue, digest_summary, llm_metadata = call_deepseek(candidates, llm_api_key, args.date)
+    api_key = llm_api_key()
+    if not api_key:
+        raise RuntimeError('LENOVO_LLM_API_KEY is required; refusing to generate a non-LLM issue')
+    articles, dialogue, digest_summary, llm_metadata = call_deepseek(candidates, api_key, args.date)
     html_path = output_dir / f'ai-daily-news-html-{args.date}.html'
     podcast_path = output_dir / f'ai-daily-news-podcast-{args.date}.mp3'
     video_path = output_dir / f'ai-daily-news-video-{args.date}.mp4'

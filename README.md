@@ -57,6 +57,13 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 
 ⚠️ 163 有限流：每封间隔 8-10 秒，每 10 封暂停 30 秒。带大附件时更容易触发。
 
+### LLM 配置
+
+日报筛选、跨天去重、正文与摘要生成、播客对话及下午复核统一使用 Lenovo
+`qwen35-122b-a10b-fp8`，不回退其他供应商。GitHub Actions 必须配置
+`LENOVO_LLM_API_KEY`（也兼容旧 Secret 名 `AI_DAILY_LENOVO_LLM_API_KEY`）；接口地址可用
+`LENOVO_LLM_BASE_URL` 覆盖。
+
 ### 播客音频/视频生成（外部 Video API）
 | 项 | 值 |
 |----|-----|

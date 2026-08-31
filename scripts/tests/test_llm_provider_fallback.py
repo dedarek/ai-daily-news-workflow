@@ -6,7 +6,6 @@ import sys
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-from urllib.error import HTTPError
 
 
 SCRIPTS_DIR = Path(__file__).resolve().parents[1]
@@ -24,50 +23,37 @@ class FakeResponse(io.BytesIO):
         self.close()
 
 
-class LlmProviderFallbackTests(unittest.TestCase):
-    def test_nvidia_precedes_lenovo_in_provider_chain(self) -> None:
+class LlmProviderTests(unittest.TestCase):
+    def test_provider_chain_is_lenovo_only(self) -> None:
+        providers = pipeline.llm_provider_chain(
+            'https://lenovo.test/v1',
+            ['lenovo-model'],
+            'lenovo-key',
+        )
+
+        self.assertEqual([provider['name'] for provider in providers], ['lenovo'])
+        self.assertEqual(providers[0]['models'], ['lenovo-model'])
+        self.assertEqual(providers[0]['chat_template_kwargs'], {'enable_thinking': False})
+
+    def test_selection_uses_three_lenovo_only_attempts(self) -> None:
+        plan = pipeline.selection_provider_plan(
+            'https://lenovo.test/v1',
+            ['lenovo-model'],
+            'lenovo-key',
+        )
+
+        self.assertEqual(plan, [None, None, None])
+
+    def test_request_uses_lenovo_even_when_nvidia_environment_exists(self) -> None:
         env = {
             'LENOVO_LLM_API_KEY': 'lenovo-key',
             'LENOVO_LLM_BASE_URL': 'https://lenovo.test/v1',
-            'LENOVO_LLM_MODELS': 'lenovo-model',
-        }
-        with patch.dict(pipeline.os.environ, env, clear=True):
-            providers = pipeline.llm_provider_chain(
-                'https://nvidia.test/v1',
-                ['nvidia-model'],
-                'nvidia-key',
-            )
-
-        self.assertEqual([provider['name'] for provider in providers], ['nvidia', 'lenovo'])
-
-    def test_selection_gets_final_lenovo_only_attempt(self) -> None:
-        env = {
-            'LENOVO_LLM_API_KEY': 'lenovo-key',
-            'LENOVO_LLM_MODELS': 'lenovo-model',
-        }
-        with patch.dict(pipeline.os.environ, env, clear=True):
-            plan = pipeline.selection_provider_plan(
-                'https://nvidia.test/v1',
-                ['nvidia-model'],
-                'nvidia-key',
-            )
-
-        self.assertEqual(plan, [None, None, None, 'lenovo'])
-
-    def test_lenovo_is_used_after_nvidia_non_retryable_failure(self) -> None:
-        env = {
-            'LENOVO_LLM_API_KEY': 'lenovo-key',
-            'LENOVO_LLM_BASE_URL': 'https://lenovo.test/v1',
-            'LENOVO_LLM_MODELS': 'lenovo-model',
+            'LENOVO_LLM_MODELS': 'must-be-ignored',
+            'NVIDIA_API_KEY': 'nvidia-key',
+            'NVIDIA_LLM_BASE_URL': 'https://nvidia.test/v1',
+            'NVIDIA_LLM_MODELS': 'nvidia-model',
             'LLM_STREAM': 'false',
         }
-        nvidia_error = HTTPError(
-            'https://nvidia.test/v1/chat/completions',
-            401,
-            'Unauthorized',
-            {},
-            io.BytesIO(b'{"error":"invalid key"}'),
-        )
         lenovo_response = FakeResponse(json.dumps({
             'choices': [{
                 'message': {'content': '{"selection": []}'},
@@ -78,42 +64,33 @@ class LlmProviderFallbackTests(unittest.TestCase):
 
         with (
             patch.dict(pipeline.os.environ, env, clear=True),
-            patch.object(pipeline, 'urlopen', side_effect=[nvidia_error, lenovo_response]) as mocked_open,
+            patch.object(pipeline, 'urlopen', return_value=lenovo_response) as mocked_open,
         ):
+            endpoint, models = pipeline.llm_config()
             result, usage, model = pipeline.request_deepseek_json(
-                endpoint='https://nvidia.test/v1',
-                models=['nvidia-model'],
-                api_key='nvidia-key',
+                endpoint=endpoint,
+                models=models,
+                api_key=pipeline.llm_api_key(),
                 system_prompt='system',
                 user_prompt='user',
-                task_name='fallback_test',
+                task_name='lenovo_only_test',
             )
 
         self.assertEqual(result, {'selection': []})
         self.assertEqual(usage, {'total_tokens': 3})
-        self.assertEqual(model, 'lenovo:lenovo-model')
-        self.assertEqual(mocked_open.call_count, 2)
+        self.assertEqual(model, 'lenovo:qwen35-122b-a10b-fp8')
+        self.assertEqual(mocked_open.call_count, 1)
+        request = mocked_open.call_args.args[0]
+        self.assertEqual(request.full_url, 'https://lenovo.test/v1/chat/completions')
 
-    def test_lenovo_still_works_without_nvidia_key(self) -> None:
+    def test_nvidia_key_alone_is_not_accepted(self) -> None:
         env = {
-            'LENOVO_LLM_API_KEY': 'lenovo-key',
-            'LENOVO_LLM_MODELS': 'lenovo-model',
+            'NVIDIA_API_KEY': 'nvidia-key',
+            'OPENCODE_GO_API_KEY': 'nvidia-key',
         }
         with patch.dict(pipeline.os.environ, env, clear=True):
-            providers = pipeline.llm_provider_chain(
-                'https://nvidia.test/v1',
-                ['nvidia-model'],
-                '',
-            )
-
-        self.assertEqual([provider['name'] for provider in providers], ['lenovo'])
-        with patch.dict(pipeline.os.environ, env, clear=True):
-            plan = pipeline.selection_provider_plan(
-                'https://nvidia.test/v1',
-                ['nvidia-model'],
-                '',
-            )
-        self.assertEqual(plan, [None, None, None])
+            self.assertEqual(pipeline.llm_api_key(), '')
+            self.assertFalse(pipeline.has_any_llm_api_key())
 
 
 if __name__ == '__main__':

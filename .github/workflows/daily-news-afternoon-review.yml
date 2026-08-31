@@ -102,19 +102,12 @@ jobs:
       - name: Download and independently review published issue
         if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-          OPENCODE_GO_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-          NVIDIA_LLM_BASE_URL: https://integrate.api.nvidia.com/v1
-          NVIDIA_LLM_MODELS: moonshotai/kimi-k3,deepseek-ai/deepseek-v4-flash-0731,openai/gpt-oss-120b
-          OPENCODE_GO_BASE_URL: https://integrate.api.nvidia.com/v1
-          OPENCODE_GO_MODELS: moonshotai/kimi-k3,deepseek-ai/deepseek-v4-flash-0731,openai/gpt-oss-120b
           OPENCODE_GO_TIMEOUT_SECONDS: "600"
           LLM_STREAM: "true"
           LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
           LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}
-          LENOVO_LLM_MODELS: ${{ vars.LENOVO_LLM_MODELS || 'qwen35-122b-a10b-fp8' }}
         run: |
-          test -n "$LENOVO_LLM_API_KEY" || test -n "$NVIDIA_API_KEY" || { echo "::error::Missing GitHub Actions secret LENOVO_LLM_API_KEY or NVIDIA_API_KEY"; exit 1; }
+          test -n "$LENOVO_LLM_API_KEY" || { echo "::error::Missing GitHub Actions secret LENOVO_LLM_API_KEY"; exit 1; }
           python3 scripts/prepare_review_delivery.py \
             --date "${{ steps.issue.outputs.date }}" \
             --base-url "$CONTENT_BASE_URL" \
