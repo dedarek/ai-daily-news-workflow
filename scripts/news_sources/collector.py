@@ -135,7 +135,10 @@ def collect_news_sources(
         "issue_date": issue_date,
         "checked_at": datetime.now(timezone.utc).isoformat(),
         "overall_status": overall_status,
-        "pipeline_can_continue": bool(successful) and len(candidates) >= minimum_usable,
+        # minimum_usable_candidates is a preferred target, not a hard gate.
+        # A healthy source with usable news is enough to let the LLM select
+        # and downgrade the issue instead of dropping the whole run early.
+        "pipeline_can_continue": bool(successful) and bool(candidates),
         "minimum_usable_candidates": minimum_usable,
         "candidate_count_before_dedup": sum(len(item.articles) for item in successful),
         "candidate_count_after_dedup": len(candidates),

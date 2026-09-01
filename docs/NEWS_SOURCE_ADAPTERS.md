@@ -1,6 +1,6 @@
 # 多数据源采集与告警
 
-所有启用源并行运行。单源失败只进入健康报告，不阻断其他源；去重后候选不足 12 条时才阻断日报。
+所有启用源并行运行。单源失败只进入健康报告，不阻断其他源；12 条是日报目标，不是硬门禁，候选不足时由 LLM 选择并降级生成。
 
 | ID | 独立适配器 | 时间规则 |
 |---|---|---|
@@ -10,7 +10,7 @@
 
 站点参数位于 `skill/references/news-sources.json`。公共层 `collector.py` 只负责并发、轮询合并、URL 规范化、标题相似去重和健康汇总，不包含任何站点 DOM 或时间规则。
 
-健康报告写入 `dist/source-health-YYYY-MM-DD.json`。任意启用源失败时，GitHub Actions 调用 `send_source_health_alert.py` 给管理员发邮件；只要剩余候选足够，日报仍会继续生成。
+健康报告写入 `dist/source-health-YYYY-MM-DD.json`。任意启用源失败时，GitHub Actions 调用 `send_source_health_alert.py` 给管理员发邮件；只要还有可用候选，日报仍会继续生成。
 
 ## 新增网站
 

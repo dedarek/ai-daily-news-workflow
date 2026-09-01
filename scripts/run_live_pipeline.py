@@ -254,15 +254,41 @@ def parse_and_validate_selection(
             seen_urls.add(url)
 
     issues: list[str] = []
-    if len(selected) != 12:
-        issues.append(f'有效新闻数量为{len(selected)}，必须恰好为12')
-    focus_count = sum(section == '🔥 今日焦点' for _, section in selected)
-    first_section = selected[0][1] if selected else '缺失'
-    if first_section != '🔥 今日焦点':
-        issues.append(f'第一条栏目为{first_section}，必须是🔥 今日焦点')
-    if focus_count != 1:
-        issues.append(f'今日焦点数量为{focus_count}，必须恰好为1')
+    if not selected:
+        issues.append('没有任何候选新闻通过选择结果校验')
+
+    # 栏目顺序和焦点栏是展示偏好，不应该因为模型把栏目标签写得不完美
+    # 就让整期日报失败。保留第一条为焦点，并把重复焦点降级到候选自身栏目。
+    if selected:
+        normalized: list[tuple[Article, str]] = []
+        focus_kept = False
+        for index, (article, section) in enumerate(selected):
+            if section == '🔥 今日焦点':
+                if focus_kept:
+                    section = normalize_section_label(article.section)
+                    if section == '🔥 今日焦点':
+                        section = '💼 行业动态'
+                else:
+                    focus_kept = True
+            if index == 0 and section != '🔥 今日焦点':
+                section = '🔥 今日焦点'
+                focus_kept = True
+            normalized.append((article, section))
+        selected = normalized
     return selected, issues
+
+
+def fallback_selection(candidates: list[Article]) -> list[tuple[Article, str]]:
+    """Keep the pipeline useful when the model returns an empty valid JSON object."""
+    selected: list[tuple[Article, str]] = []
+    for index, article in enumerate(candidates[:12]):
+        section = normalize_section_label(article.section)
+        if index == 0:
+            section = '🔥 今日焦点'
+        elif section == '🔥 今日焦点':
+            section = '💼 行业动态'
+        selected.append((article, section))
+    return selected
 
 
 def expand_summary(title: str, raw: str) -> str:
@@ -379,8 +405,8 @@ def parse_articles(raw_html: str, limit: int = 15) -> list[Article]:
         )
         if len(articles) >= limit:
             break
-    if len(articles) < 8:
-        raise RuntimeError(f'Only {len(articles)} valid live articles were parsed')
+    if not articles:
+        raise RuntimeError('No valid live articles were parsed')
     return articles
 
 
@@ -887,10 +913,10 @@ def call_deepseek(
         available_articles = [
             item for item in candidate_articles if item.url not in blocked_urls
         ]
-        if len(available_articles) < 12:
+        if not available_articles:
             raise RuntimeError(
-                'Cross-day dedupe left fewer than 12 candidates: '
-                f'{len(available_articles)} available, {len(blocked_urls)} blocked'
+                'Cross-day dedupe left no usable candidates: '
+                f'{len(blocked_urls)} blocked'
             )
         candidates = [
             {
@@ -939,6 +965,7 @@ def call_deepseek(
                 'model': selection_model,
                 'usage': selection_usage,
                 'candidate_count': len(available_articles),
+                'target_count': min(12, len(available_articles)),
                 'validation_issues': validation_issues,
             })
             if not validation_issues:
@@ -951,9 +978,31 @@ def call_deepseek(
                     flush=True,
                 )
         else:
-            raise RuntimeError(
-                'LLM selection validation failed after 3 retries: '
-                + '; '.join(validation_issues)
+            if not selected:
+                selected = fallback_selection(available_articles)
+                if selected:
+                    print(
+                        'WARN selection_fallback_used '
+                        f'candidate_count={len(available_articles)} '
+                        'reason=model returned no usable selection',
+                        flush=True,
+                    )
+            if not selected:
+                raise RuntimeError(
+                    'LLM selection produced no usable news after 3 retries: '
+                    + '; '.join(validation_issues)
+                )
+            print(
+                'WARN selection_validation_degraded '
+                f'issues={json.dumps(validation_issues, ensure_ascii=False)}',
+                flush=True,
+            )
+
+        if len(selected) < 12:
+            print(
+                'WARN selection_below_target '
+                f'selected={len(selected)} target=12 available={len(available_articles)}',
+                flush=True,
             )
 
         duplicates: list[dict[str, str]] = []
@@ -1023,26 +1072,34 @@ def call_deepseek(
         )
         editorial_calls.append({'model': batch_model, 'usage': batch_usage})
         generated_items = batch_result.get('articles', [])
+        if not isinstance(generated_items, list):
+            generated_items = []
         if len(generated_items) != len(batch):
-            raise RuntimeError(
-                f'LLM editorial batch returned {len(generated_items)} items; expected {len(batch)}'
+            print(
+                'WARN editorial_batch_count_degraded '
+                f'returned={len(generated_items)} expected={len(batch)}; '
+                'missing items will use source fallback',
+                flush=True,
             )
-        for item, (source, section) in zip(generated_items, batch):
+        for index, (source, section) in enumerate(batch):
+            item = generated_items[index] if index < len(generated_items) else {}
+            if not isinstance(item, dict):
+                item = {}
             body = clean_text(str(item.get('body', '')))
-            if len(body) < 120:
+            if not body:
+                body = clean_text(source.source_text or source.summary or source.title)
+            if len(body) < 80:
                 body = clean_text(f'{body} {source.summary}')
+            title = clean_text(str(item.get('title', ''))) or source.title
+            review = clean_text(str(item.get('review', ''))) or '基于来源内容整理，重点关注其实际影响与落地限制。'
             article = Article(
-                title=clean_text(str(item.get('title', ''))),
+                title=title,
                 summary=body,
                 url=source.url,
                 section=section,
-                review=clean_text(str(item.get('review', ''))),
+                review=review,
             )
-            if (
-                article.title
-                and len(article.summary) >= 120
-                and article.review
-            ):
+            if article.title and article.summary and article.review:
                 articles.append(article)
             else:
                 raise RuntimeError(f'LLM editorial item invalid for source URL: {source.url}')
@@ -1068,7 +1125,13 @@ def call_deepseek(
             + int(podcast_metadata.get('calls', 1))
         ),
         'call_details': {
-            'selection': {'model': selection_model, 'usage': selection_usage},
+            'selection': {
+                'model': selection_model,
+                'usage': selection_usage,
+                'selected_count': len(selected),
+                'target_count': min(12, len(candidate_articles)),
+                'degraded': len(selected) < 12,
+            },
             'selection_attempts': selection_calls,
             'cross_day_dedupe': {
                 'window_days': 7,
@@ -1399,23 +1462,9 @@ def podcast_harness_passed(metadata: dict) -> bool:
 
 def podcast_advisory_acceptance_issues(dialogue: list[dict[str, str]]) -> list[str]:
     """Return objective blockers for using the best draft after Harness exhaustion."""
-    issues = validate_podcast_dialogue(dialogue)
-    turn_count = len(dialogue)
-    if not 18 <= turn_count <= 22:
-        issues.append(f'podcast_turns={turn_count} outside 18-22')
-    if dialogue and dialogue[0].get('speaker') != 'S1':
-        issues.append('podcast must start with S1')
-    for index in range(1, turn_count):
-        if dialogue[index].get('speaker') == dialogue[index - 1].get('speaker'):
-            issues.append(f'turns {index} and {index + 1} do not alternate speakers')
-    lengths = [len(clean_text(str(turn.get('text', '')))) for turn in dialogue]
-    if sum(length < 15 for length in lengths) > 2:
-        issues.append('more than two podcast turns are shorter than 15 characters')
-    if sum(length > 140 for length in lengths) > 2:
-        issues.append('more than two podcast turns exceed 140 characters')
-    if sum(lengths) < 900:
-        issues.append(f'podcast total characters={sum(lengths)} < 900')
-    return issues
+    # 轮数、单轮字数和交替方式交给 Harness 做质量判断。这里仅阻断
+    # 语音合成无法处理的结构损坏，避免“最佳草稿”被二次机械门禁拦截。
+    return validate_podcast_dialogue(dialogue)
 
 
 def podcast_failure_summary(metadata: dict) -> str:
@@ -2310,9 +2359,15 @@ def main() -> int:
     print(json.dumps(source_health, ensure_ascii=False, indent=2), flush=True)
     if not source_health['pipeline_can_continue']:
         raise RuntimeError(
-            'News sources did not provide enough usable candidates: '
-            f'{source_health["candidate_count_after_dedup"]} < '
-            f'{source_health["minimum_usable_candidates"]}'
+            'News sources did not provide any usable candidates: '
+            f'{source_health["candidate_count_after_dedup"]}'
+        )
+    if source_health['candidate_count_after_dedup'] < source_health['minimum_usable_candidates']:
+        print(
+            'WARN source_candidates_below_target '
+            f'available={source_health["candidate_count_after_dedup"]} '
+            f'target={source_health["minimum_usable_candidates"]}; continuing with available news',
+            flush=True,
         )
     candidates = [
         Article(

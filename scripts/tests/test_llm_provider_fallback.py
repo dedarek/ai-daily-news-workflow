@@ -48,6 +48,83 @@ class LlmProviderTests(unittest.TestCase):
         self.assertEqual(selected[0][1], '🔥 今日焦点')
         self.assertTrue(all(section in pipeline.SECTION_ORDER for _, section in selected))
 
+    def test_selection_accepts_fewer_than_target_when_candidates_are_valid(self) -> None:
+        candidate_map = {
+            f'https://example.test/{index}': pipeline.Article(
+                title=f'news-{index}',
+                summary='summary',
+                url=f'https://example.test/{index}',
+                section='💼 行业动态',
+            )
+            for index in range(9)
+        }
+        result = {
+            'selection': [
+                {'url': url, 'section': '💼 行业动态'}
+                for url in candidate_map
+            ]
+        }
+
+        selected, issues = pipeline.parse_and_validate_selection(result, candidate_map)
+
+        self.assertEqual(len(selected), 9)
+        self.assertEqual(issues, [])
+        self.assertEqual(selected[0][1], '🔥 今日焦点')
+
+    def test_call_deepseek_keeps_nine_articles_and_handles_partial_batch(self) -> None:
+        candidates = [
+            pipeline.Article(
+                title=f'news-{index}',
+                summary='这是一条足够作为降级编辑输入的来源摘要。',
+                url=f'https://example.test/{index}',
+                section='💼 行业动态',
+            )
+            for index in range(9)
+        ]
+
+        def fake_request(**kwargs):
+            task_name = kwargs['task_name']
+            if task_name.startswith('selection_'):
+                return (
+                    {
+                        'selection': [
+                            {'url': item.url, 'section': '💼 行业动态'}
+                            for item in candidates
+                        ]
+                    },
+                    {},
+                    'lenovo:test-model',
+                )
+            if task_name.startswith('editorial_batch_'):
+                # Force the deterministic source fallback, including the final
+                # one-item batch produced by nine selected articles.
+                return {'articles': []}, {}, 'lenovo:test-model'
+            if task_name == 'digest_summary':
+                return {'summary': '今日新闻摘要'}, {}, 'lenovo:test-model'
+            raise AssertionError(f'unexpected task: {task_name}')
+
+        with (
+            patch.object(pipeline, 'llm_config', return_value=('https://lenovo.test/v1', ['test-model'])),
+            patch.object(pipeline, 'load_recent_titles_for_selection', return_value={}),
+            patch.object(pipeline, 'request_deepseek_json', side_effect=fake_request),
+            patch.object(pipeline, 'enrich_articles_with_source_text', side_effect=lambda items: items),
+            patch.object(
+                pipeline,
+                'generate_podcast_dialogue',
+                return_value=([{'speaker': 'S1', 'text': '播客内容'}], {'calls': 1}),
+            ),
+        ):
+            articles, dialogue, summary, _metadata = pipeline.call_deepseek(
+                candidates,
+                'test-key',
+                '2026-09-01',
+            )
+
+        self.assertEqual(len(articles), 9)
+        self.assertEqual(len(dialogue), 1)
+        self.assertEqual(summary, '今日新闻摘要')
+        self.assertTrue(all(article.title for article in articles))
+
     def test_provider_chain_is_lenovo_only(self) -> None:
         providers = pipeline.llm_provider_chain(
             'https://lenovo.test/v1',

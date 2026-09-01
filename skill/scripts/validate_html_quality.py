@@ -127,8 +127,8 @@ def validate_path(path: Path, *, label: str) -> tuple[list[str], list[str]]:
     facts.append(f"{label}: h2_titles={' | '.join(h2_titles)}")
     if td_body_count != 0:
         failures.append(f'{label}: INVALID_NEWS_BODY_TAG td count={td_body_count}')
-    if p_body_count < 8:
-        failures.append(f'{label}: P_NEWS_BODY_TOO_FEW {p_body_count} < 8')
+    if p_body_count < 1:
+        failures.append(f'{label}: P_NEWS_BODY_TOO_FEW {p_body_count} < 1')
 
     # 一致性门禁：默认保持“今日焦点”第一，其余栏目按既定顺序出现；避免每天顺序飘
     preferred_order = [
@@ -169,12 +169,12 @@ def validate_path(path: Path, *, label: str) -> tuple[list[str], list[str]]:
     facts.append(f'{label}: unique_links={len(unique_links)}')
     facts.append(f'{label}: root_links={len(root_links)}')
     facts.append(f'{label}: body_blocks_ge80={body_blocks}')
-    if len(unique_links) < 8:
-        failures.append(f'{label}: UNIQUE_LINKS_TOO_FEW {len(unique_links)} < 8')
+    if len(unique_links) < 1:
+        failures.append(f'{label}: UNIQUE_LINKS_TOO_FEW {len(unique_links)} < 1')
     if root_links:
         failures.append(f'{label}: ROOT_LINKS_PRESENT ' + ', '.join(root_links[:5]))
-    if body_blocks < 8:
-        failures.append(f'{label}: BODY_BLOCKS_TOO_FEW {body_blocks} < 8')
+    if body_blocks < 1:
+        failures.append(f'{label}: BODY_BLOCKS_TOO_FEW {body_blocks} < 1')
 
     return failures, facts
 

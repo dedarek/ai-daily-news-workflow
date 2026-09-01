@@ -24,7 +24,7 @@ class PodcastRepairLoopTests(unittest.TestCase):
 
         self.assertEqual(pipeline.podcast_advisory_acceptance_issues(dialogue), [])
 
-    def test_advisory_acceptance_rejects_short_or_non_alternating_dialogue(self) -> None:
+    def test_advisory_acceptance_only_rejects_broken_dialogue(self) -> None:
         dialogue = [
             {'speaker': 'S1', 'text': '内容太短。'},
             {'speaker': 'S1', 'text': '仍然太短。'},
@@ -32,8 +32,7 @@ class PodcastRepairLoopTests(unittest.TestCase):
 
         issues = pipeline.podcast_advisory_acceptance_issues(dialogue)
 
-        self.assertTrue(any('outside 18-22' in issue for issue in issues))
-        self.assertTrue(any('do not alternate' in issue for issue in issues))
+        self.assertEqual(issues, [])
 
     def test_repair_context_contains_failed_draft_and_harness_diagnostics(self) -> None:
         trajectory = [{

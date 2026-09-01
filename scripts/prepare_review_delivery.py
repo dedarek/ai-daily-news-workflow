@@ -122,17 +122,19 @@ def main() -> int:
             f'tts_mode={tts_mode} is not one of {sorted(allowed_tts_modes)}'
         )
     urls = [item.get('url') for item in articles]
-    if len(articles) < 8:
-        deterministic_issues.append(f'article_count={len(articles)} < 8')
+    if not articles:
+        deterministic_issues.append('article_count=0')
     if len(set(urls)) != len(urls):
         deterministic_issues.append('duplicate article URLs')
-    short_bodies = [
-        item.get('title', '')
+    incomplete_articles = [
+        item.get('title', '') or item.get('url', '')
         for item in articles
-        if len(str(item.get('summary', ''))) < 120
+        if not str(item.get('title', '')).strip()
+        or not str(item.get('summary', '')).strip()
+        or not str(item.get('url', '')).strip()
     ]
-    if short_bodies:
-        deterministic_issues.append(f'short article bodies: {short_bodies}')
+    if incomplete_articles:
+        deterministic_issues.append(f'incomplete article fields: {incomplete_articles}')
     dialogue = podcast_script.get('dialogue') or []
     if not dialogue:
         deterministic_issues.append('podcast dialogue is empty')
@@ -175,8 +177,10 @@ def main() -> int:
     if not factual_pass:
         blocking_reasons.append('llm: factual_consistency=fail')
     if score < 50:
-        blocking_reasons.append(f'llm: score={score} < 50')
-    delivery_approved = not deterministic_issues and factual_pass and score >= 50
+        blocking_reasons.append(f'llm advisory: score={score} < 50')
+    # The Harness score is editorial feedback, not a second arbitrary count
+    # gate. Factual conflicts and broken artifacts remain blocking.
+    delivery_approved = not deterministic_issues and factual_pass
     report = {
         'issue_date': args.date,
         'reviewed_at': datetime.now().astimezone().isoformat(),

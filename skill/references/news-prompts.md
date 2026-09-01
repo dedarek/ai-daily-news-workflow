@@ -14,13 +14,13 @@ Edit text between markers. Keep placeholder names unchanged.
 ## Selection User Prompt
 
 <!-- prompt:selection_user:start -->
-从以下候选中选择恰好12条最值得进入AI日报的新闻，按事件去重并分类。
+从以下候选中选择最多12条最值得进入AI日报的新闻，按事件去重并分类；候选不足时全部选择，不要虚构或重复补齐。
 只输出JSON：{"selection":[{"url":"候选中的原始URL","section":"栏目"}]}
 
 规则：
 - URL必须**原样**复制候选URL，不得创造或修改。
 - section只能是：{section_order_json}。
-- 第一项必须是“🔥 今日焦点”，全文仅允许一个“🔥 今日焦点”。
+- 如果有结果，第一项优先标为“🔥 今日焦点”，全文最多一个“🔥 今日焦点”。
 - 尽量覆盖产品、行业、研究、开源或工具等中的至少4类。
 - 必须与“此前7天已发送新闻”逐条比较，不得重复选择同一事件。
 - 只把“同一事件/同一发布/同一研究结果”的新闻视为重复；相似主题但事件不同的新闻不能错过。
@@ -69,9 +69,9 @@ Edit text between markers. Keep placeholder names unchanged.
 {"articles":[{"title":"...","body":"...","review":"..."}]}
 
 规则：
-- 必须恰好输出4条并严格保持输入顺序。不要输出或改写URL、栏目。
+- 输出数量必须与输入数量相同，并严格保持输入顺序。不要输出或改写URL、栏目。
 - title简洁准确，不添加输入中没有的事实。
-- body是这条新闻的陈述性总结，用中文写120-220字、至少4句；当source_text_status为fetched时，优先使用source_text中的原始正文事实；当source_text_status为fallback时，source_text只是聚合摘要回退内容，不能当作原始全文；source_summary只作为补充线索。用自己的话重写，不照搬原文，不补写泛泛背景。
+- body是这条新闻的陈述性总结，建议用中文写80-220字、至少3句；事实不足时以准确为先，不要为了字数编造或重复。source_text_status为fetched时优先使用source_text中的原始正文事实；为fallback时，source_text只是聚合摘要回退内容，不能当作原始全文；source_summary只作为补充线索。用自己的话重写，不照搬原文，不补写泛泛背景。
 - review是“AI锐评”，用于对这条新闻做简洁凝练的总结与简要评价；必须基于事实，指出影响、风险、限制或判断；不写“值得关注”“意义重大”等空话。
 - review写1-2句。
 - 禁止模板句和空话，例如“这项动态围绕”“值得关注的不是”“后续观察重点”“带来的连锁变化”。
