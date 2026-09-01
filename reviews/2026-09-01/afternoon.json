@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-09-01",
+  "reviewed_at": "2026-09-01T11:40:35.540345+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 96,
+    "summary": "日报内容结构严谨，新闻事实与锐评逻辑自洽，播客对话自然流畅且覆盖全面，仅个别日期存在未来时间戳的潜在逻辑瑕疵。",
+    "issues": [
+      "新闻与播客中的日期显示为2026年，若当前实际时间非2026年，则存在事实性时间逻辑错误（需确认是否为虚构/未来推演场景）",
+      "播客中关于Astra模型“因数学能力太强被暂停发布”的表述略显口语化，虽符合对话风格，但建议明确为“因安全/对齐风险暂停”以更严谨"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
