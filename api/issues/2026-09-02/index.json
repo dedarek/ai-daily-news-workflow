@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-09-02",
+  "content_date": "2026-09-02",
+  "published_at": "2026-09-02T07:53:22.957452+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen35-122b-a10b-fp8"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1",
+    "calls": 10,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 59,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 2,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 58,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 59,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+            "previous_url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+            "previous_date": "2026-09-01"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://openai.com/index/path-to-astra/",
+                "previous_url": "https://www.qbitai.com/2026/08/481893.html",
+                "reason": "两者均报道 OpenAI 的 Astra 模型。此前新闻为社区流传的灰测 Demo 及传闻（2026-09-01），今日新闻为官方正式发布路径及安全评估披露，属于同一核心事件从传闻/灰测到正式发布的实质性进展，但主体、动作和对象完全一致，视为同一事件链条的延续报道。"
+              }
+            ]
+          },
+          {
+            "attempt": 2,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1在开场直接抛出宏观结论，缺乏从具体新闻切入的自然过渡，略显生硬。",
+              "关于EvoUndo研究的描述存在事实偏差：原文指出197个突变中有191个被成功追回，对话中误述为'只有6个能安全回滚'，导致逻辑矛盾。",
+              "部分新闻（如Qwen3.8-Next、minimind）的讨论较为简略，仅停留在数据罗列，缺乏对技术细节或行业影响的深入追问。"
+            ],
+            "repair_instruction": "1. 修改S1开场白，建议先提及Anthropic双模发布的具体新闻作为引子，再自然过渡到安全与成本的宏观讨论。2. 修正EvoUndo相关对话：将'只有6个能安全回滚'改为'197个突变中191个被成功追回'，以符合日报事实并理顺逻辑。3. 针对Qwen3.8-Next和minimind，增加一句追问或补充，例如询问稀疏架构对长上下文的具体影响，或minimind在教学之外的潜在应用场景，以增强信息密度。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1在开场直接抛出宏观结论，缺乏从具体新闻切入的自然过渡，略显生硬。",
+          "关于EvoUndo研究的描述存在事实偏差：原文指出197个突变中有191个被成功追回，对话中误述为'只有6个能安全回滚'，导致逻辑矛盾。",
+          "部分新闻（如Qwen3.8-Next、minimind）的讨论较为简略，仅停留在数据罗列，缺乏对技术细节或行业影响的深入追问。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-02.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-02.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-02.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-02.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-02.mp4"
+}

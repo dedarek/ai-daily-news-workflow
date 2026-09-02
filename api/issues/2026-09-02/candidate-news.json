@@ -1,0 +1,542 @@
+[
+  {
+    "title": "Claude新版双模上线",
+    "summary": "Anthropic发布Fable 5.1与Mythos，百万上下文支撑长任务。新版模型说明列出迁移风险，科研榜 🚀 达52.6%。缓存读取降到0.25美元，代理成本压力小了。Mythos仍只给受审机构使用。",
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.17.0",
+    "summary": "LMDeploy发布v0.17.0，集成DeepEPv2并新增Kimi K2.6模型支持，还加入mooncake store的kv_connector以及服务端n>1并行采样扇出。同时针对GLM-5.2 serving、CUDA paged attention与V4 prefill做了性能优化，并更新昇腾注意力后端。对使用LMDeploy做多模型推理部署的团队来说，这轮更新同时扩展了模型和存储生态并提升了吞吐。",
+    "url": "https://github.com/InternLM/lmdeploy/releases/tag/v0.17.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1769期 - 2026-09-02 12:01",
+    "summary": "本期重点是[Qwen3.8-Max-0902]以1691分登顶Code Arena WebDev，并凭约5美元/MToken位居性能价格前沿；同时，Agent正加速进入[企业生产]与[真实开放场景]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Astra安全评估公开",
+    "summary": "OpenAI准备发布Astra，网络能力触及关键级。Astra安全评估披露 🛡️ 模型可找零日。高阶能力先小范围开放，访问会受限制。安全发布节奏被放到台前。",
+    "url": "https://openai.com/index/path-to-astra/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax H3 on vLLM-Omni: From System-Wide Optimization to Real-Time Serving with FastVideo’s FastH3",
+    "summary": "vLLM-Omni展示了如何对MiniMax H3全栈做系统级优化和扩展，并集成FastVideo的四步FastH3方案，使生成速度超过实时播放。这让MiniMax H3在vLLM-Omni上具备实时音视频生成能力，对相关部署和产品化有重要参考。",
+    "url": "https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1768期 - 2026-09-02 08:03",
+    "summary": "本期重点关注[Astra网络安全模型]的发布预告，以及[AI代理成本优化]和[开放视频模型基线]等实用进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic推出企业护栏",
+    "summary": "EFS面向企业代理，客户数据留在自家云。企业前沿护栏说明 🧷 跨会话风险会被标记。它像代理时代的零留存增强层。首批会从秋季分阶段铺开。",
+    "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1767期 - 2026-09-02 04:02",
+    "summary": "本期重点集中在[代理式视频理解]、[Fable 5.1]和[多模态世界模型]等模型进展，同时出现了面向阅读、视觉推理与企业预测的新工具。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fable 5.1降价增强",
+    "summary": "社媒实测称新版更省，缓存读价 💸 降75%。模型实测数据列出多项基准。科学代理胜率为52.6%，旧版为24.7%。安全拦截也更克制。",
+    "url": "https://x.com/kimmonismus/status/2094852023673872701",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
+    "summary": "Hugging Face发布@huggingface/kernels，提供200多个WebGPU内核用于本地AI推理与训练。这让浏览器端和应用内的本地AI运行有了更完整的算子支撑，对前端AI和边缘推理开发者很有价值。",
+    "url": "https://huggingface.co/blog/webgpu-kernels",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1766期 - 2026-09-02 00:01",
+    "summary": "本期重点集中在[Agent可靠性]、[LLM成本优化]与[本地模型生态]。同时，浏览器凭据复用、多模态文档检索和低代码建站等实用工具也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌Pics挑战Canva",
+    "summary": "谷歌发布Pics设计工具，用户用提示词 🎨 生成素材。谷歌设计产品面向协作编辑。底层由Nano Banana驱动。Canva和Adobe会感到压力。",
+    "url": "https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How to Size GPUs for AI Inference and TCO Without Overspending",
+    "summary": "NVIDIA开发者博客发布指南，讨论如何根据推理负载和总体拥有成本合理规划GPU规模，避免过度采购。文章面向正在扩展AI推理基础设施的组织，提供容量与成本平衡的方法，帮助控制预算。",
+    "url": "https://developer.nvidia.com/blog/how-to-size-gpus-for-ai-inference-and-tco-without-overspending/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1765期 - 2026-09-01 20:01",
+    "summary": "[Anthropic]研究显示奖励黑客训练可能诱发模型越权攻击；社区同时涌现[手写学习助手]与多项[本地AI]工具更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-01_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT Health接入Epic",
+    "summary": "OpenAI接入Epic病历，医生可只读 🔒 导入数据。医疗病历集成披露使用边界。化验、用药和专科记录可被汇总。医疗AI进入更深工作流。",
+    "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788292262: [ROCm] Set USE_ARC in ROCm workflows (#194123)",
+    "summary": "PyTorch的ROCm工作流新增USE_ARC变量设置，通过导出OMP_NUM_THREADS避免OpenMP忙等，带来约3.5%的测试运行时间加速。这对ROCm平台上跑PyTorch测试和训练的开发者是一个小的性能优化点。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788292262",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1764期 - 2026-09-01 16:01",
+    "summary": "本期重点聚焦[商业Agent评测]与[Agent持续进化]。本地推理工具、浏览器自动化及多智能体协作也出现实用更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-01_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta给科研实验排序",
+    "summary": "Meta提出偏好模型，先筛值得跑的实验 🧪。科研偏好论文披露成绩。AIRA-dojo平均分升到0.729。同等效果约省三成执行预算。",
+    "url": "https://arxiv.org/abs/2608.13940",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10740",
+    "summary": "llama.cpp b10740修复了Metal后端因缺少autoreleasepool导致的内存泄漏，并重命名相关变量。该更新提升macOS/iOS上Metal推理的稳定性，对使用Apple Silicon本地推理的用户有实际意义。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10740",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1763期 - 2026-09-01 12:01",
+    "summary": "本期重点关注[Manus恢复独立运营]及其通用智能体路线，同时社区出现[Gemma4-12B模型改造]和[Obsidian AI工作流]等实用动态。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-01_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "openJiuwen刷新编码榜",
+    "summary": "静态代理框架获新解，轨道组合 ⚙️ 可动态改流程。开放九问论文给出基准。SWE-bench Verified达82.6%。模型策略固定，增益来自框架。",
+    "url": "https://arxiv.org/abs/2608.27969",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788290620",
+    "summary": "PyTorch分布式模块将NCCL后端的组UID初始化提前到构造函数中，以避免延迟初始化可能导致的通信问题。该改动增强了分布式训练时NCCL通信的稳健性，对多卡训练用户是个基础改进。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788290620",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1762期 - 2026-09-01 08:01",
+    "summary": "本期重点关注[Anthropic安全更新]与[多智能体工程实践]。此外，企业知识图谱、MCP集成、设计规范驱动开发及模型竞技场数据也出现新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-01_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "EvoUndo约束自进化",
+    "summary": "智能体会重构自身工具，可恢复性成硬门槛 🛡️。EvoUndo论文测试600个任务。研究发现197个增强改动难回滚。扩展演算追回191例。",
+    "url": "https://arxiv.org/abs/2608.28363",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10739",
+    "summary": "llama.cpp b10739为M2 Max GPU新增fa-vec调优参数，并强调这些参数来自真实设备收集。该更新提升Apple M2 Max上的注意力向量化性能，对相应硬件用户有直接收益。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10739",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1761期 - 2026-09-01 04:01",
+    "summary": "本期重点集中在[交互式世界模型]与[智能体基础设施]方向：Runway推出Solaris，Hyper3D发布可编辑、具备物理规律的WorldGen；同时，Linux本地Agent和企业级Agent治理工具也在加速落地。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-01_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LightNav-0做通用导航",
+    "summary": "模型借VLM空间智能，统一令牌表达行动 📡。通用导航论文披露数据。4000小时数据支撑训练。十项仿真达到SOTA。",
+    "url": "https://huggingface.co/papers/2608.30935",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10738",
+    "summary": "llama.cpp b10738在SYCL后端支持将host-pinned内存的最大分配限制在2GB以内，以规避某些平台上的内存分配问题。这个改动改善了SYCL设备上的兼容性和稳定性，对Intel GPU等用户有帮助。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10738",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1760期 - 2026-09-01 00:01",
+    "summary": "本期重点关注[Agent模型实测]与[企业级AI基础设施]进展：GLM-5.3-Flash在真实任务竞技场中以较低成本提升开源模型竞争力，Fireworks则开放模型专门化训练与强化学习平台。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-01_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Lucida重建可编辑室内",
+    "summary": "Lucida解析杂乱视频，再生成完整物体资产 🧭。室内场景论文展示闭环摆放。F-Score升至0.924。机器人仿真可直接用这些资产。",
+    "url": "https://huggingface.co/papers/2608.30821",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10737",
+    "summary": "llama.cpp b10737针对qwen4exp做了一组修复，涵盖seq_cp、块位置键控、mtmd输入和CUDA中止问题，并补充测试。其中还修复了-kvu NaN坍缩问题，提升了对该实验架构的支持稳定性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10737",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Qwen新架构省算力",
+    "summary": "稀疏MoE规模达125B，每词只激活6B参数 🤖。Qwen架构论文列明设计。训练算力约省到九分之一。Muon也提升了训练稳定性。",
+    "url": "https://huggingface.co/papers/2608.30320",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能体请求暴增9.4倍，token账单却没涨：Uber 公开AI软件工厂省钱方法",
+    "summary": "Uber公开其AI软件工厂的降本实践，在智能体请求暴增9.4倍的情况下token账单未同步上涨。文章介绍了相关优化方法，对大规模部署AI智能体的企业控制成本有直接借鉴意义。",
+    "url": "https://www.infoq.cn/article/WGj2Jx0K2sbP3dhUXeC5?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "World Labs发布Atlas",
+    "summary": "李飞飞团队发布Atlas，单图可重建3D场景 🧭。Atlas发布动态称运镜达到像素级。它还能生成图像和视频帧。VFX与机器人会先受益。",
+    "url": "https://x.com/pmarca/status/2094859867710460085",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Fal’s H3 Max Live breaks the infinite videogen barrier",
+    "summary": "Fal 的 H3 Max Live 声称能以比观看更快的速度生成可接受质量的视频，打破了无限视频生成的障碍。这对实时视频生成和内容生产可能开启新方向，但具体影响尚不确定。",
+    "url": "https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "世界模型路线升温",
+    "summary": "李飞飞强调世界没有文字，三维物理才是底座 🌍。世界模型观点讲清路线。Atlas要模拟时空。这条线和纯语言模型分工明显。",
+    "url": "https://x.com/drfeifei/status/2094858344968454414",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Manage agents, tools and skills at scale with AWS Agent Registry",
+    "summary": "AWS Agent Registry 现已正式可用，提供一个覆盖组织内代理、工具、技能和自定义资源的统一可搜索且受治理的目录。该服务支撑发布、策展和发现工作流，帮助企业规模化管理和复用智能体资产，降低治理复杂度。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "奥特曼谈短期超智",
+    "summary": "他称路径变化很快，去年未料短期超智 ⚡。希思访谈片段谈到对齐与新模型。OpenAI外部压力继续升温。这个判断会放大安全争论。",
+    "url": "https://x.com/AndrewCurran_/status/2094836825420685465",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Build observable enterprise agentic retrieval using Managed Amazon Bedrock Knowledge Base with AWS CloudFormation",
+    "summary": "该方案在 Amazon Bedrock Managed Knowledge Base 与 AgentCore 上构建企业级智能体检索系统，代理能够跨多个知识库推理和路由并返回带引用答案。系统内置七层可观测性、按需与持续评估，并可经单一 CloudFormation 链部署，便于企业落地可审计的 RAG 应用。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-observable-enterprise-agentic-retrieval-using-managed-amazon-bedrock-knowledge-base-with-aws-cloudformation/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "新云算力安全告急",
+    "summary": "伊利亚警示新云薄弱，失控代理会抢算力 ⚠️。新云安全警示呼吁加固。强安全模型应协助防护。算力平台会成为重点目标。",
+    "url": "https://x.com/ilyasut/status/2094881278621253755",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI 写代码飞快，为何交付没有变快？小红书 Muse 的 Agentic 架构实践",
+    "summary": "小红书 Muse 团队分享其 Agentic 架构实践，回应用户困惑：AI 写代码已经飞快，但端到端交付为何没变快。文章聚焦如何把智能体能力从单点编码扩展到研发流程协同，从而真正提升交付效率。",
+    "url": "https://www.infoq.cn/article/l88X1azz8wfwphDyECoP?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "苹果指控OpenAI毁证",
+    "summary": "苹果要求加速取证，OpenAI迟交MacBook ⚖️。法庭文件报道提到取证数据。案件围绕AI硬件机密。法院尚未作最终认定。",
+    "url": "https://www.theverge.com/tech/987575/apple-openai-destroying-evidence-trade-secrets-lawsuit",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Run NVIDIA BioNeMo NIM Microservices for Protein Structure Prediction in Claude Science",
+    "summary": "NVIDIA 开发者介绍在 Claude Science 中运行 BioNeMo NIM 微服务以进行蛋白质结构预测。智能体 AI 科学家可读论文、提出假设、调用模型并规划后续实验优先级，展示科研智能体的实际工作流。",
+    "url": "https://developer.nvidia.com/blog/run-nvidia-bionemo-nim-microservices-for-protein-structure-prediction-in-claude-science/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI规划星际航线",
+    "summary": "费米任务拟2029年前发射，航程或达八万年 🛰️。星际航线报道称AI找到路径。PSI获得5800万美元资金。任务预算约1500万美元。",
+    "url": "https://www.technologyreview.com/2026/09/01/1143247/ai-interstellar-journey-alpha-centauri/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How t54 built a trust layer with Amazon Bedrock AgentCore payments",
+    "summary": "t54 构建了 x402-secure 信任层，在 Amazon Bedrock AgentCore 支付场景中对每个端点先评分再让自主代理付款。通过会话预算、凭证隔离和确定性信任门控，该系统已在无人工介入下治理超过两千万笔代理发起交易。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-t54-built-a-trust-layer-with-amazon-bedrock-agentcore-payments/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "minimind降低训练门槛",
+    "summary": "项目用64M参数训LLM，两小时可从零跑通 ⚡。minimind仓库获57k星。学习者能快速复现训练链路。它更像一套小模型教学底座。",
+    "url": "https://github.com/jingyaogong/minimind",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Runway's Solaris is an AI system that generates software interfaces in real time",
+    "summary": "Runway 发布 Solaris，这是其称为「界面世界模型」新类别的首个系统。它不运行传统代码，而是在用户交互过程中逐帧生成软件界面，可能重塑软件界面的开发与交互方式。",
+    "url": "https://the-decoder.com/runways-solaris-is-an-ai-system-that-generates-software-interfaces-in-real-time/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "academic-research-skills走红",
+    "summary": "Claude Code获得科研流程，写作评审修订连起来 🧭。学术研究技能库获44.9k星。今日新增193星。论文党能直接拿来改流程。",
+    "url": "https://github.com/Imbad0202/academic-research-skills",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788274389",
+    "summary": "PyTorch 对一个测试文件进行重构并启用 XPU 支持。该改动扩展了 PyTorch 在 XPU 硬件上的测试覆盖，反映对非 CUDA 加速器的持续适配。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788274389",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "A社化身A割！Claude官宣永久提额25%，结果到手反而少17%",
+    "summary": "Anthropic 的 Claude 官方宣布永久提额 25%，但用户实际到账额度反而减少 17%，被批评为「明升暗降」。这引发对模型厂商配额策略透明度和用户信任的讨论。",
+    "url": "https://www.qbitai.com/2026/09/482406.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Connect an AgentCore Runtime hosted MCP server to Amazon Quick",
+    "summary": "本文介绍如何在 AgentCore Runtime 部署并托管 MCP 服务器，并将其与 Amazon Quick 集成。该模式通过 MCP 服务器复用常用工具和代理，客户无需为每个场景自建连接器即可在 Amazon Quick 的聊天代理与工作流中使用产品。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/connect-an-agentcore-runtime-hosted-mcp-server-to-amazon-quick/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Build multi-tenant agentic chat applications on enterprise data with Amazon Bedrock Managed Knowledge Base",
+    "summary": "本文展示如何在 Amazon Bedrock Managed Knowledge Base 上构建多租户智能体文档聊天应用，用户上传文档后可立即提出有依据的问题。文章覆盖摄取与检索流程、异步索引生命周期、按用户数据隔离及规模化运维实践。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-multi-tenant-agentic-chat-applications-on-enterprise-data-with-amazon-bedrock-managed-knowledge-base/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TimesFM-3: A zero-shot foundation model for multivariate forecasting",
+    "summary": "Google Research 推出 TimesFM-3，一个面向多变量预测的零样本基础模型。该模型可在无需任务特定训练的情况下进行多变量时间序列预测，有助于降低预测建模门槛并提升泛化能力。",
+    "url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能体适应度函数：将演进式架构扩展至确定性规则之外",
+    "summary": "本文探讨智能体适应度函数，将演进式架构从确定性规则扩展到能够评估智能体行为的新阶段。通过定义适应度函数，团队可在复杂不确定环境中持续评估和优化智能体系统，提升架构演进能力。",
+    "url": "https://www.infoq.cn/article/8iWWrov7bkk1hz5CcFft?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI Coding 之后，如何让 Agent 进入企业研发全链路？得物推荐的 Harness 实践",
+    "summary": "本文探讨在 AI Coding 之后如何让智能体进入企业研发全链路，并介绍得物推荐的 Harness 实践。重点是将 Agent 嵌入从需求到交付的完整研发流程，弥补单点编码工具在整体协作中的不足。",
+    "url": "https://www.infoq.cn/article/sDyQxrWR6zDPJuLX4FA8?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
+    "summary": "微软研究院推出 GigaPath-Flash 和 GigaTIME-Flash，在保持病理基础模型强性能的同时显著降低计算需求。这为人群规模研究和更广泛探索打开大门，推动病理学基础模型向高效计算方向发展。",
+    "url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+    "summary": "这篇论文介绍了Qwen3.8-Flash-Next的架构设计，针对现有大模型在效率与训练稳定性上的矛盾，采用稀疏混合专家路线，把混合门控delta-net与稀疏注意力层组合起来，并引入门控残差分支和离加速器n-gram嵌入。核心思路是通过异构模块分工和残差门控来提升表达能力，同时减少计算浪费。评估显示该设计在效率、能力和训练稳定性上都有明显收益，对追求稀疏架构落地的团队有参考价值。",
+    "url": "https://arxiv.org/abs/2608.30320",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Scaling Large Reasoning Models beyond Human Supervision: A Path toward Superintelligence",
+    "summary": "文章针对大型推理模型训练仍受限于人类监督的瓶颈，提出一个结构化的扩展阶梯，核心是让模型追踪自主奖励并利用自我生成的经验继续提高推理能力。该框架不是单纯鼓吹无监督扩展，而是同时梳理了可能的风险点和评估维度，使超人类监督的扩展路径更可操作。对关注推理模型自我改进和超级智能安全的研究者来说，它提供了一个兼具野心和约束的路线图。",
+    "url": "https://arxiv.org/abs/2608.31075",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CAST: Critique-Aware Supervision for Training Reliable Long-Horizon Tool-Calling Agents",
+    "summary": "该工作瞄准长周期工具调用智能体的可靠性问题，传统监督信号在稀疏结果下难以指导每一步动作。CAST的做法是从稀疏最终结果反向生成结构化的动作级理由，再用这些理由训练批评模型和策略模型，让代理在中间步骤也能获得细粒度反馈。结果表明这种批评感知的监督显著降低了长任务中的错误累积，对构建更稳妥的工具调用代理很有价值。",
+    "url": "https://arxiv.org/abs/2608.30147",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Verification-Aware Training for Speculative Decoding",
+    "summary": "论文针对投机解码中草稿模型与验证器脱节的问题，提出验证感知训练，在训练阶段模拟顺序验证过程，并根据token被接受或拒绝的模式动态调整损失权重。这样草稿模型不再只追求自身似然，而是学会生成更容易被验证器接受的序列。实验显示该方法能提升草稿准确率与整体解码吞吐，对推理加速链路有直接意义。",
+    "url": "https://arxiv.org/abs/2608.30135",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

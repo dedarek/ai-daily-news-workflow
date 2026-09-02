@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-09-01",
-  "content_date": "2026-09-01",
-  "published_at": "2026-09-01T03:21:11.187733+00:00",
-  "article_count": 11,
-  "podcast_turns": 21,
+  "issue_date": "2026-09-02",
+  "content_date": "2026-09-02",
+  "published_at": "2026-09-02T07:53:22.957452+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -15,14 +15,14 @@
       "qwen35-122b-a10b-fp8"
     ],
     "endpoint": "https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1",
-    "calls": 12,
+    "calls": 10,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen35-122b-a10b-fp8",
         "usage": {},
-        "selected_count": 11,
+        "selected_count": 12,
         "target_count": 12,
-        "degraded": true
+        "degraded": false
       },
       "selection_attempts": [
         {
@@ -30,7 +30,7 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen35-122b-a10b-fp8",
           "usage": {},
-          "candidate_count": 58,
+          "candidate_count": 59,
           "target_count": 12,
           "validation_issues": []
         },
@@ -39,33 +39,19 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen35-122b-a10b-fp8",
           "usage": {},
-          "candidate_count": 57,
-          "target_count": 12,
-          "validation_issues": []
-        },
-        {
-          "attempt": 3,
-          "validation_attempt": 1,
-          "model": "lenovo:qwen35-122b-a10b-fp8",
-          "usage": {},
-          "candidate_count": 56,
+          "candidate_count": 58,
           "target_count": 12,
           "validation_issues": []
         }
       ],
       "cross_day_dedupe": {
         "window_days": 7,
-        "recent_sent_count": 60,
+        "recent_sent_count": 59,
         "exact_url_blocks": [
           {
-            "current_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-            "previous_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-            "previous_date": "2026-08-30"
-          },
-          {
-            "current_url": "https://github.com/THU-MAIC/OpenMAIC",
-            "previous_url": "https://github.com/THU-MAIC/OpenMAIC",
-            "previous_date": "2026-08-30"
+            "current_url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+            "previous_url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+            "previous_date": "2026-09-01"
           }
         ],
         "high_confidence_event_blocks": [],
@@ -76,26 +62,14 @@
             "usage": {},
             "duplicates": [
               {
-                "current_url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
-                "previous_url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
-                "reason": "两则新闻均报道 Anthropic 针对模型安全（特别是越权、欺骗等对齐失效问题）的最新进展。此前新闻（8月29日）报道了 Anthropic 发布报告，展示 Claude 自主完成对齐研究并修复10类失效问题；今日新闻（8月31日）报道 Anthropic 发布安全更新回应评测事故，重点提及越权暴露沙箱缺口及新分类器拦截。两者核心主体均为 Anthropic 的模型安全与对齐研究，且今日新闻是对此前安全研究工作的具体落地更新和事故回应，属于同一底层安全事件的持续报道，无实质性新事件发生（如发布全新模型架构或独立的新产品）。"
+                "current_url": "https://openai.com/index/path-to-astra/",
+                "previous_url": "https://www.qbitai.com/2026/08/481893.html",
+                "reason": "两者均报道 OpenAI 的 Astra 模型。此前新闻为社区流传的灰测 Demo 及传闻（2026-09-01），今日新闻为官方正式发布路径及安全评估披露，属于同一核心事件从传闻/灰测到正式发布的实质性进展，但主体、动作和对象完全一致，视为同一事件链条的延续报道。"
               }
             ]
           },
           {
             "attempt": 2,
-            "model": "lenovo:qwen35-122b-a10b-fp8",
-            "usage": {},
-            "duplicates": [
-              {
-                "current_url": "https://x.com/elonmusk/status/2094577304647164374",
-                "previous_url": "https://x.com/elonmusk/status/2093459153259794679",
-                "reason": "两则新闻均报道马斯克展示/宣布 Grok Bot 具备代理用户操作外部账户（如网购、邮件、日历、文件）的能力。前者侧重于展示微软账户插件（Outlook/OneDrive）的具体演示，后者侧重于宣布网购下单功能。核心主体均为 Grok 从对话助手向具备实际交易和操作能力的代理工具演进，属于同一产品能力扩展的连续报道，无实质性新进展（如正式发布 vs 传闻，或完成交易 vs 谈判），仅为同一产品不同功能点的连续展示。"
-              }
-            ]
-          },
-          {
-            "attempt": 3,
             "model": "lenovo:qwen35-122b-a10b-fp8",
             "usage": {},
             "duplicates": []
@@ -140,11 +114,11 @@
           "review": {
             "pass": true,
             "issues": [
-              "S1 首句切入略显突兀，缺乏自然的对话引入（如‘今天咱们聊聊’或‘刚看到个新闻’），建议增加半句过渡以增强口语自然度。",
-              "部分新闻（如 VibeWorlding、J-Zero）未被覆盖，导致日报内容未完全利用，虽非致命错误，但建议后续选题时更均衡地分配 5-7 条核心新闻，避免遗漏重要前沿研究。",
-              "S2 在提到‘长鑫存储’时直接抛出‘良率只有25%’，略显生硬，建议改为‘听说良率目前只有25%左右’以体现信息的不确定性或来源感。"
+              "S1在开场直接抛出宏观结论，缺乏从具体新闻切入的自然过渡，略显生硬。",
+              "关于EvoUndo研究的描述存在事实偏差：原文指出197个突变中有191个被成功追回，对话中误述为'只有6个能安全回滚'，导致逻辑矛盾。",
+              "部分新闻（如Qwen3.8-Next、minimind）的讨论较为简略，仅停留在数据罗列，缺乏对技术细节或行业影响的深入追问。"
             ],
-            "repair_instruction": "1. 修改 S1 首句，增加如‘刚看到个重磅消息’等口语化过渡，使切入更自然。2. 在提及具体数据（如良率25%）时，增加‘据称’或‘估计’等限定词，增强对话的真实感和严谨性。3. 若需覆盖更多新闻，可在后续对话中替换或补充 VibeWorlding 或 J-Zero 的讨论，但当前轮次和结构已合规，无需强制修改。"
+            "repair_instruction": "1. 修改S1开场白，建议先提及Anthropic双模发布的具体新闻作为引子，再自然过渡到安全与成本的宏观讨论。2. 修正EvoUndo相关对话：将'只有6个能安全回滚'改为'197个突变中191个被成功追回'，以符合日报事实并理顺逻辑。3. 针对Qwen3.8-Next和minimind，增加一句追问或补充，例如询问稀疏架构对长上下文的具体影响，或minimind在教学之外的潜在应用场景，以增强信息密度。"
           },
           "review_model": "lenovo:qwen35-122b-a10b-fp8",
           "review_usage": {}
@@ -155,9 +129,9 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1 首句切入略显突兀，缺乏自然的对话引入（如‘今天咱们聊聊’或‘刚看到个新闻’），建议增加半句过渡以增强口语自然度。",
-          "部分新闻（如 VibeWorlding、J-Zero）未被覆盖，导致日报内容未完全利用，虽非致命错误，但建议后续选题时更均衡地分配 5-7 条核心新闻，避免遗漏重要前沿研究。",
-          "S2 在提到‘长鑫存储’时直接抛出‘良率只有25%’，略显生硬，建议改为‘听说良率目前只有25%左右’以体现信息的不确定性或来源感。"
+          "S1在开场直接抛出宏观结论，缺乏从具体新闻切入的自然过渡，略显生硬。",
+          "关于EvoUndo研究的描述存在事实偏差：原文指出197个突变中有191个被成功追回，对话中误述为'只有6个能安全回滚'，导致逻辑矛盾。",
+          "部分新闻（如Qwen3.8-Next、minimind）的讨论较为简略，仅停留在数据罗列，缺乏对技术细节或行业影响的深入追问。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -165,16 +139,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-01/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-01/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-01/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-01/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-01.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-01/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-01/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-01.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-01/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-01.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-01.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-01.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-02.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-02.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-02/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-02.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-02.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-02.mp4"
 }
