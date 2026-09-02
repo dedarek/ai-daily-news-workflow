@@ -47,6 +47,10 @@ DEFAULT_VIDEO_API_BASE_URL = 'http://8.137.39.142:1234/api'
 DEFAULT_VIDEO_API_TOKEN = 'lenovo-ssg-aics-tsd-tic-cd'
 DEFAULT_VIDEO_API_TITLE = 'AI热点新闻'
 VIDEO_API_TRANSIENT_HTTP_CODES = {408, 429, 500, 502, 503, 504}
+
+
+class VideoApiJobFailedError(RuntimeError):
+    """Raised when the video API accepts a job but it later fails server-side."""
 DEFAULT_MAX_PUBLISHED_VIDEO_BYTES = 49 * 1024 * 1024
 MOSS_TTS_MODEL = 'fnlp/MOSS-TTSD-v0.5'
 DEFAULT_MOSS_TTS_SPEED = 1.02
@@ -1783,7 +1787,7 @@ def wait_video_api_job(job_id: str, token: str, base_url: str) -> dict:
         if status == 'succeeded':
             return payload
         if status == 'failed':
-            raise RuntimeError(f'video API job failed: {payload}')
+            raise VideoApiJobFailedError(f'video API job failed: {payload}')
         time.sleep(poll_seconds)
     raise RuntimeError(f'video API job timed out after {timeout_seconds}s: {last_payload}')
 
@@ -1842,64 +1846,78 @@ def generate_video_api_media(
     token = video_api_token()
     if not token:
         raise RuntimeError('AI_DAILY_VIDEO_API_TOKEN is required; refusing to generate podcast audio/video')
-    submit_error: Exception | None = None
-    used_base_url = ''
-    for candidate_base_url in video_api_base_url_candidates():
-        attempts = max(1, int(os.environ.get('AI_DAILY_VIDEO_API_SUBMIT_ATTEMPTS', '6')))
-        for attempt in range(1, attempts + 1):
-            try:
-                job_id, submit_payload = submit_video_api_job(script_path, issue_date, token, candidate_base_url)
-                used_base_url = candidate_base_url.rstrip('/')
-                break
-            except HTTPError as exc:
-                body = video_api_error_body(exc)
-                submit_error = RuntimeError(f'HTTP {exc.code}: {body}')
-                if exc.code in VIDEO_API_TRANSIENT_HTTP_CODES and attempt < attempts:
-                    delay = video_api_retry_delay(attempt, exc)
-                    print(
-                        f'WARN video_api_submit_transient base_url={candidate_base_url} '
-                        f'status={exc.code} attempt={attempt}/{attempts}; '
-                        f'retry_in={delay:.1f}s body={body[:200]}',
-                        flush=True,
-                    )
-                    time.sleep(delay)
-                    continue
-                raise RuntimeError(f'video API submit failed: HTTP {exc.code}: {body}') from exc
-            except URLError as exc:
-                submit_error = exc
-                if candidate_base_url.startswith('https://') and is_tls_protocol_error(exc):
-                    print(
-                        'WARN video_api_tls_protocol_error '
-                        f'base_url={candidate_base_url}; retrying with http fallback',
-                        flush=True,
-                    )
+    job_retry_attempts = max(1, int(os.environ.get('AI_DAILY_VIDEO_API_JOB_RETRY_ATTEMPTS', '3')))
+    for job_attempt in range(1, job_retry_attempts + 1):
+        submit_error: Exception | None = None
+        used_base_url = ''
+        for candidate_base_url in video_api_base_url_candidates():
+            attempts = max(1, int(os.environ.get('AI_DAILY_VIDEO_API_SUBMIT_ATTEMPTS', '6')))
+            for attempt in range(1, attempts + 1):
+                try:
+                    job_id, submit_payload = submit_video_api_job(script_path, issue_date, token, candidate_base_url)
+                    used_base_url = candidate_base_url.rstrip('/')
                     break
-                if attempt < attempts:
-                    delay = video_api_retry_delay(attempt)
-                    print(
-                        f'WARN video_api_submit_network base_url={candidate_base_url} '
-                        f'attempt={attempt}/{attempts}; retry_in={delay:.1f}s error={exc}',
-                        flush=True,
-                    )
-                    time.sleep(delay)
-                    continue
-                raise
-        if used_base_url:
-            break
-        if (
-            isinstance(submit_error, URLError)
-            and candidate_base_url.startswith('https://')
-            and is_tls_protocol_error(submit_error)
-        ):
-            continue
-        if candidate_base_url.startswith('https://') and len(video_api_base_url_candidates()) > 1:
-            continue
-        if submit_error is not None:
+                except HTTPError as exc:
+                    body = video_api_error_body(exc)
+                    submit_error = RuntimeError(f'HTTP {exc.code}: {body}')
+                    if exc.code in VIDEO_API_TRANSIENT_HTTP_CODES and attempt < attempts:
+                        delay = video_api_retry_delay(attempt, exc)
+                        print(
+                            f'WARN video_api_submit_transient base_url={candidate_base_url} '
+                            f'status={exc.code} attempt={attempt}/{attempts}; '
+                            f'retry_in={delay:.1f}s body={body[:200]}',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+                        continue
+                    raise RuntimeError(f'video API submit failed: HTTP {exc.code}: {body}') from exc
+                except URLError as exc:
+                    submit_error = exc
+                    if candidate_base_url.startswith('https://') and is_tls_protocol_error(exc):
+                        print(
+                            'WARN video_api_tls_protocol_error '
+                            f'base_url={candidate_base_url}; retrying with http fallback',
+                            flush=True,
+                        )
+                        break
+                    if attempt < attempts:
+                        delay = video_api_retry_delay(attempt)
+                        print(
+                            f'WARN video_api_submit_network base_url={candidate_base_url} '
+                            f'attempt={attempt}/{attempts}; retry_in={delay:.1f}s error={exc}',
+                            flush=True,
+                        )
+                        time.sleep(delay)
+                        continue
+                    raise
+            if used_base_url:
+                break
+            if (
+                isinstance(submit_error, URLError)
+                and candidate_base_url.startswith('https://')
+                and is_tls_protocol_error(submit_error)
+            ):
+                continue
+            if candidate_base_url.startswith('https://') and len(video_api_base_url_candidates()) > 1:
+                continue
+            if submit_error is not None:
+                raise RuntimeError(f'video API submit failed: {submit_error}')
+        else:
             raise RuntimeError(f'video API submit failed: {submit_error}')
-    else:
-        raise RuntimeError(f'video API submit failed: {submit_error}')
 
-    final_payload = wait_video_api_job(job_id, token, used_base_url)
+        try:
+            final_payload = wait_video_api_job(job_id, token, used_base_url)
+            break
+        except VideoApiJobFailedError as exc:
+            if job_attempt >= job_retry_attempts:
+                raise
+            delay = video_api_retry_delay(job_attempt)
+            print(
+                f'WARN video_api_job_failed_retry job={job_id} '
+                f'attempt={job_attempt}/{job_retry_attempts}; retry_in={delay:.1f}s error={exc}',
+                flush=True,
+            )
+            time.sleep(delay)
     zip_path = audio_path.with_name(f'video-api-result-{issue_date}.zip')
     download_video_api_zip(job_id, token, zip_path, used_base_url)
     print(f'VIDEO_API downloaded zip={zip_path.name} bytes={zip_path.stat().st_size}', flush=True)
