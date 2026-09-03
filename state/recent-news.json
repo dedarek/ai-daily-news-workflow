@@ -1,444 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-08-26": {
-      "candidates": [
-        {
-          "date": "2026-08-26",
-          "title": "Claude统一记忆上线",
-          "summary": "Claude接入统一记忆能力(AI资讯)。聊天与Cowork共用。用户可控🧠保留内容。旧项目不用再复述。",
-          "url": "https://x.com/bcherny/status/2092355642363453943"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
-          "summary": "OpenAI 公开了自研推理芯片「Jalapeño」的首批结果，宣称在现代模型上实现更高吞吐、更低延迟和更强能效。对推理成本和部署密度的从业者来说，这是一条值得关注的硬件路线。",
-          "url": "https://openai.com/index/jalapeno-first-results"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "第1729期 - 2026-08-26 00:07",
-          "summary": "本期重点关注[豆包工作]切入企业办公场景，以及[Granite 4.2]和[llama.cpp]带来的开源模型与推理优化进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-26_0007"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Qwen闪电模型预热",
-          "summary": "ModelScope上线闪电模型页面。模型基于Qwen4架构。Qwen3.8-Flash⚡将开放。社区等待推理提速。",
-          "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "STARFlow2: Bridging Language Models and Normalizing Flows for Unified Multimodal Generation",
-          "summary": "Apple ML 提出「STARFlow2」，将语言模型与归一化流桥接起来做统一多模态生成，试图解决现有方案中离散 token 损视觉保真、文本生成与扩散去噪结构不对称、以及生成适配损伤预训练理解的问题。它为文本-图像交织序列生成提供了一条新路径。",
-          "url": "https://machinelearning.apple.com/research/starflow2-multimodal-generation"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "第1728期 - 2026-08-25 20:01",
-          "summary": "本期重点集中在[模型压缩]、[具身智能共建]与[Agent基础设施]。同时，Codex配额调整和多款实用工具带来明确的用户体验变化。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_2001"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "豆包工作接入办公代理",
-          "summary": "豆包工作变成办公代理入口。项目可连接飞书。Agent🧭调度多个应用。权限继承成重点。",
-          "url": "https://x.com/dotey/status/2092250134243369035"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Granite 4.2 LLMs: How They're Built",
-          "summary": "Hugging Face 博客发布「Granite 4.2」大语言模型的构建细节，介绍其架构、训练流程等关键选择。对关注开源企业模型和训练方法的技术人员，这是一份可参考的工程说明。",
-          "url": "https://huggingface.co/blog/ibm-granite/granite-4-2"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "第1727期 - 2026-08-25 16:03",
-          "summary": "本期重点关注[Windows Harness]与[Apodex 1.1 mini]等实用工具，以及[Qwen3.8-27B]最新评测进展。AI应用正从模型能力竞争，扩展到桌面自动化、科研分析与Agent工程化。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_1603"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "ChatGPT桌面端支持WebMCP",
-          "summary": "ChatGPT桌面端放出开发者演示动态。内置浏览器支持WebMCP。网站📡可被自动调用。Codex可创建Sites应用。",
-          "url": "https://x.com/OpenAIDevs/status/2092344959248761263"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "CUDA Python 1.0: Stable APIs, One Foundation, Full Platform Access",
-          "summary": "NVIDIA 发布「CUDA Python 1.0」，提供稳定 API 和统一基础，让 Python 开发者无需深入 CUDA C++ 工具链即可获得全平台 GPU 访问能力。这对扩大 GPU 编程生态和降低开发门槛有重要意义。",
-          "url": "https://developer.nvidia.com/blog/cuda-python-1-0-stable-apis-one-foundation-full-platform-access/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "第1726期 - 2026-08-25 04:02",
-          "summary": "本期重点关注[智能体基础设施]与[开发者工具]进展：LangChain、AWS和ElevenLabs分别降低了智能体部署、资源发现及语音自动化的使用门槛。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_0402"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "GLiNER小模型抽取升级",
-          "summary": "Fastino发布抽取模型动态。GLiNER2.5仅0.3B。长合同📄支持分段抽取。实体识别同步打标。",
-          "url": "https://x.com/Gorden_Sun/status/2092183628080205844"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
-          "summary": "在 SemiAnalysis 的「InferenceX」基准上，OpenAI 的「Jalapeño」据称在每用户 token 数和每千瓦吞吐两项指标上超过现有最先进芯片。该结果强化了 OpenAI 自研推理硬件在规模推理效率上的竞争力。",
-          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "第1725期 - 2026-08-25 00:02",
-          "summary": "本期重点聚焦[AI视频专业交付]、[办公产品整合]与[本地Agent部署]。同时，ToMoE架构转换和DeepSeek Harness规模化实践为模型推理与工程落地提供了新参考。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-08-25_0002"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Anthropic发布AI原生研发指南",
-          "summary": "Anthropic给出研发流程指南(AI资讯)。内容覆盖六阶段。Agent⚙️接入计划到运维。Git留痕便于审计。",
-          "url": "https://claude.com/blog/the-ai-native-sdlc-playbook"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-          "summary": "Hugging Face 博客报道一种量化感知修复方法，其生成的 4 位压缩模型性能超过对应的全精度原版。该结果对低比特模型部署、显存和推理成本优化具有直接吸引力。",
-          "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "大模型榜单夹具变量风险",
-          "summary": "论文单独分析评测夹具变量。三千多题被重测。配置🧩明显拉开分数。脆弱题贡献**95.7%**差距。",
-          "url": "https://arxiv.org/abs/2608.21382"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "v0.3.0",
-          "summary": "「llama.cpp」发布 v0.3.0，加入「dots3-note」多模态模型与新的「DSA-ISWA」KV cache，支持「GLM-4.5-Air」的 MTP，并修复「DeepSeek 4」的 tensor-split 和多序列回滚问题。「ggml」与「mtmd」也迎来多项底层更新，对本地推理用户是重要版本升级。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "医学智能体强化学习方案",
-          "summary": "BioMed-Agent-RL提出医学智能体论文。系统融合强化学习。CPO与DPO🩺共同训练。准确率称达73%。",
-          "url": "https://arxiv.org/abs/2608.21864"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "开源国产8B模型，比肩闭源Image 2了！",
-          "summary": "量子位报道开源的国产 8B 模型「SenseNova U1.5 Lite」宣称性能可媲美闭源「Image 2」。如果属实，这为中小规模开源模型在多模态或视觉任务上提供了高性价比选择。",
-          "url": "https://www.qbitai.com/2026/08/479192.html"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "SparseRead长程阅读省令牌",
-          "summary": "SparseRead提出长程阅读层。先筛证据再入上下文。六模型⚙️最高省**92.9%**令牌。任务质量基本守住。",
-          "url": "https://arxiv.org/abs/2608.22237"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "v0.5.18",
-          "summary": "SGLang 发布 v0.5.18，新增「Muse Glimmer」「Intern-S2-Mobius」「SANA-Video」「LingBot-Video-MoE」「LTX-2.5」「Cosmos3 Edge 与 Distilled」「LongCat-Image」等模型支持，并补充「Qwen3.8」「Ling-3.0」「Nemotron 3.5 Lightning」的示例。对需要快速接入新多模态和扩散模型的推理服务开发者很有帮助。",
-          "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.18"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "SPADE自博弈环境生成",
-          "summary": "SPADE让LLM写可执行环境。同一模型分饰两角。目标🎯随能力变难。工具能力提升13.9。",
-          "url": "https://arxiv.org/abs/2608.19197"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Meta's paid AI agent Hatch launches soon, with a new model called Watermelon due in October",
-          "summary": "Meta 将在未来几周推出付费 AI 智能体「Hatch」，并计划在十月份发布新模型「Watermelon」。这显示出 Meta 在 AI 智能体产品化和下一代模型迭代上的并行推进。",
-          "url": "https://the-decoder.com/metas-paid-ai-agent-hatch-launches-soon-with-a-new-model-called-watermelon-due-in-october/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "长期记忆放大迎合风险",
-          "summary": "MIST量化记忆模型评估。长期记忆会放大迎合。科学医疗误解📈被覆盖。迎合率最高升四成。",
-          "url": "https://arxiv.org/abs/2606.10949"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Nvidia says its Groq 3 LPX is four times faster than Cerebras, but the math is more complicated",
-          "summary": "Nvidia 的「Groq 3 LPX」推理芯片进入全面生产，官方称在「Gemma 4 31B」上达到 3400 tokens/s，比 Cerebras 快四倍，但达到该性能需要 64 个加速器，而 Cerebras 只需一到两个。架构在大型 MoE 模型上的可扩展性仍是未决问题。",
-          "url": "https://the-decoder.com/nvidia-says-its-groq-3-lpx-is-four-times-faster-than-cerebras-but-the-math-is-more-complicated/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "阿里事件日志式智能体记忆",
-          "summary": "阿里提出智能体记忆论文(AI资讯)。会话绑定事件日志。沙盒内核📌保存变量。LongMemEval_S达94.8%。",
-          "url": "https://arxiv.org/abs/2608.21690"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "viable/strict/1787680605: [inductor] Vendor and adapt QuACK symmetric GEMM (#194177)",
-          "summary": "「PyTorch」的 inductor 后端引入并适配了 QuACK 对称 GEMM 内核，针对 X @ X.T 这类对称矩阵乘法，只计算一个三角并同时写入对称位置，支持 FP16 和 BF16。这能减少冗余计算，提升相关算子的性能。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787680605"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "乌克兰战场数据开放英国企业",
-          "summary": "英国接入战场数据平台。Avengers Labs有五百万标注图。三家初创⚔️已跑试点。军事AI数据变硬通货。",
-          "url": "https://the-decoder.com/ukraine-opens-its-massive-labeled-battlefield-dataset-to-british-firms-in-a-landmark-ai-weapons-partnership/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "b10621",
-          "summary": "llama.cpp 发布 0.3.0 版本，更新了 CI 发布默认描述并新增脚本用于生成发布摘要。这是本地推理框架的一个重要版本节点，聚合了近期 Metal、SYCL 等后端改进，对依赖 llama.cpp 做端侧或本地 LLM 推理的开发者值得跟进。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10621"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "英伟达加码开源模型投资",
-          "summary": "英伟达加码开源模型投资。Poolside交易达60亿美元。另投10亿美元📈吸纳工程师。开源模型拉动芯片需求。",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247914838&idx=3&sn=0ced317280f95ca346e2a848fc85a1b1"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "SpaceXAI 推出面向自主 AI 智能代理的 Grok Bot",
-          "summary": "SpaceXAI 推出面向自主 AI 智能代理的 Grok Bot，将 Grok 模型能力包装为可自主执行任务的代理形态，但原文未展开具体开放细节。这反映模型厂商继续向工具调用与自主代理场景推进，关注 Agent 落地的团队可重点观察其能力边界。",
-          "url": "https://www.infoq.cn/article/a2Y7bOxLHZfCVWtKhAtQ?utm_source=rss&utm_medium=article"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "苹果M6与M5 Ultra芯片组合曝光",
-          "summary": "苹果发布新款芯片组合(AI资讯)。M6首用2nm工艺。双16核神经引擎⚙️服务端侧AI。M5 Ultra跑前沿模型。",
-          "url": "https://www.theverge.com/tech/984118/apple-m6-m5-ultra-chip-mac-mini-studio"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "The full stack behind abundant intelligence",
-          "summary": "OpenAI CFO Sarah Friar 阐释了芯片、算力、模型和产品层面的进步如何复合，以更大规模、更低成本交付更实用的智能。这种全栈飞轮视角帮助从业者理解 OpenAI 的成本下降逻辑与基础设施投资方向。",
-          "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Keenable建设智能体搜索索引",
-          "summary": "Keenable凭智能体搜索索引退出隐身。种子轮为2600万美元。索引🤖超千亿文档。实验室已生产调用。",
-          "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "viable/strict/1787655491: [Inductor] Add gfx950 FlyDSL GEMM and torch.mm autotuning (#190903)",
-          "summary": "PyTorch Inductor 为 AMD gfx950 集成基于 FlyDSL 模板的 FP16/BF16 GEMM 内核，并接入 torch.mm 的 max-autotune 路径，新增默认与穷举 tile 配置启发式、对齐检查及按配置缓存编译调度器。这将提升 AMD 新硬件在 PyTorch 自动调优下的矩阵运算效率，对 ROCm 训练与推理用户是直接利好。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787655491"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "阿拉巴马追问智能体安全责任",
-          "summary": "阿拉巴马检方调查智能体安全事件。OpenAI收到传票。涉事代理🔎曾黑入抱脸。安全责任再被追问。",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/984239/alabama-attorney-general-subpoena-openai-hugging-face-hack"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "v0.33.0",
-          "summary": "Ollama 0.33.0 强化与 Claude Desktop 的集成，可在菜单栏开关本地 Ollama 模型、直接在 Claude 内选择本地模型，并新增 Apps 视图管理集成与可复制命令；同时改进缓存并修复 agent 客户端取消长 prefill 时的挂起，prefill 恢复点改为按构造可信。这提升了本地模型与 Claude 混合使用体验，对个人开发者和团队都更稳定。",
-          "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0-rc3"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "低价夹具验证机器人控制瓶颈",
-          "summary": "创业者用低价夹具实验替代机械手。GoPro加夹具做冰拿铁。硬件🛠️并非唯一瓶颈。智能控制才更难。",
-          "url": "https://www.reddit.com/r/artificial/comments/1vy1ixp/a_deepmind_scientist_swapped_a_real_robot_hand/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "具身大满贯还全开源！原力灵机DM0.5登顶RoboDojo，且clone且珍惜",
-          "summary": "量子位报道原力灵机 DM0.5 在 RoboDojo 登顶，被称为机器人大脑新 SOTA，并已全开源。对具身智能领域从业者，这是一个新的开源基线，值得关注其模型架构、训练数据与评测方式。",
-          "url": "https://www.qbitai.com/2026/08/478791.html"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "GPT图像模板结构化项目",
-          "summary": "开发者把热门模板项目做成结构库。项目沉淀**530+**案例。模板⚙️可供Agent调用。当前约⭐17.7k。",
-          "url": "https://github.com/freestylefly/awesome-gpt-image-2"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "b10615",
-          "summary": "llama.cpp 为 Metal 后端 flash-attention vec 路径加入按设备调优的 (Q, NE) 分派表，新增 53 个 f16 实例使 vec 数从 80 增至 133，并将调优扩展到量化 KV cache，同时加入 SMEM 上限回退。这有助于提升 Apple Silicon 长上下文注意力性能与稳定性。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10615"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "TradingAgents多角色交易框架",
-          "summary": "TradingAgents在交易框架项目组织多角色。LLM协同盯盘。金融决策📊可被模拟。项目累计超⭐100k。",
-          "url": "https://github.com/TauricResearch/TradingAgents"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Introducing new Ray capabilities on SageMaker HyperPod",
-          "summary": "AWS SageMaker HyperPod 在 Amazon EKS 上推出托管 Ray 支持，可在 SageMaker Studio 中创建和监控 Ray 集群、连接 JupyterLab 与 Code Editor、获得开箱即用的可观测性，并运行弹性分布式训练与加速推理。这降低了在 AWS 上使用 Ray 的运维门槛，对分布式 AI 工作负载团队是重要补充。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-new-ray-capabilities-on-sagemaker-hyperpod/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
-          "summary": "AWS 推出 Agent Registry 集中式可搜索目录，用于管理 agent、工具和技能，并基于开放的 Agentic Resource Discovery 规范支持跨环境发现与治理。这有助于企业多智能体资产标准化和规模化治理，也推动 agent 发现协议走向开放。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/agentic-resource-discovery-ard-an-open-specification-for-agent-discovery/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Grafana 正式发布 gcx 和 MCP 服务器，助力基于遥测的智能代理开发",
-          "summary": "Grafana 正式发布 gcx 和 MCP 服务器，以支持基于遥测数据的智能代理开发。这将可观测性数据通过 MCP 协议接入智能体，便于开发者构建运维诊断、根因分析等场景的 agent。",
-          "url": "https://www.infoq.cn/article/9UoCxEhRcFG5ovFxTkXS?utm_source=rss&utm_medium=article"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Bug Fixes + Auto compaction + LAN Remote Access",
-          "summary": "Unsloth 发布包含 170 多个 PR 的修复版本，修复 MLX 与 Mac 运行问题、AMD GPU 相关 bug，并新增实验性自动压缩以支持超出上下文长度的长对话，以及无需 Cloudflare 的 LAN 远程访问预览。这些改动提升了本地微调与推理的稳定性和长对话可用性。",
-          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.803-beta"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "b10622",
-          "summary": "llama.cpp 修复了 Metal 后端缓冲分配未做空指针检查导致的 OOM 硬崩溃问题，使显存分配失败时不再触发 EXC_BAD_ACCESS 而是可恢复。这提升了 Apple Silicon 上加载大模型时的鲁棒性。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10622"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
-          "summary": "TechCrunch 专访 OpenAI 产品负责人 Thibault Sottiaux，讨论 agent、用户体验及向 Greg Brockman 汇报等话题。这为外界了解 OpenAI 在 agent 产品化和 UX 上的思路提供了一手视角。",
-          "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "b10620",
-          "summary": "llama.cpp 执行了 ggml 子模块同步，并发布包含多平台构建产物的更新。对以 llama.cpp 为底层推理引擎的项目，保持 ggml 同步有助于获得最新内核修复与优化。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10620"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "从开源走向共建：范式联合优必选等十余家具身巨头发布PhanthyMotus新计划",
-          "summary": "范式联合优必选等十余家具身智能企业发布 PhanthyMotus 生态社区共建计划，其通用具身 Agent 底座从开源走向多方共建。这标志具身智能基础模型开始通过产业联盟共同迭代，对机器人通用大脑生态有风向意义。",
-          "url": "https://www.qbitai.com/2026/08/479314.html"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "viable/strict/1787664910: Add XPU dispatch for linalg.polar (#188253)",
-          "summary": "PyTorch 为 linalg.polar 算子新增 XPU 后端分派，解决 Intel torch-xpu-ops 的 issue，合并后 XPU 后端上 40 个测试用例可取消跳过。这补全了 Intel GPU/XPU 上 PyTorch 线性代数功能，对 XPU 用户是实用改进。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787664910"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "viable/strict/1787663255",
-          "summary": "PyTorch 将 export/test_torchbind.py 测试泛化并在 XPU 后端启用，扩展了 torchbind 相关导出功能在 Intel XPU 上的测试覆盖。这有助于保证 PyTorch 导出路径在 XPU 硬件上的兼容性。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787663255"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "b10618",
-          "summary": "llama.cpp 修复 GBNF 语法解析器对字符类中连字符转义的处理，使生成的工具调用语法不再因连字符被拒绝而解析失败。这对使用约束解码生成结构化工具调用的开发者很重要，避免特殊字符导致 schema 失效。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10618"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "viable/strict/1787660889: Remove unused typelist constructs from TypeList.h (#194352)",
-          "summary": "PyTorch 清理了 TypeList.h 中 filter、map、reverse 等零内部用户的模板工具，仅保留 take/drop 等外部依赖构造，并同步更新单元测试与导出表。这属于代码库瘦身，降低维护成本，对编译性能或有轻微帮助。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787660889"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "viable/strict/1787658955: [CI] Add gfx950 FlyDSL Inductor test shard (#193473)",
-          "summary": "PyTorch CI 增加 gfx950 FlyDSL Inductor 专用测试分片，安装固定版本 FlyDSL wheel，并在 ROCm 环境或 gfx950 设备不可用时提前失败而非静默跳过 GEMM 覆盖。这保障了 AMD gfx950 上 Inductor 与 FlyDSL GEMM 路径的持续验证。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787658955"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "b10617",
-          "summary": "llama.cpp 在 SYCL 后端中将 tq2_0 量化类型标记为不支持，并更新各平台构建产物。这为 Intel SYCL 设备用户提供了明确的能力边界，避免使用不受支持的量化格式导致错误。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10617"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "viable/strict/1787650059",
-          "summary": "PyTorch 对 NCCL CFT 测试增加门控，只在支持 CFT 的 GPU、驱动和 CUDA 栈上运行。这避免在无能力环境上误报失败，提升分布式通信测试的可靠性。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1787650059"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "赛博义父Tibo最新访谈：专门实体按钮搞重置，“我想重置就重置”",
-          "summary": "量子位报道 Tibo 最新访谈，他认为下一代 Agent 天然会走向云端和更大规模计算资源，并提及专门实体重置按钮等设计。这传递了云端 agent 与用户控制权的产品判断，对 agent 架构师有启发。",
-          "url": "https://www.qbitai.com/2026/08/478996.html"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-08-26",
-          "title": "Claude统一记忆上线",
-          "summary": "Anthropic宣布Claude推出统一记忆功能，该记忆能力现在横跨聊天界面与Claude Cowork工作区。用户拥有完全控制权，可以决定哪些内容被保留在记忆中。这一改进使得Cowork在处理新任务时，能直接调用过往对话中已知的背景信息，如项目细节、管理者偏好或客户历史。用户无需在旧项目中重复陈述已知事实，从而提升了跨场景协作的连贯性与效率。",
-          "url": "https://x.com/bcherny/status/2092355642363453943"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Jalapeño推理芯片首秀",
-          "summary": "OpenAI公开了其自研推理芯片Jalapeño的首批测试结果，宣称该芯片在现代模型部署中实现了更高的吞吐量、更低的延迟以及更强的能效表现。这一硬件路线旨在解决当前大模型推理成本高企和部署密度受限的行业痛点。通过自研芯片优化底层算力，OpenAI试图在推理环节建立相对于通用GPU方案的成本与性能优势。目前该结果仅展示了初步数据，实际大规模商用效果仍有待验证。",
-          "url": "https://openai.com/index/jalapeno-first-results"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Qwen闪电模型预热",
-          "summary": "ModelScope平台已上线闪电模型专属页面，预示着基于Qwen4架构的新一代模型即将发布。社区关注焦点集中在即将开放的Qwen3.8-Flash版本，该版本旨在通过架构优化实现推理速度的显著提升。虽然具体参数尚未完全披露，但“闪电”命名暗示了其在低延迟场景下的性能突破。开发者与用户正等待该模型正式开放，以验证其在实时交互任务中的实际表现。",
-          "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "豆包工作接入办公代理",
-          "summary": "豆包今日发布“豆包工作”功能，将其定位升级为独立的办公Agent工作台，底层程序与模型与桌面版保持一致。该功能支持创建项目并深度连接飞书等办公应用，实现了多应用间的Agent调度与协同。体验显示，用户处理工作流时已习惯将Agent作为首要入口，而非单纯的工具调用。权限继承机制成为该模式落地的核心，确保Agent在跨应用操作时能安全获取必要数据。",
-          "url": "https://x.com/dotey/status/2092250134243369035"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "ChatGPT桌面端支持WebMCP",
-          "summary": "OpenAI在ChatGPT桌面应用的内置浏览器及ChatGPT Sites中新增了对WebMCP标准的支持。当用户访问兼容网站时，ChatGPT或Codex能够自动调用该网站功能以完成任务。开发者可通过更新桌面应用至最新版本，直接要求Codex创建并部署支持WebMCP的应用。此外，OpenAI联合多家技术伙伴发起为期10天的黑客松，提供现金奖励及Pro订阅等丰厚奖品，鼓励构建基于WebMCP的创新体验。",
-          "url": "https://x.com/OpenAIDevs/status/2092344959248761263"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Anthropic发布AI原生研发指南",
-          "summary": "Anthropic发布《AI原生软件开发生命周期指南》，指出传统研发流程已无法匹配AI生成代码的速度。指南涵盖从规划、设计、构建、测试、部署到运维的六个阶段，强调需重构流程以适应智能体介入。传统流程中依赖人工审批和文档流转的环节成为新瓶颈，而AI代理能大幅加速构建阶段。Anthropic建议将Git留痕作为审计依据，确保人类在关键决策点保持介入，同时利用Claude Code等工具提升整体效率。",
-          "url": "https://claude.com/blog/the-ai-native-sdlc-playbook"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "STARFlow2: 桥接语言模型与归一化流实现统一多模态生成",
-          "summary": "Apple机器学习研究团队提出STARFlow2模型，旨在解决现有统一多模态生成方案中的结构性缺陷。该模型通过自回归归一化流与语言模型共享因果掩码、KV缓存及从左到右结构，实现文本与图像的连续、单步生成。基于Pretzel架构，STARFlow2垂直交织冻结的预训练视觉语言模型流与TARFlow流，既保留理解能力又支持高保真图像生成。实验表明，其在图像生成与多模态理解基准上表现优异，验证了自回归流作为统一多模态建模基础的可行性。",
-          "url": "https://machinelearning.apple.com/research/starflow2-multimodal-generation"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "大模型榜单受评测夹具变量显著影响",
-          "summary": "一项新研究揭示现代大模型排行榜分数高度依赖评测夹具配置，而非模型真实能力差异。研究构建“脆弱性网格”，让12个开源指令微调模型在3679道题目上接受26种不同配置测试。结果显示，同一模型在不同配置下得分波动巨大，如gemma4-31b得分区间达31%至89%。脆弱题目贡献了模型间95.7%的分数差距，且四个不同模型在特定配置下均可排名第一。压缩方法并未剔除脆弱题目，反而保留它们，导致榜单排序不稳定。",
-          "url": "https://arxiv.org/abs/2608.21382"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "BioMed-Agent-RL提出医学智能体强化学习方案",
-          "summary": "BioMed-Agent-RL是一种统一的医学智能体，旨在解决临床视觉大语言模型在复杂病例中面临的病灶噪声、模态错位及幻觉问题。该系统融合了自适应编排策略与基于奖励的强化学习模型，通过临床感知偏好优化、直接偏好优化及组相对策略优化来确保可靠性。智能体利用多模态元学习方法，能够动态整合病灶分割器、临床推理器等专家级能力，在X光等多种临床模态下自适应工作。在多项基准测试中，该框架显著优于现有最先进模型，包括GPT-5，准确率最高达到约73%，比当代基线提升了约5%。",
-          "url": "https://arxiv.org/abs/2608.21864"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "SparseRead长程阅读省令牌",
-          "summary": "SparseRead提出了一种无需训练且模型透明的阅读层，旨在解决长程智能体在访问外部文档时过度读取导致的令牌浪费问题。该机制通过感知状态的读取门控，在无关证据进入模型上下文前进行筛选，仅保留必要的稀疏证据。实验显示，在包括Claude Opus 5在内的六个前沿模型及五种工作负载场景下，SparseRead最高可减少92.9%的令牌消耗和89.0%的等待时间。尽管大幅压缩了输入内容，该方法在三个智能体框架中均保持了任务质量不下降甚至有所提升，证明了其广泛的移植性。",
-          "url": "https://arxiv.org/abs/2608.22237"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "TradingAgents多角色交易框架",
-          "summary": "TradingAgents是一个基于多智能体大语言模型的金融交易框架，通过组织研究经理、交易员和投资组合经理等多角色协同工作来模拟金融决策过程。该项目支持多种模型提供商，包括GPT-5.5、Claude Sonnet 5等，并集成了Alpha Vantage、FRED等数据源以进行回测和实时分析。框架具备结构化输出代理、LangGraph检查点恢复及持久化决策日志等功能，确保交易策略的可追溯性与稳定性。目前该项目在GitHub上已获得超过10万星标，显示出社区对AI驱动量化交易工具的高度关注。",
-          "url": "https://github.com/TauricResearch/TradingAgents"
-        },
-        {
-          "date": "2026-08-26",
-          "title": "Ollama v0.33.0强化Claude Desktop集成",
-          "summary": "Ollama发布v0.33.0版本，重点强化了与Claude Desktop的本地集成体验，允许用户在菜单栏直接开关本地Ollama模型。新版本支持在Claude界面内直接选择本地模型，并新增Apps视图以管理集成配置和复制命令。技术层面，该版本改进了缓存机制，修复了代理客户端在取消长预填充时可能出现的挂起问题，并将预填充恢复点调整为按构造可信。这些更新降低了本地模型与云端服务混合使用的门槛，提升了个人开发者及团队在本地环境下的运行稳定性。",
-          "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0-rc3"
-        }
-      ]
-    },
     "2026-08-28": {
       "candidates": [
         {
@@ -2620,6 +2182,264 @@
           "title": "AWS Agent Registry正式可用以管理智能体资产",
           "summary": "AWS Agent Registry服务现已正式推出，旨在为企业提供一个统一、可搜索且受治理的目录，用于管理组织内的代理、工具、技能及自定义资源。该服务支持智能体资产的发布、策展和发现工作流，帮助企业解决大规模部署智能体时的治理难题，并促进资产复用。通过集中化管理，企业能够更有效地协调不同智能体间的协作，降低复杂系统的运维成本。",
           "url": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/"
+        }
+      ]
+    },
+    "2026-09-03": {
+      "candidates": [
+        {
+          "date": "2026-09-03",
+          "title": "Gemini 3.8 Flash上线",
+          "summary": "Google把新款闪电模型推到API。复杂任务会更卖力 🚀 调工具。DeepSWE拿到73.7%。Cyber版只给防守机构用。",
+          "url": "https://x.com/dotey/status/2095291379559580154"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1775期 - 2026-09-03 12:01",
+          "summary": "本期重点是[Wan 3.0]在图像转视频竞技场跃升至第三，以及[Claude Computer Use]改为后台静默运行。社区还分享了本地模型加速、书签整理等实用工具与工作流。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_1201"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Muse Spark 1.3降本",
+          "summary": "Meta让Muse新模型进入Muse Code和API。长程编码更省 ⚡ 动作。工具调用少20%。Token用量降25%。",
+          "url": "https://x.com/rohanpaul_ai/status/2095237722046881912"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1774期 - 2026-09-03 08:01",
+          "summary": "本期重点关注[Agent基础设施]与[本地化部署]进展：Cursor开放自有机器运行云端代理，Cline完成千万级用户底层迁移并大幅降低任务错误率。与此同时，Gemini 3.8 Flash High公布了新的[性能—成本]数据。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0801"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Claude能后台用电脑",
+          "summary": "Anthropic把桌面执行能力放进Claude Cowork和Code。它可点击 🖱️ 打字开应用。用户继续做别的事。Agent感更强。",
+          "url": "https://x.com/claudeai/status/2095226833293685100"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1773期 - 2026-09-03 04:02",
+          "summary": "本期重点是[Fable 5.1 Max]在网页开发评测中登顶，以及[Gemini 3.8 Flash]在代理任务中的大幅跃升。企业AI安全、文档抽取和数据分析工具也有重要更新。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0402"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Grok Bot到安卓",
+          "summary": "xAI让安卓聊天助手开始可用。入口更贴近移动端 ⚡ 问答。演示展示唤起过程。覆盖面继续扩大。",
+          "url": "https://x.com/elonmusk/status/2095208414196674930"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1772期 - 2026-09-03 00:02",
+          "summary": "本期重点是 Google 发布[Gemini 3.8 Flash]及网络安全模型，并推出[Fairwind Program]。同时，[Runway Dev MCP]与 Weaviate Ask Mode 进一步降低智能体开发门槛。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0002"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "TwinDEX省掉真机示教",
+          "summary": "X Square Robot用灵巧手系统采集训练数据。人戴设备 🖐️ 直接演示。机器人端可迁移动作。吞吐最高5.3倍。",
+          "url": "https://x.com/rohanpaul_ai/status/2095205077711761837"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1771期 - 2026-09-02 20:01",
+          "summary": "本期重点集中在[AI视频与世界建模]的产品化探索，以及[本地低成本推理]的实测工作流。与此同时，X对AI回复的治理收紧，多个开发工具也发布了新版本。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_2001"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Lily主打端侧推理",
+          "summary": "Perplexity开源本地推理引擎。它面向Apple芯片 ⚙️ 优化。重点适配Qwen3.6-35B-A3B。混合计算少些堵塞。",
+          "url": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1770期 - 2026-09-02 16:01",
+          "summary": "本期重点集中在[大规模训练数据工程]、[智能体开发工具更新]和[Fable 5.1用户反馈]。此外，Gemma 4在Android Studio通过llama.cpp运行，为本地推理带来新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_1601"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "ZimaBlue吃下具身视频",
+          "summary": "研究用世界动作模型学习机器人控制。慢快架构 ⚙️ 支持30Hz动作预测。训练视频超12万小时。零样本成功率到77.8%。",
+          "url": "https://huggingface.co/papers/2609.00188"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1769期 - 2026-09-02 12:01",
+          "summary": "本期重点是[Qwen3.8-Max-0902]以1691分登顶Code Arena WebDev，并凭约5美元/MToken位居性能价格前沿；同时，Agent正加速进入[企业生产]与[真实开放场景]。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_1201"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "HoH让编码代理多日迭代",
+          "summary": "论文把自主开发框架套在现有harness上。规划编码测试 🔁 连续循环。三类基准平均涨52.25%。70多轮做出射击游戏。",
+          "url": "https://huggingface.co/papers/2609.01481"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1768期 - 2026-09-02 08:03",
+          "summary": "本期重点关注[Astra网络安全模型]的发布预告，以及[AI代理成本优化]和[开放视频模型基线]等实用进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0803"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "SciGram补科学图理解",
+          "summary": "团队用图表指令数据连接课程术语。流程会自动 🧪 抽概念造问答。数据含194K图。视觉模型科学题更稳。",
+          "url": "https://arxiv.org/abs/2609.00948"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1767期 - 2026-09-02 04:02",
+          "summary": "本期重点集中在[代理式视频理解]、[Fable 5.1]和[多模态世界模型]等模型进展，同时出现了面向阅读、视觉推理与企业预测的新工具。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0402"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "廉价验证器有盲区",
+          "summary": "论文审计推理级联系统的成本幻觉。小模型答题 🔍 验证器放行。面板只报3%错误。真实错误可到32%。",
+          "url": "https://arxiv.org/abs/2609.01345"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "第1766期 - 2026-09-02 00:01",
+          "summary": "本期重点集中在[Agent可靠性]、[LLM成本优化]与[本地模型生态]。同时，浏览器凭据复用、多模态文档检索和低代码建站等实用工具也有新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0001"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "多智能体提示更稳",
+          "summary": "研究把控数分离方法用于代理流程。路由格式 🧭 交给类型对象。优化器只改语言内容。协议有效率到100%。",
+          "url": "https://huggingface.co/papers/2609.00621"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "GlossoGen看到代理暗语",
+          "summary": "论文用语言演化平台测试多代理协作。高压任务 ⚡ 逼出新约定。语言可组合但难读懂。复盘阶段会强化规则。",
+          "url": "https://huggingface.co/papers/2609.01491"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "司法部支持AI训练合理使用",
+          "summary": "美国司法部在训练版权立场中支持OpenAI。它认为训练 📚 可属合理使用。该立场反打版权局报告。纽约时报案影响很大。",
+          "url": "https://the-decoder.com/us-department-of-justice-backs-fair-use-for-AI-training-in-landmark-copyright-case/"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Astra推理术引安全担忧",
+          "summary": "OpenAI计划让Astra推理模型使用循环深度。模型会反复 🧠 压缩推理。外部监控可能更难。思维链可审计性受压。",
+          "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Uber抢先开进伦敦",
+          "summary": "Uber与Wayve把自动驾驶叫车带到伦敦。首批仍配安全员 🚕。Waymo被抢在后面。欧洲需求开始实测。",
+          "url": "https://www.theverge.com/news/988415/uber-wayve-robotaxi-london-launch"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Wonderful估值冲到50亿美元",
+          "summary": "企业AI公司拿到C轮融资。金额是5.5亿美元 💹。半年内估值翻倍。资金投向产品和FDE团队。",
+          "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Claude API Skill开源",
+          "summary": "Anthropic把接口优化技能放进Claude Code。命令可做 🔧 成本优化。也能审计提示词反模式。支持8种语言SDK。",
+          "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "持久代理可跨宿主",
+          "summary": "新论文给代理迁移架构拆出身份和管线。记忆代码 📦 随代理保留。模型接口可替换。核心测试通过833项。",
+          "url": "https://arxiv.org/abs/2609.00546"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "HarnessEvolve修自进化失误",
+          "summary": "研究用参考轨迹方案校准失败步骤。归因不再只看终点 🧭。双门控防止退化。更新质量更可控。",
+          "url": "https://arxiv.org/abs/2609.00829"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "模型周进入连发状态",
+          "summary": "Andrew Curran称模型密集更新挤在同一周。Gemini和Muse同日 ⚡ 上新。Fable、Mythos刚到。Muse单任务成本0.55美元。",
+          "url": "https://x.com/AndrewCurran_/status/2095257682865532970"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-09-03",
+          "title": "Gemini 3.8 Flash上线",
+          "summary": "Google发布Gemini 3.8 Flash及其网络安全专用变体3.8 Flash Cyber，前者在DeepSWE v1.1评测中得分73.7%，逼近Claude Opus 5，并显著优于GPT-5.6 Sol。该模型通过增加工具调用次数提升复杂任务处理能力，同时在提示词注入测试中仅5.5%被攻破，安全性优于竞品。Cyber版本仅向经审核的政府及关键基础设施开放，在漏洞发现与自动修补评测中表现优异，成本远低于现有方案。",
+          "url": "https://x.com/dotey/status/2095291379559580154"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Muse Spark 1.3降本",
+          "summary": "Meta推出Muse Spark 1.3，相比前代减少20%工具调用和25% Token用量，显著降低长代码任务成本。该模型在MRCR 256K–512K长上下文评测中得分98.5，超越GPT-5.6 Sol，并在JobBench、OSWorld等代理任务中接近Opus 5水平。Zuckerberg称其为编码与代理工作最大进步，已上线Muse Code及API，开源权重即将发布。",
+          "url": "https://x.com/rohanpaul_ai/status/2095237722046881912"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Claude能后台用电脑",
+          "summary": "Anthropic在Claude Cowork和Claude Code中新增后台桌面操作功能，支持点击、打字及启动应用，用户可并行处理其他任务。该功能已在macOS桌面应用Beta版上线，Pro和Max计划用户可通过设置启用。系统强调安全操作指南，确保AI代理在受控环境下执行桌面指令。",
+          "url": "https://x.com/claudeai/status/2095226833293685100"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Grok Bot到安卓",
+          "summary": "xAI宣布Grok Bot正式登陆Android平台，用户可通过移动设备直接访问聊天助手。Elon Musk在X平台发布演示视频展示唤起流程，标志着Grok服务覆盖范围进一步扩大。该更新旨在提升移动端用户体验，增强与iOS用户的平等访问权。",
+          "url": "https://x.com/elonmusk/status/2095208414196674930"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "X Square Robot推出TwinDEX灵巧手系统",
+          "summary": "X Square Robot发布了TwinDEX，这是一套由可穿戴设备与机器人手协同设计的系统，旨在解决灵巧机器人训练数据收集昂贵且效率低下的问题。该系统包含一个用于数据采集的三指可穿戴手和一个匹配的机器人手，允许人类在不使用实体机器人的情况下直接演示动作，并将数据直接迁移至机器人控制。官方宣称，相比传统的机器人端遥操作，TwinDEX能将有效数据采集吞吐量提升最高5.3倍，从而突破灵巧机器人学习规模化的关键瓶颈。",
+          "url": "https://x.com/rohanpaul_ai/status/2095205077711761837"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Perplexity开源面向Apple芯片的本地推理引擎",
+          "summary": "Perplexity开源了一款专为Apple Silicon芯片优化的本地推理引擎，旨在提升端侧大模型的运行效率。该引擎重点适配了Qwen3.6-35B-A3B模型，通过混合计算架构减少推理过程中的资源堵塞问题。这一举措使得在本地设备上高效运行特定参数规模的模型成为可能，为隐私敏感或网络受限场景下的AI应用提供了新的技术选项。",
+          "url": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "ZimaBlue利用视频预训练提升机器人零样本控制",
+          "summary": "ZimaBlue提出了一种通过大规模视频预训练来构建通用世界动作模型的新框架，旨在解决机器人操作泛化性差的问题。该研究采用三阶段课程学习和慢快双系统架构，利用超过12万小时的人机第一视角视频进行训练，实现了30Hz的动作预测频率。在真实机器人的零样本评估中，引入视频预训练后任务成功率从36.1%显著提升至77.8%，证明了利用海量无标签视频数据增强机器人物理经验的有效性。",
+          "url": "https://huggingface.co/papers/2609.00188"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "HoH框架实现自主编码代理多日迭代开发",
+          "summary": "Harness-of-Harness (HoH) 是一种旨在支持自主编码代理进行多日持续改进的框架，它通过结构化的规划、编码和测试循环来优化软件系统。该框架可在现有编码代理测试套件上运行，通过平衡修复与能力增长，在GameCraft-Bench、FrontierSWE和ProgramBench三个基准测试中实现了平均52.25%的性能提升。在超过70轮的迭代部署中，HoH成功自主开发出了一款包含完整剧情、核心机制及视听效果的第一人称射击游戏。",
+          "url": "https://huggingface.co/papers/2609.01481"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "SciGram构建科学图理解新基准",
+          "summary": "研究团队提出一种基于科学课程术语的视觉指令生成框架，旨在解决视觉语言模型在处理科学图表时的短板。该流程自动抽取领域概念并合成原子事实，从网络检索相关图表，最终生成包含图表描述和多项选择题的多模态监督数据。由此构建的SciGram数据集包含超过19.4万张图表及140万条视觉指令，覆盖生命、地球及物理科学领域。尽管依赖网络噪声数据和合成标注，但在SciGram上微调的模型在TQA、ScienceQA等基准测试中表现优异，甚至超越或匹配现有最先进模型，且训练样本更少。",
+          "url": "https://arxiv.org/abs/2609.00948"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "美司法部支持AI训练属合理使用",
+          "summary": "美国司法部在涉及AI训练版权的诉讼中明确表态，支持OpenAI等公司的主张，认为使用受版权保护的作品训练人工智能模型属于合理使用范畴。这一立场直接反驳了美国版权局此前发布的报告观点，并在《纽约时报》诉OpenAI等关键案件中具有重大影响。司法部的介入标志着美国政府行政分支在平衡版权保护与AI技术创新之间，倾向于为模型训练提供法律空间。",
+          "url": "https://the-decoder.com/us-department-of-justice-backs-fair-use-for-AI-training-in-landmark-copyright-case/"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Wonderful半年估值翻倍至50亿美元",
+          "summary": "以色列 - 荷兰企业AI初创公司Wonderful在C轮融资中筹集5.5亿美元，由Insight Partners领投，Salesforce首次参投，使其估值在不到六个月内从20亿美元激增至50亿美元。该公司成立于2025年初，早期通过定制化客服AI代理在非英语市场取得突破，近期已转型为提供“Wonderful AI OS”平台，旨在协调各类AI代理与工作流。公司计划利用新资金加速产品开发并扩大前向部署工程师团队，以应对全球35个国家日益增长的集成需求。",
+          "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "Anthropic开源Claude API优化技能",
+          "summary": "Anthropic在GitHub上开源了名为“Claude API”的技能包，旨在优化开发者使用Claude Code构建应用的过程。该技能包包含模型ID、定价、参数配置、流式传输、工具调用及缓存等详细参考信息，并支持自动检测项目语言以生成对应的SDK代码。其核心功能包括通过命令执行成本优化、审计提示词中的反模式，以及提供涵盖8种编程语言的SDK支持，帮助开发者避免在代码中混用其他大模型提供商的调用逻辑。",
+          "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md"
         }
       ]
     }

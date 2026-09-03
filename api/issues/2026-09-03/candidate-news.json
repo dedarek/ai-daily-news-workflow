@@ -1,0 +1,272 @@
+[
+  {
+    "title": "Gemini 3.8 Flash上线",
+    "summary": "Google把新款闪电模型推到API。复杂任务会更卖力 🚀 调工具。DeepSWE拿到73.7%。Cyber版只给防守机构用。",
+    "url": "https://x.com/dotey/status/2095291379559580154",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1775期 - 2026-09-03 12:01",
+    "summary": "本期重点是[Wan 3.0]在图像转视频竞技场跃升至第三，以及[Claude Computer Use]改为后台静默运行。社区还分享了本地模型加速、书签整理等实用工具与工作流。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Muse Spark 1.3降本",
+    "summary": "Meta让Muse新模型进入Muse Code和API。长程编码更省 ⚡ 动作。工具调用少20%。Token用量降25%。",
+    "url": "https://x.com/rohanpaul_ai/status/2095237722046881912",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1774期 - 2026-09-03 08:01",
+    "summary": "本期重点关注[Agent基础设施]与[本地化部署]进展：Cursor开放自有机器运行云端代理，Cline完成千万级用户底层迁移并大幅降低任务错误率。与此同时，Gemini 3.8 Flash High公布了新的[性能—成本]数据。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude能后台用电脑",
+    "summary": "Anthropic把桌面执行能力放进Claude Cowork和Code。它可点击 🖱️ 打字开应用。用户继续做别的事。Agent感更强。",
+    "url": "https://x.com/claudeai/status/2095226833293685100",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1773期 - 2026-09-03 04:02",
+    "summary": "本期重点是[Fable 5.1 Max]在网页开发评测中登顶，以及[Gemini 3.8 Flash]在代理任务中的大幅跃升。企业AI安全、文档抽取和数据分析工具也有重要更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Grok Bot到安卓",
+    "summary": "xAI让安卓聊天助手开始可用。入口更贴近移动端 ⚡ 问答。演示展示唤起过程。覆盖面继续扩大。",
+    "url": "https://x.com/elonmusk/status/2095208414196674930",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1772期 - 2026-09-03 00:02",
+    "summary": "本期重点是 Google 发布[Gemini 3.8 Flash]及网络安全模型，并推出[Fairwind Program]。同时，[Runway Dev MCP]与 Weaviate Ask Mode 进一步降低智能体开发门槛。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TwinDEX省掉真机示教",
+    "summary": "X Square Robot用灵巧手系统采集训练数据。人戴设备 🖐️ 直接演示。机器人端可迁移动作。吞吐最高5.3倍。",
+    "url": "https://x.com/rohanpaul_ai/status/2095205077711761837",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1771期 - 2026-09-02 20:01",
+    "summary": "本期重点集中在[AI视频与世界建模]的产品化探索，以及[本地低成本推理]的实测工作流。与此同时，X对AI回复的治理收紧，多个开发工具也发布了新版本。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Lily主打端侧推理",
+    "summary": "Perplexity开源本地推理引擎。它面向Apple芯片 ⚙️ 优化。重点适配Qwen3.6-35B-A3B。混合计算少些堵塞。",
+    "url": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1770期 - 2026-09-02 16:01",
+    "summary": "本期重点集中在[大规模训练数据工程]、[智能体开发工具更新]和[Fable 5.1用户反馈]。此外，Gemma 4在Android Studio通过llama.cpp运行，为本地推理带来新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ZimaBlue吃下具身视频",
+    "summary": "研究用世界动作模型学习机器人控制。慢快架构 ⚙️ 支持30Hz动作预测。训练视频超12万小时。零样本成功率到77.8%。",
+    "url": "https://huggingface.co/papers/2609.00188",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1769期 - 2026-09-02 12:01",
+    "summary": "本期重点是[Qwen3.8-Max-0902]以1691分登顶Code Arena WebDev，并凭约5美元/MToken位居性能价格前沿；同时，Agent正加速进入[企业生产]与[真实开放场景]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "HoH让编码代理多日迭代",
+    "summary": "论文把自主开发框架套在现有harness上。规划编码测试 🔁 连续循环。三类基准平均涨52.25%。70多轮做出射击游戏。",
+    "url": "https://huggingface.co/papers/2609.01481",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1768期 - 2026-09-02 08:03",
+    "summary": "本期重点关注[Astra网络安全模型]的发布预告，以及[AI代理成本优化]和[开放视频模型基线]等实用进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SciGram补科学图理解",
+    "summary": "团队用图表指令数据连接课程术语。流程会自动 🧪 抽概念造问答。数据含194K图。视觉模型科学题更稳。",
+    "url": "https://arxiv.org/abs/2609.00948",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1767期 - 2026-09-02 04:02",
+    "summary": "本期重点集中在[代理式视频理解]、[Fable 5.1]和[多模态世界模型]等模型进展，同时出现了面向阅读、视觉推理与企业预测的新工具。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "廉价验证器有盲区",
+    "summary": "论文审计推理级联系统的成本幻觉。小模型答题 🔍 验证器放行。面板只报3%错误。真实错误可到32%。",
+    "url": "https://arxiv.org/abs/2609.01345",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1766期 - 2026-09-02 00:01",
+    "summary": "本期重点集中在[Agent可靠性]、[LLM成本优化]与[本地模型生态]。同时，浏览器凭据复用、多模态文档检索和低代码建站等实用工具也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多智能体提示更稳",
+    "summary": "研究把控数分离方法用于代理流程。路由格式 🧭 交给类型对象。优化器只改语言内容。协议有效率到100%。",
+    "url": "https://huggingface.co/papers/2609.00621",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GlossoGen看到代理暗语",
+    "summary": "论文用语言演化平台测试多代理协作。高压任务 ⚡ 逼出新约定。语言可组合但难读懂。复盘阶段会强化规则。",
+    "url": "https://huggingface.co/papers/2609.01491",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "司法部支持AI训练合理使用",
+    "summary": "美国司法部在训练版权立场中支持OpenAI。它认为训练 📚 可属合理使用。该立场反打版权局报告。纽约时报案影响很大。",
+    "url": "https://the-decoder.com/us-department-of-justice-backs-fair-use-for-AI-training-in-landmark-copyright-case/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Astra推理术引安全担忧",
+    "summary": "OpenAI计划让Astra推理模型使用循环深度。模型会反复 🧠 压缩推理。外部监控可能更难。思维链可审计性受压。",
+    "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Uber抢先开进伦敦",
+    "summary": "Uber与Wayve把自动驾驶叫车带到伦敦。首批仍配安全员 🚕。Waymo被抢在后面。欧洲需求开始实测。",
+    "url": "https://www.theverge.com/news/988415/uber-wayve-robotaxi-london-launch",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Wonderful估值冲到50亿美元",
+    "summary": "企业AI公司拿到C轮融资。金额是5.5亿美元 💹。半年内估值翻倍。资金投向产品和FDE团队。",
+    "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude API Skill开源",
+    "summary": "Anthropic把接口优化技能放进Claude Code。命令可做 🔧 成本优化。也能审计提示词反模式。支持8种语言SDK。",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "持久代理可跨宿主",
+    "summary": "新论文给代理迁移架构拆出身份和管线。记忆代码 📦 随代理保留。模型接口可替换。核心测试通过833项。",
+    "url": "https://arxiv.org/abs/2609.00546",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "HarnessEvolve修自进化失误",
+    "summary": "研究用参考轨迹方案校准失败步骤。归因不再只看终点 🧭。双门控防止退化。更新质量更可控。",
+    "url": "https://arxiv.org/abs/2609.00829",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模型周进入连发状态",
+    "summary": "Andrew Curran称模型密集更新挤在同一周。Gemini和Muse同日 ⚡ 上新。Fable、Mythos刚到。Muse单任务成本0.55美元。",
+    "url": "https://x.com/AndrewCurran_/status/2095257682865532970",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
