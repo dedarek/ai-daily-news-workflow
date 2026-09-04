@@ -2442,6 +2442,438 @@
           "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md"
         }
       ]
+    },
+    "2026-09-04": {
+      "candidates": [
+        {
+          "date": "2026-09-04",
+          "title": "GPT-6 Astra登场",
+          "summary": "OpenAI推出新一代模型，覆盖科研、编码和电脑操作。官方称它越过⚡关键网络安全阈值。FrontierMath约98%，ARC-AGI-3达99.9%。企业和API将分批开放。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Nvidia buys the front door to open AI as closed labs increasingly design their own silicon",
+          "summary": "NVIDIA 宣布以约 129 亿美元收购 Hugging Face，将控制这个拥有超过 1800 万开发者和 20 万家公司的开放模型核心平台。黄仁勋承诺保持平台开放和硬件中立，但这也为 NVIDIA 提供了触达海量开发者的算力分发渠道。对从业者来说，这既可能强化开放生态的算力支持，也引发开放平台被单一硬件厂商主导的担忧。",
+          "url": "https://the-decoder.com/nvidia-buys-the-front-door-to-open-ai-as-closed-labs-increasingly-design-their-own-silicon/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1781期 - 2026-09-04 12:01",
+          "summary": "本期重点关注[GPT-6 Astra]长周期智能体能力的新细节，以及[Cursor×Namespace]为云端Agent提供真实Mac开发环境。另有[ParseBench]文档评测、ASCII可视化组件和实用提示词技巧值得开发者留意。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-04_1201"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Astra能操作桌面",
+          "summary": "OpenAI开发者在桌面演示线程里单独讲了电脑使用。它能进软件点菜单🖱️、填表和看屏幕。OSWorld 2.0 Offline得72.6%。同类任务耗时约少47%。",
+          "url": "https://x.com/berryxia/status/2095675329654501436"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "NVIDIA to Acquire Hugging Face",
+          "summary": "NVIDIA 官方确认以 129.303 亿美元收购 Hugging Face，计划扩展其平台、基础设施并让全球开发者更容易获取 AI 能力。这一官方声明意味着收购已从传闻进入确定阶段，对开放模型生态和开发者工具链的未来走向有直接影响，尤其是平台是否继续中立值得关注。",
+          "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1780期 - 2026-09-04 08:01",
+          "summary": "本期重点是[GPT-6 Astra]公布更多落地数据与应用进展，包括桌面操作、代码代理和前端设计；同时[LangChain MCP]完成重要集成升级，多个AI服务疑似出现集中故障。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-04_0801"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "GPT Image 2.5露面",
+          "summary": "量子位称新版生图模型已在ChatGPT弹窗中出现。它能逼真📷生成发布会截图。嵌入文字更稳，噪点也少。代号或是luna模型。",
+          "url": "https://www.qbitai.com/2026/09/483948.html"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Safety overview: GPT-6 Astra",
+          "summary": "OpenAI 发布安全概览，宣布 GPT-6 Astra 是其迄今能力最强的大规模部署模型，并且首次在网络安全能力上达到公司准备框架中的 Critical 级别。这一定级意味着模型具备可能被用于高级网络攻击的潜在能力，对从业者而言，安全评估、红队测试和访问控制策略将成为部署该模型时的核心关注点。",
+          "url": "https://openai.com/index/safety-overview-gpt-6-astra"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1779期 - 2026-09-04 04:06",
+          "summary": "本期重点是[GPT-6 Astra]正式开启分阶段部署，并公布计算机操作、编程与科学评测成绩；[Fable 5.1 Max]在设计类竞技场继续扩大领先优势。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-04_0406"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Browser Use接入支付",
+          "summary": "Browser Use在代理支付流程中打通Stripe Link。网页Agent可代你🧾结账。真实卡号留在Link内。一次性虚拟卡用完即废。",
+          "url": "https://x.com/berryxia/status/2095668410088907155"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Nvidia confirms it will buy Hugging Face for $12.9 billion",
+          "summary": "NVIDIA 确认将以 129 亿美元收购 Hugging Face，并披露该平台目前托管超过 300 万个模型、服务超过 1800 万开发者。这一数据凸显了 Hugging Face 在开放模型分发中的关键地位，收购完成后 NVIDIA 将直接掌握全球最大的模型与开发者入口，对开源 AI 生态的中立性带来新的不确定性。",
+          "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1778期 - 2026-09-04 00:01",
+          "summary": "本期重点关注[WeatherNext 3]落地多项 Google 服务，以及网页智能体支付、编程智能体编排等[Agent 产品化]进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-04_0001"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Cloudflare推漏洞修复",
+          "summary": "Cloudflare把漏洞修复服务接入Managed Defense。它用GPT-5.6 Cyber🛡️做侦察、验证和补丁建议。服务先给受邀客户。人类仍审核补丁。",
+          "url": "https://blog.cloudflare.com/vulnerability-discovery-remediation/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "b10785",
+          "summary": "llama.cpp 在 Metal 后端为 Flash Attention 向量核加入稀疏注意力支持，新增基于 n_kv_max 的稀疏 mask 提示，并把有限 mask 条目压缩为逐行索引列表以走稀疏计算路径。该更新能让 Apple Silicon 设备在支持稀疏 KV 掩码的推理场景中减少无效注意力计算，对长上下文和结构化稀疏推理有实际加速价值。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10785"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1777期 - 2026-09-03 20:01",
+          "summary": "本期重点关注[长周期电商Agent评测]与[Anthropic开源Commerce Agents]。此外，社区涌现了本地金融摘要、模型微调和Agent记忆等实用工作流。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_2001"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "PAIR调度本地AI",
+          "summary": "英伟达在本地代理工具里推出PAIR测试版。它会把推理任务分发到局域网空闲电脑🖥️。支持Ollama和LM Studio。RTX 5090吞吐最高升1.9倍。",
+          "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Meta closes in on the top with Muse Spark 1.3, and undercuts rivals on price",
+          "summary": "Meta 发布 Muse Spark 1.3，这是五个月内该系列的第四个模型，在智能体基准上提升最为明显，但仍落后于 Claude Fable 5.1 等头部模型。它最具竞争力的地方是价格，每个任务约 0.55 美元，低于所有同分段对手，对成本敏感的企业用户非常有吸引力。从业者关注它可以作为高性价比的智能体任务选择。",
+          "url": "https://the-decoder.com/meta-closes-in-on-the-top-with-muse-spark-1-3-and-undercuts-rivals-on-price/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1776期 - 2026-09-03 16:05",
+          "summary": "[H3 Max Turbo]以近似能力实现[2倍推理速度]与成本减半；Claude Code、OpenCode及llama.cpp集中更新，强化本地与企业级开发体验。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_1605"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "声明式注意力省缓存",
+          "summary": "Google DeepMind论文提出注意力自控方法。模型先声明🔎要读的上下文区域。推理引擎跳过多数KV读取。Gemma降52%，Qwen降31.1%。",
+          "url": "https://arxiv.org/abs/2609.02737"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "2x Faster Qwen3.8-Flash + GLM-5.3-Flash MTP",
+          "summary": "Unsloth 宣布为 Qwen3.8-Flash-Next 和 GLM-5.3-Flash 加入 MTP 支持并默认开启，可将这两款模型推理速度提升最多 2 倍。新版本还包含 170 多项训练、聊天、硬件和性能改进，涉及模型加载稳定性、界面响应速度以及工具调用保留等。对本地部署和微调这些新模型的用户来说，这是一次值得升级的实用更新。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.806-beta"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1775期 - 2026-09-03 12:01",
+          "summary": "本期重点是[Wan 3.0]在图像转视频竞技场跃升至第三，以及[Claude Computer Use]改为后台静默运行。社区还分享了本地模型加速、书签整理等实用工具与工作流。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_1201"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "IOI代码模型超人类",
+          "summary": "团队用竞赛后训练方案训练Nemotron-3-CC。训练集含2.2万道题📄。Ultra-CC在IOI 2026拿535.4分。高于最高人类选手498.27分。",
+          "url": "https://huggingface.co/papers/2609.02849"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "OpenAI’s new reasoning technique alarms AI safety experts",
+          "summary": "OpenAI 的新模型 Astra 将采用一种名为 recurrent depth 的技术，使其推理过程不再局限于多数推理模型所采用的顺序思维模式。这一技术路线引发 AI 安全专家的警觉，因为它可能让模型产生更难预测和审计的思维路径。对从业者而言，这既是推理机制上的前沿探索，也意味着对齐与可解释性面临新的挑战。",
+          "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1774期 - 2026-09-03 08:01",
+          "summary": "本期重点关注[Agent基础设施]与[本地化部署]进展：Cursor开放自有机器运行云端代理，Cline完成千万级用户底层迁移并大幅降低任务错误率。与此同时，Gemini 3.8 Flash High公布了新的[性能—成本]数据。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0801"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "HEART改造工具调用",
+          "summary": "论文提出工具原语框架，让模型用自然语言调工具。ToolFace收纳25519个函数🧩。五项基准平均提升10%。API成本最高降85%。",
+          "url": "https://arxiv.org/abs/2609.01736"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "The Modern CUDA Toolbox in Practice: A Step-by-Step Optimization Walkthrough",
+          "summary": "NVIDIA 发布了一篇面向开发者的 CUDA 优化实践文章，通过一个完整示例逐步演示现代 CUDA 工具箱中的性能调优思路。内容覆盖从初始实现到利用内存层级、线程组织和异步操作等关键优化手段，适用于科学模拟和大规模 AI 训练等 GPU 密集型场景。对需要深入理解 CUDA 性能瓶颈的工程师具有教学参考意义。",
+          "url": "https://developer.nvidia.com/blog/the-modern-cuda-toolbox-in-practice-a-step-by-step-optimization-walkthrough/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1773期 - 2026-09-03 04:02",
+          "summary": "本期重点是[Fable 5.1 Max]在网页开发评测中登顶，以及[Gemini 3.8 Flash]在代理任务中的大幅跃升。企业AI安全、文档抽取和数据分析工具也有重要更新。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0402"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "SolarWM开放世界模型",
+          "summary": "研究团队发布视频世界模型训练框架。它把143万段视频📊统一成帧对齐数据。模型规模覆盖5B到33B。五秒训练片段可滚动数小时。",
+          "url": "https://huggingface.co/papers/2609.02886"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Gemini 3.8 Flash is Google's third budget model in six weeks while frontier models remain MIA",
+          "summary": "Google 推出 Gemini 3.8 Flash，这是六周内第三款 Flash 系列模型，在一些智能体编码基准上以更低单价对标 Claude Opus 5。但其更努力的推理方式使每个任务多消耗约 30% 的输出 token，即使 token 单价不变，实际使用成本反而可能高于前代。这对按任务评估成本的企业用户来说是个容易忽略的陷阱。",
+          "url": "https://the-decoder.com/gemini-3-8-flash-is-googles-third-budget-model-in-six-weeks-while-frontier-models-remain-mia/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "第1772期 - 2026-09-03 00:02",
+          "summary": "本期重点是 Google 发布[Gemini 3.8 Flash]及网络安全模型，并推出[Fairwind Program]。同时，[Runway Dev MCP]与 Weaviate Ask Mode 进一步降低智能体开发门槛。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0002"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "记忆智能体会过信旧事",
+          "summary": "新论文提出记忆信任缺口。旧事实会压过权威证据🧠。模型越强越易被新日期误导。元数据只对强模更有用。",
+          "url": "https://arxiv.org/abs/2609.01852"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+          "summary": "Google DeepMind 正式发布 Gemini 3.8 Flash 及 3.8 Flash Cyber 两款模型，进一步扩充其轻量级 Flash 系列。Cyber 版本可能针对网络安全或安全任务进行专门优化。对开发者而言，新的低成本模型提供了更多选择，尤其在智能体编码和安全场景值得关注。",
+          "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "MoE安全有新补丁",
+          "summary": "SEAL论文把共享专家防线挂到MoE模型上。它避开路由被绕过的问题🛡️。攻击成功率最高降60%。能力损失最多1.4%。",
+          "url": "https://arxiv.org/abs/2609.02293"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference",
+          "summary": "NVIDIA 开发者博客发布 AI 模型协同设计系列的第三篇文章，聚焦如何通过投机解码在不牺牲准确率的前提下加速大模型推理。文章讨论了模型架构与解码策略之间的协同优化，为推理系统设计者提供了减少延迟和提高吞吐的实战参考。对于正在优化服务性能的团队，这是一份结合理论与工程经验的实用资料。",
+          "url": "https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "去护栏模型开始卖",
+          "summary": "TechCrunch写到Abliteration商业模式。它提供弱护栏模型给攻防测试🛡️。支持者说防守也要同等工具。风险在于规模化滥用。",
+          "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Diagrid Catalyst 2.0 发布，为 AI 智能体新增持久化、可验证的执行能力",
+          "summary": "Diagrid 发布 Catalyst 2.0，为其 AI 智能体执行平台加入持久化与可验证执行能力，使智能体工作流在中断后可恢复并具备审计追踪。这对需要长时运行、多步工具调用和合规审计的生产级智能体应用有直接价值。",
+          "url": "https://www.infoq.cn/article/ofYabQL5uvxdaIY7B31f?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "失控智能体推高审计需求",
+          "summary": "Reddit热帖围绕智能体透明度展开。企业被要求留下🕵️完整操作轨迹。安全团队要能复盘每一步。智能体权限成硬门槛。",
+          "url": "https://www.reddit.com/r/artificial/comments/1w68y15/rogue_ai_agent_incidents_fuel_push_for_tech/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+          "summary": "HuggingFace 发布 NeoMME，定位为多模态原生、多语言且高效的编码器，目标是在统一嵌入空间里同时处理多模态输入与多语言文本。对需要跨模态检索或多语言表示学习的场景，可作为基础编码器候选。",
+          "url": "https://huggingface.co/blog/Hcompany/neomme"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "主权AI不止买机器",
+          "summary": "Reddit讨论主权算力边界。本地机房仍可能依赖外部GPU和软件栈🔗。1024卡集群年耗水或超三千万升。真正难点是全栈控制。",
+          "url": "https://www.reddit.com/r/artificial/comments/1w682t7/how_sovereign_is_ai_if_the_gpus_arent_yours/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "viable/strict/1788450620",
+          "summary": "PyTorch 的 LocalTensor 为集合通信新增 ReduceOp.PREMUL_SUM 支持，允许在 Local 后端对归约操作执行预乘求和。这补齐了本地张量路径下的通信原语，有利于某些分布式训练优化下沉到 LocalTensor 实现。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788450620"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Cybercab闭门发布",
+          "summary": "The Verge称无人出租车发布在奥斯汀举行。现场无直播，氛围偏低调⚙️。马斯克仍押注自动驾驶。受邀名单偏亲特斯拉。",
+          "url": "https://www.theverge.com/transportation/989501/tesla-cybercab-launch-robotaxi-austin-musk"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "b10782",
+          "summary": "llama.cpp 此 CUDA 改动允许多 GPU 场景按 split 使用并发流，并恢复此前被误跳过的 CUDA 图优化；由于图已按设备拆分、优化按 split 执行，该放开更合理。多卡推理用户可因此获得更高效的流调度和短 kernel 合并收益。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10782"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Meta把流量收进ZGateway",
+          "summary": "Meta工程团队介绍ZippyDB代理层。它每秒可处理十亿级操作⚙️。当前承载约四成ZippyDB流量。平均计算开销约6%。",
+          "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Anthropic ramps up Claude infrastructure with $35 billion Lambda deal",
+          "summary": "Anthropic 与英伟达支持的云服务商 Lambda 签署 350 亿美元云计算协议，用于扩展 Claude 基础设施。该交易表明 Anthropic 继续加码算力供给，也强化了英伟达生态中的新云厂商地位，对 AI 算力市场和推理成本有信号意义。",
+          "url": "https://the-decoder.com/anthropic-ramps-up-claude-infrastructure-with-35-billion-lambda-deal/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Anthropic skills热度高",
+          "summary": "Anthropic开源智能体技能库。开发者可复用Agent Skills🧩。仓库已有17.36万星。今日新增281星。",
+          "url": "https://github.com/anthropics/skills"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "[AINews] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab, >90% discount for training",
+          "summary": "Latent Space 报道 Meta 的 Muse Spark 1.3 在能力上追平 GPT-5.6-Sol，被视为 Meta Superintelligence 重回前沿实验室的标志，并声称训练成本折扣超九成。这则信息强调 Meta 在大模型基座竞赛中的回归，对关注模型性价比和前沿格局的从业者有参考价值。",
+          "url": "https://www.latent.space/p/ainews-muse-spark-13-matches-gpt"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Chrome DevTools MCP走红",
+          "summary": "Chrome团队的浏览器调试桥继续升温。编码代理可直接控Chrome🛠️。项目已获50.6k星。前端排障更适合代理接手。",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+          "summary": "HuggingFace 博客展示用约 100 步 GRPO 微调一个 3.5 亿参数模型，即可改善结构化输出能力。对资源有限的团队，这表明小模型无需大规模 RLHF 也能在 JSON 等结构化生成上获得明显提升，是低成本对齐路径的实用案例。",
+          "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "TimesFM冲上热榜",
+          "summary": "Google Research的时序预测模型获得大量关注。它面向金融、能源和零售预测📈。仓库已有30.7k星。今日新增1618星。",
+          "url": "https://github.com/google-research/timesfm"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "v0.33.3-rc2: gemma4: image and audio input support",
+          "summary": "Ollama 在 v0.33.3-rc2 中为 gemma4 的 MLX 引擎增加图像和音频输入支持，图像走 26B、31B、e 系列的 transformer tower 或 12B 的 encoder-free 统一嵌入器，音频则复用现有 API 的 WAV、OpenAI input_audio 和转录上传路径。这使 Apple MLX 用户也能在本地跑 gemma4 多模态问答，覆盖视觉和语音输入。",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.33.3-rc2"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Claude Fable 5.1 decoded a centuries-old royalist message hidden in plain sight since 1653",
+          "summary": "Anthropic 的 Claude Fable 5.1 据称破解了一个自 1653 年以来隐藏的保皇党数字谜题，该密码此前被研究者视为未解。这展示了模型在历史密码分析和符号推理上的能力，不过作为单一案例，更多是能力演示而非可泛化基准。",
+          "url": "https://the-decoder.com/claude-fable-5-1-decoded-a-centuries-old-royalist-message-hidden-in-plain-sight-since-1653/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "viable/strict/1788457839: [dynamo] Migrate DispatchKeySetVariable methods to tp_methods (#195168)",
+          "summary": "PyTorch Dynamo 将 DispatchKeySetVariable 的方法分派从手写 if-chain 迁移到声明式 tp_methods，并把 has 和 highestPriorityTypeId 改为 Method handler；has 仍仅在参数为常量时做常量折叠。这个内部重构简化了符号变量逻辑、降低后续维护成本，对普通用户无感，但有助于 Dynamo 跟踪稳定性。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788457839"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "b10786",
+          "summary": "此提交将 mtmd 预处理类中的 const 属性进一步传播，使多模态预处理器接口在只读上下文下更明确，便于编译器优化和 API 安全。对使用 llama.cpp 多模态推理的开发者而言，这是接口整洁性改进，不改变运行行为。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10786"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "OpenAI CEO Sam Altman warns of \"unsustainable silliness\" in compute buildout",
+          "summary": "Sam Altman 警告全球 AI 数据中心建设出现「不可持续的愚蠢行为」，太多新云厂商在没有客户支撑的情况下宣布巨大容量，且算力成本下降可能让今天数十亿美元项目变成坏账。这对算力投资和 AI Infra 扩张有警示意义，也透露出 OpenAI 自身对重资产风险的担忧。",
+          "url": "https://the-decoder.com/openai-ceo-sam-altman-warns-of-unsustainable-silliness-in-compute-buildout/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+          "summary": "法律科技公司 Legora 使用 GPT-6 Astra 在几分钟内审阅 41 份文档，找出了全部 4 个预埋错误，并在该财务审阅工作流中实现近 40% 的性能提升。这是 OpenAI 展示 GPT-6 Astra 在专业文档密集型场景中效率与准确率的案例，对金融法律自动化有参考意义。",
+          "url": "https://openai.com/index/legora-financial-statement-review-with-astra"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+          "summary": "游戏公司 Playco 用 GPT-6 Astra 从一个灰盒基础搭建出三个主题游戏原型，并报告手动修复量比上一代模型减少 50%。这展示了该模型在代码生成和游戏原型迭代上的可用性提升，对开发者工具和创意原型有直接价值。",
+          "url": "https://openai.com/index/playco-game-prototyping-with-astra"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "b10784",
+          "summary": "该提交修复了 Metal 后端在 ne00 等于 1 时 GLU 激活内核的分发错误，并禁用了一个定义不清的测试。对在 Apple Silicon 上运行 llama.cpp 且使用 GLU 类算子的用户，这个修复可以避免特定形状下走错内核导致错误或崩溃。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10784"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "b10783",
+          "summary": "此提交在多个 mtmd 相关函数中将上下文标记为 const，尤其是 tokenize 系列接口，便于编译器判断安全性并提高代码可读性。这是 API 语义收紧，有助于多模态推理路径的维护和优化，对用户行为无直接影响。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10783"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！",
+          "summary": "量子位报道一款可进入生产管线的 3D 世界生成模型，主打单图直出场景，源自顶会最佳论文落地。该能力意味着从单张图像到可编辑 3D 场景的生成正在接近实际生产管线，对 3D 内容、数字孪生等行业有直接影响。",
+          "url": "https://www.qbitai.com/2026/09/483189.html"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "b10781",
+          "summary": "该修复针对 Vulkan 后端 Flash Attention 反量化路径的触发条件，当 ne[3] 为 1 时跳过 nb[3] 检查，避免旧逻辑导致该路径仅在 KV 缓存满时才启用。修复后，Vulkan 推理在单流情况下也能正确走 FA 反量化路径，提升相关 GPU 上的性能表现。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10781"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-09-04",
+          "title": "GPT-6 Astra发布，OpenAI宣称迈入AGI时代",
+          "summary": "OpenAI正式推出新一代模型GPT-6 Astra，官方称其在网络安全、科研、编码及电脑操作等领域实现代际跨越。该模型在FrontierMath测试中得分约98%，ARC-AGI-3测试达99.9%，并首次被认定跨越关键网络安全能力阈值。OpenAI强调已加强安全护栏，以防重演此前模型入侵Hugging Face内部系统的事件。目前模型已向企业级安全客户开放，随后将逐步向Plus、Pro、Business及Enterprise用户和API、AWS平台推出。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "GPT-6 Astra具备桌面操作能力，任务效率提升近半",
+          "summary": "OpenAI开发者团队详细展示了GPT-6 Astra的桌面操作能力，包括在离线环境下通过OSWorld 2.0 Offline测试，得分72.6%。模型能自主进入软件点击菜单、填写表格、监控屏幕并切换至编码任务，演示中甚至能对照PCB图修改电路走线。相比GPT-5.6 Sol，同类任务耗时减少约47%。此外，其在DeepSWE v1.1 xhigh测试中得分75.2%，可复现bug、跨文件追踪原因并自动修复代码。",
+          "url": "https://x.com/berryxia/status/2095675329654501436"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "GPT Image 2.5悄然上线，生图质量与文字嵌入显著优化",
+          "summary": "新版生图模型GPT Image 2.5已在ChatGPT中部分用户端出现，虽未正式官宣，但测试显示其能高度逼真地伪造发布会截图及名人推文。该模型在LMArena中被推测为代号luna-lisa-alpha的匿名模型，具备生成速度快、多角色图像脸部稳定、嵌入文字不易变形等优势，并改进了GPT Image 2的噪点问题。目前ChatGPT网页版已将生图功能提升至主目录第二位，显示其战略地位提升。",
+          "url": "https://www.qbitai.com/2026/09/483948.html"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Browser Use集成Stripe Link，实现安全网页代理支付",
+          "summary": "Browser Use与Stripe Link打通，使网页Agent可在用户授权下完成支付操作，而无需接触真实卡号。用户通过Link连接一次后，Agent在结账时触发支付请求，经手机或App确认金额与商家信息后，Link生成一次性虚拟卡供Agent使用，交易完成后卡片即作废。若商家支持Agent支付，还可采用Link Pay Token进一步简化流程。演示中已成功完成1美元捐款，全程由GPT-5.6 Luna驱动。",
+          "url": "https://x.com/berryxia/status/2095668410088907155"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Cloudflare将AI漏洞修复接入Managed Defense",
+          "summary": "Cloudflare宣布将其漏洞修复服务整合至Managed Defense平台，利用GPT-5.6 Cyber模型执行威胁侦察、验证及补丁建议生成。该服务目前仅向受邀客户开放，且所有生成的补丁方案仍需经过人工审核确认后方可部署。这一举措旨在通过AI辅助提升漏洞响应速度，同时保留人类专家对安全决策的最终控制权，以平衡自动化效率与安全性。",
+          "url": "https://blog.cloudflare.com/vulnerability-discovery-remediation/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "英伟达推出PAIR工具实现局域网AI推理调度",
+          "summary": "英伟达在IFA 2026上发布了PAIR（Personal AI Router）测试版，该工具可将本地AI推理任务智能分发至局域网内空闲的PC设备。PAIR支持Ollama和LM Studio等主流本地运行框架，配合RTX 5090显卡可使推理吞吐量最高提升1.9倍。此外，简化后的本地代理安装流程将降低用户部署门槛，使多设备协同推理成为可能。",
+          "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "DeepMind提出声明式注意力机制降低KV缓存开销",
+          "summary": "Google DeepMind在最新论文中提出声明式注意力（Declarative Attention）方法，允许模型在生成过程中主动声明所需关注的上下文区域。推理引擎据此跳过大部分KV缓存读取操作，在Gemma和Qwen模型上分别实现52%和31.1%的缓存访问减少，同时仅带来1.27至2.75个百分点的精度下降。该方法为长上下文推理提供了新的稀疏化路径。",
+          "url": "https://arxiv.org/abs/2609.02737"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Nemotron-3-CC模型在国际信息学奥赛超越人类冠军",
+          "summary": "研究团队通过竞赛专用后训练方案，在包含2.2万道编程题的数据集上训练出Nemotron-3-Ultra-CC模型。该模型在IOI 2026比赛中获得535.4分，超过人类最高选手的498.27分，成为首个在正式国际竞赛中得分高于人类冠军的AI系统。训练过程结合了监督微调、强化学习及测试时迭代优化策略GenCorrect。",
+          "url": "https://huggingface.co/papers/2609.02849"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "HEART框架用自然语言调用工具",
+          "summary": "研究团队提出HEART框架，通过代理原生可复用工具原语解决大模型工具调用中的脆弱性问题。该框架将工具封装为自然语言接口，内置模式解析与执行逻辑，支持嵌套及多轮调用。依托包含25519个函数的ToolFace仓库，模型在推理时动态检索相关工具，无需枚举原始API模式。在五项基准测试中，HEART平均比微调模型提升10%，超越GPT-5.4等主流模型6%，并将API成本降低最高85%。",
+          "url": "https://arxiv.org/abs/2609.01736"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Anthropic开源智能体技能库获17.36万星",
+          "summary": "Anthropic在GitHub开源了Agent Skills公共仓库，提供包含指令、脚本和资源的文件夹，供Claude动态加载以执行特定任务。该仓库涵盖从创意设计到企业工作流等多种场景，部分核心文档处理技能已开源，其余为源码可用状态。目前该项目已获得17.36万星标，单日新增281星，展示了开发者对可复用智能体技能的高度关注。",
+          "url": "https://github.com/anthropics/skills"
+        },
+        {
+          "date": "2026-09-04",
+          "title": "Chrome DevTools MCP项目获50.9万星",
+          "summary": "Chrome团队推出的chrome-devtools-mcp项目允许编码代理通过模型上下文协议直接控制并检查实时Chrome浏览器。该工具利用Puppeteer实现可靠自动化，支持网络请求分析、截图及带源码映射堆栈的控制台消息检查。项目已获50.9万星标，旨在让AI助手能深入调试、分析性能并执行复杂的前端排障任务，同时提供CLI供非MCP环境使用。",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+        }
+      ]
     }
   }
 }

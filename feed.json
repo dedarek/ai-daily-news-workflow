@@ -3,6 +3,171 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-09-04",
+      "content_date": "2026-09-04",
+      "published_at": "2026-09-04T05:36:19.401473+00:00",
+      "article_count": 11,
+      "podcast_turns": 20,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen35-122b-a10b-fp8"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1",
+        "calls": 7,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "selected_count": 11,
+            "target_count": 12,
+            "degraded": true
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {},
+              "candidate_count": 57,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 71,
+            "exact_url_blocks": [],
+            "high_confidence_event_blocks": [
+              {
+                "current_url": "https://the-decoder.com/nvidia-buys-the-front-door-to-open-ai-as-closed-labs-increasingly-design-their-own-silicon/",
+                "previous_url": "https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away/",
+                "previous_date": "2026-08-28",
+                "actions": [
+                  "acquisition"
+                ],
+                "entities": [
+                  "face",
+                  "hugging",
+                  "nvidia"
+                ]
+              },
+              {
+                "current_url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+                "previous_url": "https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away/",
+                "previous_date": "2026-08-28",
+                "actions": [
+                  "acquisition"
+                ],
+                "entities": [
+                  "face",
+                  "hugging",
+                  "nvidia"
+                ]
+              },
+              {
+                "current_url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+                "previous_url": "https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away/",
+                "previous_date": "2026-08-28",
+                "actions": [
+                  "acquisition"
+                ],
+                "entities": [
+                  "face",
+                  "hugging",
+                  "nvidia"
+                ]
+              }
+            ],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": null,
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen35-122b-a10b-fp8",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在提及DeepMind声明式注意力机制时，未明确点出该新闻属于‘前沿研究’板块，且与前后文关于GPT-6和图像生成的讨论衔接略显生硬，建议增加一句过渡语（如‘除了应用层，底层研究也有突破’）以增强逻辑流畅度。",
+                  "S2在讨论HEART框架时，直接抛出‘依赖预封装函数’的质疑，缺乏对HEART具体机制（自然语言接口）的简要复述作为铺垫，导致对话略显跳跃，建议先简述其‘用自然语言调用工具’的核心特点再提出质疑。"
+                ],
+                "repair_instruction": "1. 在S1提到DeepMind声明式注意力机制前，增加过渡句：‘除了应用层的突破，底层算法研究也在优化效率。’\n2. 在S2讨论HEART框架前，让S1或S2先简要补充：‘比如HEART框架尝试用自然语言直接调用工具，不再需要枚举API。’然后再由S2提出关于预封装函数的质疑，使逻辑链条更完整。"
+              },
+              "review_model": "lenovo:qwen35-122b-a10b-fp8",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1在提及DeepMind声明式注意力机制时，未明确点出该新闻属于‘前沿研究’板块，且与前后文关于GPT-6和图像生成的讨论衔接略显生硬，建议增加一句过渡语（如‘除了应用层，底层研究也有突破’）以增强逻辑流畅度。",
+              "S2在讨论HEART框架时，直接抛出‘依赖预封装函数’的质疑，缺乏对HEART具体机制（自然语言接口）的简要复述作为铺垫，导致对话略显跳跃，建议先简述其‘用自然语言调用工具’的核心特点再提出质疑。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-04/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-04/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-04/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-04/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-04.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-04/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-04/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-04.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-04/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-04.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-04.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-04.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-09-03",
       "content_date": "2026-09-03",
       "published_at": "2026-09-03T05:23:53.135825+00:00",
