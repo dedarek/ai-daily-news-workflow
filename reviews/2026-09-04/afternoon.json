@@ -1,0 +1,32 @@
+{
+  "issue_date": "2026-09-04",
+  "reviewed_at": "2026-09-04T15:52:08.611333+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 65,
+    "summary": "内容存在严重事实幻觉与逻辑矛盾，且播客对话呈现机械拼接感，缺乏真实交流的自然度。",
+    "issues": [
+      "事实性幻觉：新闻中提及的'GPT-6 Astra'、'GPT-5.6 Sol/Luna'、'IFA 2026'、'IOI 2026'等均为虚构内容（当前真实世界尚未发生），作为AI日报编辑未进行基本的事实核查，导致整篇报道基于虚假前提。",
+      "逻辑矛盾：新闻1称GPT-6已发布并迈入AGI，新闻2却称其桌面操作能力相比'GPT-5.6 Sol'提升，暗示GPT-5.6是前代且已存在，但新闻1未提及GPT-5.6的发布背景，时间线混乱。",
+      "播客质量：对话过于生硬，两人轮流复述新闻摘要，缺乏自然的互动、追问或观点碰撞，读起来像'新闻播报员A'和'新闻播报员B'的机械轮读，不符合'自然双人对话'标准。",
+      "锐评与正文脱节：部分锐评（如关于GPT Image 2.5的伪造风险）虽然相关，但未能深入结合正文中提到的具体技术细节（如LMArena代号luna-lisa-alpha）进行更有深度的分析，流于表面。",
+      "重复观点：播客中多次重复'安全风险'、'人类监管'等观点，缺乏递进，且与新闻1和新闻2中关于安全护栏的讨论高度重合，未体现不同视角的补充。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
