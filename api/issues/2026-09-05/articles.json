@@ -1,0 +1,110 @@
+[
+  {
+    "title": "DeepSeek拟在内蒙古部署16万颗华为昇腾芯片",
+    "summary": "DeepSeek计划在内蒙古数据中心部署至少16万颗华为昇腾950DT芯片，该集群将专门用于推理任务，训练工作仍依赖Nvidia硬件。若建成，这将成为已知规模最大的华为芯片集群，标志着中国试图减少对Nvidia依赖的实质性一步。然而，受限于产能瓶颈和高带宽内存短缺，华为可能无法在一年内完成全部交付，尽管国内厂商CXMT已开始小批量生产HBM3E，但技术差距仍存。",
+    "url": "https://the-decoder.com/deepseek-plans-the-largest-known-huawei-chip-cluster-with-160000-processors-in-inner-mongolia/",
+    "section": "🔥 今日焦点",
+    "review": "此举虽具国产算力生态示范意义，但交付延迟风险与内存瓶颈可能制约其实际落地速度，短期难以完全替代Nvidia在训练端的优势。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "xAI上线Grok机器人市场，首批69个机器人覆盖多场景",
+    "summary": "xAI正式推出Grok机器人市场，首批上线69个公开机器人，由43位创作者开发，涵盖工程、销售、招聘等9个类别。其中Haggle Bot在首周即帮助用户节省10万美元支出，Outbound Prospecting等工具则能自动研究潜在客户并起草消息。所有机器人在执行关键操作如发送消息或签订合同前均需用户确认，确保控制权保留在人类手中。",
+    "url": "https://x.ai/bot/marketplace",
+    "section": "🚀 产品发布",
+    "review": "机器人市场通过场景化分工提升效率，但依赖人工确认的机制限制了自动化上限，实际价值取决于用户工作流整合深度。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "IFM开源K2 Horizon模型合集，覆盖0.9B至375B多档模型",
+    "summary": "IFM在Hugging Face开放K2 Horizon模型合集，包含从0.9B到375B共六档文本生成模型，适配腕表、手机及服务器等不同硬件场景。除模型权重外，该合集还公开了代码、数据配方及训练日志，支持FP8量化和GGUF格式，便于开发者灵活部署。资源更新频繁，部分模型在发布一天内即获数百次下载，显示社区对多尺度模型需求的旺盛。",
+    "url": "https://huggingface.co/collections/IFM/k2-horizon",
+    "section": "🚀 产品发布",
+    "review": "全栈开源策略降低使用门槛，但375B模型对推理资源要求极高，实际落地仍受限于边缘设备算力与成本平衡。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "腾讯开源WeMM-Embedding，9B模型登顶MMEB-v2榜首",
+    "summary": "腾讯微信视觉团队开源WeMM-Embedding多模态嵌入模型家族，支持文本、图像、视频及交错多模态输入，其中9B版本在MMEB-v2基准测试中位列第一。模型提供多种维度输出，并兼容Transformers和Sentence Transformers框架，但当前版本暂不支持音频输入处理。该模型旨在统一多模态表示，提升跨任务与跨领域的检索与理解能力。",
+    "url": "https://github.com/Tencent/WeMM-Embedding",
+    "section": "🚀 产品发布",
+    "review": "性能领先但缺失音频模态，限制了其在完整多模态场景中的应用，后续需补全模态覆盖以发挥统一表示优势。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude自主完成费马大定理形式化证明",
+    "summary": "Anthropic发布研究成果，其AI模型Claude在11天内自主完成了费马大定理的完整计算机核验证明。该证明使用Lean编程语言编写，包含1300万行代码，并验证了29500个中间定理。完整代码已开源至GitHub，标志着AI在数学形式化验证领域取得重大突破，为未来自动检查复杂数学证明提供了新路径。",
+    "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+    "section": "💡 前沿研究",
+    "review": "此举证明AI已具备处理极高复杂度数学逻辑链条的能力，但依赖特定形式化工具限制了其在非形式化场景的直接应用。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "腾讯提出环境进化训练法提升智能体性能",
+    "summary": "腾讯混元团队提出一种名为“环境进化”的新训练方法，旨在解决智能体强化学习中环境供给不足的瓶颈。该方法通过离线策略按生成周期逐步提升任务难度，避免了对策盲点的继承。实验显示，该方法在Qwen3.6模型上使Terminal-Bench 2.1基准测试成绩最高提升18.0分，验证了其在提升智能体泛化能力方面的有效性。",
+    "url": "https://academy.dair.ai/papers/environment-evolution-for-terminal-agents-2609.04128",
+    "section": "💡 前沿研究",
+    "review": "将环境难度作为可调度变量解决了训练信号衰减问题，但该方法对多智能体协作系统的通用性仍需更多场景验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Codebook Agent优化多智能体通信拓扑结构",
+    "summary": "新研究提出Codebook Agent，通过向量量化自编码器将多智能体系统的通信拓扑压缩为独立于查询的16项代码本。该方法无需测试时迭代搜索，仅需2.4毫秒即可生成拓扑，且在六个基准测试中平均得分达84.6分。实验表明，稀疏化图结构反而增加推理成本，而该方法在保持高精度的同时节省了21.9%至33.2%的LLM词元消耗。",
+    "url": "https://arxiv.org/abs/2609.02264",
+    "section": "💡 前沿研究",
+    "review": "用预定义代码本替代动态图生成显著降低了推理开销，但代码本容量固定可能限制其在超大规模动态系统中的适应性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Hermes-Agent开源项目获社区高度关注",
+    "summary": "NousResearch在GitHub发布Hermes-Agent项目，该代理能在执行任务过程中持续学习并适应环境。项目上线后迅速获得24.2万星标和4.96万个分叉，显示出极高的社区热度。其核心机制允许代理在交互中积累经验，逐步优化任务执行策略，为构建具备长期记忆和自适应能力的智能体提供了开源基础。",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "section": "🔓 开源热榜",
+    "review": "高社区参与度反映了对可进化代理的强烈需求，但缺乏统一评估标准可能阻碍不同实现间的横向比较。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Ponytail：让AI代理像资深开发者一样少写代码",
+    "summary": "开源项目Ponytail旨在让AI代理模仿“最懒的资深开发者”，核心原则是能不写代码就不写。该项目在GitHub上单日新增1679颗星，显示出极高的关注度。通过引入特定规则，Ponytail能让代理在完成任务时减少约54%的代码量，最高可达94%，同时降低约20%的成本并提升27%的速度。在真实测试中，面对日期选择器等功能，代理不再安装额外库或编写复杂组件，而是直接利用HTML原生标签实现，确保了代码的安全性与简洁性。",
+    "url": "https://github.com/DietrichGebert/ponytail",
+    "section": "🔓 开源热榜",
+    "review": "Ponytail通过强制代理遵循“最小代码”原则，有效解决了AI生成代码冗余和过度工程化的问题。这种策略不仅提升了执行效率，还通过减少代码行数降低了潜在的安全风险和维护成本。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "星尘发布SmoothRL：解决机器人异步推理中的强化学习难题",
+    "summary": "星尘智能基座模型团队推出了异步在线强化学习框架SmoothRL，旨在解决大模型异步推理与机器人实时执行之间的脱节问题。在真实部署中，机器人无法等待模型完成长序列推理，导致模型生成的动作与机器人实际执行的动作不一致。SmoothRL将动作序列划分为已提交、执行和丢弃三个区域，仅对机器人真正执行的动作区域进行梯度更新，确保训练目标与真实运行过程一致。在高速投掷、精密插笔和快递开箱等真机任务中，该框架显著提升了成功率，并有效降低了动作的加速度和急动度，使操作更加平滑稳定。",
+    "url": "https://www.qbitai.com/2026/09/484437.html",
+    "section": "🤖 Agent & 工具",
+    "review": "SmoothRL通过精细区分动作状态，解决了异步执行下强化学习“错账”的核心痛点，使机器人能在真实动态环境中高效自我修正。这一突破标志着具身智能从单纯的能力构建迈向了基于真实反馈的精准后训练阶段。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NHTSA介入调查特斯拉Cybercab无方向盘上路合规性",
+    "summary": "美国国家公路交通安全管理局（NHTSA）已对特斯拉在奥斯汀部署无方向盘和踏板的Cybercab展开调查。尽管特斯拉声称已自我认证该车型符合联邦机动车安全标准，但现行法规仍要求车辆配备手动控制装置。NHTSA表示将审查特斯拉自我认证所依据的流程和技术数据，并评估其关于某些联邦标准不适用的判定是否合理。此前，亚马逊旗下自动驾驶公司Zoox也曾因类似情况面临监管审查，最终通过申请豁免才获得商业运营许可，特斯拉能否快速通过此关卡尚不明朗。",
+    "url": "https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/",
+    "section": "💼 行业动态",
+    "review": "NHTSA的介入表明在现有法规框架下，完全去除物理控制装置的自动驾驶车辆面临严峻的合规挑战。此次调查将考验监管机构在鼓励创新与保障公共安全之间的平衡能力，以及特斯拉自我认证机制的法律效力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Nscale寻求35亿美元Pre-IPO融资，英伟达或追加投资",
+    "summary": "英国AI算力基础设施公司Nscale正寻求35亿美元的Pre-IPO融资，计划于本月晚些时候上市。据彭博社报道，Nscale计划向投资者出售15亿美元的可转换票据，并寻求英伟达额外投资20亿美元。此前，英伟达已参与其由Aker领投的11亿美元B轮融资。Nscale近期与Anthropic签署了价值约450亿美元的大额协议，使其基于租赁合同的营收预测达到1030亿美元。这一巨额融资旨在支持其算力扩张，以应对当前AI时代对计算资源的激烈竞争。",
+    "url": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
+    "section": "💼 行业动态",
+    "review": "Nscale的高额融资计划反映了市场对AI算力基础设施的极度渴求，但其估值高度依赖未来营收预测而非当前实际销售。英伟达的深度绑定虽增强了其资源获取能力，但也使其业绩与单一巨头及大模型厂商的资本开支紧密挂钩，存在较高的市场波动风险。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

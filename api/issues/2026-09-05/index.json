@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-09-05",
+  "content_date": "2026-09-05",
+  "published_at": "2026-09-05T05:08:19.525923+00:00",
+  "article_count": 12,
+  "podcast_turns": 22,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen35-122b-a10b-fp8"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1",
+    "calls": 10,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 59,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 2,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 57,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 70,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+            "previous_url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+            "previous_date": "2026-09-04"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://x.com/OpenAI/status/2095968413646737608",
+                "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+                "reason": "核心事件均为 OpenAI 发布 GPT-6 Astra 模型。此前报道确认了模型发布、能力跨越及面向企业/Pro 用户开放；今日报道进一步确认了 Astra 分批开放的具体节奏（Pro 已接入，Work/Codex/API 同步可用，Plus/Business 稍后），属于同一发布事件的后续进展确认，非独立新事件。"
+              },
+              {
+                "current_url": "https://x.com/GoogleAI/status/2095922185139364267",
+                "previous_url": "https://x.com/dotey/status/2095291379559580154",
+                "reason": "核心事件均为 Google 发布 Gemini 系列更新。此前报道重点介绍了 Gemini 3.8 Flash 及其 Cyber 安全变体的上线和评测表现；今日报道确认了本周模型清单中包含 Flash 强化代码/代理流程、Cyber 漏洞检测补丁以及 Lyria/天气/视频理解的升级，属于同一周度发布事件的细节补充和确认。"
+              }
+            ]
+          },
+          {
+            "attempt": 2,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1 在开场直接抛出新闻标题，缺乏自然的对话引入或背景铺垫，略显生硬。",
+              "轮次20-22中，S2 对 Hermes-Agent 和 Ponytail 的合并复述略显仓促，建议拆分或增加具体对比以增强讨论深度。",
+              "结尾 S2 的“听众朋友们，你们觉得呢？”属于固定寒暄式互动，建议改为更自然的观点抛砖引玉或总结性反问。"
+            ],
+            "repair_instruction": "1. 修改 S1 首句，增加如‘最近有个大新闻’或‘大家注意到没’等口语化引入，避免直接读标题。2. 将轮次20中 S2 合并提及的两个开源项目拆分为两轮对话，或让 S1 针对其中一个项目（如 Ponytail 的‘少写代码’）进行追问，增加互动性。3. 删除或重写结尾 S2 的‘听众朋友们，你们觉得呢？’，改为‘如果是你，会更看好哪种技术路径？’等更贴合播客语境的开放式提问。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1 在开场直接抛出新闻标题，缺乏自然的对话引入或背景铺垫，略显生硬。",
+          "轮次20-22中，S2 对 Hermes-Agent 和 Ponytail 的合并复述略显仓促，建议拆分或增加具体对比以增强讨论深度。",
+          "结尾 S2 的“听众朋友们，你们觉得呢？”属于固定寒暄式互动，建议改为更自然的观点抛砖引玉或总结性反问。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-05/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-05/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-05/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-05/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-05.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-05/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-05/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-05.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-05/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-05.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-05.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-05.mp4"
+}
