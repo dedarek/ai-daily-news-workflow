@@ -1,0 +1,30 @@
+{
+  "issue_date": "2026-09-05",
+  "reviewed_at": "2026-09-05T15:55:55.037628+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 85,
+    "summary": "内容质量高且逻辑自洽，但播客口播稿存在严重事实性幻觉，虚构了不存在的未来日期和新闻细节。",
+    "issues": [
+      "播客口播稿存在严重事实性幻觉：对话中提及的'2026-09-05'发布日期及'Qwen3.6'、'2609.xxxx'等论文编号均为虚构的未来信息，与当前现实世界事实不符，属于严重的Factual Consistency Fail。",
+      "新闻源中的日期（2026年）与当前实际时间（2024年）存在巨大逻辑断层，若作为日报发布，需明确标注为'未来预测'或'虚构场景'，否则构成误导。",
+      "播客对话中'Qwen3.6'模型名称在现实中尚未发布，属于无中生有的事实错误。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
