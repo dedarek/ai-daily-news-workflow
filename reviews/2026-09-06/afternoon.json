@@ -1,0 +1,28 @@
+{
+  "issue_date": "2026-09-06",
+  "reviewed_at": "2026-09-06T15:46:03.471193+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容事实准确、逻辑自洽，锐评深刻且与新闻高度相关，播客对话自然流畅，整体质量优秀，仅存在少量措辞可微调空间。",
+    "issues": [
+      "播客中关于'12秒响应时间'的表述略显绝对，原文为'中位响应时间'，建议口播时补充'中位'以保严谨。",
+      "部分新闻标题中的'GPT-6 Astra'、'Qwen3.8'等版本号在2026年语境下虽合理，但需确保与当时实际发布情况一致（当前为模拟数据，逻辑自洽）。",
+      "播客结尾总结略显宏大，可考虑增加一句具体落地的建议或展望以增强实用性。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
