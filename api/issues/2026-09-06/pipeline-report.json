@@ -1,0 +1,292 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-09-06",
+  "content_date": "2026-09-06",
+  "source_url": "https://hex2077.dev/docs/2026-09/2026-09-06/",
+  "source_urls": [
+    "https://hex2077.dev/docs/2026-09/2026-09-06/",
+    "https://satori-ai.cn/",
+    "https://news.daheiai.com/rss.php"
+  ],
+  "source_health_file": "source-health-2026-09-06.json",
+  "source_health": {
+    "schema_version": 1,
+    "issue_date": "2026-09-06",
+    "checked_at": "2026-09-06T05:13:19.385655+00:00",
+    "overall_status": "ok",
+    "pipeline_can_continue": true,
+    "minimum_usable_candidates": 12,
+    "candidate_count_before_dedup": 70,
+    "candidate_count_after_dedup": 60,
+    "successful_source_count": 3,
+    "failed_source_count": 0,
+    "duration_ms": 1530,
+    "sources": [
+      {
+        "source_id": "hex2077",
+        "source_name": "Hex2077 AI 日报",
+        "adapter": "hex2077",
+        "source_url": "https://hex2077.dev/docs/2026-09/2026-09-06/",
+        "status": "ok",
+        "content_date": "2026-09-06",
+        "generated_at": "",
+        "error": "",
+        "duration_ms": 376,
+        "metadata": {
+          "resolved_url": "https://hex2077.dev/docs/2026-09/2026-09-06/",
+          "time_rule": "content date equals issue date"
+        },
+        "candidate_count": 20
+      },
+      {
+        "source_id": "satori",
+        "source_name": "Satori AI 每日速览",
+        "adapter": "satori",
+        "source_url": "https://satori-ai.cn/",
+        "status": "ok",
+        "content_date": "2026-09-05",
+        "generated_at": "2026-09-06T04:16:00+08:00",
+        "error": "",
+        "duration_ms": 1495,
+        "metadata": {
+          "time_rule": "generation date equals issue date; edition is treated as today's digest",
+          "edition_semantics": "today"
+        },
+        "candidate_count": 40
+      },
+      {
+        "source_id": "daheiai",
+        "source_name": "大黑 AI 速报",
+        "adapter": "daheiai_rss",
+        "source_url": "https://news.daheiai.com/rss.php",
+        "status": "ok",
+        "content_date": "2026-09-06",
+        "generated_at": "2026-09-06T12:00:49+08:00",
+        "error": "",
+        "duration_ms": 619,
+        "metadata": {
+          "time_rule": "newest RSS item must be published on issue date (Asia/Shanghai)",
+          "selected_feed_entries": 10
+        },
+        "candidate_count": 10
+      }
+    ]
+  },
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 60,
+  "candidate_data_file": "candidate-news-2026-09-06.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen35-122b-a10b-fp8"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1",
+    "calls": 12,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 58,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 2,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 57,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 3,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "candidate_count": 56,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 70,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://x.ai/bot/marketplace",
+            "previous_url": "https://x.ai/bot/marketplace",
+            "previous_date": "2026-09-05"
+          },
+          {
+            "current_url": "https://github.com/Tencent/WeMM-Embedding",
+            "previous_url": "https://github.com/Tencent/WeMM-Embedding",
+            "previous_date": "2026-09-05"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/",
+                "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+                "reason": "核心事件均为 OpenAI 正式发布 GPT-6 Astra 模型。此前新闻（2026-09-04）报道了官方发布及核心能力，今日新闻（2026-09-05）报道了具体的推送计划（面向 Pro/Enterprise 等用户）和速率限制细节，属于同一发布事件的后续报道，非实质性新进展。"
+              }
+            ]
+          },
+          {
+            "attempt": 2,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://github.com/mattpocock/skills",
+                "previous_url": "https://github.com/anthropics/skills",
+                "reason": "两者均为 Anthropic 开源的 Agent Skills 技能库项目。此前报道的是项目整体发布及 17.36 万星数据，今日报道的是同一项目（URL 指向同一 GitHub 仓库 mattpocock/skills 为 Anthropic 官方仓库的镜像或重定向，核心主体均为 Anthropic 的 skills 库）的后续热度更新（25.2 万星）。属于同一事件的持续报道。"
+              }
+            ]
+          },
+          {
+            "attempt": 3,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1 开场直接切入话题，但缺乏对“扎心”一词的语境铺垫，略显突兀，建议增加半句背景描述（如“刚出炉的指南”）以增强自然度。",
+              "S2 在介绍微软图像模型时，直接抛出“速度是三倍”的数据，缺乏对“性价比”的具体支撑（如价格对比），虽符合事实但解释略显单薄。",
+              "关于开源框架（ECC 和 ruflo）的讨论被压缩在两轮对话中，且 S1 将两者合并点评，导致对 ruflo 的“群体智能”特性解释不足，建议拆分或增加一句针对性补充。",
+              "结尾总结（S2 和 S1 的最后两轮）略显套路化，属于常规升华，若能结合前文提到的“百万智能体”或“诉讼”给出一个更具体的行业预判会更生动。"
+            ],
+            "repair_instruction": "1. 修改 S1 首句，增加‘刚出炉的’等修饰语，使切入更自然。2. 在 S2 介绍微软图像模型时，补充‘价格更低’的具体对比逻辑（如‘同性能下价格优势’）。3. 将 S1 关于开源框架的发言拆分为两轮，或让 S2 在 S1 发言前单独补充 ruflo 的‘群体智能’特性，确保每条新闻解释充分。4. 优化结尾 S1 的总结，尝试结合‘诉讼’或‘智能体质量’给出一个具体的未来趋势判断，避免空泛的‘笑到最后’。"
+          },
+          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1 开场直接切入话题，但缺乏对“扎心”一词的语境铺垫，略显突兀，建议增加半句背景描述（如“刚出炉的指南”）以增强自然度。",
+          "S2 在介绍微软图像模型时，直接抛出“速度是三倍”的数据，缺乏对“性价比”的具体支撑（如价格对比），虽符合事实但解释略显单薄。",
+          "关于开源框架（ECC 和 ruflo）的讨论被压缩在两轮对话中，且 S1 将两者合并点评，导致对 ruflo 的“群体智能”特性解释不足，建议拆分或增加一句针对性补充。",
+          "结尾总结（S2 和 S1 的最后两轮）略显套路化，属于常规升华，若能结合前文提到的“百万智能体”或“诉讼”给出一个更具体的行业预判会更生动。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今日新闻揭示AI行业正从单纯追求模型能力转向解决落地瓶颈。OpenAI提示指南与微软图像模型显示，提升效率需平衡幻觉风险；诉讼案与自研芯片表明，数据合规成本上升与硬件依赖成核心压力；多智能体框架爆发则指向协作与记忆管理成为新竞争焦点，行业进入精细化运营阶段。",
+  "podcast_turns": 21,
+  "podcast_script_file": "podcast-script-2026-09-06.json",
+  "podcast_script_text_file": "podcast-script-2026-09-06.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-09-06.txt",
+  "voice_file": "voice-2026-09-06.json",
+  "voice_turns": 21,
+  "tts_mode": "video-api-audio-video",
+  "tts_synthesis_mode": "external_video_api",
+  "voice_timing_source": "estimated_text_weight",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_leading_silence_seconds": 0,
+  "tts_reference_files": null,
+  "video_api": {
+    "provider": "video-api",
+    "base_url": "http://8.137.39.142:1234/api",
+    "job_id": "a5a34e5e-0e08-44d6-b1ef-a450d216e4b5",
+    "submit_response": {
+      "job_id": "a5a34e5e-0e08-44d6-b1ef-a450d216e4b5",
+      "job_type": "video",
+      "status": "running",
+      "created_at": "2026-09-06T05:20:08.745Z",
+      "updated_at": "2026-09-06T05:20:08.746Z",
+      "started_at": "2026-09-06T05:20:08.746Z",
+      "finished_at": null,
+      "day": "2026-09-06-1320",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": null,
+      "download_url": null,
+      "error": null
+    },
+    "final_response": {
+      "job_id": "a5a34e5e-0e08-44d6-b1ef-a450d216e4b5",
+      "job_type": "video",
+      "status": "succeeded",
+      "created_at": "2026-09-06T05:20:08.745Z",
+      "updated_at": "2026-09-06T05:25:17.361Z",
+      "started_at": "2026-09-06T05:20:08.746Z",
+      "finished_at": "2026-09-06T05:25:17.361Z",
+      "day": "2026-09-06-1320",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": 308.62,
+      "download_url": "/api/jobs/a5a34e5e-0e08-44d6-b1ef-a450d216e4b5/download",
+      "error": null
+    },
+    "zip_file": "video-api-result-2026-09-06.zip",
+    "video_file": "ai-daily-news-video-2026-09-06.mp4"
+  },
+  "html_bytes": 26408,
+  "podcast_bytes": 4407885,
+  "video_bytes": 16269532,
+  "podcast_duration_seconds": 220.37
+}
