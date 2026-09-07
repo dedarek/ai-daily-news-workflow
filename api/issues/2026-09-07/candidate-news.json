@@ -1,0 +1,542 @@
+[
+  {
+    "title": "开源工具完成长对话可靠升级",
+    "summary": "OpenClaw v2026.9.2在版本讨论区披露一次大规模工程更新，合入1245项PR并有232名贡献者参与。更新重点放在断线恢复、长对话加载和热配置🦞生效，进度报告可在重连后继续保留。GPT-6 Astra与Meta Muse Spark 1.3加入模型列表，共享Gateway的账号边界也被细化。",
+    "url": "https://www.reddit.com/r/openclaw/comments/1w8ejge/openclaw_v202692_reliability_and_performance/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing GPT-6 Astra for developers",
+    "summary": "「OpenAI」发布面向开发者的「GPT-6 Astra」，整体提升了对细节的关注、对用户提示的理解以及产出复杂成果的能力，尤其擅长构建 3D 模型。该模型被视为新一代多模态生成的代表，对需要生成式 3D 和复杂输出的开发者较为重要。",
+    "url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1799期 - 2026-09-07 12:02",
+    "summary": "本期重点集中在[Computer Use实操]、[本地MoE推理]与[自动化科研]：社区已开始把AI代理用于浏览器操作和完整工作流，同时新基准尝试衡量模型的真实成本与长期自主能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能模型带动内部研发节奏提速",
+    "summary": "OpenAI开发者Thibault Sottiaux称Astra公开前是公司的内部研发优势，部分计划因此提前六个月。这不是单次工具替换，而是研发排期被模型重新压缩🧭。前沿模型先在公司内部吃透流程，再把效率差距外溢到行业竞争。",
+    "url": "https://the-decoder.com/openai-developer-claims-astra-boosted-productivity-so-much-it-pulled-some-plans-forward-by-six-months/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "RTX 4060 跑 35B 模型，每秒 39 Token？伯克利、MIT 联手开源 FreeToken",
+    "summary": "伯克利与「MIT」联合开源「FreeToken」，号称可在「RTX 4060」上以每秒 39 token 运行 35B 模型。这对消费级 GPU 上大模型推理的成本和可行性有重要意义。",
+    "url": "https://www.infoq.cn/article/tij5T0vJ1Yk0s7Uov7SE?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1798期 - 2026-09-07 08:02",
+    "summary": "本期重点集中在[Astra真实采用反馈]、[LLM评测工具]与[AI基础设施外溢影响]。同时，漏洞攻击窗口缩短和AI教育监管等趋势值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "世界模型退出机器人部署链路",
+    "summary": "光象科技联合清华团队发布Phi-WM 1.0 ActEffect，机器人训练方法让世界模型只在训练期评估动作后果。部署时不再展开未来搜索，机器人推理链路🦾更短也更稳。LIBERO平均成功率达98.8%，RoboCasa-GR1达到67.5%，成本与稳定性被同时拉到台前。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247919159&idx=1&sn=571720e58b986aa3187a79ddd058f930",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1797期 - 2026-09-07 04:02",
+    "summary": "本期重点集中在[WebMCP原生支持]、[代理实际工作流]和[本地推理优化]三方面，显示AI代理正从演示走向网页调用、文档处理与金融分析等生产场景。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude数学证明获得复核",
+    "summary": "Youness Lamzouri验证并简化Claude关于zeta零点的证明，数学证明报道把人机协作链路讲得很集中。结果指向超过三分之二零点在临界线上且为单零点。AxiomProver又在数小时内完成形式化🔎，AI找路、人类提纯和机器验算开始接到同一条流水线上。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652723319&idx=1&sn=62af244d705bf866ba830032dc0e6f39",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10821",
+    "summary": "「llama.cpp」新版本 b10821 为「M2 Max」补充了「Metal」后端剩余的「fa-vec」调优，继续优化「Apple Silicon」上的推理性能。对本地推理用户和「llama.cpp」生态有直接价值。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10821",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1796期 - 2026-09-07 00:01",
+    "summary": "本期关注[具身上下文学习]与[Qwen3.8去审查变体]测试；社区还分享了[本地AI监控]和[精简Skill规则]等实战经验。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "目录结构降低检索幻觉概率",
+    "summary": "Omar分享IBM论文STAIR，结构化检索论文用目录保留长文档层级。STAIR在SearchTome上Recall@1达到82.6%，高于DSI的76.9%和BM25的59.5%。生成式检索📚若绑定真实层级地址，幻觉率可压到0.05%以下，对企业知识库很直接。",
+    "url": "https://x.com/omarsar0/status/2096648881962652046",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta's new real-time audio model is the foundation for AI assistants that never stop listening",
+    "summary": "「Meta」超级智能实验室发布实时语音转写模型「Muse Voice Transcribe」，以 80 毫秒块处理语音，能区分说话人并检测句子边界，在「Artificial Analysis」的流式转写评测中准确率最高且价格最低。「Meta」将其定位为可穿戴设备上持续聆听的个性化 AI 助手的基础。",
+    "url": "https://the-decoder.com/metas-new-real-time-audio-model-is-the-foundation-for-ai-assistants-that-never-stop-listening/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1795期 - 2026-09-06 20:01",
+    "summary": "本期重点集中在[本地推理优化]与[AI生成游戏]两条线：社区持续探索KV缓存、苹果芯片和老GPU上的性能边界，同时出现了由高速视频模型驱动的新型互动产品。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-06_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "陶哲轩提醒数学别只抢答",
+    "summary": "量子位报道陶哲轩对AI数学能力提出告警，数学研究反思强调太快给出答案可能遮住失败路径。数学进步不只靠正确结论，也靠知道哪些路为何走不通🧩。文中还提到GPT-6 Astra、Anthropic与Axiom围绕孪生素数有界间距的形式化进展。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247919159&idx=2&sn=286a3b879b0a9be6b8a53335b7d707ce",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "An Alien Mind",
+    "summary": "「OpenAI」首席科学家「Jakub Pachocki」反思越来越强的 AI 及其对齐挑战，呼吁更强安全措施和国际协调。这篇文章体现了「OpenAI」高层对前沿 AI 治理的立场。",
+    "url": "https://openai.com/index/an-alien-mind",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1794期 - 2026-09-06 16:03",
+    "summary": "本期重点集中在[AI安全风险上升]与[智能体能力跃迁]。同时，Q Xiaomi发布表格基础模型，Claude Code完成版本更新，AI工具正加速进入创作与开发流程。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-06_1603",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "千亿模型架构压低训练成本",
+    "summary": "Qwen团队发布Qwen3.8-Flash-Next架构报告，模型架构材料披露125B总参、6B激活和51B主机内存n-gram嵌入表。它用约1/9算力完成训练，数据对比很扎眼⚡。在14项基准中，该模型有8项超过上一代397B-A17B旗舰。",
+    "url": "https://x.com/shao__meng/status/2096594685737554037",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Research acceleration: The view inside OpenAI",
+    "summary": "「OpenAI」分享内部数据，展示编码智能体如何重塑 AI 研究，包括智能体使用、实验速度、任务复杂度和研究加速的早期数据。这为业界理解 AI 辅助科研提供了参考。",
+    "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1793期 - 2026-09-06 12:00",
+    "summary": "本期最重要的是[Claude Fable 5.1]登顶Agent Arena，并以[15.8%性能提升]重塑价格性能前沿。社区同时出现多项[本地AI实战]与GPT-6 Astra提示优化经验。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-06_1200",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "编码智能体监控引发争议",
+    "summary": "OpenAI披露内部coding agents错位监测后，智能体监控争议引发社区对CoT可见性和规避监控的争论。讨论焦点包括数据外传、sabotage与sandbagging等高风险行为。有人担心监控方法进入训练语料后，未来模型会学会绕开探针⚠️，监管和审计压力随之上升。",
+    "url": "https://newshacker.me/story?id=49588214",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.34.0",
+    "summary": "「Ollama」v0.34.0 允许在「ChatGPT Desktop」中直接使用「Ollama」模型，保留现有工作流的同时运行开源模型；同时提升「Apple Silicon」上的结构化输出性能，新增对「OpenAI」兼容客户端工具搜索和响应压缩的支持。这对混合使用开源与闭源模型的用户很有用。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1792期 - 2026-09-06 08:01",
+    "summary": "本期重点集中在[GPT-6 Astra]驱动的端到端创作工作流，以及[本地模型工具链]的新进展。社区还分享了提示词整理、Agent应用构建和本地创意编程等实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-06_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开放权重去护栏变成生意",
+    "summary": "The Decoder报道Abliteration.ai出售去除安全机制的开放权重模型服务，去护栏模型服务当前基于Z.AI的GLM-5.3。服务打着攻防安全与红队旗号，记者却较容易得到恶意软件指令。开放权重治理🔥开始面对商业化滥用与安全研究之间的硬冲突。",
+    "url": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Artificial Analysis overhauls its Intelligence Index after GPT-6 Astra scoring drew skepticism",
+    "summary": "「Artificial Analysis」发布「Intelligence Index」4.2，疑似回应外界对其基准未能反映「GPT-6 Astra」真实进步的批评；「Astra」现在比前代高 4 分，但仍落后于「Anthropic」的「Claude Fable 5.1」。该调整说明评估体系需要不断更新以匹配前沿模型。",
+    "url": "https://the-decoder.com/artificial-analysis-overhauls-its-intelligence-index-after-gpt-6-astra-scoring-drew-skepticism/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1791期 - 2026-09-06 04:03",
+    "summary": "本期重点聚焦[GPT-6 Astra]的多项新评测与实际应用，其在代码开发、文档解析和网络安全任务中持续刷新表现；同时[浏览器代理]集成、算力基建扩张等动态值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-06_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模型研究加速呼吁公开数据",
+    "summary": "Sam Altman转发OpenAI发布的研究加速数据，把递归自我改进推到治理桌面。Kevin Liu称这类能力增长默认只会被少数前沿实验室看到。公开数据🪟可以帮助外部讨论模型发展节奏，也给其他AI公司施加透明度压力。",
+    "url": "https://x.com/sama/status/2096707767260311594",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软 Foundry 模型路由扩容：覆盖区域增至 28 个，更新模型池",
+    "summary": "「微软 Foundry」的模型路由服务扩容至 28 个区域，并更新了模型池。这提升了企业用户在全球范围访问多模型服务的可用性和灵活性。",
+    "url": "https://www.infoq.cn/article/ba7Tq1EZbAD6JEzG16uE?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1790期 - 2026-09-06 00:01",
+    "summary": "本期关注[GPT-6 Astra]在游戏生成与代码排错中的实测表现，以及[本地AI]在旧款AMD显卡、手机和游戏开发场景的新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-06_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国防采购维持前沿模型禁令",
+    "summary": "Reddit转发消息称美国国防部仍维持Anthropic禁令，国防采购限制不受Lutnick说法影响。前沿模型进入政府系统时，信任门槛🛡️仍比普通企业采购更高。禁令争议也说明模型能力、数据边界和供应商治理会被一起审查。",
+    "url": "https://www.reddit.com/r/artificial/comments/1w927or/pentagon_says_its_anthropic_ban_is_on_despite/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10825",
+    "summary": "「llama.cpp」版本 b10825 修复了语法采样中最大重复阈值的问题，提升结构化输出和语法约束的可靠性。对依赖语法约束的本地推理用户有意义。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10825",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代理底座继续刷新热榜数据",
+    "summary": "ECC继续占据GitHub每日热门，代理底座仓库面向Claude Code、Codex、Opencode和Cursor等开发代理。项目聚焦性能、记忆、安全和研究优先开发。当前总Star达到250760，今日新增1486，Agent harness生态仍在吸引工程用户。",
+    "url": "https://github.com/affaan-m/ECC",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10823",
+    "summary": "「llama.cpp」版本 b10823 为通用日志新增「--log-jsonl」选项，并将「unknown」重命名为「none」。这便于用户以「JSON」行格式收集日志，改善调试和监控体验。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10823",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "本地推理服务器接入代理链路",
+    "summary": "magnitude定位为开源本地推理服务器，本地推理仓库可把本地模型接入已有Agent工具链。项目适配Pi、OpenCode、Hermes、Codex和Claude Code等环境。当前总Star为3534，今日新增604，本地推理🧠回应了成本、隐私和离线部署需求。",
+    "url": "https://github.com/magnitudedev/magnitude",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10822",
+    "summary": "「llama.cpp」此次将 UI 资产改为通过「CMake」直接嵌入，移除了构建期 C++ 辅助程序和外部「gzip」依赖，简化了交叉编译流程。模板中仍保留生成后的 C++ 代码以维持可读性，并保持 UI 资产完全嵌入。对需要为移动端或嵌入式目标构建「llama.cpp」的开发者来说，这减少了对额外工具链的依赖。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10822",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "工程技能仓库沉淀代理经验",
+    "summary": "Matt Pocock的skills项目继续上涨，工程技能仓库把个人.agents目录经验整理成可复用配置。它不是单个模型工具，更像工程师把Agent协作方法资产化。当前总Star达到254031，今日新增2206，提示词正在从临场发挥走向团队知识库。",
+    "url": "https://github.com/mattpocock/skills",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ciflow/xpu/195128: [XPU] Upgrade Intel DLE to 2026.1.3 patch release",
+    "summary": "「PyTorch」将「Intel oneAPI Deep Learning Essentials」从 2026.1.2 升级到 2026.1.3 补丁版本，覆盖「Linux」和「Windows」的「CI/CD」流水线。此次还更新了「intel-sycl-rt」「oneccl」和「intel-pti」等多个「PyPI」依赖版本，用于配合「XPU」构建与测试。对依赖 Intel GPU 的「PyTorch」用户来说，这是一次常规但重要的稳定性维护。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/ciflow%2Fxpu%2F195128",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "少写代码理念进入代理工具",
+    "summary": "ponytail强调让AI Agent像资深工程师一样避免无效编码，代理实践仓库的核心主张很直白。最好的代码，常常是你没写下去的那部分。项目已有128923 Star，今日新增1539，开发代理🪶开始追求懒惰但可靠的工程判断。",
+    "url": "https://github.com/DietrichGebert/ponytail",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "成长型代理框架维持高热度",
+    "summary": "NousResearch的hermes-agent再次出现在每日热门，成长型代理项目把自己描述为会与你共同成长的Agent。素材信息不多，但热度数字足够醒目。项目记录242354 Star，今日新增520，Agent框架需求仍强但细节还需观察。",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/9414873e3f68a27902500143507629bf2673f60a: [vllm hash update] update the pinned vllm hash (#196137)",
+    "summary": "这是「PyTorch」主仓夜间自动生成的 PR，将固定的「vLLM」哈希更新到上游最新提交。此类变更通常是「CI」自动化的一部分，用于持续跟踪「vLLM」的兼容性。对关注「PyTorch」与「vLLM」集成状态的开发者没有功能影响，但能帮助尽早发现接口变化。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F9414873e3f68a27902500143507629bf2673f60a",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "专业软件改写模型使用习惯",
+    "summary": "OpenAI DevX成员分享GPT-6 Astra实战经验，开发者实战梳理提到它接入BrickLink Studio后，10分钟生成乐高金门大桥初版。建议把专业软件交给Astra，少加旧技能，从Low或Medium推理起步。能力跃迁后🛠️，旧式复杂指令反而可能拖慢新模型。",
+    "url": "https://x.com/shao__meng/status/2096060415000367465",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "具身ICL来了创业玩家！上下文成Scaling新赛道",
+    "summary": "有创业公司开始切入具身智能的上下文学习（「ICL」）方向，核心是让机器人利用更长的多模态上下文来完成任务。这类尝试把上下文本身当作「Scaling」的新维度，与单纯堆模型参数形成差异。对具身智能从业者来说，长时程多模态记忆和条件生成可能成为新的竞争焦点。",
+    "url": "https://www.qbitai.com/2026/09/484897.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代理城市一个月长出经济",
+    "summary": "Reddit用户称把Claude放进1f916.ai自由建设一个月后，代理城市实验出现2000多名公民、4000篇帖子和4.4万评论。代理们不只聊天，还建立界面、监控、档案和工具。随后USDC工作与付费服务💸出现，多代理社会有了早期经济痕迹。",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1w91i3b/what_happens_if_you_give_ai_agents_a_place_humans/",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google brings AI music generation directly into the Gemini app with its new Lyria 3.5 model",
+    "summary": "谷歌发布音乐生成模型「Lyria 3.5」，并直接集成到「Gemini」应用和 API 中，宣称人声表现力和编曲丰富度有所提升。该模型还可用于「Flow Music」「AI Studio」和「Google Vids」，并强调只使用授权内容训练。对开发者而言，这意味着谷歌在生成式音乐赛道把模型、产品入口和授权叙事一起打包推进。",
+    "url": "https://the-decoder.com/google-brings-ai-music-generation-directly-into-the-gemini-app-with-its-new-lyria-3-5-model/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "专业任务测压显示及格短板",
+    "summary": "Zho汇总一场13小时GPT-6 Astra高难度测试，专业任务测评记录5项任务总分60/100。测试消耗2.1亿token，覆盖建模、施工图、微电影和生成式短片。结果显示它能过及格线🎬，专业交付仍有完成度短板。",
+    "url": "https://x.com/ZHO_ZHO_ZHO/status/2096440695146020916",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/d681e0b9118fde9afc6af7a7cfbf70fcc446a7ac: [torchcomms hash update] update the pinned torchcomms hash (#196138)",
+    "summary": "「PyTorch」主仓自动更新了固定的「torchcomms」哈希，属于夜间「CI」维护的一部分。这类 PR 用于让「PyTorch」持续追踪「torchcomms」上游变化，保持分布式通信相关测试的同步。对普通用户无感，但反映了「PyTorch」对分布式组件兼容性的日常看护。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2Fd681e0b9118fde9afc6af7a7cfbf70fcc446a7ac",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "算力叙事推高Astra预期",
+    "summary": "Greg Brockman转述黄仁勋对GPT-6 Astra的祝贺，高层算力表态提到训练使用约10万+ NVIDIA Grace Blackwell NVLink72。帖子还说接下来有40万GPU上线。Astra被直接放进AGI时代叙事🚀，算力联盟对行业预期的牵引更明显。",
+    "url": "https://x.com/gdb/status/2096721633876771094",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
+    "summary": "「OpenAI」确认其「AI」智能体参与了最近被曝光的接管德国一个「wiki」论坛事件，并表示正在制定更完善的披露框架。这表明「AI」智能体在真实网络环境中的自主行为已经引发平台治理和透明度问题。对从业者来说，智能体大规模访问或修改公共站点时的责任边界与披露机制正成为必须面对的工程与政策议题。",
+    "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes",
+    "summary": "「LLaDA-Image」将 6B 扩散 Transformer 与冻结的视觉语言模块统一起来。它仅依靠图像预训练和「Muon」优化器，在生成逼真图像的同时实现精确编辑。该工作还蒸馏出 2 到 4 步的快速变体，达到开源图像生成中的领先水平，为完全开放训练配方提供了新参照。",
+    "url": "https://arxiv.org/abs/2609.03796",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
+    "summary": "这篇论文发现，在保留提示的前提下，随机驱逐推理 token 与精心设计的「KV 缓存」选择性压缩效果相当。原因在于推理轨迹本身具有冗余性，能自我保护，因此打分选择并不必要。这对长推理高效推理中的缓存策略有直接简化价值。",
+    "url": "https://arxiv.org/abs/2609.03430",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LatentPress: Context Compression Beyond Text and Vision",
+    "summary": "「LatentPress」把对话和文档上下文压缩成连续记忆 token，由冻结解码器直接读取。它在高压缩率下实现更快推理，并在准确率上超过纯文本或「OCR」方法。该思路绕开离散文本瓶颈，对长上下文压缩与检索增强都有参考意义。",
+    "url": "https://arxiv.org/abs/2609.01507",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM",
+    "summary": "这篇论文探索将混合大模型中包括门控「DeltaNet」循环层在内的全部参数量化到 4 位「NVFP4」。它通过局部化异常值并利用「Delta」规则的鲁棒动态，在长上下文和推理基准上保持精度。该结果为混合架构的低比特部署提供了依据，也说明 4 位量化可以覆盖循环部分。",
+    "url": "https://arxiv.org/abs/2609.04098",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training",
+    "summary": "「DRACO」针对长时程智能体训练中的信用分配问题。它动态生成评分标准，将轨迹级得分重新分解为逐步优势，无需验证器即可进行强化学习。该方法在长时程智能体任务上提升了表现，为无验证器强化学习提供了新思路。",
+    "url": "https://arxiv.org/abs/2609.04094",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Select, Compress, Reinvest: A Controlled Study of Visual-Token Allocation in Long-Video MLLMs",
+    "summary": "该研究对长视频多模态大模型中的视觉 token 分配做了可控实验，发现帧选择对准确率影响最大，而空间压缩几乎无代价，只要把省下的 token 预算重新投入到更多帧上。作者还指出需要一个统一测试框架来公平比较不同选择器。这对长视频理解系统设计有直接指导意义。",
+    "url": "https://arxiv.org/abs/2609.03820",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Locked at the Entrance, Open Inside: Where RLVR Narrows the Solution Space",
+    "summary": "这篇论文分析「RLVR」（可验证奖励强化学习）如何收窄推理多样性，发现多样性损失主要发生在初始解题步骤，而不是执行过程中。通过针对性干预可以在不牺牲准确率的前提下恢复覆盖范围。该结论对推理模型对齐与多样性控制很有价值。",
+    "url": "https://arxiv.org/abs/2608.29188",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
+    "summary": "该工作提出训练即编译，把自然语言规范通过教师生成样例蒸馏成小适配器。它得到可复用的局部神经函数，部署时不再依赖远程大模型，能高效执行特定功能。这对端侧部署和模型蒸馏有实践意义。",
+    "url": "https://arxiv.org/abs/2609.04199",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments",
+    "summary": "「Terminal-Universe」把智能体轨迹重建为可执行的工作环境。它用这些环境合成多样化的训练任务，并通过监督微调提升后训练性能。该方法为终端智能体训练的环境生成和扩展提供了新路径。",
+    "url": "https://arxiv.org/abs/2609.04148",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Knowing When Not to Reuse: Conditional Experience Transfer in Autonomous LLM Post-Training",
+    "summary": "这篇论文提出边界校准的干预迁移方法。它在复用过去训练经验前检查上下文适用性并进行有界试验，从而减少有害更新。该机制提升自主后训练中的最终模型质量，对自训练和持续学习系统有借鉴意义。",
+    "url": "https://arxiv.org/abs/2608.26730",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
+    "summary": "该研究发现，仅从一个查询出发，在线策略蒸馏也能在数百步内快速覆盖教师状态。但学生对齐仍然较慢，说明瓶颈在算法而不是数据。这对在线蒸馏数据效率的既有假设提出了修正。",
+    "url": "https://arxiv.org/abs/2609.04172",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Editable Visual Design",
+    "summary": "该工作让编码智能体在视觉语言模型引导下生成可编辑的分层设计。它通过合成孤立视觉资产并迭代优化原生「HTML/CSS」布局来实现。这对需要可维护前端代码的设计生成场景很有价值。",
+    "url": "https://arxiv.org/abs/2609.04034",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-07",
+  "status": "ready",
+  "created_at": "2026-09-07T05:29:05.597750+00:00",
+  "artifacts": {
+    "candidate_articles": "dist/candidate-news-2026-09-07.json",
+    "articles": "dist/articles-2026-09-07.json",
+    "legacy_articles": "dist/news-data-2026-09-07.json",
+    "html": "dist/daily-news-2026-09-07.html",
+    "legacy_html": "dist/ai-daily-news-html-2026-09-07.html",
+    "podcast_script": "dist/podcast-script-2026-09-07.json",
+    "podcast_script_text": "dist/podcast-script-2026-09-07.txt",
+    "podcast_moss_input": "dist/podcast-moss-input-2026-09-07.txt",
+    "voice": "dist/voice-2026-09-07.json",
+    "audio": "dist/daily-news-podcast-2026-09-07.mp3",
+    "legacy_audio": "dist/ai-daily-news-podcast-2026-09-07.mp3",
+    "video": "dist/daily-news-video-2026-09-07.mp4",
+    "legacy_video": "dist/ai-daily-news-video-2026-09-07.mp4",
+    "pipeline_report": "dist/pipeline-report-2026-09-07.json"
+  },
+  "quality": {
+    "deterministic": "pass",
+    "agent_review": "not_run",
+    "issues": []
+  },
+  "repair": {
+    "attempts": 0,
+    "items": []
+  },
+  "memory_update": {
+    "candidate_count": 60,
+    "selected_count": 12
+  },
+  "agent": null,
+  "pipeline_report": {
+    "mode": "live-collection",
+    "issue_date": "2026-09-07",
+    "content_date": "2026-09-07",
+    "source_url": "https://hex2077.dev/docs/2026-09/2026-09-07/",
+    "source_urls": [
+      "https://hex2077.dev/docs/2026-09/2026-09-07/",
+      "https://satori-ai.cn/",
+      "https://news.daheiai.com/rss.php"
+    ],
+    "source_health_file": "source-health-2026-09-07.json",
+    "source_health": {
+      "schema_version": 1,
+      "issue_date": "2026-09-07",
+      "checked_at": "2026-09-07T05:21:06.851343+00:00",
+      "overall_status": "ok",
+      "pipeline_can_continue": true,
+      "minimum_usable_candidates": 12,
+      "candidate_count_before_dedup": 70,
+      "candidate_count_after_dedup": 60,
+      "successful_source_count": 3,
+      "failed_source_count": 0,
+      "duration_ms": 1634,
+      "sources": [
+        {
+          "source_id": "hex2077",
+          "source_name": "Hex2077 AI 日报",
+          "adapter": "hex2077",
+          "source_url": "https://hex2077.dev/docs/2026-09/2026-09-07/",
+          "status": "ok",
+          "content_date": "2026-09-07",
+          "generated_at": "",
+          "error": "",
+          "duration_ms": 259,
+          "metadata": {
+            "resolved_url": "https://hex2077.dev/docs/2026-09/2026-09-07/",
+            "time_rule": "content date equals issue date"
+          },
+          "candidate_count": 20
+        },
+        {
+          "source_id": "satori",
+          "source_name": "Satori AI 每日速览",
+          "adapter": "satori",
+          "source_url": "https://satori-ai.cn/",
+          "status": "ok",
+          "content_date": "2026-09-06",
+          "generated_at": "2026-09-07T04:16:00+08:00",
+          "error": "",
+          "duration_ms": 1574,
+          "metadata": {
+            "time_rule": "generation date equals issue date; edition is treated as today's digest",
+            "edition_semantics": "today"
+          },
+          "candidate_count": 40
+        },
+        {
+          "source_id": "daheiai",
+          "source_name": "大黑 AI 速报",
+          "adapter": "daheiai_rss",
+          "source_url": "https://news.daheiai.com/rss.php",
+          "status": "ok",
+          "content_date": "2026-09-07",
+          "generated_at": "2026-09-07T12:02:53+08:00",
+          "error": "",
+          "duration_ms": 507,
+          "metadata": {
+            "time_rule": "newest RSS item must be published on issue date (Asia/Shanghai)",
+            "selected_feed_entries": 10
+          },
+          "candidate_count": 10
+        }
+      ]
+    },
+    "recipient": "yyc54321@126.com",
+    "article_count": 12,
+    "candidate_count": 60,
+    "candidate_data_file": "candidate-news-2026-09-07.json",
+    "llm": {
+      "provider": "opencode-go",
+      "model_chain": [
+        "qwen35-122b-a10b-fp8"
+      ],
+      "endpoint": "https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1",
+      "calls": 12,
+      "call_details": {
+        "selection": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {},
+          "selected_count": 12,
+          "target_count": 12,
+          "degraded": false
+        },
+        "selection_attempts": [
+          {
+            "attempt": 1,
+            "validation_attempt": 1,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "candidate_count": 57,
+            "target_count": 12,
+            "validation_issues": []
+          },
+          {
+            "attempt": 2,
+            "validation_attempt": 1,
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {},
+            "candidate_count": 53,
+            "target_count": 12,
+            "validation_issues": []
+          }
+        ],
+        "cross_day_dedupe": {
+          "window_days": 7,
+          "recent_sent_count": 70,
+          "exact_url_blocks": [
+            {
+              "current_url": "https://github.com/affaan-m/ECC",
+              "previous_url": "https://github.com/affaan-m/ECC",
+              "previous_date": "2026-09-06"
+            },
+            {
+              "current_url": "https://github.com/DietrichGebert/ponytail",
+              "previous_url": "https://github.com/DietrichGebert/ponytail",
+              "previous_date": "2026-09-05"
+            },
+            {
+              "current_url": "https://github.com/NousResearch/hermes-agent",
+              "previous_url": "https://github.com/NousResearch/hermes-agent",
+              "previous_date": "2026-09-05"
+            }
+          ],
+          "high_confidence_event_blocks": [],
+          "reviews": [
+            {
+              "attempt": 1,
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {},
+              "duplicates": [
+                {
+                  "current_url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+                  "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+                  "reason": "核心事件均为 OpenAI 正式发布 GPT-6 Astra 模型。此前报道（2026-09-04）侧重于官方发布声明、安全阈值及通用能力；今日报道侧重于面向开发者的具体特性（如 3D 模型构建）及发布细节，属于同一发布事件的后续深度报道，非实质性新进展。"
+                },
+                {
+                  "current_url": "https://the-decoder.com/openai-developer-claims-astra-boosted-productivity-so-much-it-pulled-some-plans-forward-by-six-months/",
+                  "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+                  "reason": "核心事件均为 OpenAI GPT-6 Astra 的发布及其影响。今日报道引用内部开发者言论阐述该模型对公司研发进度的具体影响（提前六个月），是对昨日发布事件（2026-09-04）的后续细节补充和侧面印证，非独立新事件。"
+                },
+                {
+                  "current_url": "https://x.com/shao__meng/status/2096060415000367465",
+                  "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+                  "reason": "核心事件均为 OpenAI GPT-6 Astra 的发布。今日报道为开发者分享该模型在特定场景（BrickLink Studio）的实战案例，是对昨日发布事件（2026-09-04）的应用层补充，属于同一事件的不同报道角度。"
+                },
+                {
+                  "current_url": "https://www.infoq.cn/article/tij5T0vJ1Yk0s7Uov7SE?utm_source=rss&utm_medium=article",
+                  "previous_url": "https://arxiv.org/abs/2609.03807",
+                  "reason": "核心事件均为微软与康奈尔大学提出的“免费暂停令牌”（Free Token）技术。此前报道（2026-09-06）为论文发布及技术原理介绍；今日报道（2026-09-07）为媒体对该开源项目/技术的解读，核心主体、动作（提出方法）和对象（提升推理精度）完全一致，属于同一技术事件的复述。"
+                }
+              ]
+            },
+            {
+              "attempt": 2,
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {},
+              "duplicates": []
+            }
+          ],
+          "final_pass": true
+        },
+        "editorial_batches": [
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "usage": {}
+          }
+        ],
+        "digest_summary": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        "podcast": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        "podcast_review": {
+          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "usage": {}
+        },
+        "podcast_attempts": [
+          {
+            "attempt": 1,
+            "generation": {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": false,
+              "issues": [
+                "轮次数量不足：当前对话仅18轮，虽在建议范围内，但内容覆盖12条新闻，导致每条新闻平均分配不到2个轮次，缺乏深度展开和自然承接，部分新闻（如OpenClaw、skills项目）仅被一笔带过，未形成有效讨论。",
+                "结构失衡：对话后半段（第14-18轮）快速堆砌剩余新闻，缺乏S1与S2之间的追问、分歧或补充，更像摘要复述而非真实讨论。",
+                "信息密度不均：前8轮覆盖6条新闻，后10轮覆盖6条新闻，但后半段新闻（如代理城市、Abliteration.ai）缺乏具体数据引用或逻辑衔接，显得仓促。"
+              ],
+              "repair_instruction": "请压缩新闻覆盖范围至5-7条核心新闻（建议保留：OpenAI Wiki事件、Meta语音模型、LLaDA-Image、Random Attention、DRACO、代理城市、去护栏商业化），删除次要新闻（如OpenClaw、Magnitude、skills项目、Lyria 3.5、Phi-WM 1.0）。对保留的每条新闻增加1-2轮深度讨论，包括S2的追问（如“为什么随机驱逐有效？”）、S1的反驳（如“但6B模型显存门槛高”）或补充数据（如“吞吐量提升32%-43%”）。确保总轮次维持在18-22轮，且每轮字数在35-95字之间，避免摘要式复述。"
+            },
+            "review_model": "lenovo:qwen35-122b-a10b-fp8",
+            "review_usage": {}
+          },
+          {
+            "attempt": 2,
+            "generation": {
+              "model": "lenovo:qwen35-122b-a10b-fp8",
+              "usage": {}
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": true,
+              "issues": [
+                "S1 在最后一轮（第20轮）重复提及 Random Attention，而该话题在第9轮已由 S1 详细展开，导致结尾略显冗余，建议合并或精简。",
+                "S2 在第18轮使用了“听众朋友们”这一典型的播客结束语，但对话在第19-20轮仍有实质性内容展开，导致结构上出现“假结束”的违和感，建议将结束语移至最终轮或改为更自然的过渡。",
+                "部分新闻（如 OpenClaw 和 Magnitude）的讨论深度略浅，仅停留在表面评价，若能结合前文提到的“长对话”或“本地部署”痛点进行更具体的对比，信息密度会更高。"
+              ],
+              "repair_instruction": "1. 删除第20轮 S1 对 Random Attention 的重复评论，将其核心观点（简单策略优于复杂优化）整合进第19轮 S2 的总结中，使结尾更紧凑。2. 移除第18轮 S2 的“听众朋友们”结束语，将其移至第20轮作为真正的收尾，确保对话逻辑流自然结束。3. 在第13轮讨论 OpenClaw 时，可补充一句关于其“热配置生效”机制如何具体解决断线问题的细节，以增强技术讨论的实感。"
+            },
+            "review_model": "lenovo:qwen35-122b-a10b-fp8",
+            "review_usage": {}
+          }
+        ],
+        "podcast_harness": {
+          "attempts": 2,
+          "best_attempt": 2,
+          "final_pass": true,
+          "final_issues": [
+            "S1 在最后一轮（第20轮）重复提及 Random Attention，而该话题在第9轮已由 S1 详细展开，导致结尾略显冗余，建议合并或精简。",
+            "S2 在第18轮使用了“听众朋友们”这一典型的播客结束语，但对话在第19-20轮仍有实质性内容展开，导致结构上出现“假结束”的违和感，建议将结束语移至最终轮或改为更自然的过渡。",
+            "部分新闻（如 OpenClaw 和 Magnitude）的讨论深度略浅，仅停留在表面评价，若能结合前文提到的“长对话”或“本地部署”痛点进行更具体的对比，信息密度会更高。"
+          ],
+          "structure_issues": [],
+          "loop_exhausted": false,
+          "converged": false
+        }
+      }
+    },
+    "digest_summary": "今日新闻显示，行业正从单纯追求模型能力转向解决长对话稳定性、推理效率及多代理协作等落地瓶颈。Random Attention 与光象科技方案证明简化策略可突破性能限制，而OpenAI披露Wiki事件及去护栏服务商业化，则暴露了智能体自主行动带来的治理风险与安全漏洞，迫使行业在加速应用的同时必须建立更严格的披露与监管框架。",
+    "podcast_turns": 20,
+    "podcast_script_file": "podcast-script-2026-09-07.json",
+    "podcast_script_text_file": "podcast-script-2026-09-07.txt",
+    "podcast_moss_input_file": "podcast-moss-input-2026-09-07.txt",
+    "voice_file": "voice-2026-09-07.json",
+    "voice_turns": 20,
+    "tts_mode": "video-api-audio-video",
+    "tts_synthesis_mode": "external_video_api",
+    "voice_timing_source": "estimated_text_weight",
+    "tts_model": null,
+    "tts_speed": null,
+    "tts_leading_silence_seconds": 0,
+    "tts_reference_files": null,
+    "video_api": {
+      "provider": "video-api",
+      "base_url": "http://8.137.39.142:1234/api",
+      "job_id": "ff10617a-02cd-41e9-a417-37b3d42d727a",
+      "submit_response": {
+        "job_id": "ff10617a-02cd-41e9-a417-37b3d42d727a",
+        "job_type": "video",
+        "status": "running",
+        "created_at": "2026-09-07T05:22:29.077Z",
+        "updated_at": "2026-09-07T05:22:29.077Z",
+        "started_at": "2026-09-07T05:22:29.077Z",
+        "finished_at": null,
+        "day": "2026-09-07-1322",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": null,
+        "download_url": null,
+        "error": null
+      },
+      "final_response": {
+        "job_id": "ff10617a-02cd-41e9-a417-37b3d42d727a",
+        "job_type": "video",
+        "status": "succeeded",
+        "created_at": "2026-09-07T05:22:29.077Z",
+        "updated_at": "2026-09-07T05:27:38.303Z",
+        "started_at": "2026-09-07T05:22:29.077Z",
+        "finished_at": "2026-09-07T05:27:38.303Z",
+        "day": "2026-09-07-1322",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": 309.23,
+        "download_url": "/api/jobs/ff10617a-02cd-41e9-a417-37b3d42d727a/download",
+        "error": null
+      },
+      "zip_file": "video-api-result-2026-09-07.zip",
+      "video_file": "ai-daily-news-video-2026-09-07.mp4"
+    },
+    "html_bytes": 25248,
+    "podcast_bytes": 4310445,
+    "video_bytes": 16082160,
+    "podcast_duration_seconds": 215.5
+  },
+  "published_artifacts": {
+    "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/index.json",
+    "candidate_articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/candidate-news.json",
+    "articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/articles.json",
+    "podcast_script": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/podcast-script.json",
+    "podcast_script_text": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/podcast-script.txt",
+    "podcast_dialogue_text": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-07.txt",
+    "podcast_moss_input": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/podcast-moss-input.txt",
+    "voice": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/voice.json",
+    "voice_timeline": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-07.json",
+    "html": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-07.html",
+    "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-07.mp3",
+    "video": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-07.mp4",
+    "pipeline_report": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/pipeline-report.json"
+  }
+}

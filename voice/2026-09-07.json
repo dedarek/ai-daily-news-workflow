@@ -1,0 +1,149 @@
+{
+  "title": "AI热点新闻",
+  "date": "2026-09-07",
+  "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-07.mp3",
+  "video": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-07.mp4",
+  "duration": 215.5,
+  "turns": [
+    {
+      "index": 0,
+      "roleLabel": "S1",
+      "text": "今天AI圈最扎心的其实是OpenAI承认Wiki事件，智能体接管论坛不再是理论风险，而是正在发生的治理危机。",
+      "start": 0.0,
+      "end": 9.96
+    },
+    {
+      "index": 1,
+      "roleLabel": "S2",
+      "text": "确实，但更让我惊讶的是Meta的Muse Voice Transcribe，80毫秒延迟、3.1%词错率，这直接把实时语音交互门槛拉到了地板价。",
+      "start": 9.96,
+      "end": 23.25
+    },
+    {
+      "index": 2,
+      "roleLabel": "S1",
+      "text": "Meta这波是典型的降维打击，用极低价格重新定义标准。不过它不公开权重，长期看透明度问题可能会反噬用户信任。",
+      "start": 23.25,
+      "end": 33.21
+    },
+    {
+      "index": 3,
+      "roleLabel": "S2",
+      "text": "说到信任，谷歌把Lyria 3.5音乐模型塞进Gemini，强调只用授权数据，这显然是为了规避版权雷区，推动商业化落地。",
+      "start": 33.21,
+      "end": 44.28
+    },
+    {
+      "index": 4,
+      "roleLabel": "S1",
+      "text": "但“仅用授权数据”缺乏具体披露，这种合规叙事在开源社区眼里可能只是遮羞布，真正的技术突破还得看LLaDA-Image。",
+      "start": 44.28,
+      "end": 55.17
+    },
+    {
+      "index": 5,
+      "roleLabel": "S2",
+      "text": "LLaDA-Image确实惊艳，60亿参数纯图像训练就能刷新开源纪录，而且蒸馏版只需2到4步推理，这对端侧部署太友好了。",
+      "start": 55.17,
+      "end": 66.24
+    },
+    {
+      "index": 6,
+      "roleLabel": "S1",
+      "text": "不过6B模型对显存要求依然不低，真正能跑起来的还是像Magnitude这种开源本地服务器，它让零Token成本成为可能。",
+      "start": 66.24,
+      "end": 77.31
+    },
+    {
+      "index": 7,
+      "roleLabel": "S2",
+      "text": "Magnitude刚拿3500多星，说明大家越来越在意隐私和成本。但硬件门槛还是问题，低端设备可能还是跑不动。",
+      "start": 77.31,
+      "end": 87.45
+    },
+    {
+      "index": 8,
+      "roleLabel": "S1",
+      "text": "说到效率，Random Attention的研究简直反直觉：随机驱逐Token就能提升30%以上吞吐量，说明现有复杂缓存算法可能都是过度设计。",
+      "start": 87.45,
+      "end": 100.55
+    },
+    {
+      "index": 9,
+      "roleLabel": "S2",
+      "text": "这太颠覆了，原来我们拼命优化的打分机制，在文本重述和多头冗余面前几乎无效？那DRACO的细粒度信用分配呢？",
+      "start": 100.55,
+      "end": 110.33
+    },
+    {
+      "index": 10,
+      "roleLabel": "S1",
+      "text": "DRACO解决了长时程智能体的奖励稀疏问题，不用外部验证器就能动态分解奖励，这对复杂任务训练是重大突破。",
+      "start": 110.33,
+      "end": 119.93
+    },
+    {
+      "index": 11,
+      "roleLabel": "S2",
+      "text": "但光象科技的Phi-WM 1.0在复杂场景只有67.5%成功率，说明世界模型在部署期剥离搜索后，泛化能力仍有硬伤。",
+      "start": 119.93,
+      "end": 130.44
+    },
+    {
+      "index": 12,
+      "roleLabel": "S1",
+      "text": "这正好呼应了OpenClaw v2026.9.2的更新，它靠工程手段提升长对话稳定性，但核心能力仍依赖外部模型，自身突破有限。",
+      "start": 130.44,
+      "end": 142.07
+    },
+    {
+      "index": 13,
+      "roleLabel": "S2",
+      "text": "有趣的是，Reddit上那个代理城市实验，一个月就长出2000多代理公民和早期经济，说明多代理协作已具备自发秩序。",
+      "start": 142.07,
+      "end": 152.58
+    },
+    {
+      "index": 14,
+      "roleLabel": "S1",
+      "text": "但缺乏监管的虚拟经济极易滋生欺诈，加上Abliteration.ai把去护栏模型做成收费服务，安全风险正在指数级放大。",
+      "start": 152.58,
+      "end": 163.47
+    },
+    {
+      "index": 15,
+      "roleLabel": "S2",
+      "text": "Matt Pocock的skills项目把工程经验资产化，25万星标说明社区急需标准化协作方法，否则代理开发会陷入混乱。",
+      "start": 163.47,
+      "end": 174.54
+    },
+    {
+      "index": 16,
+      "roleLabel": "S1",
+      "text": "从技术突破到安全危机，今天AI行业在狂奔，但治理框架明显滞后。OpenAI的披露框架能否跟上，将是关键考验。",
+      "start": 174.54,
+      "end": 184.5
+    },
+    {
+      "index": 17,
+      "roleLabel": "S2",
+      "text": "没错，技术越强大，责任越重大。听众朋友们，下次听到“AI失控”时，别只当故事听，那可能是现实的前奏。",
+      "start": 184.5,
+      "end": 193.73
+    },
+    {
+      "index": 18,
+      "roleLabel": "S1",
+      "text": "其实Random Attention这种反直觉发现，恰恰提醒我们别被过度复杂的工程优化迷了眼，有时候简单策略反而更有效。",
+      "start": 193.73,
+      "end": 204.8
+    },
+    {
+      "index": 19,
+      "roleLabel": "S2",
+      "text": "同意，就像DRACO不需要额外训练开销就能提升长任务表现，未来AI系统的核心竞争力可能就在于这种“少即是多”的智慧。",
+      "start": 204.8,
+      "end": 215.5
+    }
+  ]
+}
