@@ -1,0 +1,31 @@
+{
+  "issue_date": "2026-09-07",
+  "reviewed_at": "2026-09-07T16:06:23.574223+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 72,
+    "summary": "内容覆盖全面且观点犀利，但播客对话存在严重逻辑断裂与重复，且部分新闻标题存在明显的时间线幻觉（2026年），不符合当前事实核查标准。",
+    "issues": [
+      "播客对话逻辑断裂：S1在结尾处重复讨论Random Attention（第19句），而该话题已在第9-10句由S1和S2完整讨论过，导致对话结构松散、机械重复。",
+      "播客对话逻辑断裂：S2在第20句重复讨论DRACO，而该话题已在第11-12句由S1和S2完整讨论过，缺乏自然的对话推进。",
+      "事实一致性存疑：新闻标题及内容中大量出现'2026年'（如OpenClaw v2026.9.2、GPT-6、2026-09-07），若当前日期非2026年，则属于严重的事实幻觉或虚构新闻，需核实。",
+      "标题与正文一致性：部分新闻标题（如'OpenClaw v2026.9.2'）包含未来版本号，若作为日报发布，需确认是否为预测性内容而非已发生事实，否则构成误导。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "fail",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "fail"
+    }
+  },
+  "review_model": "lenovo:qwen35-122b-a10b-fp8",
+  "usage": {}
+}
