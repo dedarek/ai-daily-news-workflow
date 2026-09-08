@@ -179,7 +179,7 @@ class LlmProviderTests(unittest.TestCase):
 
         self.assertEqual(result, {'selection': []})
         self.assertEqual(usage, {'total_tokens': 3})
-        self.assertEqual(model, 'lenovo:qwen35-122b-a10b-fp8')
+        self.assertEqual(model, 'lenovo:qwen38-27b')
         self.assertEqual(mocked_open.call_count, 1)
         request = mocked_open.call_args.args[0]
         self.assertEqual(request.full_url, 'https://lenovo.test/v1/chat/completions')

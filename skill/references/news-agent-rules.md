@@ -64,7 +64,7 @@ The repair loop follows Deep Agent Loop principles (带记忆的持续优化，�
 3. **Repair with accumulated trajectory** — If Harness says `pass: false`, the *entire history* of past attempts and their issues is fed back into the next generation call. The agent iterates with memory and must not repeat earlier mistakes, rather than reacting to a single isolated instruction.
 4. **Keep the best** — The loop always tracks the *best* attempt so far (fewest structural + review issues), not just the latest one.
 5. **Converge, don't spin** — The attempt budget (currently 5) is only a guardrail. The loop stops early when it stalls (no improvement across two consecutive rounds); it is not a fixed mechanical count.
-6. **Lenovo-only inference** — Every generation and Harness review attempt uses Lenovo `qwen35-122b-a10b-fp8`; do not route or fall back to another provider.
+6. **Lenovo-only inference** — Every generation and Harness review attempt uses Lenovo `qwen38-27b`; do not route or fall back to another provider.
 7. **Objective fallback gate** — If no attempt passes the Harness, use the best revised draft when it is structurally usable, and record the Harness issues as warnings. Only empty dialogue, invalid speakers, or missing text must stop the external video API.
 
 Code-level hard blocks are reserved only for truly broken output:

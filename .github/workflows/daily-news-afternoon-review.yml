@@ -105,7 +105,7 @@ jobs:
           OPENCODE_GO_TIMEOUT_SECONDS: "600"
           LLM_STREAM: "true"
           LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
-          LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1' }}
+          LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen38-27b/v1' }}
         run: |
           test -n "$LENOVO_LLM_API_KEY" || { echo "::error::Missing GitHub Actions secret LENOVO_LLM_API_KEY"; exit 1; }
           python3 scripts/prepare_review_delivery.py \
