@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-09-07",
-  "content_date": "2026-09-07",
-  "published_at": "2026-09-07T05:29:06.318354+00:00",
+  "issue_date": "2026-09-08",
+  "content_date": "2026-09-08",
+  "published_at": "2026-09-08T07:41:40.250559+00:00",
   "article_count": 12,
-  "podcast_turns": 20,
+  "podcast_turns": 22,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -12,13 +12,13 @@
   "llm": {
     "provider": "opencode-go",
     "model_chain": [
-      "qwen35-122b-a10b-fp8"
+      "qwen38-27b"
     ],
-    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen35-122b-a10b-fp8/v1",
-    "calls": 12,
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
     "call_details": {
       "selection": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "lenovo:qwen38-27b",
         "usage": {},
         "selected_count": 12,
         "target_count": 12,
@@ -28,74 +28,22 @@
         {
           "attempt": 1,
           "validation_attempt": 1,
-          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "model": "lenovo:qwen38-27b",
           "usage": {},
-          "candidate_count": 57,
-          "target_count": 12,
-          "validation_issues": []
-        },
-        {
-          "attempt": 2,
-          "validation_attempt": 1,
-          "model": "lenovo:qwen35-122b-a10b-fp8",
-          "usage": {},
-          "candidate_count": 53,
+          "candidate_count": 60,
           "target_count": 12,
           "validation_issues": []
         }
       ],
       "cross_day_dedupe": {
         "window_days": 7,
-        "recent_sent_count": 70,
-        "exact_url_blocks": [
-          {
-            "current_url": "https://github.com/affaan-m/ECC",
-            "previous_url": "https://github.com/affaan-m/ECC",
-            "previous_date": "2026-09-06"
-          },
-          {
-            "current_url": "https://github.com/DietrichGebert/ponytail",
-            "previous_url": "https://github.com/DietrichGebert/ponytail",
-            "previous_date": "2026-09-05"
-          },
-          {
-            "current_url": "https://github.com/NousResearch/hermes-agent",
-            "previous_url": "https://github.com/NousResearch/hermes-agent",
-            "previous_date": "2026-09-05"
-          }
-        ],
+        "recent_sent_count": 82,
+        "exact_url_blocks": [],
         "high_confidence_event_blocks": [],
         "reviews": [
           {
             "attempt": 1,
-            "model": "lenovo:qwen35-122b-a10b-fp8",
-            "usage": {},
-            "duplicates": [
-              {
-                "current_url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
-                "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
-                "reason": "核心事件均为 OpenAI 正式发布 GPT-6 Astra 模型。此前报道（2026-09-04）侧重于官方发布声明、安全阈值及通用能力；今日报道侧重于面向开发者的具体特性（如 3D 模型构建）及发布细节，属于同一发布事件的后续深度报道，非实质性新进展。"
-              },
-              {
-                "current_url": "https://the-decoder.com/openai-developer-claims-astra-boosted-productivity-so-much-it-pulled-some-plans-forward-by-six-months/",
-                "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
-                "reason": "核心事件均为 OpenAI GPT-6 Astra 的发布及其影响。今日报道引用内部开发者言论阐述该模型对公司研发进度的具体影响（提前六个月），是对昨日发布事件（2026-09-04）的后续细节补充和侧面印证，非独立新事件。"
-              },
-              {
-                "current_url": "https://x.com/shao__meng/status/2096060415000367465",
-                "previous_url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
-                "reason": "核心事件均为 OpenAI GPT-6 Astra 的发布。今日报道为开发者分享该模型在特定场景（BrickLink Studio）的实战案例，是对昨日发布事件（2026-09-04）的应用层补充，属于同一事件的不同报道角度。"
-              },
-              {
-                "current_url": "https://www.infoq.cn/article/tij5T0vJ1Yk0s7Uov7SE?utm_source=rss&utm_medium=article",
-                "previous_url": "https://arxiv.org/abs/2609.03807",
-                "reason": "核心事件均为微软与康奈尔大学提出的“免费暂停令牌”（Free Token）技术。此前报道（2026-09-06）为论文发布及技术原理介绍；今日报道（2026-09-07）为媒体对该开源项目/技术的解读，核心主体、动作（提出方法）和对象（提升推理精度）完全一致，属于同一技术事件的复述。"
-              }
-            ]
-          },
-          {
-            "attempt": 2,
-            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "model": "lenovo:qwen38-27b",
             "usage": {},
             "duplicates": []
           }
@@ -104,78 +52,57 @@
       },
       "editorial_batches": [
         {
-          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "model": "lenovo:qwen38-27b",
           "usage": {}
         },
         {
-          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "model": "lenovo:qwen38-27b",
           "usage": {}
         },
         {
-          "model": "lenovo:qwen35-122b-a10b-fp8",
+          "model": "lenovo:qwen38-27b",
           "usage": {}
         }
       ],
       "digest_summary": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "lenovo:qwen38-27b",
         "usage": {}
       },
       "podcast": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "lenovo:qwen38-27b",
         "usage": {}
       },
       "podcast_review": {
-        "model": "lenovo:qwen35-122b-a10b-fp8",
+        "model": "lenovo:qwen38-27b",
         "usage": {}
       },
       "podcast_attempts": [
         {
           "attempt": 1,
           "generation": {
-            "model": "lenovo:qwen35-122b-a10b-fp8",
-            "usage": {}
-          },
-          "structure_issues": [],
-          "review": {
-            "pass": false,
-            "issues": [
-              "轮次数量不足：当前对话仅18轮，虽在建议范围内，但内容覆盖12条新闻，导致每条新闻平均分配不到2个轮次，缺乏深度展开和自然承接，部分新闻（如OpenClaw、skills项目）仅被一笔带过，未形成有效讨论。",
-              "结构失衡：对话后半段（第14-18轮）快速堆砌剩余新闻，缺乏S1与S2之间的追问、分歧或补充，更像摘要复述而非真实讨论。",
-              "信息密度不均：前8轮覆盖6条新闻，后10轮覆盖6条新闻，但后半段新闻（如代理城市、Abliteration.ai）缺乏具体数据引用或逻辑衔接，显得仓促。"
-            ],
-            "repair_instruction": "请压缩新闻覆盖范围至5-7条核心新闻（建议保留：OpenAI Wiki事件、Meta语音模型、LLaDA-Image、Random Attention、DRACO、代理城市、去护栏商业化），删除次要新闻（如OpenClaw、Magnitude、skills项目、Lyria 3.5、Phi-WM 1.0）。对保留的每条新闻增加1-2轮深度讨论，包括S2的追问（如“为什么随机驱逐有效？”）、S1的反驳（如“但6B模型显存门槛高”）或补充数据（如“吞吐量提升32%-43%”）。确保总轮次维持在18-22轮，且每轮字数在35-95字之间，避免摘要式复述。"
-          },
-          "review_model": "lenovo:qwen35-122b-a10b-fp8",
-          "review_usage": {}
-        },
-        {
-          "attempt": 2,
-          "generation": {
-            "model": "lenovo:qwen35-122b-a10b-fp8",
+            "model": "lenovo:qwen38-27b",
             "usage": {}
           },
           "structure_issues": [],
           "review": {
             "pass": true,
             "issues": [
-              "S1 在最后一轮（第20轮）重复提及 Random Attention，而该话题在第9轮已由 S1 详细展开，导致结尾略显冗余，建议合并或精简。",
-              "S2 在第18轮使用了“听众朋友们”这一典型的播客结束语，但对话在第19-20轮仍有实质性内容展开，导致结构上出现“假结束”的违和感，建议将结束语移至最终轮或改为更自然的过渡。",
-              "部分新闻（如 OpenClaw 和 Magnitude）的讨论深度略浅，仅停留在表面评价，若能结合前文提到的“长对话”或“本地部署”痛点进行更具体的对比，信息密度会更高。"
+              "第19轮S1将ACE框架和EvoCUA-1.5两条新闻合并在一句话中，导致信息密度过高，口播时听众难以消化，建议拆分或精简其中一条。",
+              "第22轮S2的结尾略显说教，虽然符合播客收尾习惯，但“听众朋友们”这一称呼在部分风格中可能显得过于正式，可考虑更自然的过渡。"
             ],
-            "repair_instruction": "1. 删除第20轮 S1 对 Random Attention 的重复评论，将其核心观点（简单策略优于复杂优化）整合进第19轮 S2 的总结中，使结尾更紧凑。2. 移除第18轮 S2 的“听众朋友们”结束语，将其移至第20轮作为真正的收尾，确保对话逻辑流自然结束。3. 在第13轮讨论 OpenClaw 时，可补充一句关于其“热配置生效”机制如何具体解决断线问题的细节，以增强技术讨论的实感。"
+            "repair_instruction": "1. 将第19轮S1的发言拆分为两轮，或仅保留ACE框架的详细解释，将EvoCUA-1.5移至后续轮次或简化提及，确保每轮聚焦一个核心点。2. 第22轮S2的结尾可微调为更口语化的总结，例如“所以啊，技术跑得越快，我们越得看清谁在踩刹车”，以增强对话感。"
           },
-          "review_model": "lenovo:qwen35-122b-a10b-fp8",
+          "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
         }
       ],
       "podcast_harness": {
-        "attempts": 2,
-        "best_attempt": 2,
+        "attempts": 1,
+        "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1 在最后一轮（第20轮）重复提及 Random Attention，而该话题在第9轮已由 S1 详细展开，导致结尾略显冗余，建议合并或精简。",
-          "S2 在第18轮使用了“听众朋友们”这一典型的播客结束语，但对话在第19-20轮仍有实质性内容展开，导致结构上出现“假结束”的违和感，建议将结束语移至最终轮或改为更自然的过渡。",
-          "部分新闻（如 OpenClaw 和 Magnitude）的讨论深度略浅，仅停留在表面评价，若能结合前文提到的“长对话”或“本地部署”痛点进行更具体的对比，信息密度会更高。"
+          "第19轮S1将ACE框架和EvoCUA-1.5两条新闻合并在一句话中，导致信息密度过高，口播时听众难以消化，建议拆分或精简其中一条。",
+          "第22轮S2的结尾略显说教，虽然符合播客收尾习惯，但“听众朋友们”这一称呼在部分风格中可能显得过于正式，可考虑更自然的过渡。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -183,16 +110,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-07.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-07.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-07/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-07.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-07.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-07.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-08/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-08/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-08/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-08/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-08.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-08/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-08/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-08.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-08/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-08.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-08.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-08.mp4"
 }

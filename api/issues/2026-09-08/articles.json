@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI发布内部AI研究数据并警告对齐风险",
+    "summary": "OpenAI发布内部数据显示，其AI智能体已实现“自动化研究实习生”目标，目前每人类工作日对应3.1个智能体工作日。数据显示，中位研究人员日均推理成本超600美元，90分位超7000美元，且智能体运行时已超越人类工时。尽管任务成功率随难度增加而下降，但OpenAI首席科学家Jakub Pachocki警告，目前没有任何实验室能充分掌握系统对齐与监控，呼吁不应以最高速度继续扩展。",
+    "url": "https://the-decoder.com/openai-reports-ai-research-interns-and-warns-about-its-own-pace-at-the-same-time/",
+    "section": "🔥 今日焦点",
+    "review": "OpenAI在展示自动化研发效率的同时，罕见地公开承认控制能力的滞后，这种“能力狂奔”与“安全刹车”的矛盾揭示了前沿AI研发中治理机制的结构性缺失。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6聊天模式疑似向Pro用户开放",
+    "summary": "用户Zho在社交平台透露，GPT-6已可在聊天模式中使用，且疑似仅面向Pro用户开放。体验反馈显示，新模型在对话自然度上有所提升，被形容为“更会说人话”。评论区其他用户补充称，非Pro用户目前仍主要使用GPT-5.6，且Pro用户存在每周50至200条的用量限制。",
+    "url": "https://x.com/ZHO_ZHO_ZHO/status/2096460956981453172",
+    "section": "🚀 产品发布",
+    "review": "GPT-6通过限制用量和分级开放策略逐步渗透，这种“先Pro后大众”的路径既控制了算力成本，也通过早期用户的口碑测试为全面推广积累数据。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软开源VibeVoice-ASR-7B实时语音转写模型",
+    "summary": "微软开源了VibeVoice-ASR-7B，这是一款端到端流式语音识别模型。它能在音频输入的同时实时转录文字，并自动标注发言人，无需传统的事后说话人分离流程。该模型支持中英日法德等10种语言，并允许预设自定义热词以提升人名和术语识别准确率，适用于多人员会议记录和实时字幕生成场景。",
+    "url": "https://x.com/Gorden_Sun/status/2096586970575319458",
+    "section": "🚀 产品发布",
+    "review": "将说话人分离集成到流式转写流程中，降低了实时语音应用的工程复杂度，但7B参数规模对端侧部署的算力要求仍是实际落地的主要瓶颈。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google发布WeatherNext 3，直读卫星数据生成预报",
+    "summary": "Google Research与DeepMind发布WeatherNext 3，该模型摒弃传统物理模拟，直接从实时静止卫星数据中学习天气模式。它提供5公里分辨率的逐小时预报，精度比前代提升5倍，并能生成针对可再生能源的风速和云量数据。该模型已集成至Google Search、Maps和Gemini，旨在改善拉丁美洲、非洲等欠服务地区的预报准确性。",
+    "url": "https://the-decoder.com/googles-weathernext-3-ditches-physics-simulations-and-learns-weather-directly-from-live-satellite-data/",
+    "section": "🚀 产品发布",
+    "review": "绕过物理模拟直接利用卫星数据虽提升了更新频率和局部精度，但缺乏物理约束的纯数据驱动模型在极端天气预测中的鲁棒性仍需长期验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "芝诺机器人发布协作模型 Zeno-1",
+    "summary": "芝诺机器人推出名为 Zeno-1 的协作模型，该模型拥有 3B 参数规模，支持本地 30Hz 闭环推理。其核心功能聚焦于多机器人协作场景，旨在让多台机器人学会等待、让步以及重新校准。这一发布标志着机器人在群体智能与实时交互控制方面取得进展，侧重于解决多体系统中的协调难题。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651055242&idx=1&sn=4869fb9f3976396002f0b988844c1321",
+    "section": "🚀 产品发布",
+    "review": "3B 参数配合 30Hz 本地闭环推理，表明芝诺在降低协作延迟与提升实时性上做了针对性优化，但多机器人“学会让步”的实际鲁棒性仍需复杂场景验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "宇树科技发布 UnifoLM-X2-1.0 驱动人形机器人格斗",
+    "summary": "宇树科技在机器人格斗演示中发布了 UnifoLM-X2-1.0 模型。该模型利用世界模型实时驱动全自主人形机器人进行格斗，展示了高动态交互能力。此次发布被视为物理 AI 领域的一个新展示窗口，体现了从静态演示向动态对抗场景的技术延伸。",
+    "url": "https://weibo.com/1818617132/Rh1L0yayz",
+    "section": "🚀 产品发布",
+    "review": "以世界模型驱动实时格斗，验证了物理 AI 在高动态、非结构化环境中的响应能力，但格斗场景的极端性可能掩盖其在常规工业或家庭场景中泛化能力的不足。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里“千问办公”推出业内首个多人工作台",
+    "summary": "阿里巴巴旗下 Agent 产品“千问办公”推出业内首个“多人工作台”，支持最多百人同时在线协作。用户描述需求即可生成承载复杂业务流程的网页，具备角色权限、云端数据库、管理后台和在线发布四项核心能力。该功能适用于活动组织、家校协同等场景，旨在解决 SaaS 采购成本高及定制开发耗时长的痛点，目前可通过产品首页入口体验。",
+    "url": "https://www.qbitai.com/2026/09/485046.html",
+    "section": "💼 行业动态",
+    "review": "将 Agent 从个人辅助工具扩展至多人协作流程，直接切入传统 SaaS 市场，但“生成即应用”的稳定性与复杂业务逻辑的准确性是决定其能否替代专业软件的关键。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达 129 亿美元收购 Hugging Face",
+    "summary": "英伟达宣布以 129 亿美元收购 Hugging Face，交易预计 2027 年上半年完成，需监管批准。黄仁勋表示收购由 Hugging Face 主动发起，旨在扩大开源 AI 生态，并强调英伟达一半业务由开源模型驱动。Hugging Face CEO Clément Delangue 称此举有助于将用户规模从 1800 万提升至 1 亿以上，且 10 亿美元将用于员工留任。尽管双方强调开源价值，但外界担忧英伟达作为基础设施巨头控制模型分发入口可能影响平台中立性。",
+    "url": "https://www.infoq.cn/article/5dtlrdsBbSIZfWUUF6JD?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "129 亿美元的交易将算力巨头与模型分发入口深度绑定，虽宣称支持开源，但英伟达对文档、算力补贴及生态优先级的潜在控制力，可能实质性削弱 Hugging Face 作为中立平台的市场信任基础。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "菲尔兹奖得主团队提出模型间“桥接”技术，提升大小模型协同效率",
+    "summary": "由菲尔兹奖得主Stanislav Smirnov领衔的15人团队Mostik，提出了一种让大模型隐藏状态直接传递给小模型的“桥接”方案。该方案在ARC-AGI 3基准测试中，利用云端753B GLM-5.2与手机端4B Qwen-3.5组合，使小模型准确率提升25%，并弥补了与大模型间50%的性能差距。通过让大模型仅执行预填充、小模型负责解码，该架构将大模型推理成本降至约二十分之一，且无需微调双方模型权重。",
+    "url": "https://www.qbitai.com/2026/09/485108.html",
+    "section": "💼 行业动态",
+    "review": "该方案通过直接传输隐藏状态而非文本，突破了模型协作的带宽瓶颈，显著降低了端侧推理成本。但跨异构模型架构的表征对齐仍缺乏成熟数学理论支撑，其通用性有待更多场景验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "vLLM发布Tenstorrent插件，支持非英伟达硬件高效部署LLM",
+    "summary": "vLLM官方发布Tenstorrent平台插件，通过标准out-of-tree机制将Tenstorrent加速器纳入vLLM生态。该插件支持Llama、Qwen、Mistral、Gemma及DeepSeek V3等主流模型，并涵盖多模态架构。针对Tenstorrent的Mesh架构特性，插件实现了分阶段调度、单进程数据并行及设备端采样等优化，使非英伟达硬件能共享vLLM的高效服务栈，同时保持OpenAI兼容API不变。",
+    "url": "https://vllm.ai/blog/2026-09-07-vllm-tt-plugin",
+    "section": "🔓 开源热榜",
+    "review": "插件化路径降低了非英伟达芯片接入主流推理框架的门槛，有助于打破硬件生态壁垒。但Mesh架构与GPU在并行策略上的差异，要求开发者深入理解底层编译逻辑才能发挥最佳性能。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "arXiv论文提出ACE框架，实现MoE模型免训练专家跳过",
+    "summary": "arXiv新论文提出ACE框架，旨在解决MoE架构中固定top-k路由导致的冗余计算问题。ACE采用免训练、免校准设计，通过全局频谱代理（GSP）和路由条件细化（RCR）两个组件，在推理时动态评估专家贡献。实验显示，在Qwen3.6-35B-A3B模型上跳过50%专家时，ACE相比最强基线方法将WikiText-2困惑度降低7.96%，下游任务平均准确率提升4.15个百分点。",
+    "url": "https://arxiv.org/abs/2609.05228",
+    "section": "💡 前沿研究",
+    "review": "ACE通过离线统计与在线轻量计算结合，在不增加训练成本的前提下提升了MoE推理效率。其“双视角”验证机制有效避免了误跳关键专家，为大规模MoE模型的部署优化提供了实用工具。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "EvoCUA-1.5利用在线强化学习提升多轮电脑操作Agent性能",
+    "summary": "论文EvoCUA-1.5提出将电脑使用Agent置于可执行沙盒中进行在线强化学习，以解决静态轨迹无法覆盖真实交互因果反馈的问题。该框架引入步级策略优化（STEPO）和动态三自适应课程（DTAC），处理稀疏奖励与变长轨迹挑战。实验表明，EvoCUA-1.5在OSWorld-Verified基准上达到63.2%成功率，超越了同规模开源基线，并接近更大参数模型的表现。",
+    "url": "https://arxiv.org/abs/2607.09773",
+    "section": "🤖 Agent & 工具",
+    "review": "在线RL使Agent能通过与环境的实时交互修正策略，弥补了模仿学习在长程任务中的局限。然而，沙盒环境的构建成本及奖励信号的稀疏性仍是制约其大规模落地的关键瓶颈。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

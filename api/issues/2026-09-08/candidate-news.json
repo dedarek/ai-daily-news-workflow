@@ -1,0 +1,542 @@
+[
+  {
+    "title": "GPT-6聊天模式露面",
+    "summary": "Zho在聊天模式体验中称，GPT-6 已能在聊天模式使用，疑似先面向 Pro 用户开放。体验更自然 🗣️，若入口确认，将影响高频写作、检索和编程对话习惯。",
+    "url": "https://x.com/ZHO_ZHO_ZHO/status/2096460956981453172",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10840",
+    "summary": "llama.cpp 对 CUDA 后端 Q4_K 和 Q5_K 量化格式做了无分支解包优化，避免 mmvq 中每个列重复解包 scale，提升批处理大于 1 时的性能。同时为 DGX Spark 增加 L2 预取，并对 MUSA 和 HIP 等平台做了保护。这对本地量化推理用户意味着低比特矩阵向量乘更快，批处理场景改善尤为明显。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10840",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1806期 - 2026-09-08 15:10",
+    "summary": "本期重点集中在[AI工作流]与[本地推理优化]：Codex开始承担聊天整理等日常任务，AI4S Agent和多模型视觉创作也展现出较强实用潜力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_1510",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软开源实时转写",
+    "summary": "Gorden Sun在语音模型发布中介绍 VibeVoice-ASR-7B。它支持流式转写、说话人标注、10种语言和热词 🎙️，适合会议纪要、实时字幕和语音 Agent。",
+    "url": "https://x.com/Gorden_Sun/status/2096586970575319458",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Qwen-Drive 1.0 tells you why it brakes, just don't expect the explanation to match the maneuver",
+    "summary": "阿里研究团队发布 Qwen-Drive 1.0，在单一系统里集成环境感知、交通问答和路线规划。研究者强调文本图像模型不会天然具备三维空间理解，必须专门训练空间感知能力，目标是让同一个模型同时驱动座舱与驾驶系统。对自动驾驶与多模态模型从业者来说，这表明空间智能需要显式设计，不能仅靠通用图文预训练迁移。",
+    "url": "https://the-decoder.com/qwen-drive-1-0-tells-you-why-it-brakes-just-dont-expect-the-explanation-to-match-the-maneuver/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1805期 - 2026-09-08 12:02",
+    "summary": "本期重点关注[LLM工具链更新]与[Agent工程实践]：llm新增模型支持，社区则在视觉推理降本、嵌入迁移和Agent自动合并代码等方向出现实用进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "天气模型直读卫星",
+    "summary": "Google Research 与 DeepMind 发布 WeatherNext 3，The Decoder 的天气模型报道称它直接从实时卫星数据学习天气 🛰️。模型可给出 5公里级逐小时预报，或改善欠服务地区预报。",
+    "url": "https://the-decoder.com/googles-weathernext-3-ditches-physics-simulations-and-learns-weather-directly-from-live-satellite-data/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6不只Astra！Sol内测结果曝光，速度快6倍",
+    "summary": "消息称 OpenAI 研究院人均配置约 3 个 AI 实习生，同时 GPT-6 不仅有 Astra，内部测试中的 Sol 速度据报快 6 倍。该动态反映 OpenAI 正在把 AI 智能体大规模嵌入自身科研流程，并同步推进下一代模型的高效版本。对行业而言，这既展示智能体在组织内部的产出拐点，也提示前沿模型推理效率竞争正在加速。",
+    "url": "https://www.qbitai.com/2026/09/485431.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1804期 - 2026-09-08 08:03",
+    "summary": "本期聚焦[GPT-6 Astra]参与完整游戏开发，以及[Browser Use]转向按量付费。本地模型社区则带来[K2-Horizon]与多项轻量部署实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "芝诺发布协作模型",
+    "summary": "芝诺机器人在协作模型发布中推出 Zeno-1。3B 参数、本地 30Hz 闭环推理，重点让多台机器人 🤝 学会等待、让步和重新校准。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651055242&idx=1&sn=4869fb9f3976396002f0b988844c1321",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3",
+    "summary": "菲尔兹奖得主入局大模型研究，其团队用 4B 手机端 Qwen 与云端 GLM 组合在 ARC-AGI 3 上取得突破性成绩。相关观点指出，要在两个模型之间找到数学上的共同基础其实非常困难。这显示了小型端侧模型与云端大模型协同求解抽象推理基准的潜力，也把数学家的理论视角引入到 AGI 评测中。",
+    "url": "https://www.qbitai.com/2026/09/485108.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1803期 - 2026-09-08 04:03",
+    "summary": "本期重点集中在[AI开发工具]与[本地模型实践]：MiniMax开放视频生成加速方案，社区则分享了Obsidian知识工作流、3D生成和本地推理工具。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智象具身模型登顶",
+    "summary": "智象未来在具身模型报道中发布 HiDream-O1-Embodied。它在 RoboColiseum 扰动适应子榜拿到 0.692，强调遮挡、光影、纹理干扰下的真实抓取 🤖。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651055242&idx=2&sn=7375edb00481a6a1b8f731f82a779489",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Serving LLMs on Tenstorrent Hardware: Inside the vLLM TT Plugin",
+    "summary": "Tenstorrent 加速器以 out-of-tree 平台插件形式加入 vLLM，其实现围绕 mesh 架构做出多项选择：分阶段调度、Galaxy 上的单进程数据并行、设备端采样加主机回退，以及异步解码重叠。这对 vLLM 生态意味着更多非英伟达硬件可以共享同一套高效 serving 栈，也给差异化 AI 芯片接入提供了一种可参考的插件化路径。",
+    "url": "https://vllm.ai/blog/2026-09-07-vllm-tt-plugin",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1802期 - 2026-09-08 00:02",
+    "summary": "[MiniCPM5-2B]刷新4B以下开放权重模型成绩，[Agent Harness]被指可让同权重模型大幅提升。社区还展示了[GPT-6 Astra]通关48关验证游戏的能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "宇树自主格斗首秀",
+    "summary": "宇树科技在机器人格斗演示中发布 UnifoLM-X2-1.0，称可用世界模型实时驱动全自主人形机器人格斗 🥊。高动态交互成为物理 AI 新展示窗口。",
+    "url": "https://weibo.com/1818617132/Rh1L0yayz",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里前销售总监在美失踪逾半月后确认身亡；5天10万元！外国高管涌入中国“工厂游”；传DeepSeek计划采购16万颗昇腾芯片｜AI周报",
+    "summary": "该周报汇集多条动态，其中与 AI 产业直接相关的是传闻 DeepSeek 计划采购 16 万颗昇腾芯片，显示国产算力在大模型训练中的地位持续上升。同时外国高管涌入中国工厂游也折射出全球对供应链与制造能力的关注。对关注算力自主和芯片替代的人有参考价值。",
+    "url": "https://www.infoq.cn/article/boiE7qfjxSQjHKUtevvp?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1801期 - 2026-09-07 20:02",
+    "summary": "本期聚焦[端云模型协同]与[本地AI工具]：Qwen+GLM挑战ARC-AGI 3，腾讯发布EVIE。与此同时，[Ego Lite隐私澄清]和[Computer Use实测]带来关键用户反馈。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_2002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI reports AI \"research interns\" and warns about its own pace at the same time",
+    "summary": "OpenAI 称其内部的 AI 智能体已能完成相当于每名人类工作日 3.1 个工作日的产出，并宣称达到自动化研究实习生的目标。同时首席科学家 Pachocki 警告，目前没有任何实验室能足够好地掌握对齐与监控，因此不应以最高速度继续扩展。这种一边展示智能体生产效率、一边呼吁放缓节奏的表态，反映了大模型前沿研发中能力与安全治理的紧张关系。",
+    "url": "https://the-decoder.com/openai-reports-ai-research-interns-and-warns-about-its-own-pace-at-the-same-time/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1800期 - 2026-09-07 16:02",
+    "summary": "本期聚焦[具身世界模型]与[办公Agent协作]的产品化进展，同时社区分享了[模型漂移测量]、[Codex工作流]等实用方法。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_1602",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "信心变量影响行为",
+    "summary": "Google DeepMind 转发的信心研究发布显示，增强或抑制 confidence 会改变模型回答还是放弃回答 🧠。这会影响校准、拒答和高风险系统评估。",
+    "url": "https://x.com/GoogleDeepMind/status/2096894471208153420",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788784700",
+    "summary": "PyTorch 侧提交为 Inductor 的 FlyDSL 新增 gfx950 Grouped GEMM 以及 F.grouped_mm 相关支持。这有助于在特定 AMD 图形或计算架构上加速分组矩阵乘法，并进一步把 FlyDSL 编译路径与高层 API 对齐。对 AI 编译器用户而言，是算子覆盖和硬件适配上的增量改进。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788784700",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1799期 - 2026-09-07 12:02",
+    "summary": "本期重点集中在[Computer Use实操]、[本地MoE推理]与[自动化科研]：社区已开始把AI代理用于浏览器操作和完整工作流，同时新基准尝试衡量模型的真实成本与长期自主能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "电脑代理在线强化",
+    "summary": "EvoCUA-1.5 在Agent训练论文中把电脑使用 Agent 放进可执行沙盒做在线强化学习 🖥️。论文称其在 OSWorld-Verified 上达到 63.2% 成功率。",
+    "url": "https://arxiv.org/abs/2607.09773",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/123739aa495079403f3891233abbba374afee3a7",
+    "summary": "PyTorch 主干提交为 Inductor 的 FlyDSL 添加 gfx950 Grouped GEMM 与 F.grouped_mm 接口支持，扩展了面向 gfx950 架构的分组矩阵乘编译能力。该改动与另一个 viable/strict 分支提交内容一致，属于同一算子能力在主干上的合并。对使用 AMD gfx950 硬件做编译优化的开发者有实际意义。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F123739aa495079403f3891233abbba374afee3a7",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1798期 - 2026-09-07 08:02",
+    "summary": "本期重点集中在[Astra真实采用反馈]、[LLM评测工具]与[AI基础设施外溢影响]。同时，漏洞攻击窗口缩短和AI教育监管等趋势值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MoE推理跳过专家",
+    "summary": "ACE 在MoE推理论文中提出免训练专家跳过方案 ⚙️。Qwen3.6-35B-A3B 跳过 50% 专家时，仍优于强基线。",
+    "url": "https://arxiv.org/abs/2609.05228",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10835",
+    "summary": "llama.cpp 的 ggml-cuda 修复了 f16 flash attention 中的分歧 barrier 问题，并避免重复设置元数据指针。这类低层 CUDA 修复直接关系到自注意力 kernel 在部分硬件上的稳定性，能减少长上下文或特定 batch 下偶发的死锁和错误结果。对依赖本地推理和轻量栈的用户是可靠性改进。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10835",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1797期 - 2026-09-07 04:02",
+    "summary": "本期重点集中在[WebMCP原生支持]、[代理实际工作流]和[本地推理优化]三方面，显示AI代理正从演示走向网页调用、文档处理与金融分析等生产场景。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "自我蒸馏形成闭环",
+    "summary": "RISE 在自我蒸馏论文中用模型自身 RLVR 轨迹生成合成教师 🔁，把稀疏奖励转成逐 token 监督，并在多类任务上超过 RLVR-only。",
+    "url": "https://arxiv.org/abs/2609.05295",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied",
+    "summary": "智象（HiDream.ai）发布具身世界模型 HiDream-O1-Embodied，声称形成原生全模态技术战略闭环。虽然原文未给出细节，这一发布显示该公司正在把全模态生成能力延伸到具身智能与世界模型方向。对关注多模态基座和具身智能融合的从业者，这是国内玩家在该方向的一次产品化信号。",
+    "url": "https://www.qbitai.com/2026/09/485056.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1796期 - 2026-09-07 00:01",
+    "summary": "本期关注[具身上下文学习]与[Qwen3.8去审查变体]测试；社区还分享了[本地AI监控]和[精简Skill规则]等实战经验。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-07_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "现场物理智能更新",
+    "summary": "CFAM 在物理AI论文中提出部署后免梯度更新 🦾。系统用 40% 数据达到完整训练策略工作点，测试成功率提升 13.9%。",
+    "url": "https://arxiv.org/abs/2609.04552",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Hugging Face太重要，绝不能落入英伟达手中？黄仁勋：我本想让它独立，但有其他竞购者",
+    "summary": "黄仁勋谈及 Hugging Face 收购相关话题，表示自己本希望它保持独立，但同时存在其他竞购者，并强调其重要性。这凸显了 Hugging Face 作为模型与数据集分发基础设施在 AI 生态中的战略位置。对从业者而言，平台归属可能影响模型发布、权重分发和社区协作的中立性。",
+    "url": "https://www.infoq.cn/article/5dtlrdsBbSIZfWUUF6JD?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "机器人VLA基准加难度",
+    "summary": "RoboSPA 在机器人基准论文中覆盖 10 类任务和 52.7 万条轨迹。它把机器人评测推进到空间推理、长程规划和失败诊断。",
+    "url": "https://arxiv.org/abs/2609.05324",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788794812",
+    "summary": "PyTorch 合并一个 AI Codemod 改动，跳过未使用的 old_storage_nbytes 查询，避免在相关路径上进行不必要的存储字节数计算。这有助于减少动态图或 AOT 编译过程中的开销。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788794812",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模型偏好转向实测",
+    "summary": "偏好研究论文让 20 个语言模型在强制选择中实际执行任务。结果显示模型有厌繁琐、偏轻松输出和隐性迎合等倾向。",
+    "url": "https://arxiv.org/abs/2608.26178",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10839",
+    "summary": "llama.cpp Vulkan 后端此前在张量 backing-buffer 偏移加 view_offs 未按最小存储缓冲对齐时，GET_ROWS shader 会触发断言并导致硬崩溃，影响 Qwen3-TTS、Qwen3-VL 等模型。现在 supports_op() 在不对齐场景返回 false，让调度器自动回退到 CPU，避免崩溃。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10839",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "语音LLM上下文编排",
+    "summary": "llmovoice 在语音服务论文中把语速、噪声、丢包和历史对话纳入有界上下文。报告称误打断率从 46.0% 降至 0.9%，成本降 79.2%。",
+    "url": "https://arxiv.org/abs/2609.04288",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MoE专家减半新技巧",
+    "summary": "另一篇MoE压缩论文提出免训练专家数减少方法。Qwen3.6-35B-A3B 从 8 个专家降到 4 个时，MMLU 仅降 0.35 点。",
+    "url": "https://arxiv.org/abs/2609.04575",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10837",
+    "summary": "llama.cpp 合并 PR #28511，在模板检查字符串时重新检查 caps 的 typed content。该修复解决某些模板渲染场景下 typed content 判断不一致的问题，提升模板处理正确性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10837",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI研发提速曝光",
+    "summary": "量子位的研发加速报道称 GPT-6 Sol 已内测，测试速度是 Astra 的 6 倍。自动化研究实习生和高额 Agent 推理资源 🔥 成为焦点。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247919559&idx=2&sn=d53566b574de629ba7c6bff0b32cdb20",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10834",
+    "summary": "llama.cpp 的 ggml 后端允许输入不额外创建 split，减少多后端混合执行时不必要的图切分和调度开销。这对使用 CPU、Vulkan、ROCm 等多后端组合的推理场景有实际收益。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10834",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TPU推理走向外部",
+    "summary": "SemiAnalysis 的TPU推理分析讨论第三方推理、open-weight 模型和 TorchTPU。谷歌 TPU 外部化 ⚙️，会让 NVIDIA 推理经济性面对更直接对照。",
+    "url": "https://newsletter.semianalysis.com/p/tpu-inferencex-full-steam",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10833",
+    "summary": "llama.cpp Vulkan 后端新增 RMS_NORM 融合机会，支持 RMS_NORM 后接 MUL 加 ADD 或 VIEW 加 SET_ROWS 等模式，并把 ROPE 融合扩展到 IMROPE。作者在 gemma4 上观察到约 4% 的性能提升，降低了小算子分派开销。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10833",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "算力瓶颈转向机房",
+    "summary": "即刻的算力基础设施讨论转述称 B200/B300 出货很多，但安装比例受数据中心限制 ⚡。算力竞争正从买卡转向抢电力、机房和审批窗口。",
+    "url": "https://m.okjike.com/originalPosts/6a9d2311947e41882bf922b2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10831",
+    "summary": "llama.cpp Vulkan 后端新增 TQ1_0 量化类型支持，覆盖 mm、mat-vec、mat-vec-id、dequant 和 get_rows 等路径。实现上把 TQ1_0 中 3 的幂常数打包进一个 32 位常量，以避免常量数组占用寄存器；在 gfx1151 上相关后端测试全部通过。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10831",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "异质心智警告升温",
+    "summary": "小互在安全观点转述中概括《An Alien Mind》。高智能系统越来越难理解 🧨，安全投入不能被加速叙事淹没。",
+    "url": "https://x.com/xiaohu/status/2096790776110067810",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788773762: [MPS] Add naive triangular_solve for complex numbers (#195861)",
+    "summary": "PyTorch MPS 后端的 MPSMatrixSolveTriangular 仅支持浮点，因此新增自定义 Metal kernel 处理 complex64 三角求解。该实现引入 conjugate 标志，使复数 cholesky_solve 使用伴随转置 A^H，并修复非连续 out 处理问题，同时校验输入与输出都在 MPS 上。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788773762",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "业内首个！“千问办公”推出“多人工作台”",
+    "summary": "阿里巴巴旗下 Agent 产品「千问办公」推出业内首个「多人工作台」，支持多用户在同一办公 Agent 环境中协同工作。这对办公 Agent 从单人辅助走向团队协作场景具有重要意义。",
+    "url": "https://www.qbitai.com/2026/09/485046.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788771294: [dynamo] Preserve is_inference in after-AOT repros (#193565)",
+    "summary": "PyTorch Dynamo 在生成 after-AOT 重现代码时，之前会丢失 is_inference 参数，导致推理编译失败的图在重放时以默认 is_inference=False 重新编译，行为改变且难以复现。该修复将 is_inference 贯穿图转储、序列化、重放、最小化、隔离和分析路径，提升调试保真度。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788771294",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788770324: [torchcomms hash update] update the pinned torchcomms hash (#196181)",
+    "summary": "PyTorch 自动生成的 nightly PR 更新 pinned torchcomms 哈希，属于常规依赖同步。这类更新保持 CI 与最新 torchcomms 版本一致，对分布式通信相关开发有基础维护价值。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788770324",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788758887: [dynamo] Fix FP64 softmax repro arguments (#194595)",
+    "summary": "PyTorch Dynamo 修复 FP64 softmax 重放参数问题，在 softmax 和 log-softmax 输入提升为 FP64 后禁用 half_to_float，避免重放时类型转换行为不一致。新增回归测试覆盖默认与 out 重载及位置与关键字参数。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788758887",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude proves Fermat 🧮, automated AI researcher 🔬, Z1 efficiency chip ⚡",
+    "summary": "本期 TLDR AI 主题聚焦 Claude 在费马相关命题上的证明能力、自动化 AI 研究员以及 Z1 效率芯片。这三个方向分别对应模型数学推理、自主科研与推理硬件能效，对关注这些前沿领域的从业者有参考价值。",
+    "url": "https://tldr.tech/ai/2026-09-07",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Research acceleration: The view inside OpenAI",
+    "summary": "Simon Willison 报道 OpenAI 内部将今天称为 RSI 日，即递归自我改进，并提及首席科学家 Jakub Pachocki 的文章「An Alien Mind」。报道还披露 OpenAI 研究团队使用编程 Agent 的细节，显示 2026 年 agentic 工程在 OpenAI 内部显著加速。",
+    "url": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10830",
+    "summary": "llama.cpp 在 HF 到 GGUF 转换脚本中新增 --fuse-qkv 标志，可在转换阶段将 Q、K、V 权重融合为 QKV 张量。这有助于减少后续推理中的张量切分和调度开销，尤其利于注意力计算优化。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10830",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/55448714fb1bf93b4946225675aa1c6f70cfe3e4: [dynamo] Type value-builder ingress as object (#196176)",
+    "summary": "PyTorch Dynamo 将若干私有 value-builder 入口点从 Any 类型替换为 object，并保留具体 SourcelessBuilder.create 重载，使分类过程中的类型收窄更清晰。该改动不改变运行时行为，但提升代码可维护性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F55448714fb1bf93b4946225675aa1c6f70cfe3e4",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软将人工智能治理从政策层面转向运行时执行",
+    "summary": "InfoQ 中文报道微软将 AI 治理从政策层面转向运行时执行，意味着治理策略被嵌入到模型推理和运行环节。这对关注合规与模型安全落地的从业者具有参考意义。",
+    "url": "https://www.infoq.cn/article/STpCLL13xCQsoYrfWSLb?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DHH领衔，英伟达、微软、HuggingFace等150+全球技术大咖集结，GOSIM Shenzhen 2026全议程公布",
+    "summary": "GOSIM Shenzhen 2026 将于 10 月 16 日至 17 日在深圳举行，由 DHH 领衔，英伟达、微软、HuggingFace 等 150 多位全球技术专家出席并公布完整议程。该大会聚焦开源技术，对 AI 基础设施、开发框架和跨语言生态有较高关注价值。",
+    "url": "https://www.qbitai.com/2026/09/485154.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+    "summary": "国内首份《中国办公Agent用户行为不完全报告》发布，显示北京用户量全国居首，海外用户占比超过 12%。这为办公 Agent 的产品化与地域运营提供早期数据参考。",
+    "url": "https://www.qbitai.com/2026/09/485064.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
