@@ -634,9 +634,9 @@ def request_deepseek_json(
                 flush=True,
             )
             try:
-                max_tokens = max(1, int(os.environ.get('OPENCODE_GO_MAX_TOKENS', '16384')))
+                max_tokens = max(1, int(os.environ.get('OPENCODE_GO_MAX_TOKENS', '4096')))
             except ValueError:
-                max_tokens = 16384
+                max_tokens = 4096
             payload_body = {
                 'model': model,
                 'messages': [
