@@ -1,0 +1,542 @@
+[
+  {
+    "title": "图像模型升级提速",
+    "summary": "OpenAI推出ChatGPT Images 2.5，图像模型升级覆盖速度、保真度、编辑精度和多轮一致性。延迟最高降低 50%，连续改图更顺手 🎨。Sketch手绘输入让构图从线稿开始，模板则覆盖海报、产品照和周边。评论式编辑能只改指定区域，商业素材试错成本会更低。",
+    "url": "https://x.com/shao__meng/status/2097471730856218734",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI 详解 GPT-Live 架构如何实现了连续的有状态语音交互",
+    "summary": "OpenAI 公开了 GPT-Live 架构，详细说明其如何实现连续的有状态语音交互。该架构对实时语音助手、多轮语音交互等场景的从业者具有参考价值。",
+    "url": "https://www.infoq.cn/article/rdESg5icYIZ71J7xb69K?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1812期 - 2026-09-09 12:03",
+    "summary": "本期聚焦[Meta Muse]云端个人Agent与[GPT-Image-2.5]精准编辑工作流；本地推理工具、模型调用价格及AI制药数据也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-09_1203",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "图像接口延迟下降",
+    "summary": "OpenAI Developers称Flare生成质量更高，图像接口性能相比GPT-Image-2延迟降低 50%。Sunburst负责更细的局部编辑 🖌️，复杂版式和透明背景也被点名改进。更新重点不是炫技，而是让API图片流更稳定。广告、电商和品牌物料会先感到变化。",
+    "url": "https://x.com/OpenAIDevs/status/2097399267866648769",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10853",
+    "summary": "llama.cpp 新增对 Kimi-K3 循环状态回滚的支持，合入 PR #28466。该功能对运行 Kimi-K3 这类递归/混合模型的推理服务在状态管理和会话恢复上有帮助。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10853",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1811期 - 2026-09-09 08:02",
+    "summary": "本期重点是[GPT-6 Astra]持续扩展至云平台并取得新的智能体评测成绩；同时，[Runway接入Adobe]、[Deep Agents记忆与认证]等工具更新值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-09_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "个人代理继续升温",
+    "summary": "Meta推出个人AI代理Muse，个人代理Muse面向购物、邮件和旅行规划等日常任务。用户给出目标后，它可打开浏览器、填表，甚至代用户谈判。Meta这次押注的是普通用户入口 🧭。它也说明代理竞争已经从聊天框走向真实网页操作。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GLM 5.3 Optimizations, Part 1: Hybrid HiSparse Offloading in vLLM",
+    "summary": "vLLM 集成 HiSparse 作为压力驱动的内存层级，与 Hybrid Memory Allocator 和 KV offloading 协同工作，使 GLM 5.3 请求在 KV 缓存超出 GPU 显存时仍可继续解码，从而维持高并发。这是 GLM 5.3 推理优化系列的第一部分。",
+    "url": "https://vllm.ai/blog/2026-09-08-glm53-part1-hybrid-sparse-offloading",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1810期 - 2026-09-09 04:07",
+    "summary": "本期焦点集中在[AI辅助数学突破]与[GPT-Image-2.5发布]：OpenAI披露多智能体系统完成Navier–Stokes相关证明，同时推出新一代图像生成模型。另有[Cognition大额融资]和Gemini桌面转录功能值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-09_0407",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "端侧模型具备代理",
+    "summary": "面壁智能开源MiniCPM5-2B，端侧模型发布把工具调用、深度搜索和代码生成带到设备端。团队还开放部分训练配方、数据和RL框架。UltraX用 0.6B 编辑模型精炼语料 📱，操作过程可保存和审计。端侧Agent开始从聊天能力转向可执行任务。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651055602&idx=1&sn=c26a061b944f571aabbcf2ae440fc96f",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "llm 0.35",
+    "summary": "Simon Willison 的 llm 工具发布 0.35 版本，新增 OpenAI 模型 gpt-6-astra 支持，方便开发者通过命令行访问 GPT-6 Astra。对使用 llm 进行模型调用和实验的用户很有用。",
+    "url": "https://simonwillison.net/2026/Sep/7/llm/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1809期 - 2026-09-09 00:04",
+    "summary": "本期重点是[AlphaGenome Atlas]开放约[90亿种变异]预测资源，以及[dcode]开源编码代理。安全领域同时关注[AI自动化攻击]与精细化拒答策略。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-09_0004",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek开放内测",
+    "summary": "DeepSeek V4.1 Flash在官方交流群开放短期测试，模型内测消息指向新架构和原生多模态。开发者不用改base_url，只需替换模型名。端点名带有 0910 到期信息 🔍，像是临时测试版本。技术报告、参数规模和benchmark仍未公开。)。",
+    "url": "http://weixin.sogou.com/weixin?type=2&query=%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80+DeepSeek%20V4.1%20Flash%E5%BC%80%E5%A7%8B%E9%99%90%E6%97%B6%E5%86%85%E6%B5%8B%EF%BC%9A%E6%96%B0%E6%9E%B6%E6%9E%84%E3%80%81%E5%8E%9F%E7%94%9F%E5%A4%9A%E6%A8%A1%E6%80%81",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenBMB Releases MiniCPM5-2B: A 2.52B Dense Model Averaging 53.9 Across 34 Benchmarks and Built to Run On Device",
+    "summary": "OpenBMB 发布 MiniCPM5-2B，一个 25.17 亿参数稠密模型，原生 131K 上下文；在 34 项基准上平均 53.9，超过 Qwen3.5-4B 的 51.1，且在工具使用、编码智能体和长上下文检索上优势明显。后训练阶段使用 400B 深度思考 SFT、RL 教师和在线策略蒸馏将 16 个专家模型合并为一个 checkpoint，权重以 Apache 2.0 发布。",
+    "url": "https://www.marktechpost.com/2026/09/07/openbmb-releases-minicpm5-2b-a-2-52b-dense-model-averaging-53-9-across-34-benchmarks-and-built-to-run-on-device/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1808期 - 2026-09-08 20:02",
+    "summary": "本期重点关注[本地AI工具实践]与[智能体基础设施更新]：从磁盘清理、PPT生成到向量数据库记忆，社区仍在持续挖掘AI的落地场景。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_2002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "基因预测图谱上线",
+    "summary": "Google DeepMind发布AlphaGenome Atlas，基因预测图谱试图覆盖人类基因组每种DNA字母变化。平台被描述为预测地图 🧬，面向生物研究和疾病机制分析。人类基因组约有 三十亿 个碱基规模。若后续验证稳定，它会压缩变异解释和靶点筛选时间。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/991180/google-launches-alpha-genome-atlas",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v4.5.3",
+    "summary": "ms-swift v4.5.3 新增 Qwen3.8-Flash-Next 支持，这是一款 125B 总参数的多模态 MoE 模型，每 token 约激活 6B，包含可下放到 host 的 51B N-gram embedding 表，原生 262K 上下文，并支持 Megatron 训练。同时提供对应最佳实践，并支持多个新模型。",
+    "url": "https://github.com/modelscope/ms-swift/releases/tag/v4.5.3",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1807期 - 2026-09-08 16:02",
+    "summary": "本期重点关注[DeepSeek V4.1 Flash]的多模态更新，以及[Agent工程化]中可观测性、成本控制和软件开发流程的实践讨论。社区还出现了多个工具版本更新，值得开发者跟进。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_1602",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek降价",
+    "summary": "社交帖称DeepSeek Flash模型降价，原帖简短提及。低价模型战继续升温。",
+    "url": "https://x.com/Gorden_Sun/status/2097348222062825681",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing ChatGPT Images 2.5",
+    "summary": "OpenAI 推出 ChatGPT Images 2.5，可将用户的创意、草图和参考照片转化为更个性化、精细的图像，提升生成结果与用户意图的贴合度。该更新对多模态内容创作和图像生成用户有直接价值。",
+    "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1806期 - 2026-09-08 15:10",
+    "summary": "本期重点集中在[AI工作流]与[本地推理优化]：Codex开始承担聊天整理等日常任务，AI4S Agent和多模型视觉创作也展现出较强实用潜力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_1510",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "蛋白口袋生成分子",
+    "summary": "NEAT-POCKET把蛋白结合口袋作为条件，三维分子生成按原子逐步生成候选分子。它保持原子置换不变性，也显式建模氢原子。CrossDocked和SPINDR测试显示采样更快 ⚗️，结构生成表现仍有竞争力。片段补全能力让先导化合物优化更直接。",
+    "url": "https://arxiv.org/abs/2609.05097",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.29.0rc6",
+    "summary": "vLLM 发布 v0.29.0rc6 候选版本，修复混合模型默认 dense prefix cache 应用问题，改善混合架构模型的前缀缓存行为。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc6",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1805期 - 2026-09-08 12:02",
+    "summary": "本期重点关注[LLM工具链更新]与[Agent工程实践]：llm新增模型支持，社区则在视觉推理降本、嵌入迁移和Agent自动合并代码等方向出现实用进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代理规划看见约束",
+    "summary": "Substrate-Aware AI Agents提出把内存、时限和运行环境写入规划状态，执行上下文研究用代码生成任务做验证。披露约束后，程序最高快 3.1倍。内存峰值在13个可执行对比中下降 🧱，代码结构也更保守。提示词不只该写目标，也该写机器边界。",
+    "url": "https://arxiv.org/abs/2609.05232",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.29.0rc5",
+    "summary": "vLLM v0.29.0rc5 将 Mamba 等模型的 prefix_cache_retention_interval 默认值调整为 dense，优化前缀缓存保留策略。这对使用 Mamba 类模型的服务部署有性能影响。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc5",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1804期 - 2026-09-08 08:03",
+    "summary": "本期聚焦[GPT-6 Astra]参与完整游戏开发，以及[Browser Use]转向按量付费。本地模型社区则带来[K2-Horizon]与多项轻量部署实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多跳空间推理仍难",
+    "summary": "MultihopSpatial面向视觉语言模型，空间推理基准覆盖1到3跳组合关系和不同视角。研究评测了 37个 前沿VLM。新指标要求答案正确，还要框准视觉位置 🤖。结果显示，组合空间推理依旧卡住机器人和VLA落地。",
+    "url": "https://arxiv.org/abs/2603.18892",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Reducto Releases r-1: A Single Pass Document Parsing Model That Cuts Errors 20% at 1 Cent Per Page",
+    "summary": "Reducto 发布 r-1 单遍文档解析模型，将 OCR、版面检测、表格、格式化和 grounding 融入一次完整页面解析，替代其原先的多阶段 agentic 流水线。官方报告错误率降低 20%，每页成本固定 1 美分，低于旧流水线的 3 至 6 美分。",
+    "url": "https://www.marktechpost.com/2026/09/07/reducto-releases-r-1-a-single-pass-document-parsing-model-that-cuts-errors-20-at-1-cent-per-page/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1803期 - 2026-09-08 04:03",
+    "summary": "本期重点集中在[AI开发工具]与[本地模型实践]：MiniMax开放视频生成加速方案，社区则分享了Obsidian知识工作流、3D生成和本地推理工具。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "声学信号还原姿态",
+    "summary": "SoundMHPE尝试只用声音恢复多人三维姿态，声学姿态估计构建6小时同步数据集。数据包含 432K帧 姿态与声学信号。多人动作声纹会叠加 🎧，反射延迟也会干扰时序关系。这条路线适合隐私敏感的人机交互和机器人感知。",
+    "url": "https://arxiv.org/abs/2609.04902",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic reportedly signs $517 billion in compute deals after Dario Amodei warned rivals about reckless risk",
+    "summary": "据 The Decoder 报道，Anthropic 在 11 个月内签署了高达 5170 亿美元的算力合同，但仍落后于 OpenAI 至 2030 年的 7500 亿美元计划。CEO Dario Amodei 曾在 2026 年初警告不要投资过快，现在 Anthropic 正加速追赶，而 Sam Altman 则对 neo-cloud 算力建设的不可持续行为发出警告。",
+    "url": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1802期 - 2026-09-08 00:02",
+    "summary": "[MiniCPM5-2B]刷新4B以下开放权重模型成绩，[Agent Harness]被指可让同权重模型大幅提升。社区还展示了[GPT-6 Astra]通关48关验证游戏的能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-08_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "仓库重构代理可测",
+    "summary": "RefactorPlatform提供仓库级重构Agent评测环境，重构评测平台固定环境后比较模型、检索和多代理方案。AST感知切块比朴素窗口提升 25-30%。平台记录token、diff、日志和验证结果 🧪。大型代码重构终于有了更可复现的审计路径。",
+    "url": "https://arxiv.org/abs/2609.04898",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10865",
+    "summary": "llama.cpp 回滚了此前在 HIP 构建中恢复 prop.integrated 的 CUDA 更改，修复相关兼容性或稳定性问题。该提交对应 PR #28604。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10865",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "保护幻觉被系统命名",
+    "summary": "Protective Capacity Hallucination描述模型声称能报警、施救等不存在能力，能力幻觉研究覆盖8个LLM。实验共计 13,600 次会话。问题来自保护者角色和真实能力边界不匹配 🚧。医疗、救援和客服部署都要把不能做的事写清楚。",
+    "url": "https://arxiv.org/abs/2607.13596",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10864",
+    "summary": "llama.cpp 服务端修复 checkpoint min-step 淘汰逻辑，仅当 checkpoint 列表满时才应用间距淘汰，避免短 prompt 下混合/递归模型从先前 checkpoint 重新预填充的问题。该修复改进了服务端 checkpoint 管理和续推理的正确性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10864",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "数学证明争议升温",
+    "summary": "OpenAI称代理团队给出纳维-斯托克斯千禧难题解法，数学证明声明同时回应Levent Alpöge和Tristan Buckmaster相关争议。官方称研究者与代理在公开前未看到对方私有工作。它也承认无法完全排除去标识化产品数据的间接影响 📜。数据边界、署名信用和自动科研审查被推到同一张桌上。",
+    "url": "https://x.com/OpenAI/status/2097375276384567642",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+    "summary": "Hugging Face 博客讨论安全拒绝策略，主张模型应学会拒绝一个主题中的错误子集，而非整个主题。这与边界感知的拒绝训练思路一致，对安全对齐研究有启发。",
+    "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "法国模型公司融资",
+    "summary": "Mistral完成D轮融资，主权模型融资由Samsung、Scaleup Europe和PSG Equity等参与。融资额为 30亿欧元，估值达到 210亿欧元。欧洲资本继续加码 🇪🇺，目标是保住基础模型独立性。主权AI不再只是政策口号，而是高成本公司竞争。",
+    "url": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10863",
+    "summary": "llama.cpp 修复 Metal 后端 mul_mv_iq3_xxs 内核在 ne00 小于 1024 时的空闲线程问题，并新增 8 行 split kernel 处理小尺寸场景，提升 GPU 利用率。该修复对 Apple Silicon 上的量化推理有性能帮助。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10863",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "徒步事故提醒校准",
+    "summary": "Reddit讨论称三名徒步者按Gemini建议规划沙斯塔山行程后被困，徒步风险讨论把事件和高能力模型发布放在一起看。帖子称事故发生在9月1日。核心问题不是模型是否聪明 🥾，而是用户何时该停止相信它。越像专家的回答，越需要在安全场景里二次核验。",
+    "url": "https://www.reddit.com/r/artificial/comments/1wa5i9p/three_hikers_got_rescued_off_a_mountain_this_week/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI首曝“AI造AI”内部数据，2028年冲击AI研究员！黄仁勋高调祝贺：AGI已到来",
+    "summary": "据 InfoQ 报道，OpenAI 首次曝光内部 AI 造 AI 数据，并称 2028 年将冲击 AI 研究员岗位；黄仁勋高调祝贺并称 AGI 已到来。这一表态引发业内对自动化 AI 研究和算力竞争的新一轮讨论。",
+    "url": "https://www.infoq.cn/article/TkVMcVFzAgixGb70kUr9?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "安全披露需要外审",
+    "summary": "Reddit帖子讨论前沿实验室披露失控AI故事，安全披露讨论反对只在警讯和营销之间二选一。它主张先确认系统做了什么、拥有什么权限、哪些护栏失效。公司披露有价值 🛡️，但证据来源也可能带叙事偏向。企业客户需要独立验证，而不是只听供应商复述。",
+    "url": "https://www.reddit.com/r/artificial/comments/1w9mgfq/are_rogue_ais_a_warning_shot_or_a_marketing_stunt/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10858",
+    "summary": "llama.cpp Vulkan 后端新增算子融合，将 UNARY(GELU/SIGMOID/SILU/SOFTPLUS) 与 MUL 融合执行，减少运行时分支和 kernel 调用开销，提升推理性能。该优化在 unary.comp 中通过静态 ifdef 和专用 pipeline 实现。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10858",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "浏览器自动化项目走热",
+    "summary": "browser-use让网站可被AI Agent访问和操作，浏览器自动化把网页任务封装成可编排能力。项目总Star为 113,037，当天新增330星。它适合自动填表、网页采集和在线流程执行 🌐。Agent落地时，浏览器仍是最现实的入口之一。",
+    "url": "https://github.com/browser-use/browser-use",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing CUDA Rust: Two Tracks for Writing GPU Kernels",
+    "summary": "NVIDIA 宣布推出 CUDA Rust，提供两条编写 GPU 内核的原生 Rust 路径，将 Rust 语言引入 CUDA 生态。这对希望在 GPU 编程中使用内存安全特性的开发者具有重要意义。",
+    "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代理技能框架爆红",
+    "summary": "superpowers主打agentic skills框架和软件开发方法论，代理技能框架在GitHub热榜继续上行。项目总Star为 283,037，当天新增446星。它把团队编码经验拆成可复用技能 🧰。AI编码正在从提示词技巧，转向可复制的流程资产。",
+    "url": "https://github.com/obra/superpowers",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI Coding 在大型客户端工程中的落地实践——从通才模型到专才 Agent｜QCon上海",
+    "summary": "InfoQ 分享 AI Coding 在大型客户端工程中的落地实践，探讨从通才模型到专才 Agent 的演进路线。该内容来自 QCon 上海，对工程团队落地 AI 编程智能体有参考价值。",
+    "url": "https://www.infoq.cn/article/zmiQaFpdA993WFozmTt3?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude规范文件走红",
+    "summary": "andrej-karpathy-skills用一个CLAUDE.md改善Claude Code行为，Claude规范来自Karpathy对LLM编码坑点的观察。项目总Star为 211,051，当天新增325星。单文件也能冲到高热度，说明开发者急需默认约束。把习惯写进上下文，比每次临场提醒更稳。",
+    "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/60147cf18442b8858a728ab0d5f77235f24a3e69",
+    "summary": "PyTorch 编译器相关提交在 UserDefinedObjectVariable 的 tp_getset 中暴露 __class__，改进 Dynamo 对用户定义对象类的元编程处理。这是编译器功能增强。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F60147cf18442b8858a728ab0d5f77235f24a3e69",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10856",
+    "summary": "llama.cpp 将 14 个专用模板解析器从 chat.cpp 拆分到 common/parsers 目录，chat.cpp 从 3915 行缩减到 1513 行，提升代码模块化和可维护性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10856",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b10855",
+    "summary": "llama.cpp OpenCL 后端修复 conv2d 对非连续输入的处理，解决非连续 stride 场景下的计算错误，提升卷积相关推理的正确性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10855",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenClaw 2.0 发布：简化配置，支持智能体协作",
+    "summary": "OpenClaw 2.0 发布，简化配置并支持智能体协作，降低多智能体系统搭建门槛。对需要快速构建协作式智能体应用的开发者有实用价值。",
+    "url": "https://www.infoq.cn/article/hOJ5r8sQvQsGvm0KNHTd?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788863288",
+    "summary": "PyTorch FSDP 修复 _override_module_m 中可变默认字典的危险用法，消除潜在共享状态 bug，提升分布式训练代码稳定性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788863288",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788856484: [torchtitan hash update] update the pinned torchtitan hash (#195522)",
+    "summary": "PyTorch 更新 torchtitan 的固定哈希，保持与上游 torchtitan 仓库同步，属于日常依赖维护。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788856484",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788852547: Fix extract_scripts step-index zero-padding off-by-one (#187731)",
+    "summary": "PyTorch 修复 extract_scripts 工具中步索引零填充 off-by-one 问题，确保步数为 10 或 100 等幂次时文件名索引位数正确，避免排序错乱。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788852547",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "王云鹤创业后交出首个模型",
+    "summary": "王云鹤创业后交出首个模型，技术路线是把多模型执行阶段积累的经验反哺到模型训练环节。对关注国内大模型创业动态的从业者来说，这标志着又一位资深研究者下场后的首份成果落地，其具体训练方法和能力表现值得继续观察。",
+    "url": "https://www.qbitai.com/2026/09/485555.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1788845240",
+    "summary": "这是 PyTorch 的一个底层修复提交，将 is_gpu() 和 device_need_guard() 的判断逻辑改为从 DeviceInterface 派生，以减少设备类型硬编码带来的不一致。对维护自定义设备或关注 PyTorch 设备抽象的开发者来说，这有助于让不同后端在设备判断上遵循统一接口。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1788845240",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Quoting Jakub Pachocki",
+    "summary": "Simon Willison 引用了 OpenAI 高管 Jakub Pachocki 的观点，认为继续快速训练更强模型的最重要理由是构建针对其他 AI 威胁的防御系统，包括实时防御 rogue agents、保护基础设施和发明新防护措施。这为 OpenAI 的部署重点提供了战略注脚，也反映出前沿实验室以防御必要性来论证持续扩大智能规模的叙事。",
+    "url": "https://simonwillison.net/2026/Sep/7/jakub-pachocki/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

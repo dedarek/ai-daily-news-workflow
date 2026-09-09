@@ -3,6 +3,152 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-09-09",
+      "content_date": "2026-09-09",
+      "published_at": "2026-09-09T07:17:10.024591+00:00",
+      "article_count": 12,
+      "podcast_turns": 20,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 10,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 60,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 83,
+            "exact_url_blocks": [],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": false,
+                "issues": [
+                  "轮次数量严重不足：当前对话仅包含15轮（S1/S2各7-8次），低于建议的18-22轮区间，也低于16轮的硬性下限。",
+                  "新闻覆盖过宽导致深度不足：对话试图涵盖日报中所有12条新闻，导致每条新闻仅有一两句带过，缺乏足够的解释、追问或分歧，不符合“围绕5-7条重要新闻展开并有足够信息量”的要求。",
+                  "缺乏实质性互动：对话多为S1陈述、S2附和或简单补充，缺少针对具体新闻细节的深入追问、观点分歧或基于事实的进一步推演，显得像轮流复述摘要。"
+                ],
+                "repair_instruction": "1. 大幅缩减新闻范围：从12条中精选5-7条核心新闻（如Anthropic算力、Mistral融资、Meta Muse、OpenAI纳维-斯托克斯、MiniCPM5-2B、CUDA Rust、browser-use），删除或合并次要新闻（如AlphaGenome、NEAT-POCKET、执行上下文论文等），以便深入讨论。2. 增加轮次与互动：将每条新闻的讨论扩展为2-3轮，加入S2的质疑（如“Muse的隐私承诺是否可信？”）、S1的补充事实或S2的反驳，确保总轮次达到18-22轮。3. 深化内容：在讨论中融入日报中的具体细节（如Mistral的三星领投、MiniCPM5-2B的Apache 2.0协议、CUDA Rust的双轨制），避免泛泛而谈。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            },
+            {
+              "attempt": 2,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在第二轮发言中直接复述了S2上一轮提到的Mistral估值和三星领投信息，缺乏新的信息增量或视角转换，略显冗余。",
+                  "S1在第三轮发言中再次提及“巨额算力投入能否转化为商业回报未知”，这与S2第二轮结尾的“谁先回本...是个巨大的问号”语义高度重叠，建议S1在此处直接切入Mistral的“主权AI”战略或地缘政治溢价，避免重复。",
+                  "S2在第十四轮发言中再次回到Anthropic的算力风险，虽然呼应了开头，但与前文S1第十五轮对Sam Altman警告的引用衔接稍显生硬，可更自然地过渡到对行业整体财务健康度的担忧。"
+                ],
+                "repair_instruction": "1. 优化S1第二轮和第三轮的衔接：S1第二轮可省略对Mistral具体融资数字的复述，直接评论其“主权AI”定位；S1第三轮避免重复“回报未知”，转而深入分析“地缘政治溢价”的具体表现或风险。2. 调整S2第十四轮与S1第十五轮的逻辑流：S2可先表达对算力风险对用户端影响的担忧，S1再引用Sam Altman的警告作为佐证，使对话更具因果逻辑而非简单重复观点。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 2,
+            "best_attempt": 2,
+            "final_pass": true,
+            "final_issues": [
+              "S1在第二轮发言中直接复述了S2上一轮提到的Mistral估值和三星领投信息，缺乏新的信息增量或视角转换，略显冗余。",
+              "S1在第三轮发言中再次提及“巨额算力投入能否转化为商业回报未知”，这与S2第二轮结尾的“谁先回本...是个巨大的问号”语义高度重叠，建议S1在此处直接切入Mistral的“主权AI”战略或地缘政治溢价，避免重复。",
+              "S2在第十四轮发言中再次回到Anthropic的算力风险，虽然呼应了开头，但与前文S1第十五轮对Sam Altman警告的引用衔接稍显生硬，可更自然地过渡到对行业整体财务健康度的担忧。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-09/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-09/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-09/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-09/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-09.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-09/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-09/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-09.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-09/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-09.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-09.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-09.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-09-08",
       "content_date": "2026-09-08",
       "published_at": "2026-09-08T07:41:40.250559+00:00",
