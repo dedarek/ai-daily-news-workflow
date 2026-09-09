@@ -9,6 +9,7 @@ import mimetypes
 import os
 import re
 import shutil
+import ssl
 import subprocess
 import time
 import uuid
@@ -666,7 +667,8 @@ def request_deepseek_json(
                     method='POST',
                 )
                 try:
-                    with urlopen(request, timeout=request_timeout) as response:
+                    # ponytail: skip cert verify, Lenovo LLM API cert is expired; remove once they renew
+                    with urlopen(request, timeout=request_timeout, context=ssl._create_unverified_context()) as response:
                         content, finish_reason, usage = read_chat_completion_response(
                             response,
                             task_name=task_name,

@@ -8,3 +8,5 @@ build/
 *.log
 downloads
 tmp
+
+.ai-auto-collection.state.json
