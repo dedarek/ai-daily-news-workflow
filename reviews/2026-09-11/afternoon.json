@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-09-11",
+  "reviewed_at": "2026-09-11T15:54:30.130601+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实且逻辑连贯，播客对话自然流畅，成功将技术细节转化为业务洞察，无明显事实错误或重复。",
+    "issues": [
+      "部分新闻标题中的具体版本号（如GPT-6 Astra, Fable 5.1 Max）若为虚构或预测数据，需确保在真实发布场景中准确，目前基于给定文本视为一致。",
+      "播客结尾略显常规，可进一步结合当日具体案例进行升华，但整体不影响质量。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
