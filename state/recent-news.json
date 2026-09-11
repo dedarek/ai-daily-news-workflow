@@ -1,264 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-09-03": {
-      "candidates": [
-        {
-          "date": "2026-09-03",
-          "title": "Gemini 3.8 Flash上线",
-          "summary": "Google把新款闪电模型推到API。复杂任务会更卖力 🚀 调工具。DeepSWE拿到73.7%。Cyber版只给防守机构用。",
-          "url": "https://x.com/dotey/status/2095291379559580154"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1775期 - 2026-09-03 12:01",
-          "summary": "本期重点是[Wan 3.0]在图像转视频竞技场跃升至第三，以及[Claude Computer Use]改为后台静默运行。社区还分享了本地模型加速、书签整理等实用工具与工作流。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_1201"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Muse Spark 1.3降本",
-          "summary": "Meta让Muse新模型进入Muse Code和API。长程编码更省 ⚡ 动作。工具调用少20%。Token用量降25%。",
-          "url": "https://x.com/rohanpaul_ai/status/2095237722046881912"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1774期 - 2026-09-03 08:01",
-          "summary": "本期重点关注[Agent基础设施]与[本地化部署]进展：Cursor开放自有机器运行云端代理，Cline完成千万级用户底层迁移并大幅降低任务错误率。与此同时，Gemini 3.8 Flash High公布了新的[性能—成本]数据。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0801"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Claude能后台用电脑",
-          "summary": "Anthropic把桌面执行能力放进Claude Cowork和Code。它可点击 🖱️ 打字开应用。用户继续做别的事。Agent感更强。",
-          "url": "https://x.com/claudeai/status/2095226833293685100"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1773期 - 2026-09-03 04:02",
-          "summary": "本期重点是[Fable 5.1 Max]在网页开发评测中登顶，以及[Gemini 3.8 Flash]在代理任务中的大幅跃升。企业AI安全、文档抽取和数据分析工具也有重要更新。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0402"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Grok Bot到安卓",
-          "summary": "xAI让安卓聊天助手开始可用。入口更贴近移动端 ⚡ 问答。演示展示唤起过程。覆盖面继续扩大。",
-          "url": "https://x.com/elonmusk/status/2095208414196674930"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1772期 - 2026-09-03 00:02",
-          "summary": "本期重点是 Google 发布[Gemini 3.8 Flash]及网络安全模型，并推出[Fairwind Program]。同时，[Runway Dev MCP]与 Weaviate Ask Mode 进一步降低智能体开发门槛。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-03_0002"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "TwinDEX省掉真机示教",
-          "summary": "X Square Robot用灵巧手系统采集训练数据。人戴设备 🖐️ 直接演示。机器人端可迁移动作。吞吐最高5.3倍。",
-          "url": "https://x.com/rohanpaul_ai/status/2095205077711761837"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1771期 - 2026-09-02 20:01",
-          "summary": "本期重点集中在[AI视频与世界建模]的产品化探索，以及[本地低成本推理]的实测工作流。与此同时，X对AI回复的治理收紧，多个开发工具也发布了新版本。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_2001"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Lily主打端侧推理",
-          "summary": "Perplexity开源本地推理引擎。它面向Apple芯片 ⚙️ 优化。重点适配Qwen3.6-35B-A3B。混合计算少些堵塞。",
-          "url": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1770期 - 2026-09-02 16:01",
-          "summary": "本期重点集中在[大规模训练数据工程]、[智能体开发工具更新]和[Fable 5.1用户反馈]。此外，Gemma 4在Android Studio通过llama.cpp运行，为本地推理带来新进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_1601"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "ZimaBlue吃下具身视频",
-          "summary": "研究用世界动作模型学习机器人控制。慢快架构 ⚙️ 支持30Hz动作预测。训练视频超12万小时。零样本成功率到77.8%。",
-          "url": "https://huggingface.co/papers/2609.00188"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1769期 - 2026-09-02 12:01",
-          "summary": "本期重点是[Qwen3.8-Max-0902]以1691分登顶Code Arena WebDev，并凭约5美元/MToken位居性能价格前沿；同时，Agent正加速进入[企业生产]与[真实开放场景]。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_1201"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "HoH让编码代理多日迭代",
-          "summary": "论文把自主开发框架套在现有harness上。规划编码测试 🔁 连续循环。三类基准平均涨52.25%。70多轮做出射击游戏。",
-          "url": "https://huggingface.co/papers/2609.01481"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1768期 - 2026-09-02 08:03",
-          "summary": "本期重点关注[Astra网络安全模型]的发布预告，以及[AI代理成本优化]和[开放视频模型基线]等实用进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0803"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "SciGram补科学图理解",
-          "summary": "团队用图表指令数据连接课程术语。流程会自动 🧪 抽概念造问答。数据含194K图。视觉模型科学题更稳。",
-          "url": "https://arxiv.org/abs/2609.00948"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1767期 - 2026-09-02 04:02",
-          "summary": "本期重点集中在[代理式视频理解]、[Fable 5.1]和[多模态世界模型]等模型进展，同时出现了面向阅读、视觉推理与企业预测的新工具。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0402"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "廉价验证器有盲区",
-          "summary": "论文审计推理级联系统的成本幻觉。小模型答题 🔍 验证器放行。面板只报3%错误。真实错误可到32%。",
-          "url": "https://arxiv.org/abs/2609.01345"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "第1766期 - 2026-09-02 00:01",
-          "summary": "本期重点集中在[Agent可靠性]、[LLM成本优化]与[本地模型生态]。同时，浏览器凭据复用、多模态文档检索和低代码建站等实用工具也有新进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-02_0001"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "多智能体提示更稳",
-          "summary": "研究把控数分离方法用于代理流程。路由格式 🧭 交给类型对象。优化器只改语言内容。协议有效率到100%。",
-          "url": "https://huggingface.co/papers/2609.00621"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "GlossoGen看到代理暗语",
-          "summary": "论文用语言演化平台测试多代理协作。高压任务 ⚡ 逼出新约定。语言可组合但难读懂。复盘阶段会强化规则。",
-          "url": "https://huggingface.co/papers/2609.01491"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "司法部支持AI训练合理使用",
-          "summary": "美国司法部在训练版权立场中支持OpenAI。它认为训练 📚 可属合理使用。该立场反打版权局报告。纽约时报案影响很大。",
-          "url": "https://the-decoder.com/us-department-of-justice-backs-fair-use-for-AI-training-in-landmark-copyright-case/"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Astra推理术引安全担忧",
-          "summary": "OpenAI计划让Astra推理模型使用循环深度。模型会反复 🧠 压缩推理。外部监控可能更难。思维链可审计性受压。",
-          "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Uber抢先开进伦敦",
-          "summary": "Uber与Wayve把自动驾驶叫车带到伦敦。首批仍配安全员 🚕。Waymo被抢在后面。欧洲需求开始实测。",
-          "url": "https://www.theverge.com/news/988415/uber-wayve-robotaxi-london-launch"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Wonderful估值冲到50亿美元",
-          "summary": "企业AI公司拿到C轮融资。金额是5.5亿美元 💹。半年内估值翻倍。资金投向产品和FDE团队。",
-          "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Claude API Skill开源",
-          "summary": "Anthropic把接口优化技能放进Claude Code。命令可做 🔧 成本优化。也能审计提示词反模式。支持8种语言SDK。",
-          "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "持久代理可跨宿主",
-          "summary": "新论文给代理迁移架构拆出身份和管线。记忆代码 📦 随代理保留。模型接口可替换。核心测试通过833项。",
-          "url": "https://arxiv.org/abs/2609.00546"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "HarnessEvolve修自进化失误",
-          "summary": "研究用参考轨迹方案校准失败步骤。归因不再只看终点 🧭。双门控防止退化。更新质量更可控。",
-          "url": "https://arxiv.org/abs/2609.00829"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "模型周进入连发状态",
-          "summary": "Andrew Curran称模型密集更新挤在同一周。Gemini和Muse同日 ⚡ 上新。Fable、Mythos刚到。Muse单任务成本0.55美元。",
-          "url": "https://x.com/AndrewCurran_/status/2095257682865532970"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-09-03",
-          "title": "Gemini 3.8 Flash上线",
-          "summary": "Google发布Gemini 3.8 Flash及其网络安全专用变体3.8 Flash Cyber，前者在DeepSWE v1.1评测中得分73.7%，逼近Claude Opus 5，并显著优于GPT-5.6 Sol。该模型通过增加工具调用次数提升复杂任务处理能力，同时在提示词注入测试中仅5.5%被攻破，安全性优于竞品。Cyber版本仅向经审核的政府及关键基础设施开放，在漏洞发现与自动修补评测中表现优异，成本远低于现有方案。",
-          "url": "https://x.com/dotey/status/2095291379559580154"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Muse Spark 1.3降本",
-          "summary": "Meta推出Muse Spark 1.3，相比前代减少20%工具调用和25% Token用量，显著降低长代码任务成本。该模型在MRCR 256K–512K长上下文评测中得分98.5，超越GPT-5.6 Sol，并在JobBench、OSWorld等代理任务中接近Opus 5水平。Zuckerberg称其为编码与代理工作最大进步，已上线Muse Code及API，开源权重即将发布。",
-          "url": "https://x.com/rohanpaul_ai/status/2095237722046881912"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Claude能后台用电脑",
-          "summary": "Anthropic在Claude Cowork和Claude Code中新增后台桌面操作功能，支持点击、打字及启动应用，用户可并行处理其他任务。该功能已在macOS桌面应用Beta版上线，Pro和Max计划用户可通过设置启用。系统强调安全操作指南，确保AI代理在受控环境下执行桌面指令。",
-          "url": "https://x.com/claudeai/status/2095226833293685100"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Grok Bot到安卓",
-          "summary": "xAI宣布Grok Bot正式登陆Android平台，用户可通过移动设备直接访问聊天助手。Elon Musk在X平台发布演示视频展示唤起流程，标志着Grok服务覆盖范围进一步扩大。该更新旨在提升移动端用户体验，增强与iOS用户的平等访问权。",
-          "url": "https://x.com/elonmusk/status/2095208414196674930"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "X Square Robot推出TwinDEX灵巧手系统",
-          "summary": "X Square Robot发布了TwinDEX，这是一套由可穿戴设备与机器人手协同设计的系统，旨在解决灵巧机器人训练数据收集昂贵且效率低下的问题。该系统包含一个用于数据采集的三指可穿戴手和一个匹配的机器人手，允许人类在不使用实体机器人的情况下直接演示动作，并将数据直接迁移至机器人控制。官方宣称，相比传统的机器人端遥操作，TwinDEX能将有效数据采集吞吐量提升最高5.3倍，从而突破灵巧机器人学习规模化的关键瓶颈。",
-          "url": "https://x.com/rohanpaul_ai/status/2095205077711761837"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Perplexity开源面向Apple芯片的本地推理引擎",
-          "summary": "Perplexity开源了一款专为Apple Silicon芯片优化的本地推理引擎，旨在提升端侧大模型的运行效率。该引擎重点适配了Qwen3.6-35B-A3B模型，通过混合计算架构减少推理过程中的资源堵塞问题。这一举措使得在本地设备上高效运行特定参数规模的模型成为可能，为隐私敏感或网络受限场景下的AI应用提供了新的技术选项。",
-          "url": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "ZimaBlue利用视频预训练提升机器人零样本控制",
-          "summary": "ZimaBlue提出了一种通过大规模视频预训练来构建通用世界动作模型的新框架，旨在解决机器人操作泛化性差的问题。该研究采用三阶段课程学习和慢快双系统架构，利用超过12万小时的人机第一视角视频进行训练，实现了30Hz的动作预测频率。在真实机器人的零样本评估中，引入视频预训练后任务成功率从36.1%显著提升至77.8%，证明了利用海量无标签视频数据增强机器人物理经验的有效性。",
-          "url": "https://huggingface.co/papers/2609.00188"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "HoH框架实现自主编码代理多日迭代开发",
-          "summary": "Harness-of-Harness (HoH) 是一种旨在支持自主编码代理进行多日持续改进的框架，它通过结构化的规划、编码和测试循环来优化软件系统。该框架可在现有编码代理测试套件上运行，通过平衡修复与能力增长，在GameCraft-Bench、FrontierSWE和ProgramBench三个基准测试中实现了平均52.25%的性能提升。在超过70轮的迭代部署中，HoH成功自主开发出了一款包含完整剧情、核心机制及视听效果的第一人称射击游戏。",
-          "url": "https://huggingface.co/papers/2609.01481"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "SciGram构建科学图理解新基准",
-          "summary": "研究团队提出一种基于科学课程术语的视觉指令生成框架，旨在解决视觉语言模型在处理科学图表时的短板。该流程自动抽取领域概念并合成原子事实，从网络检索相关图表，最终生成包含图表描述和多项选择题的多模态监督数据。由此构建的SciGram数据集包含超过19.4万张图表及140万条视觉指令，覆盖生命、地球及物理科学领域。尽管依赖网络噪声数据和合成标注，但在SciGram上微调的模型在TQA、ScienceQA等基准测试中表现优异，甚至超越或匹配现有最先进模型，且训练样本更少。",
-          "url": "https://arxiv.org/abs/2609.00948"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "美司法部支持AI训练属合理使用",
-          "summary": "美国司法部在涉及AI训练版权的诉讼中明确表态，支持OpenAI等公司的主张，认为使用受版权保护的作品训练人工智能模型属于合理使用范畴。这一立场直接反驳了美国版权局此前发布的报告观点，并在《纽约时报》诉OpenAI等关键案件中具有重大影响。司法部的介入标志着美国政府行政分支在平衡版权保护与AI技术创新之间，倾向于为模型训练提供法律空间。",
-          "url": "https://the-decoder.com/us-department-of-justice-backs-fair-use-for-AI-training-in-landmark-copyright-case/"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Wonderful半年估值翻倍至50亿美元",
-          "summary": "以色列 - 荷兰企业AI初创公司Wonderful在C轮融资中筹集5.5亿美元，由Insight Partners领投，Salesforce首次参投，使其估值在不到六个月内从20亿美元激增至50亿美元。该公司成立于2025年初，早期通过定制化客服AI代理在非英语市场取得突破，近期已转型为提供“Wonderful AI OS”平台，旨在协调各类AI代理与工作流。公司计划利用新资金加速产品开发并扩大前向部署工程师团队，以应对全球35个国家日益增长的集成需求。",
-          "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
-        },
-        {
-          "date": "2026-09-03",
-          "title": "Anthropic开源Claude API优化技能",
-          "summary": "Anthropic在GitHub上开源了名为“Claude API”的技能包，旨在优化开发者使用Claude Code构建应用的过程。该技能包包含模型ID、定价、参数配置、流式传输、工具调用及缓存等详细参考信息，并支持自动检测项目语言以生成对应的SDK代码。其核心功能包括通过命令执行成本优化、审计提示词中的反模式，以及提供涵盖8种编程语言的SDK支持，帮助开发者避免在代码中混用其他大模型提供商的调用逻辑。",
-          "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md"
-        }
-      ]
-    },
     "2026-09-04": {
       "candidates": [
         {
@@ -3004,6 +2746,258 @@
           "title": "Google开放AlphaGenome Atlas数据库，LangChain推出开源编码代理dcode",
           "summary": "Google DeepMind发布AlphaGenome Atlas，该数据库覆盖人类基因组约90亿种单碱基变异，提供AVI评分及API接口，向全球科研社区免费开放。LangChain同期推出开源编码代理dcode，支持搭配不同模型并允许团队控制使用方式。安全方面，Google威胁情报组报告指出，网络攻击正从简单提示转向自主AI代理工作流。Hugging Face则主张模型应采取精细化拒答策略，仅拒绝高风险部分以平衡安全性与可用性。",
           "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-09_0004"
+        }
+      ]
+    },
+    "2026-09-11": {
+      "candidates": [
+        {
+          "date": "2026-09-11",
+          "title": "ChatGPT进入金融工作台",
+          "summary": "OpenAI发布ChatGPT for Financial Services，把GPT-6 Astra与Daloopa、PitchBook、LSEG News等专业数据结合。团队可做研究、财务模型和客户材料，数字结论能追溯到表格和段落。它还支持按企业Excel、Word、PPT模板生成可编辑交付物。",
+          "url": "https://openai.com/index/introducing-chatgpt-financial-services/"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1824期 - 2026-09-11 12:06",
+          "summary": "本期重点关注[GPT-Image-2.5 Sunburst]登顶图像竞技场，以及[YuE2-3B]、[Ouroboros]等开源工具和模型的新进展。另有[Datasette安全补丁]与文档解析产品更新值得开发者及时跟进。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_1206"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Shopify回归原生开发",
+          "summary": "Shopify分享Shop应用迁移经验，从React Native转回Swift和Kotlin。关键变化不是跨端需求消失，而是AI Coding把双端重建和保持一致的成本压低。其Helix系统把迁移拆成小检查点，用测试、视觉审查、对抗式代码审查和人工确认保证质量。",
+          "url": "https://shopify.engineering/shop-app-migration"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1823期 - 2026-09-11 08:01",
+          "summary": "本期重点关注[AI编程代理]从聊天走向持久化项目协作，以及[多模态检索]和推理基础设施的生产化进展。开源模型方面，Hy4与DeepSeek在真实任务和Web开发评测中持续逼近闭源模型。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_0801"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "CursorBench更新私有评测",
+          "summary": "Cursor发布CursorBench 4.0，继续用真实开发会话反向构造模型任务。新版本更强调长时项目、指令遵循和复杂代码库任务，并刻意保留开发者真实表达里的歧义。它反映出公开基准被刷爆之后，AI编码工具开始依赖私有、持续更新的线上线下闭环评测。",
+          "url": "https://cursor.com/cn/cursorbench"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1822期 - 2026-09-11 04:03",
+          "summary": "本期重点集中在[实时语音智能体]、[金融行业AI]和[桌面端助手]。OpenAI连续发布多项开发者与企业产品，Anthropic则披露了AI滥用威胁情报。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_0403"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "DC-Gen压缩4K生图",
+          "summary": "DC-Gen用扩散加速框架处理高分辨率生成里的潜空间冗余，先做嵌入对齐，再进行少量LoRA微调。在H100上，DC-Gen-FLUX把4K生成延迟降到原来的五十三分之一。结合NVFP4 SVDQuant后，单张4K在5090上约 3.5秒。",
+          "url": "https://arxiv.org/abs/2509.25180"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1821期 - 2026-09-11 00:21",
+          "summary": "本期重点关注[SWE-2]软件工程模型发布及[Google Pics]图像产品上线；同时，智能体[多轮评估]与[AI音乐合作]也出现新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_0021"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "客服助手改用工具编排",
+          "summary": "大型住宿平台用动态响应架构替换单一路径Qwen响应器，把检索、动作和措辞拆开。类型化动作ID加成员检查，把结构化动作幻觉从2.14%降到 0.0%。GPU占用约少三分之一，P90延迟从3.87秒降至 2.24秒。",
+          "url": "https://arxiv.org/abs/2609.05758"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1820期 - 2026-09-10 20:03",
+          "summary": "本期重点集中在[DeepSeek V4.1-Flash性能与成本优势]以及[世界模型和机器人仿真]进展，社区也出现了多项可直接复用的部署与开发实践。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_2003"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "SynPro重写预训练语料",
+          "summary": "SynPro通过预训练数据方法对有机文本做改写和重排，不引入外部信息。生成器用质量、忠实度和数据影响奖励优化，并在预训练平台期持续更新。实验显示它解锁的等效Token为重复训练的 3.4至5.2倍。",
+          "url": "https://arxiv.org/abs/2605.17849"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1819期 - 2026-09-10 16:09",
+          "summary": "本期重点聚焦[DeepSeek V4.1-Flash]发布及其API降价，模型采用新型非对称架构并强化多模态能力；同时，[世界模型]、具身智能和AI工具商业化持续升温。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_1609"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "代码智能体更吃推理",
+          "summary": "这项编码可靠性研究让90个智能体运行同一应用规格，比较工具、提示词和推理强度。浏览器测试工具把成本抬高42%到68%，但没有提升功能可靠性。xHigh推理把首轮满分率从28%推到 89%。",
+          "url": "https://arxiv.org/abs/2607.02436"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1818期 - 2026-09-10 12:09",
+          "summary": "本期重点关注[代理支付安全]、[国产物理AI]与[Suno v6]等产品进展，同时社区出现[Embedding迁移]和本地MoE推理优化等实用探索。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_1209"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "千禧年难题争议继续发酵",
+          "summary": "量子位追踪OpenAI数学证明争议，称OpenAI更新了用户数据时间线说法，并传出下一道千禧年难题可能指向霍奇猜想。相比此前“数学证明声明”，这次新信息集中在纽约时报追访、合作条件和数据边界上。模型刷题系统正在把署名、数据和学术信用压到同一个冲突点。",
+          "url": "https://www.qbitai.com/2026/09/487092.html"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1817期 - 2026-09-10 08:01",
+          "summary": "本期重点聚焦[AI安全防御]、[超大模型部署]与[智能体工具链]。同时，Arena发布了[Claude写作风格变化]的实证分析，Cognition披露RSA-260分解方法。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_0801"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Anthropic安全研究员离职",
+          "summary": "The Verge报道安全研究员离职，Jacob Coxon因担心公司安全路线离开Anthropic。另一名高级安全研究员给出更刺眼的风险判断，称十年内灾难概率超过 10%。争议集中在超人系统竞赛与 安全治理。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/991927/anthropic-ai-kill-all-humans"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1816期 - 2026-09-10 04:07",
+          "summary": "本期重点关注[Anthropic安全事件独立调查]及[智能体工具生态更新]；同时，GPT-6 Astra、文档解析、游戏开发评测和图像生成等方向出现新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_0407"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "网页冻结Mac引发安全讨论",
+          "summary": "Hacker News讨论Deathray演示，称不受信任网页可能触发macOS级卡死。争议焦点包括WebGPU、浏览器隔离和把拒绝服务变成社工工具。它提醒AI浏览器与网页代理越来越多使用本地加速能力时，页面级故障也可能越过传统沙箱边界。",
+          "url": "https://newshacker.me/story?id=49649124"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "第1815期 - 2026-09-10 00:02",
+          "summary": "本期关注[Atlas单图生成3D世界]与[Granite时间序列模型]发布；企业AI工程侧出现检索提速、评测闭环及TorchServe迁移方案。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_0002"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "图像提示词模板库续热",
+          "summary": "awesome-gpt-image-2把提示词模板库做成Prompt as Code路径，覆盖530多个逆向案例。项目还整理20多套工业级模板，并持续提炼Skills。总Star为 29571，今日新增612星。",
+          "url": "https://github.com/freestylefly/awesome-gpt-image-2"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "TradingAgents交易框架上榜",
+          "summary": "TradingAgents把多智能体交易框架做成LLM金融交易工具，面向量化与研究场景。项目今日新增506星，Fork达到19921。总Star已经有 103524，社区关注度很高。",
+          "url": "https://github.com/TauricResearch/TradingAgents"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "推理模型不是魔法",
+          "summary": "meng shao转述推理模型访谈，强调“Reasoning”只是行业术语，不等于模型像人一样思考。访谈拆解RLVR、可验证奖励、蒸馏伦理与循环Transformer，核心结论是推理能力来自工程方法。这个讨论把模型神秘化拉回训练机制和评测证据。",
+          "url": "https://x.com/shao__meng/status/2098216117617754133"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Codex负责人谈工程文化",
+          "summary": "宝玉整理Codex团队访谈，重点包括为何用Rust写智能体核心、为何开源CLI和SDK、以及代码审查如何从正确性检查转向意图讨论。访谈还提到harness总是走在模型前面：脚手架先帮模型保持目标、跑测试，下一代模型再把这些能力内化。",
+          "url": "https://x.com/dotey/status/2098203738205024315"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "OpenAI暂停新增Pro订阅",
+          "summary": "歸藏转述Tibo说明，称OpenAI为保证现有用户体验和Astra访问，暂停新增 200美元Pro 订阅。已订阅用户不受影响，但恢复新增订阅没有明确时间表。这说明高端模型供给仍受系统负载约束，产品分层会被算力现实直接影响。",
+          "url": "https://x.com/op7418/status/2098208006156746768"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Agent评测方法成体系",
+          "summary": "meng shao分享Agent Evals实践，把Meta AI高级总监的十篇方法论整理成完整路径：基础、策略组织、迭代方法和长期演进。随着Agent产品进入真实工作流，评测不再只是一次benchmark，而是跨数据、流程、组织和回归监控的工程系统。",
+          "url": "https://x.com/shao__meng/status/2098199199569613108"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Anthropic威胁报告引发蒸馏争议",
+          "summary": "meng shao解读Anthropic威胁情报报告，重点关注大规模蒸馏、账户池、代理网络和用户数据转发指控。帖子也提醒，这类报告既是安全情报，也是商业竞争叙事；真正需要外界审视的是训练数据来源、用户隐私和跨模型调用透明度。",
+          "url": "https://x.com/shao__meng/status/2098189500258410656"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "DeepSeek Flash体感超预期",
+          "summary": "Orange AI分享DeepSeek Flash体验，称小模型并非只会迎合，反而会与用户“较劲”，速度也足够快。这个反馈虽然偏主观，但说明低价快速模型的产品体验正在从“能用”走向“有性格”，会影响Agent默认模型选择。",
+          "url": "https://x.com/oran_ge/status/2098202997948125317"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Cohere开源推理内核",
+          "summary": "Cohere的推理内核解读介绍Megakernel，把decode阶段前向计算合并进常驻GPU kernel。单张H100、BF16、batch 1下达到292 tok/s，约为vLLM的 1.58倍。端到端服务在batch 8真实基准上快 1.25至1.41倍。",
+          "url": "https://x.com/shao__meng/status/2097467097970552993"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-09-11",
+          "title": "OpenAI推出ChatGPT金融服务版",
+          "summary": "OpenAI发布ChatGPT for Financial Services，将GPT-6 Astra与Daloopa、PitchBook及LSEG News等专业数据源结合。该工具支持团队进行金融研究、构建财务模型及制作客户材料，并允许数字结论直接追溯到具体的表格或段落。此外，系统支持按照企业现有的Excel、Word和PPT模板生成可编辑的交付物，旨在提升金融工作流的效率与合规性。",
+          "url": "https://openai.com/index/introducing-chatgpt-financial-services/"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Cursor发布CursorBench 4.0评测基准",
+          "summary": "Cursor发布CursorBench 4.0，该基准通过真实开发会话反向构造模型任务，重点考察长时项目处理、指令遵循及复杂代码库操作能力。新版本刻意保留开发者真实表达中的歧义，以测试模型在模糊场景下的表现。数据显示，Fable 5.1 Max以51.8%的得分位居榜首，而GPT-5.6系列和Sonnet 5等模型在不同配置下得分差异显著。",
+          "url": "https://cursor.com/cn/cursorbench"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Shopify应用从React Native迁移至原生开发",
+          "summary": "Shopify工程团队分享将Shop应用从React Native迁移至Swift和Kotlin的经验。借助AI编码代理，团队在12周内完成了从概念验证到应用商店发布的完整重建过程。迁移过程中，团队利用AI代理基于现有实现快速移植功能、搭建界面并处理动画，同时通过小检查点、视觉审查及对抗式代码审查确保质量。此举表明AI工具显著降低了双端独立开发的成本，改变了跨端技术选型的权衡逻辑。",
+          "url": "https://shopify.engineering/shop-app-migration"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Anthropic安全研究员离职引发争议",
+          "summary": "The Verge报道，Anthropic安全研究员Jacob Coxon因担忧公司安全路线而离职，指责AI公司正“拿生命赌博”以竞相开发自我改进的超级智能。另一名为Evan Hubinger的高级安全研究员回应称，他估计AI在十年内导致全人类死亡的概率超过10%，并承认Anthropic目前尚无确保高级AI安全对齐的明确计划。这一事件凸显了行业内部在追求技术突破与安全治理之间的深刻分歧。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/991927/anthropic-ai-kill-all-humans"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "DC-Gen框架实现4K图像生成53倍加速",
+          "summary": "DC-Gen提出了一种基于深度压缩潜空间的扩散模型后训练加速框架。该框架通过轻量级嵌入对齐解决表示差距问题，随后仅需少量LoRA微调即可保留基础模型质量。在NVIDIA H100上，DC-Gen-FLUX将4K图像生成延迟降低至原来的53分之一。结合NVFP4 SVDQuant技术后，单张4K图像在NVIDIA 5090 GPU上的生成时间约为3.5秒，相比基础模型总延迟降低138倍。",
+          "url": "https://arxiv.org/abs/2509.25180"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "大型平台客服助手采用动态响应架构降低幻觉",
+          "summary": "一家大型住宿平台将客服助手从单一路径Qwen响应器迁移至动态响应（DR）架构，采用有界ReAct编排器结合类型化工具。该架构将结构化动作幻觉率从2.14%降至0.0%，并将硬升级响应比例从5.60%降至3.08%。在性能方面，编排器P90延迟从3.87秒降至2.24秒，GPU占用减少约三分之一。自托管部署还使年度模型服务成本降低了一个数量级以上。",
+          "url": "https://arxiv.org/abs/2609.05758"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "研究显示推理强度比工具访问更影响代码生成可靠性",
+          "summary": "一项针对90个智能体运行同一应用规格的观测研究发现，推理强度对首轮代码生成的可靠性影响显著高于工具访问。将推理强度从High提升至xHigh，使首轮满分率从28%提升至89%，并将纠正提示次数减少约五倍。相比之下，引入浏览器测试工具虽使成本增加42%至68%，但并未提升功能可靠性或得分。研究指出，大多数首轮失败源于推理不足，而非检查工具可发现的可见缺陷。",
+          "url": "https://arxiv.org/abs/2607.02436"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "GPT Image 2提示词模板库开源项目持续更新",
+          "summary": "开源项目awesome-gpt-image-2将GPT Image 2及2.5的提示词模板库转化为“Prompt as Code”路径，收录了530多个逆向工程案例和20多套工业级模板。项目新增2.5版本同提示词对比专区，支持并排视图和生成设置调整，并持续提炼可复用的Skills。目前该仓库总Star数达到29571，今日新增612星，社区活跃度较高。",
+          "url": "https://github.com/freestylefly/awesome-gpt-image-2"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "TradingAgents多智能体交易框架获高关注度",
+          "summary": "TauricResearch开源的多智能体LLM金融交易框架TradingAgents在GitHub上获得显著关注，总Star数已达103,524，Fork数为19,921。该项目近期发布v0.4.0版本，修复了FRED宏观数据、社交情绪及决策日志记忆中的前视偏差问题，并支持GPT-5.6和GLM-5.3模型。框架旨在通过多智能体协作优化量化研究与交易场景，其高社区活跃度反映了开发者对AI金融应用落地的兴趣。",
+          "url": "https://github.com/TauricResearch/TradingAgents"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Meta AI总监发布Agent评测工程方法论",
+          "summary": "Meta AI高级总监Madhu Guru发布系列文章，系统阐述AI Agent评测工程实践。该方法论强调评测应锚定真实流量而非实验室场景，主张先建立可信质量信号再优化成本，并反对将复杂评测压缩为单一分数。文章提出通过精确命名失败模式、分层组织评测策略及度量过程步骤来驱动产品持续改进，指出评测体系需随用户行为演进而同步更新，而非作为静态质检环节。",
+          "url": "https://x.com/shao__meng/status/2098199199569613108"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "OpenAI Codex负责人分享工程文化与技术决策",
+          "summary": "OpenAI Codex团队负责人Thibault在访谈中透露，团队选择Rust构建智能体核心以利用其编译时验证特性，确保健壮性与安全性，并强制建立产品界面与核心的清晰边界。Codex CLI和SDK开源且支持非OpenAI模型，旨在通过产品体验而非锁定赢得用户。代码审查正从正确性检查转向意图讨论，专用审查模型能深入依赖层发现安全漏洞，实现PR当日提交当日上线。",
+          "url": "https://x.com/dotey/status/2098203738205024315"
+        },
+        {
+          "date": "2026-09-11",
+          "title": "Cohere开源Megakernel推理内核提升解码效率",
+          "summary": "Cohere开源了针对North Mini Code模型的Megakernel推理系统，将decode阶段前向计算合并为常驻GPU的持久kernel，消除逐算子启动开销。在单张H100、BF16、batch size 1条件下，该系统达到292 tok/s，约为vLLM的1.58倍，利用率达H100显存带宽理论上限的62%。其核心机制包括细粒度任务调度、消除伪依赖及权重预取，有效解决了低batch size下显存带宽受限导致的GPU空转问题。",
+          "url": "https://x.com/shao__meng/status/2097467097970552993"
         }
       ]
     }

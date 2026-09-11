@@ -1,0 +1,263 @@
+[
+  {
+    "title": "ChatGPT进入金融工作台",
+    "summary": "OpenAI发布ChatGPT for Financial Services，把GPT-6 Astra与Daloopa、PitchBook、LSEG News等专业数据结合。团队可做研究、财务模型和客户材料，数字结论能追溯到表格和段落。它还支持按企业Excel、Word、PPT模板生成可编辑交付物。",
+    "url": "https://openai.com/index/introducing-chatgpt-financial-services/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1824期 - 2026-09-11 12:06",
+    "summary": "本期重点关注[GPT-Image-2.5 Sunburst]登顶图像竞技场，以及[YuE2-3B]、[Ouroboros]等开源工具和模型的新进展。另有[Datasette安全补丁]与文档解析产品更新值得开发者及时跟进。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_1206",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Shopify回归原生开发",
+    "summary": "Shopify分享Shop应用迁移经验，从React Native转回Swift和Kotlin。关键变化不是跨端需求消失，而是AI Coding把双端重建和保持一致的成本压低。其Helix系统把迁移拆成小检查点，用测试、视觉审查、对抗式代码审查和人工确认保证质量。",
+    "url": "https://shopify.engineering/shop-app-migration",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1823期 - 2026-09-11 08:01",
+    "summary": "本期重点关注[AI编程代理]从聊天走向持久化项目协作，以及[多模态检索]和推理基础设施的生产化进展。开源模型方面，Hy4与DeepSeek在真实任务和Web开发评测中持续逼近闭源模型。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CursorBench更新私有评测",
+    "summary": "Cursor发布CursorBench 4.0，继续用真实开发会话反向构造模型任务。新版本更强调长时项目、指令遵循和复杂代码库任务，并刻意保留开发者真实表达里的歧义。它反映出公开基准被刷爆之后，AI编码工具开始依赖私有、持续更新的线上线下闭环评测。",
+    "url": "https://cursor.com/cn/cursorbench",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1822期 - 2026-09-11 04:03",
+    "summary": "本期重点集中在[实时语音智能体]、[金融行业AI]和[桌面端助手]。OpenAI连续发布多项开发者与企业产品，Anthropic则披露了AI滥用威胁情报。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DC-Gen压缩4K生图",
+    "summary": "DC-Gen用扩散加速框架处理高分辨率生成里的潜空间冗余，先做嵌入对齐，再进行少量LoRA微调。在H100上，DC-Gen-FLUX把4K生成延迟降到原来的五十三分之一。结合NVFP4 SVDQuant后，单张4K在5090上约 3.5秒。",
+    "url": "https://arxiv.org/abs/2509.25180",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1821期 - 2026-09-11 00:21",
+    "summary": "本期重点关注[SWE-2]软件工程模型发布及[Google Pics]图像产品上线；同时，智能体[多轮评估]与[AI音乐合作]也出现新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-11_0021",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "客服助手改用工具编排",
+    "summary": "大型住宿平台用动态响应架构替换单一路径Qwen响应器，把检索、动作和措辞拆开。类型化动作ID加成员检查，把结构化动作幻觉从2.14%降到 0.0%。GPU占用约少三分之一，P90延迟从3.87秒降至 2.24秒。",
+    "url": "https://arxiv.org/abs/2609.05758",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1820期 - 2026-09-10 20:03",
+    "summary": "本期重点集中在[DeepSeek V4.1-Flash性能与成本优势]以及[世界模型和机器人仿真]进展，社区也出现了多项可直接复用的部署与开发实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_2003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SynPro重写预训练语料",
+    "summary": "SynPro通过预训练数据方法对有机文本做改写和重排，不引入外部信息。生成器用质量、忠实度和数据影响奖励优化，并在预训练平台期持续更新。实验显示它解锁的等效Token为重复训练的 3.4至5.2倍。",
+    "url": "https://arxiv.org/abs/2605.17849",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1819期 - 2026-09-10 16:09",
+    "summary": "本期重点聚焦[DeepSeek V4.1-Flash]发布及其API降价，模型采用新型非对称架构并强化多模态能力；同时，[世界模型]、具身智能和AI工具商业化持续升温。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_1609",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代码智能体更吃推理",
+    "summary": "这项编码可靠性研究让90个智能体运行同一应用规格，比较工具、提示词和推理强度。浏览器测试工具把成本抬高42%到68%，但没有提升功能可靠性。xHigh推理把首轮满分率从28%推到 89%。",
+    "url": "https://arxiv.org/abs/2607.02436",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1818期 - 2026-09-10 12:09",
+    "summary": "本期重点关注[代理支付安全]、[国产物理AI]与[Suno v6]等产品进展，同时社区出现[Embedding迁移]和本地MoE推理优化等实用探索。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_1209",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "千禧年难题争议继续发酵",
+    "summary": "量子位追踪OpenAI数学证明争议，称OpenAI更新了用户数据时间线说法，并传出下一道千禧年难题可能指向霍奇猜想。相比此前“数学证明声明”，这次新信息集中在纽约时报追访、合作条件和数据边界上。模型刷题系统正在把署名、数据和学术信用压到同一个冲突点。",
+    "url": "https://www.qbitai.com/2026/09/487092.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1817期 - 2026-09-10 08:01",
+    "summary": "本期重点聚焦[AI安全防御]、[超大模型部署]与[智能体工具链]。同时，Arena发布了[Claude写作风格变化]的实证分析，Cognition披露RSA-260分解方法。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic安全研究员离职",
+    "summary": "The Verge报道安全研究员离职，Jacob Coxon因担心公司安全路线离开Anthropic。另一名高级安全研究员给出更刺眼的风险判断，称十年内灾难概率超过 10%。争议集中在超人系统竞赛与 安全治理。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/991927/anthropic-ai-kill-all-humans",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1816期 - 2026-09-10 04:07",
+    "summary": "本期重点关注[Anthropic安全事件独立调查]及[智能体工具生态更新]；同时，GPT-6 Astra、文档解析、游戏开发评测和图像生成等方向出现新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_0407",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "网页冻结Mac引发安全讨论",
+    "summary": "Hacker News讨论Deathray演示，称不受信任网页可能触发macOS级卡死。争议焦点包括WebGPU、浏览器隔离和把拒绝服务变成社工工具。它提醒AI浏览器与网页代理越来越多使用本地加速能力时，页面级故障也可能越过传统沙箱边界。",
+    "url": "https://newshacker.me/story?id=49649124",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1815期 - 2026-09-10 00:02",
+    "summary": "本期关注[Atlas单图生成3D世界]与[Granite时间序列模型]发布；企业AI工程侧出现检索提速、评测闭环及TorchServe迁移方案。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-10_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "图像提示词模板库续热",
+    "summary": "awesome-gpt-image-2把提示词模板库做成Prompt as Code路径，覆盖530多个逆向案例。项目还整理20多套工业级模板，并持续提炼Skills。总Star为 29571，今日新增612星。",
+    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TradingAgents交易框架上榜",
+    "summary": "TradingAgents把多智能体交易框架做成LLM金融交易工具，面向量化与研究场景。项目今日新增506星，Fork达到19921。总Star已经有 103524，社区关注度很高。",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "推理模型不是魔法",
+    "summary": "meng shao转述推理模型访谈，强调“Reasoning”只是行业术语，不等于模型像人一样思考。访谈拆解RLVR、可验证奖励、蒸馏伦理与循环Transformer，核心结论是推理能力来自工程方法。这个讨论把模型神秘化拉回训练机制和评测证据。",
+    "url": "https://x.com/shao__meng/status/2098216117617754133",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Codex负责人谈工程文化",
+    "summary": "宝玉整理Codex团队访谈，重点包括为何用Rust写智能体核心、为何开源CLI和SDK、以及代码审查如何从正确性检查转向意图讨论。访谈还提到harness总是走在模型前面：脚手架先帮模型保持目标、跑测试，下一代模型再把这些能力内化。",
+    "url": "https://x.com/dotey/status/2098203738205024315",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI暂停新增Pro订阅",
+    "summary": "歸藏转述Tibo说明，称OpenAI为保证现有用户体验和Astra访问，暂停新增 200美元Pro 订阅。已订阅用户不受影响，但恢复新增订阅没有明确时间表。这说明高端模型供给仍受系统负载约束，产品分层会被算力现实直接影响。",
+    "url": "https://x.com/op7418/status/2098208006156746768",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Agent评测方法成体系",
+    "summary": "meng shao分享Agent Evals实践，把Meta AI高级总监的十篇方法论整理成完整路径：基础、策略组织、迭代方法和长期演进。随着Agent产品进入真实工作流，评测不再只是一次benchmark，而是跨数据、流程、组织和回归监控的工程系统。",
+    "url": "https://x.com/shao__meng/status/2098199199569613108",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic威胁报告引发蒸馏争议",
+    "summary": "meng shao解读Anthropic威胁情报报告，重点关注大规模蒸馏、账户池、代理网络和用户数据转发指控。帖子也提醒，这类报告既是安全情报，也是商业竞争叙事；真正需要外界审视的是训练数据来源、用户隐私和跨模型调用透明度。",
+    "url": "https://x.com/shao__meng/status/2098189500258410656",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek Flash体感超预期",
+    "summary": "Orange AI分享DeepSeek Flash体验，称小模型并非只会迎合，反而会与用户“较劲”，速度也足够快。这个反馈虽然偏主观，但说明低价快速模型的产品体验正在从“能用”走向“有性格”，会影响Agent默认模型选择。",
+    "url": "https://x.com/oran_ge/status/2098202997948125317",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cohere开源推理内核",
+    "summary": "Cohere的推理内核解读介绍Megakernel，把decode阶段前向计算合并进常驻GPU kernel。单张H100、BF16、batch 1下达到292 tok/s，约为vLLM的 1.58倍。端到端服务在batch 8真实基准上快 1.25至1.41倍。",
+    "url": "https://x.com/shao__meng/status/2097467097970552993",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
