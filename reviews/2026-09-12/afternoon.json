@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-09-12",
+  "reviewed_at": "2026-09-12T15:47:07.011811+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实，逻辑清晰，播客对话自然且紧扣新闻要点，无事实矛盾或重复问题。",
+    "issues": [
+      "部分新闻来源为社交媒体链接（如X/Twitter），虽在AI日报中常见，但权威性略低于官方文档或主流科技媒体，建议后续优先引用官方发布渠道。",
+      "Anthropic报告中关于“中国实验室蒸馏”的具体指控（阿里Qwen）属于敏感地缘政治话题，虽基于报告内容，但在国际传播中需注意措辞的客观性，避免被解读为偏见。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
