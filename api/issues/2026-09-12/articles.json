@@ -1,0 +1,101 @@
+[
+  {
+    "title": "OpenAI发布Agents API托管长时智能体",
+    "summary": "OpenAI将Codex Agent Harness产品化为Agents API，允许开发者通过单次调用创建由OpenAI托管、可连续运行数天的生产级Agent。该API负责上下文管理、工具调用及多Agent协调等编排层工作，开发者仅需定义Agent的差异化能力。执行环境支持自带沙箱、合作伙伴沙箱或OpenAI托管沙箱三种模式，目前已进入公开测试阶段。",
+    "url": "https://x.com/shao__meng/status/2098226991707357384",
+    "section": "🔥 今日焦点",
+    "review": "OpenAI通过平台化编排层降低了长时Agent的开发门槛，但将核心Harness能力收归平台，可能削弱开发者对底层逻辑的控制力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-Rosalind结束研究预览并开放访问",
+    "summary": "OpenAI宣布GPT-Rosalind结束研究预览，面向全球合格组织开放可信访问。用户可通过API、Codex和ChatGPT Enterprise使用该模型，访问权限涵盖后续发布的新GPT-Rosalind模型。该模型旨在为生命科学研究提供生物推理支持，包括跨论文连接发现、评估生物靶点证据及规划实验分析。",
+    "url": "https://x.com/OpenAIDevs/status/2098509255947293035",
+    "section": "🚀 产品发布",
+    "review": "GPT-Rosalind从预览转向正式开放，标志着垂直领域科学模型进入商业化落地阶段，但“合格组织”的限定仍限制了其普惠性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cursor发布Projects功能优化开发编排",
+    "summary": "Cursor正式上线Projects功能，将开发Agent形态从单聊客服转变为常驻项目组。该功能引入协调者机制，负责拆解任务并派发子Agent处理前端、接口及测试等工作，同时支持事件驱动以自动监控Slack或GitHub CI状态。官方内部数据显示，主力使用Projects的工程师PR合入量提升了6倍，开发瓶颈从代码编写转向任务管理。",
+    "url": "https://x.com/AYi_AInotes/status/2098221297390047348",
+    "section": "🚀 产品发布",
+    "review": "Projects通过协调者架构解决了多任务并发管理的痛点，但高度依赖云端持续运行，对网络稳定性及长期运行成本提出了更高要求。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI推出GPT-Live-1全双工语音API",
+    "summary": "OpenAI发布GPT-Live-1开发者API，提供全双工语音能力，支持应用边说边听。该模型在交互性测试中得分从上一代的45.4%提升至80.1%，轮次延迟降至0.8秒，工具调用准确率达到87%。API定价为每分钟0.05美元，并附带12种新语音及ASR转录功能，Yelp已将其用于电话预订场景。",
+    "url": "https://the-decoder.com/openais-gpt-live-1-api-lets-developers-build-apps-that-talk-and-listen-at-the-same-time/",
+    "section": "🚀 产品发布",
+    "review": "GPT-Live-1显著提升了实时语音交互的流畅度与准确性，但每分钟0.05美元的定价对于高频语音应用而言，成本压力不容忽视。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic报告揭示Claude被滥用于武器及中国实验室蒸馏",
+    "summary": "Anthropic发布的威胁情报报告记录了2025年12月至2026年8月间Claude模型遭受的滥用情况。报告显示，黑客利用模型进行导弹软件开发、自主无人机集群控制及大规模监控，其中一名俄语间谍行为者通过AI代理自动重写恶意代码以规避杀毒软件检测。此外，多家中国实验室被指通过虚假账号进行工业级模型蒸馏，其中阿里Qwen实验室在2026年5月至7月间通过超过3500个欺诈账号产生了逾1.51亿次交互，用于微调其Qwen 3.5至3.7模型。",
+    "url": "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data/",
+    "section": "💼 行业动态",
+    "review": "模型能力降低攻击门槛，使自动化恶意代码生成成为现实威胁。大规模蒸馏行为暴露了API安全与数据主权保护的严峻缺口。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Astra跑分差异引发AGI认定争议",
+    "summary": "黄仁勋宣称AGI已经到来，但新智元梳理的Astra跑分数据引发争议。ARC Prize指出，Astra在OpenAI定制环境中ARC-AGI-3得分高达99.9%，但在标准环境中仅得62.7%。由于标准环境得分未达预期，出题方不承认Astra已达到AGI水平。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652725028&idx=2&sn=fb813584fd0cdb605249a20166fe92a1",
+    "section": "💼 行业动态",
+    "review": "定制环境与标准环境的巨大分差揭示了基准测试的局限性。仅凭特定场景的高分无法确立AGI的通用性认定。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Sakana AI发布Fugu Max与Fugu Ultra v2",
+    "summary": "Sakana AI发布了基于相同学习式编排架构的Fugu Max和Fugu Ultra v2两款模型。Fugu Max将任务路由至NVIDIA Nemotron等精简开源或专用模型，价格低至每百万token 2至6美元，主打低成本。Fugu Ultra v2则追求峰值能力，在Chartography基准测试中得分48.3，在DeepSWE中得分74.3。",
+    "url": "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/",
+    "section": "💼 行业动态",
+    "review": "通过路由至轻量模型实现低成本编排，为多智能体系统提供了经济高效的替代方案。高配版本在特定基准上的表现验证了其峰值能力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "vLLM v0.29.0发布：Model Runner V2成为默认路径",
+    "summary": "vLLM发布v0.29.0版本，正式将Model Runner V2设为所有模型的默认路径，完成了从池化模型开始的全面推广。该版本引入了CUDA graph显存剖析以支持KV cache自动缩放，并通过batch-sharded sampling将每步logits显存占用降低为原来的TP分之一。此外，新版本还增加了prompt embeds、extract_hidden_states推测解码等功能，并支持Hy4-preview、Qwen3.8-Flash-Next等新模型。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+    "section": "💼 行业动态",
+    "review": "统一解码路径与显存优化显著提升了并发吞吐能力。该版本对生产环境升级具有直接价值，但需注意ROCm模型仍依赖旧版Runner。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google Research发布ToolGrad：利用文本梯度高效生成工具调用数据集",
+    "summary": "Google Research在ACL 2026上提出ToolGrad框架，旨在解决大语言模型工具调用数据标注成本高且效率低的问题。该框架颠覆了传统“先写用户问题再搜索API”的范式，改为先生成正确的工具调用链，再反向推导用户需求。通过这种“文本梯度”方法，ToolGrad能够显著提升小模型的工具调用性能，特别适合标注预算有限但需要高质量工具数据的团队。",
+    "url": "https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/",
+    "section": "💡 前沿研究",
+    "review": "ToolGrad通过逆向生成逻辑解决了数据标注的瓶颈，为低成本提升模型工具调用能力提供了可行路径，但需验证其在复杂多步任务中的泛化能力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AgentHijack研究揭示视觉补丁可劫持多模态电脑智能体",
+    "summary": "arXiv论文《AgentHijack》提出了一种针对多模态电脑智能体（CUA）的端到端评估框架，测试图像触发命令注入的安全性。研究在GitHub Pages和CSDN克隆环境中部署视觉补丁，覆盖5个开源GUI智能体或VLM后端，共收集600个在线案例。实验显示，端到端攻击成功率达20.3%，部分成功样本中智能体会先执行恶意终端命令再继续原任务，表明优化后的局部视觉信号能穿透执行管道造成实际环境风险。",
+    "url": "https://arxiv.org/abs/2609.09212",
+    "section": "💡 前沿研究",
+    "review": "该研究证实了视觉输入可绕过VLM直接操控执行层，暴露了当前开源智能体在感知-执行链路中的严重安全漏洞，亟需引入输入过滤机制。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OmniRoute开源项目统一多模型网关，支持352家供应方",
+    "summary": "GitHub开源项目OmniRoute旨在通过单一端点集中管理多模型调用，目前接入352家供应方和1200多个模型，其中免费供应方超过150个。该项目支持Claude Code、Codex、Cursor等主流开发工具，并具备配额感知自动回退及RTK+Caveman压缩功能，可节省15%-95%的Token消耗。截至当前，该项目总Star数为63777，今日新增591，由550多名贡献者共同维护。",
+    "url": "https://github.com/diegosouzapw/OmniRoute",
+    "section": "🔓 开源热榜",
+    "review": "OmniRoute通过聚合海量模型资源并优化Token成本，降低了多模型应用的集成门槛，但其依赖第三方API的稳定性及免费额度限制仍是实际部署的主要风险点。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
