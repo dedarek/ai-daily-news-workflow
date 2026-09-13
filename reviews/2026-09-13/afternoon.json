@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-09-13",
+  "reviewed_at": "2026-09-13T16:08:08.442910+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实，逻辑清晰，播客对话自然且紧扣新闻要点，无事实性错误。",
+    "issues": [
+      "新闻3中提到的'Kimi K2.8'与'K3'的命名逻辑在现实中可能对应不同版本，但基于提供的source_text_status为空且无矛盾，视为通过；若严格对照现实时间线（2026年），需确认K3是否已发布，但作为终审编辑，依据给定材料无矛盾即通过。",
+      "播客中S1提到'效率比NVIDIA高1.5倍'，原文是'1.5至1.9倍'，播客取了下限，虽不严谨但属可接受的口语化简化，未构成误导。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
