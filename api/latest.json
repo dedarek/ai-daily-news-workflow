@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-09-12",
-  "content_date": "2026-09-12",
-  "published_at": "2026-09-12T05:23:16.621059+00:00",
-  "article_count": 11,
-  "podcast_turns": 16,
+  "issue_date": "2026-09-13",
+  "content_date": "2026-09-13",
+  "published_at": "2026-09-13T05:36:22.447968+00:00",
+  "article_count": 12,
+  "podcast_turns": 25,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -20,9 +20,9 @@
       "selection": {
         "model": "lenovo:qwen38-27b",
         "usage": {},
-        "selected_count": 11,
+        "selected_count": 12,
         "target_count": 12,
-        "degraded": true
+        "degraded": false
       },
       "selection_attempts": [
         {
@@ -37,7 +37,7 @@
       ],
       "cross_day_dedupe": {
         "window_days": 7,
-        "recent_sent_count": 82,
+        "recent_sent_count": 81,
         "exact_url_blocks": [],
         "high_confidence_event_blocks": [],
         "reviews": [
@@ -87,11 +87,11 @@
           "review": {
             "pass": true,
             "issues": [
-              "S1第1轮切入略显生硬，直接抛出宏观结论，缺乏更自然的对话引入。",
-              "S2第16轮结尾出现“我们下期再见”，属于固定寒暄/结束语，建议删除以符合“不应出现固定问候和寒暄”的要求。",
-              "S1第15轮总结部分略显说教，可尝试用更具体的案例或反问来增强互动感。"
+              "S1在第二轮发言中称效率比NVIDIA高1.5倍，而日报原文为“高1.5至1.9倍”，表述略显绝对，建议改为“高出1.5倍以上”或引用区间以符合事实严谨性。",
+              "S1在第三轮发言中称“效率比NVIDIA高1.5倍”，同样存在上述数值表述不够精确的问题。",
+              "S2在最后一轮总结时，将“工具成熟”作为主线之一，但前文对spec-kit和插件评测的讨论较为简略，略显仓促，可稍微加强这两条新闻的独立价值阐述。"
             ],
-            "repair_instruction": "1. 修改S2第16轮，删除“我们下期再见”，改为更自然的收尾，如“希望这些分析能帮大家理清思路。”；2. 优化S1第1轮开头，增加一句简短的过渡语，如“今天这几条新闻连起来看，有个很明显的趋势……”，使切入更自然；3. 检查S1第15轮，将“对于从业者来说……”改为更具体的建议或提问，增强对话感。"
+            "repair_instruction": "1. 修正S1关于Jalapeno芯片效率的描述，将“高1.5倍”改为“高1.5至1.9倍”或“高出1.5倍以上”，以严格对应日报事实。2. 在讨论GitHub spec-kit和Anthropic插件评测时，S1可补充一句关于“规格驱动”如何具体解决AI编码意图偏差的例子，或强调插件评测中“基线对比”对开发者验证插件有效性的具体意义，使结尾部分更扎实。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -102,9 +102,9 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1第1轮切入略显生硬，直接抛出宏观结论，缺乏更自然的对话引入。",
-          "S2第16轮结尾出现“我们下期再见”，属于固定寒暄/结束语，建议删除以符合“不应出现固定问候和寒暄”的要求。",
-          "S1第15轮总结部分略显说教，可尝试用更具体的案例或反问来增强互动感。"
+          "S1在第二轮发言中称效率比NVIDIA高1.5倍，而日报原文为“高1.5至1.9倍”，表述略显绝对，建议改为“高出1.5倍以上”或引用区间以符合事实严谨性。",
+          "S1在第三轮发言中称“效率比NVIDIA高1.5倍”，同样存在上述数值表述不够精确的问题。",
+          "S2在最后一轮总结时，将“工具成熟”作为主线之一，但前文对spec-kit和插件评测的讨论较为简略，略显仓促，可稍微加强这两条新闻的独立价值阐述。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -112,16 +112,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-12/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-12/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-12/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-12/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-12.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-12/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-12/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-12.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-12/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-12.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-12.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-12.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-13/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-13/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-13/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-13/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-13.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-13/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-13/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-13.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-13/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-13.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-13.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-13.mp4"
 }
