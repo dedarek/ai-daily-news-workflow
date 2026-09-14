@@ -1,0 +1,24 @@
+{
+  "issue_date": "2026-09-14",
+  "reviewed_at": "2026-09-14T16:42:20.229704+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 95,
+    "summary": "内容事实准确，逻辑连贯，播客对话自然且深度契合新闻要点，无重复或矛盾问题。",
+    "issues": [],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
