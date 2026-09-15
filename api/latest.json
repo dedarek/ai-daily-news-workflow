@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-09-14",
-  "content_date": "2026-09-14",
-  "published_at": "2026-09-14T05:42:17.085978+00:00",
+  "issue_date": "2026-09-15",
+  "content_date": "2026-09-15",
+  "published_at": "2026-09-15T05:41:30.459237+00:00",
   "article_count": 12,
-  "podcast_turns": 20,
+  "podcast_turns": 21,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -15,7 +15,7 @@
       "qwen38-27b"
     ],
     "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
-    "calls": 10,
+    "calls": 8,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen38-27b",
@@ -30,16 +30,7 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen38-27b",
           "usage": {},
-          "candidate_count": 59,
-          "target_count": 12,
-          "validation_issues": []
-        },
-        {
-          "attempt": 2,
-          "validation_attempt": 1,
-          "model": "lenovo:qwen38-27b",
-          "usage": {},
-          "candidate_count": 58,
+          "candidate_count": 30,
           "target_count": 12,
           "validation_issues": []
         }
@@ -47,29 +38,11 @@
       "cross_day_dedupe": {
         "window_days": 7,
         "recent_sent_count": 81,
-        "exact_url_blocks": [
-          {
-            "current_url": "https://www.qbitai.com/2026/09/487688.html",
-            "previous_url": "https://www.qbitai.com/2026/09/487688.html",
-            "previous_date": "2026-09-13"
-          }
-        ],
+        "exact_url_blocks": [],
         "high_confidence_event_blocks": [],
         "reviews": [
           {
             "attempt": 1,
-            "model": "lenovo:qwen38-27b",
-            "usage": {},
-            "duplicates": [
-              {
-                "current_url": "https://www.qbitai.com/2026/09/488380.html",
-                "previous_url": "https://the-decoder.com/openai-floats-a-shared-ai-slowdown-takes-it-to-congress/",
-                "reason": "两条新闻均报道OpenAI高管（Sam Altman/Dario Amodei）关于放缓AI发展或IPO节奏的表态。此前7天已发送的新闻（2026-09-13）详细报道了OpenAI向国会咨询共同放缓合法性及Sam Altman内部支持放缓的消息；今日拟发送的新闻（2026-09-12）报道Sam Altman表示2026年IPO不明智且年内不推进，并提及Dario呼吁放慢前沿模型。核心主体（OpenAI）、动作（表态放缓/推迟上市）、对象（IPO/前沿模型开发节奏）相同，属于同一底层事件的不同侧面或后续确认，无实质性新进展（如正式宣布放缓或IPO撤回），视为重复。"
-              }
-            ]
-          },
-          {
-            "attempt": 2,
             "model": "lenovo:qwen38-27b",
             "usage": {},
             "duplicates": []
@@ -114,10 +87,10 @@
           "review": {
             "pass": true,
             "issues": [
-              "S1第1轮切入略显生硬，带有明显的‘今日核心信号’总结感，建议改为更自然的口语化引入，如‘今天有个挺有意思的现象...’。",
-              "S2第18轮关于OpenMontage的评论中，‘维护复杂度很高’这一判断虽符合常识，但日报原文仅提到‘维护复杂度仍是落地难点’，建议措辞更贴近原文，避免过度引申。"
+              "第20轮S1发言字数（约55字）符合口播标准，但作为结尾略显仓促，可稍作延展以增强收束感。",
+              "第19轮S2的总结性发言中，“希望这些变化能真正惠及每一位用户”略显套话，可结合具体新闻点（如开源工具或硬件成本）进行更具体的收尾。"
             ],
-            "repair_instruction": "1. 修改S1第1轮，将‘今天最核心的信号是...’改为更自然的对话开场，例如‘今天看新闻，感觉AI巨头们都在集体踩刹车，Altman那边...’。2. 微调S2第18轮，将‘维护复杂度很高’调整为‘维护是个难点’，以更贴合日报review中的表述。"
+            "repair_instruction": "建议微调最后两轮对话：S2在总结时，可具体提及“开源工具降低门槛”或“硬件能效提升”作为落地的具体例证，避免泛泛而谈；S1的最后一句可稍微延长，例如强调“稳健的基础设施”是下一期或未来关注的重点，使结尾更自然有力。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -128,8 +101,8 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1第1轮切入略显生硬，带有明显的‘今日核心信号’总结感，建议改为更自然的口语化引入，如‘今天有个挺有意思的现象...’。",
-          "S2第18轮关于OpenMontage的评论中，‘维护复杂度很高’这一判断虽符合常识，但日报原文仅提到‘维护复杂度仍是落地难点’，建议措辞更贴近原文，避免过度引申。"
+          "第20轮S1发言字数（约55字）符合口播标准，但作为结尾略显仓促，可稍作延展以增强收束感。",
+          "第19轮S2的总结性发言中，“希望这些变化能真正惠及每一位用户”略显套话，可结合具体新闻点（如开源工具或硬件成本）进行更具体的收尾。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -137,16 +110,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-14/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-14/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-14/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-14/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-14.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-14/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-14/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-14.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-14/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-14.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-14.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-14.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-15/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-15/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-15/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-15/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-15.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-15/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-15/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-15.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-15/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-15.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-15.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-15.mp4"
 }
