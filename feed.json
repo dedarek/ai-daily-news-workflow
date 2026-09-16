@@ -3,6 +3,133 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-09-16",
+      "content_date": "2026-09-16",
+      "published_at": "2026-09-16T05:31:52.291352+00:00",
+      "article_count": 12,
+      "podcast_turns": 17,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 60,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 81,
+            "exact_url_blocks": [],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在提及Sakana AI的PC-ALM研究时，使用了“千层网络都能训”的表述，虽然日报中确实提到“成功将其扩展至1000层网络训练”，但结合前文“8至128层...精度相当”的语境，直接说“千层都能训”略显绝对，建议改为“甚至能扩展到千层网络”以更严谨。",
+                  "S1在总结多智能体论文时提到“加20行代码就能解决”，日报原文是“仅需少于20行代码的条件检查即可关闭该缺口”，表述基本准确，但“就能解决”语气稍显轻描淡写，建议改为“通过少于20行代码的条件检查即可缓解”以符合技术严谨性。",
+                  "整体对话流畅，但S1和S2在结尾处的总结略显套路化，可尝试更具体的行动建议或更个性化的观点收尾。"
+                ],
+                "repair_instruction": "1. 修正S1关于PC-ALM的表述，将“千层网络都能训”调整为“甚至能扩展到千层网络训练”，以准确反映日报中“成功扩展”而非“全面适用”的语境。2. 微调S1关于多智能体论文的表述，将“加20行代码就能解决”改为“通过少于20行代码的条件检查即可关闭缺口”，避免过度简化技术难度。3. 结尾部分可尝试结合具体新闻点（如AEF-1或Koa）给出更具体的听众行动建议，而非泛泛而谈。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1在提及Sakana AI的PC-ALM研究时，使用了“千层网络都能训”的表述，虽然日报中确实提到“成功将其扩展至1000层网络训练”，但结合前文“8至128层...精度相当”的语境，直接说“千层都能训”略显绝对，建议改为“甚至能扩展到千层网络”以更严谨。",
+              "S1在总结多智能体论文时提到“加20行代码就能解决”，日报原文是“仅需少于20行代码的条件检查即可关闭该缺口”，表述基本准确，但“就能解决”语气稍显轻描淡写，建议改为“通过少于20行代码的条件检查即可缓解”以符合技术严谨性。",
+              "整体对话流畅，但S1和S2在结尾处的总结略显套路化，可尝试更具体的行动建议或更个性化的观点收尾。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-16.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-16.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-16.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-16.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-16.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-09-15",
       "content_date": "2026-09-15",
       "published_at": "2026-09-15T05:41:30.459237+00:00",
