@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-09-16",
+  "reviewed_at": "2026-09-16T16:24:59.489423+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实准确，逻辑清晰，播客对话自然且紧扣新闻要点，无重大事实或结构错误。",
+    "issues": [
+      "播客中S1提到黄仁勋“直接怼了‘放缓’倡议”，原文为“不会让AI发展放缓”及称其为“骗局”，用词略显口语化，但符合播客语境，不构成事实错误。",
+      "新闻列表中“Recursive完成50亿美元融资”金额巨大，虽基于提供的source_text，但在现实语境中属于极高风险信息，建议后续核实，但基于当前输入判定为pass。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
