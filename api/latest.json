@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-09-16",
-  "content_date": "2026-09-16",
-  "published_at": "2026-09-16T05:31:52.291352+00:00",
+  "issue_date": "2026-09-17",
+  "content_date": "2026-09-17",
+  "published_at": "2026-09-17T05:45:30.334663+00:00",
   "article_count": 12,
-  "podcast_turns": 17,
+  "podcast_turns": 20,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -30,7 +30,7 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen38-27b",
           "usage": {},
-          "candidate_count": 60,
+          "candidate_count": 59,
           "target_count": 12,
           "validation_issues": []
         }
@@ -38,7 +38,13 @@
       "cross_day_dedupe": {
         "window_days": 7,
         "recent_sent_count": 81,
-        "exact_url_blocks": [],
+        "exact_url_blocks": [
+          {
+            "current_url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+            "previous_url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+            "previous_date": "2026-09-16"
+          }
+        ],
         "high_confidence_event_blocks": [],
         "reviews": [
           {
@@ -87,11 +93,10 @@
           "review": {
             "pass": true,
             "issues": [
-              "S1在提及Sakana AI的PC-ALM研究时，使用了“千层网络都能训”的表述，虽然日报中确实提到“成功将其扩展至1000层网络训练”，但结合前文“8至128层...精度相当”的语境，直接说“千层都能训”略显绝对，建议改为“甚至能扩展到千层网络”以更严谨。",
-              "S1在总结多智能体论文时提到“加20行代码就能解决”，日报原文是“仅需少于20行代码的条件检查即可关闭该缺口”，表述基本准确，但“就能解决”语气稍显轻描淡写，建议改为“通过少于20行代码的条件检查即可缓解”以符合技术严谨性。",
-              "整体对话流畅，但S1和S2在结尾处的总结略显套路化，可尝试更具体的行动建议或更个性化的观点收尾。"
+              "第1轮S1发言字数（约95字）处于建议上限边缘，且作为开场略显总结性，若能更自然切入具体新闻点会更像真实对话。",
+              "第19轮S2的结束语‘希望这些资讯能帮助大家把握AI行业的脉搏’略显套路化，可尝试更具体的收尾或留白。"
             ],
-            "repair_instruction": "1. 修正S1关于PC-ALM的表述，将“千层网络都能训”调整为“甚至能扩展到千层网络训练”，以准确反映日报中“成功扩展”而非“全面适用”的语境。2. 微调S1关于多智能体论文的表述，将“加20行代码就能解决”改为“通过少于20行代码的条件检查即可关闭缺口”，避免过度简化技术难度。3. 结尾部分可尝试结合具体新闻点（如AEF-1或Koa）给出更具体的听众行动建议，而非泛泛而谈。"
+            "repair_instruction": "建议微调第1轮S1的开场，减少宏观总结，直接以Vidu S2或豆包的具体功能作为切入点，增强对话的自然感；第19轮S2的结尾可去除客套话，直接以某个具体观点或展望结束，提升真实感。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -102,9 +107,8 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1在提及Sakana AI的PC-ALM研究时，使用了“千层网络都能训”的表述，虽然日报中确实提到“成功将其扩展至1000层网络训练”，但结合前文“8至128层...精度相当”的语境，直接说“千层都能训”略显绝对，建议改为“甚至能扩展到千层网络”以更严谨。",
-          "S1在总结多智能体论文时提到“加20行代码就能解决”，日报原文是“仅需少于20行代码的条件检查即可关闭该缺口”，表述基本准确，但“就能解决”语气稍显轻描淡写，建议改为“通过少于20行代码的条件检查即可缓解”以符合技术严谨性。",
-          "整体对话流畅，但S1和S2在结尾处的总结略显套路化，可尝试更具体的行动建议或更个性化的观点收尾。"
+          "第1轮S1发言字数（约95字）处于建议上限边缘，且作为开场略显总结性，若能更自然切入具体新闻点会更像真实对话。",
+          "第19轮S2的结束语‘希望这些资讯能帮助大家把握AI行业的脉搏’略显套路化，可尝试更具体的收尾或留白。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -112,16 +116,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-16.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-16.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-16/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-16.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-16.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-16.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-17/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-17/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-17/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-17/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-17.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-17/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-17/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-17.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-17/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-17.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-17.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-17.mp4"
 }
