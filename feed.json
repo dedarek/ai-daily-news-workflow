@@ -3,6 +3,133 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-09-18",
+      "content_date": "2026-09-18",
+      "published_at": "2026-09-18T05:30:33.164375+00:00",
+      "article_count": 12,
+      "podcast_turns": 20,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 49,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 83,
+            "exact_url_blocks": [],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1第一轮发言（约75字）和S2第一轮发言（约80字）均符合口播长度，但整体对话中部分轮次（如S1第11轮、S2第12轮）信息密度极高，接近90字上限，口播时语速需较快，建议适当拆分或精简以增强自然感。",
+                  "S1第15轮关于Paper2Agent的描述中，“74篇成功，得分91.2%”直接引用数据，略显罗列，可尝试用更口语化的方式表达，如“在测试的100篇论文里，有74篇成功转化，准确率超过91%”。",
+                  "S2第16轮同时提及Google R4T和总结趋势，信息点较多，建议将R4T的讨论稍微展开或单独成轮，避免与总结混在一起导致节奏过快。"
+                ],
+                "repair_instruction": "1. 优化S1第15轮和S2第16轮的口播节奏，将密集的数据罗列转化为更自然的口语表达，例如将“74篇成功，得分91.2%”改为“在100篇测试论文中，74篇成功转化，准确率高达91.2%”。\n2. 检查S2第16轮，考虑将Google R4T的讨论与总结部分稍作停顿或拆分，避免信息过载，确保听众能消化“扩散模型加速检索”这一技术点。\n3. 整体对话结构良好，无需大幅调整，仅需微调个别长句的断句和语气词，使其更符合真人对话的呼吸感。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1第一轮发言（约75字）和S2第一轮发言（约80字）均符合口播长度，但整体对话中部分轮次（如S1第11轮、S2第12轮）信息密度极高，接近90字上限，口播时语速需较快，建议适当拆分或精简以增强自然感。",
+              "S1第15轮关于Paper2Agent的描述中，“74篇成功，得分91.2%”直接引用数据，略显罗列，可尝试用更口语化的方式表达，如“在测试的100篇论文里，有74篇成功转化，准确率超过91%”。",
+              "S2第16轮同时提及Google R4T和总结趋势，信息点较多，建议将R4T的讨论稍微展开或单独成轮，避免与总结混在一起导致节奏过快。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-18/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-18/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-18/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-18/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-18.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-18/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-18/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-18.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-18/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-18.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-18.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-18.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-09-17",
       "content_date": "2026-09-17",
       "published_at": "2026-09-17T05:45:30.334663+00:00",
