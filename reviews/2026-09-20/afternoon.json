@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-09-20",
+  "reviewed_at": "2026-09-20T16:25:37.160889+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实、逻辑清晰，播客对话自然且紧扣主题，无事实矛盾或重复，符合发布标准。",
+    "issues": [
+      "新闻中提到的部分模型名称（如GPT-6 Astra, Claude Fable 5.1）在现实世界中不存在，但在给定的输入数据中保持一致，视为基于输入数据的内部一致性通过。",
+      "播客中S1提到“2026年AI发展的主线”，虽然符合输入数据的日期设定，但作为日报略显宏大，不过不影响整体质量。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
