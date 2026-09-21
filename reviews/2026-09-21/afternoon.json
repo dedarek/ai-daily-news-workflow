@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-09-21",
+  "reviewed_at": "2026-09-21T16:44:45.477375+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实、逻辑清晰，播客对话自然且紧扣新闻，仅存在极轻微的口语化表述瑕疵，整体质量优秀。",
+    "issues": [
+      "播客中S1提到'Codilot'，应为'Copilot'，属于轻微拼写错误，不影响理解。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
