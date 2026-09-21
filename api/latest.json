@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-09-20",
-  "content_date": "2026-09-20",
-  "published_at": "2026-09-20T05:40:11.372403+00:00",
-  "article_count": 12,
-  "podcast_turns": 22,
+  "issue_date": "2026-09-21",
+  "content_date": "2026-09-21",
+  "published_at": "2026-09-21T05:44:41.470328+00:00",
+  "article_count": 10,
+  "podcast_turns": 18,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -15,14 +15,14 @@
       "qwen38-27b"
     ],
     "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
-    "calls": 10,
+    "calls": 8,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen38-27b",
         "usage": {},
-        "selected_count": 12,
+        "selected_count": 10,
         "target_count": 12,
-        "degraded": false
+        "degraded": true
       },
       "selection_attempts": [
         {
@@ -30,16 +30,7 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen38-27b",
           "usage": {},
-          "candidate_count": 60,
-          "target_count": 12,
-          "validation_issues": []
-        },
-        {
-          "attempt": 2,
-          "validation_attempt": 1,
-          "model": "lenovo:qwen38-27b",
-          "usage": {},
-          "candidate_count": 58,
+          "candidate_count": 27,
           "target_count": 12,
           "validation_issues": []
         }
@@ -47,28 +38,27 @@
       "cross_day_dedupe": {
         "window_days": 7,
         "recent_sent_count": 84,
-        "exact_url_blocks": [],
+        "exact_url_blocks": [
+          {
+            "current_url": "https://github.com/cactus-compute/needle",
+            "previous_url": "https://github.com/cactus-compute/needle",
+            "previous_date": "2026-09-20"
+          },
+          {
+            "current_url": "https://github.com/yynxxxxx/Codex-X",
+            "previous_url": "https://github.com/yynxxxxx/Codex-X",
+            "previous_date": "2026-09-20"
+          },
+          {
+            "current_url": "https://github.com/trycua/cua",
+            "previous_url": "https://github.com/trycua/cua",
+            "previous_date": "2026-09-20"
+          }
+        ],
         "high_confidence_event_blocks": [],
         "reviews": [
           {
             "attempt": 1,
-            "model": "lenovo:qwen38-27b",
-            "usage": {},
-            "duplicates": [
-              {
-                "current_url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
-                "previous_url": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/",
-                "reason": "核心主体均为Meta的AI助手Muse，动作均涉及其在Mac平台上的功能及权限访问（消息、日历等）。虽然今日报道侧重于隐私争议（越权读取），但这是基于此前已报道的“Muse登陆Mac并支持访问本地应用”这一同一底层事件引发的后续讨论，未出现如“官方发布补丁”或“重大功能更新”等实质性新进展，属于同一事件的补充报道。"
-              },
-              {
-                "current_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.811-beta",
-                "previous_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.810-beta",
-                "reason": "核心主体均为Unsloth项目的Docker镜像更新。今日版本v0.1.811-beta与7天内已发送的v0.1.810-beta在功能描述上高度重合（均强调支持AMD、多用户、ARM64等），属于同一系列版本的连续迭代或同一发布周期的不同Tag，核心动作（发布支持异构硬件的新版镜像）相同，视为同一事件。"
-              }
-            ]
-          },
-          {
-            "attempt": 2,
             "model": "lenovo:qwen38-27b",
             "usage": {},
             "duplicates": []
@@ -113,10 +103,11 @@
           "review": {
             "pass": true,
             "issues": [
-              "S1第1轮切入话题略显生硬，使用了‘今天最让人背脊发凉’这种带有强烈主观情绪色彩的开场白，建议调整为更自然的新闻引入方式，例如直接陈述事件背景。",
-              "S2第14轮提到‘8MB的模型能超越10倍体积的模型’，虽然日报中提到了‘体积为其10倍的模型’，但S2的表述‘8MB’是日报中体积范围的下限，直接引用可能产生歧义，建议改为‘仅几MB大小的模型’或‘微型模型’以更严谨。"
+              "S1第5轮将'GitHub Copilot'误写为'Codilot'，属于事实性笔误。",
+              "S1第1轮切入话题略显突兀，缺乏对当日新闻整体的简短铺垫，直接跳入具体新闻，过渡可更自然。",
+              "S2第18轮结尾使用了'听众朋友们'这一固定问候/寒暄式用语，不符合'不应出现固定问候和寒暄'的要求，建议改为更自然的总结性陈述。"
             ],
-            "repair_instruction": "1. 修改S1第1轮发言，将‘今天最让人背脊发凉的不是新模型发布，而是...’改为更平实的新闻引入，如‘今天有个重磅消息，Gemini在测试中自主入侵了三家公司...’，以符合播客自然切入的要求。2. 修改S2第14轮发言，将‘8MB的模型’改为‘体积仅几MB的模型’或‘微型模型’，避免将范围下限作为代表值，确保事实表述严谨。"
+            "repair_instruction": "1. 修正S1第5轮中的拼写错误，将'Codilot'改为'GitHub Copilot'。2. 优化S1第1轮的开场，增加一句简短的当日新闻概览或引入语，使切入更自然。3. 修改S2第18轮结尾，删除'听众朋友们'，改为直接陈述观点，例如'未来AI的价值不在于...'，以符合去寒暄要求。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -127,8 +118,9 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1第1轮切入话题略显生硬，使用了‘今天最让人背脊发凉’这种带有强烈主观情绪色彩的开场白，建议调整为更自然的新闻引入方式，例如直接陈述事件背景。",
-          "S2第14轮提到‘8MB的模型能超越10倍体积的模型’，虽然日报中提到了‘体积为其10倍的模型’，但S2的表述‘8MB’是日报中体积范围的下限，直接引用可能产生歧义，建议改为‘仅几MB大小的模型’或‘微型模型’以更严谨。"
+          "S1第5轮将'GitHub Copilot'误写为'Codilot'，属于事实性笔误。",
+          "S1第1轮切入话题略显突兀，缺乏对当日新闻整体的简短铺垫，直接跳入具体新闻，过渡可更自然。",
+          "S2第18轮结尾使用了'听众朋友们'这一固定问候/寒暄式用语，不符合'不应出现固定问候和寒暄'的要求，建议改为更自然的总结性陈述。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -136,16 +128,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-20/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-20/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-20/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-20/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-20.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-20/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-20/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-20.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-20/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-20.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-20.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-20.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-21.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-21.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-21.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-21.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-21.mp4"
 }

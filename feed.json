@@ -3,6 +3,149 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-09-21",
+      "content_date": "2026-09-21",
+      "published_at": "2026-09-21T05:44:41.470328+00:00",
+      "article_count": 10,
+      "podcast_turns": 18,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 10,
+            "target_count": 12,
+            "degraded": true
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 27,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 84,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://github.com/cactus-compute/needle",
+                "previous_url": "https://github.com/cactus-compute/needle",
+                "previous_date": "2026-09-20"
+              },
+              {
+                "current_url": "https://github.com/yynxxxxx/Codex-X",
+                "previous_url": "https://github.com/yynxxxxx/Codex-X",
+                "previous_date": "2026-09-20"
+              },
+              {
+                "current_url": "https://github.com/trycua/cua",
+                "previous_url": "https://github.com/trycua/cua",
+                "previous_date": "2026-09-20"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1第5轮将'GitHub Copilot'误写为'Codilot'，属于事实性笔误。",
+                  "S1第1轮切入话题略显突兀，缺乏对当日新闻整体的简短铺垫，直接跳入具体新闻，过渡可更自然。",
+                  "S2第18轮结尾使用了'听众朋友们'这一固定问候/寒暄式用语，不符合'不应出现固定问候和寒暄'的要求，建议改为更自然的总结性陈述。"
+                ],
+                "repair_instruction": "1. 修正S1第5轮中的拼写错误，将'Codilot'改为'GitHub Copilot'。2. 优化S1第1轮的开场，增加一句简短的当日新闻概览或引入语，使切入更自然。3. 修改S2第18轮结尾，删除'听众朋友们'，改为直接陈述观点，例如'未来AI的价值不在于...'，以符合去寒暄要求。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1第5轮将'GitHub Copilot'误写为'Codilot'，属于事实性笔误。",
+              "S1第1轮切入话题略显突兀，缺乏对当日新闻整体的简短铺垫，直接跳入具体新闻，过渡可更自然。",
+              "S2第18轮结尾使用了'听众朋友们'这一固定问候/寒暄式用语，不符合'不应出现固定问候和寒暄'的要求，建议改为更自然的总结性陈述。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-21.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-21.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-21/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-21.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-21.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-21.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-09-20",
       "content_date": "2026-09-20",
       "published_at": "2026-09-20T05:40:11.372403+00:00",

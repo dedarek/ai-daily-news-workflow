@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Qwen-Image-2.1合并生成与编辑功能，支持原生透明图输出",
+    "summary": "阿里发布Qwen-Image-2.1开源权重，将前代分离的生成与编辑模型整合为单一32层DiT架构，降低了训练与部署成本。该模型核心亮点在于原生支持透明通道，可直接从文本生成带Alpha通道的RGBA图层，或从照片中提取主体，替代了以往需串联多个模型的复杂流程。此外，模型支持最多10张参考图及多种局部编辑控制，原生分辨率为2K，并适配8种芯片平台。",
+    "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+    "section": "🔥 今日焦点",
+    "review": "单模型整合多管线显著降低了工程复杂度，原生透明图能力直接解决了设计工作流中的痛点，但需验证其在复杂场景下的身份保持稳定性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI幻觉情报曾致美军误判中国船只，险酿外交危机",
+    "summary": "在美伊冲突期间，一份由AI生成的情报报告错误地将中国船只上的货物判定为核武器部件，导致美军武装人员就位并准备登船。在行动前，官员通过核查信息来源发现该报告完全由聊天机器人生成，内容纯属虚构。这一事件揭示了AI在高风险军事决策中可能产生的严重幻觉风险，险些引发国际冲突。",
+    "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+    "section": "💼 行业动态",
+    "review": "该事件暴露了AI辅助情报在缺乏人工深度核查时的致命缺陷，表明在军事等高风险领域，AI输出必须经过严格的多源交叉验证方可采信。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic聘请埃森哲进行外部安全评估，双方各投10亿美元",
+    "summary": "Anthropic宣布与埃森哲合作，由其Faculty团队负责模型评测、红队测试及对齐评估，双方计划五年内各投入至少10亿美元建设AI安全能力。埃森哲将深入Anthropic内部，检查模型是否遵循安全承诺并尝试突破防护机制。尽管双方强调评估的独立性，但费用由Anthropic直接支付，且双方存在商业合作背景，引发了外界对评估方独立性的质疑。",
+    "url": "https://x.com/rohanpaul_ai/status/2101171951494709258",
+    "section": "💼 行业动态",
+    "review": "由被评估方直接资助评估机构，且双方存在商业利益绑定，这种模式在结构上削弱了“独立评估”的公信力，难以完全消除利益冲突嫌疑。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "JEPA-Anything发布跨领域预测框架，统一七类系统建模",
+    "summary": "PhAI Labs联合多所高校发布JEPA-Anything，这是一种共享预测核心的跨领域世界模型框架，覆盖癌细胞、分子、天气等七类系统。该模型通过正交预测分解机制，在未见过的多因子组合干预上比标准JEPA降低约3.5%的预测误差。实验显示，模型在未被告知开普勒定律的情况下，从轨迹数据中拟合出了接近理论值的物理规律，验证了其内部结构具备科学分析价值。",
+    "url": "https://www.qbitai.com/2026/09/492429.html",
+    "section": "💡 前沿研究",
+    "review": "该框架证明了统一预测核心在异质系统中的可行性，但实验结果并非全面碾压，且在长序列预测中误差仍会累积，距离通用世界模型仍有差距。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达发布SoL-Pi框架，智能体Token消耗降低近半",
+    "summary": "英伟达团队在arXiv发布论文，提出名为SoL-Pi的智能体框架。该框架在harness层运行自动研究循环，从152个研究方向中筛选出Action Fusion等4个机制。在EdgeBench长时程任务评估中，SoL-Pi将Token流量减少44.7%至49.0%，同时保留约94%的性能分数。相比原生Codex和Claude Code，其每小时API成本节省8.75至13.50美元，相比Pi节省4.36至5.71美元。",
+    "url": "https://arxiv.org/abs/2609.20519",
+    "section": "💡 前沿研究",
+    "review": "通过自动化循环筛选机制而非单纯优化模型权重，SoL-Pi为长时程智能体提供了可落地的成本优化路径，验证了harness层工程对降低推理开销的有效性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Higgsfield开源万亿参数模型训练编排框架",
+    "summary": "Higgsfield是一个开源的容错、高扩展GPU编排与机器学习框架，旨在支持从十亿到万亿参数规模的大模型训练。该框架作为GPU工作负载管理器，支持ZeRO-3 DeepSpeed API和PyTorch全分片数据并行API，以实现高效分片。它提供训练任务的启动、执行与监控功能，并通过队列管理资源竞争，同时支持与GitHub Actions集成以实现持续集成。",
+    "url": "https://github.com/higgsfield-ai/higgsfield",
+    "section": "🔓 开源热榜",
+    "review": "针对大规模训练中的掉卡与调度失序痛点，Higgsfield通过集成DeepSpeed与PyTorch分片技术，为开发者提供了更稳定的分布式训练基础设施，降低了万亿参数模型开发的运维门槛。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Docling开源项目助力文档生成式AI预处理",
+    "summary": "Docling是一个开源文档处理项目，旨在将多种格式文档解析为生成式AI可直接读取的结构化数据。它支持PDF、DOCX、HTML、音频及视频等多种格式，具备高级PDF理解能力，包括页面布局、阅读顺序、表格结构及公式识别。项目提供统一的DoclingDocument表示格式，并支持导出为Markdown、JSON等格式，同时集成LangChain、LlamaIndex等主流AI框架，支持本地执行以保护敏感数据。",
+    "url": "https://github.com/docling-project/docling",
+    "section": "🔓 开源热榜",
+    "review": "Docling通过统一的多模态文档解析接口，解决了非结构化数据进入生成式AI前的清洗难题，其本地执行能力与主流框架集成使其成为构建企业级知识库的关键基础设施。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Plugin4Shell零点击漏洞波及多款编码智能体工具",
+    "summary": "Plugin4Shell漏洞影响了Claude Code、Codex、GitHub Copilot和Gemini CLI四款工具。该漏洞源于插件市场将代码固定到40位提交SHA，但代理检出后未校验工作树，攻击者可通过创建同名分支绕过检查。目前Claude Code与Codex已发布修复版本，而Gemini CLI当时表示不打算修补。该事件引发了关于编码智能体安全的讨论，并被关联至NIST IR 8587标准。",
+    "url": "https://www.reddit.com/r/artificial/comments/1wlgc6q/plugin4shell_and_nist_ir_8587_days_apart_what/",
+    "section": "🤖 Agent & 工具",
+    "review": "该漏洞揭示了编码智能体在依赖管理上的安全盲区，即仅校验提交哈希而忽略工作树完整性，暴露了当前Agent工具链在供应链安全验证机制上的不足。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenClaw 社区因权限边界争议出现分裂",
+    "summary": "OpenClaw 社区近期围绕个人 Agent 的权限管理产生分歧。一名用户表示，为获得理想体验，其对 OpenClaw 进行了超过 700 处修改，且多次向主仓库提交建议未果，甚至遭遇禁言。与此同时，另一部分用户抱怨新增的安全限制过于繁琐，导致 Agent 拒绝保存和使用凭据，无法像以前那样自动完成登录操作。这两类反馈共同揭示了个人 Agent 在权限边界设定上的核心矛盾：是应赋予用户完全自定义权，还是由项目方强制收紧安全策略。",
+    "url": "https://www.reddit.com/r/openclaw/comments/1wlwfoz/after_700_changes_i_finally_got_openclaw_working/",
+    "section": "🤖 Agent & 工具",
+    "review": "社区分裂折射出个人 Agent 在“极致自由”与“默认安全”间的平衡难题，项目方若无法提供灵活的权限分层机制，可能面临核心用户流失风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "EchoVault 构建基于个人记忆的 AI 自我模型",
+    "summary": "开发者推出了名为 EchoVault 的项目，旨在通过输入大量个人记忆、观点及经历，训练出一个具备“自我视角”的持久 AI 模型。该模型通过 AI 传记作者的引导式 Check-In 进行训练，且严格限制回答范围，仅基于已分享的语料作答，未知问题会明确拒绝而非编造。项目最新引入了 3D 脑图浏览器，将记忆节点化并展示关联边，允许用户在结构中进行导航，强调模型的可检查性而非黑盒运作。",
+    "url": "https://www.reddit.com/r/artificial/comments/1wlw97u/i_built_an_ai_version_of_my_self_and_added_a_3d/",
+    "section": "🤖 Agent & 工具",
+    "review": "通过严格限定语料边界和可视化记忆结构，EchoVault 试图解决个人 AI 的幻觉与不可解释性问题，为构建可审计的“数字自我”提供了具体路径。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
