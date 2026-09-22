@@ -3,6 +3,162 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-09-22",
+      "content_date": "2026-09-22",
+      "published_at": "2026-09-22T05:43:12.015058+00:00",
+      "article_count": 12,
+      "podcast_turns": 22,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 54,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 82,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://github.com/yynxxxxx/Codex-X",
+                "previous_url": "https://github.com/yynxxxxx/Codex-X",
+                "previous_date": "2026-09-20"
+              },
+              {
+                "current_url": "https://github.com/higgsfield-ai/higgsfield",
+                "previous_url": "https://github.com/higgsfield-ai/higgsfield",
+                "previous_date": "2026-09-21"
+              },
+              {
+                "current_url": "https://the-decoder.com/gpt-6-astra-and-claude-fable-turn-robot-arms-into-slapstick-killer-robots-in-new-safety-benchmark/",
+                "previous_url": "https://the-decoder.com/gpt-6-astra-and-claude-fable-turn-robot-arms-into-slapstick-killer-robots-in-new-safety-benchmark/",
+                "previous_date": "2026-09-20"
+              },
+              {
+                "current_url": "https://github.com/cactus-compute/needle",
+                "previous_url": "https://github.com/cactus-compute/needle",
+                "previous_date": "2026-09-20"
+              },
+              {
+                "current_url": "https://github.com/trycua/cua",
+                "previous_url": "https://github.com/trycua/cua",
+                "previous_date": "2026-09-20"
+              },
+              {
+                "current_url": "https://github.com/docling-project/docling",
+                "previous_url": "https://github.com/docling-project/docling",
+                "previous_date": "2026-09-21"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S2在讨论阶跃星辰Step 5 Preview时，提到‘成本降低67%以上’，但日报中该数据（67%）对应的是GitHub Copilot HydraFusion的成本降低，Step 5的成本描述为‘单任务成本仅为Opus 5的12.5%’（即降低87.5%）。此处存在事实张冠李戴，需修正。",
+                  "S2在讨论GitHub Copilot HydraFusion时，再次提到‘成本却降了67%’，这与日报事实一致，但需注意与上一条Step 5的区分，避免听众混淆两个不同产品的成本数据。"
+                ],
+                "repair_instruction": "请修正S2关于阶跃星辰Step 5 Preview的成本描述。将‘成本降低67%以上’改为‘单任务成本仅为Opus 5的12.5%’或‘成本大幅降低’，以符合日报事实。确保后续提到GitHub Copilot HydraFusion时，准确引用其‘成本降低67%’的数据，避免混淆。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S2在讨论阶跃星辰Step 5 Preview时，提到‘成本降低67%以上’，但日报中该数据（67%）对应的是GitHub Copilot HydraFusion的成本降低，Step 5的成本描述为‘单任务成本仅为Opus 5的12.5%’（即降低87.5%）。此处存在事实张冠李戴，需修正。",
+              "S2在讨论GitHub Copilot HydraFusion时，再次提到‘成本却降了67%’，这与日报事实一致，但需注意与上一条Step 5的区分，避免听众混淆两个不同产品的成本数据。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-22/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-22/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-22/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-22/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-22.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-22/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-22/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-22.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-22/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-22.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-22.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-22.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-09-21",
       "content_date": "2026-09-21",
       "published_at": "2026-09-21T05:44:41.470328+00:00",
