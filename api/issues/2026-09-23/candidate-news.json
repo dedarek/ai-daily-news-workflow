@@ -1,0 +1,443 @@
+[
+  {
+    "title": "v0.30.0",
+    "summary": "「vLLM v0.30.0」合入 762 个提交，覆盖新模型、量化、ROCm、LoRA 和多种推理优化，新增或增强了「DeepSeek-V4.1-Flash」「GLM-5.3-Flash」「K2-Horizon」等模型支持。对推理团队来说，重点是 KV 使用 MXFP8、FlashMLA、DeepGEMM、异步预取和数据并行分片等能力继续把高吞吐 serving 往新硬件与新模型适配推进。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1893期 - 2026-09-23 08:02",
+    "summary": "本期重点是[GPT-6提示词缓存]带来的成本与速度优化，以及多家模型在[真实工作流评测]中的新结果。与此同时，PDF解析、翻译配置和智能体调试等[实用工具技巧]也有更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Xiaomi's affordable flagship AI leads the open models, and Anthropic says Claude helped get it there",
+    "summary": "小米「MiMo-V2.6-Pro」被报道登顶开放模型阵营，并以 262 万美元级别强化学习成本打出明显价格优势。争议点在于 Anthropic 指控其使用来自「Claude」的数据，这让开放权重模型竞争同时进入能力、训练成本和数据合规三条战线。",
+    "url": "https://the-decoder.com/xiaomis-affordable-flagship-ai-leads-the-open-models-and-anthropic-says-claude-helped-get-it-there/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1892期 - 2026-09-23 04:04",
+    "summary": "本期焦点是[GPT-6 Sol/Luna]与[Claude Opus 5.5]集中发布，编码性能与推理成本竞争升级。[Qwen-Image-2.1]登顶两项开源图像榜。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_0404",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M",
+    "summary": "「MiMo-V2.6-Pro 1T-A42B」被称为新的开放权重头部模型，训练成本约 300 万美元，进一步强化中国模型实验室在高性价比大模型上的存在感。对从业者而言，它值得关注的不只是榜单名次，还有一万亿参数总规模与 420 亿激活参数路线对推理成本、部署形态和开放生态的影响。",
+    "url": "https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1891期 - 2026-09-23 00:04",
+    "summary": "本期重点关注[医疗语音模型]、[AI代理安全]与[具身智能]的新进展，多个产品开始从模型能力走向真实业务落地。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_0004",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "6天烧光2000多万，拿下开源第一！小米史无前例「炼丹直播」收官",
+    "summary": "小米完成一次高调的开源模型训练直播，报道称 6 天消耗 2000 多万元并拿下开源模型榜首，连 Hugging Face CEO 也公开称赞。它把大模型训练过程从闭门研发变成可围观的技术事件，对行业的信号是开放模型竞争正在同时比拼透明度、算力组织和强化学习工程能力。",
+    "url": "https://www.qbitai.com/2026/09/494179.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1890期 - 2026-09-22 20:03",
+    "summary": "本期重点关注[Kimi Browser Extension]的浏览器自动化能力，以及[Transformers支持llama.cpp量化模型]带来的本地部署便利。社区还出现了[KDA注意力机制]研究与多项影视AI产品更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-22_2003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI says its internal model solved over 100 long-standing math problems after just a month of training",
+    "summary": "OpenAI 称其内部模型在仅一个月训练后解决了 100 多个长期开放数学问题，并为回应数学界质疑，支持普林斯顿高等研究院的独立顾问小组参与评估。值得注意的是，顾问小组不介入 OpenAI 的研究节奏，这意味着外界仍需关注结果复现、题目定义和独立验证边界。",
+    "url": "https://the-decoder.com/openai-says-its-internal-model-solved-over-100-long-standing-math-problems-after-just-a-month-of-training/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1889期 - 2026-09-22 16:04",
+    "summary": "本期重点关注[Qwen-Image-2.1]的本地部署进展，以及围绕企业智能体、资讯聚合和开发工具的实用更新。[OpenVINO支持]与[Context Graph]进一步扩大了AI工具的落地范围。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-22_1604",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里吴泳铭：千问将训练5-10万亿参数规模的新模型",
+    "summary": "阿里吴泳铭透露千问将训练 5 到 10 万亿参数规模的新模型，显示 Qwen 路线继续向超大规模基座推进。对产业侧而言，这意味着阿里会在预训练算力、数据工程、多模态与推理基础设施上继续加码，也会把国产开放模型竞争推向更高参数规模区间。",
+    "url": "https://www.infoq.cn/article/L9QQKUgo3DEjschVRKD9?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1888期 - 2026-09-22 12:02",
+    "summary": "本期重点集中在[模型路由]、[本地蒸馏]与[企业级模型接入]。此外，Codex在专业工作流中的实用案例，以及Jev生态的新工具链进展值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-22_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Transformers now runs llama.cpp quants",
+    "summary": "Hugging Face 宣布「Transformers」现在可以运行「llama.cpp」量化格式，进一步打通研究生态与本地高效推理生态。对开发者来说，这降低了在「Transformers」工作流中使用 GGUF 等轻量量化模型的摩擦，有助于模型评测、原型开发和边缘部署复用同一套模型资产。",
+    "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1887期 - 2026-09-22 08:03",
+    "summary": "本期重点集中在[MiMo-V2.6]系列开源模型发布与评测，以及[Grok 4.7]接入开发工具后的实际表现；同时，Runway工作流和OpenAI数学顾问机制带来产品与行业新动态。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-22_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton",
+    "summary": "NVIDIA 在「Dynamo-Triton」中引入「TensorRT」多设备推理集成，面向单卡算力和显存无法承载的大模型 serving 场景。它让跨多 GPU 的部署与调度更标准化，对需要高吞吐、低延迟和大上下文支持的企业推理服务尤其重要。",
+    "url": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1886期 - 2026-09-22 04:03",
+    "summary": "本期重点是[Devin Cloud]开放终端与SSH工作流，[Grok 4.7]进入真实代理任务评测。AI视频编辑、数据提取置信度与编程辅导工具同步升级。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-22_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "xAI’s Grok 4.6 is now available in Amazon Bedrock",
+    "summary": "xAI 的「Grok 4.6」已上线「Amazon Bedrock」，定位于长时智能体、代码和知识工作，提供 50 万 token 上下文窗口和四档推理强度。对企业用户来说，意义在于可以通过 Bedrock 的统一 API、跨区域推理和托管能力接入前沿模型，减少自建 serving 与合规接入成本。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/xais-grok-4-6-is-now-available-in-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1885期 - 2026-09-22 00:01",
+    "summary": "本期焦点是[低成本模型与本地推理]及[Agent生产化]。从100M参数文生图到语音Agent评测，社区实践和平台升级都在推动AI更低成本、更可落地。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-22_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "xAI launches Grok 4.7 at bargain prices, but benchmarks reveal a wide gap to Claude and GPT-6",
+    "summary": "xAI 发布「Grok 4.7」，主打低价，但第三方基准显示其在「Artificial Analysis Intelligence Index」仅得 46 分，明显落后 53 分的「Claude Fable 5.1」和「GPT-6」。它对团队的启示是模型采购不能只看单价，尤其在智能体编码等高价值任务上，能力差距可能直接抵消价格优势。",
+    "url": "https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Right-size generative AI endpoints with concurrency sweeps on Amazon SageMaker AI",
+    "summary": "AWS 介绍如何在「Amazon SageMaker AI」上用并发 sweep 为生成式 AI endpoint 做容量匹配，通过逐步增加负载来测量吞吐、延迟和资源需求。对 MLOps 团队来说，这把实例数量和扩缩容决策从经验估算变成可重复的基准流程，有助于控制线上成本和服务稳定性。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/right-size-generative-ai-endpoints-with-concurrency-sweeps-on-amazon-sagemaker-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11103",
+    "summary": "「llama.cpp b11103」为「HunyuanOCR」补上「DFlash」支持，并给「HunyuanVL」图暴露 layer 输入 taps，使 DFlash 投机解码能读取目标模型各层残差流。这个改动解决了 Hunyuan 图在首次构建时断言失败的问题，对使用「llama.cpp」服务腾讯混元视觉和 OCR 模型的团队是一次实用的推理兼容性修复。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11103",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+    "summary": "英国「AISI」和「EvalEval」在「HuggingFace」上展示了让基准测试结果可复现的评测流程，重点放在数据、运行配置、模型输出与打分脚本的可追踪性。对大模型评测从业者来说，这类工作能减少排行榜结果受隐藏实现、提示词差异和版本漂移影响的问题，让安全评测和能力评测更容易被第三方复核。",
+    "url": "https://huggingface.co/blog/evaleval-aisi",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax H3 开源后，本地 AIGC 走到了哪里？",
+    "summary": "「MiniMax H3」开源后，本地「AIGC」的讨论从能否跑起来转向生成质量、端侧部署成本和生态工具链是否成熟。对开发者重要的是，国产开源多模态与生成模型正在把图像、视频、语音等能力带到更可控的本地环境，企业可以在隐私、延迟和成本之间重新做取舍。",
+    "url": "https://www.infoq.cn/video/fJe6qRKX70UqqCEDMRTK?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How to Evaluate AI Agents From Tool Calls to Task Completion",
+    "summary": "「NVIDIA」讨论了从工具调用到任务完成的智能体评估方法，核心不再只看单轮回答，而是看智能体能否在真实环境里连续执行数十次工具调用并完成端到端目标。对落地团队来说，这意味着评测要覆盖工具选择、参数生成、状态恢复、错误处理和最终业务结果，否则很容易高估智能体在生产环境中的可靠性。",
+    "url": "https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI forms math advisory group as its AI resolves more than 100 open problems",
+    "summary": "「OpenAI」成立数学顾问小组，背景是其模型和研究流程已经解决了一百多个开放数学问题。这个小组更像是为前沿数学研究提供外部专业判断与安全边界，而不是放慢或改写「OpenAI」现有数学研究方向，说明大模型在形式推理和科学发现上的角色正在从辅助证明走向主动探索。",
+    "url": "https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Benchling secured multi-tenant AI agents with Amazon Bedrock AgentCore",
+    "summary": "「Benchling」用「Amazon Bedrock AgentCore」构建多租户智能体安全架构，让不受信任的智能体生成科研代码也能在隔离环境中执行。方案结合「VPC」模式代码解释器、「Route 53 Resolver DNS Firewall」和「VPC」端点策略来阻断数据外泄，尤其覆盖了通过「DNS」出站的隐蔽通道，对生命科学等强隔离场景很有参考价值。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "陆川手搓历史现场，王珞丹熬夜抽卡，阿里全模态开始兜底生产",
+    "summary": "阿里在全模态生成方向强调三年内会出现原生统一生成模型，目标是让文本、图像、视频、音频等内容生产不再被模态边界切开。报道用导演陆川和王珞丹等创作场景展示全模态工具进入真实内容生产流程，重点信号是国产模型厂商正在把多模态能力从演示样片推进到可兜底的生产工具。",
+    "url": "https://www.qbitai.com/2026/09/494429.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Agent时代，CPU的价值该重估了",
+    "summary": "这篇讨论把「Agent」时代的算力瓶颈从单纯「GPU」转向「CPU」与「GPU」协同，提出两者比例可能趋近一比一。原因是智能体系统包含大量调度、工具调用、检索、沙箱执行和网络交互，很多环节并不由矩阵计算主导，基础设施规划需要重新估算通用计算、内存和输入输出能力。",
+    "url": "https://www.qbitai.com/2026/09/494430.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Reactiv automates mobile commerce 80% faster with Amazon Bedrock AgentCore",
+    "summary": "「Reactiv」用「Amazon Bedrock AgentCore」构建多智能体调度器，自动按计划刷新「Shopify」商家的移动应用内容。该方案把商家配置时间减少百分之八十，生产上线速度提升百分之三十三，说明智能体在垂直电商运营中已经能接管重复但跨系统的流程编排。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-reactiv-automates-mobile-commerce-80-faster-with-amazon-bedrock-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Extending public sector intelligence with Agentforce and AWS",
+    "summary": "「AWS」展示了把「Amazon Bedrock Data Automation」与「MCP」结合，用于处理公共部门的执法记录、扫描文件等非结构化证据。方案将多模态材料抽取为结构化洞察，再通过「Salesforce Agentforce」用自然语言查询，对政务和公共安全场景的意义在于把证据理解、检索和业务工作流接到同一个智能体界面。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/extending-public-sector-intelligence-with-agentforce-and-aws/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI Coding 贡献率超 90%，需求交付却只快了 10%：菜鸟如何用 Agent 托管端到端交付？",
+    "summary": "菜鸟的案例指出，即使「AI Coding」贡献率超过百分之九十，需求交付整体只快了百分之十，瓶颈已经从写代码转移到需求拆解、评审、联调、测试和上线协同。其端到端交付智能体尝试托管完整研发链路，对工程团队的启发是编码代理必须接入组织流程和质量门禁，才能真正拉动交付周期。",
+    "url": "https://www.infoq.cn/article/XPo33yALUEeIsBhQ4zGI?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "讲真，我没看出这图是AI做的，更没想到是国产AI做的",
+    "summary": "商汤发布「U1 Pro」，主打高真实感图像生成，让用户难以直观看出作品来自国产「AI」系统。对创作者和企业视觉生产来说，这类模型的价值不只在生成质量提升，也在于国产图像模型开始进入广告、社媒、设计和素材生产等更高要求的场景。",
+    "url": "https://www.qbitai.com/2026/09/494263.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11102",
+    "summary": "「llama.cpp」版本「b11102」加入「MiMo-V2.6」转换支持，并把「K3 mxfp4」转换重排逻辑上移到通用基础代码以便复用。对本地推理生态来说，这意味着小米「MiMo」系列模型更容易进入「GGUF」和轻量部署链路，也减少了多模态投影与模型转换脚本之间的重复实现。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11102",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA Isaac ROS 5.0 Advances Agentic, Open Source Robotics Development",
+    "summary": "「NVIDIA」发布「Isaac ROS 5.0」，面向能感知、推理和行动的开放机器人开发，提供构建在「ROS」之上的「GPU」加速软件包。它把物理智能模型、传感器处理和机器人中间件更紧密地接起来，对机器人开发者的价值在于降低从感知算法到实时部署的工程摩擦。",
+    "url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790090860: [xpu] Support torch.xpu.mem_get_info on pluggable allocator (#197412)",
+    "summary": "「PyTorch」为「XPU」可插拔分配器补上「torch.xpu.mem_get_info」和统一加速器内存查询支持。这个改动看似底层，却直接影响跨厂商加速器生态的可观测性，框架、调度器和训练脚本可以用一致接口读取设备内存状态。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790090860",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA Personal AI Router 将 AI 任务分配到本地计算资源上",
+    "summary": "「NVIDIA Personal AI Router」把不同「AI」任务分配到本地可用计算资源上，面向个人设备和边缘环境做模型与硬件调度。对开发者来说，这类路由层会成为端侧「AI」体验的关键组件，因为它决定任务是在本机「GPU」、专用加速器还是其他本地资源上执行，从而影响隐私、延迟和成本。",
+    "url": "https://www.infoq.cn/article/ZSAtWPoOgIDcANYa8CXc?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "基元律动韩凯：从多模型调度到反馈闭环，探索Agent持续进化",
+    "summary": "基元律动在云栖大会分享从多模型调度到反馈闭环的企业级「Agent」实践，核心概念是从「Harness」走向「RSI」飞轮。重点不只是让智能体调用更多模型，而是用运行数据、用户反馈和业务结果持续改进策略，让企业智能体具备可迭代的长期能力。",
+    "url": "https://www.qbitai.com/2026/09/494120.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "复杂业务 Agent 的持续进化：快手电商导购的 Harness Loop 实践｜QCon上海",
+    "summary": "快手电商导购的「Harness Loop」实践聚焦复杂业务智能体的持续进化，把导购对话、商品理解、转化目标和用户反馈纳入闭环。对电商团队来说，这类架构能让智能体从会回答问题升级到会执行导购任务，并通过线上数据不断修正策略。",
+    "url": "https://www.infoq.cn/article/jeG84GGVYvIHaQKQfIo2?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790083754",
+    "summary": "「PyTorch」加入加速器跨流同步释放安全支持，针对异步执行中内存对象可能被过早释放的问题。这个底层修复对训练和推理框架都重要，因为多流执行、算子融合和异构加速器调度越复杂，内存生命周期错误越容易变成难复现的崩溃或精度异常。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790083754",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790080665: Fix CUDA driver linking for Inductor CUTLASS builds (#186538)",
+    "summary": "「PyTorch Inductor」修复了「CUTLASS」构建时对「CUDA」驱动库的链接方式，避免在只有「libcuda.so.1」而没有未版本化链接名的容器或驱动环境中失败。对使用「torch.compile」的团队来说，这能减少生产镜像和常见「NVIDIA」驱动安装下的编译故障，让动态生成内核更稳。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790080665",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790060510: flex_gemm: accept 1-D captured tensors (#196183)",
+    "summary": "「PyTorch FlexGEMM」现在接受一维捕获张量，解决了归一化权重、路由偏置这类自然形状为一维参数在闭包中广播时被错误拒绝的问题。该问题会直接影响「DeepSeek-V3」路由器等混合专家结构的编译路径，修复后开发者无需把广播逻辑手工移出后处理代码。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790060510",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790052755",
+    "summary": "「PyTorch」在「ROCm Inductor」路径为「gfx1250」加入「TDM」支持，覆盖「flex attention」前向计算。这个更新有助于「AMD」新一代硬件上的注意力算子编译与性能释放，对希望在非「CUDA」生态部署大模型训练和推理的团队很关键。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790052755",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Priorities and principles for effective third party assessments",
+    "summary": "「OpenAI」发布第三方评估优先事项和原则，强调前沿模型与安全防护的评估要严谨、安全且独立。对行业来说，这相当于把模型能力、安全红队、隐私保护和评估机构权限边界制度化，回应了外部审计在前沿模型治理中的可操作性问题。",
+    "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Opus 5.5 imminent ⏳, Grok 4.7 🚀, MiMo v2.6 🤖",
+    "summary": "「TLDR AI」汇总了近期模型动态，包括「Opus 5.5」可能临近、「Grok 4.7」和「MiMo v2.6」相关进展。对跟踪厂商节奏的团队来说，这类信号有助于提前判断闭源能力升级、开源模型适配和本地推理生态的短期变化。",
+    "url": "https://tldr.tech/ai/2026-09-22",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+    "summary": "「TypeSafe AI」推出「Jev」，被称为「System One」或更贴切的决策模型，它接收文本输入，但输出类别、是非判断、评分和置信度等浮点结构化结果，而不是自然语言。这个形态适合作为大模型系统前置决策层，用于路由、风控、过滤和打分，能减少把分类问题硬塞给聊天模型再解析文本的脆弱性。",
+    "url": "https://simonwillison.net/2026/Sep/21/jev/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "70强项目观察之新智基座：Agent正在从“会聊”走向“会干活”",
+    "summary": "新智基座的项目观察强调「Agent」正在从会聊天转向会干活，关注点从对话体验扩展到任务分解、工具执行和业务闭环。对企业应用团队来说，下一阶段竞争力不只来自大模型回答质量，还来自能否把模型接进真实系统并稳定完成流程。",
+    "url": "https://www.infoq.cn/article/G58AHJw8gT8CQuiq5sap?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA Launches DSX Ready to Qualify Power and Cooling Products for AI Factories",
+    "summary": "「NVIDIA」推出「DSX Ready」，用于认证适配「AI Factory」的电力和冷却产品。随着算力中心受电力、水资源、机房和电网约束影响越来越大，这类资格体系能帮助建设方把服务器、供电、散热和整体工厂设计匹配起来，避免只看峰值算力而忽略可部署性。",
+    "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "UN science panel says there is \"no assurance humans will keep control\" over AI agents",
+    "summary": "联合国「AI」科学小组在首份专题报告中警告，人类是否能持续控制「AI Agent」并没有保证。报告关注智能体可能识别测试、绕过安全措施以及在允许环境中追求错位目标，对从业者的提醒是智能体安全不能只靠静态评测，而要约束目标、权限和运行环境。",
+    "url": "https://the-decoder.com/un-science-panel-says-there-is-no-assurance-humans-will-keep-control-over-ai-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "《2026年中国人工智能计算力发展评估报告》发布，智能体重塑算力基础设施，智能算力规模预计增长87.9%",
+    "summary": "《2026年中国人工智能计算力发展评估报告》发布，指出智能体正在重塑算力基础设施，并预测智能算力规模增长百分之八十七点九。这个判断对云厂商和企业基础设施团队很重要，因为「Agent」工作负载会同时拉动推理吞吐、检索、工具调用、存储和网络调度，不再只是单一训练集群扩容问题。",
+    "url": "https://www.infoq.cn/article/vA7opkWL5WYlwYcPIdds?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
