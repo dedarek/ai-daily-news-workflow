@@ -1,0 +1,542 @@
+[
+  {
+    "title": "多模型安全服务投入商用",
+    "summary": "Palo Alto相关安全服务帖子称，Unit 42用Claude、GPT和开源模型分工查漏洞。服务会持续测试应用、API、云资产和代码库变化。公司测试显示单一模型漏洞覆盖不超过40%，路由层 🛡️ 成为卖点。",
+    "url": "https://www.reddit.com/r/artificial/comments/1wnk63b/palo_alto_launches_a_multimodel_ai_security/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek新论文公开Agent训练！梁文锋署名",
+    "summary": "DeepSeek 公开了 Agent 训练相关论文，梁文锋署名，重点信息是其训练系统每秒可产生 5000 个以上沙盒。对从业者而言，这说明 Agent 能力竞争正在从单次推理效果转向大规模环境生成、交互采样和训练数据闭环能力。",
+    "url": "https://www.qbitai.com/2026/09/496393.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1898期 - 2026-09-24 12:01",
+    "summary": "本期焦点是[Claude Opus 5.5]在Web开发评测中登顶并公布成本表现；同时，云端编码会话、复杂文档提取及语音操作等产品动态值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-24_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "新闻语料投毒会翻转预测",
+    "summary": "论文在语料投毒研究中指出，攻击者只需发布文章即可移动LLM预测概率。单篇LLM写成的文章可让**56%**预测越过0.5阈值。五篇文章翻转率升至69%到73%，检索式预测 ⚠️ 暴露供应链脆弱点。",
+    "url": "https://arxiv.org/abs/2609.22246",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI Releases GPT-6 Sol and Luna: 50% Cheaper API Pricing and Benchmarks",
+    "summary": "OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna，两款模型沿用接近 GPT-6 Astra 的训练方法，但主打更低 API 成本，Sol 为每百万输入 2 美元、输出 10 美元，Luna 为每百万输入 0.10 美元、输出 0.50 美元。它们已进入 API、ChatGPT Work 和 Codex，并强化长程 Agent 的 prompt caching，对应用开发者最直接的影响是同等工作流成本进一步下探。",
+    "url": "https://www.marktechpost.com/2026/09/22/openai-releases-gpt-6-sol-and-luna-50-cheaper-api-pricing-and-benchmarks/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1897期 - 2026-09-24 08:03",
+    "summary": "本期重点集中在[AI编程工作流]与[多模态应用落地]：Cursor、Cline持续完善企业开发链路，OpenAI与Google则推进语音交互和端侧智能体体验。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-24_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "人形机器人交互动作可合成",
+    "summary": "HIGenNTO在人形交互方法中用噪声空间轨迹优化生成接触动作。它同时约束接触、避碰和稳定支撑。Unitree G1完成四类接触任务，长程行为 🤖 可分阶段组合。",
+    "url": "https://arxiv.org/abs/2609.22611",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic Releases Claude Opus 5.5: Fable 5.1-Level Performance at 40% Lower Running Cost Than Opus 5",
+    "summary": "Anthropic 发布 Claude Opus 5.5，称其在多数任务上达到 Claude Fable 5.1 水平，同时默认设置下典型工作负载运行成本比 Opus 5 低 40%。如果其 agentic coding 和推理表现兑现，这会把高端 Claude 系列从少量高价值任务推向更常规的生产工作流。",
+    "url": "https://www.marktechpost.com/2026/09/22/anthropic-claude-opus-5-5-release/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1896期 - 2026-09-24 04:02",
+    "summary": "本期重点聚焦[AI辅助生物学发现]与[智能体生态扩展]。同时，GPT-6 Sol公布新的真实场景评测成绩，Gemini、Devin持续扩大外部工具与办公协作能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-24_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代理程序按目标延迟执行",
+    "summary": "LazyAgent在按需执行框架中只物化当前目标真正需要的节点。加入无关产品时，LazyAgent账单增量为0.0%。生产科学流程CPU节省42%，复杂代理 🧩 少跑无关步骤。",
+    "url": "https://arxiv.org/abs/2609.23058",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing GPT-6 Sol and Luna",
+    "summary": "OpenAI 正式介绍 GPT-6 Sol 和 Luna，定位是在不同能力与成本平衡下，把前沿智能带到日常工作。对开发者来说，这类产品线拆分意味着模型选择会更细，Agent、代码生成和企业流程可以按延迟、质量与预算动态路由。",
+    "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1895期 - 2026-09-23 20:01",
+    "summary": "本期重点是[Qwen-Audio-3.1]完成全栈升级并大幅降价，以及[Qwen Intelligence]推出移动端智能体与开放评测套件。社区还分享了[Claude Opus 5.5]长任务使用方法，DeepSeek公开了Agent训练新研究。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "游戏逻辑基准暴露代码短板",
+    "summary": "GameLogicBench在运行逻辑基准中用逐帧断言检查游戏规则。它覆盖72项任务和1451个测试用例。20组模型与脚手架里最佳只解出52.78%，可运行代码 🎮 仍常写错玩法。",
+    "url": "https://arxiv.org/abs/2609.21562",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
+    "summary": "Anthropic 发布 Opus 5.5，并称其为目前测试中表现最强的模型，同时外部报道强调其价格下降和接近 Fable 级别的性能。对模型使用方而言，这加剧了高端闭源模型在编码、Agent 和复杂知识任务上的性价比竞争。",
+    "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1894期 - 2026-09-23 16:03",
+    "summary": "本期聚焦[千问AI平台]全栈升级与[1200亿 tokens]动作预训练研究；[Humanizer-zh]更新、低价多形态机器人及Agent隔离实践同样值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_1603",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "数学证明闭环接入Lean验证",
+    "summary": "Magenta在形式证明流程中把自然语言题转成Lean 4命题和证明。命题裁判负责拦住假形式化，错误裁判决定重推还是修补。它在AIME 2025等基准达100%，还解出IMO六题 📐。",
+    "url": "https://arxiv.org/abs/2609.11319",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Alibaba launches Qwen Audio 3.1 with new models and slashes AI audio prices by up to 95 percent",
+    "summary": "阿里 Qwen 发布 Qwen-Audio-3.1，包含 ASR、TTS 和实时交互等 5 个音频模型，并将 AI 音频价格最高下调 95%。ASR 提升多语言和方言识别并清理口头填充，ASR-Next 增加说话人识别、时间戳、情绪与环境声检测，对语音 Agent 和实时多模态应用很有吸引力。",
+    "url": "https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1893期 - 2026-09-23 08:02",
+    "summary": "本期重点是[GPT-6提示词缓存]带来的成本与速度优化，以及多家模型在[真实工作流评测]中的新结果。与此同时，PDF解析、翻译配置和智能体调试等[实用工具技巧]也有更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "机器人点图强化空间理解",
+    "summary": "SeeR-VLA在点图坐标方法中把深度点图转入机器人坐标系。真实任务平均成功率较RGB方案提升32.5个百分点。多视角训练收益更大，VLA操作 🦾 对几何更敏感。",
+    "url": "https://arxiv.org/abs/2607.11498",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "让Token生产更高效：异构混推的关键技术演进与创新实践",
+    "summary": "商汤分享大装置异构混推的关键技术演进与创新实践，主题是让 token 生产更高效。对 AI Infra 团队来说，异构混推意味着在不同 GPU、芯片和推理后端之间做更细的负载编排，以提升吞吐并压低单位 token 成本。",
+    "url": "https://www.qbitai.com/2026/09/496578.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1892期 - 2026-09-23 04:04",
+    "summary": "本期焦点是[GPT-6 Sol/Luna]与[Claude Opus 5.5]集中发布，编码性能与推理成本竞争升级。[Qwen-Image-2.1]登顶两项开源图像榜。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_0404",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "购物代理遭到平台封堵",
+    "summary": "Reddit的购物代理冲突称，亚马逊阻止Meta Muse进入购物流程。Meta此前拒绝移除相关代理能力。电商平台 🛒 开始直接处理代理访问边界，入口控制权重新被拉紧。",
+    "url": "https://www.reddit.com/r/artificial/comments/1wmxpow/amazon_blocks_metas_muse_ai_agent_from_amazoncom/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "fa4-v4.0.0.beta32",
+    "summary": "FlashAttention 发布 fa4-v4.0.0.beta32，更新包含 SM100 上 Sparse MLA backward 的内核内 recompute-P 与 token-chunked backward，以及 PyTorch 2.13 以上 C++20 构建支持和 PyTorch 2.14 wheel 矩阵。ROCm 侧也加入系统 AITER 相关开关，对训练和推理框架维护者来说，这是注意力内核继续适配新硬件与新 PyTorch 版本的信号。",
+    "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta32",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1891期 - 2026-09-23 00:04",
+    "summary": "本期重点关注[医疗语音模型]、[AI代理安全]与[具身智能]的新进展，多个产品开始从模型能力走向真实业务落地。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-09-23_0004",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "任务计价压低企业调用成本",
+    "summary": "Sam Altman在任务价格观点中强调，按任务计价比每token更能反映成本。Sol与Luna每token价格减半，每任务成本还更低。若企业把长任务交给代理执行，预算 📉 会更快变成核心约束。",
+    "url": "https://x.com/sama/status/2102465143997440308",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.30.1rc0: [ROCm][CI] Add MI355 dense NVFP4 and MoRI kernel mirrors (#58281)",
+    "summary": "vLLM v0.30.1rc0 合入 ROCm CI 相关更新，增加 MI355 dense NVFP4 和 MoRI kernel mirrors。对 AMD GPU 部署者来说，这类改动关系到低精度推理内核覆盖、CI 可验证性和后续 vLLM 在新一代加速卡上的可用性。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.30.1rc0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "可信智能体框架补上审计环节",
+    "summary": "TADL在可信代理框架中梳理自主LLM系统失效模式。提示注入、记忆污染、跨会话泄漏都被放进同一分类。论文提出六阶段生命周期，企业部署 🔍 可按证据和门槛做审查。",
+    "url": "https://arxiv.org/abs/2609.22712",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%",
+    "summary": "Latent Space 将 Claude Opus 5.5 设为 AINews 新默认模型，并观察到 OpenAI GPT-6 更高效模型同时推动 40% 到 50% 的降价潮。对应用团队而言，闭源大模型竞争正在从单纯能力榜转向能力、价格、缓存和默认工作流体验的组合战。",
+    "url": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌开源多代理编排运行时",
+    "summary": "Google的代理编排仓库定位为开放式agentic orchestration runtime。项目总星数约6.7k，单日新增超过2.3k。它瞄准多代理应用底座，开发者 🚀 可直接评估运行时取舍。",
+    "url": "https://github.com/google/ax",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v1.3.0rc28",
+    "summary": "TensorRT-LLM v1.3.0rc28 标注了多项已知问题，包括多节点并行映射启动失败、disaggregated serving 主机名绑定问题，以及 Qwen3.5-4B 在特定上下文流水并行和生成张量并行布局下可能损失精度。对生产部署者来说，这些说明比新特性同样重要，因为它们直接影响多节点推理、分离式 serving 和 Qwen 系模型上线前的验证清单。",
+    "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc28",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代码库记忆服务登上热门",
+    "summary": "DeusData的代码记忆项目把代码库索引成持久知识图谱。项目支持158种语言，查询延迟达到亚毫秒级。它声称token减少99%，大代码库 📦 读取成本明显下降。",
+    "url": "https://github.com/DeusData/codebase-memory-mcp",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kyutai Releases Voice of Reason: A Speech-Native Model that Solves Spoken Math with Reinforcement Learning",
+    "summary": "Kyutai 发布 Voice of Reason，两款基于 GLM-4-Voice-9B 的开权重 speech-to-speech 模型，通过监督微调和强化学习把 spoken GSM8K 准确率从 27.3% 提升到 77.1%。它不经过转写步骤，也不把文本 LLM 接在中间，单张 H100 可运行，说明语音原生推理正在从演示走向可复现实验。",
+    "url": "https://www.marktechpost.com/2026/09/22/kyutai-releases-voice-of-reason-a-speech-native-model-that-solves-spoken-math-with-reinforcement-learning/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "软件调用入口走向智能体原生",
+    "summary": "HKUDS的智能体化工具希望让所有软件都能被代理调用。CLI-Hub提供统一入口，项目总星数接近49.7k。它把传统软件 🧰 包成可操作接口，适合自动化工作流接入。",
+    "url": "https://github.com/HKUDS/CLI-Anything",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+    "summary": "Simon Willison 汇总了 Claude Opus 5.5、GPT-6 Sol、GPT-6 Luna 以及新一轮价格战，认为 GPT-6 Sol 和 Luna 相比 GPT-5.6 对应型号价格约减半。文章重点不在单个 benchmark，而在开发者如何重新评估默认模型选择，尤其是应用构建中性能足够且成本显著下降的 Luna 类模型。",
+    "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "特斯拉车机接入Grok助手",
+    "summary": "马斯克在车载助手动态称，Grok Bot已经进入特斯拉车内。用户可免手处理邮箱、日历、文件和任务。车内办公 🎙️ 从语音问答转向代理操作，特斯拉场景会放大试用量。",
+    "url": "https://x.com/elonmusk/status/2102439262507725294",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Better prompt caching for GPT-6",
+    "summary": "OpenAI 介绍 GPT-6 的 prompt caching 改进，包括更高缓存命中率、新诊断信息、显式断点以及降低延迟和成本的控制项。对长程 Agent、代码助手和企业工作流来说，缓存可观测性和可控性会直接影响上下文复用、响应速度与推理账单。",
+    "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI官方视频展示双模型",
+    "summary": "OpenAI在双模型动态中欢迎GPT-6 Sol和Luna加入GPT-6系列。帖子称两者继承Astra能力，并把缓存和推理做得更省。API价格降低50% 🎬，规模化工作负载更容易落地。",
+    "url": "https://x.com/OpenAI/status/2102460975790137662",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI's GPT-6 Sol and Luna cut prices in half but barely move the needle on performance",
+    "summary": "The Decoder 认为 GPT-6 Sol 和 Luna 的核心卖点是以约半价提供接近前代的性能，但实际智能增益有限。对从业者来说，这类发布更像是成本结构调整和竞争定价，而不是能力阶跃，因此模型迁移应重点测算吞吐、缓存、延迟和单任务成本。",
+    "url": "https://the-decoder.com/openais-gpt-6-sol-and-luna-cut-prices-in-half-but-barely-move-the-needle-on-performance/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开发者长文拆解Opus升级",
+    "summary": "向阳乔木在模型拆解长文中整理Claude Opus 5.5的成本、速度和安全变化。文中列出Terminal-Bench 4.0为66.4%，缓存读取降60%。API已在多家云平台上线，编程代理 📌 可直接测试迁移收益。",
+    "url": "https://x.com/vista8/status/2102452507993919719",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+    "summary": "OpenAI 发布「GPT-6 Sol」与「GPT-6 Luna」，定位为与「Astra」同一技术谱系的新模型，并强调更低成本和更少错误。对从业者来说，重点在于模型能力不只继续上探，也在向可规模化部署的成本、可靠性和任务分层迁移。",
+    "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "中文社媒梳理GPT降价细节",
+    "summary": "宝玉在模型信息汇总中把Sol称为中档，Luna称为轻量档。帖子提到DeepSWE上Sol得分68.8%，距Claude Fable 5最佳只差1.1个百分点。缓存折扣 🧠 也被重点列出，长程编程代理成本会下降。",
+    "url": "https://x.com/dotey/status/2102495403232854309",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Opus 5.5 is now available on AWS",
+    "summary": "Anthropic 的「Claude Opus 5.5」已上线 Amazon Bedrock 与 AWS 上的 Claude Platform，AWS 将其定位为面向智能体编程、知识工作和长时任务的最强 Opus 模型。企业团队可以直接在既有 Bedrock 权限、治理和调用链路里评估高端模型，减少从模型试用到生产集成的摩擦。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude成本下降引发开发者热议",
+    "summary": "宝玉在Claude模型梳理中称，Opus 5.5多数任务追平Fable 5.1。同样任务比Opus 5少花40%，输出速度快30%以上。代码审计、迁移和研究报告 🧪 都被放进重点案例。",
+    "url": "https://x.com/dotey/status/2102440266875449386",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 3.8 text-to-speech says hello",
+    "summary": "Google DeepMind 预告「Gemini 3.8」文本转语音能力，说明 Gemini 系列继续把语音生成纳入多模态基座能力。对开发者而言，TTS 不只是播报功能，而是语音助手、实时陪伴和多模态 Agent 体验里的基础组件。",
+    "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Qwen-Image-2.1 + Skills",
+    "summary": "Unsloth 新增本地运行「Qwen-Image-2.1」支持，覆盖图像生成与图像编辑，并同步加入自定义 Agent Skills、聊天与项目管理改进。更新还把长推理块刷新从 30 FPS 提升到 60 FPS，叠加 FP8、diffusers 与 GGUF 修复，降低了本地图像模型实验和训练的门槛。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.815-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11126",
+    "summary": "llama.cpp 的 b11126 版本为 Vulkan 后端加入并优化「IQ4_XS」的 MMQ 与 MMV 矩阵乘核，同时清理无效分支并针对 Intel A770 禁用会导致 token 生成回退的 MMVQ。这个更新面向低比特量化模型的 GPU 推理性能，说明 llama.cpp 仍在逐个量化格式和硬件后端抠吞吐细节。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11126",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "数百亿向量怎么搜？Pinterest 抛弃“内存大户”HNSW，转向量化 SPANN",
+    "summary": "Pinterest 在数百亿向量检索场景中从内存占用较高的 HNSW 转向量化 SPANN，核心诉求是压低超大规模召回的内存成本。对推荐、搜索和 RAG 系统团队来说，这类案例提示向量库选型不能只看单机召回指标，还要把量化、分片、缓存和成本曲线放在一起评估。",
+    "url": "https://www.infoq.cn/article/rB0WGcG9iLIRH3xZojY5?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing MentalHealthBench",
+    "summary": "OpenAI 发布「MentalHealthBench」，用于评估 AI 在真实心理健康对话中的有用性与安全性，基准由专家知识参与设计。它的重要性在于把高风险场景从泛化安全测试里单独拎出来，帮助模型团队衡量安抚、建议、危机识别和边界处理是否可靠。",
+    "url": "https://openai.com/index/introducing-mentalhealthbench",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "斑马智能发布端模型AutoOmni2.0，让元神AI更懂“我的世界”",
+    "summary": "斑马智能在云栖大会发布端侧全模态大模型「AutoOmni 2.0-23B-A3B」，并强调让车载元神 AI 更理解用户与车内外场景。端侧多模态模型对车载 AI 的意义在于低延迟、隐私和离线能力，模型需要在有限算力上同时处理语音、视觉、环境和个人偏好。",
+    "url": "https://www.qbitai.com/2026/09/496471.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "实时世界模型进入“全科生”阶段，PixVerse R2先交卷！",
+    "summary": "PixVerse R2 将实时世界模型的重点放在实时性与通用能力兼得，目标是让世界模型从单一视频生成或仿真能力走向更全能的交互式生成。对视频、游戏和具身智能团队来说，低延迟世界建模意味着模型可以参与连续反馈，而不只是离线生成素材。",
+    "url": "https://www.qbitai.com/2026/09/496329.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.34.4",
+    "summary": "Ollama v0.34.4 修复了服务端间歇性「model not found」问题，并让思考模型的结构化输出在单次流程中生效。版本还更新 llama.cpp 与 MLX，动态选择 Gemma 4 图像分辨率并加速 Qwen 3.8 prompt 处理，重点是提升本地模型服务的稳定性和多后端性能。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.34.4-rc0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6 ⚡, Opus 5.5 🧠, AI leaders at UN 🌐",
+    "summary": "TLDR AI 将「GPT-6」、「Claude Opus 5.5」和 AI 领袖出席联合国相关动态放在同一简报中，反映大模型竞争正同时发生在产品、云平台和政策议程层面。对从业者来说，模型更新已经不只是能力榜单变化，还会影响采购、合规、国际治理和企业路线图。",
+    "url": "https://tldr.tech/ai/2026-09-23",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Qualcomm launches two new smartphone chips with emphasis on AI",
+    "summary": "Qualcomm 发布两款强调 AI 能力的智能手机芯片，其中顶级芯片号称可在本地运行 30B 级 MoE 模型。移动端芯片开始直接面向大模型推理指标竞争，开发者需要重新评估端侧 Agent、隐私推理和云端分流的产品边界。",
+    "url": "https://techcrunch.com/2026/09/22/qualcomm-launches-two-new-smartphone-chips-with-emphasis-on-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Bring more intelligence to everyday work with GPT-6 Sol and GPT-6 Luna on Amazon Bedrock",
+    "summary": "AWS 宣布「GPT-6 Sol」与「GPT-6 Luna」在 Amazon Bedrock 正式可用，为用户提供在智能水平与效率之间匹配工作负载的新选择。对企业 AI 平台团队来说，这意味着可以在 Bedrock 的统一权限、审计和模型路由体系下，把高能力模型与低成本模型拆分部署。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/bring-more-intelligence-to-everyday-work-with-gpt-6-sol-and-gpt-6-luna-on-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Enabling Private High-Performance Production AI Inference with NVIDIA Confidential Computing",
+    "summary": "NVIDIA 介绍用机密计算支持私有高性能生产推理，目标是在 LLM 推理处理敏感信息和专有上下文时保护数据与模型资产。随着企业把内部知识、用户隐私和受监管数据送入推理链路，可信执行环境和 GPU 加速结合会成为私有 AI 基础设施的重要卖点。",
+    "url": "https://developer.nvidia.com/blog/enabling-private-high-performance-production-ai-inference-with-nvidia-confidential-computing/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Evaluate skill-equipped agents with Strands Evals and Amazon Bedrock AgentCore",
+    "summary": "AWS 介绍用 Strands Evals 与 Amazon Bedrock AgentCore 评估带 Skills 的智能体，重点衡量模型是否选对技能并遵循技能指令。它把智能体评测从回答是否流畅推进到过程是否可控，对需要把领域流程封装成可复用技能的企业 Agent 尤其关键。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/evaluate-skill-equipped-agents-with-strands-evals-and-amazon-bedrock-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Topology-Aware Workload Scheduling with NVIDIA Topograph",
+    "summary": "NVIDIA Topograph 聚焦拓扑感知的工作负载调度，试图在电力受限的 AI 工厂里通过更合理的 GPU 放置提升整体产出。对大规模训练和推理集群来说，任务放置会影响跨节点通信、带宽争用和能耗效率，调度器正在从资源够不够转向拓扑是否合适。",
+    "url": "https://developer.nvidia.com/blog/topology-aware-workload-scheduling-with-nvidia-topograph/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Dropbox 升级 Riviera 平台，支持 AI 工作负载",
+    "summary": "Dropbox 升级 Riviera 平台以支持 AI 工作负载，说明传统协作与存储平台正在把底层数据处理、检索和模型调用能力平台化。对企业 AI 应用而言，这类升级的价值在于把文件、权限、索引和推理更紧地接到一起，减少单独搭建知识工作流的复杂度。",
+    "url": "https://www.infoq.cn/article/jJAcfJO5e0ElPhIxwwxo?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11136",
+    "summary": "llama.cpp b11136 让 llama-server 接受 OpenAI Chat Completions 里的「video_url」内容类型和 data video URI，修复标准客户端传视频时被拒的问题。这个改动提升了 OpenAI 兼容接口的多模态互操作性，让本地 server 更容易接入现有视频输入客户端和测试框架。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11136",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智谱把 ZCode 开源了，然后呢？",
+    "summary": "智谱开源「ZCode」引发关注，焦点不只是代码开放本身，而是后续如何形成可复现的 Agent 工程、评测和生态协作。对开发者来说，开源代码智能体项目的价值取决于任务覆盖、工具链兼容、长上下文代码理解和真实仓库修复能力。",
+    "url": "https://www.infoq.cn/article/qEHi6k5ycwXUiasvfNKH?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

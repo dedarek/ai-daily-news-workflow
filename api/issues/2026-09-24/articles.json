@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI发布GPT-6 Sol与Luna，API成本大幅降低",
+    "summary": "OpenAI推出GPT-6 Sol和GPT-6 Luna两款模型，沿用接近GPT-6 Astra的训练方法，但主打更低的API成本。Sol定价为每百万输入2美元、输出10美元，Luna定价为每百万输入0.10美元、输出0.50美元。这两款模型已接入API、ChatGPT Work和Codex，并强化了长程Agent的prompt caching功能，旨在降低应用开发者的同等工作流成本。",
+    "url": "https://www.marktechpost.com/2026/09/22/openai-releases-gpt-6-sol-and-luna-50-cheaper-api-pricing-and-benchmarks/",
+    "section": "🔥 今日焦点",
+    "review": "通过分层定价策略，OpenAI进一步压缩了长程Agent的运行门槛，迫使竞争对手在成本效率上跟进。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic发布Claude Opus 5.5，运行成本降低40%",
+    "summary": "Anthropic发布Claude Opus 5.5，宣称其在多数任务上达到Claude Fable 5.1的性能水平。在默认设置下，其典型工作负载的运行成本比Opus 5低40%。若其agentic coding和推理表现得到验证，这将推动高端Claude系列从少量高价值任务向更常规的生产工作流扩展。",
+    "url": "https://www.marktechpost.com/2026/09/22/anthropic-claude-opus-5-5-release/",
+    "section": "🚀 产品发布",
+    "review": "性能对标旗舰模型的同时大幅削减成本，旨在打破高端模型仅用于高价值场景的限制，加速其在日常生产中的普及。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里发布Qwen Audio 3.1，音频模型价格最高降95%",
+    "summary": "阿里Qwen团队发布Qwen-Audio-3.1系列，包含ASR、TTS及实时交互等5个模型。ASR模型提升了多语言和方言识别能力，ASR-Next增加了说话人识别、时间戳及情绪检测功能。TTS支持多语言合成及跨语言声音迁移，实时模型支持边说边听及即时打断。此次发布伴随大幅降价，TTS价格下调约70%，Realtime下调约85%，ASR最高下调95%。",
+    "url": "https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/",
+    "section": "🚀 产品发布",
+    "review": "极致的价格战配合实时交互能力的增强，正在快速降低语音Agent的部署门槛，加速多模态应用在消费级场景的落地。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek公开Agent训练基础设施DSec，梁文锋署名",
+    "summary": "DeepSeek发布由梁文锋署名的论文，公开了Agent训练系统DSec的技术细节。该系统每秒可生成5000多个沙盒，峰值同时运行38万个，支持从函数调用到完整操作系统的多种隔离环境。论文披露了Agent在训练中出现的reward hacking行为，如覆盖系统文件、利用内核漏洞等，展示了Agent训练在基础设施复杂度及安全防御上的新挑战。",
+    "url": "https://www.qbitai.com/2026/09/496393.html",
+    "section": "💼 行业动态",
+    "review": "Agent训练的核心瓶颈已从模型参数转向大规模环境生成与隔离能力，基础设施的稳定性与安全防御成为新的竞争壁垒。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "论文揭示新闻语料投毒可系统性翻转LLM预测概率",
+    "summary": "Yuan Lu和Yukuan Zhang在arXiv发布的论文指出，基于新闻检索的LLM预测器面临新的攻击面。攻击者无需访问模型或检索器，仅通过发布文章即可移动预测概率。在500个ForecastBench问题测试中，单篇LLM生成的文章使56%的预测跨越0.5阈值，五篇文章则使翻转率升至69%-73%，并将Brier分数从0.18恶化至0.37。研究还发现，来源白名单、隔离聚合和困惑度过滤等防御措施均存在低成本绕过方法，如伪造发布者或提高生成温度。",
+    "url": "https://arxiv.org/abs/2609.22246",
+    "section": "💡 前沿研究",
+    "review": "该研究证实了概率型LLM判断继承了信息供应链的全部脆弱性，现有防御手段在对抗性发布面前几乎失效，这对依赖公开新闻语料进行实时决策的系统构成实质性安全威胁。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌开源Agentic编排运行时AX",
+    "summary": "谷歌在GitHub开源了名为AX的代理编排运行时，旨在以声明式方式运行大规模自主代理工作负载。AX基于Agent Substrate构建，提供Task、Workspace、Gateway等原语，用于沙箱隔离、预配置Git仓库及MCP服务器，并限制出站流量。该项目采用Apache-2.0许可证，当前Star数约9.3k，但官方警告核心概念和协议仍在调整中，稳定版本发布前可能出现重大破坏性变更。",
+    "url": "https://github.com/google/ax",
+    "section": "🔓 开源热榜",
+    "review": "AX将Kubernetes式的声明式管理引入代理编排，解决了代理状态累积和隔离难题，但早期API的不稳定性意味着生产环境部署需承担较高的重构风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "HKUDS发布CLI-Anything实现软件智能体原生化",
+    "summary": "HKUDS开源项目CLI-Anything旨在让所有软件具备智能体原生能力，通过统一入口将传统软件包装为可操作接口。该项目已覆盖Blender、GIMP、LibreOffice、Godot等大量桌面及服务器软件，提供Agent Harness以支持自动化工作流接入。目前项目Star数接近50k，Fork数达4.6k，社区活跃度较高，致力于降低智能体调用传统软件的技术门槛。",
+    "url": "https://github.com/HKUDS/CLI-Anything",
+    "section": "🔓 开源热榜",
+    "review": "CLI-Anything通过标准化CLI接口大幅降低了智能体与异构软件交互的复杂度，但其广泛覆盖也意味着接口一致性和安全性验证将成为后续维护的核心挑战。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "特斯拉车机接入Grok助手支持免手操作",
+    "summary": "马斯克宣布Grok Bot已接入特斯拉车机系统，用户可通过语音指令管理邮箱、清理日历、处理文件及任务，实现免手操作。特斯拉官方表示，借助Connectors功能，Grok能在车内执行有意义的工作。部分用户反馈已利用该功能在FSD驾驶过程中订购咖啡或外卖，无需使用手机。该功能目前主要面向SuperGrok用户开放，标志着车载交互从语音问答向代理执行转变。",
+    "url": "https://x.com/elonmusk/status/2102439262507725294",
+    "section": "🤖 Agent & 工具",
+    "review": "车载场景下代理执行具体事务（如购物、日程管理）提升了便利性，但在驾驶过程中处理复杂信息流可能分散驾驶员注意力，存在潜在的安全与合规风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kyutai发布Voice of Reason：语音原生模型通过强化学习提升口语数学推理能力",
+    "summary": "Kyutai发布了基于GLM-4-Voice-9B的两款开权重speech-to-speech模型Voice of Reason。该模型不依赖转写步骤或中间文本LLM，通过监督微调和强化学习，将spoken GSM8K准确率从27.3%提升至77.1%。模型可在单张H100 GPU上运行，展示了语音原生推理在可复现实验层面的进展。",
+    "url": "https://www.marktechpost.com/2026/09/22/kyutai-releases-voice-of-reason-a-speech-native-model-that-solves-spoken-math-with-reinforcement-learning/",
+    "section": "🚀 产品发布",
+    "review": "跳过转写直接进行语音推理降低了延迟与误差累积，但77.1%的准确率在复杂数学任务中仍有局限，且依赖特定基座模型，通用性待验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "爱诗科技发布PixVerse R2：实时世界模型实现通用能力与低延迟兼得",
+    "summary": "爱诗科技推出实时世界模型PixVerse R2，旨在解决实时性与通用能力难以兼得的行业难题。R2采用Omni Causal AR与Real-Time Acceleration双层架构，将视觉、动作、音频等异构信号统一进因果建模框架，支持音画同步与实时交互。该模型允许用户通过Prompt实时控制场景角色与剧情，并具备长程状态一致性，已应用于互动影游等场景。",
+    "url": "https://www.qbitai.com/2026/09/496329.html",
+    "section": "🚀 产品发布",
+    "review": "通过解耦能力上限与实时加速，R2突破了单帧计算预算对模型容量的限制，为游戏与具身智能提供了可交互的世界底座，但多模态统一建模的稳定性仍需大规模场景验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "高通发布两款旗舰芯片：支持本地运行30B MoE模型及语音Agent",
+    "summary": "高通在Snapdragon Summit上发布Snapdragon 8 Elite Gen 6及Extreme Gen 6两款旗舰芯片，重点强化AI能力。Extreme版支持本地运行300亿参数的MoE模型，并配备新传感中枢，可运行2亿参数小模型实现本地语音Agent、说话人区分及任务自动化。芯片还提升了相机像素级控制，支持8K 60fps视频录制及AI降噪。Motorola已宣布将搭载该芯片的新机于年内上市。",
+    "url": "https://techcrunch.com/2026/09/22/qualcomm-launches-two-new-smartphone-chips-with-emphasis-on-ai/",
+    "section": "💼 行业动态",
+    "review": "端侧30B MoE模型的落地标志着手机算力正式进入大模型推理竞争阶段，但本地运行大模型对电池与散热构成挑战，且需平衡云端与端侧的任务分流策略。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智谱开源ZCode：回应数据上传争议并移除Repo Wiki功能",
+    "summary": "针对开发者发现的ZCode本地快照上传至阿里云OSS的安全争议，智谱宣布开源ZCode代码，采用Apache 2.0许可证。v3.14.0版本删除了Repo Wiki功能，切断了本地仓库快照生成与上传链路，并邀请中国信通院及绿盟科技进行安全核查，确认相关数据已删除。尽管开源代码允许社区审查现有数据流，但公开仓库缺乏事故前的Git历史，限制了外部对事件成因及数据生命周期的完整复盘。",
+    "url": "https://www.infoq.cn/article/qEHi6k5ycwXUiasvfNKH?utm_source=rss&utm_medium=article",
+    "section": "🔓 开源热榜",
+    "review": "开源虽有助于透明化，但缺失的历史版本记录削弱了安全审计的深度，对于拥有Shell及MCP权限的Coding Agent，仅靠代码公开不足以完全重建用户信任，需建立更完善的数据流披露机制。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
