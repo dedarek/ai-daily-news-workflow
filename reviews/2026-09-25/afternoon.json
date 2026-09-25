@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-09-25",
+  "reviewed_at": "2026-09-25T16:38:48.554848+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实、逻辑清晰，播客对话自然且紧扣新闻热点，无事实性错误或严重重复，符合发布标准。",
+    "issues": [
+      "部分新闻摘要中的具体技术参数（如华为OceanStor的64PB容量、小米HySparse2的2.69GB缓存）若未能在原始信源中完全核实，存在细微的事实风险，但基于提供的输入文本视为一致。",
+      "播客中S1提到“OpenAI让ChatGPT语音版接入邮箱和Slack”，而新闻标题为“接入办公套件”，表述一致，无问题。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
