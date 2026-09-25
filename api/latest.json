@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-09-24",
-  "content_date": "2026-09-24",
-  "published_at": "2026-09-24T05:44:41.175311+00:00",
+  "issue_date": "2026-09-25",
+  "content_date": "2026-09-25",
+  "published_at": "2026-09-25T05:39:46.804958+00:00",
   "article_count": 12,
-  "podcast_turns": 23,
+  "podcast_turns": 18,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -87,11 +87,10 @@
           "review": {
             "pass": true,
             "issues": [
-              "S1首轮切入略显教科书式，'主线非常清晰'稍显生硬，可更口语化。",
-              "S1在总结轮（第21轮）使用了'总结一下'，略显机械，可改为自然过渡。",
-              "S2在结尾轮（第22轮）的'别被低价冲昏头脑'略带说教感，可调整为更中立的建议。"
+              "第1轮S1发言略显像新闻导语，虽无固定问候但切入稍显正式，可更口语化。",
+              "第15轮S1将RLark和llama.cpp合并讨论，信息密度较高，口播时可能稍显急促，建议拆分或精简。"
             ],
-            "repair_instruction": "1. 将S1首轮'今天AI行业的主线非常清晰'改为'今天看下来，成本战是绕不开的话题'。2. 将S1第21轮'总结一下'改为'回头看今天这几条新闻'。3. 将S2第22轮'别被低价冲昏头脑'改为'同时别忽略底层的安全和稳定性'。"
+            "repair_instruction": "建议将第1轮S1的开场白调整得更具对话感，例如从具体现象入手而非宏观总结；第15轮可考虑将llama.cpp的AMD优化单独作为一句简短补充，或将其移至结尾作为技术彩蛋，以平衡节奏。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -102,9 +101,8 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1首轮切入略显教科书式，'主线非常清晰'稍显生硬，可更口语化。",
-          "S1在总结轮（第21轮）使用了'总结一下'，略显机械，可改为自然过渡。",
-          "S2在结尾轮（第22轮）的'别被低价冲昏头脑'略带说教感，可调整为更中立的建议。"
+          "第1轮S1发言略显像新闻导语，虽无固定问候但切入稍显正式，可更口语化。",
+          "第15轮S1将RLark和llama.cpp合并讨论，信息密度较高，口播时可能稍显急促，建议拆分或精简。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -112,16 +110,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-24/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-24/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-24/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-24/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-24.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-24/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-24/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-24.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-24/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-24.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-24.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-24.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-25/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-25/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-25/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-25/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-25.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-25/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-25/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-25.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-25/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-25.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-25.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-25.mp4"
 }
