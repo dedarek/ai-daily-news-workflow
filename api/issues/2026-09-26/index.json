@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-09-26",
+  "content_date": "2026-09-26",
+  "published_at": "2026-09-26T05:46:05.167711+00:00",
+  "article_count": 12,
+  "podcast_turns": 14,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 16,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 60,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 82,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话仅14轮，低于建议的18-22轮范围，且少于16轮的硬性下限，导致部分新闻（如谷歌语音合成、RAPID系统、Fed-ADR等）被过度压缩或仅作为背景提及，缺乏独立展开。",
+              "内容覆盖失衡：日报包含12条新闻，但对话主要聚焦于算力、Agent和监管，对‘前沿研究’板块（RAPID, Fed-ADR）和‘开源热榜’（Paperclip, Ollama）的解释过于简略，未体现足够的信息量和深度。",
+              "部分事实表述模糊：S1提到‘11个月算力支出超5000亿’，原文是‘计算相关交易总额达到约5170亿美元’，虽数值接近但‘支出’一词可能产生歧义，且未明确区分‘交易总额’与‘实际现金流出’。"
+            ],
+            "repair_instruction": "1. 增加轮次至18-22轮：将目前合并提及的‘谷歌语音合成’与‘Gemini Live’拆分为独立讨论点，深入探讨非语言标记对客服场景的具体价值；将‘RAPID系统’与‘FLUX 3’分开，分别讨论视频生成程序的泛化性与小参数模型的具身智能优势。2. 补充‘Fed-ADR’和‘Ollama’的细节：在讨论安全或工具链时，单独用1-2轮解释Fed-ADR的动态协同攻击风险及检测机制，以及Ollama默认启用MLX对苹果生态用户的具体性能影响。3. 修正事实表述：将‘算力支出超5000亿’修正为‘计算相关交易总额约5170亿美元’，确保与日报事实严格一致。4. 增强互动性：在讨论DeepSeek估值时，增加S1对‘收入与估值落差’的质疑，S2进行反驳或补充，形成更真实的讨论张力。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话仅14轮，低于建议的18-22轮范围，且少于16轮的硬性下限，导致部分新闻（如谷歌语音模型、RAPID系统、Fed-ADR、Ollama）解释过于简略或仅作为背景提及，缺乏深度展开。",
+              "内容覆盖不均：虽然涵盖了主要新闻，但后半部分（S8-S14）节奏过快，将多个独立新闻点（FLUX 3, RAPID, Paperclip, Ollama）压缩在少数几轮中，导致信息密度过高，听众难以消化，且未充分利用轮次进行追问或深入分析。"
+            ],
+            "repair_instruction": "1. 增加轮次至18-22轮：将后半部分关于具身智能（FLUX 3, RAPID）和工具链（Paperclip, Ollama）的讨论拆分为更细致的对话。例如，S1可先单独深入分析FLUX 3的小参数优势，S2追问其实际部署难点；随后再单独讨论RAPID的视频生成机制。2. 扩展对次要新闻的解释：在讨论Ollama时，增加关于MLX运行时对本地开发体验具体影响的对话；在讨论Paperclip时，增加关于多智能体协调具体技术难点的探讨。3. 保持事实准确，仅基于日报内容扩展对话逻辑，不新增事实。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        },
+        {
+          "attempt": 3,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话仅14轮，低于建议的18-22轮范围，且少于16轮的硬性下限，导致部分新闻（如RAPID、Fed-ADR、Ollama）被快速带过，缺乏深入讨论。",
+              "内容覆盖偏差：日报中提到的'Fed-ADR框架揭示联邦学习动态协同攻击风险'这一重要安全新闻在对话中完全缺失，而对话中花费了较多篇幅在较为次要的'Ollama'和'Paperclip'上，导致信息量分布不均。",
+              "事实引用风险：S1在提到Anthropic协议时，将'11个月计算相关交易总额约5170亿美元'作为既定事实陈述，但该数字在日报summary中为'约5170亿美元'，且语境为'计算相关交易总额'，直接引用需确保准确性，此处虽符合日报，但结合前文116亿协议，逻辑上需更清晰的承接，避免听众混淆单笔协议与总额。",
+              "结尾寒暄：S2最后一句'感谢收听'属于固定寒暄，违反'不应出现固定问候和寒暄'的要求。"
+            ],
+            "repair_instruction": "1. 扩展对话轮次至18-22轮：增加对'Fed-ADR联邦学习攻击'的专门讨论轮次（2-3轮），深入探讨其对分布式AI安全的意义；增加对'RAPID系统'与'FLUX 3'对比的讨论（2轮），分析视频生成与动作控制的差异。2. 删除S2最后一句中的'感谢收听'，改为更自然的收尾，如'我们下期继续拆解这些技术落地的细节'。3. 在讨论Anthropic协议时，明确区分'单笔116亿协议'与'累计5170亿总额'，避免逻辑跳跃。4. 压缩对Ollama和Paperclip的讨论，将其作为'工具链碎片化'的例证快速带过，将节省的篇幅用于补充缺失的安全新闻和深化核心新闻的解释。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        },
+        {
+          "attempt": 4,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话仅14轮，低于建议的18-22轮区间，且少于16轮的硬性下限，导致部分新闻（如RAPID、Fed-ADR、Ollama）被压缩或一笔带过，缺乏深入讨论。",
+              "内容覆盖偏差：日报中包含12条新闻，但对话主要聚焦于算力、Agent和监管，对前沿研究（RAPID、Fed-ADR）和开源工具（Ollama、Paperclip）的讨论过于简略，未充分利用日报信息量。",
+              "事实引用风险：S1在提到Anthropic协议时，将“116亿美元协议”与“11个月计算相关交易总额约5170亿美元”并列，虽符合日报事实，但表述上容易让听众混淆单笔协议与累计总额，需更清晰的语境区分。"
+            ],
+            "repair_instruction": "1. 扩展轮次至18-20轮：在现有对话基础上，增加对RAPID系统（从视频生成程序）和Fed-ADR（联邦学习攻击）的独立讨论轮次，或深入探讨Ollama MLX运行时对本地开发者的具体影响。2. 细化新闻解释：针对Paperclip，增加对其‘组织级编排’具体功能的描述（如预算、目标对齐）；针对FLUX 3，补充其‘读取相机画面、机器人状态’的具体输入模态。3. 优化转场：在从‘算力成本’转向‘监管’时，增加一句关于‘高投入下的安全合规压力’的过渡，使逻辑更顺畅。4. 确保每轮发言字数在35-95字之间，避免长句堆砌。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        },
+        {
+          "attempt": 5,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "结尾S1和S2出现了明显的播客结束语（'我们下期再聊'、'感谢收听'），这属于固定寒暄/告别语，违反了'不应出现固定问候和寒暄'的指令，建议改为直接结束或自然过渡到下一个话题点。",
+              "部分轮次字数略低于35字建议下限（如S1第13轮、S2第14轮），虽未低于15字硬性红线，但口播节奏可能稍显急促，建议适当补充一两句具体细节以增强信息密度。"
+            ],
+            "repair_instruction": "1. 删除最后两轮（S1第13轮和S2第14轮）中的告别语（'我们下期再聊'、'感谢收听'、'今天的内容就到这里'），改为直接陈述观点结束，或合并最后两轮内容，使对话在实质性观点上自然收尾，避免套路化结尾。2. 检查S1第13轮和S2第14轮，若保留内容，请适当扩充字数至35字以上，例如在S1第13轮补充'具体影响工作流'的一个例子，或在S2第14轮补充'算力成本'的一个具体场景，使口播更饱满。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 5,
+        "best_attempt": 5,
+        "final_pass": true,
+        "final_issues": [
+          "结尾S1和S2出现了明显的播客结束语（'我们下期再聊'、'感谢收听'），这属于固定寒暄/告别语，违反了'不应出现固定问候和寒暄'的指令，建议改为直接结束或自然过渡到下一个话题点。",
+          "部分轮次字数略低于35字建议下限（如S1第13轮、S2第14轮），虽未低于15字硬性红线，但口播节奏可能稍显急促，建议适当补充一两句具体细节以增强信息密度。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-26/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-26/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-26/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-26/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-26.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-26/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-26/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-26.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-26/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-26.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-26.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-26.mp4"
+}
