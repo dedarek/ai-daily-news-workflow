@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-09-27",
+  "content_date": "2026-09-27",
+  "published_at": "2026-09-27T06:03:17.820218+00:00",
+  "article_count": 12,
+  "podcast_turns": 19,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 10,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 59,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 2,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 56,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 82,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [
+          {
+            "current_url": "https://x.com/Replit/status/2103650767257083998",
+            "previous_url": "https://the-decoder.com/amazon-blocks-metas-ai-agent-muse-from-online-shopping/",
+            "previous_date": "2026-09-22",
+            "actions": [
+              "partnership"
+            ],
+            "entities": [
+              "meta",
+              "muse"
+            ]
+          }
+        ],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://x.com/GoogleAI/status/2103552111233343980",
+                "previous_url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+                "reason": "核心事件均为谷歌发布Gemini Live实时虚拟形象功能"
+              },
+              {
+                "current_url": "https://x.com/elonmusk/status/2103958249922072840",
+                "previous_url": "https://x.com/elonmusk/status/2102439262507725294",
+                "reason": "核心事件均为马斯克旗下Grok智能体接入特斯拉车机系统，实现免手操作及任务执行"
+              },
+              {
+                "current_url": "https://arxiv.org/abs/2609.29892",
+                "previous_url": "https://x.com/shao__meng/status/2102917294037016746",
+                "reason": "核心事件均为阿里通义发布Qwen手机智能体方案及在MobilePA-Bench上的表现"
+              }
+            ]
+          },
+          {
+            "attempt": 2,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1在第二轮发言中提及“故意泄露GitHub密钥”，而日报事实为“泄露GitHub token”，术语使用不够严谨，建议统一为“令牌”或“凭证”。",
+              "S1在第五轮发言中引用“马斯克转发的数据显示”，虽然事实存在，但表述略显生硬，可改为“独立调查还原的细节显示”以增强客观性。",
+              "S2在第十八轮总结发言字数略多（约105字），接近上限，口播时节奏可能稍快，建议适当精简。"
+            ],
+            "repair_instruction": "1. 将S1第二轮中的“GitHub密钥”修正为“GitHub令牌”或“GitHub凭证”，以严格贴合日报事实。2. 优化S1第五轮中关于马斯克的引用，改为“独立调查进一步还原了细节”，避免过度依赖单一社交媒体来源的表述。3. 精简S2第十八轮总结，删除部分修饰词，确保口播节奏更从容。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1在第二轮发言中提及“故意泄露GitHub密钥”，而日报事实为“泄露GitHub token”，术语使用不够严谨，建议统一为“令牌”或“凭证”。",
+          "S1在第五轮发言中引用“马斯克转发的数据显示”，虽然事实存在，但表述略显生硬，可改为“独立调查还原的细节显示”以增强客观性。",
+          "S2在第十八轮总结发言字数略多（约105字），接近上限，口播时节奏可能稍快，建议适当精简。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-27/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-27/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-27/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-27/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-27.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-27/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-27/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-27.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-27/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-27.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-27.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-27.mp4"
+}
