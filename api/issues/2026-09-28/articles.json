@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Anthropic Sonnet 5.5下周发布，定价对标GPT-6-Sol",
+    "summary": "据爆料，Anthropic新模型Sonnet 5.5将于下周上线，正面对标OpenAI的GPT-6-Sol。该模型已在Claude Code中进行灰度测试，用户反馈其响应速度快，操作手感接近Sonnet 4。定价方面，输入成本为每百万token 2美元，输出为10美元，缓存读取为0.2美元。",
+    "url": "https://x.com/kimmonismus/status/2104120489664721311",
+    "section": "🔥 今日焦点",
+    "review": "Sonnet 5.5以较低定价切入市场，旨在通过效率优势挑战GPT-6-Sol。若灰度测试表现属实，Anthropic将在中端模型市场重获竞争力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开源科研智能体OpenScience上线，基准测试超越Codex",
+    "summary": "Synthetic Sciences推出开源科研智能体OpenScience，采用Apache 2.0许可并结束测试期。在斯坦福与Laude Institute维护的Terminal-Bench-Science榜单中，OpenScience解出70项任务中的53项，得分75.7%，高于Codex的68.1%。在另一组14项科学任务中，其得分71.4%，也领先于Claude Code的60.0%。",
+    "url": "https://x.com/rohanpaul_ai/status/2104251882378272793",
+    "section": "🚀 产品发布",
+    "review": "OpenScience在特定科研基准上表现优异，但需警惕基准测试与真实科研场景的差异。其多模型兼容架构降低了使用门槛，但实际科研价值仍需长期验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "费米宇宙发布量子增强模型FermiQLLM 1.0，估值10亿元",
+    "summary": "清华背景的费米宇宙推出全链路量子增强模型FermiQLLM 1.0，基于Qwen开源基座改造。该模型不依赖量子硬件，在现有GPU上完成训练与部署，内测显示综合性能提升10%至20%，训练成本降低25%。公司目前处于种子轮，累计融资1亿元，投后估值约10亿元。",
+    "url": "https://www.qbitai.com/2026/09/498633.html",
+    "section": "🚀 产品发布",
+    "review": "FermiQLLM 1.0试图用量子物理思想优化经典计算，但“量子增强”目前仍属概念验证阶段。其性能提升数据来自内测，缺乏第三方独立验证，商业化落地能力存疑。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Harmony上线AI原生ITSM平台，接入百余智能体",
+    "summary": "Harmony推出AI原生的ITSM与ESM平台，将100多个生产级智能体接入Slack和Teams。该平台支持自动处理改密码、权限开通、入职及设备报修等工单。厂商称客户在几天内自动解决率超过六成，敏感操作需经过审批门和审计日志。",
+    "url": "https://www.reddit.com/r/artificial/comments/1wrtjrx/harmony_launches_ai_agents_for_it_and_hr_work_in/",
+    "section": "🚀 产品发布",
+    "review": "自动化IT工单能提升效率，但“自动放权”可能引发合规风险。审批与审计机制是底线，但如何平衡效率与安全仍是企业落地时的核心挑战。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "高盛预测2027年科技巨头AI基建支出达1.2万亿美元",
+    "summary": "高盛预计亚马逊、Alphabet、微软、甲骨文和Meta在2027年的AI基础设施总支出将达到1.2万亿美元，较2026年约8000亿美元的预期增长超过50%，并高于华尔街此前1.1万亿美元的共识。这一规模若按GDP占比衡量，将是19世纪铁路建设以来最大的投资周期。然而，电力、劳动力和内存芯片的瓶颈可能限制扩张速度，且目前这些公司的支出已超过其持续经营产生的现金流，需依赖更多债务融资。",
+    "url": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/",
+    "section": "💼 行业动态",
+    "review": "巨额资本开支已超越企业自身造血能力，依赖债务驱动的模式在电力与芯片供应受限背景下，存在显著的投资回报风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI称80%至90%研究聚焦GPT-7及后续模型",
+    "summary": "OpenAI应用研究负责人Boris Power表示，公司80%至90%的研究资源已投向GPT-7、GPT-8及更后续模型，因为代际跃迁才是价值主要来源。他认为单代模型内的增量改进属于短期押注，长期来看并非正确策略。Power指出，当前AI助手的主要瓶颈并非模型性能，而是用户教育，多数用户尚不清楚AI的能力边界，未来模型需更擅长主动展示可能性并预判用户需求。",
+    "url": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/",
+    "section": "💼 行业动态",
+    "review": "研发重心向代际模型倾斜表明OpenAI认为增量优化边际效益递减，但用户认知滞后可能成为制约新模型价值释放的关键瓶颈。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Hinton呼吁AI实施药物级政府监管",
+    "summary": "AI领域先驱Geoffrey Hinton在CNN采访中主张加强政府监管，认为仅靠行业标准不足以应对风险。他批评大型AI公司虽口头支持监管，但实际反对任何具体条款。Hinton提出，AI系统应像新药一样，必须通过类似FDA的安全确认程序后方可上市，以确保其安全性与可靠性。",
+    "url": "https://x.com/rohanpaul_ai/status/2104150518897557669",
+    "section": "💼 行业动态",
+    "review": "将AI监管对标药物审批标准，旨在解决行业自律失效问题，但高昂的合规成本可能加剧技术垄断，阻碍中小开发者创新。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达发布免费1亿参数说话人分离模型Nemotron 3",
+    "summary": "英伟达发布名为Nemotron 3 Diarization的免费模型，参数量约1亿，可实时识别对话中最多8位说话人，并检测多人同时说话的情况。在VoiceArena Diarization Benchmark v1中，该模型以14.7%的DER错误率领先，比前代产品Streaming Sortformer平均降低41%的错误率。该模型支持录音和实时音频，可与Parakeet等语音识别系统配合生成带匿名说话人标签的转录文本，但背景噪音和混响会显著增加错误率。",
+    "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
+    "section": "💼 行业动态",
+    "review": "免费开放权重降低了语音Agent开发门槛，但在高噪音或重叠语音场景下精度下降，限制了其在复杂真实环境中的直接应用。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "斯坦福与加州理工发布HomeBody系统，GPT-6 Astra直连机器人清理陌生厨房",
+    "summary": "斯坦福大学与加州理工学院的研究者构建了HomeBody系统，使Unitree G1机器人能够自主导航陌生厨房并完成整理任务。该系统摒弃了传统的训练控制层，由GPT-6 Astra直接调用抓取、导航等模块化技能库。机器人在Nvidia Isaac Sim中建立数字孪生以记录物体位置，从而在视野外也能定位物品。尽管存在延迟、伺服电机过热及高算力成本等限制，该方案证明了语言模型在减少特定场地专用训练方面的潜力。",
+    "url": "https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/",
+    "section": "💡 前沿研究",
+    "review": "跳过专用控制层直接由LLM调度技能库，虽简化了部署流程，但高延迟和硬件过热问题仍是制约其实时性与稳定性的关键瓶颈。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon团队发布Rufus-Air，公开GLM-4.5-Air-Base八阶段后训练配方",
+    "summary": "Amazon团队在arXiv发布论文，公开了基于GLM-4.5-Air-Base（106B-A12B）的Rufus-Air后训练配方。该流程包含指令微调、推理与代码强化学习、智能体训练及RLHF等八个连续阶段，从可验证硬奖励逐步过渡到裁判模型软信号。研究指出，多样化的高质量SFT奠定能力基础，难度过滤保持RL提示在有效学习区间，且基础设施选择是配方的一部分。Rufus-Air在性能上优于官方发布版本，并与同规模开源模型具有竞争力。",
+    "url": "https://arxiv.org/abs/2609.29421",
+    "section": "💡 前沿研究",
+    "review": "将商业级后训练流程拆解为可复现的工程蓝图，明确了奖励形态切换与阶段顺序对模型能力堆叠的影响，为开源社区提供了高价值的参考标准。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Univer开源办公引擎统一多格式文档运行时，GitHub星标突破2万",
+    "summary": "开源项目Univer旨在为AI智能体提供统一的办公文档运行时，支持电子表格、文档、幻灯片、关系表及PDF等格式。该项目采用插件架构和基于Canvas的渲染引擎，通过单一Facade API在浏览器和Node.js环境中工作，允许开发者嵌入自定义生产力体验。Univer不仅限于文件查看，而是构建生产力界面的框架，目前GitHub总星标数达20,800，今日新增920星，显示出在AI应用集成领域的关注度。",
+    "url": "https://github.com/dream-num/univer",
+    "section": "🔓 开源热榜",
+    "review": "将多种办公格式整合进同一运行时，解决了智能体处理异构文档时的工具碎片化问题，为构建端到端办公自动化工作流提供了底层基础设施。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "VoiceStudio开源离线语音克隆工具，单日GitHub星标激增3060",
+    "summary": "VoiceStudio是一个完全本地运行的开源语音克隆项目，被视为ElevenLabs的替代方案。它支持语音克隆、设计、视频配音、听写、转录及有声书制作，声称支持646种语言。项目默认使用k2-fsa/OmniVoice引擎，允许用户在本地硬件上运行工作流，可选远程服务需用户同意。该项目在GitHub上总星标数达40,800，单日新增3,060星，反映了开发者对隐私保护和本地化AI语音处理工具的高需求。",
+    "url": "https://github.com/debpalash/VoiceStudio",
+    "section": "🔓 开源热榜",
+    "review": "主打全程离线运行以解决数据隐私痛点，但需警惕本地部署对硬件算力的依赖以及开源语音克隆技术在滥用风险上的伦理争议。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-09-28",
+  "content_date": "2026-09-28",
+  "published_at": "2026-09-28T06:11:02.410806+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 12,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 60,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 82,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量严重不足：当前对话仅包含15轮（S1/S2各7-8次发言），低于建议的18-22轮范围，且低于16轮的硬性下限。",
+              "新闻覆盖不全：日报包含12条新闻，但对话仅涵盖了其中9条，遗漏了“高盛预测2027年科技巨头AI基建支出达1.2万亿美元”（虽在S1第一轮提及，但未展开细节如电力瓶颈、债务融资等关键信息）、“OpenAI称80%至90%研究聚焦GPT-7及后续模型”（仅在S1第三轮简单带过，未深入讨论用户教育瓶颈）、“斯坦福与加州理工发布HomeBody系统”（仅在S2第四轮简单提及，未展开数字孪生、延迟等细节）、“Amazon团队发布Rufus-Air”（仅在S1第十一轮简单提及，未展开八阶段流程细节）、“Univer开源办公引擎”（仅在S2第八轮简单提及，未展开插件架构、Canvas渲染等细节）、“VoiceStudio开源离线语音克隆工具”（仅在S2第六轮简单提及，未展开646种语言、k2-fsa/OmniVoice引擎等细节）。",
+              "部分新闻解释过于简略，缺乏足够信息量：例如对HomeBody系统的讨论仅停留在“延迟和过热问题”，未提及数字孪生、GPT-6 Astra直接调用技能库等核心创新点；对Rufus-Air的讨论仅提及“八阶段流程”，未展开指令微调、RLHF等具体阶段。"
+            ],
+            "repair_instruction": "1. 增加轮次至18-22轮：在现有对话基础上，为遗漏或简略的新闻补充2-4轮深入讨论。例如，在S1第一轮提及高盛预测后，增加一轮S2追问电力瓶颈和债务融资风险，S1回应；在S2第四轮提及HomeBody后，增加一轮S1补充数字孪生和GPT-6 Astra直接调用的细节，S2回应延迟问题；在S1第十一轮提及Rufus-Air后，增加一轮S2追问八阶段流程的具体内容，S1回应指令微调和RLHF的细节。2. 确保每条新闻都有至少2轮讨论，包含承接、追问、补充或分歧，避免简单复述。3. 保持每轮发言在35-95字，确保口播自然流畅。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        },
+        {
+          "attempt": 2,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": false,
+            "issues": [
+              "轮次数量不足：当前对话仅10轮（S1/S2各5次），远低于建议的18-22轮，且低于16轮的最低合规线。",
+              "新闻覆盖不足：日报包含12条新闻，对话仅详细展开了约8条（高盛、Anthropic、OpenAI、HomeBody、Harmony、VoiceStudio、Nemotron、Univer、OpenScience、FermiQLLM、Rufus-Air、Hinton），但部分新闻（如FermiQLLM、Rufus-Air）仅一笔带过，缺乏足够解释和信息量，未形成5-7条核心新闻的深度讨论。",
+              "内容深度不够：多数轮次为观点复述或简单串联，缺乏对具体技术细节、数据对比或行业影响的深入追问与补充，例如对高盛1.2万亿支出的债务风险、OpenScience基准测试的具体任务类型等未展开。",
+              "结构松散：对话后半段（S1第4轮后）出现重复话题（如HomeBody、Rufus-Air再次提及），缺乏新的信息增量，导致节奏拖沓。"
+            ],
+            "repair_instruction": "1. 扩展轮次至18-22轮：将每条核心新闻（建议选取高盛、Anthropic、OpenAI、OpenScience、Harmony、Hinton、Nemotron、Rufus-Air共8条）拆分为2-3轮深入讨论，增加追问、数据对比和分歧观点。2. 深化内容：针对高盛支出，增加对电力/芯片瓶颈的具体影响分析；针对OpenScience，补充基准测试与真实科研场景的差异讨论；针对Hinton监管，增加对中小开发者影响的正反方辩论。3. 删除重复话题：移除后半段对HomeBody和Rufus-Air的重复提及，替换为未展开的新闻（如FermiQLLM的估值争议、Univer的架构细节）或深化现有话题。4. 增强互动：增加S1/S2之间的质疑、补充和判断，例如S2质疑S1对Anthropic定价策略的分析，S1补充OpenAI用户教育瓶颈的具体案例。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        },
+        {
+          "attempt": 3,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "部分轮次（如S1第1轮、S2第14轮）字数略低于35字建议下限，但高于15字硬性底线，属于轻微口播节奏问题。",
+              "S1第17轮与S2第18轮对HomeBody和Rufus-Air的回顾略显重复，可进一步精简以增强信息密度。"
+            ],
+            "repair_instruction": "建议将S1第1轮和S2第14轮的发言适当扩充，增加具体细节或过渡语，使其更接近40-50字的舒适口播长度；同时精简S1第17轮和S2第18轮中关于HomeBody和Rufus-Air的重复性描述，避免与前文（S1第5轮、S1第11轮）内容过度重叠，提升对话推进感。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 3,
+        "best_attempt": 3,
+        "final_pass": true,
+        "final_issues": [
+          "部分轮次（如S1第1轮、S2第14轮）字数略低于35字建议下限，但高于15字硬性底线，属于轻微口播节奏问题。",
+          "S1第17轮与S2第18轮对HomeBody和Rufus-Air的回顾略显重复，可进一步精简以增强信息密度。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-28/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-28/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-28/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-28/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-09-28.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-28/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-28/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-09-28.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-09-28/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-09-28.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-09-28.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-09-28.mp4"
+}
