@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-10-01",
+  "reviewed_at": "2026-10-01T17:56:27.522246+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实，逻辑清晰，播客对话自然且紧扣新闻要点，无事实性错误。",
+    "issues": [
+      "新闻1与新闻2均涉及OpenAI DevDay及Dots产品，虽侧重点不同（平台全景vs产品细节），但存在一定信息重叠，建议在编辑时进一步区分视角或合并部分描述以增强阅读体验。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
