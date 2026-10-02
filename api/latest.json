@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-10-01",
-  "content_date": "2026-10-01",
-  "published_at": "2026-10-01T06:47:30.636280+00:00",
+  "issue_date": "2026-10-02",
+  "content_date": "2026-10-02",
+  "published_at": "2026-10-02T06:31:02.050268+00:00",
   "article_count": 12,
-  "podcast_turns": 18,
+  "podcast_turns": 17,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -30,7 +30,7 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen38-27b",
           "usage": {},
-          "candidate_count": 50,
+          "candidate_count": 48,
           "target_count": 12,
           "validation_issues": []
         }
@@ -87,10 +87,10 @@
           "review": {
             "pass": true,
             "issues": [
-              "第13轮S1发言中提到的FlashAttention优化细节（长序列训练）在日报中主要体现为Sparse MLA训练稳定性，表述略显宽泛，但属于合理概括，非事实错误。",
-              "第14轮S2提到的Google Diffusion Controller被归类为‘类似逻辑’，虽然日报中该条属于前沿研究且与Agent主线关联较弱，但作为补充话题尚可接受，建议后续若篇幅允许可稍作区分。"
+              "S1开场切入略显生硬，建议增加更自然的过渡语。",
+              "部分新闻（如NAT-ARC、Ataraxos）解释较为简略，可稍微增加细节以平衡信息量。"
             ],
-            "repair_instruction": "无需修改。对话结构完整，轮次合规（18轮），内容紧扣日报事实，且自然融入了对OpenAI、DeepSeek、Manus等核心新闻的讨论，符合播客口播要求。"
+            "repair_instruction": "建议优化S1第一句的开场白，使其更贴近日常对话；在讨论NAT-ARC和Ataraxos时，可补充一两句关于其技术原理或意义的具体描述，以增强内容深度。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -101,8 +101,8 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "第13轮S1发言中提到的FlashAttention优化细节（长序列训练）在日报中主要体现为Sparse MLA训练稳定性，表述略显宽泛，但属于合理概括，非事实错误。",
-          "第14轮S2提到的Google Diffusion Controller被归类为‘类似逻辑’，虽然日报中该条属于前沿研究且与Agent主线关联较弱，但作为补充话题尚可接受，建议后续若篇幅允许可稍作区分。"
+          "S1开场切入略显生硬，建议增加更自然的过渡语。",
+          "部分新闻（如NAT-ARC、Ataraxos）解释较为简略，可稍微增加细节以平衡信息量。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -110,16 +110,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-01/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-01/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-01/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-01/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-01.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-01/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-01/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-01.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-01/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-01.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-01.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-01.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-02/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-02/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-02/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-02/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-02.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-02/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-02/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-02.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-02/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-02.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-02.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-02.mp4"
 }

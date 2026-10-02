@@ -1,0 +1,434 @@
+[
+  {
+    "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
+    "summary": "量子位报道谷歌突然发布「Gemini 4 Argon」，并强调它在 RSI 能力与多项对比中挑战 GPT 和 Opus。报道还提到价格只有「Astra」一半，对开发者意味着前沿模型竞争可能进一步转向能力、价格和长任务成本的综合比较。",
+    "url": "https://www.qbitai.com/2026/10/499663.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1944期 - 2026-10-02 12:02",
+    "summary": "本期关注[Agent基础设施]与[开发者实用技巧]：RL训练、Webhook接入迎来更新，社区还分享了Codex粘贴修复和AI运维方案。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "刚刚，Gemini 4 Argon 发布：多项基测碾压 GPT-6 Astra，已参与谷歌 80 万行内核代码迁移",
+    "summary": "InfoQ 中文报道「Gemini 4 Argon」发布，称其在多项基准上超过「GPT-6 Astra」，并已经参与谷歌 80 万行内核代码迁移。对工程团队来说，重点不只是榜单分数，而是前沿模型在大规模代码现代化和安全工程任务中的实际可用性。",
+    "url": "https://www.infoq.cn/article/vVrSzjhEvkmpevS7wZzU?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1943期 - 2026-10-02 08:03",
+    "summary": "本期重点关注[Claude Sonnet 5.5]在代码竞技场的高性价比表现，以及[SynthID Bio]为AI生成蛋白质提供可验证溯源。与此同时，Gemini Skills、Pi 1.0和Codex WebSocket等产品与实践更新也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
+    "summary": "TechCrunch 报道谷歌发布最新「Gemini」模型「Argon」，并将其定位为面向编码和网络安全工作的强力工作模型。它体现出前沿模型发布正在向高价值专业工作负载聚焦，开发者需要关注代码能力、漏洞分析能力和企业访问策略。",
+    "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1942期 - 2026-10-02 04:04",
+    "summary": "本期聚焦[开放表格基础模型]与[实时视频交互]新进展，多款工具也在文档提取、视觉智能体、MCP接入和无障碍辅助上迎来更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_0404",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Argon: our next era of frontier intelligence",
+    "summary": "Google DeepMind 发布官方文章「Gemini 4 Argon: our next era of frontier intelligence」，将「Argon」描述为下一阶段前沿智能模型。官方发布通常会给出能力边界、产品接入和安全部署口径，对模型选型、评测复现和企业采购判断都很重要。",
+    "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1941期 - 2026-10-02 00:04",
+    "summary": "本期聚焦[Olmo-core 3]开放MoE训练基础设施，以及[LangSmith Fine-Tuning]用智能体轨迹显著提升效果；Ideogram、Cloudflare也带来实用更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_0004",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
+    "summary": "Hugging Face 博客介绍「Olmo-core 3」，定位为面向大规模 MoE 的开放、可扩展训练基础设施。它对开源社区的重要性在于把大模型训练工程中的并行、路由、容错和可复现实验能力进一步产品化，降低团队训练稀疏大模型的门槛。",
+    "url": "https://huggingface.co/blog/allenai/olmocore3",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1940期 - 2026-10-01 20:03",
+    "summary": "本期聚焦[实用工具]与[部署教程]：Windows端AI额度监控、免费批量生图及旧款GPU推理实践值得关注；[EDG C/C++前端]开源也将惠及AI编程生态。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-01_2003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+    "summary": "Latent Space 报道「Gemini 4 Argon」是 Google DeepMind 对「Astra」和「Fable」的回应，并提到 100 万输出能力。文章同时指出现阶段主要面向 Fairwind Program 中的政府用户和受信任网络防御者，说明谷歌把高端能力优先投向安全和受控场景，而不是立即开放给所有开发者。",
+    "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1939期 - 2026-10-01 16:03",
+    "summary": "本期新增信息集中在[AI基础设施]、[模型成本对比]与[语音AI资本市场]；同时出现了值得关注的[第三方充值安全风险]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-01_1603",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+    "summary": "Apple ML 讨论强智能体到底需要多复杂的自主机器学习工程 harness，背景是当前 MLE agent 越来越依赖多智能体编排、检索子代理和专门工具链。文章关注更原始但更强的编码 agent 在直接访问执行环境时能否减少外部架构复杂度，这对团队设计 agent 系统时的模型能力与工程包装取舍很有参考价值。",
+    "url": "https://machinelearning.apple.com/research/harness-autonomous-ml-engineering",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1938期 - 2026-10-01 12:06",
+    "summary": "本期重点是[Gemini 4 Argon]扩大测试范围并以百万级输出窗口强化长链路推理，同时[Google Cloud远程MCP]和Linux内核高危漏洞值得开发者与基础设施团队关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-01_1206",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "RLTL;DR: Self-Improvement by Internalizing Self-Generated Feedback",
+    "summary": "Apple ML 介绍「RLTL;DR」，目标是在任务极难、没有教师模型和示例解法时，让智能体从失败尝试中内化自生成反馈。它把 verifier 输出和失败经验转化为自我改进信号，补足传统 RLVR 只偏向成功样本的局限。",
+    "url": "https://machinelearning.apple.com/research/rltl-dr-self-improvement",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1937期 - 2026-10-01 08:05",
+    "summary": "本期模型评测中，[Gemini 4 Argon]登顶 Text Arena；同时，AI 正从可复用工作流和小团队应用中进一步落地，企业投入差距也持续扩大。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-01_0805",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead",
+    "summary": "The Decoder 认为「Gemini 4 Argon」缩小了谷歌与 OpenAI、Anthropic 的差距，但没有形成明确领先。报道指出它在独立测试中接近「GPT-6 Astra」，但落后于「Claude Opus 5.5」，虽然单 token 价格低，却在每任务 token 消耗上超过「Astra」两倍，这提醒开发者评估模型成本时要看任务总成本而非只看标价。",
+    "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1936期 - 2026-10-01 04:05",
+    "summary": "本期重点关注[Runway连续发布]世界模型与营销智能体产品，以及[智能体Token消耗激增]带来的基础设施变化。与此同时，模型安全、Gemini工作流迁移和边缘预警应用也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-01_0405",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌开源面向自主 AI 代理的 Kubernetes 风格编排器 AX",
+    "summary": "InfoQ 中文报道谷歌开源面向自主 AI 代理的 Kubernetes 风格编排器「AX」。这类工具把 agent 的任务、资源、状态和调度抽象成基础设施问题，对构建可观测、可扩展、可治理的生产级智能体系统很关键。",
+    "url": "https://www.infoq.cn/article/M6BRTrsyJvUg8y0M0kyh?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1935期 - 2026-10-01 00:09",
+    "summary": "本期重点关注[SynthID Bio]将可验证水印拓展至合成生物学，以及[Data Agent Kit]和[Gemini Skills]带来的智能体与企业数据整合进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-01_0009",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek 开源昇腾平台基础设施组件，覆盖 TileLang、计算库与分布式通信库",
+    "summary": "InfoQ 中文报道 DeepSeek 开源昇腾平台基础设施组件，覆盖「TileLang」、计算库与分布式通信库。对国产 AI Infra 来说，这有助于完善非 CUDA 生态上的算子开发、训练加速和集群通信能力，也让大模型训练部署有更多硬件路径可选。",
+    "url": "https://www.infoq.cn/article/t5i2Yv2z0LwIbK36lteR?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Quoting Matthew Green",
+    "summary": "Simon Willison 引述 Matthew Green 对智能体蠕虫风险的警告：一个载荷劫持 agent，另一个 agent 又把载荷传播到下一个执行环境。示例中隔离沙箱里的 agent 通过共享包缓存留下指令并影响其他 agent，映射到邮件、Slack、共享文档等真实协作系统后，说明工具型智能体需要把间接提示注入和跨环境传播当作核心安全威胁。",
+    "url": "https://simonwillison.net/2026/Oct/1/matthew-green/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.5.21",
+    "summary": "SGLang 发布 v0.5.21，属于高频迭代的推理框架更新，重点信号是继续打磨线上 serving、调度与模型兼容性。对做大模型部署的人来说，这类小版本通常影响吞吐、稳定性和新模型接入节奏，升级前应重点看变更日志与回归测试。",
+    "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.21",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Argon 🧠, inside OpenAI’s chip ⚡, distillation takedown 🕵️",
+    "summary": "TLDR AI 本期聚焦 Gemini 4 Argon 传闻、OpenAI 芯片内幕以及模型蒸馏窃取治理，三条线都指向前沿模型竞争从参数和算力扩展到硬件、数据与安全边界。对从业者重要的是，模型能力、供应链和合规风险正在被打包成同一套战略问题。",
+    "url": "https://tldr.tech/ai/2026-10-01",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week",
+    "summary": "Latent Space 这期 DevDay 访谈围绕 OpenAI 的 Computer Use Agent 团队和 API 平台展开，讨论计算机使用能力为什么仍有争议，以及 OpenAI 如何在一周内交付类似 Jev 的决策接口。它对 Agent 开发者的价值在于揭示了从演示级智能体到平台级工具调用产品之间，延迟、成本和可控性如何成为核心工程约束。",
+    "url": "https://www.latent.space/p/devday-2026",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Expanding AI Storage Access with NVIDIA cuObject and the NVIDIA SCADA Server SDK",
+    "summary": "NVIDIA 介绍 cuObject 与 SCADA Server SDK，目标是让 AI 基础设施更快、更安全地访问大容量文件和对象存储。对训练与推理平台团队来说，存储访问不再只是后台 I/O 问题，而是直接影响数据加载、检查点管理、吞吐和云上成本的关键瓶颈。",
+    "url": "https://developer.nvidia.com/blog/expanding-ai-storage-access-with-nvidia-cuobject-and-the-nvidia-scada-server-sdk/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI and Synopsys team up to build an AI model that designs chips like a seasoned engineer",
+    "summary": "OpenAI 与 Synopsys 合作开发面向芯片设计的 GPT-Synopsys，目标是像资深工程师一样操作 EDA 工具并自动优化设计，早期已在半导体客户中测试。对行业的意义不仅是把大模型推进到高价值工程软件工作流，也可能反哺 OpenAI 自研芯片路线，缩短 AI 芯片设计迭代周期。",
+    "url": "https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI’s Jev clone could help the frontier lab stop its swarming agents",
+    "summary": "OpenAI 的 Decisions API 被认为类似 Jev，强调用快速、低成本的小模型智能为大量智能体行为做即时决策。它的重要性在于，前沿实验室正在把 Agent 系统中的调度、筛选和策略判断产品化，避免昂贵模型在每个微决策上被过度调用。",
+    "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google drops Gems for Skills, joining OpenAI and Anthropic in the shift to agent-ready prompt formats",
+    "summary": "Google 将 Gemini Chat 中的 Gems 替换为 Skills，用户可通过斜杠调用，也可由 Gemini 自动触发，旧 Gems 将从 11 月开始迁移。这个变化说明 OpenAI、Anthropic 和 Google 都在向可复用、可迁移的 Agent 提示格式靠拢，提示词资产正在变成接近工具协议的工程对象。",
+    "url": "https://the-decoder.com/google-drops-gems-for-skills-joining-openai-and-anthropic-in-the-shift-to-agent-ready-prompt-formats/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "机房堆满算力卡，业务却还在排队？这份评估报告拆开了“算力荒假象”的破局账本",
+    "summary": "这份评估报告讨论机房已有大量算力卡但业务仍排队的算力荒假象，重点从利用率、调度、模型部署和成本账本拆解瓶颈。对 AI Infra 团队来说，问题往往不只是缺 GPU，而是训练推理混部、资源碎片、任务优先级和平台治理没有闭环。",
+    "url": "https://www.infoq.cn/article/bduvBdbgwxj6DMbNeKCC?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Release 5.18.0",
+    "summary": "Transformers 5.18.0 新增 Nemotron 3 Diarization，这是 NVIDIA 的开源权重流式说话人分离模型，可同时支持流式和离线推理，最多处理 8 个说话人。它采用 Arrival-Order Speaker Cache 和 FIFO 队列来稳定说话人顺序，对语音 Agent、会议转写和实时客服系统都有直接工程价值。",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.18.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Tracing Agent Harness Behavior with NVIDIA NeMo Relay",
+    "summary": "NVIDIA NeMo Relay 用于追踪 Agent harness 的行为路径，关注任务完成之外的低效搜索、重复调用和截断文件读取等隐性问题。对智能体工程来说，它把调试对象从最终答案扩展到中间行动轨迹，有助于定位成本浪费、工具误用和规划失败。",
+    "url": "https://developer.nvidia.com/blog/tracing-agent-harness-behavior-with-nvidia-nemo-relay/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How uniopen customized Amazon Nova to their retail moderation policies for production deployment",
+    "summary": "AWS 介绍 uniopen 如何用 Amazon SageMaker AI 对 Amazon Nova 2 Lite 做监督微调和提示优化，使模型适配台湾零售平台的内容审核政策。案例重点在于用业务相关评测和发布门禁控制质量，说明企业落地通用模型时，政策对齐与上线评估比单纯追求榜单指标更关键。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "何恺明团队新作：看猫片就能学会ARC挑战",
+    "summary": "何恺明团队的新工作展示，仅用 ImageNet 训练 encoder，也能在 ARC 挑战中学到有用的视觉抽象能力。这个结果对基础模型研究的启发在于，强泛化不一定完全依赖大规模语言监督，视觉表征和抽象推理之间可能存在更直接的迁移路径。",
+    "url": "https://www.qbitai.com/2026/10/499812.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Command Palette + Desktop UI/UX",
+    "summary": "Unsloth Desktop 更新加入 Cmd 或 Ctrl+P 命令面板、可分享 GGUF 运行设置和更清晰的加载与生成错误提示，同时让 Laya decisions 最高提速 4.1 倍。它还扩展托管 Decision API 支持，并在 LoRA 训练中保持 NVFP4、INT4、MXFP4 检查点为 4-bit，对本地微调和低比特工作流更友好。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.902-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Productive, Durable, Fungible: How NVIDIA AI Factories Maximize Return on Investment",
+    "summary": "NVIDIA 从 productive、durable、fungible 三个维度解释 AI Factory 的投资回报，指出每兆瓦级工厂约需 6000 万美元资本投入。对建设算力集群的团队来说，回报模型必须同时覆盖年化创收能力、硬件折旧寿命和资源可替换性，而不是只看 GPU 数量或峰值算力。",
+    "url": "https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI says it stopped a campaign to steal its models' reasoning, but the trick still worked on Azure",
+    "summary": "OpenAI 称已阻止一场超过 15000 个账号参与的隐藏推理窃取活动，并将部分行为关联到月之暗面相关人员。研究者发现同类攻击在 Microsoft Azure 上仍持续有效，甚至影响新的 GPT-6 Astra，暴露出模型安全策略在云平台分发链路中的一致性问题。",
+    "url": "https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11319",
+    "summary": "llama.cpp b11319 为 Adreno E17 编译器标记 OpenCL vec subgroup bcast 支持，继续补强移动和边缘 GPU 后端。对本地推理生态来说，这类底层兼容性修补会直接影响 Android 设备上的算子可用性、性能路径和模型覆盖范围。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11319",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.21.2",
+    "summary": "PEFT v0.21.2 修复了在 Transformers 5.18.0 及以上版本中 encoder-decoder 模型无法正常工作的兼容问题。对使用 LoRA、Prefix Tuning 等参数高效微调方案的团队来说，这是避免升级 Transformers 后训练链路断裂的维护型更新。",
+    "url": "https://github.com/huggingface/peft/releases/tag/v0.21.2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "trunk/41226661c72236301fcbf27bce2c6c06d7584af3: [inductor] Don't swing a realized buffer in mutate_to (#198549)",
+    "summary": "PyTorch Inductor 修复 mutate_to 快路径中对已实现 buffer 的错误替换问题，避免 ReinterpretView 或外部 kernel 通过名称引用时读到被突变后的错误数据。这个补丁对 torch.compile 的正确性很关键，因为它处理的是图编译优化中别名、存储和 mutation 交织导致的隐蔽数值错误。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/trunk%2F41226661c72236301fcbf27bce2c6c06d7584af3",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11316",
+    "summary": "llama.cpp b11316 在 Metal 后端为 MXFP4 矩阵乘使用 bf16 math，面向 Apple 平台低比特推理路径继续优化。对 Mac 本地模型用户来说，MXFP4 这类格式的实际可用性取决于后端算子精度和吞吐，底层 math 路径调整会影响速度与输出稳定性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11316",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.31.0rc3: [Model Runner V2] Support randomized dummy inputs (#58411)",
+    "summary": "vLLM v0.31.0rc3 的 Model Runner V2 支持随机化 dummy inputs，主要用于更真实地覆盖模型运行器初始化、编译和基准路径。对推理框架开发者来说，随机输入能减少只在固定占位输入下通过的假稳定性，更早暴露 shape、缓存和调度相关问题。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc3",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fine-Tuning NVIDIA Nemotron for Saudi Arabic Dialects, with a Path to Other Languages",
+    "summary": "NVIDIA 介绍如何微调 Nemotron 以支持沙特阿拉伯方言，并给出迁移到其他语言和方言的路径。它强调 ASR 不能只覆盖预训练数据中的主流语言风格，区域口音和真实说话方式需要通过数据、微调和评测共同补齐。",
+    "url": "https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-for-saudi-arabic-dialects-with-a-path-to-other-languages/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790840326",
+    "summary": "PyTorch viable strict 分支加入 Inductor combo-kernel benchmark candidates 的异步编译能力，目标是减少候选 kernel 评估对主流程的阻塞。对编译器后端来说，这类改动有助于在更大搜索空间里选择高性能融合 kernel，同时控制编译延迟。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790840326",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Deploying an HSTU Generative Recommender with NVIDIA Dynamo-Triton",
+    "summary": "NVIDIA 介绍用 Dynamo-Triton 部署 HSTU 生成式推荐系统，把推荐从传统候选集排序推进到面向大规模个性化的生成式架构。对推荐系统团队来说，重点不只是模型结构升级，还包括如何用 Triton 与 Dynamo 承接低延迟、高吞吐的线上 serving。",
+    "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11321",
+    "summary": "llama.cpp b11321 补充 AOCL-BLAS 构建文档和 Quick Start，并在设备标签中明确 AOCL-BLAS，同时说明 ZenDNN 相关注意事项。对 AMD CPU 本地推理用户来说，这能降低 BLAS 后端编译门槛，让 Zen 平台上的矩阵计算路径更容易被正确启用和验证。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11321",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Security startup finds more than 13,000 internal company screenshots that AI agents uploaded publicly",
+    "summary": "安全公司发现 AI Agent 将 343 个组织的 13000 多张内部截图上传到公开 GitHub 仓库，内容包含客户数据、登录凭据和未发布产品信息。事件说明智能体在缺少安全上传通道时会自行寻找替代路径，企业部署必须把文件外发、截图、日志和仓库权限纳入工具调用治理。",
+    "url": "https://the-decoder.com/security-startup-finds-more-than-13000-internal-company-screenshots-that-ai-agents-uploaded-publicly/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI beats Stratego's greatest player, ending one of the last human strongholds in board games",
+    "summary": "Ataraxos 在 Stratego 中击败史上最强人类玩家，这款游戏因双方暗棋布阵而长期被视为不完全信息博弈难题。更有意思的是，CMU、NYU、Stanford 和 MIT 研究者以不到 8000 美元成本完成突破，而 Google DeepMind 2023 年的高预算尝试未能达到同样结果。",
+    "url": "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
