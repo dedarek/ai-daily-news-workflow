@@ -1,0 +1,452 @@
+[
+  {
+    "title": "How NVIDIA GPUs Help Accelerate OpenAI’s GPT-6 Astra Ultrafast",
+    "summary": "「NVIDIA」称运行在「Blackwell」GPU 上的「OpenAI GPT-6 Astra Ultrafast」已在「OpenAI API」以及符合条件的「ChatGPT Work」和「Codex」用户中可用。该模式通过面向「Blackwell」架构的推理优化，token 生成速度最高可达「Astra Standard」的 8 倍，对低延迟 agent、代码助手和交互式应用很关键。",
+    "url": "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1950期 - 2026-10-03 12:03",
+    "summary": "本期重点集中在[智能体工程实践]与[新模型工具]。此外，Anthropic披露的政策风险和a16z公布的消费级AI渗透数据，也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-03_1203",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fine-tune a search agent with multi-turn RL on Amazon SageMaker AI",
+    "summary": "「AWS」展示了如何在「Amazon SageMaker AI」上用多轮强化学习微调一个搜索 agent，让小模型适配企业工具和检索环境。重点不只是降低延迟和成本，还在于提升检索质量与执行可靠性，为把 frontier model 能力蒸馏到专用 agent 提供了工程范式。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1949期 - 2026-10-03 08:04",
+    "summary": "OpenAI展示[Dots]跨应用智能体能力，并测试可对话建站的[ChatGPT Sites]。微软流式转写模型以[0.13秒延迟]登顶评测。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-03_0804",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Black Forest Labs launches Flux 3 Image with multi-step editing that leaves the rest of your picture alone",
+    "summary": "「Black Forest Labs」发布「Flux 3 Image」，支持多步图像编辑时尽量保持未编辑区域不变，还能用边界框和最多 10 张参考图组合场景，并输出最高 4K 图像。开放权重计划随后推出，这对可控图像编辑、设计工作流和本地部署社区都很有吸引力。",
+    "url": "https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1948期 - 2026-10-03 04:05",
+    "summary": "本期聚焦[SynthID Bio]生物设计溯源与[SWE-chat v2]真实编码交互数据集。多款企业智能体、语音及开发工具也迎来实用更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-03_0405",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cohere Releases Embed 5: How It Compares to Voyage 4 Large, Gemini Embedding 2, and OpenAI",
+    "summary": "「Cohere」发布「Embed 5」嵌入模型家族，面向企业搜索、「RAG」和 agentic retrieval，分为追求质量的「Embed 5 Pro」和面向低延迟低成本的「Embed 5 Fast」。两者都支持文本、图像以及图文融合输入，说明企业检索正在从纯文本向多模态语义空间迁移。",
+    "url": "https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1947期 - 2026-10-03 00:03",
+    "summary": "本期重点是[多运行框架强化学习]显著提升智能体泛化能力，以及[LangSmith Engine v2]将故障复现与修复验证产品化。多款开源模型和云端基础设施也聚焦可靠Agent工作流。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-03_0003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790969228: [c10d][torchcomms] Propagate dynamic options (#199099) (#199099)",
+    "summary": "「PyTorch」这次更新修复了「c10d」和「TorchComms」动态 communicator 创建时丢失选项的问题，把 timeout 和 enable_reconfigure 正确传入动态 new_comm 流程。对分布式训练和通信框架维护者来说，这能减少动态重配置时的成员状态不一致，并保持静态 communicator 的兼容性。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790969228",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1946期 - 2026-10-02 20:03",
+    "summary": "本期聚焦[FLUX 3 Image]发布及[X-Router]降低Agent成本；Google多智能体系统还被曝为[5个数学难题]找到新证明。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_2003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11345",
+    "summary": "「llama.cpp」构建 b11345 为「Hexagon」后端增加 q2_k 和 q3_k 量化类型支持，并统一了相关行大小分配逻辑。对移动端和高通生态的本地推理来说，这意味着更低比特量化模型有机会在更多设备路径上运行。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11345",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1945期 - 2026-10-02 16:02",
+    "summary": "本期重点关注[DeepSeekHarness桌面版]与[AutoSynthData]企业Agent训练方案；社区还分享了[低显存128K上下文]和书签治理实战。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_1602",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+    "summary": "「NVIDIA」宣布「DGX Spark」将推出 64GB 统一内存版本，并由「Acer」等合作厂商供货。随着开放模型变小、agent 本地化需求上升，这类设备把更大上下文、更复杂工具链和本地实验带到开发者桌面。",
+    "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1944期 - 2026-10-02 12:02",
+    "summary": "本期关注[Agent基础设施]与[开发者实用技巧]：RL训练、Webhook接入迎来更新，社区还分享了Codex粘贴修复和AI运维方案。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Microsoft AI releases new transcription and text-to-speech models for voice agents",
+    "summary": "「Microsoft AI」发布面向语音 agent 的新转录和语音合成模型，其中包括实时转录模型「MAI-Transcribe-2-Streaming」。这对低延迟语音助手很重要，因为语音 agent 的体验瓶颈往往来自流式识别、轮次切换和端到端响应延迟。",
+    "url": "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1943期 - 2026-10-02 08:03",
+    "summary": "本期重点关注[Claude Sonnet 5.5]在代码竞技场的高性价比表现，以及[SynthID Bio]为AI生成蛋白质提供可验证溯源。与此同时，Gemini Skills、Pi 1.0和Codex WebSocket等产品与实践更新也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少50+%Token消耗",
+    "summary": "「openJiuwen X-Router」发布自演进模型路由技术，强调昇腾亲和，并通过反馈让请求在不同模型间做更省成本的选择。其宣称实测减少 50%以上 token 消耗，对多模型 agent 和企业推理网关来说，核心价值是把质量、延迟和成本调度做成持续优化闭环。",
+    "url": "https://www.qbitai.com/2026/10/500098.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1942期 - 2026-10-02 04:04",
+    "summary": "本期聚焦[开放表格基础模型]与[实时视频交互]新进展，多款工具也在文档提取、视觉智能体、MCP接入和无障碍辅助上迎来更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_0404",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AWS Strands Labs Releases Strands Decider 2B: An Open Source Decision Model That Picks Options in About 115 ms",
+    "summary": "「AWS Strands Labs」发布开源决策模型「Strands Decider 2B」，基于「Qwen3.5-2B-Base」，以一次前向输出选择、是否概率和校准分数，而不是生成文本。它在「RTX 3090」上中位延迟约 115 毫秒，并在「JevBench」公开集得分 0.723，适合本地路由、工具选择和 agent guardrail。",
+    "url": "https://www.marktechpost.com/2026/10/01/aws-strands-labs-releases-strands-decider-2b/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1941期 - 2026-10-02 00:04",
+    "summary": "本期聚焦[Olmo-core 3]开放MoE训练基础设施，以及[LangSmith Fine-Tuning]用智能体轨迹显著提升效果；Ideogram、Cloudflare也带来实用更新。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-02_0004",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790933554: Add NCCL2 debug server health checks (#199092)",
+    "summary": "「PyTorch」为「NCCL2」调试服务器加入健康检查，让任一 rank 检测到超时或 communicator 故障时，调试前端可以触发全 rank flight recorder dump。这个改动对大规模分布式训练排障很实用，因为跨 rank 失败往往需要统一时间点的通信证据才能定位。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790933554",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Command Palette + Desktop UI/UX",
+    "summary": "「Unsloth Desktop」更新加入命令面板、可分享运行设置和更清晰的加载与生成错误提示，同时让「Laya」决策最高加速 4.1 倍。它还扩展托管「Decision API」支持，并在「LoRA」训练中保持「NVFP4」「INT4」「MXFP4」检查点为 4-bit，有利于本地微调和量化训练工作流。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.902-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11339",
+    "summary": "「llama.cpp」修复了 kpool 重新分池的边界计算，在批次刚好填满整个上下文缓存时，不再多生成超过真实池数量的索引和表示张量。这个问题会让首次满上下文解码构建出超出图预留规模的张量，进而触发「ggml」分配失败，对长上下文服务稳定性很关键。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11339",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790930233: [FSDP2] Defer gradient upcasts to the reduce-scatter copy-in (#198668)",
+    "summary": "「PyTorch」在「FSDP2」里把梯度上转推迟到 reduce-scatter copy-in 阶段，避免每个参数的 BF16 梯度都先在计算流上单独转成 FP32。对 FP32 参数加 BF16 param_dtype 的训练配置来说，这能减少额外 cast、缩短未分片 FP32 梯度驻留时间，并降低大模型分布式训练的显存和调度开销。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790930233",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+    "summary": "「HuggingFace」介绍「AutoSynthData」，面向企业智能体生成训练数据，把业务流程、工具接口和任务约束转成可用于微调与评测的合成样本。它瞄准的是企业场景真实交互数据稀缺、隐私限制多、标注成本高的问题，对构建工具调用型 agent 和内部评测集很实用。",
+    "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cloudflare Releases Clef and Clef-flash: Open-Weight Decision Models That Return Typed Probabilities Instead of Text",
+    "summary": "「Cloudflare」发布开源权重决策模型「Clef」和「Clef-flash」，参数规模分别为 27B 和 9B，输出 typed probabilities 而不是自然语言文本。它们兼容「Jev API」、支持图像输入，并在「Workers AI」上给出 209.3 毫秒和 38.8 毫秒的中位延迟，适合路由、审核、分类等低延迟决策链路。",
+    "url": "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "A Coding Guide to Google Research’s Kauldron: Configs That Are Plain Data, Components Wired by String, and a JAX Trainer You Can Read End to End",
+    "summary": "这篇指南拆解了「Google Research」的 JAX 训练库「Kauldron」，重点是用普通字典表达实验配置、用字符串路径连接组件，并用运行时 shape 检查约束张量接口。对研究训练框架来说，它的价值在于降低实验胶水代码复杂度，让配置、数据流和 trainer 主循环更容易读、改和复现。",
+    "url": "https://www.marktechpost.com/2026/10/01/a-coding-guide-to-google-researchs-kauldron-configs-that-are-plain-data-components-wired-by-string-and-a-jax-trainer-you-can-read-end-to-end/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Language Discrimination Improves Linguistic Learning in Multilingual Speech Models",
+    "summary": "「Apple ML」的研究指出，多语言自监督语音模型在相同预训练数据预算下通常仍落后于单语模型，而在预训练中强化语言区分能力可以缩小这个差距。基于受控的英法「HuBERT」实验，模型在连续音素和更高层语言指标上减少甚至关闭多语言差距，同时保留跨语言共享能力。",
+    "url": "https://machinelearning.apple.com/research/language-discrimination-multilingual-learning",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore",
+    "summary": "「AWS Professional Services」展示了基于「Amazon Bedrock AgentCore」的多智能体云迁移框架，让发现、基础设施即代码生成、组合治理和迁移后运维形成端到端自动化。文中称 IaC 开发时间可从数周降到数分钟，对企业迁移团队意味着 agent 不只是问答入口，而能接管可审计的工程流程。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Build Local AI Apps with C++ and NVIDIA TensorRT RTX Samples",
+    "summary": "「NVIDIA」发布面向 C++ 本地 AI 应用的「TensorRT RTX」样例，围绕可移植模型格式、可靠运行时和跨目标系统加速给出实践路径。它对桌面端和边缘端开发者的意义在于，把模型集成、推理加速和部署样例打包到更接近真实应用的开发起点。",
+    "url": "https://developer.nvidia.com/blog/build-local-ai-apps-with-c-and-nvidia-tensorrt-rtx-samples/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Build agent memory with NVIDIA NeMo Agent Toolkit and Amazon S3 Vectors",
+    "summary": "「AWS」演示如何把「Amazon S3 Vectors」接入「NVIDIA NeMo Agent Toolkit」作为持久记忆层，并部署在「Amazon EKS」上。文章用多智能体投资研究场景说明自定义 memory provider 的实现方式，对需要长期记忆、向量检索和云原生扩展的 agent 系统有参考价值。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Ideogram says its new model can edit part of an image without messing up the rest",
+    "summary": "「Ideogram 4.5」主打局部图像编辑，目标是在只改指定区域的同时保持画面其他部分稳定。它支持原生 2K 分辨率，起价每张 0.8 美分，并已有「Runway」「Pika」「Leonardo AI」等伙伴接入，后续还计划开放权重。",
+    "url": "https://the-decoder.com/ideogram-says-its-new-model-can-edit-part-of-an-image-without-messing-up-the-rest/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon releases its own Jev clone as decision models flood the web",
+    "summary": "「AWS」旗下「Strand Labs」发布 2B 参数的「Strands Decider」，加入近期快速升温的 Jev 类决策模型方向。这类模型把 LLM 从生成文本转向输出结构化决策信号，适合 agent 路由、策略选择、风控和自动化工作流判定。",
+    "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Building ambient agents with Amazon Bedrock AgentCore: From event-driven signals to human-in-the-loop workflows",
+    "summary": "「AWS」给出基于「Amazon Bedrock AgentCore」构建 ambient agents 的方案，让智能体由 S3 上传、定时任务或告警等事件触发，而不是等待聊天提示。参考架构使用「Amazon SQS」「AWS Lambda」「Amazon DynamoDB」和统一的 ask_human 工具，把事件驱动自动化与人在回路审核接到同一工作流里。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/building-ambient-agents-with-amazon-bedrock-agentcore-from-event-driven-signals-to-human-in-the-loop-workflows/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Sweep thousands of leases for compliance using Amazon Quick and the Adjudicated Query pattern",
+    "summary": "「AWS」介绍 Adjudicated Query 模式，把「Amazon Quick」聊天 agent、受边界约束的 MCP server 和确定性规则引擎组合起来，用于大规模租约合规扫描。它强调答案的完整性和可辩护性，并提供 AWS CDK 参考架构，适合高风险企业场景里把 LLM 交互和规则判定分层。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Add secure Web Search to Claude Desktop with Amazon Bedrock AgentCore",
+    "summary": "「AWS」演示如何用「Amazon Bedrock AgentCore Gateway」给「Claude Desktop」接入安全 Web Search，补齐模型知识截止后的实时检索能力。方案通过「AWS IAM Identity Center」和「Amazon Cognito」做 JWT 入站认证，对企业桌面 agent 的工具授权和审计有直接参考价值。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+    "summary": "「HuggingFace」宣布开源「Asta」里的快速报告生成模型「AstaBrief」，面向从多源材料生成结构化报告的场景。它对研究助理、企业分析和 agent 工作流重要，因为报告生成往往卡在延迟、成本和可控性上，开放模型让团队更容易自托管和定制。",
+    "url": "https://huggingface.co/blog/allenai/astabrief",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "The latest AI news we announced in September 2026",
+    "summary": "「Google」汇总了 2026 年 9 月公布的 AI 更新，以视频形式回顾模型、产品和应用层面的发布。对从业者来说，这类月度汇总有助于快速跟踪「Google」在基础模型、多模态能力和产品化落地上的节奏。",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Graphify：整合代码库上下文，优化基于代理的软件工程",
+    "summary": "「Graphify」聚焦把代码库上下文整合进基于代理的软件工程流程，核心思路是让智能体获得文件、符号、依赖和项目结构等更完整的上下文。对代码 agent 来说，这能减少只看局部片段导致的误改和幻觉，提升跨文件理解、定位和修改任务的可靠性。",
+    "url": "https://www.infoq.cn/article/8XuP4iZKKr3ex2VTDxpl?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11344",
+    "summary": "「llama.cpp」的 b11344 修复了 CUDA 后端在 Volta 架构上两个损坏的 Flash Attention 场景。这个变更属于底层兼容性修复，能让较老 NVIDIA GPU 在本地推理和服务部署中更稳定地走加速路径。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11344",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790938335",
+    "summary": "「PyTorch」重新合入 AArch64 量化引擎 gating，并为「FBGEMM」dispatch 增加保护，避免在 Arm 平台误走不适配的后端路径。它主要影响移动端、边缘端和 Arm 服务器上的量化推理稳定性，减少后端选择错误带来的运行时崩溃。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790938335",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Pi 1.0, Pi Durable, and AIE NYC",
+    "summary": "「Latent Space」的这期「AINews」提到「Pi 1.0」「Pi Durable」以及「AIE NYC」，重点落在极简 agent harness 走向稳定和 TypeScript 支持。对 agent 开发者来说，这代表轻量编排、持久执行和前端生态集成正在成为框架竞争点。",
+    "url": "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.31.0rc4",
+    "summary": "「vLLM」发布 v0.31.0rc4，修复「HiSparse」在 FULL graphs 下的 MTP acceptance collapse 问题。这个 bug 会影响多 token 预测或投机式解码的接受率，修复后有助于保持图执行场景中的吞吐优势。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc4",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11338",
+    "summary": "「llama.cpp」在 Hexagon 后端把 CPY 和 CONCAT 的 strided DMA copy 逻辑共享化，并支持任意维度 CONCAT 走 DMA。补丁还修复 64 位 DMA 相关问题、补齐 queue flush 和保护条件，对 Qualcomm HTP 等端侧加速路径的稳定性和算子覆盖有帮助。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11338",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1790924781",
+    "summary": "「PyTorch」在 c10d 的 NCCL2 路径中等待 nonblocking split 和 shrink 子 group 初始化完成，修复分布式通信组生命周期里的竞态。对使用弹性训练、动态并行组或复杂分片策略的大模型训练来说，这类同步细节直接关系到 hang、崩溃和难复现通信错误。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1790924781",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Build Applications on NVIDIA BlueField Faster with NVIDIA DOCA Agent Skills",
+    "summary": "「NVIDIA」推出面向「BlueField」的「DOCA Agent Skills」，把专用基础设施软件开发中的常见操作封装成 agent 可调用能力。它的价值在于让通用代码 agent 更懂 DPU、网络和 DOCA 开发语境，缩短构建、调试和部署 BlueField 应用的时间。",
+    "url": "https://developer.nvidia.com/blog/build-applications-on-nvidia-bluefield-faster-with-nvidia-doca-agent-skills/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Nearly half of test subjects mistook Tavus' AI video avatar for a real person on a one-minute call",
+    "summary": "「Tavus」发布实时视频交互模型「Griffin」，可在通话中处理表情、语气和手势，并驱动视频 avatar 进行自然交流。在该公司研究中，48% 的受试者在一分钟通话后认为它是真人，而此前系统最高只有 2%，这对实时多模态 agent、虚拟人体验和身份安全都很有冲击。",
+    "url": "https://the-decoder.com/nearly-half-of-test-subjects-mistook-tavus-ai-video-avatar-for-a-real-person-on-a-one-minute-call/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11349",
+    "summary": "「llama.cpp」的 b11349 为 Vulkan 后端的 pipeline 编译问题增加日志。这个改动不直接改变模型能力，但能显著提升跨 GPU、本地驱动和 shader 编译问题的可诊断性，对维护本地推理部署很实用。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11349",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Datalab Introduces OmniExtractBench to Fix Bias and Opacity in Extraction Benchmarks",
+    "summary": "「Datalab」推出「OmniExtractBench」，试图解决信息抽取评测中的偏置和黑箱问题。它采用基于内容的行匹配、每个值 6 类 verdict 和明确的 null rule，让抽取结果的每个判定都更容易审计，适合比较文档解析、表格抽取和企业 RAG 前处理质量。",
+    "url": "https://www.marktechpost.com/2026/10/02/datalab-introduces-omniextractbench-to-fix-bias-and-opacity-in-extraction-benchmarks/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Toward provably private learning from federated data",
+    "summary": "「Google Research」讨论面向联邦数据的可证明隐私学习，重点在移动系统场景下让模型从分散设备数据中学习，同时给出形式化隐私保障。它对隐私敏感的端侧训练和个性化模型很重要，因为工程系统既要保留联邦学习的可扩展性，又要让隐私声明具备可验证边界。",
+    "url": "https://research.google/blog/toward-provably-private-learning-from-federated-data/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
