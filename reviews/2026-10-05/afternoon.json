@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-10-05",
+  "reviewed_at": "2026-10-05T18:12:16.750520+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实准确，逻辑清晰，播客对话自然且紧扣新闻要点，无明显事实错误或重复，符合发布标准。",
+    "issues": [
+      "部分新闻来源为社交媒体（X/Reddit），虽在日报中常见，但建议后续补充更权威的一手信源以增强可信度。",
+      "播客中S1对DeepSeek桌面端“先圈地”策略的评论略显主观，但属于合理编辑观点，不影响整体质量。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
