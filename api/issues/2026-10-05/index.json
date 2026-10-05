@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-05",
+  "content_date": "2026-10-05",
+  "published_at": "2026-10-05T06:30:09.009560+00:00",
+  "article_count": 12,
+  "podcast_turns": 19,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 56,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 60,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://the-decoder.com/claude-codes-new-mods-system-lets-developers-rewrite-the-ai-coding-tool-from-the-inside/",
+            "previous_url": "https://the-decoder.com/claude-codes-new-mods-system-lets-developers-rewrite-the-ai-coding-tool-from-the-inside/",
+            "previous_date": "2026-10-04"
+          },
+          {
+            "current_url": "https://arxiv.org/abs/2609.38923",
+            "previous_url": "https://arxiv.org/abs/2609.38923",
+            "previous_date": "2026-10-04"
+          },
+          {
+            "current_url": "https://arxiv.org/abs/2610.01509",
+            "previous_url": "https://arxiv.org/abs/2610.01509",
+            "previous_date": "2026-10-04"
+          },
+          {
+            "current_url": "https://arxiv.org/abs/2609.36585",
+            "previous_url": "https://arxiv.org/abs/2609.36585",
+            "previous_date": "2026-10-04"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "最后一轮S1的发言“再见。”仅2字，远低于建议的15字下限，显得过于突兀，建议扩展为更自然的结束语。",
+              "部分轮次（如S1第1轮、S2第1轮）信息密度极高，接近95字上限，口播时语速需较快，建议适当拆分或精简以增强自然感。"
+            ],
+            "repair_instruction": "将最后一轮S1的“再见。”修改为更完整的结束语，例如“好的，那今天就聊到这里，我们下期再见。”，使其符合口播习惯且字数达标。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "最后一轮S1的发言“再见。”仅2字，远低于建议的15字下限，显得过于突兀，建议扩展为更自然的结束语。",
+          "部分轮次（如S1第1轮、S2第1轮）信息密度极高，接近95字上限，口播时语速需较快，建议适当拆分或精简以增强自然感。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-05/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-05/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-05/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-05/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-05.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-05/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-05/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-05.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-05/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-05.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-05.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-05.mp4"
+}
