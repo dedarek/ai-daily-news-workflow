@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Mistral发布1.05万亿参数旗舰模型ML4预览版",
+    "summary": "Mistral AI于2026年10月6日推出Mistral Large 4（ML4）公开预览版，该模型总参数达1.05万亿，采用混合专家架构，每token仅激活490亿参数，并支持100万token上下文及原生图像输入。模型在Mistral欧洲数据中心使用3800块NVIDIA Grace Blackwell GPU从零训练，API现已上线，输入输出价格分别为每百万token 1.36美元和4.18美元。在网络安全基准测试中，ML4在Cybench上得分93%，但在盲测中评分3.74，位列五款模型第二，权重预计10月底开放。",
+    "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+    "section": "🔥 今日焦点",
+    "review": "ML4以极低激活参数实现万亿级规模，兼顾性能与成本，但权重延迟开放限制了自托管场景的即时落地。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI决策接口API向全体开发者开放公测",
+    "summary": "OpenAI宣布其决策接口（Decisions API）进入公开测试阶段，面向所有开发者开放。该接口基于GPT-6 Luna，支持文本和图像输入，能近实时地选择模型、工具或执行动作。官方数据显示，其决策速度比通过Responses API调用GPT-6 Luna快10倍。接口支持三种输出类型：概率预测、选项选择及数值评分，适用于请求路由、标签生成及视觉内容分析等场景。",
+    "url": "https://x.com/OpenAIDevs/status/2107573382229188645",
+    "section": "🚀 产品发布",
+    "review": "决策接口的独立化提升了应用层路由效率，但“快10倍”的对比基准局限于特定API路径，实际业务中的延迟收益需结合具体负载验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌开源端侧多模态嵌入模型EmbeddingGemma 2",
+    "summary": "谷歌DeepMind发布EmbeddingGemma 2，这是一款基于Apache 2.0许可的端侧多模态嵌入模型，总参数740M，采用Gemma 4架构。该模型将文本、代码、图像、音频和视频统一至同一检索空间，支持模块化加载，纯文本应用仅需270M参数。在Pixel 11 Pro上，量化后的文本权重占用约191MB内存，完整多模态模型约567MB。其上下文窗口扩展至8K token，MTEB代码检索分数从68.76提升至78.68，实现了本地化多模态内容理解。",
+    "url": "https://x.com/rohanpaul_ai/status/2107578087726895515",
+    "section": "🚀 产品发布",
+    "review": "EmbeddingGemma 2通过模块化设计降低了端侧部署门槛，使本地多模态检索成为可能，但8K上下文对长视频或长音频的处理能力仍显局限。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude集成谷歌办公套件支持双向文件编辑",
+    "summary": "Anthropic宣布Claude正式集成至Google Docs、Sheets和Slides，目前处于付费计划Beta阶段。在Google Workspace中，Claude以侧边栏形式存在，可读取当前打开的文件并进行就地编辑，用户需批准每一步改动后方可生效。同时，用户也可在Claude中直接打开谷歌文件链接，实现双向协作。访问权限严格遵循谷歌的共享权限设置，确保数据安全。",
+    "url": "https://x.com/claudeai/status/2107522596845822135",
+    "section": "🚀 产品发布",
+    "review": "Claude深入谷歌办公生态打破了平台壁垒，但“逐步批准”机制虽保障安全，却可能降低高频编辑场景下的操作流畅度。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌发布Nano Banana 2.1生图模型",
+    "summary": "谷歌推出了名为Nano Banana 2.1的新版图像生成模型，官方称其为当前最强的生图模型。该版本在视觉设计和蒙版编辑方面表现突出，同时提升了主体一致性与画面自然度。用户可以直接在Gemini和AI Studio中试用该模型。",
+    "url": "https://x.com/AYi_AInotes/status/2107523209075581045",
+    "section": "🚀 产品发布",
+    "review": "蒙版编辑与主体一致性是生图落地的关键痛点，此次升级直接针对这些实用场景优化。若效果稳定，将降低专业设计工具的使用门槛。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Reka发布全模态推理模型Rho-1",
+    "summary": "Reka发布了全模态推理模型Rho-1，将语言、视觉和物理动作整合进单一神经网络，取代了传统的多模型拼装架构。该模型将生成延迟从13.8秒压缩至7.0秒，蒸馏版甚至能在1.15秒内完成端到端视频修改。Rho-1还支持向机械臂下发7个通道指令，被视为Gemini Omni Flash的完整形态。",
+    "url": "https://x.com/Gorden_Sun/status/2107478588719345689",
+    "section": "🚀 产品发布",
+    "review": "单一网络架构显著降低了多模态交互的延迟，但复杂场景下的长期记忆稳定性仍需实测验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek获宁德时代与腾讯巨额融资",
+    "summary": "据彭博社报道，DeepSeek正接近完成新一轮融资，目标金额至少120亿美元，部分消息人士称总额可能接近150亿美元。宁德时代和腾讯是本轮最大的投资方。DeepSeek计划在融资完成后进行重组，并瞄准2027年初IPO。该公司正在建设拥有至少16万颗华为AI芯片的数据中心，并继续开发开源模型。",
+    "url": "https://the-decoder.com/catl-and-tencent-back-deepseeks-ballooning-funding-round-as-the-ai-startup-eyes-a-2027-ipo/",
+    "section": "💼 行业动态",
+    "review": "巨额融资加速了DeepSeek的算力扩张与IPO进程，但也加剧了头部模型公司的资本竞争压力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "韩国拟投入34.9亿美元研发本土前沿AI模型",
+    "summary": "韩国计划在2027年预算中通过政府支持的股权投资，投入4.7万亿韩元（约34.9亿美元）建设本土前沿AI模型。该计划旨在与中国的领先开源模型竞争，并支持韩国模型在全国经济中的应用。政府将启动开放竞争，初创公司也可参与，此前LG AI Research、SK Telecom和Upstage等公司曾参与相关竞赛。",
+    "url": "https://the-decoder.com/south-korea-bets-3-49-billion-on-building-a-homegrown-frontier-ai-model-to-rival-chinas-best/",
+    "section": "💼 行业动态",
+    "review": "国家级资金介入标志着主权AI竞争进入深水区，但韩国在算力规模上仍难以匹敌美国巨头，需依赖差异化策略。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Z.ai GLM 5.3 模型上线 Amazon Bedrock",
+    "summary": "Z.ai 宣布其 753B 参数的 MoE 模型 GLM 5.3 正式接入 Amazon Bedrock。该模型主要面向编码及长程 Agent 任务，AWS 强调其支持 OpenAI 兼容 API 及提示缓存功能，以降低延迟和成本。此外，AWS 指出用户可利用开源 Strix Agent 进行授权安全测试，体现了云厂商将大模型、Agent 与安全测试打包为可采购能力的趋势。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "云厂商正通过兼容接口与安全工具降低企业集成门槛，将前沿模型转化为标准化的企业级服务。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Together AI 发布免费 CLI 工具 Together Link",
+    "summary": "Together AI 推出 MIT 许可的免费 CLI 工具 Together Link，旨在将 Claude Code、Codex 等编码智能体连接至 Kimi K3、GLM 5.3 等开放模型。该工具支持单命令安装，内置自动路由机制，可根据任务复杂度在低成本模型与前沿模型间切换，宣称可节省超过 50% 的调用成本。目前该工具处于 Beta 阶段，支持 macOS 和 Linux 环境。",
+    "url": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/",
+    "section": "🤖 Agent & 工具",
+    "review": "通过解耦模型与智能体框架，该工具为依赖闭源模型的高昂成本提供了替代方案，但 Beta 阶段的路由稳定性仍需验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI 发布内部模型生成的数学研究结果",
+    "summary": "OpenAI 宣布发布由其内部前沿模型生成的一系列新数学结果。这些成果已存入开源仓库供公众核验，发布节奏参考了高等研究院（IAS）“数学与人工智能顾问组”的建议。此举旨在展示 AI 在数学领域的进展，并遵循独立顾问组的公开推荐来规范结果发布流程。",
+    "url": "https://x.com/OpenAI/status/2107596713791767021",
+    "section": "💡 前沿研究",
+    "review": "引入独立学术顾问组规范发布流程，有助于提升 AI 生成数学结论的可信度与学术严谨性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek DeepGEMM 算子库持续获得社区关注",
+    "summary": "DeepSeek 开源的 DeepGEMM 算子库在 GitHub 上累计获得 8.8k 星，近期单日新增 363 星。该库是一个统一的高性能 Tensor Core 内核库，整合了 GEMM、融合 MoE 等 LLM 关键计算原语，支持 FP8、FP4 等精度。其内核通过 DeepJIT 在运行时编译，无需安装时进行 CUDA 编译，且性能可匹敌专家调优库。",
+    "url": "https://github.com/deepseek-ai/DeepGEMM",
+    "section": "🔓 开源热榜",
+    "review": "运行时编译机制降低了部署门槛，使其成为学习 GPU 内核优化及提升大模型训练效率的实用工具。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

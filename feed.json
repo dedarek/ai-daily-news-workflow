@@ -3,6 +3,142 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-10-07",
+      "content_date": "2026-10-07",
+      "published_at": "2026-10-07T06:49:58.059228+00:00",
+      "article_count": 12,
+      "podcast_turns": 19,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 58,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 72,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0",
+                "previous_url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0",
+                "previous_date": "2026-10-06"
+              },
+              {
+                "current_url": "https://www.qbitai.com/2026/10/501705.html",
+                "previous_url": "https://www.qbitai.com/2026/10/501705.html",
+                "previous_date": "2026-10-06"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1第1轮发言字数（78字）略低于建议的35-95字下限，但仍在可接受范围，且切入自然，无需强制修改。",
+                  "S1第18轮（最后一轮）发言字数（43字）符合口播习惯，但作为结束语略显仓促，可考虑增加一句对听众的互动引导以增强亲和力。"
+                ],
+                "repair_instruction": "整体内容质量高，逻辑连贯，事实准确。建议微调S1最后一轮结束语，增加一句如“欢迎在评论区分享你的看法”以增强互动感，但非必须。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1第1轮发言字数（78字）略低于建议的35-95字下限，但仍在可接受范围，且切入自然，无需强制修改。",
+              "S1第18轮（最后一轮）发言字数（43字）符合口播习惯，但作为结束语略显仓促，可考虑增加一句对听众的互动引导以增强亲和力。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-07/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-07/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-07/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-07/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-07.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-07/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-07/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-07.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-07/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-07.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-07.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-07.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-10-06",
       "content_date": "2026-10-06",
       "published_at": "2026-10-06T07:08:06.692916+00:00",
