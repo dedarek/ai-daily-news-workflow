@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-08",
+  "content_date": "2026-10-08",
+  "published_at": "2026-10-08T08:21:07.276536+00:00",
+  "article_count": 12,
+  "podcast_turns": 19,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 59,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 84,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+            "previous_url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+            "previous_date": "2026-10-07"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1在讨论FlashAttention时提到“SM100架构”，日报中明确为“SM100和SM103架构”，虽未完全错误但略显片面，可补充SM103以体现完整性。",
+              "S2在总结部分将“安全从被动到主动”作为主线之一，但前文对安全机制的讨论主要集中在ChatGPT审计，未充分展开其他安全新闻（如SynthID），导致总结与正文对应度稍弱。"
+            ],
+            "repair_instruction": "1. 在S1讨论FlashAttention的轮次中，将“SM100架构”修改为“SM100和SM103架构”，以准确反映日报内容。2. 在S2的总结轮次中，将“安全从被动到主动”调整为“安全从单一防护到跨厂商协作”，以更好地涵盖SynthID检测器的跨厂商特性，使总结更贴合全文。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1在讨论FlashAttention时提到“SM100架构”，日报中明确为“SM100和SM103架构”，虽未完全错误但略显片面，可补充SM103以体现完整性。",
+          "S2在总结部分将“安全从被动到主动”作为主线之一，但前文对安全机制的讨论主要集中在ChatGPT审计，未充分展开其他安全新闻（如SynthID），导致总结与正文对应度稍弱。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-08/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-08/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-08/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-08/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-08.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-08/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-08/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-08.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-08/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-08.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-08.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-08.mp4"
+}

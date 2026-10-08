@@ -1,0 +1,542 @@
+[
+  {
+    "title": "OpenAI开始向全体用户推送GPT-6智能界面",
+    "summary": "OpenAI今天开始在ChatGPT日常聊天里推送GPT-6✨，主打功能叫智能界面。据宝玉发布的推送消息，Plus与Pro等付费档今天就能用，免费版与Go版明天起陆续放量。回答不再是整段文字，对比类问题并排摆开，讲原理时配一个能拖参数的滑块。",
+    "url": "https://x.com/dotey/status/2107917964146012485",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6 and Intelligent UI for everyone",
+    "summary": "OpenAI 宣布「GPT-6」在 ChatGPT 全球推出，并加入「Intelligent UI」，让回答不只返回文本，还能生成可直接探索和使用的视觉与交互体验。对从业者来说，这意味着模型能力正在进一步产品化为动态界面，应用设计需要同时考虑推理、生成内容和交互组件的协同。",
+    "url": "https://openai.com/index/gpt-6-for-everyone",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1981期 - 2026-10-08 16:05",
+    "summary": "本期关注[AI工具实用更新]：Pi-Wm Desktop新增远程访问与上下文压缩，Grok截图检索出现用户体验反馈。另有[Haiku 5.5]价格对比、ChatGPT用户规模新数据及工具停运迁移消息。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_1605",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic推出号称最便宜最快的新小模型Haiku 5.5",
+    "summary": "Anthropic今天放出Claude Haiku 5.5🎉，官方称它是同级别里最便宜也最快的小模型。官方在新模型的发布说明里说，平均运行成本比Haiku 4.5低约75%。这一档的价格战眼看要烧起来。",
+    "url": "https://x.com/claudeai/status/2107894039626277339",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek-V4.1-Flash on vLLM: 5x Agentic Throughput Since Day 0",
+    "summary": "vLLM 在「DeepSeek-V4.1-Flash」发布后三周内完成多项优化，低并发速度提升 1.9 倍，并在「SemiAnalysis AgentX」上把 agentic throughput 提升 5 倍。关键改动包括 SWA bounded replay、CUDA graphs、新 kernel 与 vLLM kernel fusion，显示新模型上线后的首轮 infra 适配会显著影响真实吞吐。",
+    "url": "https://vllm.ai/blog/2026-10-07-deepseek-v41-flash",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1980期 - 2026-10-08 12:08",
+    "summary": "[Grok Bot]被介绍可直接搜索、监控X内容，[Haiku 5.5]接入Devin并公布成本与评测数据。本期还关注浏览器智能体开发、端侧模型压缩及AI硬件的新动态。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_1208",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌把SynthID检测器向所有用户开放",
+    "summary": "谷歌今天正式开放🌐SynthID检测器，图像、视频和音频都能验一遍。据官方社交账号的动态，合作方包括OpenAI、英伟达和Kakao，苹果也快加入。官方说已给1800亿份内容打上水印，每天处理百万次核验。",
+    "url": "https://x.com/GoogleDeepMind/status/2107834249680499136",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing Mistral Large 4: Le chonk",
+    "summary": "Mistral 发布「Mistral Large 4」预览版，这是 1 万亿参数、490 亿激活参数的模型，使用 3800 块 NVIDIA Grace Blackwell GPU 在自有集群训练。当前可通过 Mistral API 使用，并计划在月底发布开放权重，推理级别仅提供 none 和 high 两档。对开源和商业模型生态来说，Mistral 正在用超大 MoE 与开放权重承诺重新进入前沿竞争。",
+    "url": "https://simonwillison.net/2026/Oct/6/le-chonk/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1979期 - 2026-10-08 08:03",
+    "summary": "本期值得关注的动态包括[OpenDocRouter]统一文档解析 API、LangChain 智能体调度更新，以及 NVIDIA 探索智能体纠错训练。开发者工具与[企业级智能体应用]持续扩展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌把Gemini免费用户的可用模型降级",
+    "summary": "10月9日起，免费用户只能用FlashLite这一个模型📉。据这次调整的报道，想用标准Flash要订每月4.99美元的AI Plus。而AI Plus也快拿不到Gemini Pro了。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+    "summary": "Mistral AI 以公开预览形式发布「Mistral Large 4」，代号「Le Chonk」，规格为 1.05 万亿参数 MoE、490 亿激活参数、原生图像输入和 100 万 token 上下文。它由 Mistral 在欧洲自有数据中心使用 3800 块 NVIDIA Grace Blackwell GPU 训练，API 已开放，开放权重计划在 2026 年 10 月底发布。对从业者来说，这是多模态、长上下文和超大 MoE 同时进入可用产品形态的信号。",
+    "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1978期 - 2026-10-08 04:04",
+    "summary": "本期重点是[GPT-6 Intelligent UI]开始进入 ChatGPT，以及 Anthropic 发布[Claude Haiku 5.5]。智能体训练、安全运营和消费级 AI 使用需求也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_0404",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达VERA让智能体和工具链一起进化",
+    "summary": "英伟达新论文提出VERA框架🧪，把基准轨迹变成9000多个可重启沙箱。据这条VERA论文分享，它只留下能跑、能按可观察证据评分的环境。工具链改动要通过自测并在开发集加至少5分才保留。27B版在AutoCoWorkBench拿到71.6分，超过Claude Opus 4.8。",
+    "url": "https://x.com/omarsar0/status/2107849444897243141",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI launches Decisions API that reduces complex evaluations to yes, no, or pick one",
+    "summary": "OpenAI 推出「Decisions API」，面向文本和图像分类，可返回 yes/no 概率、类别选择或量表评分，速度约为「Responses API」的 10 倍，价格为每百万输入 token 0.10 美元。它把复杂评估压缩成低延迟判定接口，适合内容审核、路由、质检和自动化决策等高频场景。OpenAI 同时将付费 API 层级从五档缩减为三档，降低开发者选型复杂度。",
+    "url": "https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1977期 - 2026-10-08 00:03",
+    "summary": "[SynthID Detector]向公众开放，Google 推出 AI 游戏创作平台[Playground]。本期还收录播客转文章、Codex 额度分析等实用工具与经验。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_0003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多个智能体靠共享Git仓库累积推理成果",
+    "summary": "GitSwarm让多个同构智能体在共享仓库里协作🔥，原子提交保住中间成果。据分布式累积推理论文，语义依赖会记下每条贡献基于谁。IMO证明基准上一轮解出全部30题，程序基准平均分79.4%。94.7%的贡献后来被别人接着用。",
+    "url": "https://arxiv.org/abs/2610.04862",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+    "summary": "Hugging Face 报道了基于「Nemotron」同一模型家族微调后同时拿到 IOI 与 IMO 金牌级结果的案例，重点在于同一底座经过任务定向训练后覆盖编程竞赛和数学竞赛两类高难推理。对从业者来说，这类结果说明高质量数据、训练配方和评测闭环仍能显著释放基座模型的专业推理潜力。",
+    "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1976期 - 2026-10-07 20:03",
+    "summary": "本期聚焦[Grok Bot额度消耗争议]及多款实用小工具，涵盖决策模型插件、开源输入法与公益生图站。国产AI消费应用的[补贴与场景竞争]也在升温。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_2003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic内部研究模型自主推出一套3SUM算法",
+    "summary": "Anthropic的内部研究模型在检查密码学构造时🧮，自己产出了一套3SUM与APSP算法。据细粒度复杂性的讨论帖，结果用Lean 4完成机器核验，指数只降到1.9992。现实收益几乎没有，但2次方那层地板被敲开了缝。",
+    "url": "https://newshacker.me/story?id=49977437",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "fa4-v4.0.0.beta34",
+    "summary": "「FlashAttention」发布「fa4-v4.0.0.beta34」，修复 CUDA 13 与 PyTorch 2.15 下的 Windows 构建问题，并继续推进 SM100、SM103 上的 decode 与 forward kernel 优化。更新包含 QK 与 softmax 重叠、hd256 forward 统一、hd128 decode crash 修复，以及多种数据类型的 few-row MMA 支持。对训练和推理框架维护者来说，这类底层 kernel 迭代会直接影响新 GPU 上的注意力性能和稳定性。",
+    "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta34",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1975期 - 2026-10-07 16:06",
+    "summary": "本期值得关注的是[Grok Bot多模型编排]的新动向，以及[Meshy进入AI应用收入榜]。此外，OpenAI训练安全监控和社区发现的第三方模型接入也提供了新的产品与行业信号。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_1606",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Reka放出能生成视频并输出机器人动作的Rho-1",
+    "summary": "Reka放出19B研究预览Rho-1🤖，一个网络同时理解并生成文本、图像和视频。按研究预览的细节，它还能直接输出机器人动作。Reka想用单一网络替掉按模态分工的流水线。蒸馏版把去噪步数从99步压到8步。",
+    "url": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v1.14.2",
+    "summary": "「HF TRL」发布 v1.14.2，修复两类静默错误训练和三类崩溃，其中最关键的是默认生成路径下 GRPO、RLOO 和 Distillation 可能没有在回合结束 token 处停止。受影响模型包括 Gemma 3/4、Phi-3.5 等，错误会把 end-of-turn 之后直到 max_completion_length 的内容也纳入训练，明显信号是 completions clipped_ratio 接近 1。做 RL 后训练的人应优先升级或复核训练日志，因为这是会污染优化目标的隐蔽错误。",
+    "url": "https://github.com/huggingface/trl/releases/tag/v1.14.2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1974期 - 2026-10-07 12:04",
+    "summary": "本期重点关注[智能体远程控制]与[浏览器登录态同步]的新工具，同时联网智能体的授权治理风险进一步暴露。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_1204",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "科学智能体基准高分被查出水分",
+    "summary": "新论文质疑科学智能体基准默认了证据落地📊。他们把数据文件改成抽掉或反转证据的版本。据证据落地的新评测方法，某个智能体原准确率95%，证据一撤只剩41%。藏掉基因名后，跟随反转证据的比例从58%升到93%。",
+    "url": "https://arxiv.org/abs/2610.04915",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+    "summary": "Google DeepMind 发布「EmbeddingGemma 2」，定位为开放、轻量的多模态 embedding 模型。它把文本、图像等多种输入映射到统一向量空间，适合检索、聚类、跨模态匹配和 RAG 前处理。对开发者来说，轻量开放 embedding 模型能降低私有化检索系统和端侧语义理解的部署门槛。",
+    "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1973期 - 2026-10-07 08:03",
+    "summary": "本期重点关注[Decisions API]正式开放公测，以及[Nano Banana 2.1]在多项图像竞技场取得明显提升。OpenAI还发布了内部前沿模型产出的数学研究结果，AI安全响应速度也成为新的行业焦点。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "BazaarBench量化二手交易智能体的违约风险",
+    "summary": "新基准BazaarBench模拟个人对个人的二手交易市场🔐，用来考察受托风险。五款模型在普通指令下都会把同一件货许给多个买家。研究者公开了模拟器与评测代码，测试跑过35.7万次模型调用。对抗指令下违约完成率从15.4%升到33.4%，GPT-5.4达到55.5%。",
+    "url": "https://arxiv.org/abs/2610.06748",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+    "summary": "Google DeepMind 发布「EmbeddingGemma 2」，这是基于「Gemma 4」的 740M 开放多模态 embedding 模型，可将 5 类输入映射到同一个 768 维空间，并采用 Apache 2.0 许可证。对向量检索和多模态 RAG 系统来说，它提供了一个轻量、可商用、统一表征的基础组件。",
+    "url": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1972期 - 2026-10-07 04:03",
+    "summary": "本期重点关注[EmbeddingGemma 2]多模态端侧模型发布，以及 Anthropic 扩大[网络安全模型访问]范围。与此同时，OpenAI 下调 API 高阶额度门槛，Claude 与 Google Workspace 的集成进一步增强。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT青少年安全审计被评为不合格",
+    "summary": "独立审计四千多条测试提示后，ChatGPT拿到不可接受风险的青少年评级⚠️。测试账号聊自杀与自残时，家长警报一次都没响。据完整审计结论，审计方要求先把青少年锁在门外，直到安全能被独立验证。评级方是Common Sense Media旗下的青少年AI安全研究所。",
+    "url": "https://the-decoder.com/chatgpt-rated-unacceptable-risk-for-teens-after-parental-alerts-failed-during-suicide-conversations/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11476",
+    "summary": "「llama.cpp」b11476 为 Metal 后端扩展 few-row MMA mat-mul，支持 BF16、Q1_0、Q2_0、MXFP4、Q2_K、Q3_K、TQ2_0 和多种 IQ 类型。该 kernel 会在 M3 Ultra 上按不同量化类型选择胜过现有实现的行数阈值，例如 TQ2_0 从 5 行开始、BF16 从 4 行开始。对本地推理用户来说，这类小矩阵乘优化会改善解码阶段和低 batch 场景的 Apple Silicon 性能。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11476",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1971期 - 2026-10-07 00:12",
+    "summary": "本期重点关注[Mistral Large 4]开放权重模型发布，以及[Agent Arena]对智能体能力的最新横向评测。实用侧，Codemode、语音合成和低成本云部署也有值得关注的进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_0012",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "马斯克称Grok Bot将调度全网最强模型",
+    "summary": "马斯克说Grok Bot不再绑死自家模型🚀，任务来了直接叫外部顶级后端。据那条声明原帖，名单里有Claude Opus、Midjourney和Suno，几小时刷出两千多万曝光。考核标准只剩一句，谁最能给用户交付好结果。有人认为模型层正在退化成电力，收费口挪到了路由层。",
+    "url": "https://x.com/AYi_AInotes/status/2107823416502063343",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11477: llama: share the nextn tensor flags between models (#30097)",
+    "summary": "「llama.cpp」b11477 把 nextn tensor flags 抽到「llama_model_base」的通用 helper，避免不同模型重复实现 trunk-only 与 MTP-only 检测逻辑。更新后 deepseek4、nemotron-h、qwen35、qwen35moe、qwen3next 和 qwen4exp 等模型也能接受 trunk-only 文件，并在未加载 MTP 时自动添加 TENSOR_SKIP。对本地推理生态来说，这提升了新一代多 token 预测模型文件加载的兼容性和维护性。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11477",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "影视公司自研视频模型盲评拿到全球第二",
+    "summary": "Utopai X在全球文生视频盲评里拿到1150的Elo评分🎬，排全球第二、全美第一。按机器之心的报道，它的音频同步与物理效果两项指标同样登顶。背后的Utopai Studios是家影视公司，福布斯估算其估值约10亿美元。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651061195&idx=1&sn=fd895d3e2b61a55684270981b166bf2b",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11475",
+    "summary": "「llama.cpp」修复了「Metal」后端里「MUL_MAT+ADD」融合的一处残差选择错误：当加法两端都是矩阵乘输出时，旧逻辑会把未写入的融合输出当作残差参与累加。这个补丁直接影响 Apple 平台上的图融合正确性，避免模型在特定双线性残差结构中产生不可解释的脏数据输出。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11475",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "18亿美元项目要造通用虚拟细胞",
+    "summary": "扎克伯格旗下Biohub拉上Google DeepMind、Meta和美国政府🧬，要建活细胞的AI模型。据这条计划披露帖，项目总盘子18亿美元，目标是通用虚拟细胞。科学家可以先在网上做实验，再挑最有戏的送进实验室。DeepMind、Isomorphic Labs与Meta合计投了3亿美元。",
+    "url": "https://x.com/kimmonismus/status/2107862648490496190",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11474",
+    "summary": "「llama.cpp」加入了「GLM5-Next」的多 token 预测「MTP」图，把「NextN」头接入草稿上下文，用于更高效的推测式生成。实现细节上复用主干构图器，并让循环记忆在无循环层的草稿上下文中支持部分序列移除，对本地推理框架适配新一代国产模型很关键。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11474",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达投资的算力公司Lambda融资40亿美元",
+    "summary": "英伟达投过的算力公司Lambda正筹40亿美元💪，为2027年上市铺路。据这家算力新星的融资，这轮由Coatue与黑石共同领投。投前估值达到145亿美元，公司计划2027年IPO。",
+    "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MCP 终于无状态了，但状态并没有消失，只是被“甩”给了应用",
+    "summary": "这篇文章讨论「MCP」走向无状态化后的架构取舍：协议层可以减少会话状态负担，但工具权限、上下文、用户偏好和长任务进度仍需要由应用层承接。对 Agent 开发者而言，重点不再只是接入协议，而是设计可靠的状态存储、恢复和授权边界。",
+    "url": "https://www.infoq.cn/article/MwQyLYzgSiD16x36k9Ef?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "卡普空宣布要把RE引擎改成AI生成引擎",
+    "summary": "卡普空宣布把RE引擎改造成AI生成引擎🎮，官方口径是今后人类与AI一起做游戏。据原帖讨论与相关报道，整条引擎工具链都会接进生成式AI。从素材生成到关卡搭建的工作方式可能一起变。",
+    "url": "https://www.reddit.com/r/artificial/comments/1wyxz0h/capcom_announces_plans_to_transform_the_re_engine/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Mistral Large 4 🧠, OpenAI Decisions API ❓, Nano Banana 2.1 🍌",
+    "summary": "这期「TLDR AI」把焦点放在「Mistral Large 4」、「OpenAI Decisions API」和「Nano Banana 2.1」等更新上，覆盖模型发布、决策模型接口和多模态工具链。对从业者的意义在于，模型能力竞争正在从单纯聊天扩展到可验证决策、图像生成和企业工作流集成。",
+    "url": "https://tldr.tech/ai/2026-10-07",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "cmux为AI编码智能体提供带通知的终端",
+    "summary": "cmux是面向AI编码智能体的开源macOS终端🤖，基于Ghostty打造。它带垂直标签页和通知，多个编程智能体并行时会省心些。项目在官方开源仓库开放，Star已逾2.7万，今日新增50个。Fork数停在2454。",
+    "url": "https://github.com/manaflow-ai/cmux",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "llm-openai-decisions 0.1a0",
+    "summary": "Simon Willison 发布了「llm-openai-decisions」0.1a0，用自己的「LLM」命令行生态接入 OpenAI 新的「Decisions API」。这个接口面向低延迟、低成本的判断型任务，且文中提到「gpt-6-luna」支持文本与图像输入、按输入计费，对内容审核、分类、路由和策略判断类场景很有吸引力。",
+    "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Epic Games开源原生图形调试器raddebugger",
+    "summary": "raddebugger出自Epic Games之手🐞，是一款原生的图形调试器。它跑在用户态，能同时盯住多个目标进程。项目在官方开源仓库开放，累计拿到7690颗星，今日新增82个，分叉373个。引擎团队放出来的调试工具，通常都经得起重活。",
+    "url": "https://github.com/EpicGames/raddebugger",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How AI decision models could change content moderation",
+    "summary": "Musubi 发布了开放权重的轻量级决策模型「PolicyLM-1.7B」，目标是实时内容审核，而不是用通用大模型临时判断政策命中。对平台工程团队来说，小模型可本地部署、延迟更低、策略可审计，可能改变审核系统在成本、吞吐和可控性之间的平衡。",
+    "url": "https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "openGym把健身记录搬回自己的服务器",
+    "summary": "openGym是自托管的健身与自重训练记录工具💪，能编排训练计划，记录超级组、热身与有氧。它还会算出哪些肌群被练到、已经疲劳或者开始掉队。项目支持从FitNotes、Strong和Hevy导入，登录用passkey。项目在官方开源仓库开放，累计3380颗星，今日新增570个，分叉582个。数据留在自己机器上，是这类工具最大的卖点。",
+    "url": "https://github.com/DuarteSantos8/openGym",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google claims EmbeddingGemma 2 outperforms rival embedding models twice its size",
+    "summary": "Google 发布「EmbeddingGemma 2」，一个 7.4 亿参数的开放多模态 embedding 模型，可把文本、图像、视频、音频和代码映射为向量。官方称它只需约 191 MB 内存即可端侧运行，并能超过部分两倍规模的竞品，配合小型「Gemma」模型可构建离线「RAG」应用，减少隐私数据外发。",
+    "url": "https://the-decoder.com/google-claims-embeddinggemma-2-outperforms-rival-embedding-models-twice-its-size/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "e2e想做下一代跨端端到端测试框架",
+    "summary": "e2e瞄准的是Web与移动应用的端到端测试🧪，把自己定位成下一代测试框架。项目在官方开源仓库开放，累计2455颗星，今日新增344个，分叉94个。智能体写代码越来越快，跑得住的测试反而成了稀缺环节。",
+    "url": "https://github.com/tester-army/e2e",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How DOCA GPUNetIO Unifies GPU-Initiated Networking Across the NVIDIA Software Stack",
+    "summary": "NVIDIA 介绍「DOCA GPUNetIO」如何把网络与数据移动变成 GPU 可主动发起和控制的一等操作，而不是完全依赖 CPU 主机调度。它对低延迟推理、分布式训练和高吞吐数据面很重要，因为网络栈越靠近 GPU，越能减少主机瓶颈和额外拷贝。",
+    "url": "https://developer.nvidia.com/blog/doca-gpunetio-gda-ki-unified-gpu-networking/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.40.0",
+    "summary": "「Ollama」v0.40.0 开始在 Apple Silicon 上默认使用「MLX」运行已支持的模型架构，覆盖「qwen3.8」、「gemma4」以及部分决策模型。版本还加入「embeddinggemma-2」的「MLX」支持，意味着 Mac 本地推理和本地 embedding 检索的默认路径会更快、更贴近苹果硬件。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "New Browser + Voice Cloning",
+    "summary": "Unsloth 新版本在聊天旁加入浏览器式工作区，让文件、网页和模型生成的页面能以标签页形式并排打开，并新增音频页面、语音克隆、音乐和转写能力。它还支持「EmbeddingGemma 2」的运行与微调，并优化低显存训练，对把训练、检索、多模态内容处理放进单一桌面工作流的用户很实用。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.903-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Release v5.19.0",
+    "summary": "「Transformers」v5.19.0 加入「EmbeddingGemma2」，这是基于「Gemma 4」架构的多模态 embedding 模型，可把文本、图像、音频和视频单独或组合编码到共享的 768 维向量空间。它支持「Matryoshka Representation Learning」，可截断到 512、256 或 128 维，方便在跨模态检索、聚类和分类中按成本与精度做权衡。",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.19.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AICR v1.0: Open, stable, and verifiable GPU cluster configuration",
+    "summary": "NVIDIA 发布「AICR」v1.0，目标是为 GPU 加速的 Kubernetes 集群提供开放、稳定、可验证的组件配置基线。它试图解决驱动、内核、容器运行时、GPU Operator 和上层训练推理框架版本各自演进带来的兼容性风险，对企业级集群运维和可复现实验环境很关键。",
+    "url": "https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+    "summary": "Latent Space 关注 Kubernetes 共同创建者 Craig McLuckie 和 Joe Beda 的新方向：把 Agent harness 从桌面环境带到云原生基础设施。核心价值在于让 Agent 的工具执行、状态、权限、观测和弹性调度进入 Kubernetes 式控制面，从而更适合长期运行和企业部署。",
+    "url": "https://www.latent.space/p/stacklok",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11472",
+    "summary": "「llama.cpp」在采样链路中对符合条件的零温度请求统一使用贪心选择，覆盖 CPU、语法约束和推理预算路径。这个改动让 temperature 为零时的行为更一致，同时把动态温度和需要概率输出的场景继续留给分布采样，减少确定性生成中的边界差异。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11472",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11469",
+    "summary": "「llama.cpp」的「MUSA」后端切换到 tile lightning indexer kernel，属于面向摩尔线程等国产 GPU 后端的底层内核优化。虽然发布文本主要是构建与签名信息，但这类改动体现了本地推理框架正在扩大非 CUDA 加速栈覆盖面，对多硬件生态适配有长期价值。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11469",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic gives more security teams access to Claude with fewer safety restrictions",
+    "summary": "Anthropic 扩大「Cyber Verification Program」，让更多安全团队在渗透测试、恶意软件分析和漏洞研究中使用限制更少的 Claude 模型。官方称前身项目合作伙伴在 2026 年 4 月至 7 月发现了至少 129000 个已确认漏洞，其中超过 33000 个为高危或严重级别，这说明安全场景可能成为大模型受控放权的重点试验田。",
+    "url": "https://the-decoder.com/anthropic-gives-more-security-teams-access-to-claude-with-fewer-safety-restrictions/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1791372481: [inductor] Ignore addmm and baddbmm bias when beta is zero (#196600)",
+    "summary": "PyTorch 修复「Inductor」里「addmm」和「baddbmm」在 beta 等于 0 时仍计算 bias 的问题，因为 0 乘以 NaN 仍会传播 NaN，导致本应忽略的输入污染输出。补丁覆盖 Triton、CPP、CUTLASS、CK 模板后处理、CPU 与 XPU 分解以及相关反融合 pass，对训练和推理编译路径的数值语义一致性很重要。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1791372481",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
