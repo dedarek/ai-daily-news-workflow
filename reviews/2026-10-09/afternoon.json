@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-10-09",
+  "reviewed_at": "2026-10-09T18:16:06.920522+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "内容准确且逻辑连贯，播客对话自然流畅，无明显事实错误或重复，符合发布标准。",
+    "issues": [
+      "播客中S1提到'GPT-6推翻核聚变59年断言'时，新闻标题为'GPT-6 推翻核聚变领域 59 年断言'，但正文摘要未明确说明是'核聚变'还是'等离子体物理'等具体子领域，播客直接引用'核聚变'虽符合标题，但建议核实原始论文具体领域以确保精确性（此处基于标题判断为可接受）。",
+      "新闻列表中'GPT-6.1极速版'与播客中'GPT-6.1'表述一致，但需注意OpenAI通常不发布'6.1'版本，此处假设新闻源准确，若为虚构新闻则无问题，若为真实新闻需确认版本号准确性。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
