@@ -3,6 +3,133 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-10-09",
+      "content_date": "2026-10-09",
+      "published_at": "2026-10-09T09:56:23.408605+00:00",
+      "article_count": 12,
+      "podcast_turns": 18,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 60,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 84,
+            "exact_url_blocks": [],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "第1轮S1发言略显生硬，直接抛出结论“最核心的信号”，缺乏自然的开场过渡，建议增加一句简短的引入语以软化切入。",
+                  "第18轮S2的结束语“谢谢收听...我们下期再见”属于典型的固定寒暄/告别语，根据检查重点“不应出现固定问候和寒暄”，建议修改为更自然的收尾，例如直接结束在观点上或简短的“好，今天就聊到这”。",
+                  "第16轮S1的总结发言中“微软和谷歌在抢入口，OpenAI在卖速度，小模型在补位”概括较为笼统，若能结合前文提到的具体安全机制（如MXC或端侧隐私）稍作呼应，逻辑闭环会更紧密。"
+                ],
+                "repair_instruction": "1. 修改第1轮S1的开场，避免直接下定义，可改为“今天看了一圈，感觉‘智能体安全’成了绕不开的话题...”等更自然的切入。2. 删除或重写第18轮S2的固定告别语，去掉“谢谢收听”和“下期再见”，改为基于内容的自然收尾。3. 在第16轮S1的总结中，适当补充一句关于安全机制（如隔离或端侧）对商业落地的具体影响，使总结更扎实。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "第1轮S1发言略显生硬，直接抛出结论“最核心的信号”，缺乏自然的开场过渡，建议增加一句简短的引入语以软化切入。",
+              "第18轮S2的结束语“谢谢收听...我们下期再见”属于典型的固定寒暄/告别语，根据检查重点“不应出现固定问候和寒暄”，建议修改为更自然的收尾，例如直接结束在观点上或简短的“好，今天就聊到这”。",
+              "第16轮S1的总结发言中“微软和谷歌在抢入口，OpenAI在卖速度，小模型在补位”概括较为笼统，若能结合前文提到的具体安全机制（如MXC或端侧隐私）稍作呼应，逻辑闭环会更紧密。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-09/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-09/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-09/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-09/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-09.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-09/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-09/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-09.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-09/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-09.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-09.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-09.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-10-08",
       "content_date": "2026-10-08",
       "published_at": "2026-10-08T08:21:07.276536+00:00",
