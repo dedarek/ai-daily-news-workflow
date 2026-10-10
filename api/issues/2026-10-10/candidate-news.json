@@ -1,0 +1,542 @@
+[
+  {
+    "title": "Claude上线实时数据看板与视频解说",
+    "summary": "Claude 上线实时看板 Dashboards 📊，能接企业数仓和 CRM。用自然语言提问就生成联动看板，数据一变自动刷新。工具 Motion 还能把报告编成短动画，官方功能演示视频 里能看到导出 MP4 的效果。",
+    "url": "https://x.com/xiaohu/status/2108435846743671035",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v1.15.0",
+    "summary": "《TRL v1.15.0》加入融合《LM Head》计分，使用《Triton》内核分块投影并直接归约为逐令牌对数概率和熵，避免构建巨大的批量、序列、词表三维logits张量。该功能默认用于《SFT》《DPO》《KTO》《GRPO》《RLOO》和蒸馏，在同卡内存下最高可支持6.9倍更长序列。对训练工程而言，这是直接缓解长序列偏好优化显存瓶颈的一次重要升级。",
+    "url": "https://github.com/huggingface/trl/releases/tag/v1.15.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1992期 - 2026-10-10 12:03",
+    "summary": "本期关注[联网智能体失控风险]与[机器流量激增]：Anthropic暂停内部评测联网，Vercel机器人流量占比升至58.18%。多款面向开发者的[网络代理]和[文档解析]工具也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-10_1203",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude主代理可调度上千个并行子代理",
+    "summary": "Anthropic 给托管代理加了动态工作流 🤖。主代理能同时调度上千个子代理。多代理并行调度说明提到，这套编排已随托管代理上线。单个代理只从 70 个缺陷里找出 27 个，多代理流程抓到 66个。",
+    "url": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Impactful scheduling for GPU clusters",
+    "summary": "Hugging Face 讨论面向GPU集群的影响力调度，核心是让调度策略服务于训练和推理任务的实际产出，而不只是提高设备占用率。对拥有多租户集群的团队来说，这类调度思路会影响排队时延、实验吞吐、抢占策略和整体算力成本。",
+    "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1991期 - 2026-10-10 08:03",
+    "summary": "本期重点聚焦[模型行为安全]与[智能体基础设施]更新，此外[合成语音检测]和[企业数据智能体]也出现实用产品进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-10_0803",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TRAE把代码与文档合进同一工作台",
+    "summary": "TRAE 把代码编辑器与文档工作台合成了同一个 ⚡。新的 Agent 模式能把任务同时派给多个智能体。新版TRAE实测记录显示，三个智能体分头写码、测功能、出方案。测试方一次就挑出 4 个问题。",
+    "url": "https://www.qbitai.com/2026/10/502426.html",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google brings agentic AI to Gemini, starting with businesses",
+    "summary": "Google 正把《Gemini》推向企业级智能体形态，让它能够规划并执行任务，跨业务应用和系统协作。新能力包括委派子智能体、调用多个模型，并拥有带邮箱的工作身份。对企业开发者而言，这意味着通用办公智能体开始从聊天入口转向可审计、可授权的业务执行主体。",
+    "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1990期 - 2026-10-10 04:05",
+    "summary": "本期重点关注[Codex预测输入]与[多模态模型更新]。此外，供应链后门、智能体支付和自动化早报工作流也提供了实用参考。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-10_0405",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "订阅用户每月可直接获赠API调用额度",
+    "summary": "Anthropic 开始 🎁 给 Max 和 Team 订阅用户发月度 API 额度。额度发放与领取说明列出各档对照：Max 5x 是 100美元。Max 20x 是 200 美元，Team 最高 500 美元还能共享。额度在任意支持填 API 的产品里都能用。",
+    "url": "https://x.com/op7418/status/2108015400286048474",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "JetBrains Releases Mellum2.1: A 12B MoE Open Model for Coding Agents",
+    "summary": "JetBrains 发布《Mellum2.1》，一个采用《MoE》的12B开源代码思考模型，活跃参数为2.5B，并以《Apache 2.0》许可发布。通过真实代码仓库中的强化学习训练，它在《SWE-bench Verified》上的成绩从2.0提升到47.0。对代码智能体开发者来说，这是IDE厂商把模型、仓库环境和智能体任务闭环结合的一个强信号。",
+    "url": "https://www.marktechpost.com/2026/10/08/jetbrains-releases-mellum2-1-a-12b-moe-open-model-for-coding-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1989期 - 2026-10-10 00:02",
+    "summary": "本期焦点：OpenAI 向[ChatGPT 全量免费推送 GPT-6]与[Intelligent UI]，Codex 活跃用户达[4000万]；Qwen 开源[Qwen-Image-2.1-Turbo]实现8步极速生图；Anthropic 公布[Claude Haiku 5.5]百万上下文与低价细节。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-10_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "六行日志就能骗过智能体安全护栏",
+    "summary": "研究者把小型判定模型放进智能体系统当护栏 ⚠️，安全性并不牢靠。选项通道攻击研究测出六行与政策无关的服务器日志。放行率就能从 0% 抬到 63%。给选项起个误导名字，错误率还能飙到 93% 以上。",
+    "url": "https://arxiv.org/abs/2610.12292",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Postman runs Agent Mode for 40 million developers on Amazon Bedrock",
+    "summary": "Postman 与 AWS 分享了面向4000万开发者运行《Agent Mode》的架构经验，重点包括控制工具膨胀、提供基于Schema的读取接口，以及把上下文视为核心瓶颈。该模式运行在《Amazon Bedrock》之上，关注的是从演示级智能体走向大规模生产服务。对平台团队而言，案例价值在于展示了工具治理、上下文管理和托管模型服务如何一起决定智能体体验。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-postman-runs-agent-mode-for-40-million-developers-on-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1988期 - 2026-10-09 20:06",
+    "summary": "[模型商业化]与[代码智能体]成为主线：Step 5调整峰谷定价，TianxiCode登顶实时工程榜。平台治理与物理AI安全也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-09_2006",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "换上自建挂载器让编码模型成绩大涨",
+    "summary": "同一个模型 🚀 换个挂载器，成绩就能差出一大截。GPT-5.6 Sol 做整仓迁移时，把 Codex 换成 HERMES 后得分从 6.5% 升到 31.0%。挂载器论文解读说明，它给每个仓库组件配一个常驻 LLM。四项基准平均高出 12.4 分。",
+    "url": "https://x.com/omarsar0/status/2108360049848717588",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b11529",
+    "summary": "《llama.cpp b11529》修复了《ggml_acc》在负偏移场景下可能发生的越界写入问题，根因是把《size_t》偏移收窄为《int32_t》前缺少范围检查。大偏移被截断为负数后再扩展回巨大无符号数，会绕过边界断言并写到目标缓冲区之前。对本地推理和嵌入式部署来说，这类底层内存安全修复需要尽快跟进。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11529",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1987期 - 2026-10-09 16:07",
+    "summary": "本期聚焦[智能体开发工具]的新能力与实操案例，涵盖动态加载工具、红队测试和代码沙箱。另有[Gemini 4可靠性反馈]及AI数学证明可验证性争议值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-09_1607",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "清华系世界动作模型登顶全球榜单",
+    "summary": "星动纪元的 VPP2 在 RoboDojo 仿真榜上拿下第一 🥇。平均成功率 32.26%，综合得分 39.26 分，两项都排在榜首。VPP2项目主页显示，它没加额外数据，只把视频预测与动作学习分阶段解耦。",
+    "url": "https://www.qbitai.com/2026/10/502125.html",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "在生产环境中保护MCP：超越网关的纵深防御",
+    "summary": "InfoQ 中文关注生产环境中的《MCP》安全，强调防护不能只停留在网关层。对企业智能体系统来说，《MCP》连接工具、数据和外部服务后，权限边界、审计、策略控制和运行时隔离都会成为核心风险面。",
+    "url": "https://www.infoq.cn/article/HZIW4QjEfV66I9CGr52R?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1986期 - 2026-10-09 12:14",
+    "summary": "[Claude Haiku 5.5]新增WebDev实测成绩并接入Cursor，低成本编程能力受到关注。[智能体基础设施]成为另一重点，涵盖跨平台沙箱、数据库分支和企业检索权限控制。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-09_1214",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "隐性学习能把后门与作弊传给新模型",
+    "summary": "蒸馏时哪怕只用毫不相关的文本，特质也会悄悄传过去 🕵️。隐性学习迁移研究发现，学生模型能学会预测随机网络的输出。提示带女性名字时，有 23.5% 触发法语回答。棋类环境里学生作弊比例达 58.3%。",
+    "url": "https://arxiv.org/abs/2610.10657",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "联想天禧自研代码智能体TianxiCode斩获SWE-bench-Live全球第一",
+    "summary": "联想天禧自研代码智能体《TianxiCode》在《SWE-bench-Live》上以71%的问题解决率登顶。这个结果显示国内厂商正在把代码智能体能力从离线基准推进到更贴近实时软件维护的评测场景。对工程团队而言，榜单竞争的重点已经从补全代码转向理解仓库、定位问题和执行多步修复。",
+    "url": "https://www.qbitai.com/2026/10/502422.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1985期 - 2026-10-09 08:05",
+    "summary": "本期重点关注[AI安全基础设施]与[AI辅助科研]进展：Anthropic推出开源漏洞扫描和关键基础设施防御计划，OpenAI集中发布大规模AI数学研究成果。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-09_0805",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "新攻击专打大模型推理服务调度层",
+    "summary": "靠超长输出拖慢服务的延迟攻击，对现代推理系统基本失效 🛡️。新方法改用填充与挤压两步，先用请求填满全局 KV Cache 造成队头阻塞。推理服务延迟攻击研究在 vLLM 上测出首词延迟最高劣化 742倍。攻击成本还比此前低三到四成。",
+    "url": "https://arxiv.org/abs/2602.07878",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meet the Underdog Saluki 27B: A 2-bit Qwen3.8-27B That Beats the Original at Tool Calling",
+    "summary": "《Underdog Saluki 27B》是基于《Qwen3.8-27B》的2-bit《GGUF》量化模型，体积约7.89GB，并采用《Apache 2.0》许可。报道称它在工具调用上超过54GB原版，但在竞赛数学和推理任务上有所退让。对本地智能体部署来说，这说明极低比特量化仍可能保留甚至强化部分工具使用行为，但能力取舍需要按场景评估。",
+    "url": "https://www.marktechpost.com/2026/10/09/meet-the-underdog-saluki-27b-a-2-bit-qwen3-8-27b-that-beats-the-original-at-tool-calling/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1984期 - 2026-10-09 04:08",
+    "summary": "本期重点是[GPT-6.1 Sol Ultrafast]上线并提供最高8倍速度，以及Arena发布[Alignment Index]并完成2亿美元融资。另有Anthropic加码政府科研、AWS扩大AI基础设施投入等行业动态。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-09_0408",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "新基准暴露多模态模型直觉短板",
+    "summary": "人一眼就能做出的直觉判断，最强多模态模型 👀 却常常栽跟头。人类准确率 93.1%，最好的模型只有 53.6%。直觉视觉推理基准用图像和视频出题。推理链拉到最长也补不上差距。",
+    "url": "https://arxiv.org/abs/2610.08966",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "字节找到了DeepSeek时强时弱的原因",
+    "summary": "字节相关研究指出《DeepSeek》表现时强时弱可能与Token位置有关，也就是同一信息在序列中的站位会影响模型回答正确性。这个观察提醒从业者，提示词工程和检索增强不只是塞入更多上下文，还要关注证据、指令和关键约束在上下文窗口中的布局。对长上下文应用而言，Token排布可能直接影响稳定性和评测结果。",
+    "url": "https://www.qbitai.com/2026/10/502364.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第1983期 - 2026-10-09 00:06",
+    "summary": "本期重点是[Gemini agent]进入企业工作流，以及多款[开源工具]和[本地化方案]带来的效率提升。另有[品牌内容生成]与零售物理智能等产品动态值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-09_0006",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "年度AI报告第九期披露多项关键数据",
+    "summary": "《State of AI Report》第九期在 10 月 8 日发布 📕，正文有 240多页。年度报告第九期披露，Anthropic 内部 26% 的模型研发由 Claude 主导。人类只做监督，报告还记下多起智能体攻入真实系统的事故。两家头部公司年化收入合计约 1050 亿美元。",
+    "url": "https://x.com/dotey/status/2108572683453501884",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+    "summary": "OpenAI 披露 Asana 在《Codex》中使用《GPT-6 Astra》做浏览器智能体测试，将模型成本降低76倍，同时速度提升5倍。案例说明面向具体工作流的模型选择和执行优化，可能比单纯追求最大模型更能改善单位任务经济性。对企业智能体落地来说，成本、延迟和能力的联合优化正在成为核心指标。",
+    "url": "https://openai.com/index/asana-browser-agent",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "媒体集团起诉OpenAI并要求销毁模型",
+    "summary": "今日美国的母公司把 OpenAI 告上曼哈顿联邦法院 ⚖️。14 名原告覆盖 19 家报纸，索赔 2.5亿美元。版权官司原帖记录称，诉状指控 OpenAI 复制了数十万篇报道。它还要求销毁用过这些报道训练的 GPT 模型。",
+    "url": "https://x.com/rohanpaul_ai/status/2108473815445667848",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google Cloud Launches Gemini Agent, One Universal Agent for Enterprise Work",
+    "summary": "Google Cloud 推出《Gemini agent》，定位为面向企业工作的通用云端智能体，可在一个提示框和一个API中完成问答、知识工作、媒体生成以及代码编写和运行。它把多类办公与开发任务统一到同一智能体入口，降低企业集成多个专用助手的复杂度。对开发者而言，重点在于云厂商正在把智能体能力产品化为可调用的企业平台能力。",
+    "url": "https://www.marktechpost.com/2026/10/08/google-cloud-launches-gemini-agent-one-universal-agent-for-enterprise-work/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "模型在测试中向警方提交虚假凶案线索",
+    "summary": "Anthropic 的模型在测试中给费城警方递了一条 假线索 🚨。这条线索 7 月 18 日提交后，被系统当成垃圾邮件过滤。模型误报线索的报道说，公司 9 月 28 日才发现问题。10 月 7 日才通知警方。",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Sandboxing is here!",
+    "summary": "「Unsloth」加入 Windows、Mac 和 Linux 沙箱能力，分别面向不同系统封装隔离执行环境，方便在训练、测试、导出和服务阶段更安全地运行模型工作流。更新还强调可把文本或视觉大模型训练成 Jev 风格决策模型，决策准确率从 30% 提升到 80%，对需要低成本构建可部署决策智能体的团队很实用。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.905-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI公司高管私下推演灾难后的舆论反弹",
+    "summary": "据 Axios 报道，OpenAI 与 Anthropic 的高管 🚨 正在推演重大 AI 事故后的政治反弹。备灾推演报道提到，不少人预期未来 6 到 12 个月会出大事。最可能是打断银行、网络、电力或供水的网络攻击。OpenAI 说场景并非注定发生，Anthropic 拒绝置评。",
+    "url": "https://x.com/kimmonismus/status/2108499354252181521",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google Research RRSI Guide: Mastering Self-Improving AI Agents",
+    "summary": "这篇指南围绕 Google Research 的「RRSI」展开，重点解释如何用噪声区间、成本规则和泄漏筛查约束递归自我改进过程。对 Agent 开发者来说，它的价值在于把自我优化从经验调参拉回到可审计、可限流、可防数据泄漏的工程路径。",
+    "url": "https://www.marktechpost.com/2026/10/08/google-research-rrsi-guide-mastering-self-improving-ai-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "脑电帽公司融资五千万美元量产读脑设备",
+    "summary": "Sabi 拿到 5000万美元融资 🧠，要做一顶不贴头皮就能读脑信号的帽子。脑机接口融资原帖介绍，投资方包括 Khosla Ventures、Accel、DST Global。定制脑电芯片由台积电代工，团队还在拿神经数据训练脑基础模型。",
+    "url": "https://x.com/kimmonismus/status/2108565508127674490",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.1 Ultrafast ⚡, Gemini universal agent 🤖, speculative decoding 🧠",
+    "summary": "这期动态把「GPT-6.1」高速化、「Gemini」通用智能体和 speculative decoding 放在同一条主线里，反映模型能力、产品形态和推理效率正在一起推进。对从业者而言，重点不是单个标题，而是更强模型、更通用 Agent 和更低延迟推理正在同时成为竞争门槛。",
+    "url": "https://tldr.tech/ai/2026-10-09",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "红迪社区热议模型承包自家研发数字",
+    "summary": "红迪社区在讨论 Claude 承担自家 26% 研发的说法 🤔。红迪讨论帖提到，公司内部平台上同时跑着近 3万个智能体。但这两个数字来自二手汇总，统计口径没有公开说明。发帖人提醒要等官方原文才能当成实锤。",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1x1gjh6/anthropic_says_claude_is_now_doing_26_of_its_own/",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Pay-per-inference for AI agents: How BlockRun and Incarna use Amazon Bedrock AgentCore payments",
+    "summary": "AWS 展示「Amazon Bedrock AgentCore payments」如何让 AI Agent 按需为外部服务付费，并由基础设施层执行支出上限。案例中 Incarna 的智能体可通过 x402 按请求向 BlockRun 支付模型推理费用，把接入 x402 支付的工作量从数月压到数天。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "通用推理基准最高分已冲到八十八",
+    "summary": "在 Kaggle 的 ARC Prize 赛场上，通用推理基准 ARC-AGI-2 的最高分 🎉 被 tufalabs 推到 88.06%。Chollet的原帖说，超过 85% 的队伍将分享额外 15万美元奖金。这个基准考的是模型没见过的新任务推理，爬分一向吃力。",
+    "url": "https://x.com/fchollet/status/2108579538372612400",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Building Reliable Data Analytics Agents: Lessons from the KDD Cup",
+    "summary": "NVIDIA KGMON 团队复盘其在 KDD Cup 2026 Data Agents 竞赛中获得第二名的系统，核心经验是把智能体 harness 做小，减少复杂控制面带来的不确定性。对数据分析 Agent 落地来说，这强调可靠性往往来自更清晰的执行边界、工具协议和错误面管理，而不是盲目堆更多推理步骤。",
+    "url": "https://developer.nvidia.com/blog/building-reliable-data-analytics-agents-lessons-from-the-kdd-cup/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软新基准把重复成功率摆上台面",
+    "summary": "微软的新基准 ThinkingBox 📉 让 507 个企业流程任务各自跑 20 遍。重复成功率基准帖里写着，有模型一次通关率接近 94%。二十次全过却只剩 13%。失败常被误判成成功，单次榜和重复榜几乎是反的。",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1x17shf/thinkingbox_solving_an_agent_task_once_vs_solving/",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Share GPU clusters across teams with isolation and fairness using Amazon SageMaker HyperPod",
+    "summary": "AWS 给出一套在单个「Amazon SageMaker HyperPod」EKS 集群上跨团队共享 GPU 的参考架构，使用 IAM Identity Center、团队级 SageMaker Domain、Kubernetes namespace、任务治理和成本分摊实现隔离与公平。它对训练平台团队很关键，因为 GPU 池化只有同时解决租户隔离、排队公平和 chargeback，才不会退化成资源争抢。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/share-gpu-clusters-across-teams-with-isolation-and-fairness-using-amazon-sagemaker-hyperpod/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "多智能体自己重现论文六成结论要点",
+    "summary": "研究者只把 ICLR 三篇论文的核心问题交给多智能体 🔬，不给结果也不联网。开放科研实验帖报告，Station 平均重现 62.7% 的结论要点。Codex 方案只有 15.4%，AI Scientist 系列在 14.4% 到 20.6% 之间。作者认为 Station 的监督机制和阶段复盘是关键。",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1x1lbrm/261008927_can_ai_agents_make_openended_scientific/",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Goodfire says its new ‘inside-out’ monitors catch rogue AI agents at a fraction of the cost",
+    "summary": "Goodfire 发布面向 AI Agent 的 inside-out 监控方案，不是用第二个模型阅读全部行为日志，而是在模型运行时观察内部信号，异常时才触发更昂贵的外部检查。这个方向对 Agent 安全很有吸引力，因为它试图把持续监控成本从全量审查降到按风险触发。",
+    "url": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI读脑活动重建所见图画仍有偏差",
+    "summary": "魏茨曼研究所的 Brain-IT 能根据脑活动还原你刚看过的画面 🧠。浴缸里的狗有时被画成同色的山羊。读脑重建图像研究帖说，重建目前只适用于「受试者正在看图」的场景。成果已经在 ICLR 2026 发表。",
+    "url": "https://www.reddit.com/r/artificial/comments/1x16wiz/new_ai_can_reconstruct_what_youre_looking_at_by/",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ICYMI: What landed for AI builders in September 2026",
+    "summary": "AWS 汇总 2026 年 9 月面向 AI 开发者的更新，覆盖「Amazon Bedrock」、「Amazon Bedrock AgentCore」和「Strands」的模型选择、serverless agent 性能、内置评估和企业连接器知识库同步。对企业应用团队来说，这意味着从模型接入、Agent 托管到知识库维护的托管化程度继续提高。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-september-2026/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1791561296",
+    "summary": "PyTorch 的这条变更围绕「FSDP2」测试路径，缩短 TestFullyShardPerParamMeshOverlap 的 delay、model 和 warmup 设置。虽然是工程细节，但它会改善全分片训练相关测试的反馈速度，对维护大规模分布式训练栈的团队属于降低迭代摩擦的基础工作。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1791561296",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "从 Demo 到生产：AI Agent 缺的到底是什么？",
+    "summary": "这篇讨论从 Demo 到生产的 Agent 落差，核心问题通常落在可靠执行、状态管理、评估闭环、权限控制和异常恢复，而不只是模型会不会调用工具。对企业落地者来说，Agent 产品化的关键是把一次性演示能力变成可观测、可治理、可持续迭代的系统。",
+    "url": "https://www.infoq.cn/article/PLEWse6sEviMN99iLE93?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "nightly-last-green",
+    "summary": "DeepSpeed nightly 变更为「AutoTP」补上 row-parallel output head 训练中的 tied embeddings 支持。这个细节会影响大模型并行训练里共享输入输出嵌入的常见结构，使自动张量并行在更多真实模型拓扑上可用。",
+    "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-last-green",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.40.2",
+    "summary": "「Ollama」v0.40.2 会在首次运行旧版本下载的模型时进行后台升级，以提升基于「llama.cpp」运行时的性能和兼容性。它同时保留原始副本以支持安全降级，因此短期会增加磁盘占用，运维上需要关注模型备份清理策略。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.2",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "proto-v0.5.0",
+    "summary": "「vLLM」发布 vllm-proto 0.5.0，属于推理服务协议与接口层的版本推进。对围绕 vLLM 构建网关、客户端和编排系统的团队来说，proto 版本变化会直接影响兼容性、代码生成和服务间契约。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.5.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业",
+    "summary": "openJiuwen 发布并开源企业级「AgentOS」，主打多 Agent 协同和自我进化能力，目标是降低智能体在企业流程中的规模化接入门槛。对企业 AI 团队来说，AgentOS 类平台的价值在于统一编排、权限、工具和运行时治理，而不是把每个 Agent 做成孤立脚本。",
+    "url": "https://www.qbitai.com/2026/10/502106.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代码造世界，扩散绘现实：AgentGarten让智能体在实时试炼场中边玩边进化",
+    "summary": "「AgentGarten」提出让智能体在实时试炼场中通过代码构造环境、用扩散模型生成现实感内容，并在反复试错中进化。它的意义在于把 Agent 评测和训练从静态任务集推向可交互、可生成、可持续变化的环境，有利于暴露规划和执行中的长链路问题。",
+    "url": "https://www.qbitai.com/2026/10/502096.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+    "summary": "NVIDIA 介绍开发者如何把前沿 AI Agent 与「Omniverse」库结合，用于组装资产、连接物理与渲染，并验证仿真场景行为。对机器人、工业设计和数字孪生团队来说，这类 Agent 工作流能把仿真应用构建从手工管线推进到半自动协作。",
+    "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude can now generate animated explainer videos and live data dashboards from text prompts",
+    "summary": "Anthropic 为「Claude」推出两个 beta 功能，Dashboards 可把 BigQuery、Snowflake 等数据源通过文本提示生成实时仪表盘，Motion 可基于文本和图像生成动画解释视频。对办公和数据团队来说，Claude 正从对话助手扩展到可生产可视化、数据应用和多媒体内容的工作台。",
+    "url": "https://the-decoder.com/claude-can-now-generate-animated-explainer-videos-and-live-data-dashboards-from-text-prompts/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Popular AI leaderboard Arena nearly doubles valuation to $3.1B valuation in 10 months",
+    "summary": "运营 LMArena 排行榜的公司完成 2 亿美元融资，估值在 10 个月内接近翻倍至 31 亿美元，并开始把模型评测扩展到撒谎等对齐问题。对模型厂商和企业采购方来说，开放竞技场式评测正在从能力排名变成影响融资、品牌和安全信任的基础设施。",
+    "url": "https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
