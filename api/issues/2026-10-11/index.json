@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-11",
+  "content_date": "2026-10-11",
+  "published_at": "2026-10-11T06:48:08.086278+00:00",
+  "article_count": 12,
+  "podcast_turns": 18,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 59,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 84,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/",
+            "previous_url": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/",
+            "previous_date": "2026-10-10"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1第1轮切入略显生硬，直接抛出结论，缺乏自然的过渡或寒暄后的自然承接。",
+              "S2第18轮（最后一轮）包含“谢谢收听”和“我们明天见”，属于固定问候/寒暄，违反“不应出现固定问候和寒暄”的要求。",
+              "S1第17轮“希望今天的讨论能帮大家看清这波趋势背后的逻辑”略显套路化，可更具体地指向某条新闻的启示。"
+            ],
+            "repair_instruction": "1. 修改S1第1轮，增加一句自然的过渡语，例如“今天新闻里有个趋势特别明显，就是...”再引出决策模型话题。2. 删除S2最后一轮中的“谢谢收听”和“我们明天见”，改为直接结束观点，例如“...是安全可控。这大概是我们接下来要持续关注的重点。”3. 优化S1第17轮，将“帮大家看清逻辑”改为具体指向，例如“...提醒我们在部署Agent时必须把安全边界前置。”"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1第1轮切入略显生硬，直接抛出结论，缺乏自然的过渡或寒暄后的自然承接。",
+          "S2第18轮（最后一轮）包含“谢谢收听”和“我们明天见”，属于固定问候/寒暄，违反“不应出现固定问候和寒暄”的要求。",
+          "S1第17轮“希望今天的讨论能帮大家看清这波趋势背后的逻辑”略显套路化，可更具体地指向某条新闻的启示。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-11/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-11/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-11/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-11/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-11.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-11/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-11/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-11.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-11/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-11.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-11.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-11.mp4"
+}
