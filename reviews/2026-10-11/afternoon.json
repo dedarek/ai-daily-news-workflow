@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-10-11",
+  "reviewed_at": "2026-10-11T17:49:48.867745+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实，逻辑清晰，播客对话自然且紧扣核心趋势，无事实性错误。",
+    "issues": [
+      "新闻列表中包含两条关于Qwen-Image-2.1-Turbo的报道（一条侧重产品发布与定价，一条侧重技术架构与许可证），虽角度不同但存在一定程度的信息重叠，建议合并或明确区分侧重点以避免读者疲劳。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
