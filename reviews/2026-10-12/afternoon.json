@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-10-12",
+  "reviewed_at": "2026-10-12T18:30:04.778246+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实准确，逻辑清晰，播客对话自然且紧扣新闻要点，无事实错误或重复问题。",
+    "issues": [
+      "部分新闻（如小鹏机器人、OrcaRouter）在播客中未单独展开讨论，而是被概括或略过，虽不影响整体质量，但覆盖面略窄。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
