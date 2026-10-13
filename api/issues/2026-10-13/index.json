@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-13",
+  "content_date": "2026-10-13",
+  "published_at": "2026-10-13T07:25:31.605537+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 59,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 84,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/",
+            "previous_url": "https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/",
+            "previous_date": "2026-10-12"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "部分轮次（如S2第2轮、S1第5轮）信息密度极高，接近复述摘要，缺乏自然的口语停顿或追问，略显生硬。",
+              "S1第15轮关于BitNet的总结略显突兀，前文S2刚提及，S1直接深入技术细节（I2_S量化），过渡可以更平滑。",
+              "整体对话偏向“新闻播报+点评”模式，两人之间的互动（如反驳、深入追问）较少，更像是在轮流展示知识点，而非真实的双向讨论。"
+            ],
+            "repair_instruction": "1. 在S2回应S1关于OpenAI的评论时，增加一句对‘欺骗行为’具体表现的猜测或质疑，以增强对话感。2. 将S1第15轮关于BitNet的技术细节拆分，先由S2引出端侧部署的痛点，再由S1补充BitNet的解决方案，形成问答结构。3. 在S1和S2讨论基础设施（微软/亚马逊）时，增加一句关于‘自研芯片 vs 收购软件’策略差异的对比讨论，避免单纯罗列事实。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "部分轮次（如S2第2轮、S1第5轮）信息密度极高，接近复述摘要，缺乏自然的口语停顿或追问，略显生硬。",
+          "S1第15轮关于BitNet的总结略显突兀，前文S2刚提及，S1直接深入技术细节（I2_S量化），过渡可以更平滑。",
+          "整体对话偏向“新闻播报+点评”模式，两人之间的互动（如反驳、深入追问）较少，更像是在轮流展示知识点，而非真实的双向讨论。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-13/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-13/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-13/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-13/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-13.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-13/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-13/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-13.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-13/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-13.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-13.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-13.mp4"
+}
