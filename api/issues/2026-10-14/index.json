@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-14",
+  "content_date": "2026-10-14",
+  "published_at": "2026-10-14T05:49:06.285536+00:00",
+  "article_count": 12,
+  "podcast_turns": 20,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 57,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 84,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://github.com/lyogavin/airllm",
+            "previous_url": "https://github.com/lyogavin/airllm",
+            "previous_date": "2026-10-12"
+          },
+          {
+            "current_url": "https://github.com/Alishahryar1/free-claude-code",
+            "previous_url": "https://github.com/Alishahryar1/free-claude-code",
+            "previous_date": "2026-10-13"
+          },
+          {
+            "current_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+            "previous_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+            "previous_date": "2026-10-13"
+          }
+        ],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "第1轮S1发言略显书面化，'剧烈碰撞'、'同步加速'等词汇在口语中稍显生硬，建议调整为更自然的表达，如'今天有个很有意思的矛盾点'。",
+              "第15轮S1将AFCE和HMA两个不同领域的研究强行归纳为'从生成转向决策与执行'，逻辑跳跃较大，建议拆分或简化关联，避免听众困惑。"
+            ],
+            "repair_instruction": "1. 优化S1第1轮开场，将'剧烈碰撞'改为'挺有意思的对比'，'同步加速'改为'都在快速变化'，使语气更贴近日常对话。2. 在第15轮S1发言中，将AFCE和HMA的关联描述得更具体，例如'虽然领域不同，但AFCE关注物理结果预测，HMA关注长程任务效率，都体现了从单纯生成到实际效果优化的趋势'，避免笼统概括。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "第1轮S1发言略显书面化，'剧烈碰撞'、'同步加速'等词汇在口语中稍显生硬，建议调整为更自然的表达，如'今天有个很有意思的矛盾点'。",
+          "第15轮S1将AFCE和HMA两个不同领域的研究强行归纳为'从生成转向决策与执行'，逻辑跳跃较大，建议拆分或简化关联，避免听众困惑。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-14/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-14/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-14/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-14/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-14.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-14/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-14/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-14.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-14/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-14.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-14.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-14.mp4"
+}
