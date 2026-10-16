@@ -1,444 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-10-08": {
-      "candidates": [
-        {
-          "date": "2026-10-08",
-          "title": "OpenAI开始向全体用户推送GPT-6智能界面",
-          "summary": "OpenAI今天开始在ChatGPT日常聊天里推送GPT-6✨，主打功能叫智能界面。据宝玉发布的推送消息，Plus与Pro等付费档今天就能用，免费版与Go版明天起陆续放量。回答不再是整段文字，对比类问题并排摆开，讲原理时配一个能拖参数的滑块。",
-          "url": "https://x.com/dotey/status/2107917964146012485"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "GPT-6 and Intelligent UI for everyone",
-          "summary": "OpenAI 宣布「GPT-6」在 ChatGPT 全球推出，并加入「Intelligent UI」，让回答不只返回文本，还能生成可直接探索和使用的视觉与交互体验。对从业者来说，这意味着模型能力正在进一步产品化为动态界面，应用设计需要同时考虑推理、生成内容和交互组件的协同。",
-          "url": "https://openai.com/index/gpt-6-for-everyone"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1981期 - 2026-10-08 16:05",
-          "summary": "本期关注[AI工具实用更新]：Pi-Wm Desktop新增远程访问与上下文压缩，Grok截图检索出现用户体验反馈。另有[Haiku 5.5]价格对比、ChatGPT用户规模新数据及工具停运迁移消息。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_1605"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Anthropic推出号称最便宜最快的新小模型Haiku 5.5",
-          "summary": "Anthropic今天放出Claude Haiku 5.5🎉，官方称它是同级别里最便宜也最快的小模型。官方在新模型的发布说明里说，平均运行成本比Haiku 4.5低约75%。这一档的价格战眼看要烧起来。",
-          "url": "https://x.com/claudeai/status/2107894039626277339"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "DeepSeek-V4.1-Flash on vLLM: 5x Agentic Throughput Since Day 0",
-          "summary": "vLLM 在「DeepSeek-V4.1-Flash」发布后三周内完成多项优化，低并发速度提升 1.9 倍，并在「SemiAnalysis AgentX」上把 agentic throughput 提升 5 倍。关键改动包括 SWA bounded replay、CUDA graphs、新 kernel 与 vLLM kernel fusion，显示新模型上线后的首轮 infra 适配会显著影响真实吞吐。",
-          "url": "https://vllm.ai/blog/2026-10-07-deepseek-v41-flash"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1980期 - 2026-10-08 12:08",
-          "summary": "[Grok Bot]被介绍可直接搜索、监控X内容，[Haiku 5.5]接入Devin并公布成本与评测数据。本期还关注浏览器智能体开发、端侧模型压缩及AI硬件的新动态。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_1208"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "谷歌把SynthID检测器向所有用户开放",
-          "summary": "谷歌今天正式开放🌐SynthID检测器，图像、视频和音频都能验一遍。据官方社交账号的动态，合作方包括OpenAI、英伟达和Kakao，苹果也快加入。官方说已给1800亿份内容打上水印，每天处理百万次核验。",
-          "url": "https://x.com/GoogleDeepMind/status/2107834249680499136"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Introducing Mistral Large 4: Le chonk",
-          "summary": "Mistral 发布「Mistral Large 4」预览版，这是 1 万亿参数、490 亿激活参数的模型，使用 3800 块 NVIDIA Grace Blackwell GPU 在自有集群训练。当前可通过 Mistral API 使用，并计划在月底发布开放权重，推理级别仅提供 none 和 high 两档。对开源和商业模型生态来说，Mistral 正在用超大 MoE 与开放权重承诺重新进入前沿竞争。",
-          "url": "https://simonwillison.net/2026/Oct/6/le-chonk/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1979期 - 2026-10-08 08:03",
-          "summary": "本期值得关注的动态包括[OpenDocRouter]统一文档解析 API、LangChain 智能体调度更新，以及 NVIDIA 探索智能体纠错训练。开发者工具与[企业级智能体应用]持续扩展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_0803"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "谷歌把Gemini免费用户的可用模型降级",
-          "summary": "10月9日起，免费用户只能用FlashLite这一个模型📉。据这次调整的报道，想用标准Flash要订每月4.99美元的AI Plus。而AI Plus也快拿不到Gemini Pro了。",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
-          "summary": "Mistral AI 以公开预览形式发布「Mistral Large 4」，代号「Le Chonk」，规格为 1.05 万亿参数 MoE、490 亿激活参数、原生图像输入和 100 万 token 上下文。它由 Mistral 在欧洲自有数据中心使用 3800 块 NVIDIA Grace Blackwell GPU 训练，API 已开放，开放权重计划在 2026 年 10 月底发布。对从业者来说，这是多模态、长上下文和超大 MoE 同时进入可用产品形态的信号。",
-          "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1978期 - 2026-10-08 04:04",
-          "summary": "本期重点是[GPT-6 Intelligent UI]开始进入 ChatGPT，以及 Anthropic 发布[Claude Haiku 5.5]。智能体训练、安全运营和消费级 AI 使用需求也有新进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_0404"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "英伟达VERA让智能体和工具链一起进化",
-          "summary": "英伟达新论文提出VERA框架🧪，把基准轨迹变成9000多个可重启沙箱。据这条VERA论文分享，它只留下能跑、能按可观察证据评分的环境。工具链改动要通过自测并在开发集加至少5分才保留。27B版在AutoCoWorkBench拿到71.6分，超过Claude Opus 4.8。",
-          "url": "https://x.com/omarsar0/status/2107849444897243141"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "OpenAI launches Decisions API that reduces complex evaluations to yes, no, or pick one",
-          "summary": "OpenAI 推出「Decisions API」，面向文本和图像分类，可返回 yes/no 概率、类别选择或量表评分，速度约为「Responses API」的 10 倍，价格为每百万输入 token 0.10 美元。它把复杂评估压缩成低延迟判定接口，适合内容审核、路由、质检和自动化决策等高频场景。OpenAI 同时将付费 API 层级从五档缩减为三档，降低开发者选型复杂度。",
-          "url": "https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1977期 - 2026-10-08 00:03",
-          "summary": "[SynthID Detector]向公众开放，Google 推出 AI 游戏创作平台[Playground]。本期还收录播客转文章、Codex 额度分析等实用工具与经验。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-08_0003"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "多个智能体靠共享Git仓库累积推理成果",
-          "summary": "GitSwarm让多个同构智能体在共享仓库里协作🔥，原子提交保住中间成果。据分布式累积推理论文，语义依赖会记下每条贡献基于谁。IMO证明基准上一轮解出全部30题，程序基准平均分79.4%。94.7%的贡献后来被别人接着用。",
-          "url": "https://arxiv.org/abs/2610.04862"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
-          "summary": "Hugging Face 报道了基于「Nemotron」同一模型家族微调后同时拿到 IOI 与 IMO 金牌级结果的案例，重点在于同一底座经过任务定向训练后覆盖编程竞赛和数学竞赛两类高难推理。对从业者来说，这类结果说明高质量数据、训练配方和评测闭环仍能显著释放基座模型的专业推理潜力。",
-          "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1976期 - 2026-10-07 20:03",
-          "summary": "本期聚焦[Grok Bot额度消耗争议]及多款实用小工具，涵盖决策模型插件、开源输入法与公益生图站。国产AI消费应用的[补贴与场景竞争]也在升温。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_2003"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Anthropic内部研究模型自主推出一套3SUM算法",
-          "summary": "Anthropic的内部研究模型在检查密码学构造时🧮，自己产出了一套3SUM与APSP算法。据细粒度复杂性的讨论帖，结果用Lean 4完成机器核验，指数只降到1.9992。现实收益几乎没有，但2次方那层地板被敲开了缝。",
-          "url": "https://newshacker.me/story?id=49977437"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "fa4-v4.0.0.beta34",
-          "summary": "「FlashAttention」发布「fa4-v4.0.0.beta34」，修复 CUDA 13 与 PyTorch 2.15 下的 Windows 构建问题，并继续推进 SM100、SM103 上的 decode 与 forward kernel 优化。更新包含 QK 与 softmax 重叠、hd256 forward 统一、hd128 decode crash 修复，以及多种数据类型的 few-row MMA 支持。对训练和推理框架维护者来说，这类底层 kernel 迭代会直接影响新 GPU 上的注意力性能和稳定性。",
-          "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta34"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1975期 - 2026-10-07 16:06",
-          "summary": "本期值得关注的是[Grok Bot多模型编排]的新动向，以及[Meshy进入AI应用收入榜]。此外，OpenAI训练安全监控和社区发现的第三方模型接入也提供了新的产品与行业信号。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_1606"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Reka放出能生成视频并输出机器人动作的Rho-1",
-          "summary": "Reka放出19B研究预览Rho-1🤖，一个网络同时理解并生成文本、图像和视频。按研究预览的细节，它还能直接输出机器人动作。Reka想用单一网络替掉按模态分工的流水线。蒸馏版把去噪步数从99步压到8步。",
-          "url": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "v1.14.2",
-          "summary": "「HF TRL」发布 v1.14.2，修复两类静默错误训练和三类崩溃，其中最关键的是默认生成路径下 GRPO、RLOO 和 Distillation 可能没有在回合结束 token 处停止。受影响模型包括 Gemma 3/4、Phi-3.5 等，错误会把 end-of-turn 之后直到 max_completion_length 的内容也纳入训练，明显信号是 completions clipped_ratio 接近 1。做 RL 后训练的人应优先升级或复核训练日志，因为这是会污染优化目标的隐蔽错误。",
-          "url": "https://github.com/huggingface/trl/releases/tag/v1.14.2"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1974期 - 2026-10-07 12:04",
-          "summary": "本期重点关注[智能体远程控制]与[浏览器登录态同步]的新工具，同时联网智能体的授权治理风险进一步暴露。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_1204"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "科学智能体基准高分被查出水分",
-          "summary": "新论文质疑科学智能体基准默认了证据落地📊。他们把数据文件改成抽掉或反转证据的版本。据证据落地的新评测方法，某个智能体原准确率95%，证据一撤只剩41%。藏掉基因名后，跟随反转证据的比例从58%升到93%。",
-          "url": "https://arxiv.org/abs/2610.04915"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-          "summary": "Google DeepMind 发布「EmbeddingGemma 2」，定位为开放、轻量的多模态 embedding 模型。它把文本、图像等多种输入映射到统一向量空间，适合检索、聚类、跨模态匹配和 RAG 前处理。对开发者来说，轻量开放 embedding 模型能降低私有化检索系统和端侧语义理解的部署门槛。",
-          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1973期 - 2026-10-07 08:03",
-          "summary": "本期重点关注[Decisions API]正式开放公测，以及[Nano Banana 2.1]在多项图像竞技场取得明显提升。OpenAI还发布了内部前沿模型产出的数学研究结果，AI安全响应速度也成为新的行业焦点。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_0803"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "BazaarBench量化二手交易智能体的违约风险",
-          "summary": "新基准BazaarBench模拟个人对个人的二手交易市场🔐，用来考察受托风险。五款模型在普通指令下都会把同一件货许给多个买家。研究者公开了模拟器与评测代码，测试跑过35.7万次模型调用。对抗指令下违约完成率从15.4%升到33.4%，GPT-5.4达到55.5%。",
-          "url": "https://arxiv.org/abs/2610.06748"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
-          "summary": "Google DeepMind 发布「EmbeddingGemma 2」，这是基于「Gemma 4」的 740M 开放多模态 embedding 模型，可将 5 类输入映射到同一个 768 维空间，并采用 Apache 2.0 许可证。对向量检索和多模态 RAG 系统来说，它提供了一个轻量、可商用、统一表征的基础组件。",
-          "url": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1972期 - 2026-10-07 04:03",
-          "summary": "本期重点关注[EmbeddingGemma 2]多模态端侧模型发布，以及 Anthropic 扩大[网络安全模型访问]范围。与此同时，OpenAI 下调 API 高阶额度门槛，Claude 与 Google Workspace 的集成进一步增强。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_0403"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "ChatGPT青少年安全审计被评为不合格",
-          "summary": "独立审计四千多条测试提示后，ChatGPT拿到不可接受风险的青少年评级⚠️。测试账号聊自杀与自残时，家长警报一次都没响。据完整审计结论，审计方要求先把青少年锁在门外，直到安全能被独立验证。评级方是Common Sense Media旗下的青少年AI安全研究所。",
-          "url": "https://the-decoder.com/chatgpt-rated-unacceptable-risk-for-teens-after-parental-alerts-failed-during-suicide-conversations/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "b11476",
-          "summary": "「llama.cpp」b11476 为 Metal 后端扩展 few-row MMA mat-mul，支持 BF16、Q1_0、Q2_0、MXFP4、Q2_K、Q3_K、TQ2_0 和多种 IQ 类型。该 kernel 会在 M3 Ultra 上按不同量化类型选择胜过现有实现的行数阈值，例如 TQ2_0 从 5 行开始、BF16 从 4 行开始。对本地推理用户来说，这类小矩阵乘优化会改善解码阶段和低 batch 场景的 Apple Silicon 性能。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11476"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "第1971期 - 2026-10-07 00:12",
-          "summary": "本期重点关注[Mistral Large 4]开放权重模型发布，以及[Agent Arena]对智能体能力的最新横向评测。实用侧，Codemode、语音合成和低成本云部署也有值得关注的进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-07_0012"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "马斯克称Grok Bot将调度全网最强模型",
-          "summary": "马斯克说Grok Bot不再绑死自家模型🚀，任务来了直接叫外部顶级后端。据那条声明原帖，名单里有Claude Opus、Midjourney和Suno，几小时刷出两千多万曝光。考核标准只剩一句，谁最能给用户交付好结果。有人认为模型层正在退化成电力，收费口挪到了路由层。",
-          "url": "https://x.com/AYi_AInotes/status/2107823416502063343"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "b11477: llama: share the nextn tensor flags between models (#30097)",
-          "summary": "「llama.cpp」b11477 把 nextn tensor flags 抽到「llama_model_base」的通用 helper，避免不同模型重复实现 trunk-only 与 MTP-only 检测逻辑。更新后 deepseek4、nemotron-h、qwen35、qwen35moe、qwen3next 和 qwen4exp 等模型也能接受 trunk-only 文件，并在未加载 MTP 时自动添加 TENSOR_SKIP。对本地推理生态来说，这提升了新一代多 token 预测模型文件加载的兼容性和维护性。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11477"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "影视公司自研视频模型盲评拿到全球第二",
-          "summary": "Utopai X在全球文生视频盲评里拿到1150的Elo评分🎬，排全球第二、全美第一。按机器之心的报道，它的音频同步与物理效果两项指标同样登顶。背后的Utopai Studios是家影视公司，福布斯估算其估值约10亿美元。",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651061195&idx=1&sn=fd895d3e2b61a55684270981b166bf2b"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "b11475",
-          "summary": "「llama.cpp」修复了「Metal」后端里「MUL_MAT+ADD」融合的一处残差选择错误：当加法两端都是矩阵乘输出时，旧逻辑会把未写入的融合输出当作残差参与累加。这个补丁直接影响 Apple 平台上的图融合正确性，避免模型在特定双线性残差结构中产生不可解释的脏数据输出。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11475"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "18亿美元项目要造通用虚拟细胞",
-          "summary": "扎克伯格旗下Biohub拉上Google DeepMind、Meta和美国政府🧬，要建活细胞的AI模型。据这条计划披露帖，项目总盘子18亿美元，目标是通用虚拟细胞。科学家可以先在网上做实验，再挑最有戏的送进实验室。DeepMind、Isomorphic Labs与Meta合计投了3亿美元。",
-          "url": "https://x.com/kimmonismus/status/2107862648490496190"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "b11474",
-          "summary": "「llama.cpp」加入了「GLM5-Next」的多 token 预测「MTP」图，把「NextN」头接入草稿上下文，用于更高效的推测式生成。实现细节上复用主干构图器，并让循环记忆在无循环层的草稿上下文中支持部分序列移除，对本地推理框架适配新一代国产模型很关键。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11474"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "英伟达投资的算力公司Lambda融资40亿美元",
-          "summary": "英伟达投过的算力公司Lambda正筹40亿美元💪，为2027年上市铺路。据这家算力新星的融资，这轮由Coatue与黑石共同领投。投前估值达到145亿美元，公司计划2027年IPO。",
-          "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "MCP 终于无状态了，但状态并没有消失，只是被“甩”给了应用",
-          "summary": "这篇文章讨论「MCP」走向无状态化后的架构取舍：协议层可以减少会话状态负担，但工具权限、上下文、用户偏好和长任务进度仍需要由应用层承接。对 Agent 开发者而言，重点不再只是接入协议，而是设计可靠的状态存储、恢复和授权边界。",
-          "url": "https://www.infoq.cn/article/MwQyLYzgSiD16x36k9Ef?utm_source=rss&utm_medium=article"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "卡普空宣布要把RE引擎改成AI生成引擎",
-          "summary": "卡普空宣布把RE引擎改造成AI生成引擎🎮，官方口径是今后人类与AI一起做游戏。据原帖讨论与相关报道，整条引擎工具链都会接进生成式AI。从素材生成到关卡搭建的工作方式可能一起变。",
-          "url": "https://www.reddit.com/r/artificial/comments/1wyxz0h/capcom_announces_plans_to_transform_the_re_engine/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Mistral Large 4 🧠, OpenAI Decisions API ❓, Nano Banana 2.1 🍌",
-          "summary": "这期「TLDR AI」把焦点放在「Mistral Large 4」、「OpenAI Decisions API」和「Nano Banana 2.1」等更新上，覆盖模型发布、决策模型接口和多模态工具链。对从业者的意义在于，模型能力竞争正在从单纯聊天扩展到可验证决策、图像生成和企业工作流集成。",
-          "url": "https://tldr.tech/ai/2026-10-07"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "cmux为AI编码智能体提供带通知的终端",
-          "summary": "cmux是面向AI编码智能体的开源macOS终端🤖，基于Ghostty打造。它带垂直标签页和通知，多个编程智能体并行时会省心些。项目在官方开源仓库开放，Star已逾2.7万，今日新增50个。Fork数停在2454。",
-          "url": "https://github.com/manaflow-ai/cmux"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "llm-openai-decisions 0.1a0",
-          "summary": "Simon Willison 发布了「llm-openai-decisions」0.1a0，用自己的「LLM」命令行生态接入 OpenAI 新的「Decisions API」。这个接口面向低延迟、低成本的判断型任务，且文中提到「gpt-6-luna」支持文本与图像输入、按输入计费，对内容审核、分类、路由和策略判断类场景很有吸引力。",
-          "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Epic Games开源原生图形调试器raddebugger",
-          "summary": "raddebugger出自Epic Games之手🐞，是一款原生的图形调试器。它跑在用户态，能同时盯住多个目标进程。项目在官方开源仓库开放，累计拿到7690颗星，今日新增82个，分叉373个。引擎团队放出来的调试工具，通常都经得起重活。",
-          "url": "https://github.com/EpicGames/raddebugger"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "How AI decision models could change content moderation",
-          "summary": "Musubi 发布了开放权重的轻量级决策模型「PolicyLM-1.7B」，目标是实时内容审核，而不是用通用大模型临时判断政策命中。对平台工程团队来说，小模型可本地部署、延迟更低、策略可审计，可能改变审核系统在成本、吞吐和可控性之间的平衡。",
-          "url": "https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "openGym把健身记录搬回自己的服务器",
-          "summary": "openGym是自托管的健身与自重训练记录工具💪，能编排训练计划，记录超级组、热身与有氧。它还会算出哪些肌群被练到、已经疲劳或者开始掉队。项目支持从FitNotes、Strong和Hevy导入，登录用passkey。项目在官方开源仓库开放，累计3380颗星，今日新增570个，分叉582个。数据留在自己机器上，是这类工具最大的卖点。",
-          "url": "https://github.com/DuarteSantos8/openGym"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Google claims EmbeddingGemma 2 outperforms rival embedding models twice its size",
-          "summary": "Google 发布「EmbeddingGemma 2」，一个 7.4 亿参数的开放多模态 embedding 模型，可把文本、图像、视频、音频和代码映射为向量。官方称它只需约 191 MB 内存即可端侧运行，并能超过部分两倍规模的竞品，配合小型「Gemma」模型可构建离线「RAG」应用，减少隐私数据外发。",
-          "url": "https://the-decoder.com/google-claims-embeddinggemma-2-outperforms-rival-embedding-models-twice-its-size/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "e2e想做下一代跨端端到端测试框架",
-          "summary": "e2e瞄准的是Web与移动应用的端到端测试🧪，把自己定位成下一代测试框架。项目在官方开源仓库开放，累计2455颗星，今日新增344个，分叉94个。智能体写代码越来越快，跑得住的测试反而成了稀缺环节。",
-          "url": "https://github.com/tester-army/e2e"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "How DOCA GPUNetIO Unifies GPU-Initiated Networking Across the NVIDIA Software Stack",
-          "summary": "NVIDIA 介绍「DOCA GPUNetIO」如何把网络与数据移动变成 GPU 可主动发起和控制的一等操作，而不是完全依赖 CPU 主机调度。它对低延迟推理、分布式训练和高吞吐数据面很重要，因为网络栈越靠近 GPU，越能减少主机瓶颈和额外拷贝。",
-          "url": "https://developer.nvidia.com/blog/doca-gpunetio-gda-ki-unified-gpu-networking/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "v0.40.0",
-          "summary": "「Ollama」v0.40.0 开始在 Apple Silicon 上默认使用「MLX」运行已支持的模型架构，覆盖「qwen3.8」、「gemma4」以及部分决策模型。版本还加入「embeddinggemma-2」的「MLX」支持，意味着 Mac 本地推理和本地 embedding 检索的默认路径会更快、更贴近苹果硬件。",
-          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.0"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "New Browser + Voice Cloning",
-          "summary": "Unsloth 新版本在聊天旁加入浏览器式工作区，让文件、网页和模型生成的页面能以标签页形式并排打开，并新增音频页面、语音克隆、音乐和转写能力。它还支持「EmbeddingGemma 2」的运行与微调，并优化低显存训练，对把训练、检索、多模态内容处理放进单一桌面工作流的用户很实用。",
-          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.903-beta"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Release v5.19.0",
-          "summary": "「Transformers」v5.19.0 加入「EmbeddingGemma2」，这是基于「Gemma 4」架构的多模态 embedding 模型，可把文本、图像、音频和视频单独或组合编码到共享的 768 维向量空间。它支持「Matryoshka Representation Learning」，可截断到 512、256 或 128 维，方便在跨模态检索、聚类和分类中按成本与精度做权衡。",
-          "url": "https://github.com/huggingface/transformers/releases/tag/v5.19.0"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "AICR v1.0: Open, stable, and verifiable GPU cluster configuration",
-          "summary": "NVIDIA 发布「AICR」v1.0，目标是为 GPU 加速的 Kubernetes 集群提供开放、稳定、可验证的组件配置基线。它试图解决驱动、内核、容器运行时、GPU Operator 和上层训练推理框架版本各自演进带来的兼容性风险，对企业级集群运维和可复现实验环境很关键。",
-          "url": "https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
-          "summary": "Latent Space 关注 Kubernetes 共同创建者 Craig McLuckie 和 Joe Beda 的新方向：把 Agent harness 从桌面环境带到云原生基础设施。核心价值在于让 Agent 的工具执行、状态、权限、观测和弹性调度进入 Kubernetes 式控制面，从而更适合长期运行和企业部署。",
-          "url": "https://www.latent.space/p/stacklok"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "b11472",
-          "summary": "「llama.cpp」在采样链路中对符合条件的零温度请求统一使用贪心选择，覆盖 CPU、语法约束和推理预算路径。这个改动让 temperature 为零时的行为更一致，同时把动态温度和需要概率输出的场景继续留给分布采样，减少确定性生成中的边界差异。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11472"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "b11469",
-          "summary": "「llama.cpp」的「MUSA」后端切换到 tile lightning indexer kernel，属于面向摩尔线程等国产 GPU 后端的底层内核优化。虽然发布文本主要是构建与签名信息，但这类改动体现了本地推理框架正在扩大非 CUDA 加速栈覆盖面，对多硬件生态适配有长期价值。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11469"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Anthropic gives more security teams access to Claude with fewer safety restrictions",
-          "summary": "Anthropic 扩大「Cyber Verification Program」，让更多安全团队在渗透测试、恶意软件分析和漏洞研究中使用限制更少的 Claude 模型。官方称前身项目合作伙伴在 2026 年 4 月至 7 月发现了至少 129000 个已确认漏洞，其中超过 33000 个为高危或严重级别，这说明安全场景可能成为大模型受控放权的重点试验田。",
-          "url": "https://the-decoder.com/anthropic-gives-more-security-teams-access-to-claude-with-fewer-safety-restrictions/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "viable/strict/1791372481: [inductor] Ignore addmm and baddbmm bias when beta is zero (#196600)",
-          "summary": "PyTorch 修复「Inductor」里「addmm」和「baddbmm」在 beta 等于 0 时仍计算 bias 的问题，因为 0 乘以 NaN 仍会传播 NaN，导致本应忽略的输入污染输出。补丁覆盖 Triton、CPP、CUTLASS、CK 模板后处理、CPU 与 XPU 分解以及相关反融合 pass，对训练和推理编译路径的数值语义一致性很重要。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1791372481"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-10-08",
-          "title": "OpenAI向ChatGPT全量推送GPT-6及智能界面功能",
-          "summary": "OpenAI开始在ChatGPT中向所有用户推送GPT-6，核心功能为“智能界面”（Intelligent UI）。付费用户即日起可用，免费版及Go版次日陆续开放，覆盖每周12亿用户。该功能允许模型根据问题类型生成可交互界面，如对比图表或带参数调节器的示意图，而非仅输出纯文本。技术实现上，OpenAI采用原生组件库与编译器，支持流式生成界面，并优化了推理过程，使GPT-6 Instant在联网搜索场景下比上一代早44%开始回答。",
-          "url": "https://x.com/dotey/status/2107917964146012485"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Anthropic发布Haiku 5.5，运行成本降低75%",
-          "summary": "Anthropic发布新小模型Claude Haiku 5.5，官方称其为同级中成本最低、速度最快的模型。相比Haiku 4.5，其平均运行成本降低约75%，特别适用于10万token以内的高频任务，如摘要、分类及实时客服。该模型支持可调节的“努力程度”设置，允许用户在成本与智能之间权衡，并作为子代理配合Opus和Sonnet使用。目前已在AWS、Google Cloud及Azure等全平台上线，同时Sonnet 5.5的缓存读取价格减半。",
-          "url": "https://x.com/claudeai/status/2107894039626277339"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "谷歌向所有用户开放SynthID检测器",
-          "summary": "谷歌DeepMind正式向所有用户开放SynthID检测器，支持对图像、视频和音频进行AI生成内容验证。该工具可识别谷歌AI及合作伙伴（包括OpenAI、英伟达、Kakao，苹果即将加入）生成的内容水印，即使经过滤镜等编辑处理也能识别。官方数据显示，已为1800亿份内容打上水印，每日处理百万次核验请求。用户也可通过Chrome、Google Search及Gemini App中的现有AI识别功能使用此服务。",
-          "url": "https://x.com/GoogleDeepMind/status/2107834249680499136"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "英伟达提出VERA框架实现智能体与工具链协同进化",
-          "summary": "英伟达发布论文提出VERA框架，将基准轨迹转化为9000多个可重启沙箱，用于智能体训练。该框架同时更新模型权重与工具链（Harness），仅保留通过自测且在开发集上提升至少5分的工具链改动。在AutoCoWorkBench基准测试中，27B版本的协同进化智能体得分71.6，超过Claude Opus 4.8；9B版本则比最强单轴基线高出10.3分。环境语料库已开源，旨在通过可验证环境提升智能体在复杂任务中的表现。",
-          "url": "https://x.com/omarsar0/status/2107849444897243141"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "GitSwarm实现多智能体通过共享Git仓库累积推理成果",
-          "summary": "论文《GitSwarm: Decentralized Compounding Inference》提出一种异步系统，让同构智能体在共享Git仓库中协作，通过原子提交保留中间成果并记录语义依赖。在IMOProofBench-Advanced基准上，该系统使用GPT-5.5一次性解出全部30道题；在ProgramBench上平均得分79.4%，高于最强基线的65.1%。此外，94.7%的贡献被后续工作复用，验证了推理计算可跨独立片段累积并复用。",
-          "url": "https://arxiv.org/abs/2610.04862"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Anthropic内部模型自主推导3SUM与APSP算法",
-          "summary": "Anthropic内部研究模型在检查密码学构造时，自主产出了一套3SUM与APSP算法。相关结果已通过Lean 4完成机器核验，算法指数降至1.9992。虽然该结果在现实应用中收益有限，但它在理论上突破了二次方复杂度的下限。",
-          "url": "https://newshacker.me/story?id=49977437"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Lambda拟融资40亿美元备战2027年IPO",
-          "summary": "AI算力公司Lambda正寻求融资至多40亿美元，投前估值达145亿美元，由Coatue Management与Blackstone共同领投。据《华尔街日报》报道，Lambda的订单积压从6月的150亿美元增至9月的500亿美元，其中350亿美元来自Anthropic的单一承诺。公司计划于2027年IPO，此前已额外融资10亿美元用于数据中心建设。",
-          "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Biohub联合DeepMind等投入18亿美元构建通用虚拟细胞",
-          "summary": "扎克伯格旗下的Biohub与Google DeepMind、Meta及美国政府合作，启动一项总额18亿美元的项目，旨在构建活细胞的AI模型。该项目目标是实现“通用虚拟细胞”，允许科学家先在数字环境中测试实验，再筛选最有前景的方案进入实验室。DeepMind、Isomorphic Labs与Meta合计投入3亿美元，其余资金来自数据、计算及测量技术资源。",
-          "url": "https://x.com/kimmonismus/status/2107862648490496190"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "Common Sense Media审计称ChatGPT青少年版存在不可接受风险",
-          "summary": "Common Sense Media旗下青少年AI安全研究所对ChatGPT进行了超过4000次测试提示，最终将其评级为对未成年人存在“不可接受的风险”。审计发现，在涉及自杀、自残等紧急危机对话中，家长警报系统从未触发，且超过四分之一的危机场景未能正确引导用户寻求专业帮助。此外，辅导模式存在直接给出答案而非引导解题的问题，且系统未能有效识别伪装成成人的未成年人账号。OpenAI发言人反驳称测试未反映实际防护机制，但审计方指出即使给予足够时间，警报仍未生效。",
-          "url": "https://the-decoder.com/chatgpt-rated-unacceptable-risk-for-teens-after-parental-alerts-failed-during-suicide-conversations/"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "马斯克宣布Grok Bot将调度包括Claude在内的外部顶级模型",
-          "summary": "马斯克在X平台发布声明，称Grok Bot未来在处理具体任务时将不再绑定自家模型，而是直接调度全网最顶级的后端模型。声明中明确列出了Anthropic的Claude Opus 5.5、Midjourney和Suno等第三方服务，选择标准是“最可能给用户带来最佳结果”。这一策略调整意味着Grok Bot将从单一模型依赖转向多模型路由架构，旨在通过整合外部优势能力来提升任务交付质量。",
-          "url": "https://x.com/AYi_AInotes/status/2107823416502063343"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "开源项目cmux发布面向AI编码智能体的macOS终端",
-          "summary": "开源项目cmux基于Ghostty构建，专为AI编码智能体设计的macOS终端工具。该工具提供垂直标签页和通知功能，旨在优化多智能体并行工作时的任务组织与多任务处理能力。目前该项目在GitHub上已获得2.8万星标和2.5千分叉，显示出较高的社区关注度。其设计重点在于提升可编程性，以支持更复杂的智能体工作流管理。",
-          "url": "https://github.com/manaflow-ai/cmux"
-        },
-        {
-          "date": "2026-10-08",
-          "title": "FlashAttention发布v4.0.0.beta34版本优化新GPU内核",
-          "summary": "Dao-AILab发布FlashAttention fa4-v4.0.0.beta34预发布版本，主要修复了CUDA 13与PyTorch 2.15环境下的Windows构建问题。该版本重点推进了SM100和SM103架构上的decode与forward内核优化，包括实现QK与softmax计算重叠、统一hd256 forward逻辑以及修复hd128 decode崩溃问题。此外，更新还增加了对多种数据类型few-row MMA的支持，并允许在hd256 backward中使用确定性模式。",
-          "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta34"
-        }
-      ]
-    },
     "2026-10-09": {
       "candidates": [
         {
@@ -3322,6 +2884,132 @@
           "title": "Manus为智能体配置独立身份与支付能力",
           "summary": "Manus推出的Cue功能允许每个AI智能体拥有独立的邮箱、手机号、数字钱包和电脑环境。这一设计改变了以往代理借用用户凭证工作的模式，赋予智能体独立的数字身份。在支付安全方面，系统限制智能体的支出在用户预设的预算范围内。据Reddit社区讨论，该产品已正式上线，旨在解决智能体在独立执行任务时的身份隔离与资金管控问题。",
           "url": "https://www.reddit.com/r/artificial/comments/1x526jk/manus_just_gave_ai_agents_their_own_phone_numbers/"
+        }
+      ]
+    },
+    "2026-10-16": {
+      "candidates": [
+        {
+          "date": "2026-10-16",
+          "title": "第2028期 - 2026-10-16 12:03",
+          "summary": "本期重点是[MAI-Base-2]完成超大规模预训练，以及[特斯拉Roadster]展示推进器飞行能力；同时，客服修复智能体和实时世界模型部署迎来新实践。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_1203"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2027期 - 2026-10-16 08:03",
+          "summary": "[GPT-Rosalind]扩大科研资助访问，NVIDIA推出可在[24GB内存]中运行的新模型。企业应用搭建、智能体文件存储与支付方案持续完善，Cursor也新增编程模型选择。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0803"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2026期 - 2026-10-16 04:04",
+          "summary": "本期重点关注[Muse Spark Open]开放权重模型发布，以及[GPT-Live-1.1]带来的语音体验升级。与此同时，AI正加速进入[生产运维]、[视频声音设计]和科研发现等实际场景。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0404"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2025期 - 2026-10-16 00:04",
+          "summary": "[Nemotron 3.5 Super VL]与[MiniCPM-V 4.7]带来多模态模型新进展，覆盖长时智能体和手机端推理。工具方面，Diffusers新增图像模型支持；商业层面，报道称[Anthropic季度收入]增长近50%。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0004"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2024期 - 2026-10-15 20:03",
+          "summary": "[Step 5 Preview]开放权重并支持百万级上下文；本期实用内容聚焦[Kimi Work工作流]、无代码数据准备与可持续改进的文档处理方案。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_2003"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2023期 - 2026-10-15 16:05",
+          "summary": "[Gemini 4 Argon]新增成本评测与办公工作流演示，[MacOS Harness 0.2]更新电脑操作能力；本期还关注物理世界模型、检索容量规划及用户反馈的服务异常。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_1605"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2022期 - 2026-10-15 12:02",
+          "summary": "本期重点关注[端侧与实时生成]的新模型应用，以及[智能体记忆]和[概念建模]等方法进展。另有[Ling-3.1-flash]开源和数学形式化证明等值得关注的科研动态。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_1202"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2021期 - 2026-10-15 08:02",
+          "summary": "本期重点关注[Gemini 4 Argon扩大科研与API开放]、[端到端AI研究智能体]及[大模型训练与预测分析工程优化]等进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0802"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2020期 - 2026-10-15 04:04",
+          "summary": "[Gemini 4 Argon]展示实验室验证的酶工程成果，多款企业工具则聚焦[文档智能]、可观测性与成本控制。欧洲企业智能体使用加速，小企业用户增长[8倍]。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0404"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "第2019期 - 2026-10-15 00:02",
+          "summary": "本期聚焦[企业级AI部署]，Runway、Databricks与Manus均推出组织级能力；同时关注[推测解码]实操与机器人[电子皮肤]投资。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0002"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-10-16",
+          "title": "Meta发布816B开放权重模型Muse Spark Open，支持百万Token上下文",
+          "summary": "Meta推出开放权重多模态模型Muse Spark Open，总参数达816B，主要面向编程、推理及长周期Agent任务。该模型支持百万Token上下文窗口，并提供了针对Blackwell架构优化的检查点。此外，AWS已将Muse Spark Open引入SageMaker JumpStart，方便用户快速部署。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0404"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "微软完成2.8T参数MAI-Base-2预训练，宣称算力效率领先",
+          "summary": "微软宣布完成自研基础模型MAI-Base-2的预训练，该模型总参数为2.8万亿，激活参数为800亿。微软表示，MAI-Base-2仅使用同类模型四分之一的算力，即在性能上领先于开放模型。同期，特斯拉新Roadster展示推进器飞行能力，以及Google Cloud详解实时世界模型在TPU上的部署方案。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_1203"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "NVIDIA发布Nemotron 3.5 Bolt，可在24GB内存中运行",
+          "summary": "NVIDIA发布Nemotron 3.5 Bolt模型，总参数74B，激活参数9B，宣称可在24GB内存中运行，面向本地智能体场景。同期，OpenAI为美国高校实验室提供GPT-Rosalind资助访问，期限最长12个月，且研究数据默认不用于训练。此外，Cursor接入Muse Wonder模型，公布编程评测得分及定价策略。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0803"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "NVIDIA发布Nemotron 3.5 Super VL，面壁开源MiniCPM-V 4.7",
+          "summary": "NVIDIA发布开放权重模型Nemotron 3.5 Super VL，总参数120B，激活12B，支持多模态推理与工具调用，并同步开放权重、数据及训练配方。面壁智能开源MiniCPM-V 4.7，采用35B-A3B架构，官方称其在iPhone上内存占用约3GB，速度超13 tokens/s。此外，报道称Anthropic季度收入增长近50%，达168亿美元。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0004"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "阶跃星辰开放Step 5 Preview权重，支持百万级上下文",
+          "summary": "阶跃星辰正式开放Step 5 Preview模型权重，提供BF16和FP8两种版本，并同步发布技术博客及开发工具。该模型支持最高100万token的上下文窗口，旨在满足长文本处理需求。本期日报还介绍了Kimi Work工作流教程，展示跨本地项目、浏览器与电脑的自动化流程，以及AWS利用AgentCore构建可持续改进文档处理系统的方案。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_2003"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "Gemini 4 Argon新增成本评测，MacOS Harness 0.2更新",
+          "summary": "Gemini 4 Argon在Artificial Analysis智能指数上追平GPT-6 Astra，任务成本约为其60%，但个人实测评价存在分歧。Nature Will发布物理世界基础模型Natura-1，声称使用100万小时第一视角视频训练，展示精细操控能力。MacOS Harness 0.2发布，新增虚拟光标并原生集成Browser Use，改善Mac电脑操作智能体的框架兼容性。此外，有用户反馈DeepSeek网页及API出现异常，具体故障范围尚未确认。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_1605"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "蚂蚁百灵开源Ling-3.1-flash，斯坦福提出Next-Concept Modeling",
+          "summary": "蚂蚁百灵开源Ling-3.1-flash模型，总参数560B、激活约25B，支持百万Token上下文及四卡部署。斯坦福提出Next-Concept Modeling方法，通过先生成粗略概念再并行补充细节，质量达到或超过部分扩散模型基线。昆仑万维开源Matrix-Game 4.0，可在单张RTX 5090上实时运行视频大模型游戏。上海人工智能实验室借助书生S2完成三维Ghys猜想证明，并由北大团队进行形式化验证。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_1202"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "Gemini 4 Argon API开放，斯坦福推出CausalSmith智能体",
+          "summary": "Google向开发者与企业开放Gemini 4 Argon API，支持输入输出共享百万Token窗口，适合长文档与复杂智能体任务。斯坦福推出CausalSmith框架，可自动化理论因果推断研究，并使用Lean验证证明。Databricks分享基于AI Runtime的Qwen训练优化方案，称训练耗时缩短约6倍。此外，Google通过Google Antigravity向一万名科学家免费开放Gemini 4 Argon最高用量档六个月，推动科研应用验证。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0802"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "Gemini 4 Argon加速酶工程设计，欧洲小企业AI智能体使用激增",
+          "summary": "Google DeepMind宣布Gemini 4 Argon将酶工程流程压缩至数小时，并设计出5种经实验室验证的丝氨酸酯酶，完整结果待披露。同期，OpenAI数据显示欧盟企业客户超半数AI使用涉及智能体，其中小企业用户增长达8倍。此外，Claude Haiku 5.5在2.05万次任务中单任务成本仅0.09美元，较GPT-5.4 High便宜86%，展示了低成本智能体的竞争力。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0404"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "Runway与Databricks推企业级AI部署，华为哈勃投资机器人电子皮肤",
+          "summary": "Runway与Baseten合作允许企业在单租户环境部署Gen-4.5视频模型并使用自有数据微调；Databricks推出Private Network Gateway为无服务器计算提供私网接入。Manus发布面向团队的Business版本，将AI助手扩展至组织级协作。硬件方面，华为哈勃投资一家研发超薄高密度机器人电子皮肤的团队，技术结合压力感知与材料变色，但量产进展未披露。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0002"
         }
       ]
     }

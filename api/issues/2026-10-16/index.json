@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-16",
+  "content_date": "2026-10-16",
+  "published_at": "2026-10-16T05:28:45.490616+00:00",
+  "article_count": 10,
+  "podcast_turns": 18,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 10,
+        "target_count": 10,
+        "degraded": true
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 10,
+          "target_count": 10,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 84,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1第13轮发言字数（约85字）略长，虽在建议范围内但接近上限，口播节奏可稍作精简。",
+              "S2第18轮作为结束语，包含“保持动手”等行动建议，虽自然但略显说教，可更简洁地收尾。"
+            ],
+            "repair_instruction": "无需重大修改。建议将S1第13轮中“如果AI能证明猜想，那它的推理能力就突破了‘概率预测’的范畴”简化为“这意味着AI推理正突破概率预测范畴”，以优化口播节奏；S2第18轮结尾可简化为“今天的讨论就到这里，下期见”，去除中间的行动建议，使收尾更干脆。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1第13轮发言字数（约85字）略长，虽在建议范围内但接近上限，口播节奏可稍作精简。",
+          "S2第18轮作为结束语，包含“保持动手”等行动建议，虽自然但略显说教，可更简洁地收尾。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-16.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-16.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-16.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-16.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-16.mp4"
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Meta发布816B开放权重模型Muse Spark Open，支持百万Token上下文",
+    "summary": "Meta推出开放权重多模态模型Muse Spark Open，总参数达816B，主要面向编程、推理及长周期Agent任务。该模型支持百万Token上下文窗口，并提供了针对Blackwell架构优化的检查点。此外，AWS已将Muse Spark Open引入SageMaker JumpStart，方便用户快速部署。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0404",
+    "section": "🔥 今日焦点",
+    "review": "开放权重与百万上下文结合，降低了长程Agent任务的部署门槛，但816B参数量对硬件资源要求极高，实际落地需权衡算力成本。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软完成2.8T参数MAI-Base-2预训练，宣称算力效率领先",
+    "summary": "微软宣布完成自研基础模型MAI-Base-2的预训练，该模型总参数为2.8万亿，激活参数为800亿。微软表示，MAI-Base-2仅使用同类模型四分之一的算力，即在性能上领先于开放模型。同期，特斯拉新Roadster展示推进器飞行能力，以及Google Cloud详解实时世界模型在TPU上的部署方案。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_1203",
+    "section": "🚀 产品发布",
+    "review": "微软强调以更低算力实现更高性能，若评测数据属实，将挑战现有大模型训练的效率基准，但具体性能对比需独立第三方验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA发布Nemotron 3.5 Bolt，可在24GB内存中运行",
+    "summary": "NVIDIA发布Nemotron 3.5 Bolt模型，总参数74B，激活参数9B，宣称可在24GB内存中运行，面向本地智能体场景。同期，OpenAI为美国高校实验室提供GPT-Rosalind资助访问，期限最长12个月，且研究数据默认不用于训练。此外，Cursor接入Muse Wonder模型，公布编程评测得分及定价策略。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0803",
+    "section": "🚀 产品发布",
+    "review": "将大参数模型压缩至24GB内存运行，显著降低了本地部署智能体的硬件门槛，有助于推动AI应用从云端向边缘端下沉。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA发布Nemotron 3.5 Super VL，面壁开源MiniCPM-V 4.7",
+    "summary": "NVIDIA发布开放权重模型Nemotron 3.5 Super VL，总参数120B，激活12B，支持多模态推理与工具调用，并同步开放权重、数据及训练配方。面壁智能开源MiniCPM-V 4.7，采用35B-A3B架构，官方称其在iPhone上内存占用约3GB，速度超13 tokens/s。此外，报道称Anthropic季度收入增长近50%，达168亿美元。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0004",
+    "section": "💼 行业动态",
+    "review": "多模态模型在端侧推理效率上取得突破，3GB内存占用使得手机本地运行复杂视觉任务成为可能，但实际体验受限于移动端算力上限。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阶跃星辰开放Step 5 Preview权重，支持百万级上下文",
+    "summary": "阶跃星辰正式开放Step 5 Preview模型权重，提供BF16和FP8两种版本，并同步发布技术博客及开发工具。该模型支持最高100万token的上下文窗口，旨在满足长文本处理需求。本期日报还介绍了Kimi Work工作流教程，展示跨本地项目、浏览器与电脑的自动化流程，以及AWS利用AgentCore构建可持续改进文档处理系统的方案。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_2003",
+    "section": "🔓 开源热榜",
+    "review": "开放权重与百万级上下文支持降低了长文本应用门槛，但实际推理成本与延迟需结合硬件环境评估。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Argon新增成本评测，MacOS Harness 0.2更新",
+    "summary": "Gemini 4 Argon在Artificial Analysis智能指数上追平GPT-6 Astra，任务成本约为其60%，但个人实测评价存在分歧。Nature Will发布物理世界基础模型Natura-1，声称使用100万小时第一视角视频训练，展示精细操控能力。MacOS Harness 0.2发布，新增虚拟光标并原生集成Browser Use，改善Mac电脑操作智能体的框架兼容性。此外，有用户反馈DeepSeek网页及API出现异常，具体故障范围尚未确认。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_1605",
+    "section": "🤖 Agent & 工具",
+    "review": "Argon的成本优势需结合具体任务场景验证，Natura-1的泛化能力仍待独立评测，DeepSeek服务异常需关注后续官方说明。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "蚂蚁百灵开源Ling-3.1-flash，斯坦福提出Next-Concept Modeling",
+    "summary": "蚂蚁百灵开源Ling-3.1-flash模型，总参数560B、激活约25B，支持百万Token上下文及四卡部署。斯坦福提出Next-Concept Modeling方法，通过先生成粗略概念再并行补充细节，质量达到或超过部分扩散模型基线。昆仑万维开源Matrix-Game 4.0，可在单张RTX 5090上实时运行视频大模型游戏。上海人工智能实验室借助书生S2完成三维Ghys猜想证明，并由北大团队进行形式化验证。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_1202",
+    "section": "💡 前沿研究",
+    "review": "端侧部署与实时生成技术加速落地，但开源模型在实际业务中的稳定性与安全性仍需大规模验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Argon API开放，斯坦福推出CausalSmith智能体",
+    "summary": "Google向开发者与企业开放Gemini 4 Argon API，支持输入输出共享百万Token窗口，适合长文档与复杂智能体任务。斯坦福推出CausalSmith框架，可自动化理论因果推断研究，并使用Lean验证证明。Databricks分享基于AI Runtime的Qwen训练优化方案，称训练耗时缩短约6倍。此外，Google通过Google Antigravity向一万名科学家免费开放Gemini 4 Argon最高用量档六个月，推动科研应用验证。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0802",
+    "section": "💼 行业动态",
+    "review": "API开放与科研免费额度加速了模型在垂直领域的应用，但训练优化带来的成本降低需结合具体集群配置评估。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Argon加速酶工程设计，欧洲小企业AI智能体使用激增",
+    "summary": "Google DeepMind宣布Gemini 4 Argon将酶工程流程压缩至数小时，并设计出5种经实验室验证的丝氨酸酯酶，完整结果待披露。同期，OpenAI数据显示欧盟企业客户超半数AI使用涉及智能体，其中小企业用户增长达8倍。此外，Claude Haiku 5.5在2.05万次任务中单任务成本仅0.09美元，较GPT-5.4 High便宜86%，展示了低成本智能体的竞争力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0404",
+    "section": "💼 行业动态",
+    "review": "Gemini在科研领域的快速迭代与欧洲中小企业智能体渗透率的爆发形成呼应，表明AI正从通用能力向垂直场景和低成本部署深化，但酶工程成果尚需完整数据验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Runway与Databricks推企业级AI部署，华为哈勃投资机器人电子皮肤",
+    "summary": "Runway与Baseten合作允许企业在单租户环境部署Gen-4.5视频模型并使用自有数据微调；Databricks推出Private Network Gateway为无服务器计算提供私网接入。Manus发布面向团队的Business版本，将AI助手扩展至组织级协作。硬件方面，华为哈勃投资一家研发超薄高密度机器人电子皮肤的团队，技术结合压力感知与材料变色，但量产进展未披露。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0002",
+    "section": "💼 行业动态",
+    "review": "企业级AI部署正从模型能力竞争转向基础设施与数据隔离能力的竞争，Runway和Databricks的动作反映了私有化部署需求的刚性，而电子皮肤投资则指向具身智能的早期硬件布局。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
