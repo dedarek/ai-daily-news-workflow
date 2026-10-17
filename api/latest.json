@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-10-16",
-  "content_date": "2026-10-16",
-  "published_at": "2026-10-16T05:28:45.490616+00:00",
-  "article_count": 10,
-  "podcast_turns": 18,
+  "issue_date": "2026-10-17",
+  "content_date": "2026-10-17",
+  "published_at": "2026-10-17T05:26:00.286073+00:00",
+  "article_count": 12,
+  "podcast_turns": 32,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -15,14 +15,14 @@
       "qwen38-27b"
     ],
     "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
-    "calls": 8,
+    "calls": 10,
     "call_details": {
       "selection": {
         "model": "lenovo:qwen38-27b",
         "usage": {},
-        "selected_count": 10,
-        "target_count": 10,
-        "degraded": true
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
       },
       "selection_attempts": [
         {
@@ -30,19 +30,61 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen38-27b",
           "usage": {},
-          "candidate_count": 10,
-          "target_count": 10,
+          "candidate_count": 26,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 2,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 25,
+          "target_count": 12,
           "validation_issues": []
         }
       ],
       "cross_day_dedupe": {
         "window_days": 7,
-        "recent_sent_count": 84,
-        "exact_url_blocks": [],
+        "recent_sent_count": 82,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_1203",
+            "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_1203",
+            "previous_date": "2026-10-16"
+          },
+          {
+            "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0803",
+            "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0803",
+            "previous_date": "2026-10-16"
+          },
+          {
+            "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0404",
+            "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0404",
+            "previous_date": "2026-10-16"
+          },
+          {
+            "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0004",
+            "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-16_0004",
+            "previous_date": "2026-10-16"
+          }
+        ],
         "high_confidence_event_blocks": [],
         "reviews": [
           {
             "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://www.qbitai.com/2026/10/503701.html",
+                "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-10-15_0802",
+                "reason": "两者核心主体均为Google的Gemini 4 Argon，动作均为向开发者和企业开放API，对象相同。今天新闻补充的定价和具体能力展示属于同一发布事件的细节，不构成实质性新进展。"
+              }
+            ]
+          },
+          {
+            "attempt": 2,
             "model": "lenovo:qwen38-27b",
             "usage": {},
             "duplicates": []
@@ -87,10 +129,11 @@
           "review": {
             "pass": true,
             "issues": [
-              "S1第13轮发言字数（约85字）略长，虽在建议范围内但接近上限，口播节奏可稍作精简。",
-              "S2第18轮作为结束语，包含“保持动手”等行动建议，虽自然但略显说教，可更简洁地收尾。"
+              "新闻覆盖偏多：对话实际展开约11条新闻，导致ASPIRE 1.0、Krea 3、GUISE等新闻解释较简略，信息密度不如前几条。",
+              "S1首轮切入略显概括，缺少具体新闻锚点，自然度可再加强。",
+              "S2在Beam和ASPIRE两处连续以“对”“这个思路对”开头，转场略显重复。"
             ],
-            "repair_instruction": "无需重大修改。建议将S1第13轮中“如果AI能证明猜想，那它的推理能力就突破了‘概率预测’的范畴”简化为“这意味着AI推理正突破概率预测范畴”，以优化口播节奏；S2第18轮结尾可简化为“今天的讨论就到这里，下期见”，去除中间的行动建议，使收尾更干脆。"
+            "repair_instruction": "1. 将新闻范围压缩至6-7条：建议保留OpenAI多智能体、Beam、Hy Memory、浏览器扩展、审批漏洞、纳维-斯托克斯、出口管理，删除或合并ASPIRE 1.0与我的世界，把省下的轮次用于补充审批漏洞中ASU方案的细节。2. 将S1首轮改为从具体新闻切入，例如“今天最值得注意的是OpenAI给Pro用户开放多智能体并行，它把长任务拆成可追踪的子任务，但安全、成本和验证机制还没跟上。”3. 将S2在Beam和ASPIRE处的“对”“这个思路对”改为承接式表达，例如“这和前面提到的成本问题直接相关”“这和浏览器扩展的权限风险是同一类问题”。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -101,8 +144,9 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S1第13轮发言字数（约85字）略长，虽在建议范围内但接近上限，口播节奏可稍作精简。",
-          "S2第18轮作为结束语，包含“保持动手”等行动建议，虽自然但略显说教，可更简洁地收尾。"
+          "新闻覆盖偏多：对话实际展开约11条新闻，导致ASPIRE 1.0、Krea 3、GUISE等新闻解释较简略，信息密度不如前几条。",
+          "S1首轮切入略显概括，缺少具体新闻锚点，自然度可再加强。",
+          "S2在Beam和ASPIRE两处连续以“对”“这个思路对”开头，转场略显重复。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -110,16 +154,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-16.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-16.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-16/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-16.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-16.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-16.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-17/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-17/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-17/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-17/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-17.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-17/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-17/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-17.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-17/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-17.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-17.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-17.mp4"
 }
