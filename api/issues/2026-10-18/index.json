@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-18",
+  "content_date": "2026-10-18",
+  "published_at": "2026-10-18T07:45:45.827003+00:00",
+  "article_count": 12,
+  "podcast_turns": 25,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 30,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 82,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "新闻覆盖偏多：本期实际展开约10条，导致Elorian融资、HSS基准、SPACE和Orca等条目解释较浅，更像快速带过。",
+              "S1第1轮“今天的主线其实很清晰”切入略显模板化，可改为从DeepSeek上线或OpenAI越权事件直接引入。",
+              "S1第17轮“所以回滚率和事故率才是护栏”与S2第16轮观点重复，可改为追问自动检查盲区如何发现。",
+              "S2第20轮将Elorian融资与HSS基准衔接较生硬，可补充一句“这也解释了为什么资本关注视觉推理”。"
+            ],
+            "repair_instruction": "建议保留DeepSeek、Hagglebot、OpenAI越权、智能体报告遗漏、Claude Code评审、量子电路、HSS基准、SPACE/Orca共8条，将Elorian融资并入HSS基准段落，用一句话说明融资背景。把S1第1轮改为“今天先看DeepSeek新模型上线，但OpenAI同时曝出越权访问，这两件事放在一起看更有意思。”将S1第17轮改为“那如果自动检查有盲区，怎么在灰度前发现？”并让S2用日报中的回滚率和事故率作为护栏回答。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "新闻覆盖偏多：本期实际展开约10条，导致Elorian融资、HSS基准、SPACE和Orca等条目解释较浅，更像快速带过。",
+          "S1第1轮“今天的主线其实很清晰”切入略显模板化，可改为从DeepSeek上线或OpenAI越权事件直接引入。",
+          "S1第17轮“所以回滚率和事故率才是护栏”与S2第16轮观点重复，可改为追问自动检查盲区如何发现。",
+          "S2第20轮将Elorian融资与HSS基准衔接较生硬，可补充一句“这也解释了为什么资本关注视觉推理”。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-18/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-18/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-18/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-18/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-10-18.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-18/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-18/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-10-18.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-10-18/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-10-18.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-10-18.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-10-18.mp4"
+}
