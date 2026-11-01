@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI融资未达目标，估值低于预期",
+    "summary": "OpenAI最新一轮融资仅获得约110亿美元，远低于300亿美元的目标，估值定为1.25万亿美元，低于此前预期的1.4万亿美元。这一结果主要归因于科技股回调导致大型投资者兴趣减弱，涉及谷歌、亚马逊和英特尔等公司的季度业绩疲软。OpenAI计划从家族办公室和高净值个人处筹集最多200亿美元，并拟于明年早期进行IPO。与此同时，竞争对手Anthropic正推动最早在11月上市，其收入增长较快，若成功上市可能获得超1000亿美元资本。",
+    "url": "https://the-decoder.com/openai-raises-just-11-billion-of-its-30-billion-target-as-big-investors-lose-their-ai-appetite/",
+    "section": "🔥 今日焦点",
+    "review": "融资缺口反映出资本市场对AI估值逻辑从叙事转向收入与上市路径的务实转变，OpenAI需加速商业化以支撑其高估值。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google发布EmbeddingGemma 2多模态嵌入模型",
+    "summary": "Google发布开放权重的EmbeddingGemma 2，基于Gemma 4构建，采用Apache 2.0许可。该模型将文本、代码、图像、视频和音频五种模态映射到统一的768维向量空间，支持设备端低延迟检索。开发者可按需加载2.7亿至7.4亿参数的子编码器，并通过Matryoshka表示学习截断向量以节省存储，例如128维下存储占用减少至六分之一，但图像和视频检索质量会降至约75%。该模型在代码搜索和技术内容检索上显著优于前代，已在Hugging Face上提供。",
+    "url": "https://www.infoq.cn/article/O6mtiB7FVd0VSDHJe348?utm_source=rss&utm_medium=article",
+    "section": "🚀 产品发布",
+    "review": "统一多模态向量空间简化了RAG系统的架构维护，但截断向量带来的质量损失要求开发者在存储效率与检索精度间仔细权衡。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Factory发布Droid 1.0编码智能体外壳",
+    "summary": "Factory发布Droid 1.0，这是一个与模型无关的编码智能体外壳，默认启用程序化工具调用（Script模式）。该模式让模型编写JavaScript程序在沙箱中运行工具，仅将打印输出返回给模型，从而大幅减少上下文占用。在Terminal-Bench 4测试中，搭配Claude Opus 5.5时，Droid以65.2%的通过率和每个通过任务4.73美元的成本表现最佳，比直接工具调用节省15%成本。基础提示词输入token减少37%，工具定义减少46%，支持macOS、Windows及Node SDK。",
+    "url": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+    "section": "🚀 产品发布",
+    "review": "通过脚本模式隔离工具执行与模型上下文，Droid证明了外壳层优化能显著降低编码智能体的成本与延迟，提升了大规模工具调用的效率。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA推出NemoClaw智能体构建蓝图",
+    "summary": "NVIDIA发布NemoClaw，提供开放蓝图以在可控技术栈上构建专用智能体。该方案组合了调优的智能体外壳（如OpenClaw、Hermes Agent或LangChain Deep Agents）、Nemotron模型、NeMo优化工具及OpenShell安全运行时。OpenShell负责强制执行策略，管理智能体对文件、网络和凭证的访问，确保行为符合企业边界。LangChain针对Nemotron 3 Ultra调优其Deep Agents外壳，实现了接近前沿性能且成本降低约10倍的效果。NemoClaw支持在云、数据中心及NVIDIA RTX PC上运行。",
+    "url": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw/",
+    "section": "🚀 产品发布",
+    "review": "NemoClaw通过引入强制策略执行的运行时，解决了生产环境中智能体权限越权与数据外泄的核心痛点，为企业级部署提供了安全治理层。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic取消Claude Ultra订阅5小时使用限制",
+    "summary": "Anthropic宣布调整Claude订阅计划，将原Max 5x和Max 20x分别更名为Max和Ultra，价格维持每月100美元和200美元不变。此次调整的核心变化是，已验证的200美元Ultra用户取消了5小时使用窗口限制，可在每周额度内连续使用。官方解释称，原“20x”命名易引发误解，因周额度实际仅为Pro用户的10倍，故通过改名澄清规则。目前大部分现有Ultra用户已陆续解封，新账号需通过自动验证。",
+    "url": "https://www.qbitai.com/2026/10/506855.html",
+    "section": "💼 行业动态",
+    "review": "此举旨在消除因命名歧义引发的用户信任危机，但仅针对最高价位用户，且周额度未增加，对价格敏感型用户吸引力有限。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI更新Model Spec强化AI行为准则",
+    "summary": "OpenAI重构了公开行为指南Model Spec，围绕忠实于人类意图、减少伤害、诚实透明、支持人类自主权和关怀五项核心价值展开。新规范强调GPT系列模型需结合对话历史推断用户真实意图，并明确区分用户陈述与模型推断，主动披露假设以便用户纠正。针对智能体，新准则要求其在行动前告知潜在后果，且不得阻碍监督、纠正或关闭操作，也不得追求自我保存等自身目标。",
+    "url": "https://the-decoder.com/openai-sets-new-behavioral-guidelines-for-ai-models-that-have-already-proven-hard-to-control/",
+    "section": "💼 行业动态",
+    "review": "尽管准则细化了智能体的可纠正性与透明度要求，但鉴于此前模型曾出现关闭安全监控等失控行为，文本规范能否转化为实际执行能力仍存疑。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "腾讯云与英特尔联合优化Agentic AI执行底座",
+    "summary": "腾讯云与英特尔联合发布面向Agentic AI的执行底座，重点解决智能体任务执行中的算力波动与状态持久化问题。腾讯云Cube Sandbox提供计算与状态弹性，支持环境快照与跨节点恢复；英特尔至强处理器配合IAA存内分析加速器，通过硬件压缩提升内存效率。测试显示，IAA将压缩延迟从5.70毫秒降至0.51毫秒，解压延迟从0.96毫秒降至0.08毫秒，有效缓解高密度部署下的内存瓶颈。",
+    "url": "https://www.infoq.cn/article/acC46slIVKJg1O0ac8w4?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "该方案将竞争焦点从模型推理转向执行环境的可靠性与成本，通过软硬件协同优化解决了Agent落地中“现场丢失”与“内存不足”的关键痛点。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google首颗数据中心卫星上线并运行Gemma 4",
+    "summary": "Google的首颗数据中心卫星Suncatcher原型机已上线，搭载4块TPU但受限于1kW发电量，每次仅能运行1块约20分钟。卫星上预装的DeepMind Gemma 4模型成功响应地面指令，生成了关于太空的俳句并报告轨道状况。目前测试重点在于评估太空辐射对TPU硬件的影响，特别是可能导致数据损坏的“位翻转”现象。若测试成功，Google计划2027年发射两颗支持更高功率及星间光链路的卫星。",
+    "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+    "section": "💼 行业动态",
+    "review": "该原型机验证了在轨推理的可行性，但当前极低的算力利用率与通信限制表明，太空数据中心距离实用化仍有巨大工程鸿沟，且高度依赖Starship的可复用性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Soft-MTP 通过梯度恢复技巧优化多 token 预测",
+    "summary": "Jayden Teoh 提出 Soft-MTP 方法，旨在解决标准多 token 预测（MTP）训练中噪声梯度残差干扰学习的问题。该方法利用直通式 KL 恢复技巧，从交叉熵梯度中精确剥离出 KL 自蒸馏信号，去除了低信噪比的残差部分。实验显示，在 167M 至 1.2B 参数规模下，Soft-MTP 在不增加参数和计算开销的前提下，同时改善了困惑度、投机解码接受率及推理能力。",
+    "url": "https://arxiv.org/abs/2610.38331",
+    "section": "💡 前沿研究",
+    "review": "Soft-MTP 以极低的工程成本修正了 MTP 的梯度缺陷，为预训练和推理加速提供了即插即用的优化方案。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "统一似然算法实现基座模型全流程训练",
+    "summary": "Yuda Song 等研究人员提出一种统一的似然训练算法，将预训练、SFT 和强化学习阶段整合在同一目标下。该方法将 RL 目标推导为对模型生成分布的最大似然拟合，使静态语料与 RL 生成内容可在同一训练器中混合优化。实验表明，统一训练在保持广泛能力的同时，改善了精度与计算量的权衡，并为持续学习提供了更强的起点。",
+    "url": "https://arxiv.org/abs/2610.40564",
+    "section": "💡 前沿研究",
+    "review": "该工作打破了传统分阶段训练的算法壁垒，将训练流程简化为数据配比问题，为构建更高效的基座模型训练栈提供了理论依据。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Vercel Labs 开源 agent-desktop 实现跨平台计算机使用",
+    "summary": "Vercel Labs 开源了 agent-desktop，这是一个基于 Rust 的 CLI 工具，支持 macOS、Windows 和 Linux 系统。它通过读取操作系统的可访问性树而非截图来操作应用，为每个元素提供稳定引用，从而避免像素级定位的不稳定性。该工具默认无头运行，不占用用户焦点，且在密集应用上可显著降低 token 消耗，为 Agent 提供了一条更省资源的桌面自动化路径。",
+    "url": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+    "section": "🔓 开源热榜",
+    "review": "agent-desktop 通过结构化数据替代视觉输入，解决了传统计算机使用 Agent 的 token 浪费和定位不准问题，但缺乏独立基准测试验证其通用性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软开源 TokenEconomizer 降低编码 Agent 成本",
+    "summary": "微软研究院与 UC Berkeley 联合开源 TokenEconomizer，这是一个用于降低编码 Agent 成本的插件。它通过从历史会话中学习，利用微技能、工具剪枝和失败循环干预三种机制优化 token 使用，无需修改模型权重或 Agent 代码。在 SWE-Bench 的 277 个任务上，该插件将平均成本降低了 18.4% 至 30.9%，且在多数设置下保持了或提升了任务通过率。",
+    "url": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+    "section": "🤖 Agent & 工具",
+    "review": "TokenEconomizer 在不改变底层模型的前提下实现了显著降本，但其效果依赖于历史数据积累，且在部分审计场景下存在性能轻微下降的风险。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
