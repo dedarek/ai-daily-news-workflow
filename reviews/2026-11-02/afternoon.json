@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-11-02",
+  "reviewed_at": "2026-11-02T18:46:54.332986+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实且逻辑连贯，播客对话自然流畅，成功将分散的技术新闻串联为关于‘系统工程与落地效率’的核心主题，无事实性错误。",
+    "issues": [
+      "vLLM v0.33.0 的摘要中使用了‘通常涉及’等推测性语言，虽在锐评中有所修正，但正文部分略显缺乏具体信息支撑。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
