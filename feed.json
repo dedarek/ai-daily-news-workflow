@@ -3,6 +3,142 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-11-02",
+      "content_date": "2026-11-02",
+      "published_at": "2026-11-02T07:11:15.557705+00:00",
+      "article_count": 12,
+      "podcast_turns": 17,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 44,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 12,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://arxiv.org/abs/2610.40564",
+                "previous_url": "https://arxiv.org/abs/2610.40564",
+                "previous_date": "2026-11-01"
+              },
+              {
+                "current_url": "https://arxiv.org/abs/2610.38331",
+                "previous_url": "https://arxiv.org/abs/2610.38331",
+                "previous_date": "2026-11-01"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在第三轮发言中提到的‘长程一致性’和‘领域知识密度’属于对GDPx低分原因的推测性解释，日报原文仅指出‘暴露出通用智能体在垂直领域的能力缺口’，未明确归因于这两点，建议改为更贴合原文的‘垂直领域能力缺口’或‘复杂专业场景落地瓶颈’。",
+                  "S1在最后一轮总结中提到的‘未来半年...垂直领域的精细化运营才是增量所在’属于基于新闻的延伸判断，虽符合逻辑但非日报直接事实，建议弱化预测语气，改为‘当前趋势显示...’。"
+                ],
+                "repair_instruction": "1. 将S1第三轮中‘卡在长程一致性和领域知识密度’修改为‘卡在垂直领域的复杂逻辑闭环和知识密度上’，以严格贴合日报中‘复杂专业场景下的落地仍面临显著的能力瓶颈’的描述，避免引入日报未明确指出的具体技术归因。2. 将S1最后一轮中‘未来半年，我们会看到...’修改为‘从今天的趋势来看...’，将预测性陈述调整为基于当前事实的趋势总结，确保所有结论均有日报事实支撑。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1在第三轮发言中提到的‘长程一致性’和‘领域知识密度’属于对GDPx低分原因的推测性解释，日报原文仅指出‘暴露出通用智能体在垂直领域的能力缺口’，未明确归因于这两点，建议改为更贴合原文的‘垂直领域能力缺口’或‘复杂专业场景落地瓶颈’。",
+              "S1在最后一轮总结中提到的‘未来半年...垂直领域的精细化运营才是增量所在’属于基于新闻的延伸判断，虽符合逻辑但非日报直接事实，建议弱化预测语气，改为‘当前趋势显示...’。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-02/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-02/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-02/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-02/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-02.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-02/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-02/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-02.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-02/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-02.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-02.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-02.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-11-01",
       "content_date": "2026-11-01",
       "published_at": "2026-11-01T08:05:19.144044+00:00",

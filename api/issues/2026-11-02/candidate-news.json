@@ -1,0 +1,416 @@
+[
+  {
+    "title": "v0.33.0",
+    "summary": "vLLM 发布 v0.33.0 版本。条目只给出版本标签，具体变更需查阅 release note，但对该项目而言每个版本通常都伴随调度、算子或新硬件后端的跟进。自建推理服务的团队建议核对与自家模型架构、量化格式和 CUDA 版本的兼容性后再升级。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2128期 - 2026-11-02 12:01",
+    "summary": "美团发布[LongCat-2.5]，以[1.6万亿参数]强化长程智能体能力；[GDPx]评测显示顶尖模型在真实专业任务中仅获[12%]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-02_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent",
+    "summary": "DeepSeek 以 MIT 协议开源了 dsh-superagent，一个路由-工作者结构的编码 Agent 研究原型：把 GitHub 与飞书上的请求转成并行的多个工作会话分发执行。在官方模拟中，任务完成时间的 p95 从 29.5 分钟降到 15.7 分钟。对做研发流程自动化的团队来说，这类并行拆分加轻量协议接入的形态比单 Agent 长链更接近生产可用。",
+    "url": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2127期 - 2026-11-02 08:01",
+    "summary": "本期聚焦[FineDNA]开放超3000亿Token生物训练数据，以及[Hex]本地语音工具稳定版发布。编码智能体两小时建站案例与美国数据中心阻力也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-02_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+    "summary": "Nace AI 开源 Drex Max v1，一个 27B 的多模态决策模型，主打在 Apple Silicon 上本地运行，公开评测得分为 67.52。它的意义在于把中等规模多模态模型的部署门槛压到消费级硬件，适合对数据不出本地有硬要求的场景做私有化验证。",
+    "url": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2126期 - 2026-11-02 04:01",
+    "summary": "本期聚焦[小模型智能体]与[垂直AI工具]：微软、英伟达和商汤发布新模型，3D生成、政务审批及粤语音乐应用加速落地。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-02_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+    "summary": "清华大学姚期智团队提出「代数世界模型」，尝试让模型不只拟合观测序列，而是从数据中归纳出可解释的代数结构与方程关系，思路接近牛顿从现象反推定律。相较纯神经网络世界模型，这类显式结构在可解释性与外推上更有优势。对关注世界模型与科学发现方向的从业者，这是把符号归纳重新引入基座建模的一条值得跟踪的路线。",
+    "url": "https://www.qbitai.com/2026/11/507031.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2125期 - 2026-11-02 00:02",
+    "summary": "本期重点关注[Gemini 4 Carbon]登顶竞技场，以及[Claude Code扩展]供应链攻击事件。图像编辑智能体、TTS评测与低成本视频模型也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-02_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12031",
+    "summary": "llama.cpp 版本 b12031 主要给 OpenCL 后端加上初版 IQ3 量化支持，覆盖 AOS/SOA 内存布局、tiled matmul、Adreno 上的 no-shuffle GEMM/GEMV、dp4a 路径以及解码与小 batch 优化。这意味着高通 Adreno GPU 上跑低比特量化模型的选择更多、效率更高，做移动端本地推理的团队可以直接受益。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12031",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2124期 - 2026-11-01 20:01",
+    "summary": "本期聚焦[编码智能体规模化落地]与[本地模型部署]，FlowAgent已在生产处理数万次修复。与此同时，[HBM3E国产化]和AI文本水印漏洞值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-01_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12025",
+    "summary": "llama.cpp 版本 b12025 修复了共享 KV 的层中注意力张量旋转错误。这类 bug 通常表现为特定模型结构下输出质量莫名下降或长上下文异常，使用 GQA/MQA 共享 KV 架构并在本地部署的团队建议尽快跟进该修复。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12025",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2123期 - 2026-11-01 16:01",
+    "summary": "[Apple Intelligence]国行版据称将于11月4日测试并接入千问；[Kling 4.0 API]面向全球开放，进一步进入专业内容生产场景。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-01_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "每天上千万次创建：Agent Sandbox 为什么会成为新算力形态？",
+    "summary": "文章讨论 Agent Sandbox 为何正在成为一种新的算力形态：Agent 每天被创建上千万次，每次都要拉起可执行、可隔离、可回收的运行环境，需求从「训练算力」转向「海量轻量执行算力」。对做 Agent 平台的团队，这意味着沙箱启动时延、密度与隔离成本会直接决定产品体验与毛利，值得当作基础设施一等公民来设计。",
+    "url": "https://www.infoq.cn/video/4qjamMQLVIoZvytUQwpI?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2122期 - 2026-11-01 12:01",
+    "summary": "本期重点集中在[OCR模型突破]与[智能体工具落地]：国产小模型刷新文档解析表现，多个产品进一步打通本地设备、浏览器和云端工作流。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-01_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+    "summary": "Arca 的 AI 负责人分享了用 Agent 承接长周期金融工作的实践：强调持久记忆、自建 harness 而非套用通用框架，以及跨越数天的任务式工作流。金融场景对可审计、可回溯要求高，这套经验说明长程 Agent 的竞争力更多来自工程化的记忆与工具编排，而非换更大的基座模型。",
+    "url": "https://latent.space/p/arca/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2121期 - 2026-11-01 08:01",
+    "summary": "本期聚焦[ChatGPT账户安全]与开发者效率工具，[Gemini文件编辑]、[TokenEconomizer]等能力进一步降低内容处理和智能体开发门槛。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-01_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Adobe is testing how well AI agents can use editing tools like a Photoshop professional would",
+    "summary": "Adobe Research 与 UCSD 构建 EditAgent，让 Agent 像 Photoshop 熟手那样修图：不再反复调用同一个通用编辑器，而是为每个子任务挑选合适的专用工具，并由语言模型基于实测图像指标挑选最佳结果。效果确实更好，但算力约为原来的十倍——这也提示工具选择型 Agent 的成本结构与传统采样式方案完全不同。",
+    "url": "https://the-decoder.com/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-professional-would/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2120期 - 2026-11-01 04:01",
+    "summary": "本期重点聚焦[AI基础设施扩张]与[智能体底座开源]，同时出现Xray安全漏洞应急更新、投机解码提速等开发者值得关注的进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-01_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google wants video AI to understand what people need as they work",
+    "summary": "Google 领衔的研究团队做了 StreamVibe，一个面向做饭、组装家具等场景的视频 Agent，目标是在人真正需要帮助时才开口。配套基准显示，现有模型在长视频里几乎都无法可靠地判断该介入的时刻，误差会累积、回答质量快速下滑。这说明流式视频理解的关键瓶颈是时机决策而非单帧识别，对做实时多模态助手的团队是个明确的问题定义。",
+    "url": "https://the-decoder.com/google-wants-video-ai-to-understand-what-people-need-as-they-workgoogle-researchers-are-teaching-a-video-assistant-when-to-offer-help/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2119期 - 2026-11-01 03:35",
+    "summary": "本期值得关注的方向包括[AI智能体进入科学仪器控制]、桌面操作与决策模型等新工具，以及[AI基础设施投入持续扩大]。另有研究提醒，表面无害的训练数据也可能被用于削弱模型监督。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-01_0335",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12032",
+    "summary": "llama.cpp 版本 b12032 让 SYCL 后端改用 PkgConfig 查找 LevelZero 的头文件与库，主要是构建层面的修正，减少 Intel GPU 用户在编译时手动指定路径的麻烦。同时该版本附带了覆盖 macOS、iOS、Linux 各架构与 CUDA、Vulkan、SYCL 后端的完整构建产物清单，便于本地部署方直接取用。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12032",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2118期 - 2026-11-01 00:02",
+    "summary": "本期聚焦[Agent安全与效率]：大规模研究揭示技能文件供应链风险，Factory推出程序化工具调用框架。与此同时，[Mistral Large 4]降价与语音模型新品进一步降低应用门槛。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-01_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Jev新成果，再次引爆开源",
+    "summary": "量子位报道某开源项目（标题称 Jev）发布新成果并再次引发关注，被形容为「性价比屠夫」，即用显著更低的成本接近前沿能力。具体技术细节与评测口径需看原项目材料；对关注开源模型与低成本推理方案的团队，这类发布通常意味着可用基座或训练配方的又一次降价窗口。",
+    "url": "https://www.qbitai.com/2026/11/506922.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How We Took Over ChatGPT Accounts",
+    "summary": "Parameter Labs 披露了一条针对 ChatGPT 的完整攻击链，利用的是 artifacts（现称 HTML previews）在沙箱 iframe 中渲染交互式自定义 HTML 应用的实现缺陷，最终可接管他人账号。这类功能的关键安全边界在于 HTML 必须被严格沙箱化，否则不可信代码就有机会触达 OpenAI 内部 API、读取用户的私有数据；据其描述，这次利用的链条相当复杂，需要多个环节配合。对做 Agent 和工具渲染沙箱的团队来说，这是又一份必须逐条对照的攻击面清单：只要允许模型生成的代码在浏览器里跑，隔离、权限与跨域策略就得按最高标准来设计。",
+    "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12023",
+    "summary": "llama.cpp 发布 b12023，修复了 server 端共享前缀逻辑的一个缺陷：把共享的 decision 前缀截断到父任务与子任务各自第一个必需输出位置，从而在选择题等场景下多个请求共用选项 token 时，仍能保证决定性的输出 embedding 留在最终 batch 里。该问题对应 issue #30482，此前会导致共享前缀处理错误。对用 llama.cpp server 跑批量评测或多分支推理的人来说，这是一个直接影响结果正确性的修复，建议尽快升级。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12023",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12022",
+    "summary": "llama.cpp 发布 b12022，修复了 server 的 /v1/responses 端点无法接受 extra_params 的问题，使该 OpenAI 兼容接口能正确透传额外参数。对于把 llama.cpp 作为 OpenAI API 替代后端来接入 Agent 框架或评测工具链的用户，这避免了因参数被丢弃而导致的行为不一致与调试困扰，属于兼容性层面的实用修补。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12022",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Training Foundation Models with a Single Algorithm",
+    "summary": "预训练、SFT、RL 等阶段目前各自为政，数据配比与目标函数割裂，导致能力在阶段切换时容易遗忘。该工作把它们统一到同一个基于似然的算法框架下，让静态语料与强化学习生成的轨迹在同一目标里混合优化，而不是像流水线那样串行堆叠。作者报告这种统一训练在效率与能力保持上都优于分阶段流程，对正在设计多阶段训练配方、苦恼于 RL 后掉点的团队有直接参考价值。",
+    "url": "https://arxiv.org/abs/2610.40564",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Multi-Token Prediction Done Right",
+    "summary": "多 token 预测（MTP）在提升训练信号密度的同时会引入一个有偏的梯度残差，让额外头反而拖累主模型。作者提出 Soft-MTP，用直通式（straight-through）的 KL 回补技巧把这个噪声残差消掉，使多 token 目标真正对齐主干的分布。结果显示困惑度、投机解码接受率和推理表现同时改善，且不增加训练或推理开销，对想把 MTP 用于加速解码的团队是个低成本替换方案。",
+    "url": "https://arxiv.org/abs/2610.38331",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Your LR Schedule May Not Be Principled: Effective Learning Rate Scheduling in Weight-Normalized Training",
+    "summary": "权重归一化训练中常用的学习率调度大多凭经验设定，缺少原理性依据。作者分析发现真正起作用的是有效学习率轨迹，并据此推导出一个仿射的反平方根调度形式。在大规模预训练上，该调度带来更低的 loss 且对超参更鲁棒，提示做归一化架构的团队应重新审视自己沿用的 warmup 加 cosine 配置。",
+    "url": "https://arxiv.org/abs/2610.40362",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Broken on Arrival: Non-Functional Quantized LLM Artifacts in Public Model Registries and How to Catch Them",
+    "summary": "公共模型仓库里的量化小模型有相当一部分是「到手即坏」的：量化配方未校准或流程出错，文件能加载但输出已经退化，而下载者往往只看榜单分数。作者系统筛查了这些失效产物，定位出典型失败模式，并给出发布前的筛查流程与校准建议。对量化发布方和依赖社区权重的部署方都是提醒：量化产物需要独立的可用性验证，而不只是文件大小和困惑度。",
+    "url": "https://arxiv.org/abs/2609.05881",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Matched Capabilities, Different Behaviors: A Controlled Study of MCP and CLI Interfaces for Language Agents",
+    "summary": "同一套能力、不同的接口表示，Agent 的行为会不会变？作者在能力完全对齐的前提下受控比较了 MCP 与 CLI 两种接口形态，发现接口表征显著改变模型的任务行为与成功率，即使可执行动作集合相同。进一步对接口特有的实现细节做定向修复后，性能提升同时调用成本下降——说明给 Agent 设计工具时，接口语义与呈现方式本身就是一个值得优化的变量。",
+    "url": "https://arxiv.org/abs/2610.34298",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Weaken to Strengthen: Weakening-Induced On-Policy Self-Distillation for Large Reasoning Models",
+    "summary": "强化学习提升推理模型往往依赖额外标注或更强教师提供的特权信息。WISD 换了个思路：把模型自身量化或剪枝后的弱化版本当作对照，用强弱差异构造 on-policy 的训练信号，相当于让模型从自己退化后的表现里学。方法不需要特权数据即可稳定提升推理能力，为缺少高质量标注的团队提供了一条自举路径。",
+    "url": "https://arxiv.org/abs/2610.38681",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs",
+    "summary": "扩散式视觉语言模型在解码每一步都要处理图像 token，开销与图像数量线性增长。LOWN 引入证书式判据：当当前预测足够一致时，自适应跳过整段图像处理，只在真正需要视觉证据时才回到多模态路径。在保持准确率的前提下显著削减计算量，为高分辨率、多图输入的扩散 VLM 推理降本提供了一种免训练的加速思路。",
+    "url": "https://arxiv.org/abs/2610.36671",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
+    "summary": "柏拉图表示假说认为不同模态最终会收敛到同一表征空间，但此前多靠规模堆出来。作者用联合嵌入预测架构（JEPA）在配对多模态观测上训练，发现其收敛到共享表征的效率远高于下一 token 预测。结论是跨模态对齐的关键在于正样本视图的设计而非单纯放大模型，这对多模态基座的表征学习目标选择有直接指导意义。",
+    "url": "https://arxiv.org/abs/2610.39302",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "WorkFactory: Turning Professional Intents into Executable Work for Scalable Agent Training",
+    "summary": "Agent 训练缺的不是轨迹而是有内在结构的真实工作任务，合成数据往往前后矛盾、目标漂移。WorkFactory 先把专业意图拆成信息规划，再通过修复机制补齐依赖与一致性，从而批量生成连贯的长程任务。基于此训练出的 WorkPilot 在多个专家级 Agent 榜单上明显提升，说明任务构造质量比轨迹数量更能决定长程 Agent 的上限。",
+    "url": "https://arxiv.org/abs/2610.37161",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities",
+    "summary": "文档、图片、音频、视频各自一套解析器，输出格式互不兼容，是多模态数据流水线的老问题。Youtu-Parsing-Omni 用单一编码器与统一 schema，把各种模态编码成带时空结构的记录，并通过共享权重与跨模态融合处理混合输入。作者还配合自演进的 on-policy 蒸馏流程训练，在多项解析基准上取得 SOTA，对要做统一多模态 ingestion 的团队参考价值很高。",
+    "url": "https://arxiv.org/abs/2610.39301",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "WebAnything: From the Wild Web to Scalable Agent Environments",
+    "summary": "训练网页 Agent 最大的瓶颈是环境：真实网站不可控、不可复现，人工重建又太贵。WebAnything 从真实 URL 出发，自动把野生网页重构成可复用、有源可依的交互环境，并对保真度做验证。这让大规模环境构建与可复现评测成为可能，属于 Agent 训练基础设施层面的进展。",
+    "url": "https://arxiv.org/abs/2610.37786",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CoSTA: Compressed Speech Token Adaptation for Efficient Spoken Dialogue Models",
+    "summary": "语音对话模型里生成用的离散 token 与声码器合成所需的 token 空间不一致，往往靠大模型硬扛或加中间模块，延迟居高不下。CoSTA 把生成与合成的 token 空间解耦，用压缩语音 token 做适配层对齐两端，在保持音质的同时加快推理，并且兼容现有模型结构。对做实时语音对话的工程团队是实用的提速方案。",
+    "url": "https://arxiv.org/abs/2610.21143",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Glance: The Generator Is Its Own Reranker",
+    "summary": "检索增强通常把 reranker 和生成器分成两个模型，显存与延迟都要付两份钱。Glance 让生成器兼任重排器：用轻量 adapter 加指针头，在共享上下文里直接给候选段落打分，实现生成与重排一体化。既降低了显存开销，又提升了检索与最终答案质量，对单卡部署 RAG 服务的团队尤其实用。",
+    "url": "https://arxiv.org/abs/2610.40454",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Online Dense Reinforcement Learning with Planning-Grounding Agent for UI Navigation on Live IOS Apps",
+    "summary": "在真实 iOS 应用上训练 UI 导航 Agent，面临动态界面、无环境重置、奖励稀疏三重困难。作者搭了一套在线强化学习框架：规划智能体负责拆解目标，UI grounding 模型负责把意图落到控件，并提出邻居条件化的价值估计来稳定长程信用分配。在真机应用上鲁棒性提升且推理成本下降，是把 Agent 从静态数据集推向线上环境的一次完整工程实践。",
+    "url": "https://arxiv.org/abs/2610.39264",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Scaling Lean Theorem Proving for Real-World Code Verification",
+    "summary": "用 Lean 做真实代码形式化验证，难点在于证明搜索空间大、交互轮次多。EasyProver 采用递归智能体加异步搜索的结构，几乎解掉全部 Putnam 与 IMO 基准题。作者同时给出 Aegis，从竞赛编程题自动生成更难的验证任务，既用于压测证明器，也能支撑强化学习训练。这对形式化验证与代码可信方向同时提供了方法与可扩展的难度来源。",
+    "url": "https://arxiv.org/abs/2610.38174",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AB-Attention: Accurate Block Attention for Accelerating Video Diffusion Transformers",
+    "summary": "视频扩散 Transformer 的注意力随帧数与分辨率呈平方增长，稀疏化是主流加速手段，但粗粒度块稀疏往往损失画质。AB-Attention 先做块内聚类刻画高稀疏结构，再用加权采样与细粒度 kernel gather 把近似误差压下去。在提升生成保真度的同时获得实际加速，对视频生成推理优化有直接的工程收益。",
+    "url": "https://arxiv.org/abs/2610.39663",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Unlocking Any-Order Generation in Pretrained Autoregressive Image Models",
+    "summary": "预训练的自回归图像模型通常被锁死在光栅扫描顺序上，做不了灵活的补全与扩展。作者用未来感知的位置编码配合顺序课程，把一个只会在固定顺序下生成的模型改造成任意顺序生成器，从而支持 inpainting 与 outpainting，额外算力极小。这条路线说明现有 AR 图像基座的可塑性被低估了。",
+    "url": "https://arxiv.org/abs/2610.39293",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement",
+    "summary": "零数据自改进的常见失败是训练任务一旦学会就再无信号，模型在旧题上反复空转。A-RSI 根据学习信号的衰减动态刷新任务池，并用程序生成答案使其可独立验证，从而在无外部标注的情况下持续获得可靠奖励。在多个多模态基准上性能稳步提升，为自演进训练提供了一套可操作的调度策略。",
+    "url": "https://arxiv.org/abs/2610.38568",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "VibeGame: Prompt-to-Game Development with AI-Native Engine and Self-Evolving Adversarial Agent Team",
+    "summary": "从一句提示直接产出完整可玩的 2D 游戏，难点在需求理解、代码实现与可玩性验证的闭环。VibeGame 用一组分工对抗的智能体协作，配合 AI 原生引擎做交互级验证，并把可复用的组件沉淀下来自我演进。它展示了多智能体在长程、多文件、需运行验证的创作任务上的一种可行组织方式。",
+    "url": "https://arxiv.org/abs/2610.33106",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models",
+    "summary": "现有编码 Agent 评测多是单轮、纯文本、无参考实现，难以反映真实人机协作。Co-Design Bench 从 26314 个真实用户会话、37463 条去重查询中筛出 273 个任务，分多模态编辑与仓库级编辑两条赛道，输入可含图像、音频、视频与文档，且采用无参考评分。它把评测重心从能否写对一段代码，转向能否把用户模糊的多模态诉求落成可运行的改动。",
+    "url": "https://arxiv.org/abs/2610.35138",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
