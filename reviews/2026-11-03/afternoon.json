@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-11-03",
+  "reviewed_at": "2026-11-03T18:38:16.226063+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实准确，锐评切中要害，播客对话自然流畅且逻辑连贯，无明显事实错误或重复问题。",
+    "issues": [
+      "部分新闻摘要中的具体数据（如Star数、基准得分）若未提供原始来源文本，存在细微的事实核验风险，但基于上下文逻辑判断为合理。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
