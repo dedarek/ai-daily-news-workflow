@@ -1176,6 +1176,384 @@
           "url": "https://github.com/paperclipai/paperclip"
         }
       ]
+    },
+    "2026-11-04": {
+      "candidates": [
+        {
+          "date": "2026-11-04",
+          "title": "v0.5.23",
+          "summary": "SGLang v0.5.23 是一个大版本，合并了来自 257 位贡献者的 1007 个 PR，新增 Muse Spark、Beam-1.0、MiniMax-M3.1-Flash、MiniCPM-V 4.7 等一批 LLM/VLM 支持，以及 Cosmos3-Nano-Sim、FLUX.3、MOSS-Image 等扩散模型。性能侧在 GB300 上跑 DeepSeek-V4.1 时预填充吞吐最高提升约 1.5 倍，首 token 延迟降低约 28%。对自建推理服务的团队来说，这是升级收益相当密集的一次发版。",
+          "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2140期 - 2026-11-04 12:01",
+          "summary": "本期聚焦[Agent-Memory]长视频记忆与[Siri]第三方应用操作开放；开发侧迎来安全审查、OCR评测及可验证推理等新工具。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-04_1201"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Anthropic's Message Threads cut time to first token by 35 percent for long conversations",
+          "summary": "Anthropic 为 Messages API 推出 Message Threads：不再每轮重发整段对话，agent 只传变化的部分。在 50 万到 100 万 token 的长会话区间，首 token 时间下降约 35%。对长上下文 agent 应用而言，这直接降低了长对话的延迟与重复传输成本，也提示上下文管理正在从模型能力问题变成 API 设计问题。",
+          "url": "https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2139期 - 2026-11-04 08:05",
+          "summary": "本期重点集中在[智能体基础设施]与[推理效率优化]：OCRia-1实现单卡近10倍提速，LangSmith和Claude相继增强企业级可观测性与长上下文性能。另有[AI科研应用]和生成式媒体基础设施融资等值得关注。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-04_0805"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "b12079: Add nccl support for multi-node tensor parallelism (#28967)",
+          "summary": "llama.cpp 在 b12079 中为跨进程的多节点张量并行加入了后端集合通信接口，并在 CUDA 后端用 NCCL 实现，RPC server 在可用时自动启用。同时重构了 communicator 相关类型，复用以 per-rank 通信器为基础的 allreduce 接口。这让 llama.cpp 的分布式推理从单机多卡向真正多节点扩展迈出了一步。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12079"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2138期 - 2026-11-04 04:02",
+          "summary": "本期重点集中在[智能体专业能力评测]与[模型工程优化]。同时，科研智能体、设计生成和开放权重模型生态均出现值得关注的新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-04_0402"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
+          "summary": "本期关注「权重空间编程」：直接读写神经网络权重，例如编辑 Qwen 的权重来减少推理时的循环往复，从而把自动研究从自我改进回路里摘出来。同时提到 DeepSeek 的超级 agent 原型与 GDPx 基准。对研究者来说，这提示除了提示词和微调之外，还存在直接在参数空间施加干预这一条操控模型行为的路径。",
+          "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2137期 - 2026-11-04 00:01",
+          "summary": "本期关注[ChatGPT周活12亿]及搜索、语音业务增长；与此同时，[英伟达云客户限制]与[HBM短缺]正收紧中国AI算力供应。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-04_0001"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+          "summary": "Deep Principle 发布 Hydrogen-1.0，一个 753B 的开源权重科学模型，覆盖化学、材料科学与生命科学。它是在 GLM-5.3 基础上用领域数据、实验室记录和 agent 探索轨迹后训练而来，官方称在 FrontierScience-Research 上优于 GPT-6-Astra，权重以 MIT 协议开放。对做科学智能的团队来说，这是一个可直接落地的大规模领域基座。",
+          "url": "https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2136期 - 2026-11-03 20:01",
+          "summary": "本期重点关注[Mistral Large 4]开放权重发布，以及[Pando]将Git推送延迟降低约80%。[矩阵模拟计算]与[ZHA层级注意力]也带来新的效率探索。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-03_2001"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "谷歌宁愿少卖云算力，也要先把算力留给 Gemini：皮查伊罕见长访谈，披露 AI 自我改进与算力争夺内幕",
+          "summary": "皮查伊在长访谈中透露，谷歌宁愿少卖一部分云算力，也要把算力优先留给 Gemini 的训练与推理，并谈及 AI 自我改进的进展与内部算力争夺。这反映出头部厂商在算力供给紧张时的取舍逻辑：短期云收入让位于模型能力的长期卡位。对关注算力市场与模型竞争格局的从业者，这是一手的战略信号。",
+          "url": "https://www.infoq.cn/article/JmVl0yY2RYIBNpuD0xuu?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2135期 - 2026-11-03 16:02",
+          "summary": "本期聚焦英伟达[Cosmos 3]可控世界模型及部署方案，同时[机器人商业化]与[AI开发工具链]持续加速。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-03_1602"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Zyphra AI Introduces Zyphra Hierarchical Attention (ZHA): A Path to True Subquadratic Attention",
+          "summary": "Zyphra 提出分层注意力 ZHA，用树索引的稀疏注意力实现真正的亚二次复杂度，并且可以直接对冻结的 LLM 做改造，仅需约 4B token 的蒸馏即可完成适配。官方称在推理任务和 256K 检索基准上追平稠密注意力。这对需要超长上下文的部署方很有吸引力——不必重训基座就能把注意力成本压到亚二次。",
+          "url": "https://www.marktechpost.com/2026/11/02/zyphra-hierarchical-attention-zha-sparse-attention/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2134期 - 2026-11-03 12:03",
+          "summary": "本期重点集中在[模型编辑新方法]、[智能体可靠性评测]与[AI产品工作流整合]。同时，AI基础设施领域出现[统一抓取退出标准]和电网需求响应等重要进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-03_1203"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Making Kubernetes AI-Ready for NVIDIA Vera Rubin on Day One",
+          "summary": "NVIDIA 发布面向 Kubernetes 的适配方案，让新硬件 Vera Rubin 在上市首日就能在 K8s 上跑起来，覆盖驱动、内核、运行时与网络等易错环节的配置与调优。对运维 AI 集群的团队来说，这意味着新 GPU 上线不必再自己踩一遍驱动与调度的坑，缩短了从到货到可用的周期。",
+          "url": "https://developer.nvidia.com/blog/making-kubernetes-ai-ready-for-nvidia-vera-rubin-on-day-one/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2133期 - 2026-11-03 08:02",
+          "summary": "本期聚焦[DeepSeek V4.1 Flash]推理评测进展，以及[Agent Studio]、[Google Cloud Developer 插件]等智能体开发工具更新。多项研究同时探索[MoE 推理加速]与[智能体记忆]优化。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-03_0802"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "构建面向 Agentic 推理的下一代 LLM 推理引擎",
+          "summary": "内容讨论如何为 agentic 推理构建下一代 LLM 推理引擎，核心在于 agent 负载与传统单轮请求的差异：多轮调用、工具往返、前缀高度复用、时延敏感且流量突发。这要求引擎在调度、缓存和会话管理上做针对性设计，而不是把 agent 当成普通 chat 请求处理。对做推理基础设施的团队来说，这是明确的方向性判断。",
+          "url": "https://www.infoq.cn/article/YwAayF1ylWb7oN4P0lyC?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2132期 - 2026-11-03 04:02",
+          "summary": "本期重点关注[开放权重科学模型]与[工程世界模型]的新进展，同时涌现多项面向智能体开发的[API与效率工具]。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-03_0402"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Glass Theme, Personalize & Faster Generation",
+          "summary": "Unsloth 本次更新加入 Glass 主题与更多外观自定义（问候语、背景、代码字体），同时带来更快的生成速度、更多多卡训练选项以及 CPU 训练支持。官方还给出 DeepSeek-V4.1 512K 上下文的基准，称其 GGUF 在 Terminal Bench、DeepSWE 与 AutomationBench 上表现最靠前。对本地微调与量化部署的用户来说，实用性提升主要集中在训练选项与量化质量两侧。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.914-beta"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "第2131期 - 2026-11-03 00:02",
+          "summary": "本期聚焦[SenseNova 6.8 Flash]与[Hyra 2.0]等新品；智能体在[工具调用降本]和[GPU内核优化]上取得新进展，云端模型劫持风险也在上升。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-03_0002"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Anthropic团队零Rust经验起步，靠Claude完成核心API跨语言重构：CPU省40%，延迟降20%",
+          "summary": "Anthropic 团队在零 Rust 经验的前提下，借助 Claude 完成核心 API 的跨语言重构，最终 CPU 占用下降 40%、延迟降低 20%。这个案例的价值不在数字本身，而在于展示了 coding agent 在真实大型代码库迁移任务中的可用边界与协作方式，为考虑用 AI 做遗留系统改造的工程团队提供了参考样本。",
+          "url": "https://www.infoq.cn/article/IMWM7ZXDi99sMiUVZBIF?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Huawei tells customers to find their own AI chip memory, effectively outsourcing procurement to the black market",
+          "summary": "华为告知客户需自行解决其 AI 芯片所需的高性能内存，实际上把采购压力推向了黑市。走私者利用美国出口规则的漏洞，把 HBM 与低端处理器捆绑经香港转运、到岸后再拆分，导致走私 HBM3E 价格一年内涨至约 4000 美元一颗。这暴露了国产 AI 芯片在内存供给上的结构性短板，也直接影响相关集群的交付成本与周期。",
+          "url": "https://the-decoder.com/huawei-tells-customers-to-find-their-own-ai-chip-memory-effectively-outsourcing-procurement-to-the-black-market/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "v0.40.14",
+          "summary": "Ollama 发布 v0.40.14，主要修一批影响生产使用的细节：通过 ollama launch claude 启动 Claude Code 时会套用模型自身的输出 token 上限，云端模型不再撞上 128k 的默认天花板；/api/chat 的云端联网搜索响应（含压缩响应）现在能正确解码。另一处值得注意的改动是 OpenAI 兼容端点不再用 1.0 覆盖模型打包的采样默认值，客户端不传 temperature/top_p 时就会走模型自带参数，与 /api/chat 行为一致，/v1/responses 也保留可读的输入内容。对用 Ollama 当本地或代理网关的团队来说，这些修复直接减少了兼容层与原生接口之间的行为偏差。",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.14"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "b12071",
+          "summary": "llama.cpp 构建 b12071 针对 dsv4.1 分支修复了 llama-context 相关测试在部分 offload 场景下的失败问题。部分层卸载是显存受限时最常用的折中配置，这条修复说明测试覆盖已经延伸到 CPU/GPU 混合放置路径，自建推理服务在开 partial offload 升级构建时踩坑概率下降。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12071"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "b12070: cuda : prevent premature eviction of graphs about to be used (#30662)",
+          "summary": "llama.cpp 构建 b12070 针对 CUDA 后端修复了计算图被过早驱逐的问题：为整张 CUDA graph 映射表新增 last_graph_use_time 记录，让即将被复用的图不会在调度前被回收，并补了对应的测试用例。这类显存/图缓存生命周期问题在长上下文、多并发的 serving 场景下往往表现为抓不到的偶发卡顿或重放失败，修复后 CUDA 图复用更稳定，吞吐抖动也会更小。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12070"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Diagnose Distributed AI Workload Failures with NVIDIA Attribution",
+          "summary": "NVIDIA 推出 Attribution 能力，用来定位分布式 AI 训练与推理中的故障根因。分布式作业里一次 GPU 或 fabric 事件会在其他 rank 上以 NCCL 报错、调度器状态异常等形式层层放大，症状与病因严重错位；该工具把跨 rank、跨组件的事件串成因果链，帮运维直接找到最早出问题的那一环。对动辄上千卡的训练集群而言，这意味着排障从逐节点猜谜变成有指向性的定位，可显著压缩故障停机时间。",
+          "url": "https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Keep Distributed Training Running with Automated Workload Recovery",
+          "summary": "NVIDIA 介绍面向分布式训练的自动化工作负载恢复方案，目标是让训练任务在硬件或软件依赖失效后快速、可靠地续跑而不是整任务重启回滚。随着训练规模扩大，节点、网络、存储任一层抖动都可能中断进度，恢复速度直接决定有效算力利用率。对做大集群训练的团队来说，这类自动化恢复机制和 checkpoint 策略配合，是把昂贵 GPU 时数真正换成模型效果的关键工程环节。",
+          "url": "https://developer.nvidia.com/blog/keep-distributed-training-running-with-automated-workload-recovery/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Anthropic warns that it’s very close to RSI capability, aka self-building AI",
+          "summary": "Anthropic 警告自身已非常接近 RSI（递归自我改进）能力，也就是 AI 强到能大幅加速自身训练与迭代的临界点。这一表态的分量在于它来自头部模型厂商而非外部评论者，意味着自动化的 AI 研究、评测与训练闭环可能比预期更早进入现实。对从业者而言，随之而来的是能力曲线陡峭化与安全/对齐治理压力同时上升，模型发布节奏、评测体系与内部研发流程都可能被重新定义。",
+          "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "nightly-last-green",
+          "summary": "DeepSpeed 合入 ZeRO-1/2 的梯度保留修复：在请求边界之间保留梯度直到真正执行 optimizer step，避免跨边界时梯度状态被提前清空或不一致。这对使用梯度累积、变长请求批次或异步调度的训练流程尤为重要，能让 ZeRO-1/2 在非标准 step 边界下依然保持数值正确性。",
+          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-last-green"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "nightly-cpu-multi-last-green",
+          "summary": "这是 DeepSpeed 多 CPU 夜间构建的同一项改动：ZeRO-1/2 在请求边界之间保留梯度直至 step 执行，修复跨边界场景下的梯度一致性问题。CPU 多卡/多进程路径往往是分布式训练里最容易暴露竞态与状态错乱的地方，该修复通过夜间构建验证，说明 ZeRO-1/2 在边缘配置下的稳定性也在被持续补齐。",
+          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-cpu-multi-last-green"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "b12074",
+          "summary": "llama.cpp 构建 b12074 重构 delta_net 的卷积状态管理：把卷积窗口的回滚槽位索引作为 I32 输入由 host 端填好，替代原先在设备上计算 arange 加 argsort，并顺带修了 sm tensor、让 meta backend 不再需要为 ARANGE 做镜像切分。这种把每个图形态下恒定的索引移到 host 预计算的做法，减少了设备端算子与同步开销，对线性注意力类混合模型的推理延迟是实打实的优化。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12074"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "b12073",
+          "summary": "llama.cpp 构建 b12073 修复 Vulkan 后端 NVFP4 量化中 UE4M3 缩放因子的越界查表：非 OCP 路径下 ue4m3_fp32_lut 只有 128 项，而校验逻辑接受任意字节、ue4m3 转 fp32 又忽略最高位，于是大于等于 0x80 的字节会读越共享数组，且 Vulkan 的 robustness 保护并不覆盖 shared memory。修复把查找表、两个初始化循环和两处 host 共享内存预算都扩到 256 项。属于典型的静默内存安全漏洞，跑 NVFP4 低比特量化模型的 Vulkan 用户应尽快跟进。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12073"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "b12072",
+          "summary": "llama.cpp 构建 b12072 从 llm_attn_mask 中去掉冗余的 cnv，改为在输入填充阶段直接推导 block mask：block_uniform 用序列首个 token 的 mask 行填满该序列所有 token，于是 dflash 里图层面的 reshape/repeat 被消除，cnv 恒定与 raw 别名。这属于减少每步图重排开销的清理型优化，在批量变长输入、mask 逻辑复杂的推理场景下能省掉不必要的张量搬运与图节点。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12072"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "从模型调用到任务交付：MaaS 如何走进 Agent 生产",
+          "summary": "InfoQ 中文讨论 MaaS（模型即服务）如何从单纯的模型调用接口走向能交付完整任务的 Agent 生产环境。核心观点是单纯提供 API 已不够，围绕工具调用、任务编排、可观测性与权限治理的工程能力才决定 Agent 能否真正上线；对正在把大模型接入业务流程的团队，这是一份关于平台选型与架构分层的参考。",
+          "url": "https://www.infoq.cn/article/zZutPTX8bsr6NWQYNC3A?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "“别再像 2024 年那样用 Claude 了！”Claude Cowork 工程负责人：有些 Skill 删掉反而更好",
+          "summary": "InfoQ 中文整理了 Claude Cowork 工程负责人的观点：不少团队仍在沿用 2024 年的 Claude 使用习惯，而某些 Skill 删掉反而效果更好。要点在于上下文与工具并非越多越好，冗余 Skill 会稀释模型注意力和判断质量，精简工具集、明确职责边界往往比堆功能更能提升 Agent 的可靠性。对正在设计 Agent 工具体系的团队，这是一条直接的反直觉经验。",
+          "url": "https://www.infoq.cn/article/xaWSKT3MlZjbuJw16Vem?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Nvidia pushes cloud customers to cut back on China business",
+          "summary": "据 The Decoder 报道，英伟达已要求部分云客户减少来自中国企业的业务。这延续了出口管制压力向算力供应链下游传导的趋势，云厂商在承接中国客户 AI 训练与推理需求时面临更直接的合规约束。对依赖海外算力租赁的团队，供应不确定性上升，多云与国产芯片的备份方案价值随之提高。",
+          "url": "https://the-decoder.com/nvidia-pushes-cloud-customers-to-cut-back-on-china-business/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "b12075",
+          "summary": "llama.cpp 构建 b12075 在 Vulkan 后端跳过了对非计算类张量的 maxStorageBufferRange 预检查。这类预检查本意是防止超出设备存储缓冲上限，但对不参与计算的张量会造成误报甚至直接拒绝加载；放宽后模型加载兼容性提升，尤其是显存描述符上限较低的移动与集显设备受益更明显。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12075"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "纯语音Personal Agent来了！或许，这就是乔布斯心中的Siri",
+          "summary": "量子位介绍了一款纯语音形态的 Personal Agent，主打以语音为唯一交互界面来完成日常任务。相比把语音当作聊天入口的做法，纯语音 Agent 要在低延迟响应、打断处理与长时记忆上做到自然连续，才谈得上可用；文中把它称作「可以触摸的起点」，指向的是个人助理形态从对话框走向常驻服务的方向，对做端侧语音与 Agent 交互的团队有参考价值。",
+          "url": "https://www.qbitai.com/2026/11/507419.html"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "小米斩获乌镇峰会双料大奖：小米集团获“杰出贡献奖”，小米具身基座模型获“领先科技奖”",
+          "summary": "小米在 2026 世界互联网大会乌镇峰会上拿下双料奖项：小米集团获「杰出贡献奖」创新突破类奖项，小米具身基座模型获「领先科技奖」。把具身基座模型作为独立成果获奖，说明小米在机器人方向的投入已从整机演示推进到底层模型能力构建，这与它在汽车、家居等物理场景的数据与硬件优势形成呼应，值得关注其后续基座模型的开源或开放节奏。",
+          "url": "https://www.qbitai.com/2026/11/507396.html"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "A社紧急修改招股书！RSI我们快要控制不住了",
+          "summary": "量子位报道 Anthropic 紧急修改招股书，原因与 RSI（递归自我改进）相关，文中称其单季营收达 1130 亿人民币量级。这条消息把两件事绑在一起：一边是商业化速度远超预期的收入曲线，另一边是公司主动向监管与投资者披露自动化自我改进带来的风险敞口。对关注头部模型厂商资本化路径的人来说，招股书里的风险章节正成为观察其对 AI 安全判断的窗口。",
+          "url": "https://www.qbitai.com/2026/11/507382.html"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "模拟计算进入矩阵时代！北大联手硅谷IBM，写下新定义",
+          "summary": "北京大学与硅谷 IBM 团队合作，把模拟计算推进到矩阵运算时代，并给出新的定义框架。模拟计算长期受限于精度与可编程性，多用于向量型运算；这次工作面向矩阵这一深度学习的核心算子，若能在一歩内完成 GPU 需迭代上百次的计算，将对能效比与算力供给格局产生实质影响。对关注非冯诺依曼架构与 AI 芯片路线的从业者，这是值得跟踪的底层进展。",
+          "url": "https://www.qbitai.com/2026/11/507367.html"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "v0.40.14-rc0",
+          "summary": "Ollama 发布 v0.40.14-rc0 预发布版，首先是服务端修复了云端联网搜索响应的解码问题。这是 v0.40.14 正式版中网络搜索正确解码改动的先行验证版本，尝鲜用户可提前确认自建网关或代理场景下搜索返回是否正常解析。",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.14-rc0"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "The Letter Company Releases Letterpress-1: A Coding Agent Built for Growth Engineering",
+          "summary": "The Letter Company 发布 Letterpress-1 测试版，定位为面向增长工程（growth engineering）的编码 Agent，配套 harness 与 IDE。它会读取基于 git 的站点及其市场信息，然后自动提交针对 SEO、GEO 与转化率优化的 pull request。这是把编码 Agent 从通用软件开发收窄到营销与增长这一具体交付物上的尝试，对想把 Agent 直接接入业务指标的团队提供了一个可参考的产品形态。",
+          "url": "https://www.marktechpost.com/2026/11/02/letter-letterpress-1-growth-engineering-coding-agent/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Claude Message Threads 🧵, Astra 6.2 spotted 👀, Anthropic nears RSI 🔄",
+          "summary": "TLDR AI 本期汇总三条动态：Claude 推出消息串（Message Threads）能力、Astra 6.2 被外界发现踪迹、以及 Anthropic 表态已接近 RSI 能力。三条分别对应产品交互形态、新模型版本的提前曝光与前沿实验室对自动化自我改进的判断，是快速把握当周大模型节奏的一份清单。",
+          "url": "https://tldr.tech/ai/2026-11-03"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Transformers Model Integration Contracts",
+          "summary": "HuggingFace 博客介绍 Transformers 的模型集成契约（Model Integration Contracts），为新增模型接入定义统一的接口与行为约定。对上游模型作者与下游推理栈而言，这套契约减少了每个新架构都要在 tokenizer、attention 接口、权重映射上各自适配的重复劳动，也让接入正确性更容易被自动化测试覆盖，是提升模型生态兼容性的一项基础设施性工作。",
+          "url": "https://huggingface.co/blog/transformers-mic"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "从英伟达到 Pika，硅谷巨头为何“反向借力”这个国产模型？",
+          "summary": "InfoQ 中文探讨为何从英伟达到 Pika 的一批硅谷公司开始「反向借力」某个国产模型。文章指向的是国产开源模型在成本、可定制性与多模态能力上的性价比优势，使得海外团队在自家产品链路中直接采用其作为基座或组件。这一趋势意味着模型竞争的评价标准正从榜单分数转向真实产品集成度，对国内厂商的生态与授权策略也有直接启发。",
+          "url": "https://www.infoq.cn/article/h1310kHD9CWD1mO8aTAc?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "FLAMIA: FLAsh MIcroscaling Attention for Fast and Causally Safe Training on Blackwell",
+          "summary": "Transformer 注意力在 Blackwell 上做低精度训练时，MXFP8 之类的量化会带来额外开销，而且变长打包文档（packed sequences）很容易出现因果泄漏。FLAMIA 用一套混合精度注意力内核把量化开销压下去，同时在内核层面严格保证因果掩码不被跨文档注意力破坏，并原生支持变长打包。对做预训练和长序列训练的人来说，这类底层 kernel 的收益直接体现在吞吐上，同时省掉了自己写 mask 逻辑防泄漏的麻烦。",
+          "url": "https://arxiv.org/abs/2611.03344"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Strategist: Evolving Reasoning with Agents",
+          "summary": "Agent 系统里模型只是一半，另一半是推理策略——如何把一次次模型调用组织成一个回答，而今天这部分基本靠手写，且经验无法在任务之间迁移。Strategist 把这层做成元智能体：它自动演化推理策略，每条策略以可执行代码的「蓝图」形式存在，蓝图之间可以互相复用并沉淀成策略库，面对新任务时直接从库里检索组合。这意味着 agent 的推理流程本身成了可积累、可优化的资产，而不是每个项目从零重写。",
+          "url": "https://arxiv.org/abs/2611.03618"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Optimize the Harness, Not the Model: Fitting a Minimal Agent to a Self-Hostable LLM for Investigative Analysis",
+          "summary": "情报分析场景需要 agent 处理海量脏数据，但安全与成本约束排除了托管的前沿模型，也容不下难以审计的大量工具面。CLEO（约束式环境优化循环）把工作重心从换模型转到调 harness：在固定的可自托管 LLM 上，只保留那些在专家校验数据集上真正提升准确率、同时仍满足安全约束的工具、护栏、记忆策略与循环组件。这是一种「优化 harness 而非模型」的工程范式，为受合规约束的私有化 agent 落地提供了可审计的最小化路径。",
+          "url": "https://arxiv.org/abs/2611.03434"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements",
+          "summary": "计算机使用类 agent（CUA）的瓶颈在于训练数据与反馈闭环难以规模化扩展。CUA-Master 用嵌套的递归改进循环，结合开放世界数据采集和反馈驱动的重试机制，让 agent 在多个 benchmark 上持续自我迭代，而非依赖一次性人工标注。对做 GUI agent 的团队来说，它给出的是一条把「数据—执行—反馈」串成飞轮的通用路线。",
+          "url": "https://arxiv.org/abs/2611.03126"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-11-04",
+          "title": "Anthropic在S-1文件中警告接近递归自我改进临界点",
+          "summary": "Anthropic在修订的S-1/A文件中披露，其模型能力正接近递归自我改进（RSI）的临界点，即AI能大幅加速自身训练与迭代。文件指出，公司已在研发中使用AI，且内部预估显示未来模型可能很快达到“由AI带来的显著加速”定义，尽管当前模型尚未跨越该阈值。Anthropic强调，这种加速可能快于安全对齐措施的开发速度，因此计划更新负责任扩展政策，确保在可预见的未来保持人类对前沿模型开发的监督与控制。",
+          "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Anthropic推出Message Threads优化长对话延迟",
+          "summary": "Anthropic在Claude平台推出Message Threads公开测试版，旨在优化长上下文场景下的API性能。该功能不再要求每次请求重发完整对话历史，仅传输自上一条消息以来的变化部分。官方数据显示，在50万至100万token的请求区间内，首token时间减少了约35%。该功能适用于编码、计算机使用及处理大量文档或图像的工作流，线程在内存中加密存储并在5分钟无活动后过期，目前支持通过AWS、Microsoft Foundry和Google Cloud访问。",
+          "url": "https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Deep Principle发布753B开源科学模型Hydrogen-1.0",
+          "summary": "Deep Principle发布开源权重科学模型Hydrogen-1.0，参数量达753B，基于GLM-5.3后训练，覆盖化学、材料科学与生命科学领域。该模型采用MIT协议开放权重，支持1M token上下文，在FrontierScience-Research基准上得分38.3%，优于GPT-6-Astra的33.3%。训练数据包含领域知识、实验室记录及Agent探索轨迹，旨在提供可复现、可检查的科学发现替代方案，适用于实验规划、结果分析及开放式发现任务。",
+          "url": "https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "皮查伊访谈披露谷歌算力优先保障Gemini研发",
+          "summary": "谷歌CEO皮查伊在访谈中透露，为保障Gemini 4 Argon等前沿模型的训练与推理，谷歌将算力优先分配给AI研究团队，云业务因此放弃了部分短期收入。Gemini 4 Argon上线前72小时使用量接近25万亿Token，约为Gemini 3.0同期的三倍，导致算力供给紧张。皮查伊强调，追求技术前沿是谷歌核心目标，AI已深度参与内部开发，使代码变更量增加30%且回滚减少三分之一，公司正通过多智能体协作与世界模型研究探索未来方向。",
+          "url": "https://www.infoq.cn/article/JmVl0yY2RYIBNpuD0xuu?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "华为要求客户自行采购AI芯片内存，黑市HBM价格飙升至4000美元",
+          "summary": "受美国出口管制及国内供应商产能不足影响，华为告知客户需自行解决其新款AI芯片所需的HBM内存。走私者利用规则漏洞，将HBM与低端处理器捆绑经香港转运至中国，导致走私HBM3E价格一年内从几百美元涨至约4000美元。由于单颗AI芯片需6-8颗HBM，仅内存成本最高可达3.2万美元，严重推高了集群交付成本。",
+          "url": "https://the-decoder.com/huawei-tells-customers-to-find-their-own-ai-chip-memory-effectively-outsourcing-procurement-to-the-black-market/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "北大与IBM合作定义现代模拟计算，矩阵运算能效比提升百倍",
+          "summary": "北京大学孙仲团队联合IBM及Unconventional AI在Nature旗下期刊发表综述，正式定义“现代模拟计算”，将其核心聚焦于基于阻变存储器的矩阵运算。该方案利用物理定律一步完成矩阵求逆，单次操作耗时小于100纳秒，且精度可达FP32水平。实测显示，在同等精度下，其吞吐量约为英伟达H100单核的1000倍，能效提升约100倍，且可基于28纳米成熟制程制造。",
+          "url": "https://www.qbitai.com/2026/11/507367.html"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "小米获乌镇峰会双奖，具身基座模型在工厂与家庭场景落地",
+          "summary": "在2026世界互联网大会上，小米集团获“杰出贡献奖”，其“面向规模化落地的通用机器人操作基座模型关键技术”获“领先科技奖”。小米披露其具身基座模型Xiaomi-Robotics-1基于10万小时数据预训练，已在汽车工厂完成8小时产线级作业验证，并在青年公寓实现覆盖3个房间、50+任务的长程任务试运营。",
+          "url": "https://www.qbitai.com/2026/11/507396.html"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Zyphra发布ZHA分层注意力，实现亚二次复杂度且无需重训基座",
+          "summary": "Zyphra提出分层注意力机制ZHA，通过树索引的稀疏注意力实现真正的亚二次复杂度。该方案可直接对冻结的大语言模型进行改造，仅需约40亿token的蒸馏即可完成适配。官方数据显示，ZHA在推理任务和256K检索基准上的表现追平稠密注意力，显著降低了超长上下文场景下的计算成本。",
+          "url": "https://www.marktechpost.com/2026/11/02/zyphra-hierarchical-attention-zha-sparse-attention/"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Strategist：通过元智能体自动演化Agent推理策略",
+          "summary": "Strategist是一个元智能体，旨在解决AI Agent系统中推理策略依赖手写且经验无法跨任务迁移的问题。它将推理策略转化为可执行代码的“蓝图”，建立策略库，新任务时通过检索和组合现有蓝图生成候选策略，并在真实样本上测试修订。在30个基准测试中，Strategist在24个任务上超越最强基线，平均准确率74.7%（基线74.0%），推理成本降低39%。其生成的策略还能迁移至未见过的任务和其他模型，无需额外搜索。",
+          "url": "https://arxiv.org/abs/2611.03618"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "SGLang v0.5.23发布：新增多模型支持并优化GB300推理性能",
+          "summary": "SGLang v0.5.23合并了257位贡献者的1007个PR，新增Muse Spark、Beam-1.0、MiniMax-M3.1-Flash等LLM/VLM及FLUX.3等扩散模型支持。性能方面，在GB300上运行DeepSeek-V4.1时，预填充吞吐最高提升1.5倍，32K-64K提示词的首token延迟降低约28%。此外，低延迟模式使GB300单用户解码速度提升44%，MI350X提升75%；MoE模型在H200上8K提示词首token延迟降低30%-58%。",
+          "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "llama.cpp b12079：引入NCCL支持多节点张量并行",
+          "summary": "llama.cpp在b12079版本中为跨进程的多节点张量并行添加了后端集合通信接口，并在CUDA后端使用NCCL实现。RPC服务器在可用时会自动启用该功能。同时，版本重构了communicator相关类型，移除特定辅助函数，复用基于per-rank通信器的allreduce接口。这一更新使llama.cpp的分布式推理能力从单机多卡扩展至真正的多节点场景。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12079"
+        },
+        {
+          "date": "2026-11-04",
+          "title": "Anthropic借助Claude完成Messages API跨语言重构，CPU占用降40%",
+          "summary": "Anthropic团队在无Rust经验的情况下，利用Claude将Messages API从Python迁移至Rust。改造后，相关服务CPU资源消耗减少40%-50%，首Token延迟降低10%-20%。项目中，Claude承担主要代码编写工作，人类工程师负责系统架构、迁移策略及验证方案，采用影子流量对比新旧实现输出以确保安全切换。平台工程负责人Katelyn Lesse指出，工程师的核心价值正从编写代码转向定义问题边界、构建可验证的AI协作流程及解决Agent基础设施挑战。",
+          "url": "https://www.infoq.cn/article/IMWM7ZXDi99sMiUVZBIF?utm_source=rss&utm_medium=article"
+        }
+      ]
     }
   }
 }
