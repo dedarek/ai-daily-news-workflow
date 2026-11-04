@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-04",
+  "phase": "afternoon",
+  "audience": "all",
+  "sent": {},
+  "failed": {
+    "caorm3@lenovo.com": {
+      "recipient": "caorm3@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "ekan@lenovo.com": {
+      "recipient": "ekan@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "gaokl4@lenovo.com": {
+      "recipient": "gaokl4@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "gaoxi1@lenovo.com": {
+      "recipient": "gaoxi1@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "hejy17@lenovo.com": {
+      "recipient": "hejy17@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "heyj17@lenovo.com": {
+      "recipient": "heyj17@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "hujun10@lenovo.com": {
+      "recipient": "hujun10@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "kangcn1@lenovo.com": {
+      "recipient": "kangcn1@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "liancf2@lenovo.com": {
+      "recipient": "liancf2@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "liuao3@lenovo.com": {
+      "recipient": "liuao3@lenovo.com",
+      "failed_at": "2026-11-04T10:47:50.031087+00:00",
+      "error": "Server not connected"
+    },
+    "liugl12@lenovo.com": {
+      "recipient": "liugl12@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "liuhx20@lenovo.com": {
+      "recipient": "liuhx20@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "liumm13@lenovo.com": {
+      "recipient": "liumm13@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "lixl72@lenovo.com": {
+      "recipient": "lixl72@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "nansw2@lenovo.com": {
+      "recipient": "nansw2@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "penglei4@lenovo.com": {
+      "recipient": "penglei4@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "renjc5@lenovo.com": {
+      "recipient": "renjc5@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "shiyl7@lenovo.com": {
+      "recipient": "shiyl7@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "wangning38@lenovo.com": {
+      "recipient": "wangning38@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "wangxh47@lenovo.com": {
+      "recipient": "wangxh47@lenovo.com",
+      "failed_at": "2026-11-04T10:53:05.102707+00:00",
+      "error": "Server not connected"
+    },
+    "wangxh63@lenovo.com": {
+      "recipient": "wangxh63@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "wangyb18@lenovo.com": {
+      "recipient": "wangyb18@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "wujian11@lenovo.com": {
+      "recipient": "wujian11@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "wupan2@lenovo.com": {
+      "recipient": "wupan2@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "wuzx9@lenovo.com": {
+      "recipient": "wuzx9@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "xiaojy6@lenovo.com": {
+      "recipient": "xiaojy6@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "xiongjb2@lenovo.com": {
+      "recipient": "xiongjb2@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "xubo17@lenovo.com": {
+      "recipient": "xubo17@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "xuhc2@lenovo.com": {
+      "recipient": "xuhc2@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "xutj4@lenovo.com": {
+      "recipient": "xutj4@lenovo.com",
+      "failed_at": "2026-11-04T10:58:20.544722+00:00",
+      "error": "Server not connected"
+    },
+    "yangfc1@lenovo.com": {
+      "recipient": "yangfc1@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "yangrp2@lenovo.com": {
+      "recipient": "yangrp2@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "yangyc18@lenovo.com": {
+      "recipient": "yangyc18@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "yangying21@lenovo.com": {
+      "recipient": "yangying21@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "yaowz1@lenovo.com": {
+      "recipient": "yaowz1@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "yuyang5@lenovo.com": {
+      "recipient": "yuyang5@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "yyc54321@126.com": {
+      "recipient": "yyc54321@126.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "zhaijx2@lenovo.com": {
+      "recipient": "zhaijx2@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "zhanghq24@lenovo.com": {
+      "recipient": "zhanghq24@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "zhangly35@lenovo.com": {
+      "recipient": "zhangly35@lenovo.com",
+      "failed_at": "2026-11-04T11:03:36.219742+00:00",
+      "error": "Server not connected"
+    },
+    "zhangxi27@lenovo.com": {
+      "recipient": "zhangxi27@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhangzq39@lenovo.com": {
+      "recipient": "zhangzq39@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhanml1@lenovo.com": {
+      "recipient": "zhanml1@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhaotao1@lenovo.com": {
+      "recipient": "zhaotao1@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhenght1@lenovo.com": {
+      "recipient": "zhenght1@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhengqh2@lenovo.com": {
+      "recipient": "zhengqh2@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhouzw6@lenovo.com": {
+      "recipient": "zhouzw6@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhulei19@lenovo.com": {
+      "recipient": "zhulei19@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhuzc6@lenovo.com": {
+      "recipient": "zhuzc6@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "zhury2@lenovo.com": {
+      "recipient": "zhury2@lenovo.com",
+      "failed_at": "2026-11-04T11:08:52.936064+00:00",
+      "error": "Server not connected"
+    },
+    "duanxg2@lenovo.com": {
+      "recipient": "duanxg2@lenovo.com",
+      "failed_at": "2026-11-04T11:14:03.327182+00:00",
+      "error": "Server not connected"
+    },
+    "duzg2@lenovo.com": {
+      "recipient": "duzg2@lenovo.com",
+      "failed_at": "2026-11-04T11:14:03.327182+00:00",
+      "error": "Server not connected"
+    },
+    "wangcy57@lenovo.com": {
+      "recipient": "wangcy57@lenovo.com",
+      "failed_at": "2026-11-04T11:14:03.327182+00:00",
+      "error": "Server not connected"
+    }
+  }
+}
