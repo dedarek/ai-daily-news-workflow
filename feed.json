@@ -3,6 +3,133 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-11-05",
+      "content_date": "2026-11-05",
+      "published_at": "2026-11-05T07:48:44.068062+00:00",
+      "article_count": 12,
+      "podcast_turns": 23,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 60,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 48,
+            "exact_url_blocks": [],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在第二轮发言中提到“GPT-5”，日报中仅提及“顶尖闭源模型”，未具体指明为GPT-5，属于轻微的事实外延，建议改为“顶尖闭源模型”以严格贴合日报事实。",
+                  "S1在第四轮发言中提到“就像当年云厂商合并一样”，虽然作为类比可以接受，但略显突兀，且日报中无此背景信息，建议简化为“大厂整合是行业常态”以更紧凑。",
+                  "S2在第十八轮发言中总结“AI正在获得‘身体’和‘信任’”，其中“信任”对应FlashProve和漏洞补丁，“身体”对应具身智能，总结较为抽象，若能具体点出“具身交互”和“可信执行”两个关键词会更精准。"
+                ],
+                "repair_instruction": "1. 将S1第二轮中的“GPT-5”修改为“顶尖闭源模型”，避免引入日报未提及的具体竞品名称。2. 简化S1第四轮中关于云厂商合并的类比，直接强调大厂整合的必然性即可。3. 在S2第十八轮的总结中，将抽象的“身体”和“信任”替换为日报中的核心概念“具身交互”和“可信执行”，以提升专业度和准确性。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1在第二轮发言中提到“GPT-5”，日报中仅提及“顶尖闭源模型”，未具体指明为GPT-5，属于轻微的事实外延，建议改为“顶尖闭源模型”以严格贴合日报事实。",
+              "S1在第四轮发言中提到“就像当年云厂商合并一样”，虽然作为类比可以接受，但略显突兀，且日报中无此背景信息，建议简化为“大厂整合是行业常态”以更紧凑。",
+              "S2在第十八轮发言中总结“AI正在获得‘身体’和‘信任’”，其中“信任”对应FlashProve和漏洞补丁，“身体”对应具身智能，总结较为抽象，若能具体点出“具身交互”和“可信执行”两个关键词会更精准。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-05/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-05/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-05/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-05/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-05.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-05/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-05/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-05.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-05/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-05.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-05.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-05.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-11-04",
       "content_date": "2026-11-04",
       "published_at": "2026-11-04T07:18:49.295442+00:00",
