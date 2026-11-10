@@ -52,7 +52,7 @@ JSON 运行报告及邮件页脚记录实际内容日期。
 | 项 | 值 |
 |----|-----|
 | 邮箱 | `only_for_aics_tic@163.com` |
-| 授权码 | `FZbuF344Ef7zDKLr` |
+| 授权码 | 不写进仓库；本地用环境变量 `AI_DAILY_SMTP_PASSWORD`，Actions 用同名 Secret |
 | 服务器 | `smtp.163.com:465`（SSL） |
 
 ⚠️ 163 有限流：每封间隔 8-10 秒，每 10 封暂停 30 秒。带大附件时更容易触发。

@@ -7,7 +7,7 @@ from email import encoders
 
 date = "YYYY-MM-DD"
 sender = "only_for_aics_tic@163.com"
-password = "FZbuF344Ef7zDKLr"
+password = os.environ["AI_DAILY_SMTP_PASSWORD"]  # 授权码只从环境变量读，不落仓库
 recipient = "yyc54321@126.com"  # review 收件人
 mp3_path = f"/tmp/ai-daily-news-podcast-{date}.mp3"
 

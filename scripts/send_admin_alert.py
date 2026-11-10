@@ -45,7 +45,9 @@ def read_smtp_config() -> tuple[str, int, str, str]:
         return match.group(1).strip()
 
     sender = os.environ.get('AI_DAILY_SMTP_USER') or value(r'\*\*邮箱\*\*[：:]\s*([^\s]+)', 'sender')
-    password = os.environ.get('AI_DAILY_SMTP_PASSWORD') or value(r'\*\*授权码\*\*[：:]\s*([^\s]+)', 'password')
+    password = os.environ.get('AI_DAILY_SMTP_PASSWORD', '').strip()
+    if not password:
+        raise RuntimeError('Missing AI_DAILY_SMTP_PASSWORD; 授权码不落仓库，只从环境变量读')
     host = os.environ.get('AI_DAILY_SMTP_HOST') or value(r'\*\*SMTP服务器\*\*[：:]\s*([^\s]+)', 'host')
     port = int(os.environ.get('AI_DAILY_SMTP_PORT', '465'))
     return host, port, sender, password
