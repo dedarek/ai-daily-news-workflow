@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Gemini 4 Carbon向多类用户开放",
+    "summary": "Google DeepMind宣布Gemini 4 Carbon正式向开发者、企业、科研人员及消费者开放。该模型主打网络安全、编程、科学推理及长程智能体工作流，旨在处理复杂多步编码及开放式科研任务。官方指出，Carbon在独立基准测试中表现领先，且具备生产级经济性。介绍期结束后，公开访问版本每百万输入Token计费4美元，输出Token计费20美元。",
+    "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+    "section": "🔥 今日焦点",
+    "review": "Carbon通过高算力消耗换取复杂任务上限，其定价策略显示Google正试图在前沿能力与商业落地间寻找平衡，但高昂的Token成本可能限制其在非关键路径上的大规模普及。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic发布Claude Fable 5.2与Mythos 5.2",
+    "summary": "Anthropic推出Claude Fable 5.2和Mythos 5.2，二者基于同一模型，区别在于安全护栏等级。Fable 5.2面向通用用户，内置分类器以阻断高风险网络与生物任务，定价为每百万输入8美元、输出40美元。Mythos 5.2移除部分限制，需通过特定验证计划访问。在FrontierCode 2.0等基准中，Fable 5.2表现优于Opus 5.5，但在AutomationBench上略逊于Gemini 4 Carbon。",
+    "url": "https://www.marktechpost.com/2026/11/10/anthropic-claude-fable-5-2-mythos-5-2-release/",
+    "section": "🚀 产品发布",
+    "review": "将同一模型拆分为不同合规等级销售，是Anthropic应对安全争议与商业需求的折中方案，但“同模不同权”可能引发关于公平访问和技术黑箱的伦理争议。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta发布高效小模型Muse Ember",
+    "summary": "Meta发布其最小且最高效的模型Muse Ember，专为复杂推理执行及Agent日常重复任务设计，如工具调用、编码子任务及长文档解析。在短Prompt场景下，其定价与GPT-6 Luna和Claude Haiku 5.5持平，均为每百万输入0.10美元、输出0.50美元。该模型在Artificial Analysis效率前沿曲线上表现优异，旨在降低高并发Agent负载的成本。",
+    "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+    "section": "🚀 产品发布",
+    "review": "Muse Ember精准切入Agent基础设施层，以极致性价比解决高频调用成本痛点，表明大模型竞争正从“智力上限”向“单位任务经济性”转移。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini Robotics 2.5展示工业分拣试点",
+    "summary": "DeepMind介绍新版视觉语言动作模型Gemini Robotics 2.5，旨在提升机器人学习速度与操作可靠性。在奔驰产线试点中，Apollo 2机器人利用该模型抓取金属汽车支架并放入排序容器，成功率达到96%。这一数据仅对应特定工业试验场景，并非所有机器人任务的通用成功率。该模型展示了物理智能在复杂工业环境中的落地潜力。",
+    "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+    "section": "🚀 产品发布",
+    "review": "96%的成功率虽具说服力，但局限于单一结构化场景，距离通用物理智能仍有差距，工业落地的核心瓶颈仍在于非结构化环境的泛化能力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic启动IPO路演，目标估值超万亿美元",
+    "summary": "Anthropic正式启动纳斯达克IPO路演，计划发行8.25亿股A类普通股，定价区间为70至78美元。公司目标估值高达1.02万亿美元，通过公开募股募资至多644亿美元，并联合Google、Nvidia等战略投资者完成260亿美元私募配售，总融资规模可达904亿美元。尽管Q3营收同比增长47%至169.6亿美元，但公司面临近900亿美元的算力承诺及市场对AI资本开支可持续性的质疑。",
+    "url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation/",
+    "section": "💼 行业动态",
+    "review": "在AI资本开支信任度下降的窗口期推进万亿级IPO，是对行业估值逻辑的极端压力测试。若成功，将确立基础模型公司的资本定价锚点；若受阻，可能引发同类初创企业融资环境的连锁收缩。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "纽约RAISE法案生效，AI前沿开发商面临监管执行",
+    "summary": "纽约州RAISE法案进入执行准备阶段，要求年营收超5亿美元的前沿AI开发商在2027年1月1日前完成注册。该法案强制企业公开安全框架、在72小时内报告重大安全事件并发布模型透明度报告。新成立的DIGIT办公室将负责监管，违规罚款最高可达300万美元。此外，纽约州还启动了基于Binghamton大学的AI责任与研究中心，独立评估先进AI系统的安全性。",
+    "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+    "section": "💼 行业动态",
+    "review": "纽约州通过高额罚款和独立评估机构构建了实质性的合规壁垒，标志着AI监管从原则倡导转向硬性执法。这迫使头部模型厂商将安全合规成本内化，可能加速行业向具备更强治理能力的巨头集中。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌发布TPU 8i Max与8tx，强化长上下文与机密推理",
+    "summary": "谷歌在第八代TPU阵容中新增TPU 8i Max和TPU 8tx两款系统。TPU 8i Max采用双芯片封装，将计算性能、SRAM及HBM带宽翻倍，旨在解决长上下文Agent场景下的内存瓶颈。TPU 8tx则基于TPU 8t芯片搭配AMD EPYC主机，提供硬件级机密推理能力，确保数据在处理过程中保持加密状态。这两款系统预计于2027年可用，目前尚未公布具体价格和绝对性能基准。",
+    "url": "https://www.marktechpost.com/2026/11/09/google-tpu-8i-max-tpu-8tx/",
+    "section": "💼 行业动态",
+    "review": "谷歌通过系统级封装而非新芯片迭代来优化性能，反映了AI基础设施竞争正从单点算力转向架构效率与安全性。机密推理功能的加入，意在抢占受监管行业（如金融、政府）的高价值市场，但缺乏公开基准数据使得其实际竞争力难以量化。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek Harness日活154万，启动插件开发者Token激励",
+    "summary": "DeepSeek Harness公布最新数据，其日活跃用户达154万，日消耗Token约92万亿，第三方插件数量超过3.5万个。平台提出“一切皆插件”架构，允许内置功能被第三方替换，并计划建设官方插件市场。为激励生态发展，官方开始向插件作者发放Token额度。然而，社区反馈指出大量插件可能导致上下文挤占和执行成本上升，且版本升级仍存在配置丢失等稳定性问题。",
+    "url": "https://www.infoq.cn/article/Y7lTO7Q1M8oN5JhxhirK?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "DeepSeek试图通过开放架构和Token激励将Agent工具转型为操作系统，但插件生态的“开放性”与“易用性”存在根本张力。若不能解决上下文膨胀和版本兼容性问题，庞大的插件数量反而可能成为用户体验的负担，而非竞争力来源。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "团队报告首次将递归自我改进应用于完整前沿预训练",
+    "summary": "论文《No Second Run》报告了将递归自我改进（RSI）应用于从零开始的前沿预训练流程。由于完整预训练成本高昂且不可重复，团队将其拆解为多个可闭环优化的小环节，最终训练出801-30B-A3B-Base混合专家模型。该模型在11.8万亿token上训练三个月，作为基础模型性能优于Qwen3-30B-A3B等同类模型，并开放了基础模型及轻量SFT数据。",
+    "url": "https://arxiv.org/abs/2611.10719",
+    "section": "💡 前沿研究",
+    "review": "该实践突破了RSI仅用于后训练的限制，通过拆解不可重复的预训练环节实现了流程优化。虽然模型性能表现良好，但“首次”声明需结合具体技术细节验证，且预训练RSI的通用性仍待更多独立复现。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AMP1实现通用模型零样本机器人操控",
+    "summary": "论文《On Agentic Manipulation Policies》提出AMP1框架，利用通用AI模型直接指挥机械臂，无需演示或任务专项训练。在RoboLab-120基准上，AMP1零样本成功率达85.6%，显著高于VLA和WAM基线。在108次真实试验中成功104次，失败率较强基线降低15至20倍，加入持久记忆后双臂任务失败率进一步降低4.6倍。",
+    "url": "https://arxiv.org/abs/2611.09892",
+    "section": "💡 前沿研究",
+    "review": "通用模型直接操控机器人展示了比专用策略更强的泛化能力，但零样本成功率的提升依赖于模型自身的策略生成能力。该方案减少了数据标注成本，但在复杂物理交互中的鲁棒性仍需大规模真实场景验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "agent-skills仓库提供AI编码智能体工程技能",
+    "summary": "GitHub仓库agent-skills定位为面向AI编码智能体的生产级工程技能集合，旨在让智能体遵循资深工程师的工作流与最佳实践。项目包含9个映射开发生命周期的斜杠命令，如/spec、/build等，支持从需求定义到部署的全流程。截至11月10日采集记录，该项目累计获得114,792 Star和11,998 Fork，当日新增465 Star。",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "section": "🔓 开源热榜",
+    "review": "该仓库将软件工程规范转化为智能体可执行的技能包，有助于提升AI编码的一致性与质量。高Star数反映了社区对标准化AI开发流程的需求，但技能包的有效性取决于底层模型对指令的遵循程度。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon Bedrock知识库支持单轮与智能体检索",
+    "summary": "Amazon Bedrock Managed Knowledge Base新增单轮RAG与纯检索请求支持，允许通过AgenticRetrieveStream进行智能体检索。引入maxAgentIteration参数后，每次请求的检索投入变得可调，简单问题可一次召回，复杂问题才进行多轮推理。该功能将多轮检索从固定架构变为按请求决定的成本开关，适用于如银行内部政策助手等场景。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
+    "section": "🤖 Agent & 工具",
+    "review": "该功能通过参数化控制检索深度，实现了成本与效果的平衡，解决了简单查询过度计算的问题。这种动态检索机制提升了知识库应用的灵活性，但需开发者合理设置迭代上限以避免延迟增加。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

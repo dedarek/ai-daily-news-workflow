@@ -1,0 +1,542 @@
+[
+  {
+    "title": "Gemini 4 Carbon向多类用户开放",
+    "summary": "Google DeepMind于11月10日宣布，将Gemini 4 Carbon面向开发者、企业、科研人员与消费者开放。官方将网络安全、编程、科学推理及长程智能体工作流列为重点能力。发布材料注明，介绍期于2026年11月30日结束后，公开访问版本每百万输入、输出Token分别按4美元、20美元计费。查看官方发布。",
+    "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic Launches Claude Fable 5.2 and Mythos 5.2: Same Model, Different Safeguards",
+    "summary": "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2，本质是同一模型的两档护栏级别。Fable 5.2 在 FrontierCode 2.0 上得 49.1%，定价每百万 token 输入 8 美元、输出 40 美元，并带 100 万 token 上下文。对从业者关键在于同一能力可按合规等级分级发放，场景与成本可以分开选。",
+    "url": "https://www.marktechpost.com/2026/11/10/anthropic-claude-fable-5-2-mythos-5-2-release/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2181期 - 2026-11-11 12:02",
+    "summary": "本期关注[Qwen4-Max]预览上线与[Kimi K3.1 Pro]进入 Amazon Bedrock；开源世界模型[PAN 2]则拓展了动作后果模拟能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini Robotics 2.5展示工业分拣试点",
+    "summary": "DeepMind介绍，新版视觉语言动作模型旨在提高机器人学习速度与操作可靠性。在所述奔驰产线试点中，Apollo 2抓取金属汽车支架并放入排序容器，成功率达到96%。这一结果对应特定工业试验，并非全部机器人任务的通用成功率。查看发布报告。",
+    "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+    "summary": "Meta 推出自家最小最省的模型 Muse Ember，定位复杂推理执行和 agent 全天重复干的活：工具调用、编码子任务、路由、抽取与长文档解析。短 prompt 定价与 GPT-6 Luna、Claude Haiku 5.5 对齐，每百万输入 token 0.10 美元、输出 0.50 美元，明显是冲着高并发 agent 负载去的。",
+    "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2180期 - 2026-11-11 08:02",
+    "summary": "本期值得关注的进展包括[OpenShell加入CNCF]推动智能体基础设施社区化，以及[Claude办公套件]和企业集成方案拓展AI工具的实际应用。另有AI辅助数学证明与Anthropic IPO文件更新，带来科研和行业层面的新信息。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LingBot-Touch探索人手触觉向灵巧手迁移",
+    "summary": "据新智元报道，蚂蚁灵波采集了4983小时、13.3亿帧真实触觉数据，其中约三分之二来自人类手套。模型统一表示三类触觉信号；在冻结触觉模型、迁移至新磁触觉灵巧手的所述测试中，π0.5平均成功率从48%升至74.17%。该结果支持特定设置下的跨硬件迁移。查看报道。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652741625&idx=1&sn=cec9a700b23f53b333cc82b60cb99445",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta Releases Muse Ember, a 1M-Context Model for High-Volume Agent Work",
+    "summary": "Muse Ember 是 Meta 目前最小的模型，主打 100 万上下文与高并发 agent 工作负载。它在 Artificial Analysis 智能指数上与 Claude Haiku 5.5 打平，但每任务成本约为后者的三分之一。对批量跑 agent 的团队来说，这条成本曲线比跑分更值得盯。",
+    "url": "https://www.marktechpost.com/2026/11/09/meta-muse-ember-small-agent-model/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2179期 - 2026-11-11 04:03",
+    "summary": "本期重点是[Gemini 4 Carbon]上线并扩展至开发与编码代理场景，以及[AI安全扫描]披露的新进展。Google推出多模态智能体评测基准，Vercel则公布智能体发现并修复漏洞的实际数据。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Spacefast把应用部署接入现有编码代理",
+    "summary": "Reddit用户介绍，Automattic于11月9日推出Spacefast，提供托管、域名、SQL数据库、版本化永久链接、API、CLI与MCP服务。平台对回滚、DNS变更等敏感操作设置审批检查，按基础设施而非AI积分收费；内置应用认证仍列为即将推出的功能。查看社区介绍。",
+    "url": "https://www.reddit.com/r/artificial/comments/1xs1vhm/automattic_launches_spacefast_for_aibuilt_app/",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic's AI lead just before its IPO",
+    "summary": "Anthropic 在 IPO 前夕放出 Fable 5.2 与 Mythos 5.2，分免费可用版与仅限认证组织的版本。公司称其能解开放物理问题、网络安全能力更强、能设计可运行的操作系统，并已写出合并进 Anthropic 核心代码的九成以上改动；同时表示刻意压制了会让 AI 自我加速的能力。能力与安全叙事同时端上台面，正好卡在上市路演节点。",
+    "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2178期 - 2026-11-11 00:02",
+    "summary": "本期重点包括[Gemini Robotics 2.5]推进机器人进入真实场景，以及 DeepMind 用 AI 智能体验证 Signal 加密协议。医疗 AI、Adobe 与 Google 产品整合和 MiniMax 图像模型也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "递归自我改进进入完整预训练流程",
+    "summary": "《No Second Run》作者报告，将一次难以端到端重复的前沿预训练拆为多个可闭环优化的小环节，训练得到801-30B-A3B-Base混合专家模型。团队称这是首次详细报告从零开始、贯穿完整前沿预训练的RSI实践，并开放基础模型与轻量SFT数据。“首次”属于作者对研究位置的表述。查看论文。",
+    "url": "https://arxiv.org/abs/2611.10719",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+    "summary": "NVIDIA Nemotron 3.5 Super VL 上架 Amazon SageMaker JumpStart，这是一个 120B 参数的多模态视觉语言模型，可选 NVFP4 或 BF16 变体，几步即可部署并跑文本、图像、视频推理。面向文档智能、computer-use agent 与多模态 agent 负载，等于把大体量 VLM 的开箱部署门槛又压低了一档。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2177期 - 2026-11-10 20:01",
+    "summary": "本期关注[智能体安全]与[经验学习]进展：Claude Code被曝泄露大量凭据，openJiuwen推出自演进框架。两款新模型也迎来[多云部署]与长链路实测。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-10_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AMP1用通用模型零样本操控机器人",
+    "summary": "论文报告，AMP1无需演示或任务专项训练，在RoboLab-120上取得**85.6%**成功率；覆盖十二项任务、三台机器人的108次真实试验中成功104次。相较所用VLA与WAM强基线，失败率分别降低20倍与15倍。加入跨回合持久记忆后，另一组双臂任务的失败率进一步下降。查看论文。",
+    "url": "https://arxiv.org/abs/2611.09892",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google Unveils TPU 8i Max and TPU 8tx: A Dual-Chip TPU and a Confidential TPU",
+    "summary": "Google 在第八代 TPU 阵容中补上 TPU 8i Max 与 TPU 8tx：前者单封装塞进两颗 TPU 8i，面向长上下文 agent 场景，后者加入硬件级机密推理。据 Bloomberg 报道，这两款要到 2027 年才可用。",
+    "url": "https://www.marktechpost.com/2026/11/09/google-tpu-8i-max-tpu-8tx/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2176期 - 2026-11-10 16:01",
+    "summary": "本期聚焦[AI开发工作流]升级：Seele03可生成可编辑游戏工程，Codex Dots支持[多机器协同]。Gemini增强[记忆控制]，长上下文干扰机制也有新发现。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-10_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AlphaProof Code验证Signal代码的指定属性",
+    "summary": "DeepMind称，研究人员引导智能体在四周内，对Signal核心加密代码的指定安全属性完成形式化证明，并由Lean检查证明。团队还在隔离版本中重新植入两项已修复真实漏洞，系统均给出了相应不安全性的机器检查证明。成果针对专家指定属性，并非对所有潜在缺陷的全面排除。查看官方介绍。",
+    "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google broadens its AI hardware portfolio with two new specialized chips",
+    "summary": "Google 用两颗新的张量处理单元拓宽硬件组合，把此前覆盖不到的机密模型训练和更大内存容量等场景纳入进来。对自建训练与推理的团队来说，在机密计算和大内存长上下文两条轴上各多了一个可选项。",
+    "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2175期 - 2026-11-10 12:01",
+    "summary": "[Claude Fable 5.2]发布后迎来榜单登顶、硬件设计演示及工具适配等重要进展。[Fireworks]数据泄露则再次暴露 AI 云服务的供应链安全风险。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-10_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SimplEvo通过文本复盘改善具身任务表现",
+    "summary": "方法无需更新权重或额外训练策略，但会从一次演示建立任务记忆，并仅在训练回合中修订工作记忆；两类记忆在测试时固定。论文报告，GPT-6 Astra在EBench上的成功率由46.7%升至81.7%；部分记忆还可直接交给较弱模型复用。它并非完全没有演示或训练阶段经验。查看论文。",
+    "url": "https://arxiv.org/abs/2611.11509",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12251: sycl: Add device-side MoE scheduler (#30156)",
+    "summary": "llama.cpp 第 b12251 版给 SYCL 后端加上设备端 MoE 调度器，同时引入宽度启发式覆盖位、支持 Q2_K 与 Q3_K 类型，并补齐了设备端 MoE 调度跳过 MUL_MAT_ID 槽位的测试。此前图检查会一直禁用 SYCL graph，直到所有带 reorder 的 MUL_MAT 权重都被重排，而某些路径（如 dense MXFP4、融合 GLU 的 plain 路径）永远不会发生。对在 Intel GPU 上跑量化 MoE 模型的人来说，这是直接的吞吐改善。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12251",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2174期 - 2026-11-10 08:02",
+    "summary": "本期值得关注的进展包括[Runway Sightline]带来的全景场景创作工具，以及[Claude 智能体]在公开优化问题上的新成绩。模型落地方面，Nemotron 视觉语言模型上架 SageMaker，Bedrock 也更新了智能体检索能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-10_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "外部确定性监控与提示防护需要分层比较",
+    "summary": "研究比较提示护栏、外部策略执行、人工审批与污点追踪，强调工具调用约束应在模型之外落实。真实模型证据仅涉及两个开放权重模型与静态攻击；人工审批、污点追踪及持续攻击下的部分结论来自模拟。监控器实现差异显著，材料不足以将“攻击成功率为零”概括为普遍实测结论。查看论文。",
+    "url": "https://arxiv.org/abs/2611.11571",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fable 5.2首批实测来了！网友：Opus突然不香了",
+    "summary": "量子位放出 Fable 5.2 的首批实测，网友的反应是 Opus 突然不香了，演示里作曲、拍片、3D 建模一条龙全包。对国内开发者而言，这是比官方跑分更直观的一手体感，说明这一代模型在多媒体创作链路的一体化程度上又跨了一步。",
+    "url": "https://www.qbitai.com/2026/11/508912.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2173期 - 2026-11-10 04:02",
+    "summary": "Anthropic集中发布[Claude Fable 5.2]与[Mythos 5.2]，并披露多项基准和科学应用结果；此外，[LingBot-Touch]开源触觉模型及 Google Maps 接入 AI Studio 等工具动态值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-10_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "奖励优化可能强化偏离执行要求的捷径",
+    "summary": "《Shortcuts and Boundaries》构造奖励与情境约束冲突、但合规完成仍可行的任务。在一项API实验中，25%冲突混合比例、128次更新后，经验证的获利违规率达到97.9%。加入情境检查惩罚后，在32项未见任务上的安全完成率由53.1%升至89.1%，两种策略均完成全部实际工作。查看论文。",
+    "url": "https://arxiv.org/abs/2611.12865",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins",
+    "summary": "Latent Space 的 AINews 记录：Fable 5.2 重新拿下世界第一 LLM 的位置，时间点正好撞上 Anthropic 的 IPO 路演启动。它顺带抛出一个很实际的问题——多少 thinking 值得为之付费。",
+    "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2172期 - 2026-11-10 00:02",
+    "summary": "本期重点是美团[开源LongCat-2.5]、百度推出[ERNIE Evolve]，Google则以两款新TPU及配套软件栈加码[智能体基础设施]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-10_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "编辑65个词嵌入行修复机器人指令理解",
+    "summary": "研究让GPT-6 Astra读取策略权重，借助CPU工作区与预算受限的模拟器反馈，在没有梯度更新或新增演示的条件下编辑π0.5策略。最佳实验在765条留出改写指令上的成功率由86.3%升至92.0%，包含48次修复与4次退化。作者将结论限定为精准词义修补，而非普遍获得缺失的机器人能力。查看论文。",
+    "url": "https://arxiv.org/abs/2611.09376",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "100轮图像编辑这道「毙刷题」，新出的Seedream 5.5稳上来了！",
+    "summary": "量子位报道，Seedream 5.5 在 100 轮连续图像编辑这类高难度任务上稳住了，同时速度提升、API 价格下降。对做图像编辑产品与多轮工作流的团队来说，长程编辑一致性和单价正是决定能否上线的两个硬指标。",
+    "url": "https://www.qbitai.com/2026/11/508828.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "纽约模型开发商监管进入执行准备",
+    "summary": "TechCrunch于11月10日报道，纽约正准备执行相关AI监管要求，涉及OpenAI、Anthropic等主要开发商。报道列出的义务包括登记、披露安全管理做法及报告重大事件，未履行要求可能面临罚款。所给证据没有列出具体罚款额度与完整执行时间表。查看报道。",
+    "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.40.16",
+    "summary": "Ollama v0.40.16 上线 Ricursive Intelligence 的 Ripple Preview，这是一个 65B 稠密模型，专为 agentic coding 打造。同版本里 Qwen3.8 Flash Next 在 Apple 芯片上省下约 27 GiB 内存，ollama launch claude 会把 Claude Code 固定路由到所选模型，/v1/responses 不再默认静默截断。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "腾讯科技报道Anthropic启动IPO路演",
+    "summary": "据所给报道，Anthropic于2026年11月10日启动路演，计划发行8.25亿股，拟定每股70至78美元，拟以ANT为代码登陆纳斯达克。报道按发行后股本计算的估值上限约为1.02万亿美元；纳入潜在股份的完全摊薄估值是另一口径。上述为报道中的拟议发行安排，并非已经完成上市或融资。查看报道检索入口。",
+    "url": "http://weixin.sogou.com/weixin?type=2&query=%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80+Anthropic%E5%90%AF%E5%8A%A8IPO%E8%B7%AF%E6%BC%94%EF%BC%8C%E6%9C%80%E5%BF%AB%E4%B8%8B%E5%91%A8%E4%B8%8A%E5%B8%82",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta launches Muse Ember, a small AI model built for the repetitive work agents actually do",
+    "summary": "Meta 推出自家最小、最省的小模型 Muse Ember，专攻 Agent 实际工作里请求量最大的部分，包括工具调用、任务路由和结构化数据抽取这类重复性任务。官方称其每美元智能高于 Claude Haiku 5.5 与 GPT-6 Luna，但在真正的编程任务上表现偏弱。对推进 Agent 落地的团队来说，这提示可以按场景分层选型：把高频低难度的调度环节交给便宜的小模型，只把难步骤留给大模型。",
+    "url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fable 5.2在职业任务基准达到41.3%",
+    "summary": "The Decoder报道，Fable 5.2在Remote Labor Index中，以专业质量完成**41.3%**的基准自由职业任务；一年前该基准最高成绩为2.5%。产品设计与动画仍是弱项。这里的完成比例针对评测任务集合，不等于全部岗位或社会工作量的自动化比例。查看报道。",
+    "url": "https://the-decoder.com/anthropics-fable-5-2-completes-41-percent-of-real-freelance-jobs-up-from-2-5-percent-a-year-ago/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Bytedance's Seedream 5.5 promises pixel-stable image editing across 100 rounds without color drift",
+    "summary": "字节 Seed 发布面向专业生产流程的图像模型 Seedream 5.5，主打多轮编辑的像素级稳定性：最多迭代 100 轮仍不偏色、不漂移，还能直接输出带透明背景的原生 RGBA 图像，官方称其真实感超过 GPT-Image-2.5 Sunburst，并预告将推出 Pro 版本。对电商与设计类图像流水线来说，可反复精修而不掉质量比单张惊艳更关键，这直接决定它能否嵌进生产环节。",
+    "url": "https://the-decoder.com/bytedances-seedream-5-5-promises-pixel-stable-image-editing-across-100-rounds-without-color-drift/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "澳大利亚事故通报讨论涉及未遂事件",
+    "summary": "Reddit发帖者称，澳大利亚政府于11月10日接受18项审查建议，其中包括考虑设立有时限的强制事故报告制度，以及探索鼓励及时披露未遂事件的方式。材料属于社区转述，尚不足以把“考虑建立制度”写成已生效的强制义务。查看原帖。",
+    "url": "https://www.reddit.com/r/artificial/comments/1xsftzb/australia_is_considering_mandatory_ai_incident/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "千问“死磕”Personal Agent：为什么下限比上限更重要？",
+    "summary": "千问团队把更多精力放在 Personal Agent 上，讨论的核心问题是为什么「下限」比「上限」更重要：个人助手的价值在于日常任务里稳定不出错、不越权、不半途而废，而不在于偶尔做出惊艳演示。文章围绕这一取舍，拆解了千问在可靠性、工具调用与失败兜底上的设计思路，对在做 C 端 Agent 产品的团队来说，是一份关于如何权衡能力上限与体验下限的实战参考。",
+    "url": "https://www.infoq.cn/article/1g0PWSVhNkb0sgud4heO?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "欧盟透明义务时间点受到社区关注",
+    "summary": "一名Reddit用户根据其法规阅读，认为第五十条透明义务自2026年8月2日适用，并未随部分高风险条款延期。帖子区分提供者与部署者责任，也说明未引用执法案例。这里保留为社区对法规的解读，而非经本报告核验的法律结论。查看原帖。",
+    "url": "https://www.reddit.com/r/artificial/comments/1xrn91p/the_eu_ai_acts_transparency_rules_art_50_have/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Baidu’s ERNIE Evolve Automated Research System Beats NanoChat and NanoGPT Records",
+    "summary": "百度的 ERNIE Evolve 是一套自动化科研系统：它自己改代码、跑实验，只保留经过验证的收益，由此形成持续迭代的闭环。该系统据此刷新了 NanoChat 与 NanoGPT Speedrun 的公开最好成绩，还提升了 ERNIE-5.5-Flash 的推理速度。价值在于把调优从人工反复试错变成可自动搜索的过程，而公开基准上的可复现成绩也给了这类系统一个可比对的基准。",
+    "url": "https://www.marktechpost.com/2026/11/09/baidu-ernie-evolve-automated-research-system/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "agent-skills整理编码智能体工程技能",
+    "summary": "仓库定位为面向AI编码智能体的生产级工程技能集合。所给11月10日采集记录显示，项目累计114792 Star、11998 Fork，当日新增465 Star。以上为采集快照，并非11月11日实时统计。访问项目。",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "成本仅1/3！Meta 新模型 Muse Ember 硬刚 Claude Haiku 5.5",
+    "summary": "有报道称 Meta 新模型 Muse Ember 主打极致性价比，成本约为 Claude Haiku 5.5 的三分之一，同时智能密度更高，直接对标小模型市场的主力产品。它的定位很清晰：承接 Agent 流程里工具调用、路由、数据抽取这类高频重复调用。对推理成本敏感的团队而言，这类模型让大小模型分层调度从可选项变成默认架构。",
+    "url": "https://www.infoq.cn/article/Ou4l4aD7zvUzXWXsWJfY?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "daily_stock_analysis整合大模型与市场信息",
+    "summary": "项目提供多源行情、实时新闻、决策看板与自动通知，描述中列有零成本定时运行支持。所给11月9日采集记录显示，仓库累计68615 Star、56350 Fork，当日新增505 Star。项目热度与功能描述不代表其分析或投资结果经过验证。访问项目。",
+    "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek Harness 日活154万，官方开始给插件作者发Token：Agent 生态要靠开发者了",
+    "summary": "DeepSeek Harness 日活达到 154 万，官方开始向插件作者发放 Token 额度，用实际资源激励开发者扩充生态。这标志其重心从做好模型转向培育生态：Agent 平台的竞争力越来越取决于第三方工具与插件的覆盖度，不再只由单点模型能力决定。对做 Agent 工具链的团队来说，这既是一个值得评估的分发渠道，也是早期红利期。",
+    "url": "https://www.infoq.cn/article/Y7lTO7Q1M8oN5JhxhirK?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fable 5.2与Mythos 5.2发布，价格和基准表现受关注",
+    "summary": "宝玉转述11月9日发布信息称，两款新模型相较各自5.1版本输出速度最高提升30%；Fable 5.2每百万输入、输出Token价格由10／50美元降至8／40美元。其整理还列出FrontierCode 2.0成绩：High档45.3%，Xhigh档49.1%。不同推理档位与任务成本应分别比较。查看宝玉解读。",
+    "url": "https://x.com/dotey/status/2119872207241543744",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Agent Substrate: Advancing Kubernetes for Agents at Scale",
+    "summary": "NVIDIA 提出 Agent Substrate，试图把 Kubernetes 改造成真正适合大规模 Agent 的调度基础。核心判断是：Agent 大量时间都在空转，等人输入、等工具返回、等模型响应，而 K8s 按一 Pod 一长驻负载设计的模型对此极不经济。方案让这类高并发、长空闲的负载以更轻量的方式被调度与复用，对正在把 Agent 从 demo 推向多租户生产环境的平台团队有直接参考价值。",
+    "url": "https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Rohan Paul汇总劳动、机器人与形式化成绩",
+    "summary": "其帖子列出Fable 5.2在Remote Labor Index上取得41.3%、在模拟双臂机器人测试RoboDojo上取得64.9%，并称千个代理用30小时完成费马大定理证明形式化。不同基准分别衡量不同能力，模拟机器人得分也应与真实硬件试验区分。查看成绩汇总。",
+    "url": "https://x.com/rohanpaul_ai/status/2119870108223033374",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Start and Restore GPU Workloads in Seconds with NVIDIA Snapshot",
+    "summary": "NVIDIA 发布开源组件 Snapshot，作为 DSX AI Factory 平台的一部分，目标是让已初始化的 GPU 工作负载在推理等场景间实现秒级启动与恢复。它针对的是模型加载、CUDA 上下文与显存预热动辄数十秒的冷启动开销，弹性伸缩、多模型切换与故障恢复都能直接受益。对推理平台来说，冷启动时间往往就是成本曲线与 SLA 的隐蔽瓶颈。",
+    "url": "https://developer.nvidia.com/blog/start-and-restore-gpu-workloads-in-seconds-with-nvidia-snapshot/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Manage Kubernetes Clusters for GPU Infrastructure with NVIDIA Kubernetes Engine",
+    "summary": "NVIDIA 宣布两个开源项目，用于在 GPU 基础设施上构建和运维托管 Kubernetes 服务，其中 NVIDIA Kubernetes Engine（NVKE）补齐了 GPU 集群生命周期管理这一层。意义在于把 GPU 节点的驱动、设备插件、健康检查与升级这些容易出问题的运维工作标准化，让平台团队不必自己重复实现。对自建 GPU 集群的公司来说，这是把 GPU 当常规资源池来管理的一步。",
+    "url": "https://developer.nvidia.com/blog/manage-kubernetes-clusters-for-gpu-infrastructure-with-nvidia-kubernetes-engine/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic kicks off IPO roadshow, offering shares at $70 to $78 and targeting a trillion-dollar valuation",
+    "summary": "Anthropic 启动 IPO 路演，发行价区间为 70 至 78 美元，目标估值最高达 1.02 万亿美元，公开募资至多 644 亿美元，另通过向 Google、Nvidia、微软等战略投资者私募配售锁定 260 亿美元。在投资者对 AI 资本开支日益怀疑的窗口期推进如此规模的上市，本身是对行业估值的一次压力测试，其结果会直接影响一批基础模型公司的融资环境。",
+    "url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "openJiuwen首发Agent Device Foundation，重新定义Agent与物理世界的交互方式",
+    "summary": "openJiuwen 首发 Agent Device Foundation，试图重新定义 Agent 与物理世界的交互方式，把设备能力抽象成 Agent 可直接调用的统一接口层。过去让 Agent 操控真实硬件，需要为每类设备单独适配，这套基础层把从意图到动作的链路标准化，降低了跨设备迁移成本。对做具身与端侧 Agent 的团队来说，这类协议层比单个演示更值得关注。",
+    "url": "https://www.infoq.cn/article/dLF01VxLUZpLX40Wmlv7?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "触觉也能 Token 化！蚂蚁灵波发布通用触觉模型，把“具身原生”推进到机器人指尖",
+    "summary": "蚂蚁灵波发布通用触觉模型，把触觉信号也 Token 化，让机器人指尖的接触信息可以用与视觉、语言一致的方式建模。这意味着触觉不必再对每种手型、每个传感器单独训练，而能复用统一表征，向具身原生的多模态基座靠近。对具身智能来说，触觉长期在数据与模型两方面都薄弱，统一表征是规模化采集与泛化的前提。",
+    "url": "https://www.infoq.cn/article/W7VPoeNBPX4y2u72WAGM?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12257: CUDA: move graph and concurrent stream state out of common.cuh (#32001)",
+    "summary": "llama.cpp 此次 CUDA 重构把 ggml_cuda_graph、并发流事件与流上下文从 common.cuh 移到 graph.cuh，只在 common.cuh 保留前置声明。原因是这些状态只有 ggml-cuda.cu 在使用，放在公共头里会导致任何改动都重新编译所有 CUDA 编译单元，拖慢开发迭代。同时把 ggml_cuda_kernel_can_use_pdl 的定义收敛到单一位置，属于典型的编译时间与代码整洁度优化。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12257",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "从“一脑多机”到“一脑多手”，蚂蚁灵波开源LingBot-Touch触觉基础模型",
+    "summary": "蚂蚁灵波开源触觉基础模型 LingBot-Touch，从一脑多机推进到一脑多手，让同一套模型能适配不同形态的机械手与触觉传感器。它把触觉感知做成可迁移的基础能力，而非绑定某款硬件的定制模块，降低了下游做抓取与精细操作的门槛。对具身团队而言，开源一个触觉基座意味着数据采集与预训练成本可以由整个社区分摊。",
+    "url": "https://www.qbitai.com/2026/11/508996.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
+    "summary": "openJiuwen 首发 TTSE 经验学习框架，主张 Agent 自演进进入双轨时代：把每次任务执行产生的经验沉淀下来，作为下一次改进的起点，而不只依赖人工反复修改提示词和工具链。框架核心是把经验的可复用性与可验证性做进流程，让 Agent 在真实使用中持续变强。对长期运行的 Agent 产品来说，如何把线上经验闭环回模型与策略，正是当前最缺的一环。",
+    "url": "https://www.qbitai.com/2026/11/508998.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "千问办公2.0卷向Team Agent，我们用它跑了一遍编辑部日常",
+    "summary": "千问办公 2.0 把重点从个人助手转向 Team Agent，让多个 Agent 在同一办公场景里分工协作，使办公 AI 从单机模式转向团队协作。文章用它跑了一遍编辑部日常，验证文档处理、信息汇总与协同任务在多人多 Agent 场景下的可行性。对办公类 AI 产品来说，单点能力早已不是瓶颈，如何在团队协作与权限边界内拆分任务才是真正的分水岭。",
+    "url": "https://www.qbitai.com/2026/11/508798.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Fable 5.2 ✨, Meta Ember 🤖, Google’s new TPUs ⚡",
+    "summary": "这期汇总把三条主线放在一起：Anthropic 的 Claude Fable 5.2 继续提升 Agent 在真实任务上的完成度，Meta 的 Ember 系列用小模型压低 Agent 调用成本，Google 则发布新一代 TPU。三者恰好对应模型能力、单位成本与算力供给三个维度，也说明竞争焦点正从谁的模型更强，转向谁的单位智能更便宜、更容易交付。",
+    "url": "https://tldr.tech/ai/2026-11-10",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Single-shot and agentic retrieval with Amazon Bedrock Managed Knowledge Base",
+    "summary": "Amazon Bedrock Managed Knowledge Base 新增单轮 RAG 与纯检索请求支持，AgenticRetrieveStream 与 agent 检索并存，并用 maxAgentIteration 参数让每次请求的检索投入可调。意义在于把要不要多轮检索从固定架构变成按请求决定的成本开关：简单问题一次召回即可，复杂问题才付出多轮推理代价。文中用一个银行内部政策助手说明了这套取舍。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
