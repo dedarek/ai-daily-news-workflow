@@ -1,0 +1,542 @@
+[
+  {
+    "title": "谷歌长程智能体模型接入开发工具",
+    "summary": "Google Antigravity官方宣布，Gemini 4 Carbon开始上线，强调深入探索、深度推理与扩展验证循环，面向长程智能体工作流。首批覆盖桌面应用、命令行和IDE扩展，面向Google AI Ultra订阅者及企业用户；官方表示将继续扩大付费用户覆盖范围。",
+    "url": "https://x.com/antigravity/status/2120188336056733746",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
+    "summary": "Anthropic 声称用自家模型 Mythos 几乎无人干预地把 Claude 迁移到 AMD GPU 上，只花了三天，而过去这类移植要数月。目前 Claude 已跑在四个芯片家族上，目的是压低成本并降低对单一供应商的依赖。对 AI Infra 从业者而言，这既是 CUDA 护城河可能被 AI 自身削弱的信号，也说明多硬件后端的软件栈正在成为一线实验室的必选项。",
+    "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2187期 - 2026-11-12 12:02",
+    "summary": "本期关注[Muse Ember]轻量智能体模型与[GLM 5.3]自主构造 Firefox 漏洞利用；同时，多项[MCP 运维]和企业 AI 落地实践值得参考。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-12_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "字节图像模型接受百轮连续编辑测试",
+    "summary": "量子位对Seedream 5.5开展连续图像编辑测试，以每轮修改手表时间、再将结果作为下一轮输入的方式观察画面变化。报道显示，该模型在这组测试中较好保持画面一致性；其他展示涉及小字、多语言渲染、透明图输出与图层拆分。模型已在即梦、豆包和豆包工作上线，单项演示结果不等同于所有编辑任务的表现。",
+    "url": "https://www.qbitai.com/2026/11/508828.html",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Encoder Disaggregation in vLLM: Scaling Multimodal Serving with EPD",
+    "summary": "vLLM 介绍了多模态服务中编码器解耦（编码、预填充、解码分离）的最新进展：请求以元数据形式传递、编码器独立执行、远程 embedding 传输、跨编码器缓存，以及开销更低的 EPD 路由。这些改动的目标是让视觉与音频编码阶段不再拖慢文本解码的资源调度。对大规模多模态推理部署来说，这是把编码器从关键路径上拆出去、提升整体吞吐与弹性的一条明确路线。",
+    "url": "https://vllm.ai/blog/2026-11-11-encoder-disaggregation-epd",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2186期 - 2026-11-12 08:02",
+    "summary": "本期重点是[AWS智能体工具链]继续扩展，联网搜索、本地云模拟与Codex治理能力集中落地；同时[Déjà View]以小参数实现高效三维重建。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-12_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax开放超清图像生成模型权重",
+    "summary": "MiniMax于11月10日发布并开放H3-Image权重，支持文生图、参考图和图像编辑。官方称，模型可在10秒内生成4096×4096像素图像，优化涉及后训练、步数压缩和部署等环节。所供证据片段未列出对应测试硬件，速度应结合实际部署条件理解。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ==&mid=2247489228&idx=1&sn=7611a433102ca91044ef5e71f19ee291",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Carbon is now available",
+    "summary": "Google DeepMind 宣布 Gemini 4 Carbon 上线可用，但本条仅有发布标题，未附带参数规模、上下文长度或基准成绩等细节。从业者短期可关注它在 Gemini 产品线中的定位与定价，以及是否延续对成本效率的强调。",
+    "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2185期 - 2026-11-12 04:05",
+    "summary": "Google推出[Gemini Decisions API]，以低延迟、低成本处理大规模多模态决策。ElevenLabs集中预览[ElevenAI]及多项语音智能体升级。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-12_0405",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "新代基因模型预测变异对细胞的影响",
+    "summary": "Google DeepMind宣布AlphaGenome 2，用于预测DNA序列及其变异对特定人体细胞的影响，覆盖数百种细胞类型。官方展示红细胞成熟过程中预测基因表达与观测数据的对比，为研究疾病相关细胞机制提供工具；这些预测本身并非临床诊断结论。",
+    "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12284",
+    "summary": "llama.cpp 的 CUDA 后端加入 OCP FP8 支持：使用 fp8 intrinsics，在 GEMV 情形走 W8A16，属于初步可用版本。提交用 Qwen3.6-27B 的 fp8 GGUF 权重在 RTX PRO 4500 Blackwell 上跑了 llama-bench 对比。对本地推理用户来说，这意味着 Blackwell 一代的 FP8 算力终于能在 llama.cpp 里被利用，低比特权重的加载与推理又多了一种选择。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12284",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2184期 - 2026-11-12 00:02",
+    "summary": "本期值得关注的是[AlphaGenome 2]将基因变异分析推进到细胞类型与实验适配层面，以及[Praxis-1]开放权重、瞄准真实机器人控制。Databricks 扩展企业智能体能力，Hugging Face 则分享多向量嵌入模型的训练优化方法。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-12_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "单令牌坐标表示加快机器人空间定位",
+    "summary": "PhysMoE论文提出空间与文本专家分流、单令牌坐标编码和可微符号距离场监督。作者报告，相较基座模型，九项坐标定位基准平均提升15.7%，吞吐达到8.31倍，同时保留十一项文本类具身基准的理解与推理表现。结果适用范围仍以论文评测任务为准。",
+    "url": "https://arxiv.org/abs/2611.13000",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12300: llama : remove non-fused GDN and ubatch-dependent graph nodes (#32078)",
+    "summary": "llama.cpp 这个提交删掉了非融合的 GDN 实现和依赖 ubatch 大小的图节点，统一走融合版 gated delta net，并让 graph_max_nodes 不再随 ubatch 变化，同时去掉融合 GDN 的探测与节点标签。改动让计算图更稳定、减少了分支与探测开销。对跑长上下文、大 ubatch 推理的人来说，图节点数不再随批次膨胀可以省下显存与调度成本；提交也在 DeepSeek-V4.1-Flash 的 GGUF 上做了验证。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12300",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2183期 - 2026-11-11 20:01",
+    "summary": "本期关注[农业无人驾驶]规模化落地与[AI辅助芯片适配]新进展；蚂蚁、小红书分别开源多模态决策和语音编辑模型。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "单卡证明系统逐比特核验整数模型推理",
+    "summary": "Sable论文提出证明系统，核验已承诺的整数量化Transformer是否从指定提示生成给定令牌序列。作者报告，单张RTX PRO 6000 Blackwell为Qwen2.5-32B的4096令牌计算生成证明耗时92.5秒。系统证明的是明确定义的整数计算过程，并非与原始浮点模型逐比特一致；其证明也不具零知识性，目标场景为开放权重模型。",
+    "url": "https://arxiv.org/abs/2611.14083",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "fa4-v4.0.0.beta39",
+    "summary": "FlashAttention 的 fa4 发布 v4.0.0.beta39，主要围绕 Blackwell（SM100 与 sm_107a）上的 CuTe 内核修复与打磨：保留 sm_107 的 15 位 SMEM 描述符地址、为 sm_107a 预编译 autotune 候选、反向显式给出工作 tile 与 head 坐标、调整动态变长前向调度器的绑定等。同时修了 FA2 中 flash_attn_with_kvcache 在带 cache_leftpad 且不给 cache_seqlens 时的行为，并在 MLA 路径上把 dense 2CTA MQA 的 head 数在内核内补齐。对在新架构上做注意力内核选型的人，这些都是直接关系正确性与性能的更新。",
+    "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta39",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2182期 - 2026-11-11 16:01",
+    "summary": "本期聚焦[端侧智能体]与[低延迟语音]，BotPsy、Live 3带来轻量化和全双工方案；百度同步公布[ERNIE 5.5 Flash]开源计划。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "短时流量突发引发缓存服务持续退化",
+    "summary": "前缀缓存研究发现，在所测智能体工作负载下，短时新增流量可使服务进入持续退化状态，部分运行吞吐减半、积压延续至实验余下的70分钟。研究在vLLM和SGLang上观察到相关现象。按缓存池容量约束活跃会话的驻留KV需求，在全部已测运行中阻止了此类故障；仅限制新请求的恢复效果较弱。",
+    "url": "https://arxiv.org/abs/2611.13412",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MBZUAI’s IFM Releases PAN 2, an Open 29B World Model for Physical AI",
+    "summary": "MBZUAI 的 IFM 发布 PAN 2，一个 Apache 2.0 许可的开放世界模型，用于物理 AI：由 LLM 规划器搭配 290 亿参数的扩散 Transformer，把动作后果以视频形式模拟到约 20 秒。它把语言层的任务规划与像素层的未来预测接起来，供机器人策略做前瞻。对做具身智能与仿真数据的团队，这是一个可商用、可自托管的开放权重选择。",
+    "url": "https://www.marktechpost.com/2026/11/10/ifm-pan-2-open-world-model/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2181期 - 2026-11-11 12:02",
+    "summary": "本期关注[Qwen4-Max]预览上线与[Kimi K3.1 Pro]进入 Amazon Bedrock；开源世界模型[PAN 2]则拓展了动作后果模拟能力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "科研智能体自主优化原子模拟算法",
+    "summary": "AIOA研究让智能体在其不可修改的验证器约束下，循环改进ASE原子模拟算法。作者报告，六个计算内核在Python、NumPy和SciPy环境中平均加速22—24倍；在未见问题上，优化器还减少了结构弛豫与反应路径计算所需的力评估次数。作者称其中两项算法组件未见于其检索的既有文献，原创性仍待进一步核验。",
+    "url": "https://arxiv.org/abs/2611.13143",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
+    "summary": "NVIDIA 在 KubeCon + CloudNativeCon 上宣布深化开源投入，包括捐出 OpenShell 并推出新的 AI 基础设施组件。背景是 Kubernetes 已成为管理成千上万 AI 工厂的底座，调度与运维压力持续上升。对自建推理与训练集群的团队来说，这关系到未来 GPU 资源编排在云原生生态里的标准化走向。",
+    "url": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2180期 - 2026-11-11 08:02",
+    "summary": "本期值得关注的进展包括[OpenShell加入CNCF]推动智能体基础设施社区化，以及[Claude办公套件]和企业集成方案拓展AI工具的实际应用。另有AI辅助数学证明与Anthropic IPO文件更新，带来科研和行业层面的新信息。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "竞争解释帮助科研智能体解决更多问题",
+    "summary": "Contrastive Discovery以互斥且完备的竞争解释集合替代单个假设，根据证据如何重新分配各解释的可信度来评估实验。作者报告，同等实验预算下，解决问题数量比逐点惊异度方法增加67%。在38名专家参与的盲测中，专家对已解决问题的解释选择与系统一致的比例为78%。",
+    "url": "https://arxiv.org/abs/2611.14514",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "UAEF: A framework-agnostic system for closed-loop evaluation of AI agents",
+    "summary": "AWS 提出 UAEF（通用智能体评测框架），一个与框架无关的评测系统：把各家 agent 框架的执行轨迹统一转成规范格式，用覆盖 7 个维度的 36 个内置指标打分，并持久化结果以便比较不同版本、捕捉回归。它解决的是换框架就得重写评测、以及智能体迭代中性能悄悄退化的问题。对已在生产里跑多框架智能体的团队，这是把评测变成可复用流水线的一种做法。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/uaef-a-framework-agnostic-system-for-closed-loop-evaluation-of-ai-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2179期 - 2026-11-11 04:03",
+    "summary": "本期重点是[Gemini 4 Carbon]上线并扩展至开发与编码代理场景，以及[AI安全扫描]披露的新进展。Google推出多模态智能体评测基准，Vercel则公布智能体发现并修复漏洞的实际数据。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_0403",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic上市认购据称超过供给数倍",
+    "summary": "一则援引彭博的社媒消息称，Anthropic IPO认购需求达到可售股份的数倍。公司及联合创始人拟通过IPO与私募合计筹集最多904亿美元，目标完全摊薄估值约1.4万亿美元。这些数字属于消息所述发行计划，并非已完成融资结果。",
+    "url": "https://x.com/kimmonismus/status/2120516589359345807",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic's IPO roadshow video",
+    "summary": "Simon Willison 整理了 Anthropic IPO 路演视频的内容，其中关于算力策略的部分信息量最大：联合创始人 Tom Brown 描述了 Claude 的训练与推理如何分布在 AWS Trainium、Google TPU、NVIDIA GPU 和 AMD GPU 上。这相当于公开确认一线实验室已在训练侧做多芯片并行押注，而不只是在推理上降本。对关注算力供应链与成本结构的人，这是少见的官方口径。",
+    "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2178期 - 2026-11-11 00:02",
+    "summary": "本期重点包括[Gemini Robotics 2.5]推进机器人进入真实场景，以及 DeepMind 用 AI 智能体验证 Signal 加密协议。医疗 AI、Adobe 与 Google 产品整合和 MiniMax 图像模型也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-11_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "招股修订披露模型研发加速门槛判断",
+    "summary": "Rohan Paul于11月10日转述Anthropic招股文件修订，称公司将相关判断从“可能即将跨过”调整为已跨过研发加速门槛，并据此提出更强检查。转述特别指出，该判断依据未来模型预期能力，并非当前模型已经展示的结果；帖子还列出每股70—78美元的拟发行价格区间。",
+    "url": "https://x.com/rohanpaul_ai/status/2120231037569790385",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Enterprise sales push OpenAI's quarterly revenue to $10 billion, though it still trails Anthropic",
+    "summary": "OpenAI 季度营收增长 50% 达到 100 亿美元，但调整后经营亏损扩大到 109 亿美元；相比之下 Anthropic 以 170 亿美元营收展现出更高效率。为缩小差距，OpenAI 正在企业市场打价格战。对从业者而言，这组数字意味着 API 与订阅的定价战还会继续，企业采购的议价空间在变大，两家在算力投入与商业化路径上的分化也会更明显。",
+    "url": "https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fireworks平台传出数周内第二次入侵消息",
+    "summary": "Reddit转帖的报道标题称，获英伟达支持的Fireworks AI数周内第二次向客户通报入侵。所供正文证据仅含发帖元信息，尚不足以确认攻击路径、受影响客户、数据范围与处置进度，本条仅保留标题层面的报道信息。",
+    "url": "https://www.reddit.com/r/artificial/comments/1xtqiah/nvidiabacked_fireworks_ai_notifies_customers_of/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12293: cpu: accumulate flash attention V in F32 (#29810)",
+    "summary": "llama.cpp 修掉 CPU flash attention 的一个数值 bug：单块内核此前用 F16 累加 F16 的 V 缓存，只在最后归一化，长上下文下数值超过 65504 就溢出成 inf，之后每个 token 都变 NaN。现在所有 V 类型都在 F32 中累加，与分块内核一致；F16 行走专用向量乘加函数，在 F16C、AVX512、NEON、RVV 上同寄存器内完成转换与乘加，不经过临时 F32 行，解码速度基本不受影响。对长上下文 CPU 推理来说，这是稳定性上的必要修复。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12293",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美团开放百万上下文多模态模型",
+    "summary": "美团宣布以MIT协议开源LongCat-2.5，支持商用推理部署与二次训练。模型总参数1.6万亿，每令牌激活约480亿参数，支持百万上下文，面向代码开发、视觉编程与专业办公等长任务。配套工程方案涉及W4A4推理和国产算力适配；每令牌激活参数量不等同于完整模型驻留所需显存。",
+    "url": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12286",
+    "summary": "llama.cpp 的 CUDA FlashAttention 新增 DKQ=256、DV=256 等大 head 维度下的配置分支，此前这类形状无法落到高效内核上。对本地跑长上下文、大 head 维度模型的用户是直接的推理提速，也说明 llama.cpp 的 fattn 形状覆盖在持续补齐。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12286",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "代码安全工具整合漏洞发现、验证与修复",
+    "summary": "所供GitHub记录显示，Codex Security提供命令行工具与TypeScript SDK，面向漏洞发现、验证和修复。收录快照记录为11453颗Star、916次Fork；这些数字反映采集时状态，并非实时统计，实际能力应结合项目文档与测试评估。",
+    "url": "https://github.com/openai/codex-security",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12285: cuda : fattn mma head sizes 40 72 (#30285)",
+    "summary": "llama.cpp 给 CUDA FlashAttention 的 MMA 路径补上 head size 40 和 72 的支持，这两种尺寸出现在 Gemma 3/4 和 Qwen3-VL 的视觉塔里，之前被排除在所有 tensor core 分支之外、只能退回 tile 内核。做法是把 fp16 MMA 片段的 head 方向补齐到 16 的倍数（40 到 48、72 到 80），寄存器数组、共享内存 tile stride 和 MMA 循环边界都按补齐后的尺寸走，全局内存读写仍按真实尺寸处理。这让多模态模型在本地跑视觉编码时也能吃到 tensor core 加速。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12285",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT商家后台测试商品信息管理",
+    "summary": "Gorden Sun分享并引用OpenAI公告，介绍Businesses in ChatGPT测试服务。商家可认领企业身份、维护商品信息，并查看用户互动数据；符合条件者可配置Business Agent回答客户问题。帖子还介绍Shopify目录同步、库存与价格管理等功能，但所供材料不足以证明所有商家均可在聊天内直接完成支付。",
+    "url": "https://x.com/Gorden_Sun/status/2120337783218995359",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+    "summary": "BotPsy 展示了一个完全跑在设备端的个人助理方案，核心是用不到十亿参数的 agentic 小模型承担工具调用与多步任务，而不是把每次请求都发给云端大模型。对关注端侧推理、隐私和离线可用性的团队，这类工作给出的参数量级与能力边界参考价值更大。",
+    "url": "https://huggingface.co/blog/qvac/botpsy",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude新增协作白板与表格测试功能",
+    "summary": "宝玉介绍Claude协作办公更新，称Claude Whiteboards与Claude Sheets向全部付费套餐开放测试，用户、同事和模型可共同编辑。表格支持工作表、公式、格式与下拉菜单，并标记模型改动；原Claude Dashboards更名Claude Data并结束测试。帖子称相关功能从11月10日起分批推送。",
+    "url": "https://x.com/dotey/status/2120312745543315897",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fish Audio Releases Live 3, a Full-Duplex Voice Model That Reacts in 186 ms",
+    "summary": "Fish Audio 发布 Live 3 全双工语音模型，能在说话的同时持续聆听，并区分附和声与真正的打断，反应延迟最低 186 毫秒，首发只支持英文。对做语音 agent 的团队来说，全双工加低延迟是让对话摆脱对讲机式轮流说话的关键，186ms 已接近人类对话的自然间隙。",
+    "url": "https://www.marktechpost.com/2026/11/10/fish-audio-live-3-full-duplex-voice-model/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌决策接口据称支持千题批量判断",
+    "summary": "宝玉介绍Gemini Decisions API，称配套模型Gemini Decision 1返回封闭式问题的答案与置信度，支持是非、单选和打分题。帖子列出的单次上限为1000个问题，输入价格为每百万Token 0.1美元、输出免费。产品能力与价格在本材料中来自社媒转述，未附独立核验结果。",
+    "url": "https://x.com/dotey/status/2120647659388031454",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing Kimi K3.1 Pro on Amazon Bedrock",
+    "summary": "月之暗面的 Kimi K3.1 Pro 上线 Amazon Bedrock，可通过 OpenAI 兼容的 Chat Completions、Responses 和 Converse 接口调用，支持显式 prompt caching 降低重复前缀成本，也能在 OpenCode 里当编码助手。对已在 Bedrock 上做多模型路由的团队，这是把国产模型纳入同一套鉴权、计费和可观测体系的低成本路径。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开发者分享单次提示生成射击游戏案例",
+    "summary": "Orange AI转发的Saltline案例引用开发者说法：Fable 5.2在无人反馈的流程中从零生成模型、纹理与声音。另一位查看源码的分享者称，游戏连同Three.js库仅为1.42MB单个HTML文件。开发者表示过程耗时约8小时，按API价格估算约550美元，大量输入使用缓存；“单次提示”并不意味着瞬时完成。",
+    "url": "https://x.com/oran_ge/status/2120303082689220881",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+    "summary": "这篇工作针对多向量（late-interaction）检索模型的 token 膨胀问题：每个文档要保留几十上百个 token 向量，存储和打分成本远高于单向量模型。思路是把 pooling 直接放进训练目标里，让模型在训练阶段就适应 token 汇聚后的表示，而不是训完再做粗暴压缩。对做 ColBERT 类检索系统的人，这种训练侧对齐决定了压缩之后会不会掉点。",
+    "url": "https://huggingface.co/blog/token-pooling",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Shopify应用重建将工程重点转向验证",
+    "summary": "meng shao转述Shopify工程复盘：约30名工程师用12周将300多个页面从React Native重建为Swift与Kotlin原生应用，智能体编写大部分代码。团队围绕确定性检查、双端一致性和小步审查重构流程，每个PR仍由人工审查。按团队披露数据，Android无崩溃会话比例由99.66%升至99.98%。",
+    "url": "https://x.com/shao__meng/status/2120335490524365241",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "The agent evaluation playbook: Built-in, DeepEval, and AutoEval on Amazon Bedrock AgentCore Evaluations",
+    "summary": "这是一份 Amazon Bedrock AgentCore Evaluations 的实操指南，先厘清 agent 上线后到底该测什么：任务是否完成、是否跑题、有没有泄露数据、有没有跳步，再演示如何把内置评估器、DeepEval 和 AutoEval 对应到不同层级的行为上。对正把 agent 推向生产的团队，这套从行为到评估器的映射比单纯堆 benchmark 分数更实用。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "千问本地小模型配置传闻尚待证实",
+    "summary": "沐阳在本地模型讨论中提及可能发布的千问小模型，给出350亿总参数、每令牌激活30亿的配置设想，并期待单张RTX 4090高速运行。材料未提供正式发布文件或单卡实测；MTP、n-gram、DFlash等技术讨论也不等于已确认集成。配套视频对应帖子所述旗舰模型生成悬浮小岛的案例，并非小模型性能证明。",
+    "url": "https://x.com/yyyole/status/2120569057800069563",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+    "summary": "微软研究院披露名为 Lazarus 的后门手法：重新编程模型里处于休眠状态的神经元，让原本正常的 agent 在遇到隐藏触发器时执行恶意指令，工具或终端权限越大风险越高，被触发的模型可以悄悄下载并运行攻击者代码。这提醒做 agent 部署的团队，模型权重来源与微调数据的可信度已经是和提示注入同级的攻击面。",
+    "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "llm-gemini 0.36",
+    "summary": "llm-gemini 插件更新到 0.36，把此前只对部分网络安全防御者开放的 Gemini 4 Carbon 正式向所有用户开放。定价为每百万输入 2 美元、输出 10 美元，与 GPT-6.1 Sol、Claude Sonnet 5.5 同档，但 12 月 1 日起翻倍到 4 与 20 美元，默认思考档位是 medium，作者顺手用低中高三档各跑了一次 pelican 测试。对成本敏感的团队，赶在涨价前做压测和迁移评估是划算的。",
+    "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NaiveAI Promises 2,100 Tokens per Second. How Well Does It Code?",
+    "summary": "Latent Space 实测了主打速度的 NaiveAI，官方宣称 2100 tokens/s、有机会冲上 Artificial Analysis 速度榜首，文章重点验证在这种吞吐下代码质量是否还站得住，实测结论是对标 DeepSeek 尚可。对把编码 agent 用在交互式补全场景的人来说，速度与质量的取舍正是选型的关键变量。",
+    "url": "https://latent.space/p/naiveai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon Bedrock tokenomics data lake",
+    "summary": "针对 Bedrock 跨多账号运行时只看到账单、看不到每次调用内部细节的问题，文章给出一个集中式可观测数据湖方案：把各关联账号的 invocation log 汇聚成一张可查询的表，从而按 prompt、token 数、模型选择和单次调用成本做组织级分析。对做 LLM 成本归因和配额治理的平台团队，这是可直接复用的脚手架。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-tokenomics-data-lake/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Running AV Reasoning Models Within Onboard Compute and Latency Limits",
+    "summary": "NVIDIA 讨论自动驾驶场景下如何在车端算力与延迟预算内跑推理模型：大模型效果好但装不进域控制器，因此要在模型规模、量化与调度上做取舍。对做车载、具身或其他边缘推理的团队，这种受约束的部署经验比云端 benchmark 更有参考价值。",
+    "url": "https://developer.nvidia.com/blog/running-av-reasoning-models-within-onboard-compute-and-latency-limits/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1794426607: [ROCm]: Add Operator Benchmarks for Group GEMM (#202666)",
+    "summary": "PyTorch 为 ROCm 后端补上 group GEMM 的算子微基准，覆盖 fp16、bf16 和 fp32，指标口径尽量对齐 Primus Turbo 的同类基准。值得注意的是该 PR 只加算子、不做后端选择，要测 CK-Tile 实现得手动打开环境变量。对在 AMD 卡上做 MoE 训练与推理的人，这类基准是把性能回归挡在合入前的必要基建。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1794426607",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1794423034: [headeronly] Moved TransposeType to torch/headeronly (#204244)",
+    "summary": "PyTorch 把 TransposeType 迁到 torch/headeronly，目的是让 vLLM 的 CPU 构建走向 Stable ABI：目前它依赖 at::native::cpublas，而计划加 C shim 的 cpublas_gemm_no_downcast_impl 恰好用到 TransposeType，所以得先把该类型挪进稳定 ABI 范围。对下游推理框架来说，这意味着 CPU 后端可以少绑一层 PyTorch 内部符号，升级时的兼容负担更小。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1794423034",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "US data brokers are selling half a billion dollars in RL training environments to Chinese AI labs",
+    "summary": "ChinaTalk 的调查称，Mercor、Surge AI、AfterQuery 等美国数据经纪商向中国 AI 实验室出售了约五亿美元的 AI 训练数据，其中包含此前为 OpenAI、Anthropic 搭建的同一批 RL 环境，涉及至少九家公司，而出口管制对此几乎不适用。对做 RLVR 和数据工程的团队，这既说明高质量 RL 环境稀缺且有溢价，也说明数据供应链正在成为地缘监管的新焦点。",
+    "url": "https://the-decoder.com/us-data-brokers-are-selling-half-a-billion-dollars-in-rl-training-environments-to-chinese-ai-labs/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cloudflare 推出面向 AI 应用程序的 Web Search API",
+    "summary": "Cloudflare 推出面向 AI 应用的 Web Search API，让 agent 和 RAG 应用直接拿到结构化的网页检索结果，不必自己维护爬虫和索引。对已经在用 Workers 或边缘函数部署 AI 应用的团队，检索这一环可以就近完成，省掉一次外部依赖以及随之而来的延迟与合规负担。",
+    "url": "https://www.infoq.cn/article/SgXuVvzbHr8lKrihTAZW?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI Engineer Code Summit: OpenAI on New Ways of Working With Codex",
+    "summary": "在 AI Engineer Code Summit 首日，OpenAI 演示了与 Codex 协作的新方式：用语音操控、把任务交给云端异步执行，以及一些细粒度的交互技巧。对已把编码 agent 接进日常开发流的团队，这些用法指向人机分工的下一步——人负责意图和验收，执行与等待交给云端。",
+    "url": "https://latent.space/p/codex-work/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Carbon ⚡, Claude Sheets 📊, Antigravity Swarm 🤖",
+    "summary": "TLDR AI 这期汇总覆盖三条动静：Gemini 4 Carbon 正式向所有人开放、Claude 接入表格类办公场景、以及 Antigravity 的 swarm 多智能体玩法。对跟进厂商节奏的读者，这是一次把模型发布、办公集成与多智能体编排串起来的快速扫描。",
+    "url": "https://tldr.tech/ai/2026-11-11",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

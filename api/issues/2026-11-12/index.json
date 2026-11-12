@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-11-12",
+  "content_date": "2026-11-12",
+  "published_at": "2026-11-12T08:10:40.563448+00:00",
+  "article_count": 12,
+  "podcast_turns": 22,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 10,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 58,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 2,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 57,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 24,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+            "previous_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+            "previous_date": "2026-11-11"
+          }
+        ],
+        "high_confidence_event_blocks": [
+          {
+            "current_url": "https://x.com/kimmonismus/status/2120516589359345807",
+            "previous_url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation/",
+            "previous_date": "2026-11-11",
+            "actions": [
+              "funding"
+            ],
+            "entities": [
+              "anthropic",
+              "ipo"
+            ]
+          }
+        ],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://x.com/antigravity/status/2120188336056733746",
+                "previous_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+                "reason": "核心主体均为Google Gemini 4 Carbon模型，动作均为上线/开放访问，对象均为开发者及企业用户。今日新闻侧重于开发工具接入（Antigravity），此前新闻侧重于正式开放及定价，属于同一模型发布事件的不同报道角度或后续细节补充，非实质性新进展。"
+              }
+            ]
+          },
+          {
+            "attempt": 2,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "第21轮S1的总结发言字数为98字，略超出建议的95字上限，虽未达120字的严重阈值，但建议精简以符合口播节奏。",
+              "第22轮S2的结尾“下期见”属于常规播客结束语，虽非固定寒暄，但可考虑更自然的收束方式，如直接结束或简短致谢，以增强真实感。"
+            ],
+            "repair_instruction": "1. 精简第21轮S1的总结，将“效率、安全、地缘、交互范式是四大主线”后的具体解释压缩，确保总字数在95字以内。例如改为：“总结今天：效率、安全、地缘、交互是四大主线。OpenAI亏损警示规模非健康；Lazarus攻击确立模型安全新边界；数据供应链暴露监管滞后；Agent化交互要求重定义产品。”\n2. 第22轮S2结尾可保留“下期见”或改为更自然的“我们下期再聊”，保持自然即可，无需大改。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "第21轮S1的总结发言字数为98字，略超出建议的95字上限，虽未达120字的严重阈值，但建议精简以符合口播节奏。",
+          "第22轮S2的结尾“下期见”属于常规播客结束语，虽非固定寒暄，但可考虑更自然的收束方式，如直接结束或简短致谢，以增强真实感。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-12/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-12/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-12/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-12/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-12.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-12/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-12/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-12.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-12/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-12.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-12.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-12.mp4"
+}

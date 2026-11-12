@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI季度营收达100亿美元，但亏损扩大且效率落后于Anthropic",
+    "summary": "OpenAI第三季度营收同比增长约50%至100亿美元，主要受企业销售推动，但调整后经营亏损扩大至109亿美元。相比之下，竞争对手Anthropic同期营收达170亿美元，经营亏损仅为5.67亿美元，展现出更高的运营效率。为缩小差距，OpenAI正通过降价策略争夺企业客户，其ChatGPT消费者业务目前拥有1亿付费订阅用户。",
+    "url": "https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/",
+    "section": "🔥 今日焦点",
+    "review": "OpenAI营收增长掩盖了高昂的运营成本，与Anthropic的效率差距凸显其商业化路径的沉重包袱。企业市场的价格战虽能短期提振收入，但难以根本解决盈利难题。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美团开源LongCat-2.5模型，支持百万上下文与国产算力适配",
+    "summary": "美团以MIT协议开源LongCat-2.5多模态模型，支持商用部署与二次训练。该模型总参数1.6万亿，每token激活约480亿参数，支持百万上下文，在代码开发、视觉编程及专业办公等长任务场景中表现提升。针对国产算力芯片显存受限问题，模型采用W4A4推理方案及深度协同优化，实现了在单卡显存不足80GB环境下的长序列训练与高效推理。",
+    "url": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+    "section": "🔓 开源热榜",
+    "review": "LongCat-2.5通过架构与工程优化，验证了万亿参数MoE模型在国产算力上的可行性，为降低大模型部署门槛提供了具体路径。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "字节Seedream 5.5通过百轮连续编辑测试，强化多轮一致性",
+    "summary": "字节跳动发布的Seedream 5.5图像模型在连续100轮编辑测试中表现出较强的画面一致性，优于GPT-Image 2.6。该模型支持小字多语言渲染、透明图生成及图层拆分，已在即梦、豆包等平台上线。其API采用两段计费，2K方图编辑单张成本约0.28元，旨在满足电商及内容制作场景对精准编辑与多轮稳定性的需求。",
+    "url": "https://www.qbitai.com/2026/11/508828.html",
+    "section": "🚀 产品发布",
+    "review": "Seedream 5.5在多轮编辑稳定性上的突破，直接回应了电商等高频修改场景的痛点，其低成本策略进一步加剧了图像生成市场的竞争。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax开放H3-Image权重，支持4096像素图像生成",
+    "summary": "MiniMax于11月10日开放H3-Image模型权重，支持文生图、参考图生成及图像编辑功能。官方称该模型可在10秒内生成4096×4096像素的高清图像，优化重点涉及后训练、步数压缩及部署环节。由于未公布具体测试硬件，实际生成速度需结合部署环境评估。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ==&mid=2247489228&idx=1&sn=7611a433102ca91044ef5e71f19ee291",
+    "section": "🚀 产品发布",
+    "review": "H3-Image的高分辨率生成能力与开源策略，为开发者提供了新的图像生成选项，但实际性能需结合具体硬件环境验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Fish Audio发布全双工语音模型Live 3",
+    "summary": "Fish Audio推出面向实时语音代理的全双工模型Live 3，支持在说话的同时持续聆听。该模型能区分附和声与真实打断，对短反应如“mm-hmm”的响应延迟最低可达186毫秒。目前Live 3仅支持英文，通过Fish Agent Platform和API提供服务，企业可私有化部署。官方未公布完整基准测试分数，仅展示了行为演示。",
+    "url": "https://www.marktechpost.com/2026/11/10/fish-audio-live-3-full-duplex-voice-model/",
+    "section": "🚀 产品发布",
+    "review": "186毫秒的延迟接近人类对话自然间隙，有助于消除语音交互中的“对讲机”效应。但缺乏公开基准数据且仅限英文，限制了其在多语言复杂场景下的即时落地能力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google DeepMind发布AlphaGenome 2",
+    "summary": "Google DeepMind宣布推出下一代DNA序列模型AlphaGenome 2，旨在预测DNA序列及其变异对特定人体细胞类型的影响。该模型覆盖数百种细胞类型，通过桥接单细胞生物学与人类遗传学，帮助科学家揭示疾病的细胞驱动因素。官方展示了红细胞成熟过程中基因表达预测与观测数据的对比，强调其作为研究工具的价值，而非临床诊断结论。",
+    "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+    "section": "💡 前沿研究",
+    "review": "AlphaGenome 2将基因变异预测从通用层面细化到特定细胞类型，提升了疾病机制研究的精度。然而，模型预测结果与临床诊断存在本质区别，需警惕其在医疗应用中的过度解读风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI智能体自主优化原子模拟算法",
+    "summary": "研究人员提出AIOA框架，利用大语言模型驱动的智能体在不可修改的验证器约束下，循环改进ASE原子模拟库中的数值算法。实验显示，六个计算内核在Python、NumPy和SciPy环境中平均加速22至24倍。在未见问题上，优化后的算法在结构弛豫中比L-BFGS减少3.1至3.4倍力评估次数，在反应路径计算中减少4.6至17倍。作者指出其中两项算法组件未在既有文献中发现，原创性待进一步核验。",
+    "url": "https://arxiv.org/abs/2611.13143",
+    "section": "💡 前沿研究",
+    "review": "智能体在严格验证下实现算法加速，展示了AI辅助科学计算的潜力。但“未发现于文献”的声明需谨慎对待，算法的通用性和可复现性仍需独立验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微软披露Lazarus后门攻击技术",
+    "summary": "微软研究院披露名为Lazarus的后门技术，通过重新编程模型中少于10个休眠神经元，使AI代理在遇到隐藏触发器时执行恶意指令。该攻击无需重新训练模型，且能通过标准安全评估，触发器可以是简单的日期变更。被触发的模型可下载并运行攻击者代码，窃取机密或执行破坏性命令。微软建议通过模型来源验证、权重完整性扫描和加密签名来防御此类威胁。",
+    "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+    "section": "💼 行业动态",
+    "review": "Lazarus攻击揭示了模型权重完整性是新的关键安全边界。仅修改极少神经元即可植入后门，意味着传统安全评估无法完全保障模型安全，模型溯源和权重审计将成为部署前的必要环节。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美国数据经纪商向中国AI实验室出售5亿美元RL训练环境",
+    "summary": "ChinaTalk调查指出，Mercor、Surge AI等至少九家美国数据经纪商向中国AI实验室出售了约5亿美元的AI训练数据。这些数据包含此前为OpenAI和Anthropic搭建的强化学习（RL）环境，涉及编码、金融分析等任务。中国实验室通过购买这些经过验证的环境，结合使用美国模型作为“教师”进行蒸馏，以节省算力并缩短开发周期。由于RL环境目前缺乏出口管制，这一数据供应链存在网络安全和生物领域的双重使用风险。",
+    "url": "https://the-decoder.com/us-data-brokers-are-selling-half-a-billion-dollars-in-rl-training-environments-to-chinese-ai-labs/",
+    "section": "💼 行业动态",
+    "review": "数据供应链正成为地缘监管的新盲区，现有出口管制难以覆盖RL环境等新型训练资产。中国实验室通过复用美国数据资产降低算力依赖，虽在结构上仍落后数月，但加速了能力差距的收敛。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Kimi K3.1 Pro上线Amazon Bedrock",
+    "summary": "月之暗面的Kimi K3.1 Pro Highspeed模型正式在Amazon Bedrock平台上线。该模型支持通过OpenAI兼容的Chat Completions、Responses和Converse接口进行调用，并具备显式提示缓存功能，有助于降低重复前缀的处理成本。此外，该模型也可在OpenCode中作为编码助手使用。这一举措为已在Bedrock上部署多模型路由的团队提供了将国产模型纳入统一鉴权、计费和可观测体系的低成本路径。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "国产模型进入主流云厂商基础设施，标志着多模型路由架构的标准化。通过兼容接口和缓存机制，企业可更低成本地集成不同来源的模型能力，打破单一供应商锁定。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude新增协作白板与表格测试功能",
+    "summary": "Anthropic于11月10日向所有付费套餐用户推送了Claude Whiteboards和Claude Sheets的测试版功能。这两项新工具支持用户、同事与模型共同编辑内容，其中表格功能支持工作表、公式、格式及下拉菜单，并能标记模型所做的改动。同时，原Claude Dashboards更名为Claude Data并结束测试。这一更新体现了软件形态从“给人用”向“给Agent用、人审查微调”的转变，强化了协作办公场景中的AI参与度。",
+    "url": "https://x.com/dotey/status/2120312745543315897",
+    "section": "🤖 Agent & 工具",
+    "review": "软件交互主体正从人类转向Agent，人类角色退居审查与微调。这种范式转移要求开发者重新定义用户界面，从视觉美观转向API文档的结构化与清晰度。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT测试商家后台商品信息管理功能",
+    "summary": "OpenAI推出Business Hub商家后台测试服务，允许企业认领身份并自主更新商品信息、库存和价格。符合条件的商家可配置Business Agent，在用户点击推荐后提供一对一问答服务。Shopify卖家可直接绑定店铺以同步商品目录。商家后台还提供品牌提及次数、网站点击量及热门搜索话题等互动数据洞察。该功能旨在将AI搜索流量转化为实际订单，但材料未证实所有商家均可在聊天内直接完成支付。",
+    "url": "https://x.com/Gorden_Sun/status/2120337783218995359",
+    "section": "🤖 Agent & 工具",
+    "review": "AI搜索流量正从信息展示转向交易闭环，商家竞争焦点从SEO转向结构化数据质量。Business Agent作为广告落地点，重构了用户与品牌的交互路径，但也引发了对隐私与流量垄断的担忧。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

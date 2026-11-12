@@ -1,0 +1,275 @@
+{
+  "mode": "live-collection",
+  "issue_date": "2026-11-12",
+  "content_date": "2026-11-12",
+  "source_url": "https://hex2077.dev/docs/2026-11/2026-11-12/",
+  "source_urls": [
+    "https://hex2077.dev/docs/2026-11/2026-11-12/",
+    "https://satori-ai.cn/",
+    "https://news.daheiai.com/rss.php"
+  ],
+  "source_health_file": "source-health-2026-11-12.json",
+  "source_health": {
+    "schema_version": 1,
+    "issue_date": "2026-11-12",
+    "checked_at": "2026-11-12T07:55:09.107724+00:00",
+    "overall_status": "ok",
+    "pipeline_can_continue": true,
+    "minimum_usable_candidates": 12,
+    "candidate_count_before_dedup": 70,
+    "candidate_count_after_dedup": 60,
+    "successful_source_count": 3,
+    "failed_source_count": 0,
+    "duration_ms": 1494,
+    "sources": [
+      {
+        "source_id": "hex2077",
+        "source_name": "Hex2077 AI 日报",
+        "adapter": "hex2077",
+        "source_url": "https://hex2077.dev/docs/2026-11/2026-11-12/",
+        "status": "ok",
+        "content_date": "2026-11-12",
+        "generated_at": "",
+        "error": "",
+        "duration_ms": 309,
+        "metadata": {
+          "resolved_url": "https://hex2077.dev/docs/2026-11/2026-11-12/",
+          "time_rule": "content date equals issue date"
+        },
+        "candidate_count": 20
+      },
+      {
+        "source_id": "satori",
+        "source_name": "Satori AI 每日速览",
+        "adapter": "satori",
+        "source_url": "https://satori-ai.cn/",
+        "status": "ok",
+        "content_date": "2026-11-11",
+        "generated_at": "2026-11-12T05:02:00+08:00",
+        "error": "",
+        "duration_ms": 1440,
+        "metadata": {
+          "time_rule": "generation date equals issue date; edition is treated as today's digest",
+          "edition_semantics": "today"
+        },
+        "candidate_count": 40
+      },
+      {
+        "source_id": "daheiai",
+        "source_name": "大黑 AI 速报",
+        "adapter": "daheiai_rss",
+        "source_url": "https://news.daheiai.com/rss.php",
+        "status": "ok",
+        "content_date": "2026-11-12",
+        "generated_at": "2026-11-12T12:02:16+08:00",
+        "error": "",
+        "duration_ms": 524,
+        "metadata": {
+          "time_rule": "newest RSS item must be published on issue date (Asia/Shanghai)",
+          "selected_feed_entries": 10
+        },
+        "candidate_count": 10
+      }
+    ]
+  },
+  "recipient": "yyc54321@126.com",
+  "article_count": 12,
+  "candidate_count": 60,
+  "candidate_data_file": "candidate-news-2026-11-12.json",
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 10,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 58,
+          "target_count": 12,
+          "validation_issues": []
+        },
+        {
+          "attempt": 2,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 57,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 24,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+            "previous_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+            "previous_date": "2026-11-11"
+          }
+        ],
+        "high_confidence_event_blocks": [
+          {
+            "current_url": "https://x.com/kimmonismus/status/2120516589359345807",
+            "previous_url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation/",
+            "previous_date": "2026-11-11",
+            "actions": [
+              "funding"
+            ],
+            "entities": [
+              "anthropic",
+              "ipo"
+            ]
+          }
+        ],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": [
+              {
+                "current_url": "https://x.com/antigravity/status/2120188336056733746",
+                "previous_url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+                "reason": "核心主体均为Google Gemini 4 Carbon模型，动作均为上线/开放访问，对象均为开发者及企业用户。今日新闻侧重于开发工具接入（Antigravity），此前新闻侧重于正式开放及定价，属于同一模型发布事件的不同报道角度或后续细节补充，非实质性新进展。"
+              }
+            ]
+          },
+          {
+            "attempt": 2,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "第21轮S1的总结发言字数为98字，略超出建议的95字上限，虽未达120字的严重阈值，但建议精简以符合口播节奏。",
+              "第22轮S2的结尾“下期见”属于常规播客结束语，虽非固定寒暄，但可考虑更自然的收束方式，如直接结束或简短致谢，以增强真实感。"
+            ],
+            "repair_instruction": "1. 精简第21轮S1的总结，将“效率、安全、地缘、交互范式是四大主线”后的具体解释压缩，确保总字数在95字以内。例如改为：“总结今天：效率、安全、地缘、交互是四大主线。OpenAI亏损警示规模非健康；Lazarus攻击确立模型安全新边界；数据供应链暴露监管滞后；Agent化交互要求重定义产品。”\n2. 第22轮S2结尾可保留“下期见”或改为更自然的“我们下期再聊”，保持自然即可，无需大改。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "第21轮S1的总结发言字数为98字，略超出建议的95字上限，虽未达120字的严重阈值，但建议精简以符合口播节奏。",
+          "第22轮S2的结尾“下期见”属于常规播客结束语，虽非固定寒暄，但可考虑更自然的收束方式，如直接结束或简短致谢，以增强真实感。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "digest_summary": "今日新闻揭示AI竞争焦点正从模型能力转向工程效率与供应链安全。OpenAI亏损扩大凸显商业化压力，而美团、MiniMax等通过开源及适配国产算力降低部署门槛。同时，Lazarus后门攻击与RL环境数据外流，暴露出模型权重完整性及训练资产监管的严峻风险。行业正加速构建多模型路由与Agent协作生态，安全审计与成本控制成为落地关键。",
+  "podcast_turns": 22,
+  "podcast_script_file": "podcast-script-2026-11-12.json",
+  "podcast_script_text_file": "podcast-script-2026-11-12.txt",
+  "podcast_moss_input_file": "podcast-moss-input-2026-11-12.txt",
+  "voice_file": "voice-2026-11-12.json",
+  "voice_turns": 22,
+  "tts_mode": "video-api-audio-video",
+  "tts_synthesis_mode": "external_video_api",
+  "voice_timing_source": "estimated_text_weight",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_leading_silence_seconds": 0,
+  "tts_reference_files": null,
+  "video_api": {
+    "provider": "video-api",
+    "base_url": "http://8.137.39.142:1234/api",
+    "job_id": "abebcc5d-3f6b-4f03-92de-d53497a5c004",
+    "submit_response": {
+      "job_id": "abebcc5d-3f6b-4f03-92de-d53497a5c004",
+      "job_type": "video",
+      "status": "running",
+      "created_at": "2026-11-12T07:57:14.551Z",
+      "updated_at": "2026-11-12T07:57:14.551Z",
+      "started_at": "2026-11-12T07:57:14.551Z",
+      "finished_at": null,
+      "day": "2026-11-12-1557",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": null,
+      "download_url": null,
+      "error": null
+    },
+    "final_response": {
+      "job_id": "abebcc5d-3f6b-4f03-92de-d53497a5c004",
+      "job_type": "video",
+      "status": "succeeded",
+      "created_at": "2026-11-12T07:57:14.551Z",
+      "updated_at": "2026-11-12T08:09:31.708Z",
+      "started_at": "2026-11-12T07:57:14.551Z",
+      "finished_at": "2026-11-12T08:09:31.708Z",
+      "day": "2026-11-12-1557",
+      "title": "AI热点新闻",
+      "skip_tts": false,
+      "duration_seconds": 737.16,
+      "download_url": "/api/jobs/abebcc5d-3f6b-4f03-92de-d53497a5c004/download",
+      "error": null
+    },
+    "zip_file": "video-api-result-2026-11-12.zip",
+    "video_file": "ai-daily-news-video-2026-11-12.mp4"
+  },
+  "html_bytes": 25847,
+  "podcast_bytes": 6487725,
+  "video_bytes": 22260782,
+  "podcast_duration_seconds": 324.31
+}
