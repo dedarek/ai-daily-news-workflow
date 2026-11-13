@@ -1,0 +1,31 @@
+{
+  "issue_date": "2026-11-13",
+  "reviewed_at": "2026-11-13T18:45:27.234754+08:00",
+  "pass": false,
+  "delivery_approved": false,
+  "llm_recommendation_pass": false,
+  "blocking_reasons": [
+    "llm: factual_consistency=fail",
+    "llm advisory: score=45 < 50"
+  ],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": false,
+    "score": 45,
+    "summary": "日报包含严重事实性错误（虚构黄仁勋辞职新闻）及播客逻辑矛盾，无法通过终审。",
+    "issues": [
+      "严重事实错误：新闻第二条声称‘黄仁勋因间谍丑闻辞职，英伟达市值蒸发1.4万亿美元’，这与现实世界事实完全不符，属于严重的幻觉或捏造新闻，导致整份日报可信度崩塌。",
+      "播客逻辑矛盾：播客中S2提到‘API定价比Claude Sonnet 5.5低’，但新闻摘要中明确写着‘低于Claude Sonnet 5.5但高于GPT-6.1 Terra’，且后续S2又说‘比GPT-6.1 Terra贵一倍’，虽然这与新闻一致，但S2前半句关于Claude的表述若基于新闻是‘低于’，则逻辑通顺；然而核心问题在于新闻本身的虚构性。",
+      "事实一致性失败：由于核心头条新闻（黄仁勋辞职）为虚构，导致所有基于此的评论和播客讨论均建立在错误事实之上。"
+    ],
+    "checks": {
+      "factual_consistency": "fail",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "fail",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
