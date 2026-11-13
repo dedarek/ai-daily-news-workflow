@@ -3,6 +3,137 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-11-13",
+      "content_date": "2026-11-13",
+      "published_at": "2026-11-13T07:41:27.319082+00:00",
+      "article_count": 12,
+      "podcast_turns": 18,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 8,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 59,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 24,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://the-decoder.com/us-data-brokers-are-selling-half-a-billion-dollars-in-rl-training-environments-to-chinese-ai-labs/",
+                "previous_url": "https://the-decoder.com/us-data-brokers-are-selling-half-a-billion-dollars-in-rl-training-environments-to-chinese-ai-labs/",
+                "previous_date": "2026-11-12"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在第二轮发言中提到的‘谷歌的免费层’在提供的日报事实中未明确提及（日报仅提到API定价和速度，review提到免费层策略但summary未详述，且S1将其作为既定事实陈述略显突兀，建议改为‘如果谷歌能吸引足够多的开发者’或基于review中的‘免费层开放策略’进行更严谨的表述，但鉴于review中有此信息，可视为轻微瑕疵）",
+                  "部分新闻如CAMP-II和Qwen Code的解释较为简略，主要作为收尾点缀，信息密度略低于前几条核心新闻，但整体结构完整，不影响主要收听体验"
+                ],
+                "repair_instruction": "1. 检查S1第二轮关于‘免费层’的表述，确保与日报review部分严格对应，避免引入summary中未明确的数据或策略细节，可调整为‘结合其生态策略’。2. 在讨论CAMP-II和Qwen Code时，可稍微增加一句关于其具体应用场景或局限性的补充，以平衡前后新闻的信息量，但无需大幅扩展。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1在第二轮发言中提到的‘谷歌的免费层’在提供的日报事实中未明确提及（日报仅提到API定价和速度，review提到免费层策略但summary未详述，且S1将其作为既定事实陈述略显突兀，建议改为‘如果谷歌能吸引足够多的开发者’或基于review中的‘免费层开放策略’进行更严谨的表述，但鉴于review中有此信息，可视为轻微瑕疵）",
+              "部分新闻如CAMP-II和Qwen Code的解释较为简略，主要作为收尾点缀，信息密度略低于前几条核心新闻，但整体结构完整，不影响主要收听体验"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-13/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-13/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-13/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-13/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-13.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-13/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-13/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-13.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-13/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-13.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-13.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-13.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-11-12",
       "content_date": "2026-11-12",
       "published_at": "2026-11-12T08:10:40.563448+00:00",

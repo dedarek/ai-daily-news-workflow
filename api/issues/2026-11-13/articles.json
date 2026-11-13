@@ -1,0 +1,110 @@
+[
+  {
+    "title": "谷歌发布Gemini 4 Hydrogen，主打日常编程与智能体任务",
+    "summary": "谷歌于11月12日发布Gemini 4 Hydrogen，接替Gemini 3.8 Flash，定位为Gemini 4系列中主打速度与成本效益的模型。该模型在Artificial Analysis综合指数中默认档得51分，最高档54分，略高于Argon但低于Carbon。API定价为每百万Token输入1.5美元、输出7.5美元，低于Claude Sonnet 5.5但高于GPT-6.1 Terra。谷歌称其完成任务速度为前代2.5倍，并新增xhigh思考档位，上下文窗口为100万Token。",
+    "url": "https://x.com/dotey/status/2120945309714919886",
+    "section": "🔥 今日焦点",
+    "review": "Hydrogen以更低单价和更高速度切入中端市场，直接挤压竞品空间。其免费层开放策略有助于扩大开发者生态，但相比GPT-6.1 Terra在同等性能下成本仍高出一倍，性价比优势需结合具体任务场景评估。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "黄仁勋因间谍丑闻辞职，英伟达市值蒸发1.4万亿美元",
+    "summary": "据The Decoder报道，黄仁勋于11月12日辞去英伟达CEO、总裁及董事职务。此前《华尔街日报》报道其涉及与疑似中国间谍的婚外情，导致公司自10月29日以来市值蒸发约1.4万亿美元。CFO Colette Kress将临时接管公司，董事会正寻找永久继任者。黄仁勋离职可能影响英伟达与主要客户及AI实验室的联盟结构，因其曾通过复杂关系网维持市场地位。",
+    "url": "https://the-decoder.com/jensen-huang-resigns-as-nvidia-ceo-after-espionage-scandal-wipes-out-1-4-trillion-in-market-value/",
+    "section": "💼 行业动态",
+    "review": "核心领导层突然更迭将加剧供应链不确定性，客户自研替代芯片的动力可能加速。缺乏明确继任计划且直接汇报人数众多，短期内英伟达的战略连续性与市场信心面临严峻考验。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Meetings开启企业套餐测试，支持视频通话协作",
+    "summary": "Anthropic推出Claude Meetings测试版，允许用户将Claude加入团队视频通话，实时共同制作文档、白板等协作产物。该功能目前正向Team与Enterprise套餐逐步开放，初始支持Google Meet，其他平台支持即将推出。会议结束后，笔记、行动项、转录内容及Claude生成的产物将保存在Claude的会议页面中。",
+    "url": "https://x.com/claudeai/status/2120973994191094179",
+    "section": "🚀 产品发布",
+    "review": "将AI嵌入实时会议流是提升企业协作效率的关键一步，但仅限企业套餐且初期平台支持有限，可能限制其在广泛办公场景中的渗透速度。实时生成内容的准确性与延迟表现将是用户留存的关键。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "World Labs向所有用户开放Atlas世界模型",
+    "summary": "李飞飞宣布World Labs的Atlas世界模型已向所有用户开放，提供应用与API接口。用户可通过Atlas生成关键帧、视频片段及三维高斯场（3D Gaussian splats），用于构建3D世界。此次开放访问仅涉及使用权限，并未开放模型权重。",
+    "url": "https://x.com/drfeifei/status/2120942509786558671",
+    "section": "🚀 产品发布",
+    "review": "Atlas的全员开放降低了3D内容生成的门槛，有助于推动空间智能应用落地。但保留模型权重意味着核心能力仍受控，用户依赖API调用，长期成本与定制化能力可能成为限制因素。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌发布 Gemini Decisions API，支持多模态快速决策",
+    "summary": "谷歌正式发布 Gemini Decisions API，该接口由新的 Gemini Decision 1 模型驱动，旨在提供快速且经过校准的多模态决策输出。用户可在单次调用中处理文本、图像、音频、视频及 PDF 等最多 256K token 的输入，并一次性评估多达 1000 个封闭式问题，如是非判断、选项选择或评分。该 API 专为工具选择、策略检查、模型路由等低延迟、高吞吐场景设计，开发者可通过 Google AI Studio 获取密钥，并使用 Python、JavaScript 或 REST 接口开始构建应用。",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "section": "🚀 产品发布",
+    "review": "该 API 将通用对话能力转化为标准化的批量判定接口，显著降低了 Agent 在风控和路由场景下的延迟与成本。其核心价值在于将复杂的多模态理解压缩为可量化的置信度分数，适合对确定性要求极高的工业级流水线。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google 与 Meta 推出 TorchTPU，实现 PyTorch 原生支持 TPU",
+    "summary": "Google 与 Meta 联合推出开源项目 TorchTPU，为 Google TPU 提供原生 PyTorch 后端，旨在解决 PyTorch/XLA 存在的侵入式代码修改和编译延迟问题。TorchTPU 优先支持即时执行模式，允许开发者仅需将 cuda 设备替换为 tpu、nccl 后端替换为 tpu_dist 即可迁移工作负载，无需重写计算逻辑。在性能测试中，单枚 TPUv7 芯片运行 300 亿参数模型时，推理吞吐量最高可达每秒 25,700 个 Token；四枚芯片训练时吞吐量达每秒 5,600 个 Token。该项目目前仍处于早期阶段，路线图涵盖动态形状、算子覆盖及量化优化。",
+    "url": "https://www.infoq.cn/article/Fikt82HLToqb6ZANB2xj?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "TorchTPU 通过消除显式编译区域和降低迁移门槛，打破了 TPU 生态对特定框架的依赖，使 PyTorch 用户能更平滑地利用 TPU 算力。这增强了 TPU 在混合云和本地部署场景下的竞争力，但也意味着 Google 需持续投入以维持与 CUDA 生态的兼容性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "vLLM 宣布对 MiniMax H3-Image 提供 Day-0 支持",
+    "summary": "vLLM-Omni 团队宣布对 MiniMax H3-Image 提供 Day-0 支持，该模型支持文本生成图像及图像编辑，单次采样仅需六步即可生成原生 4K 分辨率图像。在 NVIDIA Vera Rubin 硬件上，四卡配置下短提示词生成 4K 图像的中位耗时为 0.87 秒，吞吐量配置可达每小时 6,115 张。vLLM 支持包括 NVIDIA、AMD、Intel、摩尔线程及华为昇腾在内的多种硬件平台，并针对 Blackwell 和 Rubin 架构优化了 DiT 计算与内存占用。按 MiniMax 官方定价估算，峰值吞吐量下每 GPU 每小时毛收入可达 105.16 美元。",
+    "url": "https://vllm.ai/blog/2026-11-12-minimax-h3-image-rubin",
+    "section": "💼 行业动态",
+    "review": "Day-0 支持大幅缩短了从模型发布到生产部署的周期，0.87 秒的 4K 生成速度直接降低了单位图像的推理成本。多硬件适配能力使得图像生成服务不再绑定单一厂商，为构建高性价比的推理集群提供了更灵活的选择。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AlphaProof Code 四周完成 Signal 加密核心形式化验证",
+    "summary": "Google DeepMind 发布 AlphaProof Code，该系统利用基于 Gemini Carbon 的 AI 智能体对软件进行数学证明，以验证其符合安全规范。在 Signal 加密协议的实际代码验证中，该系统在四周内完成了传统上需数年才能完成的工作，由 AI 编写了超过六百万行 Lean 证明代码，仅约 1% 的代码被标记供人工复核。测试中，系统立即发现了两个故意植入的 Bug。DeepMind 计划将该方法扩展至电网、医疗设备等关键基础设施领域，以增强对数据隐私和安全关键系统的信任。",
+    "url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
+    "section": "💼 行业动态",
+    "review": "这一突破证明了 AI 在形式化验证领域的实用价值，将密码学验证的时间成本从数年压缩至数周。虽然目前依赖人工复核少量代码，但其在安全关键软件中的应用潜力巨大，可能重塑软件安全审计的标准流程。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MedGPT在疑难肺癌病例评测中得分高于三甲医生",
+    "summary": "一项针对40例未公开疑难肺癌病例的研究显示，MedGPT在由20位专家制定评分规则的答卷评测中平均得分85分，而250名三甲医生平均得分为53分。该系统通过病例状态整理、证据匹配及多智能体审查生成诊疗方案。需要指出的是，该结果仅反映特定病例的答卷表现，并非对临床疗效或患者最终结局的直接比较。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652742394&idx=1&sn=578bf5c6b8b6e59b99b01953e0c3f53a",
+    "section": "💡 前沿研究",
+    "review": "高分答卷不等于临床治愈，评测集规模小且缺乏盲法对照，需警惕将静态评分误读为实时诊疗能力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CAMP-II利用文件操作训练Agent长期记忆",
+    "summary": "论文提出CAMP-II方法，通过异步在策略蒸馏联合训练，使智能体利用普通Bash文件操作建立长期记忆。在覆盖Shop、Coding等五类任务的CAMG-II环境中，该方法取得最强OPD基线2.97倍的增益。这种基于文件的记忆行为还迁移至Terminal-Bench 2.1和SWE-Bench Pro V2，提升了任务成功率，但比较的是增益而非总成功率。",
+    "url": "https://arxiv.org/abs/2611.14009",
+    "section": "💡 前沿研究",
+    "review": "利用预训练文件操作而非专用记忆工具，降低了蒸馏难度，但“增益倍数”需结合基线水平解读，避免高估绝对性能。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Qwen Code开源终端AI编程代理",
+    "summary": "Qwen Code是一个运行在终端中的开源AI编程代理，GitHub仓库显示其拥有约30k Star和3.4k Fork。该项目支持Auto-Memory、SubAgents及MCP等特性，并兼容OpenAI、Anthropic、Gemini及Qwen等多种API。除了终端，它还提供IDE插件、桌面应用及Web UI，允许用户在运行时切换不同模型提供商或本地模型。",
+    "url": "https://github.com/QwenLM/qwen-code",
+    "section": "🔓 开源热榜",
+    "review": "多协议支持与开源框架降低了厂商锁定风险，但终端代理的稳定性与复杂工程场景下的实际效能仍需大规模用户验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GR00T 2演示灵巧手完成化学实验及清理",
+    "summary": "Jim Fan发布视频展示GR00T 2控制真实灵巧手端到端完成化学实验及清理过程，画面为未剪辑的一倍速。该模型支持长程任务，能串联灵巧操作与全身控制，并运行于机器人本地计算单元。演示还涉及从人类可穿戴设备及仿真数据向机器人迁移的技术路径，但单次演示尚不能证明对所有实验任务的泛化能力。",
+    "url": "https://x.com/DrJimFan/status/2120540201994846253",
+    "section": "🤖 Agent & 工具",
+    "review": "未剪辑的一倍速视频增强了可信度，但单一场景的成功不代表鲁棒性，长程任务中的错误累积仍是落地瓶颈。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
