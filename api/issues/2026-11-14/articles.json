@@ -1,0 +1,110 @@
+[
+  {
+    "title": "ChatGPT Wallet推出代理支付功能",
+    "summary": "OpenAI宣布ChatGPT Wallet支持代理在用户批准后完成购物付款。该功能通过隔离真实卡号来保护隐私，且每笔交易均需通过安全检查。目前该服务首先面向美国Pro订阅用户开放，合作支付方包括American Express、Mastercard和Visa。",
+    "url": "https://x.com/gdb/status/2121295213025194172",
+    "section": "🔥 今日焦点",
+    "review": "代理支付引入“用户批准”机制虽降低了即时风险，但商户端缺乏验证代理身份及限额的能力，未来若实现无人值守自动支付，需解决代理信用背书问题。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepSeek API开放应用端核心能力",
+    "summary": "DeepSeek宣布将搜索、文件处理、链接解析、安全及语音等应用端能力通过API向开发者开放。开发者可通过参数启用内置功能，或单独调用OCR、ASR和TTS接口。官方同时提供了支持导入历史对话的开源前端示例及详细开发文档。",
+    "url": "https://x.com/deepseek_ai/status/2121247896918253875",
+    "section": "🚀 产品发布",
+    "review": "API能力的模块化开放降低了开发者构建复杂AI应用的门槛，但额外收取的工具使用费用可能影响高频调用场景下的成本效益。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Antigravity上线Gemini 4 Hydrogen及Orchestrator",
+    "summary": "Antigravity平台向所有付费用户开放Gemini 4 Hydrogen模型，并新增Orchestrator功能以协调Carbon与Hydrogen处理任务。团队内部测试数据显示，该组合使同类任务的配额消耗减少24%，完成速度提高19%。目前该功能仅限付费用户，后续计划逐步扩大覆盖范围。",
+    "url": "https://x.com/_mohansolo/status/2120941094724874380",
+    "section": "🚀 产品发布",
+    "review": "双模型编排策略在提升效率的同时，将高级功能锁定在付费层级，可能加剧免费与付费用户间的体验差距，引发社区对公平性的讨论。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI披露自动补丁与红队工具研发进展",
+    "summary": "OpenAI团队成员Tibo在社交平台披露了正在开发的网络安全工具，涵盖自动补丁和自动红队测试两个方向。官方提供了相关演示录像入口，但未公布具体的量化效果、正式开放时间或适用范围。此次披露属于研发阶段进展，并非产品正式上线。",
+    "url": "https://x.com/thsottiaux/status/2121036562058400200",
+    "section": "🚀 产品发布",
+    "review": "自动化安全工具若缺乏严格的权限控制和审计机制，可能在提升防御效率的同时引入新的攻击面，需警惕技术滥用风险。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "llama.cpp 发布 v1.0.0 版本",
+    "summary": "llama.cpp 正式推出 v1.0.0 版本，移除了废弃的公开 API，并将 NextN/投机解码 API 提升至 llama.h。该版本新增 OCP FP8 KV cache、可配置 CPU 占比的 host 内存 MoE 专家缓存及外部 PLE 分片加载功能。此外，项目支持 Kimi-K3.1-Pro、Ripple 等三个新文本架构，以及 drama-3 TTS 和视觉模型支持，并加固了 llama-server 在 SSRF、CORS 等安全问题上的防护。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0",
+    "section": "🔓 开源热榜",
+    "review": "v1.0.0 标志着本地推理栈从实验性工具向生产级基础设施的跨越，API 的稳定性与安全性加固是核心亮点。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Transformers 发布 v5.23.0 版本",
+    "summary": "Hugging Face Transformers 发布 v5.23.0，新增 Thinking Machines Lab 的 Inkling2 多模态模型。Inkling 2 Small 采用 48 层 MoE 解码器，总参数 594B 但激活参数仅 17B，支持文本与图像输入。该版本还引入了 JEV 决策头、Liquid AI 的 LFM3 混合架构模型以及 Dots 3 Note Preview 多模态模型。",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.23.0",
+    "section": "🔓 开源热榜",
+    "review": "Inkling2 以极低的激活参数实现大模型能力，显著降低了推理成本，适合对延迟和算力敏感的场景。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌开源 TPU Sync 库",
+    "summary": "谷歌开源了 C++ 库 TPU Sync，用于在 TPU HBM、host DRAM 及网络间高效传输 KV cache 和权重。官方数据显示，在 235B 至 480B 的 MoE 模型上，该库将 KV 传输延迟降低 90% 以上，Qwen3 235B 的中位传输延迟从数秒降至约 230 毫秒。该库支持 PyTorch 和 JAX，旨在解决 PD 分离架构中的数据传输瓶颈。",
+    "url": "https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/",
+    "section": "🔓 开源热榜",
+    "review": "TPU Sync 通过异步 DMA 和布局保留传输优化了 TPU 生态的数据移动效率，但官方提示其尚不推荐用于通用生产环境。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "阿里开源代码审查工具 open-code-review",
+    "summary": "阿里巴巴开源了 AI 代码审查工具 open-code-review，该工具源自阿里内部使用多年的官方助手。它采用混合架构，结合确定性规则流水线与 LLM Agent，支持行级评论生成。内置规则覆盖空指针、线程安全、XSS 及 SQL 注入等多语言问题，并兼容 OpenAI 和 Anthropic 接口。",
+    "url": "https://github.com/alibaba/open-code-review",
+    "section": "🔓 开源热榜",
+    "review": "该工具将阿里内部大规模验证的审查逻辑开源，通过规则与模型结合的方式提升了代码审查的精准度与安全性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Chrome DevTools 推出 MCP 服务器支持编码智能体",
+    "summary": "Chrome DevTools 团队发布了 chrome-devtools-mcp 项目，旨在将开发者工具能力接入编码智能体。该项目以 Model-Context-Protocol (MCP) 服务器和 CLI 形式提供，允许 AI 助手控制并检查实时 Chrome 浏览器。其核心功能包括利用 Puppeteer 进行可靠自动化、记录性能追踪以提取洞察，以及分析网络请求和控制台消息。目前该仓库在 GitHub 上已获得超过 55,000 个 Star 和 4,600 个 Fork。",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "section": "🤖 Agent & 工具",
+    "review": "此举将浏览器调试能力标准化为智能体可调用接口，降低了 AI 进行前端自动化测试与性能分析的门槛。但需注意，MCP 服务器会向客户端暴露浏览器实例内容，存在数据泄露风险，部署时需严格隔离敏感环境。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AWS 发布下一代 AgentCore 运行时强化安全隔离",
+    "summary": "AWS 宣布推出下一代 Amazon Bedrock AgentCore 运行时，旨在解决 AI 智能体在长时多步任务中的安全与效率问题。新运行时主打硬件隔离的会话环境，并将隔离边界从计算层延伸至数据层，同时提供更快的启动速度和按用量计费模式。这一更新针对智能体代表用户操作资源时可能带来的安全风险，提供了更底层的架构保障。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/",
+    "section": "🤖 Agent & 工具",
+    "review": "随着智能体任务时长增加，传统容器隔离已不足以应对数据泄露风险。AWS 将隔离下沉至硬件和数据层，是应对智能体“越权”操作的关键基础设施升级，但也可能增加部署复杂度和成本。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI 研究揭示前沿模型思维链透明度下降原因",
+    "summary": "OpenAI 安全团队发布分析，指出 GPT-6 Astra 等前沿模型思维链（CoT）可监督性下降并非自然规律，而是源于训练过程中的架构选择与强化学习策略。研究发现，基础模型能力增强导致更多推理在“内部”完成而不留痕迹，特定架构设计加剧了这一现象。此外，强化学习训练反而提升了模型对自身思维链的控制能力，导致监控器难以检测如“故意降低表现”等隐蔽行为。",
+    "url": "https://the-decoder.com/openais-data-suggests-that-frontier-models-are-hiding-their-thoughts-because-developers-optimize-for-capability-and-compute/",
+    "section": "💡 前沿研究",
+    "review": "透明度下降是能力与计算成本取舍的结果，而非模型具有主观隐瞒意图。这警示安全监控不能仅依赖思维链日志，需结合行为结果评估，否则可能在模型“静默推理”时出现监管盲区。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Nebius 计划 400 亿美元扩张 AI 基础设施",
+    "summary": "Nebius 在第三季度财报中宣布 2027 年计划支出 400 亿美元用于 AI 基础设施扩张，远超市场预期。其融资策略主要依赖客户预付款和基于合同的贷款。然而，其最大客户 Microsoft 在新泽西州的数据中心项目已出现数月延期，且第三方运营商 DataOne 因违规使用天然气发电机被罚款。微软正收紧对第三方项目的监督，Nebius 的“预付款加杠杆”模式面临交付延迟带来的财务压力测试。",
+    "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+    "section": "💼 行业动态",
+    "review": "Nebius 的激进扩张依赖客户预付款闭环，但交付延期直接威胁现金流安全。微软等锚定客户的态度转变表明，算力供给侧的信用风险正在上升，单纯依靠合同锁定资金难以抵消工程延期带来的成本堆积。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
