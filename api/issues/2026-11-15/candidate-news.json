@@ -1,0 +1,542 @@
+[
+  {
+    "title": "Poppy连接个人智能体与企业服务",
+    "summary": "据Sierra协议发布转述，Poppy 1.0让企业通过域名下的发现文件，公布网站、API或企业智能体入口，并衔接身份说明与登录授权。据Sierra介绍，Shopify平台店铺已自动发布Poppy文件，Meta Muse也已启用协议。商务扩展对接UCP，具体购物流程由UCP承担。",
+    "url": "https://x.com/shao__meng/status/2121415418854400187",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM",
+    "summary": "前沿规模模型的权重已经放不进单机显存，NVIDIA 展示了用两台 DGX Station 配合 vLLM 跨机切分部署 GLM-5.3 的完整做法。对想在本地或私有环境跑大模型的团队，这类跨节点张量并行加推理框架配置的经验，直接对应「一台机器不够用」时最现实的扩容路径与踩坑点。",
+    "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2205期 - 2026-11-15 12:01",
+    "summary": "本期聚焦[智能体开发基础设施]与[模型优化新方法]：Vercel开放跨框架UI组件，Harness²探索无答案键自我改进。视频生成与多模态部署也迎来明显提速。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-15_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌周度清单覆盖芯片、模型与科研应用",
+    "summary": "管理层转发的发布清单列出两款第八代TPU、Gemini 4 Carbon、Gemini 4 Hydrogen和Gemini Robotics 2.5，还包括AlphaGenome 2、AI Studio中的Gemini Decisions API、智能眼镜预售，以及AlphaProof Code验证Signal协议。该清单未提供各项产品的完整评测数据。",
+    "url": "https://x.com/joshwoodward/status/2121373712494797092",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic can already retrain Mythos with \"a fraction of the compute originally needed,\" says former researcher Coxon",
+    "summary": "前 OpenAI 与 Anthropic 研究员 Jacob Coxon 引用 Anthropic IPO 路演中的一页幻灯片称，公司已能用「原本所需算力的一小部分」重新训练 Mythos，并据此认为算法改进速度在加快而非线性推进。他同时继续呼吁暂停前沿模型开发，以便竞争者追赶、把人类水平 AI 变成商品。这条动态值得注意的是它给出了「算法效率加速」这一判断的具体信源，而不只是又一轮暂停论表态。",
+    "url": "https://the-decoder.com/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-needed-says-former-researcher-coxon/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2204期 - 2026-11-15 08:01",
+    "summary": "本期新增看点包括[Gemini 4 Carbon]数学基准登顶但成本显著更高，以及[Meta Muse]开始代用户处理电话事务；机器人协作、语音智能体和算力合作也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-15_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "部署配置使同一模型安全评测相差34个百分点",
+    "summary": "据Anthropic评测方法转述，Fable 5.1在自杀与自我伤害多轮评测中，API配置得分为60%（±14%），采用新系统提示的网页端为94%（±7%）。团队主张按场景衡量恰当回应率，并报告系统提示、接口和评分配置；建议复杂多轮评测至少100个用例，简单单轮评测至少1000个。",
+    "url": "https://x.com/shao__meng/status/2121421243970990534",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12377",
+    "summary": "llama.cpp b12377 重构了基于 DFlash 的投机解码实现，把 DSpark 的马尔可夫头与主干计算图整体搬到独立的 dspark.cpp，并按文件拆分加载器、架构超参只探测一次。对在 llama.cpp 上做投机解码适配的开发者，这次是纯搬移式重构，好处是代码结构更清晰、后续新增 draft 变体的改动面更小。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12377",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2203期 - 2026-11-15 04:01",
+    "summary": "本期重点是[持久化智能体]加速进入企业协作、会议和支付之外的执行场景；[Gemini智能眼镜]则推动环境式AI走向消费硬件。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-15_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Memorilla用16个潜在记忆词元辅助冻结模型",
+    "summary": "据研究发布报道，斯坦福研究者发布的Memorilla把文档集合编码成固定16个记忆词元。在FactKG上，冻结Qwen3-8B准确率达84.33%，全上下文对照为80.43%，文档词元用量减少约108倍。它并非所有任务均领先，在PubMedQA等基准上仍落后于对照；代码、训练方案和检查点以Apache 2.0开放。",
+    "url": "https://www.marktechpost.com/2026/11/14/stanford-memorilla-memory-system-16-memory-tokens/",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12376",
+    "summary": "llama.cpp b12376 为 Hexagon 后端新增 IQ2_XXS 与 NVFP4 支持，包含分块重排布局、HVX 矩阵乘内核、NVFP4 的 per-tensor 缩放以及 HMX 路径，并补上了 supports_op 覆盖。对在高通 NPU 上部署量化模型的开发者，这意味着 2-bit 极端量化和 NVFP4 都能走硬件加速路径，端侧可用的量化方案菜单进一步变宽。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12376",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2202期 - 2026-11-15 00:01",
+    "summary": "本期关注[低比特训练]与[科学模型评测]：Inkling 2 Small开放NVFP4检查点，湿实验基准则显示增加推理算力未必有效。[Claude Code Projects]同步强化多线程协调。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-15_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CUDA-L2以强化学习优化矩阵乘法内核",
+    "summary": "论文第五版结合大模型与强化学习，以CUDA执行速度为奖励，自动优化1000种半精度矩阵乘法配置。受测条件下，相比cuBLASLt自动调优方案，离线模式平均提升11.4%，模拟实时推理间隔的在线模式提升15.9%。这些结果针对指定内核配置与执行条件，并非所有计算任务的通用加速比例。",
+    "url": "https://arxiv.org/abs/2512.02551",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1794640846: [distributed] Update NCCL Extensions pin to 0.2 (#204741)",
+    "summary": "PyTorch 本轮把 NCCL Extensions 的版本钉子更新到 0.2，并且当未指定架构列表时不再构建 nccl-ep，避免在非 sm_90 以上环境误编。上游 NCCL-EP v0.3 带来低延迟 NVLink dispatch 与 combine 内核、更宽的 hidden 维度支持、零拷贝 DeepSeek FP8 dispatch，以及 Attention–FFN 分离式架构。对做大规模分布式推理与专家并行的团队，这是值得跟进的一次通信库能力升级。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1794640846",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2201期 - 2026-11-14 20:01",
+    "summary": "本期新增信息集中于[企业智能体落地]与[生产级MLOps]实践；LangChain完成[3亿美元融资]，并预告密集发布产品。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "专家异议可能诱使模型放弃正确答案",
+    "summary": "两阶段修订研究固定问题、证据与初始答案，比较中性反思、匿名异议和领域专家异议。五款模型在1989项医学、科学与法律判断中，均未在专家异议条件下达到净提升准确率所需的选择性纠错门槛，准确率最多下降16.1个百分点。单独增加专家标签的准确率影响则介于下降5.2点与上升2.4点之间，须与整体异议效应区分。",
+    "url": "https://arxiv.org/abs/2611.16694",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "突发！DeepSeek开放全家桶API",
+    "summary": "DeepSeek 开放了全家桶 API，官方 App 里的各项功能都可以自由组合调用。对正在选模型做 Agent 或应用编排的开发者，这意味着可以把 DeepSeek 的搜索、推理、多模态等能力当作积木拼进自己的流程，而不必只调用单一的对话接口。",
+    "url": "https://www.qbitai.com/2026/11/510003.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2200期 - 2026-11-14 16:01",
+    "summary": "本期关注[Kitesurf开源]与Google[多智能体数学证明]进展；[ProtCell]国产算力复现和多项模型评测数据也值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "生成式搜索中的多智能体委派未稳定增益",
+    "summary": "Lost in Delegation研究按训练知识截止前后划分任务，比较不同委派方式。结果显示，委派未持续优于非委派设置；面对编排模型缺少的后截止知识，准确率可能明显下降，同一模型直接使用工具反而表现更好。常见问题包括查询失真、工具使用低效和跨智能体信息丢失。",
+    "url": "https://arxiv.org/abs/2611.16526",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.34.0rc3",
+    "summary": "vLLM v0.34.0rc3 的主要改动集中在 KVConnector，为 EXPORTS 场景分配可导出的可扩展 KV 缓存。对做前缀缓存复用、跨实例 KV 传输或分离式推理的团队，这类改动决定了缓存能不能高效地在进程与节点之间搬动，值得在升级前关注接口变化。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc3",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2199期 - 2026-11-14 12:01",
+    "summary": "本期值得关注的新增动态包括[Perplexity开源决策模型]、[Meta推动个人智能体互操作标准]以及[Google开源TPU传输库]；此外，智能体记忆修订和生产数据闭环也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "The Verge报道英伟达领导层事件及中国业务争议",
+    "summary": "专题播客说明称，黄仁勋于2026年11月12日辞去英伟达首席执行官职务，并继续讨论中国业务、美国政府态度与产业稳定。本条依据所给媒体摘录呈现，该材料未包含公司公告、继任安排或相关调查结论。",
+    "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12383",
+    "summary": "llama.cpp b12383 修复了 ggml-backend 在无输入的 split 中遇到不兼容权重时的图切分行为，改为在不兼容权重处重新开始一个新 split。这类问题通常表现为特定量化组合或多后端混合加载时的诡异失败，对自行拼装后端与量化方案的部署者，升级可避开一类难排查的崩溃。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12383",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2198期 - 2026-11-14 08:02",
+    "summary": "本期聚焦[DeepSeek全栈API]与[ChatGPT Wallet]两项平台级扩展；[ParseBench-2]和AWS智能体部署方案则为开发者提供实用选型与优化参考。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic巨额算力承诺凸显上市前财务压力",
+    "summary": "The Decoder报道称，公司算力承诺总额接近9010亿美元，阿莫代伊坦言未来一年业务走向存在巨大不确定性。报道将拟议IPO解读为承受收入与长期成本错配的财务缓冲。承诺额不等同于已发生支出或当期债务。",
+    "url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12379",
+    "summary": "llama.cpp b12379 优化了 jinja 模板渲染，减少取值分配与查找开销，并修正了未定义提示和 divisibleby 除零等问题。聊天模板渲染是多轮对话推理里的隐性开销，长期高并发下这项优化能实打实降低 CPU 侧的每请求成本，对自建服务端的人比新增算子更实用。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12379",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2197期 - 2026-11-14 04:02",
+    "summary": "本期重点包括[Gemini 4 Hydrogen]加速进入日常智能体与个人财务场景，以及[LangChain]推出智能体平台并完成大额融资；安全研究者同时警告，AI 正显著压缩网络攻击准备时间。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cloudflare观察到智能渗透编排框架快速扩散",
+    "summary": "Cloudflare博客称，近三天观察到逾50个框架家族尝试扫描其全球客户。文章讨论大模型驱动工具串联扫描与后续访问的趋势，并主张通过身份隔离、权限约束及微分段限制失守后的扩散。所给摘录支持框架家族数量，未展示摘要中“请求量增长30倍”的统计细节。",
+    "url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI reassigns robotics researchers to other teams as general-purpose models might make specialized robotics AI unnecessary",
+    "summary": "OpenAI 第二次解散独立机器人团队，把研究人员重新分配到其他团队，理由不是缺数据，而是 GPT-6 Astra 这类通用模型已能直接控制机器人，专用机器人 AI 单元显得多余。对做具身智能的团队，这是「通用模型吃掉垂直栈」判断的一次明确表态，也意味着机器人方向的技术路线之争会更集中在通用策略与专用控制堆栈之间。",
+    "url": "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2196期 - 2026-11-14 00:02",
+    "summary": "本期值得关注的动态包括[WeatherNext 3气象数据集]开放，以及[Devin Apps]拓展云端编程代理应用场景；机器人模型、开源模型与数据中心芯片也有新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AG-UI为智能体与前端应用提供交互协议",
+    "summary": "项目仓库定位为Agent-User Interaction Protocol，旨在连接智能体与用户界面。所给2026年11月14日统计快照记录：累计17,206星、当日新增9星、1580个分支。该条属于协议项目动态，材料未列出当日重大版本发布。",
+    "url": "https://github.com/ag-ui-protocol/ag-ui",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Univer整合智能办公应用开发能力",
+    "summary": "Univer Office SDK通过可扩展的开源核心提供编辑、计算、协作与文件处理功能，面向普通用户和AI智能体共同使用的产品。所给2026年11月14日快照记录：累计24,253星，当日新增495星，2100个分支。",
+    "url": "https://github.com/dream-num/univer",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.34.0rc4",
+    "summary": "vLLM v0.34.0rc4 主要调整了预热门控测试运行器的投机解码参数数量相关逻辑。属于发布前的小幅测试与稳定性修补，对跟进 vLLM 候选版本、准备升级到 0.34 系列的部署者来说，关注点应放在投机解码路径是否有行为变化。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc4",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Caveman通过精简表达减少编码智能体词元消耗",
+    "summary": "项目仓库提供技能与代理方案，宣称可减少65%的词元消耗。材料未附独立测试，实际收益仍需按任务与配置验证。所给2026年11月14日快照记录：累计119,832星，当日新增227星，6987个分支。",
+    "url": "https://github.com/JuliusBrussee/caveman",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "nightly-last-green: [Ulysses] Add opt-in uneven-shard rejection and FPDT padding (#9059)",
+    "summary": "DeepSpeed 的 Ulysses 序列并行此前默认各 sequence-parallel rank 的序列长度相等，一旦分片不均，不同后端和版本下会挂起、直接 abort，甚至静默算错（相关 issue 已多次出现），双卡复现里不加 mask 就卡死、加 mask 又报 callback 形状错误。这个 PR 加入了可选的「uneven-shard」显式拒绝机制，并让「FPDT_InputConstruct」对填不满全局 chunk 的序列长度自动补 padding，调用方不用再手动 zero-padding Q/K/V。对做变长长序列训练、又踩过这类难查静默错误的团队，这算是把不可见的坑变成可预期的报错。",
+    "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-last-green",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "预训练效率曲线引发算法进展讨论",
+    "summary": "社媒转述称，前Anthropic预训练研究员Jacob Coxon把一张路演图表视为离职的重要因素。他认为，自2024年7月以来编码预训练算力效率的对数曲线持续上弯，体现加速的算法进展。帖文进一步联系递归自我改进，但所给摘录未展示完整测量方法，图表本身也未证明具体实现机制。",
+    "url": "https://x.com/kimmonismus/status/2121387152328061313",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "机器人真机漏洞获厂商初步确认",
+    "summary": "据漏洞披露转述，GCSA称在某头部厂商机器人上取得操作系统最高权限。厂商于2026年11月13日通过邮件初步确认问题，并启动修复和受影响产品范围评估。品牌与本次漏洞机制尚未公开；帖文提及的既往研究不应被当成本次事件的归属证据，启动修复也不等于风险已经消除。",
+    "url": "https://x.com/AYi_AInotes/status/2121411376816247267",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Route coding agent requests to the right model on Amazon Bedrock with NVIDIA NeMo Switchyard",
+    "summary": "AWS 这篇实践用 CDK 在 Amazon Bedrock 上部署 LiteLLM 加 NVIDIA NeMo Switchyard 路由插件，把 coding agent 的请求按任务分发到不同模型，并以「每个解决任务的成本」而非「每 token 价格」作为评估口径，与单模型基线做对比。对做代码智能体的团队来说，这提供了一个可直接复用的路由落地模板和更贴近真实业务的经济性指标。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/route-coding-agent-requests-to-the-right-model-on-amazon-bedrock-with-nvidia-nemo-switchyard/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Shopify以进攻与裁判双智能体开展受控测试",
+    "summary": "据Cyber Chaos Monkey介绍，系统让进攻智能体结合源码、基础设施知识和测试店铺临时凭证，在生产环境验证漏洞；独立裁判监测行为，异常时结束任务。Shopify称已执行数万次任务，发现数十个有实际影响的问题，迄今未造成停机或事故。该成效属于公司自述。",
+    "url": "https://x.com/shao__meng/status/2121438053755683224",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Architecture patterns for fast session startup on Amazon Bedrock AgentCore runtime",
+    "summary": "Amazon Bedrock AgentCore runtime V2 通过快照已初始化环境并在每个新会话中恢复，使会话启动时间不再随镜像体积增长。文章拆解了 V2 的启动流程、如何度量 session start 时间，以及四种把耗时工作挪出首个请求的架构模式。对部署 Agent 服务、被冷启动和镜像膨胀拖慢体验的工程团队有直接参考价值。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/architecture-patterns-for-fast-session-startup-on-amazon-bedrock-agentcore-runtime/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "联储调查风险关注度数据经社媒传播",
+    "summary": "相关数据帖转述称，纽约联储调查中87%的受访市场人士提及AI风险，高于春季的50%；帖文还称AI基础设施融资债务截至10月超过6800亿美元。调查意见、融资口径与官方风险判断应分别解读，这不等于联储认定AI必然引发金融危机。",
+    "url": "https://x.com/rohanpaul_ai/status/2121391185499660332",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "从快速部署到记忆共享，数据库如何支撑 Agent 应用？",
+    "summary": "文章从快速部署一路谈到多 Agent 之间的记忆共享，梳理数据库在 Agent 应用中的定位：它既承担会话与状态的持久化，也承担跨 Agent 的共享记忆与检索，是把 demo 变成可运维产品时绕不开的一层。对正在选型 Agent 记忆与状态存储方案的团队，提供了从部署形态到记忆架构的整体视角。",
+    "url": "https://www.infoq.cn/video/FwbOyyfoAmkQPMTItMDN?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Inkling 2 Small开放权重并披露四位训练结果",
+    "summary": "据低精度训练分享，Thinking Machines Lab以Apache 2.0开放5940亿参数模型，从预训练到最终强化学习采用四位前向计算。材料称预训练耗时减少8%、强化学习耗时减少20%；反向计算并未同样维持四位。NVFP4运行至少需要500GB显存，MXFP8至少需要800GB，名称中的Small不代表消费级单卡部署。",
+    "url": "https://x.com/rohanpaul_ai/status/2121385644169769258",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Cost-optimizing AssemblyAI speech-to-text inference on AWS with Amazon EC2 Spot",
+    "summary": "AssemblyAI 分享了在 AWS 上跑大规模语音转写推理的成本优化方案：以 Amazon ECS 编排、Amazon EC2 Spot GPU 实例承载算力，并用 Amazon SQS 构建重试架构来吸收 Spot 中断，在满足欧洲各区域 SLA 承诺的前提下实现约 70% 的成本节省。对需要弹性 GPU 跑推理、又担心抢占式实例稳定性的团队，这是一套经过生产验证的容错范式。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/cost-optimizing-assemblyai-speech-to-text-inference-on-aws-with-amazon-ec2-spot/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美国航班停飞与SMART工具关联尚待查明",
+    "summary": "Reddit讨论摘录称，全国停飞发生在SMART空管工具扩展数日后。摘录转述交通部门将事件归因于通信问题，国土安全部门表示正审视该工具，开发商则否认停飞由SMART造成。所给材料没有建立因果关系，时间接近不等于工具导致事故。",
+    "url": "https://www.reddit.com/r/artificial/comments/1xvnyzp/did_ai_ground_us_flights_dhs_is_looking_at_the/",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Build a model improvement flywheel with Amazon SageMaker HyperPod Data Capture",
+    "summary": "Amazon SageMaker HyperPod Data Capture 会把线上推理的输入输出记录到 Amazon S3，文章用一个端到端例子演示如何把它变成模型改进飞轮：抓取客服路由器的生产流量，用 Amazon Athena 分析暴露出的新品盲区，再用 HyperPod 训练算子基于这些数据微调，并量化前后效果提升。对想把线上流量闭环成训练数据的团队，这条链路给出了可照搬的工程路径。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-a-model-improvement-flywheel-with-amazon-sagemaker-hyperpod-data-capture/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "聊天模型下线引发部分用户哀伤",
+    "summary": "Reddit转述报道提到，某ChatGPT模型移除后，一些用户表达明显失落；与此同时，围绕聊天机器人可能造成心理伤害的法律争议仍在进行。材料未给出具体模型名称、影响人数或司法认定，情感反应与伤害诉讼应分开呈现。",
+    "url": "https://www.reddit.com/r/artificial/comments/1xw2k13/requiem_for_a_robot_the_ai_users_mourning/",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights",
+    "summary": "这份 2026 年 11 月的视频生成模型榜单只用盲测人类偏好 Elo（来自 Artificial Analysis Video Arena）作为质量信号，同时列出每秒价格与是否开放权重。结论相当明确：原生音频已成标配，片段时长普遍到 15 至 30 秒，且已有一款开放权重模型挤进前三。对做视频生成选型的团队，这是少见的把质量、成本和开源可得性放在一张表里比较的参考。",
+    "url": "https://www.marktechpost.com/2026/11/13/best-ai-video-generation-models-2026/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12381",
+    "summary": "llama.cpp 构建 b12381 在 mtmd 多模态侧修掉了视频像素宽高比与视频旋转方向处理错误的问题，避免非方形分辨率或带旋转元数据的视频在预处理阶段被拉伸、转向。对用 llama.cpp 做本地视频理解推理的用户，这是直接影响输入正确性的修复。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12381",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12380",
+    "summary": "构建 b12380 让 mtmd 允许接入自定义视频解码器，并顺带适配了 wllama 的需求、清理代码并补上测试。这意味着本地多模态推理不再被内置解码路径绑死，可以替换成符合自己容器与编码格式的解码实现，对做端侧视频理解的集成方更友好。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12380",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12378",
+    "summary": "构建 b12378 让 mtmd 在给 Whisper 切音频时跳过那些只有 padding 的空白块，避免把纯填充片段送进编码器白算一遍。对本地跑语音转写、追求低延迟和低无效算力的用户，这是一处小而实际的吞吐改进。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12378",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Runway's open-source Praxis-1 turns video AI into a robot controller",
+    "summary": "Runway 以 Apache 2.0 协议开源了机器人模型 Praxis-1，权重和源码一并放出，思路是把视频预训练学到的知识迁移到机器人控制上，在英伟达 RoboLab-120 基准的 World Action Model 类别中排名第一。局限也很明确：它还不能自主规划复杂的动作序列。对做具身智能的团队，这意味着多了一个可商用的、以视频为基座的开放控制策略起点。",
+    "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "绿电进Token出！联想重新定义词元工厂",
+    "summary": "联想提出「绿电进、Token 出」的词元工厂思路，宣称可做到年产 2000 万亿 Token、成本下降约 70%，把算力基础设施的供电与 Token 产出直接挂钩。对关注推理成本曲线和算力基建规划的从业者，这是一个把能源价格纳入单位 Token 成本核算的产业侧信号。",
+    "url": "https://www.qbitai.com/2026/11/510094.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1794637562",
+    "summary": "PyTorch 的这个改动让 FakeTensor 对于那些永远不可能被缓存的算子直接跳过 cache key 的构造，省掉伪张量追踪过程中的无效开销。对依赖 torch.compile 和大规模图捕获、被 trace 时间拖慢的团队，属于编译链路上的细粒度提速。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1794637562",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1794631806",
+    "summary": "该提交在 inductor 的 regional-aoti 路径上把区域调用捕获到模块边界处，使 AOTInductor 的图切分与区域化导出更贴合模型结构。对在做 AOT 编译部署、希望减少跨边界打断的推理工程团队，这类改动会影响编译产物能否顺利导出与复用。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1794631806",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Jensen Huang's ouster likely traces back to Nvidia's risky business practices more than his personal life",
+    "summary": "据华尔街日报报道，黄仁勋离开英伟达更可能源于公司高风险的商业操作而非个人生活问题：英伟达曾为云厂商的芯片采购提供高达数千亿美元的财务担保，包括一项计划中的 2500 亿美元 OpenAI 交易，时任 CFO、现任临时 CEO Colette Kress 试图控制这类风险，而黄仁勋对此并不满意。对关注算力产业链金融化与循环交易风险的从业者，这条消息把 GPU 采购背后的担保结构推到了台面上。",
+    "url": "https://the-decoder.com/jensen-huangs-ouster-likely-traces-back-to-nvidias-risky-business-practices-more-than-his-personal-life/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AI agent startup LangChain hits $3B valuation",
+    "summary": "LangChain 以 30 亿美元估值完成新融资，其模型与平台无关的 Agent 管理工具 LangSmith 已宣称拥有 7000 家客户。对做 Agent 工程化的团队来说，这印证了「框架 + 可观测与评测平台」这条商业化路径在模型无关定位下的可行性。",
+    "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智能互动 Agent 在快手商业场景的落地实践",
+    "summary": "快手分享了智能互动 Agent 在商业化场景中的落地实践，覆盖其如何与广告、直播电商等业务链路对接并产生可衡量的转化收益。对想把 Agent 从演示推向真实商业闭环的团队，这类大流量场景的工程与运营经验比单纯的框架选型更有参考价值。",
+    "url": "https://www.infoq.cn/article/e0aglHW78pZuik3CWqdo?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Run Native DLA Inference in Python on NVIDIA Jetson AGX Orin Using cuDLA",
+    "summary": "英伟达介绍了如何在 Jetson AGX Orin 上用 cuDLA 的 Python 接口直接跑原生 DLA 推理，让边缘设备在有限的算力与功耗预算下同时承载多个神经网络。对做边缘多模型并发的开发者，这意味着可以把部分负载卸载到 DLA，而不必全部挤在 GPU 上。",
+    "url": "https://developer.nvidia.com/blog/run-native-dla-inference-in-python-on-nvidia-jetson-agx-orin-using-cudla/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+    "summary": "新研究显示，中国最强的若干大模型是在被出口管制的英伟达芯片上训练出来的，这一发现与管制政策的目标形成反差。对关注算力供给与出口管制实际效果的从业者，它提供了关于灰色渠道存量算力规模的一个实证注脚。",
+    "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

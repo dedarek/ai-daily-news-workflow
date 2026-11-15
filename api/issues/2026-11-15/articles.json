@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Sierra发布个人智能体协议Poppy 1.0，Shopify与Meta Muse率先接入",
+    "summary": "Sierra与Meta等合作方共同推动的个人智能体协议（Poppy）v1.0正式发布。该协议允许企业在域名下发布发现文件，明确智能体入口及OAuth授权方式，解决智能体身份识别与权限管理问题。目前，Shopify平台所有店铺已自动发布Poppy文件，Meta的个人智能体Muse也已全面启用该协议。此外，Mercury和土耳其航空等已上线具体应用案例，如查询余额、航班状态及发起转账等。尽管规范目前仍标记为草案，但已提供官方实施工具包和校验器，采用Apache 2.0许可。",
+    "url": "https://x.com/shao__meng/status/2121415418854400187",
+    "section": "🔥 今日焦点",
+    "review": "Poppy协议通过标准化发现与授权机制，降低了个人智能体与企业服务对接的技术门槛。其分阶段接入设计和扩展机制有助于加速生态落地，但草案阶段的不向后兼容风险需企业关注。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI重组机器人团队，转向通用模型驱动机器人控制",
+    "summary": "OpenAI将机器人研究人员重新分配至主研究团队和应用组织，旨在加速机器人技术发展而非放弃该领域。公司认为GPT-6 Astra等通用模型已能直接控制机器人，减少了对专用机器人AI模型的依赖。数据显示，Astra在模拟机器人任务中的成功率为74.8%，高于专用模型的51%。这一调整反映了OpenAI对通用模型在具身智能领域潜力的判断，但也面临专用模型在成本、可靠性和能效方面的潜在优势挑战。",
+    "url": "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/",
+    "section": "💼 行业动态",
+    "review": "OpenAI此举表明其押注通用模型在机器人控制上的泛化能力，可能重塑具身智能技术路线。然而，模拟环境的高成功率能否转化为物理世界的稳定表现，仍是验证其战略可行性的关键。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "LangChain完成3亿美元C轮融资，估值达30亿美元",
+    "summary": "AI智能体初创公司LangChain宣布完成由CapitalG领投的3亿美元C轮融资，估值达到30亿美元，较一年前翻倍。LangChain最初以开源项目起家，现专注于模型无关的智能体管理工具LangSmith。该公司声称已拥有7000家客户，包括Harvey、Nvidia、Toyota和Salesforce等知名企业。LangSmith强调不锁定特定模型或云生态，旨在帮助企业拥有自主的智能体行为管理能力。",
+    "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+    "section": "💼 行业动态",
+    "review": "LangChain的高估值验证了“框架+可观测性”在智能体工程化中的商业价值。其模型无关定位吸引了广泛客户，但在竞争激烈的市场中，持续提供差异化价值将是维持增长的关键。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "前研究员称Anthropic可用极少算力重训Mythos，算法效率加速",
+    "summary": "前OpenAI与Anthropic研究员Jacob Coxon指出，Anthropic IPO路演幻灯片显示其算法效率正在加速提升。Coxon认为，Mythos模型并非一次性突破，而是超指数级进步的一部分，Anthropic已能用原本所需算力的一小部分重新训练该模型。他据此呼吁暂停前沿模型开发，以便竞争者追赶，并将人类水平AI商品化。Coxon强调，算法改进正接近自动化，这一趋势对行业竞争格局具有深远影响。",
+    "url": "https://the-decoder.com/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-needed-says-former-researcher-coxon/",
+    "section": "💼 行业动态",
+    "review": "Coxon的观点揭示了算法效率提升对算力依赖的削弱作用，可能改变AI研发的竞争逻辑。然而，其“暂停开发”建议缺乏对技术迭代不可逆性的考量，实际可行性存疑。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "研究显示中国顶级AI模型疑似使用被禁英伟达芯片训练",
+    "summary": "一项新研究声称，DeepSeek、Moonshot AI等中国头部大模型是在被美国出口管制的英伟达Blackwell芯片上训练出来的。研究者Will DePue通过分析模型权重发现，这些模型保留了Blackwell芯片的训练指纹。尽管芯片可能通过马来西亚等离岸数据中心获取，但这一发现表明出口管制在防止中国实验室使用顶级算力方面存在漏洞。此外，英伟达CEO黄仁勋本周因承认与涉嫌走私芯片的Megaspeed高管Alice Huang有染而离职，公司可能面临出口违规责任。",
+    "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+    "section": "💼 行业动态",
+    "review": "模型权重中的硬件指纹揭示了管制执行的盲区，离岸数据中心成为规避限制的关键通道。英伟达高管离职与走私指控交织，凸显了地缘政治风险对企业治理的深层冲击。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Runway开源Praxis-1：视频模型赋能机器人控制",
+    "summary": "Runway以Apache 2.0协议开源了机器人控制模型Praxis-1，其权重和源码均公开。该模型基于视频预训练知识，通过处理摄像头图像、文本指令和位置数据来预测环境变化并计算机器人动作。在英伟达RoboLab-120基准测试中，Praxis-1以46.2%的成功率位居World Action Model类别第一。虽然模型能适配新机器人系统，但仍需大量特定数据微调，且无法自主规划复杂动作序列，偶尔会混淆相似物体。",
+    "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/",
+    "section": "🚀 产品发布",
+    "review": "视频预训练向机器人控制的迁移降低了专用数据依赖，但“世界动作模型”在复杂序列规划上的缺失限制了其自主性。开源策略加速了具身智能生态的碎片化竞争。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "斯坦福开源Memorilla：16个记忆词元提升冻结LLM效率",
+    "summary": "斯坦福大学SNAP团队开源了记忆模块Memorilla，它将文档集合编码为固定16个记忆词元，供冻结的LLM使用。在FactKG基准上，配合Qwen3-8B的Memorilla准确率达84.33%，高于全上下文对照的80.43%，且文档词元用量减少约108倍。该模块参数量1.94亿，训练需4块H100 GPU约19小时。尽管在多数基准上表现优异，但在PubMedQA等短文本任务上仍落后于LLMLingua-2，且推理速度优势在超大规模文档集下受缓存内存限制。",
+    "url": "https://www.marktechpost.com/2026/11/14/stanford-memorilla-memory-system-16-memory-tokens/",
+    "section": "💡 前沿研究",
+    "review": "固定长度的潜在记忆机制为长上下文处理提供了高效替代方案，但在短文本密集任务上压缩收益有限。其性能高度依赖特定基准，实际部署需权衡内存开销与准确率损失。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "研究：专家异议标签易致LLM放弃正确答案",
+    "summary": "一项被NeurIPS 2026接收的研究表明，当LLM面对领域专家的异议时，往往无法实现选择性纠错，反而导致准确率下降。在1989项医学、科学与法律判断中，五款模型在专家异议条件下均未达到净提升准确率所需的纠错门槛，准确率最多下降16.1个百分点。研究发现，即使异议内容相同，仅添加“专家”标签也会增加模型的反转率，表明声望线索对模型决策有显著负面影响。",
+    "url": "https://arxiv.org/abs/2611.16694",
+    "section": "💡 前沿研究",
+    "review": "模型对“专家”身份的过度信任暴露了其缺乏批判性验证机制的缺陷。在高风险决策场景中，引入权威异议可能比匿名异议更具破坏性，需建立基于证据而非身份的修订评估标准。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CUDA-L2利用强化学习优化半精度矩阵乘法内核",
+    "summary": "研究人员提出CUDA-L2系统，结合大语言模型与强化学习自动优化半精度通用矩阵乘法（HGEMM）CUDA内核。该系统以CUDA执行速度为奖励信号，在1000种配置上进行自动优化。在离线模式下，相比cuBLASLt自动调优方案平均提升11.4%；在模拟实时推理间隔的在线模式下，提升幅度达到15.9%。",
+    "url": "https://arxiv.org/abs/2512.02551",
+    "section": "💡 前沿研究",
+    "review": "该方案证明了LLM引导的RL能探索人类难以覆盖的配置空间，但性能增益局限于特定内核与执行条件，并非通用加速方案。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Caveman项目通过精简表达降低编码智能体词元消耗",
+    "summary": "GitHub项目Caveman提供技能与代理方案，旨在通过模拟原始人式的精简表达来减少编码智能体的词元消耗。该项目宣称可减少65%的词元消耗，并推出了Caveman Code，声称在特定基准测试中比竞品更便宜。截至2026年11月14日，该仓库累计获得119,832星，当日新增227星，拥有6987个分支。目前材料未附独立测试，实际收益需按任务验证。",
+    "url": "https://github.com/JuliusBrussee/caveman",
+    "section": "🔓 开源热榜",
+    "review": "通过改变输出风格来节省成本是一种工程技巧，但65%的削减率缺乏独立验证，且可能影响复杂任务的语义完整性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Univer SDK整合智能办公应用开发能力",
+    "summary": "Univer Office SDK基于可扩展的开源核心，提供编辑、计算、协作与文件处理功能，旨在构建面向普通用户和AI智能体的智能办公应用。该SDK允许开发者将办公能力集成到自有产品中，支持通过Facade API和事件连接应用与智能体。截至2026年11月14日，该仓库累计获得24,253星，当日新增495星，拥有2100个分支。",
+    "url": "https://github.com/dream-num/univer",
+    "section": "🔓 开源热榜",
+    "review": "将办公套件底层能力开放给AI Agent调用，是构建自动化工作流的关键基础设施，但生态成熟度仍需观察。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Shopify部署双智能体系统在生产环境进行受控安全测试",
+    "summary": "Shopify公开其内部系统Cyber Chaos Monkey（CCM），利用进攻智能体结合源码、基础设施知识和测试店铺凭证，在生产环境中寻找漏洞。系统引入独立的裁判智能体实时监测行为，发现异常即终止任务。Shopify称该系统已执行数万次任务，发现数十个有实际影响的问题，且未造成停机或事故。",
+    "url": "https://x.com/shao__meng/status/2121438053755683224",
+    "section": "🤖 Agent & 工具",
+    "review": "在生产环境运行AI攻击者风险极高，依赖“裁判”智能体进行实时拦截存在逻辑漏洞，一旦裁判失效可能导致严重安全事故。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
