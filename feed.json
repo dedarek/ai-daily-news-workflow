@@ -3,6 +3,172 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-11-16",
+      "content_date": "2026-11-16",
+      "published_at": "2026-11-16T07:43:44.381737+00:00",
+      "article_count": 12,
+      "podcast_turns": 19,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 10,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 59,
+              "target_count": 12,
+              "validation_issues": []
+            },
+            {
+              "attempt": 2,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 57,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 60,
+            "exact_url_blocks": [],
+            "high_confidence_event_blocks": [
+              {
+                "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-15_0801",
+                "previous_url": "https://x.com/shao__meng/status/2121415418854400187",
+                "previous_date": "2026-11-15",
+                "actions": [
+                  "partnership"
+                ],
+                "entities": [
+                  "meta",
+                  "muse"
+                ]
+              }
+            ],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": [
+                  {
+                    "current_url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+                    "previous_url": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+                    "reason": "核心主体均为美团，动作均为开源/发布 LongCat-2.5 模型，对象均为该 1.6 万亿参数模型。今日新闻侧重于其未使用 Nvidia GPU 及在华为昇腾上的部署，属于对同一发布事件的技术细节补充和报道角度变化，并非实质性新进展（如新版本发布或重大功能更新）。"
+                  },
+                  {
+                    "current_url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+                    "previous_url": "https://the-decoder.com/jensen-huang-resigns-as-nvidia-ceo-after-espionage-scandal-wipes-out-1-4-trillion-in-market-value/",
+                    "reason": "核心主体均为英伟达 CEO 黄仁勋，核心事件为其离职。今日新闻报道亚洲政府对此事的反应，属于同一离职事件引发的后续连锁反应和地缘政治影响分析，核心事实（黄仁勋离职）未变，不属于实质性新进展（如新 CEO 正式任命或新的独立丑闻爆发）。"
+                  }
+                ]
+              },
+              {
+                "attempt": 2,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1在第二轮发言中提及“SemiAnalysis测试显示其第七代TPU在部分推理场景下每美元Token产出优于英伟达GB300”，虽然该事实存在于日报中，但对话中未明确交代SemiAnalysis这一来源，略显突兀，建议补充来源以增强可信度。",
+                  "S2在第四轮发言中提及“18个月从研发到登顶”，该时间跨度在日报摘要中未直接出现（日报仅提到“首次参评即获1160分”及“18个月”在review中提及），若严格遵循“只使用日报事实”，需确认该时间线是否属于日报隐含事实或需修正为更通用的表述。",
+                  "S1在第十五轮发言中提及“社区关注度也证明了需求真实存在”，这一判断略显主观，建议结合日报中提到的具体星数（如9.5k星）来支撑观点，使论证更扎实。"
+                ],
+                "repair_instruction": "1. 在S1第二轮发言中，将“SemiAnalysis测试显示...”修改为“SemiAnalysis的测试数据显示...”，明确数据来源。2. 核实S2第四轮中“18个月”这一时间点是否准确对应日报内容，若日报未明确提及研发时长，建议改为“快速迭代”或引用日报中关于技术路线有效性的描述，避免引入日报未明确的时间细节。3. 在S1第十五轮发言中，将“社区关注度也证明了需求真实存在”修改为“GitHub上9.5k的星数也证明了社区对这一需求的真实关注”，使论据更具体。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1在第二轮发言中提及“SemiAnalysis测试显示其第七代TPU在部分推理场景下每美元Token产出优于英伟达GB300”，虽然该事实存在于日报中，但对话中未明确交代SemiAnalysis这一来源，略显突兀，建议补充来源以增强可信度。",
+              "S2在第四轮发言中提及“18个月从研发到登顶”，该时间跨度在日报摘要中未直接出现（日报仅提到“首次参评即获1160分”及“18个月”在review中提及），若严格遵循“只使用日报事实”，需确认该时间线是否属于日报隐含事实或需修正为更通用的表述。",
+              "S1在第十五轮发言中提及“社区关注度也证明了需求真实存在”，这一判断略显主观，建议结合日报中提到的具体星数（如9.5k星）来支撑观点，使论证更扎实。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-16.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-16.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-16.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-16.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-16.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-11-15",
       "content_date": "2026-11-15",
       "published_at": "2026-11-15T07:36:28.410414+00:00",

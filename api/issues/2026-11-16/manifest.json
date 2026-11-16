@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-16",
+  "status": "ready",
+  "created_at": "2026-11-16T07:43:43.654986+00:00",
+  "artifacts": {
+    "candidate_articles": "dist/candidate-news-2026-11-16.json",
+    "articles": "dist/articles-2026-11-16.json",
+    "legacy_articles": "dist/news-data-2026-11-16.json",
+    "html": "dist/daily-news-2026-11-16.html",
+    "legacy_html": "dist/ai-daily-news-html-2026-11-16.html",
+    "podcast_script": "dist/podcast-script-2026-11-16.json",
+    "podcast_script_text": "dist/podcast-script-2026-11-16.txt",
+    "podcast_moss_input": "dist/podcast-moss-input-2026-11-16.txt",
+    "voice": "dist/voice-2026-11-16.json",
+    "audio": "dist/daily-news-podcast-2026-11-16.mp3",
+    "legacy_audio": "dist/ai-daily-news-podcast-2026-11-16.mp3",
+    "video": "dist/daily-news-video-2026-11-16.mp4",
+    "legacy_video": "dist/ai-daily-news-video-2026-11-16.mp4",
+    "pipeline_report": "dist/pipeline-report-2026-11-16.json"
+  },
+  "quality": {
+    "deterministic": "pass",
+    "agent_review": "not_run",
+    "issues": []
+  },
+  "repair": {
+    "attempts": 0,
+    "items": []
+  },
+  "memory_update": {
+    "candidate_count": 60,
+    "selected_count": 12
+  },
+  "agent": null,
+  "pipeline_report": {
+    "mode": "live-collection",
+    "issue_date": "2026-11-16",
+    "content_date": "2026-11-16",
+    "source_url": "https://hex2077.dev/docs/2026-11/2026-11-16/",
+    "source_urls": [
+      "https://hex2077.dev/docs/2026-11/2026-11-16/",
+      "https://satori-ai.cn/",
+      "https://news.daheiai.com/rss.php"
+    ],
+    "source_health_file": "source-health-2026-11-16.json",
+    "source_health": {
+      "schema_version": 1,
+      "issue_date": "2026-11-16",
+      "checked_at": "2026-11-16T07:28:35.114889+00:00",
+      "overall_status": "ok",
+      "pipeline_can_continue": true,
+      "minimum_usable_candidates": 12,
+      "candidate_count_before_dedup": 62,
+      "candidate_count_after_dedup": 60,
+      "successful_source_count": 3,
+      "failed_source_count": 0,
+      "duration_ms": 1198,
+      "sources": [
+        {
+          "source_id": "hex2077",
+          "source_name": "Hex2077 AI 日报",
+          "adapter": "hex2077",
+          "source_url": "https://hex2077.dev/docs/2026-11/2026-11-16/",
+          "status": "ok",
+          "content_date": "2026-11-16",
+          "generated_at": "",
+          "error": "",
+          "duration_ms": 311,
+          "metadata": {
+            "resolved_url": "https://hex2077.dev/docs/2026-11/2026-11-16/",
+            "time_rule": "content date equals issue date"
+          },
+          "candidate_count": 20
+        },
+        {
+          "source_id": "satori",
+          "source_name": "Satori AI 每日速览",
+          "adapter": "satori",
+          "source_url": "https://satori-ai.cn/",
+          "status": "ok",
+          "content_date": "2026-11-15",
+          "generated_at": "2026-11-16T04:06:00+08:00",
+          "error": "",
+          "duration_ms": 1114,
+          "metadata": {
+            "time_rule": "generation date equals issue date; edition is treated as today's digest",
+            "edition_semantics": "today"
+          },
+          "candidate_count": 32
+        },
+        {
+          "source_id": "daheiai",
+          "source_name": "大黑 AI 速报",
+          "adapter": "daheiai_rss",
+          "source_url": "https://news.daheiai.com/rss.php",
+          "status": "ok",
+          "content_date": "2026-11-16",
+          "generated_at": "2026-11-16T12:01:32+08:00",
+          "error": "",
+          "duration_ms": 547,
+          "metadata": {
+            "time_rule": "newest RSS item must be published on issue date (Asia/Shanghai)",
+            "selected_feed_entries": 10
+          },
+          "candidate_count": 10
+        }
+      ]
+    },
+    "recipient": "yyc54321@126.com",
+    "article_count": 12,
+    "candidate_count": 60,
+    "candidate_data_file": "candidate-news-2026-11-16.json",
+    "llm": {
+      "provider": "opencode-go",
+      "model_chain": [
+        "qwen38-27b"
+      ],
+      "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+      "calls": 10,
+      "call_details": {
+        "selection": {
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "selected_count": 12,
+          "target_count": 12,
+          "degraded": false
+        },
+        "selection_attempts": [
+          {
+            "attempt": 1,
+            "validation_attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "candidate_count": 59,
+            "target_count": 12,
+            "validation_issues": []
+          },
+          {
+            "attempt": 2,
+            "validation_attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "candidate_count": 57,
+            "target_count": 12,
+            "validation_issues": []
+          }
+        ],
+        "cross_day_dedupe": {
+          "window_days": 7,
+          "recent_sent_count": 60,
+          "exact_url_blocks": [],
+          "high_confidence_event_blocks": [
+            {
+              "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-15_0801",
+              "previous_url": "https://x.com/shao__meng/status/2121415418854400187",
+              "previous_date": "2026-11-15",
+              "actions": [
+                "partnership"
+              ],
+              "entities": [
+                "meta",
+                "muse"
+              ]
+            }
+          ],
+          "reviews": [
+            {
+              "attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "duplicates": [
+                {
+                  "current_url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+                  "previous_url": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+                  "reason": "核心主体均为美团，动作均为开源/发布 LongCat-2.5 模型，对象均为该 1.6 万亿参数模型。今日新闻侧重于其未使用 Nvidia GPU 及在华为昇腾上的部署，属于对同一发布事件的技术细节补充和报道角度变化，并非实质性新进展（如新版本发布或重大功能更新）。"
+                },
+                {
+                  "current_url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+                  "previous_url": "https://the-decoder.com/jensen-huang-resigns-as-nvidia-ceo-after-espionage-scandal-wipes-out-1-4-trillion-in-market-value/",
+                  "reason": "核心主体均为英伟达 CEO 黄仁勋，核心事件为其离职。今日新闻报道亚洲政府对此事的反应，属于同一离职事件引发的后续连锁反应和地缘政治影响分析，核心事实（黄仁勋离职）未变，不属于实质性新进展（如新 CEO 正式任命或新的独立丑闻爆发）。"
+                }
+              ]
+            },
+            {
+              "attempt": 2,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "duplicates": []
+            }
+          ],
+          "final_pass": true
+        },
+        "editorial_batches": [
+          {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          }
+        ],
+        "digest_summary": {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        "podcast": {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        "podcast_review": {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        "podcast_attempts": [
+          {
+            "attempt": 1,
+            "generation": {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            "structure_issues": [],
+            "review": {
+              "pass": true,
+              "issues": [
+                "S1在第二轮发言中提及“SemiAnalysis测试显示其第七代TPU在部分推理场景下每美元Token产出优于英伟达GB300”，虽然该事实存在于日报中，但对话中未明确交代SemiAnalysis这一来源，略显突兀，建议补充来源以增强可信度。",
+                "S2在第四轮发言中提及“18个月从研发到登顶”，该时间跨度在日报摘要中未直接出现（日报仅提到“首次参评即获1160分”及“18个月”在review中提及），若严格遵循“只使用日报事实”，需确认该时间线是否属于日报隐含事实或需修正为更通用的表述。",
+                "S1在第十五轮发言中提及“社区关注度也证明了需求真实存在”，这一判断略显主观，建议结合日报中提到的具体星数（如9.5k星）来支撑观点，使论证更扎实。"
+              ],
+              "repair_instruction": "1. 在S1第二轮发言中，将“SemiAnalysis测试显示...”修改为“SemiAnalysis的测试数据显示...”，明确数据来源。2. 核实S2第四轮中“18个月”这一时间点是否准确对应日报内容，若日报未明确提及研发时长，建议改为“快速迭代”或引用日报中关于技术路线有效性的描述，避免引入日报未明确的时间细节。3. 在S1第十五轮发言中，将“社区关注度也证明了需求真实存在”修改为“GitHub上9.5k的星数也证明了社区对这一需求的真实关注”，使论据更具体。"
+            },
+            "review_model": "lenovo:qwen38-27b",
+            "review_usage": {}
+          }
+        ],
+        "podcast_harness": {
+          "attempts": 1,
+          "best_attempt": 1,
+          "final_pass": true,
+          "final_issues": [
+            "S1在第二轮发言中提及“SemiAnalysis测试显示其第七代TPU在部分推理场景下每美元Token产出优于英伟达GB300”，虽然该事实存在于日报中，但对话中未明确交代SemiAnalysis这一来源，略显突兀，建议补充来源以增强可信度。",
+            "S2在第四轮发言中提及“18个月从研发到登顶”，该时间跨度在日报摘要中未直接出现（日报仅提到“首次参评即获1160分”及“18个月”在review中提及），若严格遵循“只使用日报事实”，需确认该时间线是否属于日报隐含事实或需修正为更通用的表述。",
+            "S1在第十五轮发言中提及“社区关注度也证明了需求真实存在”，这一判断略显主观，建议结合日报中提到的具体星数（如9.5k星）来支撑观点，使论证更扎实。"
+          ],
+          "structure_issues": [],
+          "loop_exhausted": false,
+          "converged": false
+        }
+      }
+    },
+    "digest_summary": "今日新闻显示AI正从单点能力转向系统工程化落地。谷歌整柜外售TPU与国会收紧出口管制，凸显算力供应链的地缘博弈与多极化竞争；ACE登顶音乐榜、Bland全双工语音及Claude并行协作，表明模型正通过中间层优化与并行机制解决生成精度与长任务效率瓶颈。同时，RowBot安全护栏与SkillEvaluator评测框架的涌现，反映出行业在追求自动化效率的同时，正迫切通过标准化接口与量化评估机制，弥补智能体在权限控制与效果验证上的信任缺口。",
+    "podcast_turns": 19,
+    "podcast_script_file": "podcast-script-2026-11-16.json",
+    "podcast_script_text_file": "podcast-script-2026-11-16.txt",
+    "podcast_moss_input_file": "podcast-moss-input-2026-11-16.txt",
+    "voice_file": "voice-2026-11-16.json",
+    "voice_turns": 19,
+    "tts_mode": "video-api-audio-video",
+    "tts_synthesis_mode": "external_video_api",
+    "voice_timing_source": "estimated_text_weight",
+    "tts_model": null,
+    "tts_speed": null,
+    "tts_leading_silence_seconds": 0,
+    "tts_reference_files": null,
+    "video_api": {
+      "provider": "video-api",
+      "base_url": "http://8.137.39.142:1234/api",
+      "job_id": "fbc677ca-ca1d-4faf-839b-8b80fada2e4b",
+      "submit_response": {
+        "job_id": "fbc677ca-ca1d-4faf-839b-8b80fada2e4b",
+        "job_type": "video",
+        "status": "running",
+        "created_at": "2026-11-16T07:31:10.013Z",
+        "updated_at": "2026-11-16T07:31:10.013Z",
+        "started_at": "2026-11-16T07:31:10.013Z",
+        "finished_at": null,
+        "day": "2026-11-16-1531",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": null,
+        "download_url": null,
+        "error": null
+      },
+      "final_response": {
+        "job_id": "fbc677ca-ca1d-4faf-839b-8b80fada2e4b",
+        "job_type": "video",
+        "status": "succeeded",
+        "created_at": "2026-11-16T07:31:10.013Z",
+        "updated_at": "2026-11-16T07:42:37.670Z",
+        "started_at": "2026-11-16T07:31:10.013Z",
+        "finished_at": "2026-11-16T07:42:37.670Z",
+        "day": "2026-11-16-1531",
+        "title": "AI热点新闻",
+        "skip_tts": false,
+        "duration_seconds": 687.66,
+        "download_url": "/api/jobs/fbc677ca-ca1d-4faf-839b-8b80fada2e4b/download",
+        "error": null
+      },
+      "zip_file": "video-api-result-2026-11-16.zip",
+      "video_file": "ai-daily-news-video-2026-11-16.mp4"
+    },
+    "html_bytes": 24274,
+    "podcast_bytes": 5909325,
+    "video_bytes": 20039429,
+    "podcast_duration_seconds": 295.38
+  },
+  "published_artifacts": {
+    "index": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/index.json",
+    "candidate_articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/candidate-news.json",
+    "articles": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/articles.json",
+    "podcast_script": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/podcast-script.json",
+    "podcast_script_text": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/podcast-script.txt",
+    "podcast_dialogue_text": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-16.txt",
+    "podcast_moss_input": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/podcast-moss-input.txt",
+    "voice": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/voice.json",
+    "voice_timeline": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-16.json",
+    "html": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-16.html",
+    "audio": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-16.mp3",
+    "video": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-16.mp4",
+    "pipeline_report": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-16/pipeline-report.json"
+  }
+}
