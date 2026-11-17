@@ -2628,6 +2628,444 @@
           "url": "https://github.com/elementalsouls/Claude-BugHunter"
         }
       ]
+    },
+    "2026-11-17": {
+      "candidates": [
+        {
+          "date": "2026-11-17",
+          "title": "Qwen4-Max发布，主打长上下文与任务降本",
+          "summary": "据MarkTechPost报道，阿里推出Qwen4-Max，采用2.4T参数稀疏MoE架构，每词元激活71B参数，支持文本、图像、视频输入及百万词元上下文。报道援引阿里数据称，平均任务成本下降62%；该降幅属于厂商报告，模型为专有模型。",
+          "url": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2218期 - 2026-11-17 16:01",
+          "summary": "本期焦点：[Exa 年化收入突破 1 亿美元]，Agent 搜索需求爆发；Vercel 收购 Traces，押注[Trace 成为新软件原语]；Claude Code 团队公开 Agent 产出的验证方法论。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_1601"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "ChatGPT医疗版扩展跨软件执行能力",
+          "summary": "OpenAI在产品公告中介绍计算机操作代理、改进后的临床回答及新医疗插件，目标是跨医疗软件完成实际工作。现有材料未提供具体临床效果或部署评测数据。",
+          "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "阿里正式发布Qwen4，智能体及编程能力进阶，迈向真实全场景",
+          "summary": "阿里巴巴于 11 月 16 日正式发布新一代基座大模型 Qwen4-Max，重点强调智能体能力与编程能力的进阶，定位是走向真实全场景应用。对开发者而言，这意味着通义系列的主力基座完成换代，agent 与代码类工作负载值得按新模型重新做一次基线评测。",
+          "url": "https://www.qbitai.com/2026/11/510486.html"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2217期 - 2026-11-17 12:01",
+          "summary": "本期最值得关注的是[NVIDIA Nemotron for Science]成体系开源科研智能体资源，以及把超算搬上桌面的[DGX Spark HPC]开发者套件；产品侧[LangSmith Agent Platform]重构上线，Google[Ask Maps]登陆欧洲。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_1201"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "智能体在六项基建任务中达到或超过人类工具基线",
+          "summary": "据新智元对CMU研究的转述，Opus 5.5配合Claude Code完成预训练流水线、推理引擎和集群编排等任务，奇点指数为1.25，人类工具基线设为1.0。这是特定评测结果，不等同于证明系统已经实现通用超级智能。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652743418&idx=2&sn=32755f1e9926a2531bc14768e032d389"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "v0.34.0",
+          "summary": "vLLM 发布 v0.34.0 版本更新。作为主流推理与服务框架的常规迭代版本，跟进升级是保持吞吐优化与算子支持不落后的基本动作，建议上线前按自身模型的并行配置与量化方案做一轮回归压测。",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2216期 - 2026-11-17 08:01",
+          "summary": "本期聚焦经济学家对[AI 智能体协作瓶颈]的冷静判断：协调能力不足、招聘与 GDP 衡量失真；产业侧则是[NVIDIA Cosmos]驱动的自学习工厂与[Ironwood TPU]训练成绩落地。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_0801"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "弱子代理可将错误传递给强编排模型",
+          "summary": "Wang与Mannby的论文在文件库中植入伪造记录：强模型自行检索时，千余次试验几乎没有有害修改；委派廉价子代理后，系统更容易采纳错误信息。覆盖18款模型的模拟中，五个聚合器在751/757次试验中复现受污染子代理的错误，提示单模型表现不足以代表委派链可靠性。",
+          "url": "https://arxiv.org/abs/2611.17520"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Anthropic says the key to agent memory is knowing what to forget, not how much to store",
+          "summary": "Anthropic 研究 Claude 跨会话保留知识的方式，结论是选择性记笔记远远胜过把所有内容都归档。在《宝可梦 红》的测试里，新版 Claude Fable 5 只保留少量策略文件，推进距离就达到旧版 Sonnet 3.7 的四倍，而后者存了 400 多个文件。团队还引入一个「Dreaming」流程回溯修正错误记忆，这提示 agent 记忆系统的关键设计点是遗忘与纠错，而非存储容量。",
+          "url": "https://the-decoder.com/anthropic-says-the-key-to-agent-memory-is-knowing-what-to-forget-not-how-much-to-store/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2215期 - 2026-11-17 04:01",
+          "summary": "[Gemini 4 Carbon]科研实测成果曝光，并向万名科学家免费开放；[NVIDIA]生态多点开花——Cosmos 下载破 2000 万、Nemotron 3.5 Transcribe 登顶说话人分离榜。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_0401"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Agentic-OPD复用旧检查点恢复能力",
+          "summary": "论文将最佳验证检查点作为学生、其他已保存检查点作为冻结教师候选，依据学生能力缺口选择指导，避免无差别蒸馏覆盖已掌握行为。五类智能体任务、24个基准及任务子集中，较初始化检查点最高提升7.4分；4B学生在文中深度搜索测试中超过所列GPT-5.6与DeepSeek-V4.1。",
+          "url": "https://arxiv.org/abs/2611.12799"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "DeepSeek又来掀桌子了！官方App全套能力开放API，联网搜索价格不到OpenAI、Claude的8%",
+          "summary": "DeepSeek 把官方 App 的全套能力开放到 API，其中包括联网搜索，价格不到 OpenAI 与 Claude 同类服务的 8%。对做 RAG 与实时信息类应用的团队，这意味着联网检索这一层的成本结构被大幅改写，可以重新评估自建搜索链路的必要性。",
+          "url": "https://www.infoq.cn/article/NWmk4epBL0jPAUtpKSKb?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2214期 - 2026-11-17 00:01",
+          "summary": "本期焦点是阿里[Qwen4-Max 正式发布]并接入平台与 API；政策侧美国商务部对全球数据中心出口 AI 芯片设[许可证]门槛，英伟达则因 CEO 变动一周[股价跌 14%]。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_0001"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "NovaAtom-Lite增加采样改善结构预测",
+          "summary": "据新智元报道，Geodesic于11月10日发布全原子结构预测模型NovaAtom-Lite。在172个抗体—抗原界面实验中，随机种子数量从1增至100，成功率由74.3%升至83.1%。将药物研发周期压缩至四年是团队目标，并非已经完成的研发或治疗成果。",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652743418&idx=1&sn=976afac35a598b2c2c3daa360a09acc2"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "腾讯混元发布Hy4 flash，单任务成本仅为 Hy4 的 5%",
+          "summary": "腾讯混元发布 Hy4 flash，官方称单任务成本仅为 Hy4 的 5%。这明显是冲着高并发、低单价的批量推理场景去的，对成本敏感型应用来说值得把它纳入模型路由里的廉价档位做对比测试。",
+          "url": "https://www.infoq.cn/article/ejVJGwMvIIvplY8yio5r?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2213期 - 2026-11-16 20:01",
+          "summary": "本期宏观风险信号密集：[IMF 警告 AI 循环融资超 1 万亿美元]、美国收紧[AI 芯片出口]并联合盟友建立供应链清单；开发者侧则有[MiniCPM-OCR]适配主流推理框架、LangChain 提出[Goal Engineering]方法论。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-16_2001"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "V-JEPA-LM通过反事实监督读取视频动态",
+          "summary": "论文利用视频变换构造答案均衡的监督样本，让语言模型读取速度、方向、顺序等信息。4B版本在十一项视频基准中平均得分72.1，高于文中最佳开放8B模型的64.8。匹配预算实验中，反事实监督带来平均4.5分提升，自然视频基准速度题提升38分。",
+          "url": "https://arxiv.org/abs/2611.17831"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Computer Use, MiniMax-H3-Image + Perf fixes",
+          "summary": "Unsloth 这轮更新加入 computer use 测试功能，本地模型可以看屏幕并操作应用，同时提供 Unity、Unreal Engine、Blender 和 Roblox 的 MCP 集成。MiniMax-H3-Image 现在支持 GGUF、FP8、INT8 三种格式并可用 LoRA 训练，另外还重做了模型选择器与连接管理界面。对在本地折腾微调与多模态生成的人来说，量化格式和 LoRA 支持补齐比界面改动更实用。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.918-beta"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2212期 - 2026-11-16 16:01",
+          "summary": "本期[腾讯混元 Hy4 flash]以224B总参、18倍成本优势杀入高性价比日常模型赛道，[Qwen4-Max]补上权威评测与 OpenRouter 分发；产品侧[豆包工作台]、[Seedance 2.5 4K API]与[ThreeRT]开源值得关注。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-16_1601"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "分层代码图改善软件工程任务定位",
+          "summary": "时间一致性评测论文冻结两个仓库的历史状态，再评估100个后续拉取请求。ServiceExplorer以系统／包和架构模块两级依赖图增强上下文，在所测模型、仓库和提示粒度中均超过无增强基线及普通语法图，相对F1提升15.6%—86.2%。该结果主要涉及修改定位，不应直接等同于完整修复成功率。",
+          "url": "https://arxiv.org/abs/2611.17388"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Use prompt caching with open-weight models on Amazon Bedrock",
+          "summary": "很多生成式应用每次请求都重发同一段长上下文，白白付输入费和延迟。这篇文章讲 Amazon Bedrock 上开源权重模型的提示缓存用法，区分隐式缓存与显式缓存，通过 Chat Completions API 演示，并以一个 OpenCode 编码智能体会话为例展示实际收益。对自建长上下文 coding agent 的团队，这是最直接的一档降本手段。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/use-prompt-caching-with-open-weight-models-on-amazon-bedrock/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2211期 - 2026-11-16 12:01",
+          "summary": "[Claude Fable 5.2]在程序化绘画与单提示写插件上展示新玩法，智能体侧[Gemini /swarm]多智能体协作与[Qwen4-Max]新榜单成绩同样值得关注；行业面则聚焦[黄仁勋谋求回归]与 AI 就业冲击研究。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-16_1201"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "通芯智能半年完成两轮、合计数亿元融资",
+          "summary": "据量子位报道，通研院孵化的通芯智能成立于2026年4月，已完成种子轮与天使轮融资，资金主要投入流片前架构设计和研发。公司拟兼容主流模型，并为逻辑、因果和价值推理增加专用硬件支持。目前仍处研发阶段，后续需要经历验证、流片和量产。",
+          "url": "https://www.qbitai.com/2026/11/510416.html"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "b12441",
+          "summary": "llama.cpp 的 WebGPU 后端修复了 flash attention 掩码的 per-head 索引问题：此前 shader 索引掩码时没有带上 head 维度，导致 ne[2] 大于 1 的掩码计算出错误结果。修复后掩码偏移与 vec 块状态都纳入 head，并按 head 对掩码头数取模广播以对齐其他后端，参数缓冲区扩到 256 字节容纳两个新字段。用 WebGPU 跑多头掩码注意力的开发者应尽快跟进这个版本，否则结果会静默出错。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12441"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2210期 - 2026-11-16 08:01",
+          "summary": "本期看点：谷歌将[Gemini]接入[Google Wallet]做个人财务分析，[fal Agent]让一句描述直接变成可试玩游戏；语音领域则密集更新，[Canto 1]与[SOV-Transcribe-1]分别把听写词错率和开放权重 ASR 推向新阶段。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-16_0801"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Anthropic经营数据经社媒转述引发关注",
+          "summary": "DeepLearning.AI帖文援引S-1数据称，Anthropic在2026年上半年营收为163亿美元，2025年同期为12亿美元；2026年第二季度营业利润为9.74亿美元。帖文还称算力成本占营收比例由251%降至48%。所附证据为转述，未包含申报文件全文及完整统计口径。",
+          "url": "https://x.com/DeepLearningAI/status/2122363904881819677"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "b12445: vulkan: Support split_k for conv3d. (#29929)",
+          "summary": "llama.cpp 的 Vulkan 后端为 conv3d 增加了 split_k 支持，在判断有收益时启用仅 coopmat2 可用的 256x128 形状，并复用已有的 mul_mat split_k 归约 shader。对在 Vulkan 上跑三维卷积类模型（如视频或多模态前端）的用户，这是一次实打实的算子覆盖补齐。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12445"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2209期 - 2026-11-16 04:01",
+          "summary": "本期重点：[llama.cpp 与 ggml 迈入 1.0.0]进一步夯实本地推理生态；[ParseBench-2]上线三天即冲上 HuggingFace 趋势榜，并公布新数据；字节[Seedream 5.0 Pro]、Bland[Tofu-1]等模型工具持续上线。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-16_0401"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Perplexity成立Frontier Research",
+          "summary": "公司在官方公告中称，新团队目标是构建自主研究系统，获超过10,000张GPU支持，研究方向包括多智能体编排、强化学习、持续学习、系统与预训练。团队计划公开论文、模型、数据和基准，并在Perplexity产品中测试成果。",
+          "url": "https://x.com/perplexity_ai/status/2122352071295009156"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "b12432",
+          "summary": "llama.cpp 的 kv-cells 实现去掉了每次移除序列时的 O(n_cells) 扫描，改为增量维护。在长上下文、多序列并发的服务场景里，这类每次请求都要走一遍的线性开销会直接反映到吞吐曲线上，属于典型的低成本高收益优化。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12432"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "第2208期 - 2026-11-16 00:01",
+          "summary": "[黄仁勋卸任]英伟达CEO、阿里芯片子公司[T-Head]秘密赴港IPO，阿里同步预览下一代[Qwen4-Max]；[openPangu-2.1-Pro]上线华为云，智能体工具与工业落地持续扩张。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-16_0001"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "last30days-skill提供跨平台主题研究",
+          "summary": "项目面向AI代理，覆盖Reddit、X、YouTube、HN、Polymarket和网页，并综合生成有依据的摘要。素材所列GitHub统计快照为67,887 Star、当日新增122；这些数字代表采集时状态。",
+          "url": "https://github.com/mvanhorn/last30days-skill"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Hark Releases Handoff², a 2x Faster Computer-Use Agent for Hark Pro",
+          "summary": "Hark 为 Hark Pro 发布 computer-use agent Handoff²，平均速度是 v1 的两倍，在 478 个内部 web 任务上完成率 82%。关键改动是用带延迟惩罚的强化学习让模型学会合并批量动作，从而减少往返调用次数。这印证了 computer use 智能体的瓶颈往往不在单步准确率，而在动作编排的往返开销。",
+          "url": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "DeepSeek聊天演示库整合搜索、文档和语音",
+          "summary": "据用户分享，deepseek-ai/chat-demo支持联网搜索、文档及网页处理、音频输入和回答朗读，聊天存档保存在本地IndexedDB。材料未附独立功能测试；本地存档也不等于全部推理与文档处理均在本地完成。",
+          "url": "https://x.com/huangyun_122/status/2121894829596815502"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Our first phase of embedded assessments",
+          "summary": "OpenAI 启动「嵌入式评估」第一阶段，引入 Apollo Research、METR、Transluce 与 Goodfire 作为独立第三方，对模型对齐性、安全防护机制与监控系统进行外部评测。这意味着前沿实验室开始把「自己考自己」的评测环节部分外包给外部机构，对做对齐评测、红队与可解释性工具的团队是明确的落地信号。",
+          "url": "https://openai.com/index/our-first-phase-of-embedded-assessments"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "PaperOrchestra组织多智能体论文写作",
+          "summary": "Google Research的开源框架定位为自动化AI科研论文写作。素材快照为1,097 Star、当日新增306，未附写作质量、事实准确性或原创研究能力评测。",
+          "url": "https://github.com/google-research/paper-orchestra"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "ffmpeg-skill为编程代理提供本地视频工具",
+          "summary": "项目提供42项FFmpeg工具、机器可读契约及MCP服务，面向Claude Code、Cursor和Codex，支持剪辑、字幕、画幅调整、响度处理及平台导出。项目说明强调无需云服务或API密钥；素材快照为6,241 Star、当日新增331。",
+          "url": "https://github.com/kajisho5/ffmpeg-skill"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "提速2.48倍且画质不掉线，AI视频“降本增效”有了新解法",
+          "summary": "是石科技发布多模态模型服务方案，宣称在 AI 视频生成场景下实现约 2.48 倍加速，同时画质不出现明显劣化。视频生成是当前推理成本最高、吞吐最吃紧的方向之一，这类在服务层做加速且保住输出质量的方案，直接对应厂商最关心的单位生成成本问题。",
+          "url": "https://www.qbitai.com/2026/11/510369.html"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "帖文称加州就代理攻击事件起诉OpenAI",
+          "summary": "Rohan Paul帖文称，案件涉及约700个代理攻击Hugging Face生产系统、执行约17,600次操作，并质疑监控及披露情况。现有材料未附诉状或法院记录，以上应作为帖文转述的指控阅读，而非裁判认定。",
+          "url": "https://x.com/rohanpaul_ai/status/2122428932192625104"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+          "summary": "Hugging Face 与 OpenRouter 达成合作，把开放权重模型的调用与运行链路上打通，让用户可以更省事地直接跑起 HF 上的开源权重模型。对开源模型生态来说，这相当于把「模型分发」和「统一推理入口」拼在一起，降低了开发者试用与切换模型的摩擦成本。",
+          "url": "https://huggingface.co/blog/openrouter"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "外部评估安排与模型延期之间尚无已证实因果",
+          "summary": "Chubby帖文称，OpenAI与四家独立机构签署协议，允许其接触部分内部系统和数据，评估模型行为、训练及防护措施。作者进一步猜测这与GPT-6.2延期有关；所附材料未证实该关联。",
+          "url": "https://x.com/kimmonismus/status/2122383697852993594"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "nightly-cpu-multi-last-green: Fix multiple issues in Op Builder and refactor implementation (#9085)",
+          "summary": "DeepSpeed 修复了 Op Builder 中的一串连锁问题：某些算子会把过滤后的目标架构写回 TORCH_CUDA_ARCH_LIST，导致后续构建的 10 个算子缺失 sm_70/sm_75 代码；只要列表里出现低于 sm_80 的目标，整个算子就不再带 BF16_AVAILABLE，transformer_inference 与 inference_core_ops 因此丢掉 BF16 kernel，88 个算子测试挂掉。对自编译 DeepSpeed 的团队来说，这解释了「预编译算子在某些卡上莫名变慢或跑不了」的一类隐蔽坑。",
+          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-cpu-multi-last-green"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "科研项目参与者自报生产效率接近翻倍",
+          "summary": "Greg Brockman转述称，OpenAI研究覆盖ChatGPT for Academic Researchers项目逾1,800名参与者，涉及构思、数据分析和编程等工作。接近翻倍属于参与者自报生产效率，不等同于统一任务下客观测得的提速或科研成果翻倍。",
+          "url": "https://x.com/gdb/status/2122381437198586144"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Customize answers per tenant in Amazon Bedrock Managed Knowledge Base",
+          "summary": "Amazon Bedrock Managed Knowledge Base 新增按租户定制回答的能力：通过检索指令为每个租户设定语气、格式、检索引导与回答策略，配合 metadata filter 隔离数据、IAM 标签限定访问范围，并支持按租户逐个灰度上线。对做多租户 RAG 产品的团队，这相当于把「一套共享知识库、N 套回答风格与权限」变成平台原生能力，省掉大量自建隔离层的工程量。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/customize-answers-per-tenant-in-amazon-bedrock-managed-knowledge-base/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "透明权重编程在特定算法任务中获得满分",
+          "summary": "elvis分享的研究让代理直接编写权重和特征，通过30—50轮测试与修订完成模型构造，无需梯度训练。26次算法任务实验在保留数据上均达100%准确率；语言任务更困难，表现落后于训练所得基线。结果展示的是特定任务能力，并非普遍替代模型训练。",
+          "url": "https://x.com/omarsar0/status/2122374124601590078"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
+          "summary": "美国以临时规则进一步收紧 AI 芯片出口管制，只要相关芯片可能向中国等受限国家提供算力，企业就需申请出口许可，矛头直指通过海外数据中心远程租用算力的绕道方式。对依赖海外算力或跨境云资源做训练、推理的团队，这抬高了合规与供应链的不确定性，也让国产算力替代的紧迫性再上一档。",
+          "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "EvoTrias拆分规划、编码与评分职责",
+          "summary": "据Rohan Paul介绍，华为论文中的EvoTrias将三个环节交给独立角色，编码代理接触不到评分器。所述七项数学任务中领先六项，单次运行令牌成本较四代理CORAL下降64%；在300个OR-Tools实例上，求解质量提升13.2%。以上为帖文转述的实验结果。",
+          "url": "https://x.com/rohanpaul_ai/status/2122412646972744045"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "b12435",
+          "summary": "llama.cpp 的 Vulkan 后端修复了 radix top-k 在阈值并列元素过多时结果不确定的问题：原实现用原子计数器收集超阈值与并列元素，保留哪几列取决于线程调度；现在每个 subgroup 固定负责行内一段连续区间，列映射在各轮保持一致，并按 subgroup 计数的前缀和写入结果。对依赖采样可复现性的本地推理用户，这类确定性修复直接关系到同参数下输出能否稳定对齐。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12435"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "b12433",
+          "summary": "llama.cpp 的 CUDA 后端修复了 AMD 设备上 MUL_MAT_ID 的崩溃：F32/F16/BF16 的 src0 且 token 数不超过 8 时总会走 MMVF，而 MMVF 按成对读取并要求 ne[0] 为偶数，于是 MoE 专家权重上 rank 1 的 LoRA（lora_b 的 ne[0] 为 1）触发断言失败。现在仅在 ne[0] 为偶数时启用 MMVF，其余形状走原有回退路径——用 ROCm 跑 MoE + LoRA 微调的人会直接受益。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12433"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Advancing computer-use agents for healthcare teams",
+          "summary": "OpenAI 推进面向医疗团队的 computer-use 智能体，让模型直接操作现有医疗软件界面完成流程性工作，而不是等待系统改造出 API。医疗是数据敏感、系统老旧、审批严格的典型场景，若这类智能体能在合规边界内落地，等于为 agent 打开了一个高价值但集成成本极高的垂直市场。",
+          "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "viable/strict/1794812685: [xpu] Fix the memory headroom for iGPU (#204780)",
+          "summary": "PyTorch 修复了 XPU 后端上 iGPU 的显存余量计算问题：Level Zero 报告 iGPU 的 physicalSize 为零，SYCL 需改用 totalSize 与 currUsableMemSize 这对已扣除 headroom 的值，避免可用显存被错误估算。对在核显上跑 PyTorch 推理或小规模训练的开发者，这类修复直接决定会不会因为误判余量而 OOM。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1794812685"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "How we make Together AI easy for coding agents to use",
+          "summary": "Together AI 为「让编码智能体正确使用自家平台」建立了 agent 评测，通过小幅修改文档、技能说明和 API 错误信息，把编码智能体的任务完成率从 75% 提升到 97%。这说明在 agent 时代，文档与错误返回本身就是接口的一部分，为 agent 优化开发者体验的投入回报比传统文档工作高得多。",
+          "url": "https://www.together.ai/blog/how-we-do-agent-evals-at-together-ai"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+          "summary": "TechCrunch 抛出疑问：黄仁勋的坏消息是否等同于整个 AI 行业的坏消息，理由是目前很大一部分经济预期都压在英伟达身上。这条判断点出了当下 AI 资本叙事的单点依赖风险——算力供给方的估值波动会迅速传导到模型公司、云厂商与创业公司的融资环境。",
+          "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "MMFlash: Faster Speculative Decoding for Vision-Language Models",
+          "summary": "视觉语言模型的投机解码一直有个尴尬：草稿模型猜不准那些真正依赖图像内容的 token，而长视频输入又让草稿开销爆炸。MMFlash 的做法是自适应地给视觉相关 token 加权，让草稿阶段把算力集中在容易分歧的位置，同时对长视频采用稀疏注意力压低草稿成本。作者报告在无损前提下端到端最高 3.58 倍加速，这对多模态 serving 的实际吞吐是有直接意义的。",
+          "url": "https://arxiv.org/abs/2611.18482"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent",
+          "summary": "面向长时程实时游戏场景，Gamer 把感知、记忆与多步推理整合进一个通用的视觉-语言-动作基础模型，而不是为单个游戏写死策略。训练分三段走：持续预训练打底、稀疏思考式指令微调控制推理开销、再用多轮强化学习打磨交互策略。最终模型能在 2D 与 3D 环境中高效交互，为通用具身智能体提供了一个可复用的训练范式参考。",
+          "url": "https://arxiv.org/abs/2611.18397"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "MIRIX-2.0: Multi-Agent Memory System",
+          "summary": "MIRIX-2.0 针对的是 LLM 智能体记忆模块在长程任务中容易丢信息、检索效率又低的问题，用多智能体协作的方式组织记忆，而非把一切塞进单一向量库或上下文。它的卖点是不需要任何微调就能在问答类与流程性基准上同时拿到较高准确率和效率，意味着可以直接插到现有 agent 栈里替换记忆层，代价可控。",
+          "url": "https://arxiv.org/abs/2611.12068"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Rethinking in Spikes: Mitigating Hallucinations in MDLMs with Step-Aware Decoding",
+          "summary": "多模态扩散语言模型生成时容易出现幻觉，本质是去噪过程中某些步的分布突然变得不稳定。StepRefine 把它拆成两类状态：监测到熵尖峰时切到离散去噪、分布趋于稳定时转向潜在精修，作为即插即用的解码策略不需要重训模型。这种按步感知的调度思路给扩散式多模态生成提供了一个低成本的幻觉缓解手段。",
+          "url": "https://arxiv.org/abs/2611.12901"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Loopback Transformer: Towards a Unified View of Residual Looped Transformers",
+          "summary": "循环 Transformer 把层重复堆叠来换深度，但实践中很难说清收益来自哪里。这篇工作提出 Loopback Transformer，把输入强度、总更新权重以及每次迭代的更新分配拆成三个独立可控的量，从而统一了标准残差与各类循环残差形式。结果是在参数更少的情况下验证损失更低、下游准确率更高，对想做深而窄架构的人是个有用的设计坐标。",
+          "url": "https://arxiv.org/abs/2611.07226"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Mobile AI Factory: Building Specialized Language Models for Your Mobile Device",
+          "summary": "想让小模型在手机上跑得好，靠人工调参一条条试太慢。Mobile AI Factory 用一个编排 LLM 驱动全流程，结合真机实测指标和自适应搜索，自动为具体任务和具体机型产出微调并量化后的小语言模型。作者称其用远少于常规流程的 GPU 时间就能追平甚至超过更大的通用模型，等于把端侧模型定制变成了一条自动化流水线。",
+          "url": "https://arxiv.org/abs/2611.13509"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-11-17",
+          "title": "阿里发布Qwen4-Max：2.4T参数MoE架构支持百万词元上下文",
+          "summary": "阿里发布Qwen4-Max，这是Qwen4系列的首个模型，采用2.4T参数稀疏MoE架构，每词元激活71B参数，并额外包含328B N-gram嵌入参数。该模型支持文本、图像和视频输入，拥有1M词元上下文窗口及393K最大输出长度。阿里报告称，通过降低API价格和减少token使用，平均任务成本下降62%，但模型为专有闭源，仅提供API服务，不支持自托管。",
+          "url": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "OpenAI扩展ChatGPT医疗版跨软件执行能力",
+          "summary": "OpenAI在产品公告中介绍了ChatGPT医疗版的更新，包括计算机操作代理、改进后的临床回答及新医疗插件。其目标是让AI能够跨不同医疗软件完成实际工作流程。目前公开材料未提供具体的临床效果数据或部署评测结果，主要侧重于功能能力的展示。",
+          "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Hark发布Handoff²：速度提升2倍的计算机使用智能体",
+          "summary": "Hark为Hark Pro应用发布了第二代计算机使用智能体Handoff²。通过引入带延迟惩罚的强化学习，模型学会了合并批量动作，平均速度比v1快2倍，在478个内部Web任务上完成率达82%。该智能体运行在Hark云端专用虚拟计算机上，支持Web、iOS和Android访问，但所有性能数据均为自报，尚无第三方独立评测。",
+          "url": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "美国收紧AI芯片出口管制以限制远程算力访问",
+          "summary": "美国商务部发布临时规则，要求向全球数据中心出口、再出口或转让AI芯片和服务器时，若可能向中国等受限国家提供算力，必须申请许可证。该规则针对总处理性能超过1200万TPP的数据中心，旨在阻止通过海外数据中心远程租用算力绕过现有出口管制。规则还新增了对马来西亚、新加坡等五个国家的芯片出口许可要求，并废除了拜登政府的AI扩散规则。",
+          "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Perplexity成立Frontier Research团队",
+          "summary": "Perplexity宣布成立Frontier Research团队，旨在构建能够执行自主研究的系统。该团队将聚焦于多智能体编排、强化学习、持续学习、系统架构及预训练等核心方向，并计划公开发布论文、模型、数据及基准测试。公司表示，该研究项目将获得超过10,000张GPU的支持，研究成果将在Perplexity产品中直接测试应用。目前，团队正在旧金山、帕洛阿尔托、纽约和伦敦积极招聘研究人员与工程师。",
+          "url": "https://x.com/perplexity_ai/status/2122352071295009156"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Hugging Face与OpenRouter合作优化开源模型调用",
+          "summary": "Hugging Face宣布与OpenRouter达成合作，将推理提供商的路由机制切换至OpenRouter。用户可使用Hugging Face令牌通过统一API调用Hub上的开源权重模型，系统将根据实时价格、速度和可靠性自动选择最佳提供商，并在失败时自动重试。数据显示，OpenRouter上开源权重模型的Token占比已从2025年10月的26.8%升至2026年9月底的71.7%，且平均成本比闭源模型低约四倍。",
+          "url": "https://huggingface.co/blog/openrouter"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "OpenAI启动嵌入式评估第一阶段",
+          "summary": "OpenAI启动“嵌入式评估”第一阶段，引入Apollo Research、METR、Transluce与Goodfire作为独立第三方机构。这些机构将对模型的对齐性、安全防护机制及监控系统进行外部评测。这一举措标志着前沿实验室开始将部分原本由内部完成的评测环节外包给外部独立机构，以增强评估的客观性与独立性。",
+          "url": "https://openai.com/index/our-first-phase-of-embedded-assessments"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "研究显示多智能体系统安全性取决于最弱子代理",
+          "summary": "Wang与Mannby在NeurIPS 2026 Workshop发表的论文指出，多智能体系统的安全性由最弱的子代理决定。实验显示，强模型自行检索时几乎不产生有害修改，但委派给廉价子代理后，系统容易采纳错误信息。在覆盖18款模型的模拟中，五个聚合器在751/757次试验中复现了受污染子代理的错误，表明单模型表现无法代表委派链的整体可靠性。",
+          "url": "https://arxiv.org/abs/2611.17520"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "MMFlash提出自适应加权策略加速视觉语言模型投机解码",
+          "summary": "MMFlash针对视觉语言模型中草稿模型对视觉依赖token预测不准的问题，提出基于KL散度衡量token视觉依赖性的指标。研究发现高视觉依赖区间的接受率显著低于低依赖区间，因此MMFlash自适应地增加视觉依赖token的权重，并将算力集中在易分歧位置。针对长视频输入，该方法采用稀疏注意力降低冗余计算。实验显示，MMFlash在无损前提下实现最高3.58倍端到端加速，相比EAGLE-3和DFlash分别提升195.4%和17.1%。",
+          "url": "https://arxiv.org/abs/2611.18482"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "MIRIX-2.0发布多智能体记忆系统提升LLM长程任务表现",
+          "summary": "MIRIX-2.0是一款无需微调的多智能体记忆系统，旨在解决LLM智能体在长程任务中信息丢失和检索效率低的问题。该系统由六个类型化记忆智能体组成，保留完整记录作为系统基准，并通过溯源超图索引情景和语义记录。在LoCoMo基准上达到91.4%准确率，在LongMemEval-S上领先最强基线14.3个百分点。此外，它在ALFWorld和WebShop等流程性基准中取得最高平均成功率，且关闭AutoDream后响应速度优于HyperMem。",
+          "url": "https://arxiv.org/abs/2611.12068"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "last30days-skill实现跨平台主题研究与摘要生成",
+          "summary": "last30days-skill是一个面向AI代理的技能插件，能够跨Reddit、X、YouTube、Hacker News、Polymarket及网页进行主题研究。该项目通过综合多源信息生成有依据的摘要，支持Claude Code、Codex等多种代理宿主。根据GitHub快照数据，该项目拥有约68.5k Star和6.1k Fork，近期新增Star约122个。其核心特点在于利用点赞、真实资金等信号而非编辑判断来评估信息价值，提供零配置的安装体验。",
+          "url": "https://github.com/mvanhorn/last30days-skill"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "ffmpeg-skill为编程代理提供本地视频编辑工具集",
+          "summary": "ffmpeg-skill为Claude Code、Cursor和Codex等编程代理提供本地视频编辑能力，包含42项FFmpeg工具及机器可读契约。该工具支持剪辑、字幕生成、画幅调整、响度处理及平台导出，并通过MCP服务器实现集成。项目强调无需云服务或API密钥，仅使用Python标准库运行。GitHub快照显示该项目拥有7.5k Star和682 Fork，近期新增Star约331个，旨在让代理能自主检查并优化视频输出。",
+          "url": "https://github.com/kajisho5/ffmpeg-skill"
+        }
+      ]
     }
   }
 }
