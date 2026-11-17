@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-11-17",
+  "reviewed_at": "2026-11-17T19:39:45.600114+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实准确，逻辑清晰，播客对话自然流畅且紧扣新闻要点，无事实性错误或严重重复。",
+    "issues": [
+      "新闻条目中部分URL指向2026年11月，虽符合日报日期设定，但需确保内部时间线一致性（已确认为模拟未来场景，故不视为错误）。",
+      "播客中S1提到Qwen4-Max“强调成本下降62%”，原文为“平均任务成本下降62%”，表述略有简化但不影响理解。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
