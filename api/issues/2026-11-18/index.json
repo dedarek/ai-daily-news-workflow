@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-11-18",
+  "content_date": "2026-11-18",
+  "published_at": "2026-11-18T08:21:26.636716+00:00",
+  "article_count": 12,
+  "podcast_turns": 21,
+  "tts_mode": "video-api-audio-video",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 31,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 84,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S2在讨论Isomorphic Labs融资时提到“半年内融了71亿美元”，虽然50亿+21亿=71亿在算术上正确，但日报中仅明确提及本轮50亿和此前21亿，未直接给出“半年内累计71亿”的表述，且“半年内”这一时间跨度是基于“此前2026年5月”和当前时间（11月）的推断，建议改为“近期完成50亿美元融资，加上此前21亿美元”以更严谨地贴合日报事实，避免被判定为新增具体事实。",
+              "S1在总结部分提到“谁的生态更封闭”，这与前文英伟达强调“开源”、Cursor构建生态的逻辑略有冲突，通常生态越开放或粘性越强（锁定）才是优势，此处用词“封闭”可能引起歧义，建议改为“谁的生态粘性更强”或“谁的护城河更深”。"
+            ],
+            "repair_instruction": "1. 修改S2关于Isomorphic Labs的发言，将“半年内融了71亿美元”调整为“本轮融资50亿美元，加上此前的21亿美元，资本投入巨大”，以严格贴合日报原文，避免推断性事实。2. 修改S1最后一句，将“谁的生态更封闭”改为“谁的生态粘性更强”或“谁的护城河更深”，以准确表达平台锁定效应，避免与开源趋势产生逻辑矛盾。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S2在讨论Isomorphic Labs融资时提到“半年内融了71亿美元”，虽然50亿+21亿=71亿在算术上正确，但日报中仅明确提及本轮50亿和此前21亿，未直接给出“半年内累计71亿”的表述，且“半年内”这一时间跨度是基于“此前2026年5月”和当前时间（11月）的推断，建议改为“近期完成50亿美元融资，加上此前21亿美元”以更严谨地贴合日报事实，避免被判定为新增具体事实。",
+          "S1在总结部分提到“谁的生态更封闭”，这与前文英伟达强调“开源”、Cursor构建生态的逻辑略有冲突，通常生态越开放或粘性越强（锁定）才是优势，此处用词“封闭”可能引起歧义，建议改为“谁的生态粘性更强”或“谁的护城河更深”。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-18.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-18.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-18.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-18.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-18.mp4"
+}
