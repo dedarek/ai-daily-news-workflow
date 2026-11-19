@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "issue_date": "2026-11-18",
-  "content_date": "2026-11-18",
-  "published_at": "2026-11-18T08:21:26.636716+00:00",
-  "article_count": 12,
-  "podcast_turns": 21,
+  "issue_date": "2026-11-19",
+  "content_date": "2026-11-19",
+  "published_at": "2026-11-19T08:29:04.634770+00:00",
+  "article_count": 11,
+  "podcast_turns": 24,
   "tts_mode": "video-api-audio-video",
   "tts_model": null,
   "tts_speed": null,
@@ -20,9 +20,9 @@
       "selection": {
         "model": "lenovo:qwen38-27b",
         "usage": {},
-        "selected_count": 12,
+        "selected_count": 11,
         "target_count": 12,
-        "degraded": false
+        "degraded": true
       },
       "selection_attempts": [
         {
@@ -30,7 +30,7 @@
           "validation_attempt": 1,
           "model": "lenovo:qwen38-27b",
           "usage": {},
-          "candidate_count": 31,
+          "candidate_count": 57,
           "target_count": 12,
           "validation_issues": []
         }
@@ -38,8 +38,39 @@
       "cross_day_dedupe": {
         "window_days": 7,
         "recent_sent_count": 84,
-        "exact_url_blocks": [],
-        "high_confidence_event_blocks": [],
+        "exact_url_blocks": [
+          {
+            "current_url": "https://www.qbitai.com/2026/11/510707.html",
+            "previous_url": "https://www.qbitai.com/2026/11/510707.html",
+            "previous_date": "2026-11-18"
+          }
+        ],
+        "high_confidence_event_blocks": [
+          {
+            "current_url": "https://x.com/gdb/status/2122825442021572838",
+            "previous_url": "https://x.com/gdb/status/2121295213025194172",
+            "previous_date": "2026-11-14",
+            "actions": [
+              "partnership"
+            ],
+            "entities": [
+              "chatgpt",
+              "openai"
+            ]
+          },
+          {
+            "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_0001",
+            "previous_url": "https://www.qbitai.com/2026/11/510695.html",
+            "previous_date": "2026-11-18",
+            "actions": [
+              "acquisition"
+            ],
+            "entities": [
+              "amd",
+              "labs"
+            ]
+          }
+        ],
         "reviews": [
           {
             "attempt": 1,
@@ -87,10 +118,11 @@
           "review": {
             "pass": true,
             "issues": [
-              "S2在讨论Isomorphic Labs融资时提到“半年内融了71亿美元”，虽然50亿+21亿=71亿在算术上正确，但日报中仅明确提及本轮50亿和此前21亿，未直接给出“半年内累计71亿”的表述，且“半年内”这一时间跨度是基于“此前2026年5月”和当前时间（11月）的推断，建议改为“近期完成50亿美元融资，加上此前21亿美元”以更严谨地贴合日报事实，避免被判定为新增具体事实。",
-              "S1在总结部分提到“谁的生态更封闭”，这与前文英伟达强调“开源”、Cursor构建生态的逻辑略有冲突，通常生态越开放或粘性越强（锁定）才是优势，此处用词“封闭”可能引起歧义，建议改为“谁的生态粘性更强”或“谁的护城河更深”。"
+              "S1第1轮发言（约85字）和S2第2轮发言（约90字）等部分轮次字数接近上限，虽未超标但略显密集，口播时需注意语速节奏。",
+              "S1第17轮关于Colombo系统的描述较为学术化，‘基于Oracle优化’和‘复杂度图谱’等术语对普通听众可能稍显晦涩，建议简化表述。",
+              "S2第20轮对Rumble-2-Flash的评价中，‘小模型大性能，这是开源社区的常态’这一判断略显主观，且未充分结合日报中提到的‘on-policy蒸馏’技术细节，可稍作补充以增强说服力。"
             ],
-            "repair_instruction": "1. 修改S2关于Isomorphic Labs的发言，将“半年内融了71亿美元”调整为“本轮融资50亿美元，加上此前的21亿美元，资本投入巨大”，以严格贴合日报原文，避免推断性事实。2. 修改S1最后一句，将“谁的生态更封闭”改为“谁的生态粘性更强”或“谁的护城河更深”，以准确表达平台锁定效应，避免与开源趋势产生逻辑矛盾。"
+            "repair_instruction": "1. 在S1第17轮中，将‘基于Oracle优化的自主科研’简化为‘针对数学优化问题的自主科研系统’，避免使用‘Oracle’这一专业术语，除非后续有解释。2. 在S2第20轮中，补充一句‘这得益于其从更大生产模型中提炼的on-policy蒸馏技术’，以呼应日报事实并增强技术解释的深度。3. 整体语速建议稍作放缓，特别是在S1第1轮和S2第2轮等长句处，确保听众能消化信息。"
           },
           "review_model": "lenovo:qwen38-27b",
           "review_usage": {}
@@ -101,8 +133,9 @@
         "best_attempt": 1,
         "final_pass": true,
         "final_issues": [
-          "S2在讨论Isomorphic Labs融资时提到“半年内融了71亿美元”，虽然50亿+21亿=71亿在算术上正确，但日报中仅明确提及本轮50亿和此前21亿，未直接给出“半年内累计71亿”的表述，且“半年内”这一时间跨度是基于“此前2026年5月”和当前时间（11月）的推断，建议改为“近期完成50亿美元融资，加上此前21亿美元”以更严谨地贴合日报事实，避免被判定为新增具体事实。",
-          "S1在总结部分提到“谁的生态更封闭”，这与前文英伟达强调“开源”、Cursor构建生态的逻辑略有冲突，通常生态越开放或粘性越强（锁定）才是优势，此处用词“封闭”可能引起歧义，建议改为“谁的生态粘性更强”或“谁的护城河更深”。"
+          "S1第1轮发言（约85字）和S2第2轮发言（约90字）等部分轮次字数接近上限，虽未超标但略显密集，口播时需注意语速节奏。",
+          "S1第17轮关于Colombo系统的描述较为学术化，‘基于Oracle优化’和‘复杂度图谱’等术语对普通听众可能稍显晦涩，建议简化表述。",
+          "S2第20轮对Rumble-2-Flash的评价中，‘小模型大性能，这是开源社区的常态’这一判断略显主观，且未充分结合日报中提到的‘on-policy蒸馏’技术细节，可稍作补充以增强说服力。"
         ],
         "structure_issues": [],
         "loop_exhausted": false,
@@ -110,16 +143,16 @@
       }
     }
   },
-  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/articles.json",
-  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/candidate-news.json",
-  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/podcast-script.json",
-  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-18.txt",
-  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/podcast-moss-input.txt",
-  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/voice.json",
-  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-18.json",
-  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-18/manifest.json",
-  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-18.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-18.mp3",
-  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-18.mp4"
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-19/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-19/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-19/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-19/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-19.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-19/podcast-moss-input.txt",
+  "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-19/voice.json",
+  "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-19.json",
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-19/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-19.html",
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-19.mp3",
+  "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-19.mp4"
 }

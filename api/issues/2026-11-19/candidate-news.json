@@ -1,0 +1,542 @@
+[
+  {
+    "title": "n8n 把智能工作流编排做成开源底座",
+    "summary": "n8n 已攒下 210850星，今日新增315星。它把可视化搭建与自写代码🔧合成一条流水线，原生支持智能能力，内置四百多项集成，开源工作流平台仓库支持自托管与云服务两种跑法。",
+    "url": "https://github.com/n8n-io/n8n",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing GPT-6.2 Astra and Sol",
+    "summary": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol：Astra 面向最难的专业任务，在专业产出、编码、computer use 与效率上更强且成本更低；Sol 定位高效通用的日常主力，两者同时进入 ChatGPT Work、Codex 与 API。对从业者来说，关键信号是旗舰能力下探的同时价格结构被重排，模型选型与新版本迁移的窗口又打开了一轮。",
+    "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2230期 - 2026-11-19 16:01",
+    "summary": "本期聚焦[AI 商业化与监管]：腾讯[WorkBuddy]收入年化破 5 亿美元，英伟达因对华芯片销售遭[SEC 民事调查]；[DeepSeek]同步调整 API 计费。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CLI-Anything 让软件直接变成代理原生",
+    "summary": "CLI-Anything 把软件能力包装成命令行接口，代理原生改造路径是它的核心目标，代理调用软件不必再逐项封装。项目已攒到 59343星，单日新增384星。",
+    "url": "https://github.com/HKUDS/CLI-Anything",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] GPT-6.2 Astra, the #2 Frontier Model is better and 20%-600% cheaper, but has mixed reviews; 6.2 Sol likely main workhorse",
+    "summary": "AINews 总结了 11 月 17 日发布的 GPT-6.2 Astra 与 Sol：Astra 在基准上排到第二强的前沿模型，成本比前代低 20% 到 600%，但早期测试者对它的实际使用体感评价分化；Sol 被判断更可能成为日常主力工作马。对做模型选型的团队，这条的价值在于把「跑分便宜」和「用起来如何」这两件事分开看。",
+    "url": "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2229期 - 2026-11-19 12:01",
+    "summary": "本期重点为[Anthropic 以每股 83 美元 IPO 定价]登陆纳斯达克，以及[NVIDIA RTX Spark]本地 AI 台式机开售。Agent 生态继续升温，[Deepagents]下载量突破 5000 万，Agent 成本核算与推理优化也有新实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ChatGPT 上线销售专用体验",
+    "summary": "OpenAI 给销售团队放出专用体验，销售插件与三十多项合作插件直接接入对话，📈客户信息与销售工具都能在同一窗口调用。目标是少做重复事务，让销售盯住客户决策。",
+    "url": "https://x.com/gdb/status/2122825442021572838",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.2 Astra和Sol王炸双发！3D又危了",
+    "summary": "量子位报道 OpenAI 双发 GPT-6.2 Astra 与 Sol，其中 Sol 的性能已经逼近旗舰档位，价格却更低。对国内从业者而言，这条的重点不是跑分，而是双模型策略下主力与旗舰的分工再次被压缩，很多原本只能上旗舰的场景可以下移到便宜档位。",
+    "url": "https://www.qbitai.com/2026/11/510707.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2228期 - 2026-11-19 08:01",
+    "summary": "本期最重头的是[Gemini 4 Neon]正式推送并全面接入 Gemini App 与 Tasks；[NVIDIA Nemotron-Labs-Sigma]则用并行块生成挑战逐 token 解码范式。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Devin 机器人独当一面统筹开发",
+    "summary": "Devin Bot 已正式上线，端到端工程队友产品说明是它的完整定义，🛠由一千多名测试者打磨数周。它能规划项目、调度多个 Devin 并持续验证改动，过去一次只跑一个任务的限制被解除。",
+    "url": "https://x.com/devindevelopers/status/2122750919024759027",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Keeping Agents Fast: High-Interactivity Decode with FlyDSL MonoKernels in vLLM",
+    "summary": "vLLM 博客介绍了在 AMD Instinct GPU 上用 FlyDSL MonoKernels 实现高交互性 decode：通过模型特化的算子融合、data-ready 式交接以及专用 decode 路径集成，让 agent 场景下的逐 token 交互保持低延迟。对在非 NVIDIA 平台上跑 agent 服务的团队，这是把推理框架深度贴合硬件的一个具体样本。",
+    "url": "https://vllm.ai/blog/2026-11-18-flydsl-monokernels",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2227期 - 2026-11-19 04:02",
+    "summary": "本期重点：LlamaIndex 发布[OCRia-1.5]文档解析模型并上线 LlamaParse；Google DeepMind 上线[Genie 4]；NVIDIA 推出[Cosmos Data Factory]合成数据蓝图与 Nemotron 3.5 Transcribe。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 机器人插件提速实操",
+    "summary": "谷歌 DeepMind 放出机器人插件，官方演示完整流程覆盖从仿真到真机的全部环节，🦾支持的机械臂可先连上再用。用户在 MuJoCo 里练熟后，用自然语言就能把任务搬到真实世界执行。",
+    "url": "https://x.com/GoogleDeepMind/status/2122767521925230896",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
+    "summary": "这篇实践把 180B 参数的 MoE 模型塞进 32GB 内存里跑推理，靠的是在 Transformers 生态内做极致的专家调度与内存搬运策略。对只能用消费级或单卡小内存部署大 MoE 的团队，它展示了瓶颈在内存带宽与专家换入换出、而不在算力的现实图景。",
+    "url": "https://huggingface.co/blog/moe-expert-streaming",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2226期 - 2026-11-19 00:01",
+    "summary": "本期聚焦[开源小模型]与[实用工具]：Hugging Face 开源 0.5B 多语语音模型、编码 Agent 适配模型登榜；Runway 把视频模型[推理 GPU 减半]，fal、Mistral、LangSmith 各推新工具。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "语言模型首次改写自身权重",
+    "summary": "27B 模型这次无需梯度也无需训练流程，模型自我改写权重论文记录下它诊断并修改自身参数的全程。自改后未见题准确率提升6.6分，损坏模型的跨六项视觉基准从7%升到70%。",
+    "url": "https://arxiv.org/abs/2611.21885",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+    "summary": "Simon Willison 记录 GPT-6.2 Astra 与 Sol 上线 API（模型名 gpt-6.2-astra 与 gpt-6.2-sol），并同步发布 LLM 0.38 支持新模型。他特别点出价格：Astra 是 6 Astra 的八成价，$8/$40 每百万输入输出 token，与 Claude Fable 5.2 同价，而 6 Astra 与 Fable 5 都是 $10/$50。对做成本模型的工程师，这是把竞品定价对齐关系一次讲清的一手记录。",
+    "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2225期 - 2026-11-18 20:01",
+    "summary": "本期聚焦[腾讯WorkBuddy]与微信[小微]双双突破千万级日活，国产AI助手规模化落地；同时美国将AI芯片出口管制扩展到[远程访问]，并涌现多个新模型与评测工具。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Colombo 自主科研跑通五十多项优化",
+    "summary": "Colombo 会自己组织猜想、做数学研究并按证据重规划，自主科研系统完整论文称它已在五十多个优化设定上拿到最优或近优结果。系统还带对抗式共同爬升与 Lean 形式化认证。🔬。",
+    "url": "https://arxiv.org/abs/2611.23080",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI Releases GPT-6.2 Astra and Sol With a 20% Cheaper Astra API",
+    "summary": "MarkTechPost 报道 OpenAI 于 2026 年 11 月 17 日发布 GPT-6.2 Astra 与 GPT-6.2 Sol，Astra 的 API 价格下调 20% 至每百万 token $8/$40，并在 Artificial Analysis 智能指数上排名第二。对做模型选型与预算规划的团队，这条把「能力位次」和「单价」两个维度同时给了参照。",
+    "url": "https://www.marktechpost.com/2026/11/17/openai-gpt-6-2-astra-sol-release/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2224期 - 2026-11-18 16:02",
+    "summary": "本期[腾讯混元 Hy4 flash]与[字节 Seedance 2.5]扩充开源与视频模型供给，[Claude Code 的 Code Mode]让工具调用并行化；行业侧[英伟达高层风波]持续，具身智能融资热度不减。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_1602",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "EvoX 让软件智能体跨代持续进化",
+    "summary": "EvoX 用持久递归软件世界让后来者继承代码、契约与测试，自主软件进化系统论文给出四项研究，🧬成果跨代累积。系统用1019轮智能体会话、123.4小时写出21.97万行 Rust 源码的 C 编译器，固定测试的通过数从61升到93。",
+    "url": "https://arxiv.org/abs/2608.10450",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Co-Designing Sparse Attention for Efficient Long-Context Inference",
+    "summary": "NVIDIA 开发者博客讨论长上下文推理下稀疏注意力的协同设计：当 agent 负载、长文档与大型代码库把上下文从几万 token 推到几十万 token，注意力的计算与显存开销必须靠稀疏化来压。文章强调的是算法稀疏模式与硬件、kernel 的一体化设计，而不是单纯剪枝。对做长上下文 serving 的团队，这是决定成本曲线的一个关键杠杆。",
+    "url": "https://developer.nvidia.com/blog/co-designing-sparse-attention-for-efficient-long-context-inference/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2223期 - 2026-11-18 12:01",
+    "summary": "本期重点：微软 Ignite 将[Copilot 升级为工作操作系统]，[Anthropic IPO 定价上调至每股 80 美元以上]、估值或达 1.6 万亿美元，英伟达则一边交出营收翻倍财报，一边宣布[停售 H200 至中国]。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "零温注意力实现千倍规模泛化",
+    "summary": "高阶注意力只保留最佳见证项和与其并列的计数，零温注意力机制论文附有完整证明，❄️只传递比较用的比特。模型在超出训练规模千倍的检索集合上仍近乎全对。",
+    "url": "https://arxiv.org/abs/2611.11937",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "基于昇腾算力的大模型推理加速研究与实践｜AICon北京",
+    "summary": "AICon 北京的这个分享聚焦基于昇腾算力的大模型推理加速研究与实践，属于国产硬件栈上把推理性能真正跑起来的工程经验类议题。对正在评估或已落地昇腾推理集群的团队，这类来自一线的调优与踩坑内容往往比框架文档更解决问题。",
+    "url": "https://www.infoq.cn/article/NbShAFtZqRSsFrsVu6aj?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2222期 - 2026-11-18 08:01",
+    "summary": "本期焦点：[ARC Prize 公布 Mercury 3 Preview 评测]，ARC-AGI-1 达 88.5%；[面壁 MiniCPM-V 4.7]实现 35B-A3B 端侧无损运行。产品侧[ElevenLabs 医疗实时转录]与[First Person Labs 个人用户模型]值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "工具检索让 GPT 偏信自算结果",
+    "summary": "同样一次模拟，报告改走文件检索后，工具证据检索完整研究显示部分 GPT 明显失分，📉GPT-5.1 与 GPT-5.2 分别掉11.3和7.9分。原因是模型跳过权威报告，改用自己的高精度输出文件并四舍五入到相邻选项。",
+    "url": "https://arxiv.org/abs/2610.26836",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "fa4-v4.0.0.beta40",
+    "summary": "FlashAttention 发布 fa4 v4.0.0 beta40，改动集中在边界与安全性：CuTe 路径改为对 aux_tensors 索引做截断而非按 seqlen 取模，FA3 在 mha_fwd 中检查 kv_batch_idx 长度，修复空 KV-cache 页表导致的越界读，并对页表无列的 paged KV cache 提前返回、拒绝 key 数达到 2 的 31 次方的页表。对把 FA 用在 paged KV cache 生产环境的人，这些是针对真实故障模式的补丁而非性能更新。",
+    "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta40",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2221期 - 2026-11-18 04:01",
+    "summary": "本期重点：[Gemini 4 Hydrogen]配套 Antigravity 机器人插件，把机械臂开发压缩到「一小时」，[Cognition Devin Bots]让 agent 组队接管研发流程；Gemini Tasks 向数亿用户免费开放。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达退出中国市场震动算力供应",
+    "summary": "英伟达临时首席执行官公开表态，公司不再向中国卖芯片，退出决定与收入代价报道追问代价有多大，🚫决定发生在领导层剧烈变动之后。全球算力供应格局可能被重塑。",
+    "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.2 Astra 🧠, Microsoft’s seven models 🚀, Replit Missions 🤖",
+    "summary": "TLDR AI 这一期汇总了 GPT-6.2 Astra 的发布、微软一次放出七个模型的动向，以及 Replit Missions 这类产品化 agent 能力。对每天要扫一遍行业动态的从业者，这是把模型侧与工具侧变化放在同一页里的速览。",
+    "url": "https://tldr.tech/ai/2026-11-18",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2220期 - 2026-11-18 00:01",
+    "summary": "本期焦点是[AI 安全与监管]升温：加州总检察长就失控智能体攻击事件起诉 OpenAI；同时[李飞飞率队加入 AMD]完成 82 亿美元并购交割，[Isomorphic Labs]再融 50 亿美元加码 AI 制药。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "美国商务部收紧海外算力出口",
+    "summary": "美国发了一条临时规则：海外数据中心要给中国公司供大量算力，得先拿许可证，海外算力许可新规解读提到已在运营的只给90天缓冲。📜新加坡、马来西亚、泰国、印尼、巴西五国进口先进 AI 芯片同样要许可。",
+    "url": "https://x.com/xiaohu/status/2122628662013177948",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Managed NVIDIA Dynamo on Amazon SageMaker HyperPod Inference",
+    "summary": "Amazon SageMaker HyperPod Inference 开始支持 NVIDIA Dynamo 做分布式推理，提供多节点与分离式 serving、KV 感知路由以及自动故障恢复，用户不必自己搭编排层就能跨多机服务大模型。对已经在 AWS 上跑大模型推理的团队，这相当于把原来需要自研的调度与容错能力变成了托管项，直接影响部署成本与运维负担。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/managed-nvidia-dynamo-on-amazon-sagemaker-hyperpod-inference/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达单季净利达653亿美元",
+    "summary": "英伟达第三季度营收1158.44亿美元，季度财报与管理层变动报道记录了财报数据，💰数据中心收入1076亿美元、占到九成以上，Rubin 新一代计算平台已开始出货。黄仁勋公开说很愿意回来当 CEO，董事会仍在找正式继任者。",
+    "url": "http://weixin.sogou.com/weixin?type=2&query=%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80+%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%88%86%E8%B5%9A653%E4%BA%BF%E7%BE%8E%E5%85%83%EF%BC%8C%E9%BB%84%E4%BB%81%E5%8B%8B%EF%BC%9A%E2%80%9C%E5%BE%88%E6%84%BF%E6%84%8F%E5%9B%9E%E6%9D%A5%E6%8B%85%E4%BB%BBCEO%E2%80%9D",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon SageMaker AI real-time endpoints now support KV cache aware routing",
+    "summary": "Amazon SageMaker AI 的实时推理端点上线了 KV cache 感知路由，会把每个请求发给缓存中与其 prompt 匹配最长的那台实例，减少重复的 prefill。官方同时对比了它与 prefix-aware 路由的适用场景，并说明在单模型端点和推理组件端点上如何开启、调用与验证。对做长系统提示、多轮对话和高并发 serving 的团队，缓存命中率优化直接决定首 token 延迟与吞吐。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-real-time-endpoints-now-support-kv-cache-aware-routing/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "寰宇元心推进自进化算力研发",
+    "summary": "核心成员来自 DeepSeek、Kimi、GLM、Meta 与腾讯混元，团队与测试进展原帖称系统让模型自己找瓶颈、改代码、再上真机验证，🧠MiniMax H3 在昇腾上的端到端推理速度比 SGLang 官方部署提高28.8%至33.7%，视频生成质量保持不变。首版硅光测试芯片已经流片，离成熟产品还有距离。",
+    "url": "https://m.okjike.com/originalPosts/6afcf67d136b2761c6e04572",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "面向多智能体应用的大模型推理调度与缓存优化｜AICon北京",
+    "summary": "InfoQ 的 AICon 北京站给出一个议题：面向多智能体应用的大模型推理调度与缓存优化，聚焦多 Agent 协作下请求量成倍放大后，调度策略与 KV 缓存复用该怎么做。多个智能体共享上下文、反复调用同一基座模型时，前缀复用与实例间路由的收益远大于单 Agent 场景，这是 Agent 真正落地后必然遇到的 infra 问题。",
+    "url": "https://www.infoq.cn/article/X8xujm6xovp7z2YzWbpM?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "从快速部署到统一运营，Agent 的 AH Moment 来了！",
+    "summary": "InfoQ 讨论 Agent 从快速部署走向统一运营的拐点，认为企业已跨过单点 Demo 阶段，开始面对多 Agent 的注册、权限、观测、成本与生命周期管理。对从业者而言，竞争重心正从模型能力转向平台化的 Agent 运维层，谁能把散落的 Agent 与工具统一纳管，谁才能规模化。",
+    "url": "https://www.infoq.cn/video/AWswNIWpvlNvaWY8MTDd?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Hugging Face now routes model requests through OpenRouter for the best price or speed",
+    "summary": "Hugging Face 把模型请求改为经 OpenRouter 转发，由后者自动选择最便宜或最快的供应商，同时取消用户自带 API key 的做法；官方称新路由把容量类错误降低了 46%。对依赖 HF 推理接口的开发者，这既可能带来更低成本与更高可用性，也意味着供应商选择权和计费透明度转移到了中间层。",
+    "url": "https://the-decoder.com/hugging-face-now-routes-model-requests-through-openrouter-for-the-best-price-or-speed/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "awesome-mcp-servers 收录近十万星",
+    "summary": "智能体接外部工具最缺统一选型入口，MCP服务资源合集汇总了多类服务，📚已获 97858个Star，工具发现成本被继续压低。",
+    "url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "800 个 MCP Server、5000 个工具，AI 智能体的“微服务危机”来了",
+    "summary": "InfoQ 关注 MCP 生态的爆炸式增长：已有约 800 个 MCP Server、5000 个工具，Agent 面对的工具目录正在重演微服务的服务爆炸问题。工具发现、描述质量、权限与版本管理若不解决，Agent 的调用准确率和可维护性都会被拖垮，作者称之为智能体的微服务危机。",
+    "url": "https://www.infoq.cn/article/FrDlAvNIwkr8ttdvWMCC?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Appwrite 补齐代理后端云零件",
+    "summary": "Appwrite 把认证、数据库、存储、函数、消息、托管、实时与 WAF 一次到位，代理与开发者云底座缓解后端碎片化，🏗项目已获 58129星，今日新增239星。",
+    "url": "https://github.com/appwrite/appwrite",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Computer Use + Translate + MiniMax-H3-Image + New Model Picker",
+    "summary": "Unsloth 这次更新加入 Computer Use 测试版，让本地模型能看屏幕并操作应用，同时提供 Unity、Unreal Engine、Blender、Roblox 的 MCP 集成；MiniMax-H3-Image 支持 GGUF、FP8、INT8 量化并可做 LoRA 训练，另外新增作曲栏内的模型切换器和本地翻译页面。对本地部署与多模态微调的用户，量化格式和 LoRA 支持的扩展是最直接的实用价值。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.919-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenVINO 专攻端侧推理优化",
+    "summary": "OpenVINO 这套工具链覆盖多类硬件，端侧推理优化工具链帮开发者降延迟、提吞吐，⚡已获 11218个Star。端侧模型常被性能与硬件适配卡住，它正是针对这一环节。",
+    "url": "https://github.com/openvinotoolkit/openvino",
+    "section": "🔓 开源热榜",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini新模型Neon箭在弦上，网友：遍历元素周期表？",
+    "summary": "量子位报道 Gemini 新模型 Neon 即将发布，网友调侃谷歌是在遍历元素周期表给模型命名。这类爆料在官方确认前只能作为风向参考，但反映出 Gemini 系列迭代节奏正在加快、命名体系也在重构。",
+    "url": "https://www.qbitai.com/2026/11/510922.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.2 十分钟完成 Blender 建模",
+    "summary": "用户晒出 GPT-6.2 配合 Blender 的建模过程，快速建模完整演示显示全程大约十分钟，🎨成品效果获得正面评价。GPT-6.2 Astra 与 Sol 已向 ChatGPT Work 和 Codex 用户放出，游戏资产制作周期正在被压缩。",
+    "url": "https://x.com/berryxia/status/2122896773622661611",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "nightly-last-green: ZeRO-3: fix stale and lost gradients of unused parameters (#8981)",
+    "summary": "DeepSpeed 修掉 ZeRO-3 的一个隐蔽 bug：梯度分区跨 step 保留且只在 micro-step 0 被覆盖，于是某个 step 里没拿到梯度的参数（被跳过的分支、未激活的专家）会沿用上一次的旧梯度被优化器重复应用，而 ZeRO-1/2 会将其置零。修复后，参数在 step 或 zero_grad 之后的首个梯度会覆盖分区，梯度累积边界处没收到梯度的分区会被清零，optimizer offload 场景也做了对应处理。对跑 MoE 或动态分支训练的团队，这直接关系到训练正确性。",
+    "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-last-green",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.2难产！OpenAI怕了",
+    "summary": "量子位报道 OpenAI 的 GPT-6.2 发布延期，并把它比作 2022 年被动应战的谷歌。传闻层面不宜当作事实，但头部实验室在大版本迭代上节奏放缓、被竞品牵着走的叙事，已经成为当下模型竞争格局的一部分。",
+    "url": "https://www.qbitai.com/2026/11/510914.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SID AI Releases SID-2 Agentic Search Model With 0.720 NDCG Swarm Mode",
+    "summary": "SID AI 发布用强化学习训练的 agentic 搜索模型 SID-2：单智能体在 3.11 秒内拿到 0.585 NDCG，12 个智能体组成的 Swarm 模式把分数推到 0.720 NDCG，在其自建基准上超过 GPT-6 Astra。把搜索做成可多智能体并行扩展的 RL 策略，是检索侧少见的把 swarm 与排序指标直接挂钩的尝试，值得做 RAG 与搜索 Agent 的团队关注其基准设定與延迟取舍。",
+    "url": "https://www.marktechpost.com/2026/11/17/sid-ai-sid-2-agentic-search-swarm/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic Adds Code Mode to Claude Code: Claude Now Chains Tool Calls in JavaScript",
+    "summary": "Anthropic 在 Claude Code v2.1.323 中加入实验性的 Code Mode，让 Claude 直接写 JavaScript 把 Bash、Read、Edit 等工具调用串成一步执行，并在长命令运行期间继续对话。相比一次次工具往返，把编排下沉到代码能显著压缩调用轮次与上下文开销，是 Agent 工具调用范式的实用演进。",
+    "url": "https://www.marktechpost.com/2026/11/17/anthropic-claude-code-code-mode-javascript-tool-calls/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "router-v0.1.0",
+    "summary": "SGLang 的 sgl-router 发布 v0.1.0，开始从 CI 直接产出 router 镜像与 PyPI wheel。此前需要从源码编译或用内部脚本部署的路由组件，现在有了可版本化的分发渠道，对做多实例 PD 分离和缓存感知路由的生产部署是个便利。",
+    "url": "https://github.com/sgl-project/sglang/releases/tag/router-v0.1.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+    "summary": "Hugging Face 上放出 Rumble-2-Flash，一个仅 0.5B 参数、支持 40 多种语言的开源语音模型。小体积加多语种覆盖，适合端侧或低成本批量转写场景，也为语音链路的蒸馏与微调提供了新基线。",
+    "url": "https://huggingface.co/blog/rumble-2-flash",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "External sandboxes for coding agents",
+    "summary": "Simon Willison 介绍外部沙箱模式：把 Agent 生成的代码放到独立环境中执行，而不是在开发机上直接跑，从而在不担心误操作或提示注入造成破坏的前提下试用本地模型。他与 Prime Radiant 合作推进该项目，对想让编码 Agent 接触真实文件系统又必须控制风险范围的团队，这是一套可直接借鉴的隔离思路。",
+    "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Perplexity Computer Adds Multiagent: Up to 16 AI Agents That Cross-Check Work",
+    "summary": "Perplexity 给 Computer 加上 Multiagent 档位，位于 Ultra 之上，由主控 Agent 调度最多 16 个子 Agent，分别跑在 Claude、GPT 与 Gemini 上，共享中间发现并交叉核对彼此结果。多模型混跑加互检的思路是用并行冗余换可靠性，代价则是 token 消耗与编排复杂度。",
+    "url": "https://www.marktechpost.com/2026/11/17/perplexity-computer-multiagent-effort-level/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Reducing token costs and latency in Amazon Bedrock AgentCore JSON workloads",
+    "summary": "Amazon Bedrock AgentCore 上的生产 Agent 一旦处理多 MB 级 JSON，token 成本和延迟就会失控。这篇给出三种可组合的做法：把大块产物卸载到 S3、按需分页返回结果、对字段字典做压缩，合起来把每轮 token 用量最多降低 71%、延迟最多降低 80%。对做重度工具调用的 Agent，这是一份很实在的上下文工程清单。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/reducing-token-costs-and-latency-in-amazon-bedrock-agentcore-json-workloads/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Announcing AI data preparation capabilities in Amazon SageMaker: Build high-quality datasets for model development workflows",
+    "summary": "Amazon SageMaker AI 新增 AI 数据准备能力，可在自己的 notebook 或 IDE 里通过 Python SDK 与一个 agent skill 生成合成样本、评估并改进数据集、大规模自动标注，以及引入专家复核。数据质量是微调与评测的天花板，把合成、标注、评审串成流水线，省掉的是自建工具链的工程量。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/announcing-ai-data-preparation-capabilities-in-amazon-sagemaker-build-high-quality-datasets-for-model-development-workflows/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Reason over time-series data with OpenTSLM on Amazon SageMaker JumpStart",
+    "summary": "开源时序语言模型家族 OpenTSLM 上架 Amazon SageMaker JumpStart，可直接部署到实时端点，并用 TimeNet 与 SageMaker 训练任务在自有数据上微调。文中给出 Nexthink 与 Aionic Labs 用它做主动式 IT 支持的案例。对想把时序预测从专用模型换成语言模型范式的团队，这是一条现成的落地路径。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/reason-over-time-series-data-with-opentslm-on-amazon-sagemaker-jumpstart/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12520",
+    "summary": "llama.cpp 构建 b12520 优化了 ggml-cpu 后端：对大表 GET_ROWS 这类 embedding 查找操作改用全部线程，此前这类算子容易退化成单线程瓶颈。对 CPU 推理和 MoE 场景，这能直接改善 embedding 密集部分的吞吐。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12520",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

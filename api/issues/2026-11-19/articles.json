@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Anthropic IPO定价83美元，NVIDIA RTX Spark开售",
+    "summary": "Anthropic确定IPO发行价为每股83美元，高于此前区间，股票代码ANT，由高盛与摩根士丹利承销，次日登陆纳斯达克。NVIDIA RTX Spark紧凑台式机由ASUS、Dell、MSI同步发售，搭载Grace CPU与Blackwell GPU，最高支持128GB统一内存，可本地运行并微调1200亿参数模型。此外，LangChain的Deepagents下载量突破5000万，Hugging Face发布实践文章展示在32GB内存下运行180B MoE模型的方法。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_1201",
+    "section": "🔥 今日焦点",
+    "review": "Anthropic高价IPO标志AI头部公司正式进入公开市场，资本化进程加速。RTX Spark的本地化能力与Deepagents的普及，显示Agent基础设施正从云端向边缘与标准化工具链下沉。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Neon推送，NVIDIA发布并行生成模型",
+    "summary": "Google发布Gemini 4 Neon，定位介于Carbon与Hydrogen之间，在Artificial Analysis智能指数获61分，即日通过API与Gemini App向Pro/Ultra用户开放，并接管Tasks执行。NVIDIA推出Nemotron-Labs-Sigma，采用并行块生成技术替代逐token解码，论文与权重已公开。LMArena数据显示GPT-6.2 Astra在多个类别上较上代提升，Hugging Face则发布了关于微调耗时与FLOPs估算差异的技术分析。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0801",
+    "section": "🚀 产品发布",
+    "review": "Gemini 4 Neon通过细分定位优化推理成本与速度，NVIDIA的并行生成技术挑战传统解码范式，旨在提升数学与代码任务效率。模型竞争焦点正从单一能力转向推理效率与工程落地细节。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Devin Bots上线，实现多Agent协同开发",
+    "summary": "Cognition宣布Devin Bots正式上线，该产品经过1000多名测试者数周打磨。Devin Bot作为持久化工程队友，能端到端负责目标，规划项目并调度多个Devin实例进行构建、测试与改进。此前Devin仅能处理单任务单PR，需人工协调，现在Devin Bot可自动检查工作并返回结果，解除了一次只跑一个任务的限制，支持从固件编写到每周合并数千个PR的场景。",
+    "url": "https://x.com/devindevelopers/status/2122750919024759027",
+    "section": "🚀 产品发布",
+    "review": "Devin Bots将Agent从单点任务执行升级为多Agent协同管理，解决了人工协调瓶颈。这标志着AI编程工具从“辅助编码”向“自主交付”演进，但大规模并行Agent的可靠性与成本控制仍是落地关键。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Hydrogen推出机器人插件，支持仿真到真机",
+    "summary": "Google DeepMind发布Gemini 4 Hydrogen及Antigravity机器人插件，允许用户连接支持的机械臂，在MuJoCo仿真中练习后，通过自然语言在真实世界执行任务。该模型在拾取放置等日常控制任务上性能匹配更大的Argon模型，且成本更低，并在3D空间判断上超越Gemini Robotics ER 2。用户可通过上传照片或提示词构建3D场景，调整物体与运动，从草图到可工作的传送带分拣器仅需约一小时。",
+    "url": "https://x.com/GoogleDeepMind/status/2122767521925230896",
+    "section": "🚀 产品发布",
+    "review": "Gemini 4 Hydrogen通过“仿真-真机”闭环降低机器人编程门槛，自然语言交互简化了部署流程。其在控制任务上的高性价比与空间感知优势，加速了物理AI在工业场景的普及，但跨环境可靠性仍需数据积累。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达停止向中国销售H200芯片",
+    "summary": "英伟达临时CEO Colette Kress宣布，公司不再向中国销售H200芯片，终止了此前通过美国转运并缴纳25%关税的合规路径。这一决定发生在CEO黄仁勋离职后，同期英伟达还成立了董事会级委员会以监督出口管制合规。投行Jefferies预测，新出口规则可能导致英伟达明年数据中心收入减少440亿至620亿美元，尽管Kress声称因Vera Rubin等芯片需求积压，营收总额不会受影响。",
+    "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+    "section": "💼 行业动态",
+    "review": "英伟达彻底切断对华高端芯片供应，标志着美国AI算力封锁进入执行深水区。此举虽符合政治正确，但将直接冲击其营收预期，并加速中国本土芯片替代进程。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude Code引入实验性Code Mode",
+    "summary": "Anthropic在Claude Code v2.1.323版本中推出实验性Code Mode，允许Claude通过编写JavaScript代码将Bash、Read、Edit等工具调用串联为单步执行。该功能支持并行运行命令和结果过滤，背景代码最长可运行2小时，而等待中的代码超时限制为10分钟。目前该功能仅限Claude订阅或Console账户使用，不支持Bedrock、Google Cloud等网关服务，且Auto模式下的代码审查粒度较粗。",
+    "url": "https://www.marktechpost.com/2026/11/17/anthropic-claude-code-code-mode-javascript-tool-calls/",
+    "section": "💼 行业动态",
+    "review": "将工具编排下沉至代码层有效压缩了Agent的交互轮次与上下文开销，是提升复杂任务执行效率的务实改进。但受限的平台兼容性和较粗的审查机制，限制了其在企业级生产环境中的大规模落地。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "27B模型实现无梯度自我权重改写",
+    "summary": "arXiv论文《Language Models Can Rewrite Their Own Weights》展示了一个27B开源模型通过自身推理直接修改权重的过程，无需梯度计算或传统训练流程。该模型在诊断自身失败后，通过自我改写使未见过的题目准确率提升6.6分，并在八次连续会话中持续改进。此外，该模型还能修复受损副本，将其在视觉基准上的表现从7%恢复至80%以上，且该能力随模型规模扩大而显现。",
+    "url": "https://arxiv.org/abs/2611.21885",
+    "section": "💡 前沿研究",
+    "review": "模型自我改写权重打破了训练与推理的界限，为递归自我改进提供了技术路径。但当前实验局限于特定模型家族和任务，其通用性、安全性及长期稳定性仍需严格验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Colombo系统实现自主优化研究",
+    "summary": "arXiv论文介绍了Colombo，一个针对基于Oracle优化的自主科研系统。该系统通过自我组织机制，协调猜想形成、数学调查及基于证据的重规划，并在“复杂度图谱”中记录前沿设定。Colombo采用对抗式共同爬升策略，通过算法与困难家族的相互挑战来揭示信息使用机制，并利用Lean进行形式化认证。目前，该系统已在五十多个优化设定上建立了最优或近最优速率。",
+    "url": "https://arxiv.org/abs/2611.23080",
+    "section": "💡 前沿研究",
+    "review": "Colombo展示了AI在数学优化领域自主发现与验证的能力，其形式化认证机制增强了结果的可信度。然而，该系统目前局限于特定优化问题，向更广泛科学领域扩展的泛化能力尚待检验。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Rumble-2-Flash：0.5B参数开源语音模型支持40+语言",
+    "summary": "Reson8团队在Hugging Face开源了Rumble-2-Flash，这是一款基于Apache 2.0协议的0.5B参数语音识别模型，支持40多种语言及自动语言检测。该模型采用Qwen3-ASR架构，通过on-policy蒸馏技术从更大的生产模型Rumble-2中提炼而来，无需自定义代码即可在Transformers和vLLM中运行。在性能方面，它在Open ASR Leaderboard多语言赛道平均错误率为6.96%，优于15倍规模的Meta omniASR-LLM 7B；在真实电话场景下，其表现与NVIDIA 30B参数的Nemotron 3.5 Transcribe相当，且处理速度极快，全批次下RTFx超过7000。",
+    "url": "https://huggingface.co/blog/rumble-2-flash",
+    "section": "🔓 开源热榜",
+    "review": "小参数模型在语音识别上逼近大模型表现，显著降低了多语种转写的部署门槛，但需验证其在极端噪声环境下的长期稳定性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "n8n：集成原生AI能力的开源工作流自动化平台",
+    "summary": "n8n是一个公平代码（Fair-code）的工作流自动化平台，GitHub星标数已突破21万。该平台允许用户结合可视化构建与自定义代码，原生支持AI能力，并内置超过400项集成。它支持自托管和云服务两种部署方式，旨在为AI代理和工作流自动化提供基础设施。项目拥有活跃的社区，包含数千次提交和大量贡献者，其架构设计强调低代码与专业开发的结合，适用于需要灵活定制自动化流程的场景。",
+    "url": "https://github.com/n8n-io/n8n",
+    "section": "🔓 开源热榜",
+    "review": "将AI能力原生嵌入工作流引擎，解决了传统自动化工具与AI代理割裂的问题，但自托管模式下的安全配置复杂度仍是企业落地的主要挑战。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "CLI-Anything：让软件直接变为代理原生的开源项目",
+    "summary": "HKUDS团队推出的CLI-Anything项目旨在通过命令行接口（CLI）使所有软件具备代理原生（Agent-Native）特性。该项目在GitHub上已获得超过6万星标，其核心思路是将软件能力包装成CLI，从而让AI代理无需逐项封装即可直接调用软件功能。仓库中包含了针对Blender、GIMP、LibreOffice、n8n等多种软件的agent-harness实现，展示了广泛的适用性。该项目采用Apache-2.0许可，致力于降低AI代理与现有软件生态交互的技术壁垒。",
+    "url": "https://github.com/HKUDS/CLI-Anything",
+    "section": "🤖 Agent & 工具",
+    "review": "通过CLI统一软件接口，简化了代理调用复杂应用的逻辑，但依赖CLI的稳定性与文档质量，若上游软件接口变动频繁，维护成本可能较高。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
