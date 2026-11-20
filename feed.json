@@ -3,6 +3,184 @@
   "issues": [
     {
       "schema_version": 1,
+      "issue_date": "2026-11-20",
+      "content_date": "2026-11-20",
+      "published_at": "2026-11-20T08:13:21.564463+00:00",
+      "article_count": 12,
+      "podcast_turns": 18,
+      "tts_mode": "video-api-audio-video",
+      "tts_model": null,
+      "tts_speed": null,
+      "tts_reference_files": null,
+      "llm": {
+        "provider": "opencode-go",
+        "model_chain": [
+          "qwen38-27b"
+        ],
+        "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+        "calls": 12,
+        "call_details": {
+          "selection": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "selected_count": 12,
+            "target_count": 12,
+            "degraded": false
+          },
+          "selection_attempts": [
+            {
+              "attempt": 1,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 48,
+              "target_count": 12,
+              "validation_issues": []
+            },
+            {
+              "attempt": 2,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 47,
+              "target_count": 12,
+              "validation_issues": []
+            },
+            {
+              "attempt": 3,
+              "validation_attempt": 1,
+              "model": "lenovo:qwen38-27b",
+              "usage": {},
+              "candidate_count": 46,
+              "target_count": 12,
+              "validation_issues": []
+            }
+          ],
+          "cross_day_dedupe": {
+            "window_days": 7,
+            "recent_sent_count": 83,
+            "exact_url_blocks": [
+              {
+                "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_1201",
+                "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_1201",
+                "previous_date": "2026-11-19"
+              },
+              {
+                "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0801",
+                "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0801",
+                "previous_date": "2026-11-19"
+              }
+            ],
+            "high_confidence_event_blocks": [],
+            "reviews": [
+              {
+                "attempt": 1,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": [
+                  {
+                    "current_url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+                    "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0801",
+                    "reason": "核心主体均为Google DeepMind，动作均为发布Gemini 4 Neon模型。今日新闻为官方发布公告，此前7天新闻已报道该模型的发布、定位及API开放情况，属于同一底层事件。"
+                  }
+                ]
+              },
+              {
+                "attempt": 2,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": [
+                  {
+                    "current_url": "https://www.marktechpost.com/2026/11/18/google-gemini-4-neon-release/",
+                    "previous_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0801",
+                    "reason": "两者均报道Google发布Gemini 4 Neon模型，核心主体（Google/Gemini 4 Neon）、动作（发布）和关键指标（AA智能指数61分）完全一致，属于同一事件的重复报道。"
+                  }
+                ]
+              },
+              {
+                "attempt": 3,
+                "model": "lenovo:qwen38-27b",
+                "usage": {},
+                "duplicates": []
+              }
+            ],
+            "final_pass": true
+          },
+          "editorial_batches": [
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            },
+            {
+              "model": "lenovo:qwen38-27b",
+              "usage": {}
+            }
+          ],
+          "digest_summary": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_review": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "podcast_attempts": [
+            {
+              "attempt": 1,
+              "generation": {
+                "model": "lenovo:qwen38-27b",
+                "usage": {}
+              },
+              "structure_issues": [],
+              "review": {
+                "pass": true,
+                "issues": [
+                  "S1最后一轮和S2最后一轮出现了明显的播客结束语（'感谢大家的收听'、'祝大家工作顺利'），虽然符合播客惯例，但根据指令'不应出现固定问候和寒暄'，这属于轻微违规，建议精简为更自然的收尾或移除客套话。",
+                  "S2在提到'Unsloth对AMD NPU的支持'时，表述略显突兀，前文未铺垫硬件话题，可稍作过渡。"
+                ],
+                "repair_instruction": "1. 修改S1和S2的最后两轮发言，移除'感谢收听'、'祝大家工作顺利'等固定寒暄语，改为直接结束话题或简短有力的总结，例如S1说'好了，今天的重点就是这些，我们下期见'，S2说'没错，期待下期，再见'。2. 在S2提到Unsloth和NPU之前，增加半句过渡，如'说到硬件效率，Unsloth的更新也值得一提...'，使话题转换更自然。"
+              },
+              "review_model": "lenovo:qwen38-27b",
+              "review_usage": {}
+            }
+          ],
+          "podcast_harness": {
+            "attempts": 1,
+            "best_attempt": 1,
+            "final_pass": true,
+            "final_issues": [
+              "S1最后一轮和S2最后一轮出现了明显的播客结束语（'感谢大家的收听'、'祝大家工作顺利'），虽然符合播客惯例，但根据指令'不应出现固定问候和寒暄'，这属于轻微违规，建议精简为更自然的收尾或移除客套话。",
+              "S2在提到'Unsloth对AMD NPU的支持'时，表述略显突兀，前文未铺垫硬件话题，可稍作过渡。"
+            ],
+            "structure_issues": [],
+            "loop_exhausted": false,
+            "converged": false
+          }
+        }
+      },
+      "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-20/articles.json",
+      "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-20/candidate-news.json",
+      "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-20/podcast-script.json",
+      "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-20/podcast-script.txt",
+      "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-20.txt",
+      "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-20/podcast-moss-input.txt",
+      "voice_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-20/voice.json",
+      "voice_timeline_url": "https://dedarek.github.io/ai-daily-news-workflow/voice/2026-11-20.json",
+      "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-20/manifest.json",
+      "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-20.html",
+      "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-11-20.mp3",
+      "video_url": "https://dedarek.github.io/ai-daily-news-workflow/video/2026-11-20.mp4"
+    },
+    {
+      "schema_version": 1,
       "issue_date": "2026-11-19",
       "content_date": "2026-11-19",
       "published_at": "2026-11-19T08:29:04.634770+00:00",

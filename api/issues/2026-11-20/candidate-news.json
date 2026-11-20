@@ -1,0 +1,452 @@
+[
+  {
+    "title": "Google DeepMind Releases Gemini 4 Neon: 1M Context, #1 on AA Coding Agent Index",
+    "summary": "Google 发布 Gemini 4 Neon，百万 token 上下文，定价为每百万 token 输入 3 美元、输出 15 美元，拿到 AA 智能指数 61 分并在 AA 编码智能体榜单位列第一。对做 agent 与代码工具的团队来说，长上下文叠加编码 agent 榜首，意味着又多了一个可直接替换的旗舰选项。",
+    "url": "https://www.marktechpost.com/2026/11/18/google-gemini-4-neon-release/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2235期 - 2026-11-20 12:01",
+    "summary": "本期焦点：[GPT-6.2 Sol]把前沿能力成本压到约 15%，a16z 押注可携带的[个人用户模型]；同时[Token 欺诈]与多项 Agent 工具、支付能力更新值得产品团队留意。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-20_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.34.0",
+    "summary": "vLLM v0.34.0 合并了 1061 个 commit、来自 412 位贡献者，新增 10 个模型支持。最影响部署的是可扩展 KV cache 默认开启，按预热后实际空闲显存自动定容，多数模型能拿到更大缓存与更高吞吐，官方建议直接把配置里的 gpu_memory_utilization 删掉；同时 Model Runner V1 被移除、V2 成为唯一 GPU runner，Blackwell 与 MI355 上有明显加速。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2234期 - 2026-11-20 08:01",
+    "summary": "本期[Gemini]双线推进：Mac 端[Computer use]开始推送、Tasks 向数亿用户免费；模型侧[Praxis-1]机器人世界模型与[GPT-Live-1.1]语音 API 值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-20_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google's latest AI model is faster, cheaper and smarter than its flagship predecessor from just weeks ago",
+    "summary": "Gemini 4 Neon 是 Google 七周内发布的第四个模型，速度接近同门 Carbon 的两倍，在多数基准上更强，价格却更低。旗舰被自家新模型如此快速超越，说明迭代周期已压缩到以周计，选型时的锁定成本需要重新评估。",
+    "url": "https://the-decoder.com/googles-latest-ai-model-is-faster-cheaper-and-smarter-than-its-flagship-predecessor-from-just-weeks-ago/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2233期 - 2026-11-20 04:01",
+    "summary": "本期重点：亚马逊[搜索 Agent 登顶 Search Arena]，Cognition 以[Devin Bots]持续扩展编码以外场景；同时[是否应放缓 AI]的公共辩论在 YC 与 a16z 平台持续升温。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-20_0401",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing Gemini 4 Neon",
+    "summary": "Google DeepMind 正式发布 Gemini 4 Neon，官方定位为面向软件开发、知识工作与科学的新一代前沿模型。具体能力指标与定价在同批报道中展开，本条为发布公告本身，可作为确认模型命名与定位的官方信源。",
+    "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2232期 - 2026-11-20 00:01",
+    "summary": "本期焦点是[Gemini 4 Neon]登顶 AA Coding Agent Index，以及[Anthropic IPO]落地、募资 813 亿美元；云侧 SageMaker 与太空算力也有新动作。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-20_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google ships Gemini 4 Neon, its fourth new Gemini model in a month",
+    "summary": "Gemini 4 Neon 定位前沿模型，主打软件开发、知识工作与科学研究，原生处理文本、图像、视频、音频和 PDF，上下文窗口达一百万 token。定价为每百万输入 3 美元、输出 15 美元，高于此前的 Gemini 4 系列，属于用更强多模态与更长上下文换溢价的策略。",
+    "url": "https://the-decoder.com/google-ships-gemini-4-neon-its-fourth-new-gemini-model-in-a-month/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2231期 - 2026-11-19 20:01",
+    "summary": "本期亮点集中在图像与实时交互模型：[SenseNova U1 Pro]在 Design Arena 双榜拿下中国第一，[SeedRealtime 1.0]实时音视频通话 API 全量上线；Meta 的[Muse Ember]则在效率模型榜领先竞品。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_2001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+    "summary": "OpenAI 介绍了内部的 Performance Factory：一套由 Codex 驱动的自动化工作流，持续在 ChatGPT 的代码库里定位并修复性能问题。对做推理服务的人来说，这展示了用代码模型做常态化性能回归与优化的工程范式，把性能治理从人肉排查变成一条流水线。",
+    "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2230期 - 2026-11-19 16:01",
+    "summary": "本期聚焦[AI 商业化与监管]：腾讯[WorkBuddy]收入年化破 5 亿美元，英伟达因对华芯片销售遭[SEC 民事调查]；[DeepSeek]同步调整 API 计费。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_1601",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
+    "summary": "AINews 本期聚焦 Gemini 4 Neon，称其以中端定位拿到智能指数 61 分，被视为对标 Anthropic Opus 与 xAI Sol 的竞争者；同期还提到 Anthropic 将 IPO 定价在 83 美元。模型能力与资本市场两条线同时推进，说明头部实验室的竞争已进入拼现金流与算力规模的阶段。",
+    "url": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2229期 - 2026-11-19 12:01",
+    "summary": "本期重点为[Anthropic 以每股 83 美元 IPO 定价]登陆纳斯达克，以及[NVIDIA RTX Spark]本地 AI 台式机开售。Agent 生态继续升温，[Deepagents]下载量突破 5000 万，Agent 成本核算与推理优化也有新实践。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_1201",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "范式下场做基模了！国产算力全链路训练，双模型同步亮相",
+    "summary": "范式宣布下场做基础模型，走国产算力全链路训练路线，两个模型同步亮相，其中语言模型单张 3090 即可运行。对国内从业者而言，这既验证了国产芯片全链路训练的可行性，也说明小参数、低部署门槛的模型在落地侧仍有明确需求。",
+    "url": "https://www.qbitai.com/2026/11/511071.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2228期 - 2026-11-19 08:01",
+    "summary": "本期最重头的是[Gemini 4 Neon]正式推送并全面接入 Gemini App 与 Tasks；[NVIDIA Nemotron-Labs-Sigma]则用并行块生成挑战逐 token 解码范式。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0801",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini 4 Neon 🚀, Genie 4 worlds 🌍, AI designs chips 🔬",
+    "summary": "TLDR AI 本期三条主线：Gemini 4 Neon 发布、Genie 4 世界模型更新、以及 AI 参与芯片设计。三条指向同一趋势——模型能力正从文本生成向世界模拟和硬件设计等更上游的环节延伸，读者的关注面也该随之从单一模型榜单扩展到这些交叉领域。",
+    "url": "https://tldr.tech/ai/2026-11-19",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2227期 - 2026-11-19 04:02",
+    "summary": "本期重点：LlamaIndex 发布[OCRia-1.5]文档解析模型并上线 LlamaParse；Google DeepMind 上线[Genie 4]；NVIDIA 推出[Cosmos Data Factory]合成数据蓝图与 Nemotron 3.5 Transcribe。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Exa boosts embedding throughput by 50% to index billions of documents on AWS AI chips",
+    "summary": "Exa 的神经搜索引擎背后是自建向量库，给数十亿网页做 embedding 的单位成本直接决定生意能否跑通。他们在 AWS Inferentia2 与 Trainium2 上用自研 NKI kernel 优化 embedding 推理，每百万文档的性能与成本改善约 47%，吞吐提升约 50%。这说明非 GPU 加速器在 embedding 这类规整负载上已经具备实际性价比。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/exa-boosts-embedding-throughput-by-50-to-index-billions-of-documents-on-aws-ai-chips/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2226期 - 2026-11-19 00:01",
+    "summary": "本期聚焦[开源小模型]与[实用工具]：Hugging Face 开源 0.5B 多语语音模型、编码 Agent 适配模型登榜；Runway 把视频模型[推理 GPU 减半]，fal、Mistral、LangSmith 各推新工具。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-19_0001",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Google Deepmind's Project Genie update brings Genie 4, chainable worlds, and a community gallery for remixing",
+    "summary": "Google DeepMind 更新 Project Genie，推出 Genie 4 世界模型，面向 Google AI Ultra 订阅用户。它能生成可被文本实时修改的交互式 3D 世界，并首次加入原生音效，同时上线社区画廊支持分享与再创作。世界模型从 demo 走向可订阅、可 remix 的产品形态，对做交互内容与具身仿真的团队是新的素材来源。",
+    "url": "https://the-decoder.com/google-deepminds-project-genie-update-brings-genie-4-chainable-worlds-and-a-community-gallery-for-remixing/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v1.4.0rc4",
+    "summary": "TensorRT-LLM 发布 v1.4.0rc4，重点是已知问题清单：B300 上 DeepSeek-R1 的 FP4 分离式服务在 CUDA Graph 下可能输出错误；GLM-5.2 的 NVFP4 SM103 TP8 在 Modeling V2 配 FlashInfer 0.7.3 时可能初始化失败；Kimi K3 的 NVFP4 KV 因 FP4 MLA 量化资格问题在 B300 上起不来；Kimi K3 DSpark 配 MegaMoE CuTe DSL TEP 与 CUDA Graph 在 GB300 预热阶段可能挂起；Qwen3.8-Flash-Next FP8 在 PLE offload、attention DP 与 MTP 组合下同样可能初始化失败。上 FP4 与新硬件的团队升级前需要逐条对照自己的模型与并行配置。",
+    "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc4",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Microsoft is replacing outside AI models in its own products with cheaper in-house alternatives",
+    "summary": "微软在 Ignite 上由 MAI 团队一次放出代码、安全、图像、语言与路由共七款自研模型，明确要用更便宜的自有模型替换产品线里的外部模型。官方称 MAI Code 2 达到 GPT-6.1 Sol 约 98% 的水平而成本只有四成，且这些模型是面向企业全天候常驻运行智能体的场景设计的。对做 serving 与成本核算的团队来说，这意味着闭源模型 API 的价格锚点还会继续下移。",
+    "url": "https://the-decoder.com/microsoft-is-replacing-outside-ai-models-in-its-own-products-with-cheaper-in-house-alternatives/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Genie 4 is now available",
+    "summary": "谷歌 DeepMind 的交互式世界模型 Genie 4 正式开放使用，延续从图像或提示直接生成可交互环境的路线。这类模型的价值在于为具身智能与智能体提供廉价、可控、可无限采样的训练与评测环境，也是多模态基座向可模拟世界延伸的关键一步。",
+    "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "New LoRA Adapter Lifts Qwen3.8 Coding Success From 39% to 65%",
+    "summary": "Hugging Face 放出 Qwen3.8-27B-pi-adapted，一个 Apache-2.0 许可、用强化学习针对 pi 编码智能体训练的 LoRA 适配器。它在 SWE-bench Pro hard-51 上把 pass@1 从 39.2% 拉到 64.7%，Terminal-Bench 2.1 从 39.5% 提到 55.8%，说明在 27B 级基座上做小体量 RL 适配器，仍能显著提升真实仓库与终端任务的表现。对想自建编码智能体又不想动基座权重的团队，这是低成本且可复现的路线。",
+    "url": "https://www.marktechpost.com/2026/11/18/hugging-face-qwen3-8-27b-pi-adapted-lora/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.22.0",
+    "summary": "PEFT v0.22.0 引入 ICLR 2025 的 PaCA（部分连接适配）：不再叠加 adapter 层，而是只微调预训练权重中随机选定的输入列。这样省掉了 adapter 的串行计算，反向传播也只需保存部分激活，因此训练更快、显存占用低于 LoRA，同时保持相当的精度。对显存吃紧又想快速试多套微调配置的团队，这是个值得替换的默认选项。",
+    "url": "https://github.com/huggingface/peft/releases/tag/v0.22.0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AMD NPU + video diffusion LoRA",
+    "summary": "Unsloth 这版更新把 AMD NPU 支持做实：自己转换的 Q4NX 模型可直接在 NPU 上加载，并会标注每个 NPU 模型能否运行；官方称 NPU 每焦耳每 token 的效率是 GPU 的 2 到 4 倍。同时新增 LTX-2.5 与 MOSS-Image 的 LoRA 训练、NVIDIA Cosmos3 的 FP8 视频支持，以及在 Strix Halo 上跑 FLUX.3 Klein 单步最高快 28%。端侧与本地微调的门槛又被压低一截。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.920-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "腾讯混元 Hy4 flash 上线首日登顶 OpenRouter，2 毛钱就能跑完一个任务！",
+    "summary": "腾讯混元 Hy4 flash 上线首日即登顶 OpenRouter 热度榜，主打极低成本，官方口径是两毛钱左右就能跑完一个任务。对做智能体与批量推理的团队而言，这个价格档位意味着调用量可以堆到以前不敢想的规模，也意味着国内模型在海外聚合平台上的性价比竞争进一步白热化。",
+    "url": "https://www.infoq.cn/article/o4edzZ1lM7CUQgcupk8H?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开源项目 pg_vectorsearch 为 PostgreSQL 带来了更具可扩展性的向量搜索功能",
+    "summary": "开源项目 pg_vectorsearch 给 PostgreSQL 补上更具可扩展性的向量搜索能力，思路是在数据库内核侧扩展近似最近邻检索的索引与查询路径，而不必把向量检索完全外包给独立服务。对已经把业务数据放在 PG 里、不想再引一套专用向量库并承担同步延迟的团队，这类扩展能省下一次数据搬运与一份运维成本。",
+    "url": "https://www.infoq.cn/article/sbD3maMohpCIExV3UUH0?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "SenseNova U1 Pro获Design Arena双榜中国第一、全球第六",
+    "summary": "商汤日日新 SenseNova U1 Pro 在 Design Arena 的图片生成与图片编辑两个榜单上同时拿下中国第一、全球第六。对关注多模态基座的读者这是个信号：国产图像模型在设计类真实偏好评测里已经挤进第一梯队，而编辑与生成同步上榜，说明其图像理解与指令跟随的一致性在改善。",
+    "url": "https://www.qbitai.com/2026/11/511179.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1795087237: [ROCm] Build int4mm WMMA path for gfx1250-strict (#205584)",
+    "summary": "这是一个 PyTorch 的 ROCm 后端修复：gfx1250-strict 是与 gfx1250 分开的 offload 目标，它定义了 gfx1250_strict 与 GFX12 却没有 gfx1250，导致 RocmMma 选择器回落到 RocmMmaGfx12，而后者调用的 wmma 指令需要 strict 并不具备的 128 位特性，int4mm 的 HIP 编译因此失败。补丁让选择器把 gfx1250_strict 与 gfx1250 同等对待，为 strict 目标建出 int4mm 的 WMMA 路径。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1795087237",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "nightly-cpu-multi-last-green",
+    "summary": "DeepSpeed 的 CPU 多卡夜间构建恢复全绿，本次合入的是 rollout 侧的基于分段的 kernel 注入，把混合引擎贪心解码路径上的多个 kernel 按段拼进同一条执行流，以减少启动与调度开销。对在混合并行引擎上跑生成的团队，这类底层改动直接影响的是小 batch 场景下的解码吞吐。",
+    "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-cpu-multi-last-green",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Full Fine-Tuning (FFT) on SageMaker AI Serverless Model Customization",
+    "summary": "SageMaker AI 的 Serverless Model Customization 现在支持全参微调（FFT），并给出了一套对比：哪些基准上 FFT 明显优于 LoRA、质量差距背后的权重矩阵谱性质解释，以及对应的超参调优建议。对纠结该上 LoRA 还是全参的团队，这相当于把选型判断从经验直觉变成了可参照的实验结论。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/full-fine-tuning-fft-on-sagemaker-ai-serverless-model-customization/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing workload recovery and expanded infrastructure checks on Amazon SageMaker HyperPod",
+    "summary": "SageMaker HyperPod 新增工作负载恢复与更强的基础设施检查，专门针对每个节点看起来都健康、但训练卡住或算出错误结果这类隐性故障。更早发现并自动恢复这类问题，直接提升的是训练 goodput，而在大集群上这往往比单卡算力更能决定一次预训练的真实成本。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-workload-recovery-and-expanded-infrastructure-checks-on-amazon-sagemaker-hyperpod/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Salesforce is advancing global-scale model serving with cross-Region inference routing in Amazon SageMaker AI",
+    "summary": "Salesforce 用 SageMaker AI 的跨区域推理路由，把原本分散在各 Region 的碎片化容量整合成稳定的模型服务，同时满足数据驻留合规要求，并能逐请求追踪每次调用落在哪个区域、为什么落在那。对做全球化 serving 的团队，这是容量不够就跨区调度这套玩法的落地样本，难点在于合规与可观测性同时不丢。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-salesforce-is-advancing-global-scale-model-serving-with-cross-region-inference-routing-in-amazon-sagemaker-ai/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+    "summary": "Hugging Face 上释出的 DaisyRose-27B 主打后训练效率，试图在 27B 这个基座已相当成熟的尺寸上，用更省算力的后训练流程逼近更大的模型。对预算有限又想做定制化的团队，这类工作比再训一个基座更有参考价值：收益集中在数据配比与后训练阶段的设计上，而不是堆预训练 token。",
+    "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Why your fine-tuning job takes longer than the FLOPs say",
+    "summary": "这篇文章拆解一个常见困惑：按 FLOPs 估算只要几小时的微调，实际却跑了一整天。差距通常来自数据加载与预处理、通信与内核启动开销、受显存带宽限制的算子、检查点与日志 IO 这些不进入 FLOPs 账本的环节。对做训练性能优化的工程师，它给的是一份按环节定位瓶颈的排查清单，而不是又一个理论峰值数字。",
+    "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI says its models delivered a year's worth of chip optimization on top of AMD's own engineering",
+    "summary": "OpenAI 称与 AMD 合作，用自家模型在不到五个月里对 AMD 旗舰 GPU IP 做出最高 14% 的 PPA（功耗、性能、面积）改进，相当于常规一年的工程进度，相关改动已被 AMD 纳入送交流片的设计。意义不止于数字：把模型用在芯片设计与验证上，正成为继代码生成之后收益最直接的高价值场景，Anthropic 也在做类似尝试以压低每美元性能的成本。",
+    "url": "https://the-decoder.com/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12550: ggml : add backend scheduler tests (#27258)",
+    "summary": "llama.cpp 这版给 ggml 后端调度器补上第一批压力测试，并新增 sleep 算子来简化调度器测试，还提供了实验性的 Vulkan 实现。测试中有一条能正确复现 nkvo 相关问题并验证对应热修，说明多后端下的调度时序问题终于有了可回归的抓手，而不是靠偶发复现。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12550",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12541",
+    "summary": "llama.cpp 这版通过缓存把 IQ2 量化的创建过程提速，属于量化流水线上的实际体验优化：这类低比特格式此前生成耗时明显，缓存中间结果能显著缩短转换时间。同时清理了变量命名与类型转换，并为容差参数补上初始化与注释，减少不同平台上的隐式行为差异。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12541",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "从可用到好用：Agent 的观测、评估与持续优化｜AICon北京",
+    "summary": "AICon 北京这场分享聚焦智能体从能用到好用之间的工程缺口：可观测性怎么埋点、评估集怎么构建、上线后怎么根据线上反馈持续优化。对已经在生产里跑智能体的团队，对应的正是效果玄学、出了问题定位不了这个日常痛点。",
+    "url": "https://www.infoq.cn/article/u8eHrtbbchlNRkP94ALh?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12538",
+    "summary": "llama.cpp 的 Llama Chat 前端把首屏 JavaScript 体积削减了 63%，做法包括延迟加载图表等重型依赖。对把 llama.cpp 当作本地推理服务前端的用户，这意味着冷启动更快、低配机器上打开更顺畅，也让 Web UI 更适合嵌进轻量部署场景。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12538",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "好清晰！最新国产AI画的8K图，放这么大大大大也不糊！",
+    "summary": "可灵发布 Kling Image 4.0，主打卖点是 8K 输出下放大局部依然清晰，也就是在高分辨率下维持细节与纹理一致性。对海报、电商图、印刷物料这类真实生产场景，分辨率上探往往比风格花样更能决定模型能不能进流程。",
+    "url": "https://www.qbitai.com/2026/11/511092.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1795085427: [ROCm] FlyDSL TopK: Make radix row length dynamic (#205550)",
+    "summary": "这是 PyTorch ROCm 侧 FlyDSL TopK 的优化：原来把 N 编译进 kernel，导致每个长度都要单独编译，长行还会完全展开并占住大量地址寄存器。改成把 N 作为运行时参数后，编译时间与缓存大小只随 K、dtype 和排序方式变化，一个 kernel 覆盖所有长度，省下的是实打实的编译与显存开销。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1795085427",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1795083651",
+    "summary": "PyTorch 在 XPU 后端启用了 flash attention 的前向与反向实现。对跑在 Intel GPU 上的训练与推理来说，这补上了长序列注意力最关键的一块性能拼图，此前这类工作负载往往要回落到慢得多的通用实现。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1795083651",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1795076665: [ROCm] Re-enable FSDP2+TP 2D MLP tests on MI200 (#205508)",
+    "summary": "PyTorch 重新启用了 MI200 上 FSDP2 加张量并行 2D MLP 的两个测试。之前的跳过并非 PyTorch 的 bug，而是 ROCm 10.0 用户态栈里 RCCL 的 GPU 侧死锁；trunk CI 换到 ROCm 10.1 后两个测试在 gfx90a 上已经通过，因此移除 skip。这类记录对排查 AMD 平台分布式训练卡死的人很有参考价值。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1795076665",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "llm-gemini 0.38",
+    "summary": "llm-gemini 0.38 跟进谷歌新发布的 Gemini 4 Neon。作者顺带吐槽 Gemini 4 系列的定价已经够乱：Hydrogen、Argon、Carbon 三档里 Argon 与 Carbon 同价，Hydrogen 现在是四分之三价、12 月 1 日另两档折扣到期后变成四分之一价，而 Neon 的公告干脆当 Argon 不存在。对要算推理成本的开发者，这种定价结构本身就是选型风险。",
+    "url": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Introducing the Amazon SageMaker JumpStart Model Leaderboard",
+    "summary": "SageMaker JumpStart 推出模型排行榜，在 Studio 里直接横向对比 70 多个基础模型的质量、速度与成本，并公开了 AWS 的评测方法。对选型的人来说，价值在于把榜单分数与自己业务下的延迟和单价放在同一张表里，从候选清单直接走到部署，而不用在多个第三方榜单之间手动对表。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-sagemaker-jumpstart-model-leaderboard/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "How Airbnb uses cost per task to operate coding agents on Amazon Bedrock",
+    "summary": "Airbnb 用真实工程任务做评测，并借助 Bedrock 的可观测性为编码智能体选模型、控制生产开销，核心指标是每任务成本而不是单纯的 token 单价。文章点出一个常见偏差：评测结果好不代表生产便宜，缓存命中、重试、上下文膨胀都会让实际花费偏离预估，因此还要配合延迟监控、配额管理与费用归因。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-airbnb-uses-cost-per-task-to-operate-coding-agents-on-amazon-bedrock/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Agent 驱动 MaaS 新范式，如何让模型能力随需而用？",
+    "summary": "这场分享讨论智能体驱动的 MaaS 新范式：模型能力不再是一次性选型，而是按任务需要随取随用，由智能体在运行时编排不同模型与工具。对做平台的人，关键问题随之变成路由、计费与效果归因，按 token 卖的老账本很难对上按任务交付的新形态。",
+    "url": "https://www.infoq.cn/video/xsEfht2OwBZQBvWVHSIb?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
