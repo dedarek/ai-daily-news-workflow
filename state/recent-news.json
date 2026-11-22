@@ -1,444 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-11-14": {
-      "candidates": [
-        {
-          "date": "2026-11-14",
-          "title": "ChatGPT Wallet支持用户批准后的代理支付",
-          "summary": "据Greg Brockman转发的产品消息，代理可经用户批准完成购物付款，付款过程隔离真实卡号，每笔交易均需安全检查。该功能从美国Pro订阅用户开始推出，合作方包括American Express、Mastercard和Visa。",
-          "url": "https://x.com/gdb/status/2121295213025194172"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Google Releases Gemini 4 Hydrogen: 2.5x Faster Than Gemini 3.8 Flash",
-          "summary": "谷歌发布 Gemini 4 Hydrogen，主打 agentic 场景：1M token 上下文、4 档思考等级，定价 $1.50/$7.50，官方称比 Gemini 3.8 Flash 快 2.5 倍，Artificial Analysis 得分 51、Terminal-Bench 4.1 上 57%。对做 agent 产品的团队来说，这是把长上下文、分级思考与低调用成本捆在同一型号上的新选项，选型时值得重新比价。",
-          "url": "https://www.marktechpost.com/2026/11/13/google-gemini-4-hydrogen/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2199期 - 2026-11-14 12:01",
-          "summary": "本期值得关注的新增动态包括[Perplexity开源决策模型]、[Meta推动个人智能体互操作标准]以及[Google开源TPU传输库]；此外，智能体记忆修订和生产数据闭环也有新进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_1201"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "DeepSeek向API开放应用端能力",
-          "summary": "官方帖文宣布，搜索、文件、链接、安全与语音等能力可通过API启用，开发者也可单独调用OCR、ASR和TTS接口。开源前端示例支持导入DeepSeek历史对话，配套提供开发说明。",
-          "url": "https://x.com/deepseek_ai/status/2121247896918253875"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Introducing Gemini 4 Hydrogen",
-          "summary": "Google DeepMind 官方发布 Gemini 4 Hydrogen，定位为快速的 agentic 模型，具备 1M token 窗口和四个思考等级。官方口径强调速度与终端类任务表现，关键信号是它把长上下文、可调推理深度和更低成本压在同一个型号上，直接冲击 agent 推理链路的模型选型。",
-          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2198期 - 2026-11-14 08:02",
-          "summary": "本期聚焦[DeepSeek全栈API]与[ChatGPT Wallet]两项平台级扩展；[ParseBench-2]和AWS智能体部署方案则为开发者提供实用选型与优化参考。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_0802"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "OpenAI披露自动补丁与自动红队工具研发",
-          "summary": "团队成员在发布帖文中介绍两类正在开发的网络安全工具，并提供演示录像入口。现有摘录未给出量化效果、正式开放时间或适用范围，应区分研发披露与产品上线。",
-          "url": "https://x.com/thsottiaux/status/2121036562058400200"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Release v5.23.0",
-          "summary": "Transformers v5.23.0 新增 Inkling2，其中 Inkling 2 Small 来自 Thinking Machines Lab，接受文本与图像输入、输出文本。语言骨干是 48 层 MoE 解码器，每层路由到 384 个专家中的 8 个，总参数 594B、激活仅 17B，并沿用学习式相对注意力与短因果卷积等 Inkling 解码器设计——一个激活参数极小的大 MoE 多模态型号，推理成本敏感的场景值得重点看。",
-          "url": "https://github.com/huggingface/transformers/releases/tag/v5.23.0"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2197期 - 2026-11-14 04:02",
-          "summary": "本期重点包括[Gemini 4 Hydrogen]加速进入日常智能体与个人财务场景，以及[LangChain]推出智能体平台并完成大额融资；安全研究者同时警告，AI 正显著压缩网络攻击准备时间。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_0402"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Antigravity上线双模型编排",
-          "summary": "团队帖文称，Gemini 4 Hydrogen向全部付费用户开放，新增Orchestrator协调Carbon与Hydrogen处理任务。内部测试显示，同类任务配额消耗减少24%，完成速度提高19%；这些数字来自团队自报，并非独立评测。",
-          "url": "https://x.com/_mohansolo/status/2120941094724874380"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "v1.0.0",
-          "summary": "llama.cpp 发布 v1.0.0：清掉废弃的公开 API，把 NextN/投机解码 API 正式提升进 llama.h，新增 OCP FP8 KV cache、可配置 CPU 占比的 host 内存 MoE 专家缓存、外部 PLE 分片加载；同时补上三个文本架构（Kimi-K3.1-Pro、Ripple、xing4_0）、drama-3 TTS 以及 MageVL-Cowork 与 Kimi-K3.1 的视觉支持，并加固 llama-server 在 SSRF、CORS、DNS rebinding 与 MCP 工具取消等安全问题。这是本地推理栈从能用走向能上生产的分水岭版本。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2196期 - 2026-11-14 00:02",
-          "summary": "本期值得关注的动态包括[WeatherNext 3气象数据集]开放，以及[Devin Apps]拓展云端编程代理应用场景；机器人模型、开源模型与数据中心芯片也有新进展。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-14_0002"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "模型推理透明度受训练取舍影响",
-          "summary": "The Decoder报道介绍OpenAI团队对思维链可监督性下降的分析，涉及架构选择、强化学习等四类训练因素。报道指出，透明度变化反映能力与计算成本之间的取舍，并非必然规律；不宜将监督难度增加直接等同于模型具有主动隐瞒意图。",
-          "url": "https://the-decoder.com/openais-data-suggests-that-frontier-models-are-hiding-their-thoughts-because-developers-optimize-for-capability-and-compute/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
-          "summary": "谷歌开源 TPU Sync，一个 C++ 库，负责在 TPU HBM、host DRAM、存储与网络之间搬运 KV cache 和权重。官方称在 235B 到 480B 的 MoE 模型上把 KV 传输延迟降低 90% 以上，对做 PD 分离、多级 KV 缓存和跨节点 serving 的团队来说是一块关键拼图。",
-          "url": "https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2195期 - 2026-11-13 20:01",
-          "summary": "本期聚焦[ERNIE 5.5 Flash Preview]与[Hy Realtime]等模型更新；[A2UI 1.0]发布，同时芯片出口与模型审计监管趋严。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-13_2001"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Neuro-VL利用近百万份神经影像检查训练",
-          "summary": "论文介绍可解读完整影像检查并进行自然语言交流的视觉语言模型。作者报告，其在内部与国际数据集上的诊断、定位、异常描述和报告生成表现超过所比较系统，也支持连续检查对比。结果属于论文评测，尚不等同于临床部署效果。",
-          "url": "https://arxiv.org/abs/2611.15094"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
-          "summary": "SGLang-Neuron 通过 AWS Deep Learning Container 公开发布，可以在 Trainium 上用和原来一致的 SGLang 接口服务模型、跑强化学习 rollout，底层是原生 PyTorch。这意味着原本绑在英伟达上的 SGLang 推理与 RL 工作流可以较低成本迁到 Trainium，算力供应链多了一条路。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2194期 - 2026-11-13 16:01",
-          "summary": "本期重点关注[Google Flow]的视频创作工具更新、[Amazon Bedrock]推理成本优化方法，以及[SpaceX]据报推进的超大规模 AI 超算园区计划。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-13_1601"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "KernelMosaic用优化轨迹增强CUDA内核生成",
-          "summary": "论文发布包含任务、验证解法及迭代优化轨迹的开放数据集。小型开源模型微调后，KernelBench L1、L2、L3正确率分别从4%、0%、0%升至88%、82%、16%。作者还报告，生成内核快于PyTorch eager的任务占比有所提高；正确率与性能提升应分别理解。",
-          "url": "https://arxiv.org/abs/2611.14604"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "v1.18.0",
-          "summary": "TRL v1.18.0 主要重构异步 GRPO 的模块结构：trl.experimental.async_grpo 下的子模块被移除，配置、rollout 循环与 vLLM 客户端的导入路径全部调整，vLLM 客户端更名为 AsyncVLLMClient。升级前必须先改 import，否则异步 RL 训练脚本会直接挂掉。",
-          "url": "https://github.com/huggingface/trl/releases/tag/v1.18.0"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2193期 - 2026-11-13 12:02",
-          "summary": "[Gemini 4 Hydrogen]完成全球消费端推送，Runway新增低成本视频模型[Seedance 2.5 Flash]。英伟达与Anthropic的资本及治理传闻仍待官方确认。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-13_1202"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "DecArena检验十万工具规模的去中心化协作",
-          "summary": "论文采用图约束通信，让智能体仅观察局部状态并与邻居交互，工具规模超过10万项。实验发现，远端资源发现与协作仍是瓶颈。GraphHarness结合拓扑感知预热及自改进路由，作者报告任务成功指标提升48.5点，具体含义以论文评测口径为准。",
-          "url": "https://arxiv.org/abs/2611.15521"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
-          "summary": "llama.cpp 官方博客介绍 v1.0.0，定位是给本地 AI 生态一个更稳的地基：公开 API 收敛、投机解码进入主干头文件、FP8 KV cache 与 MoE 专家卸载缓存等能力补齐，并扩展模型架构与视觉、TTS 支持。对依赖 llama.cpp 做端侧与私有化部署的团队，这是可以放心锁定依赖的里程碑版本。",
-          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2192期 - 2026-11-13 08:02",
-          "summary": "本期值得关注[Devin Teams]新增团队治理与协作能力，以及[SGLang-Neuron]开放后进一步降低 Trainium 部署门槛。研究与工程实践方面，LMArena 开源 Web 开发数据集，GitHub 发布跨智能体 Skills 指南。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-13_0802"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "HDM学习何时值得展开完整推理",
-          "summary": "研究让冻结骨干模型搭配轻量路由模块，在单次前向决策与完整自回归推理之间选择，并按请求设置计算代价。HDM-4B在JevBench得分为0.857，对比系统为0.851，中位时延从0.652秒降至0.179秒，减少72.5%。另一项MiniWoB实验中，HDM-27B令牌成本减少80.1%，两组结果对应不同模型与任务。",
-          "url": "https://arxiv.org/abs/2611.16961"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "[AINews] Jensen Huang resigns after 33 years leading NVIDIA",
-          "summary": "Latent Space 报道 2026 年 11 月 12 日黄仁勋在执掌英伟达 33 年后辞职，由 Colette Kress 出任临时 CEO。文中追问的是这对开源与美国 AI 领导力意味着什么——对关注算力供给、GPU 路线与生态政策的人来说，这是本年度最需要盯住的组织变动，后续路线图与供货节奏都可能跟着变。",
-          "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2191期 - 2026-11-13 04:03",
-          "summary": "本期重点是[Gemini 4 Hydrogen]发布并扩展至开发、搜索等场景，另有[AgentCore runtime]升级与[MiniMax H3 Image]开放权重等实用动态。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-13_0403"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "智能体评测器可能给出不同结论",
-          "summary": "研究运行2,160次tau2-bench任务，记录数据库写入，并对120次任务进行双人标注。模型裁判重复判定一致率达98.2%，但与原生评分仅有**56.2%**一致。研究中的11次违规写入，大多被模型裁判放行；最小规则式写入边界检查则揭示了这些问题。结论强调，评分稳定不代表评分有效。",
-          "url": "https://arxiv.org/abs/2611.14581"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿",
-          "summary": "量子位报道黄仁勋辞任，英伟达 33 年来首次换帅，消息冲击下市值蒸发超 3 万亿元。对国内做训练与推理基础设施的团队而言，真正的变量不在人事本身，而在后续 GPU 路线图、供货节奏与对华策略是否会随之调整。",
-          "url": "https://www.qbitai.com/2026/11/509995.html"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "第2190期 - 2026-11-13 00:02",
-          "summary": "本期值得关注的是[Google智能眼镜]开启预购，以及[Runway 3D]与多项企业智能体工具和教程落地。百度昆仑芯投用、Anthropic漏洞项目反馈效率争议也带来新的行业动态。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-13_0002"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "研究员提出中国模型含Blackwell硬件指纹的主张",
-          "summary": "The Decoder报道称，前OpenAI研究员Will DePue从公开模型权重中识别出特定芯片特征，涉及六款模型及DeepSeek、月之暗面、MiniMax和蚂蚁集团。他估计五次训练对应硬件成本超过5亿美元。这是研究员的取证与估算主张，现有材料尚不足以独立确认芯片使用情况、采购路径或相关企业行为。",
-          "url": "https://the-decoder.com/former-openai-researcher-says-he-found-nvidia-blackwell-fingerprints-hidden-inside-six-chinese-ai-models/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "nightly-last-green: Fused CPU Adam step (#8841)",
-          "summary": "DeepSpeed 对 ZeRO-3 CPU offload 的 step 做融合优化：把梯度裁剪系数与 loss scale 的乘法、以及 bf16 主权重副本的写回，一并合进 DeepSpeedCPUAdam 的那一趟 CPU 遍历里。原本优化器 step 要对每个 CPU 子组走三遍，现在少一趟，在大模型 CPU offload 训练里直接省下可观的内存带宽与时间。",
-          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-last-green"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Anthropic上市讨论聚焦估值与长期算力承诺",
-          "summary": "极客洞察整理的讨论称，公司以ANT代码推进上市，并列出2026年11月18日定价、11月19日交易的预计安排；相对本期日期，这些均属未来计划。材料摘要还提到约9680亿美元目标基础估值，但所附原文摘录未展示估值计算。上市安排、估值及算力承诺均应视为该二手材料中的说法，而非本报已核验的申报事实。",
-          "url": "https://newshacker.me/story?id=50465829"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "v0.20.0",
-          "summary": "DeepSpeed v0.20.0 合入一批改动：GPTBigCode 的共享 key/value 梯度在张量并行 rank 间求和、AutoEP 专家在 EDP 与 ZeRO 下的存储映射、ZeRO-3 通过 pinned buffer 把 offload 的主权重拷回设备、新增昆仑芯 XPU 的自建 CI，并临时锁定 torch 版本以修 MPS 工作流。用 ZeRO-3 或自动专家并行的团队，最该关注的是 offload 回拷路径与 TP 梯度正确性这两项。",
-          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.20.0"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "社区解读区分Anthropic账面亏损与经营现金流",
-          "summary": "一则Reddit帖子声称，2026年前九个月营收332亿美元、净亏损1040亿美元，其中943亿美元来自可转债公允价值变动，经营亏损约13亿美元，经营现金流为正66亿美元。帖子还称采购承诺约9000亿美元、主要涉及算力。以上均是发帖者对文件的解读，所给材料没有原始申报文件正文；账面净亏损、经营亏损与现金流也不应混为一谈。",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xuayaf/anthropics_ipo_filing_explained_as_a_cartoon_33b/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Four Amazon Bedrock inference choices that affect cost",
-          "summary": "Amazon Bedrock 的推理账单即使调完 prompt 和应用逻辑也可能继续上涨，AWS 因此拆出四个请求级开关：缓存有效期、服务层级、reasoning effort 与 maxTokens，它们分别改变服务实际处理的 token 数量和适用的计费费率。文中给出了逐项压测的方法，以及如何验证每个开关确实生效，适合用来定位账单里说不清的那部分增量。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/four-amazon-bedrock-inference-choices-that-affect-cost/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Mirendil宣布完成10亿美元A轮融资",
-          "summary": "Marc Andreessen转发的融资消息称，本轮由Kleiner Perkins与Clearlake领投。公司表示，希望让更多团队获取前沿AI研发能力，以服务科学与技术探索，并同步招聘；现有材料未披露估值及资金具体分配。",
-          "url": "https://x.com/pmarca/status/2121112078408925294"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
-          "summary": "Granite 4.1 的 3B 与 8B 版本开始原生支持 LLMON 这种专为 LLM 设计的标记语言，思路是让模型直接产出结构化标记，而不是先写自由文本再靠外部解析器兜底。对做工具调用、结构化输出和 Agent 编排的团队来说，模型侧原生语法能省掉大量解析胶水代码与容错逻辑。",
-          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "英伟达人事报道牵动创企融资预期",
-          "summary": "TechCrunch报道摘录将黄仁勋离任与AI创企融资变化联系起来，称其领导期间英伟达投入数百亿美元，创始人与投资人担心未来支票缩小、估值下调。所给摘录未附公司人事公告；融资收缩部分属于受访者预期，而非已经发生的统计结果。",
-          "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Run agents securely and efficiently with the next generation AgentCore runtime",
-          "summary": "Amazon Bedrock AgentCore 运行时换代，主打硬件隔离的会话环境、更快的启动速度、按用量计费，并把隔离边界从计算延伸到数据层。如今 Agent 常要连续跑数小时的多步任务并代表用户操作资源，这块运行时正是安全与成本的地基，值得在架构选型时先看清楚。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Praxis-1适配SO-101机器人与单卡部署",
-          "summary": "Runway帖文称，模型基于LeRobot社区共享的数千个数据集构建，借助NVFP4可在单张RTX 5090上运行。项目仓库提供检查点和配置说明；所给材料未披露任务成功率或项目Star数。",
-          "url": "https://x.com/runwayml/status/2121252482454335530"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "The unfolding Jensen Huang scandal: a timeline",
-          "summary": "Jensen Huang 因绯闻辞去 Nvidia 职务，相关事件被整理成完整时间线。在中美竞相建设 AI 基础设施的背景下，这家最关键芯片公司的治理与人事变动被解读为可能波及国家安全与供应链节奏，后续影响远不止一条公司新闻。",
-          "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "阿里代码审查工具融合规则流水线与模型代理",
-          "summary": "open-code-review支持行级评论，内置规则覆盖空指针、线程安全、XSS与SQL注入等问题，并兼容OpenAI和Anthropic接口。材料采集快照显示50,172 Star、当日新增206个、3,724 Fork；这些是采集时统计，而非实时数字。",
-          "url": "https://github.com/alibaba/open-code-review"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Chrome DevTools面向编码智能体开放",
-          "summary": "chrome-devtools-mcp将Chrome开发者工具能力接入编码代理。材料采集快照为55,227 Star、当日新增60个、4,606 Fork。所附摘录仅给出项目定位与热度统计，具体功能以项目文档为准。",
-          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "b12367: CUDA: add SM103 SASS to non-native builds (#30099)",
-          "summary": "llama.cpp 构建 b12367 为非原生编译路径的 CUDA 后端补上 SM103 架构的 SASS，提交来自 Nvidia 工程师。对新卡用户的实际意义是不必等本地工具链完整支持，也能用上针对该架构预编译的优化内核。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12367"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Jais 3发布六款阿拉伯语中心智能体模型",
-          "summary": "论文第二版介绍从0.9B到375B参数的模型家族，支持多步规划、工具与MCP调用、终端操作、网页搜索及办公文件处理。作者表示开放各训练阶段权重、部分训练数据、配置、日志与评测代码；除0.9B版本外，模型继承512K上下文窗口。本次材料对应论文更新，不宜全部表述为当天首次发布。",
-          "url": "https://arxiv.org/abs/2611.10224"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "v0.21.3",
-          "summary": "PEFT v0.21.3 修掉一个实打实的性能陷阱：在 DTensor 张量并行下保存模型时只聚合适配器权重，而不是把整个分片模型 gather 一遍。起因是 Transformers 训练器会在每个 rank 上都调用 save_pretrained，旧版本会让每次保存都触发全量聚合，通信与显存开销白付，这一版随 PEFT 0.21.3 一并修掉。",
-          "url": "https://github.com/huggingface/peft/releases/tag/v0.21.3"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "员工联署要求黄仁勋复任的说法流传",
-          "summary": "宝玉转发的帖子声称，数百名英伟达员工签署内部信，要求黄仁勋复任首席执行官并要求董事会辞职。材料未附可核验的联署全文、签名信息或公司回应，应保留社媒转述属性。",
-          "url": "https://x.com/dotey/status/2121104362965537094"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "viable/strict/1794577813: [fsdp] Fix double gradient division for singleton groups (#203693)",
-          "summary": "PyTorch FSDP2 修复了单例归约组中梯度被二次相除的问题：当归约因子被拆成前后两段（fp16 reduce dtype 或 force_sum_reduction_for_comms）时会多除一次，导致梯度缩小 k 倍。问题是在给 Kimi K3 的非复制专家组实现单例 reduce 路径时发现的，对跑 MoE 大模型分片训练的团队来说，这是会直接影响收敛的隐蔽 bug。",
-          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1794577813"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "v4.6.1",
-          "summary": "ms-swift v4.6.1 一口气接入一批新模型，包括 NVIDIA Nemotron 3.5 Super VL 120B-A12B 与 Transcribe 30B-A4B、Unlimited-OCR-2、MiniCPM-OCR-1.0、Olmo-3-7B-Think、EmbeddingGemma-2 等，还新增了决策任务族（typed-decision 与 JEV 系列）的四个决策头及配套模板与对齐测试。对希望在同一套训练框架里同时跑多模态、OCR、嵌入与决策模型的团队，省去了逐个模型改适配的功夫。",
-          "url": "https://github.com/modelscope/ms-swift/releases/tag/v4.6.1"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "openJiuwen发布RSI原生AgentOS，让Agent自由变身，持续迭代！",
-          "summary": "openJiuwen 发布所谓的 RSI 原生 AgentOS，卖点是让 Agent 想要什么功能就自己开发出来，并在运行过程中持续迭代自身能力。对关注 Agent 自演化、工具自生成的团队而言，这是把「Agent 改自己」从提示词技巧上升为系统层能力的一次尝试。",
-          "url": "https://www.qbitai.com/2026/11/509653.html"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Liquid AI Releases LiquidCodec, a 74M-Parameter Streaming Audio Codec",
-          "summary": "Liquid AI 放出 LiquidCodec，一个约 7400 万参数的流式音频编解码器，正是 LFM3-Audio-2B 与 LFM3-Omni-2B 背后的音频前端。它以 12.5 Hz、12 个码本工作，单 CPU 线程的编码速度约为实时的 361 倍，对做实时语音交互的团队意味着延迟和算力占用都能压得很低。",
-          "url": "https://www.marktechpost.com/2026/11/12/liquid-ai-liquidcodec-streaming-audio-codec/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "CopilotKit Releases OpenBot 1.0: An MIT-Licensed, Self-Hostable AI Coworker With Built-In Governance",
-          "summary": "CopilotKit 发布 OpenBot 1.0，MIT 许可、可自托管，企业自带 Agent、模型与基础设施，而每个 Bot 动作都要过一遍策略检查并落入审计日志。对企业落地 Agent 来说，治理与审计内建而非事后补课，往往是能不能过合规评审的分水岭。",
-          "url": "https://www.marktechpost.com/2026/11/12/copilotkit-openbot-1-0-open-source-ai-coworker/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Nebius tests the neocloud playbook with $40 billion in planned spending",
-          "summary": "Nebius 规划了 400 亿美元的 AI 基础设施扩张，打算靠客户预付款加贷款来融资，同时微软相关数据中心的延期让其融资模式受到质疑。对关注 neocloud 与算力供给侧的人来说，这是一次关于「预付款加杠杆扩产」能否成立的公开压力测试。",
-          "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Tokenomics at scale: Track and cap Amazon Bedrock spend per IAM principal with CUR 2.0 and AWS Budgets",
-          "summary": "AWS 给出一套只用原生能力就能按 IAM principal 追踪并封顶 Bedrock 花费的做法：用 IAM 标签归因成本，用 CUR 2.0 或 Cost Explorer 出报表，再用 AWS Budgets 动作在超阈值时下发 Deny 策略。常见场景几乎不需要写应用代码，对多团队共用 Bedrock 的平台方是刚需。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/tokenomics-at-scale-track-and-cap-amazon-bedrock-spend-per-iam-principal-with-cur-2-0-and-aws-budgets/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
-          "summary": "Google 搜索的 AI Mode 由 Gemini 4 Hydrogen 驱动升级，重点是更准确地理解复杂查询、给出更相关的链接以及更丰富的可视化回答。对做检索与问答产品的人来说，这等于把「多步推理加引用」变成搜索的默认体验，竞品基线又抬高了一档。",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Optimizing cost per task and proving agent ROI on Amazon Bedrock",
-          "summary": "AWS 提出别只盯每 token 价格，而要算真实的任务成本：拆出四个容易被忽略的成本驱动因素，用缓存、路由和输出约束把它们压下来，再用人工基线、留出实验与五维记分卡证明 Agent 的投入产出。对需要向上汇报 Agent 项目价值的团队，这是一套可直接复用的度量口径。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Building a self-service LLM gateway with Amazon Bedrock and LiteLLM",
-          "summary": "用 LiteLLM 在 AWS Fargate 上搭一个自助式 LLM 网关，把 Bedrock 上的基础模型统一包成 OpenAI 兼容 API。开发者拿一个 API key 就能直接用，平台侧则拿到按用户划分的成本控制、配额隔离与可观测性，是多团队共用模型时的标准解法。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/building-a-self-service-llm-gateway-with-amazon-bedrock-and-litellm/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
-          "summary": "Jensen Huang 离任让外界开始质疑 Nvidia 对开源 AI 的承诺，牵涉 Hugging Face 收购、开放权重模型以及此前反对监管限制的立场。领导层过渡期里这些投入会不会缩水，直接关系到开源模型生态能拿到多少算力与资源。",
-          "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "summary": "Google 宣布搜索迎来大规模升级，由 Gemini 4 Hydrogen 驱动，新的 AI 搜索界面以卡片轮播形式呈现。对做搜索与 RAG 产品的团队来说，这既是能力参照，也是流量与入口格局可能变化的信号。",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-11-14",
-          "title": "ChatGPT Wallet推出代理支付功能",
-          "summary": "OpenAI宣布ChatGPT Wallet支持代理在用户批准后完成购物付款。该功能通过隔离真实卡号来保护隐私，且每笔交易均需通过安全检查。目前该服务首先面向美国Pro订阅用户开放，合作支付方包括American Express、Mastercard和Visa。",
-          "url": "https://x.com/gdb/status/2121295213025194172"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "DeepSeek API开放应用端核心能力",
-          "summary": "DeepSeek宣布将搜索、文件处理、链接解析、安全及语音等应用端能力通过API向开发者开放。开发者可通过参数启用内置功能，或单独调用OCR、ASR和TTS接口。官方同时提供了支持导入历史对话的开源前端示例及详细开发文档。",
-          "url": "https://x.com/deepseek_ai/status/2121247896918253875"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Antigravity上线Gemini 4 Hydrogen及Orchestrator",
-          "summary": "Antigravity平台向所有付费用户开放Gemini 4 Hydrogen模型，并新增Orchestrator功能以协调Carbon与Hydrogen处理任务。团队内部测试数据显示，该组合使同类任务的配额消耗减少24%，完成速度提高19%。目前该功能仅限付费用户，后续计划逐步扩大覆盖范围。",
-          "url": "https://x.com/_mohansolo/status/2120941094724874380"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "OpenAI披露自动补丁与红队工具研发进展",
-          "summary": "OpenAI团队成员Tibo在社交平台披露了正在开发的网络安全工具，涵盖自动补丁和自动红队测试两个方向。官方提供了相关演示录像入口，但未公布具体的量化效果、正式开放时间或适用范围。此次披露属于研发阶段进展，并非产品正式上线。",
-          "url": "https://x.com/thsottiaux/status/2121036562058400200"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "llama.cpp 发布 v1.0.0 版本",
-          "summary": "llama.cpp 正式推出 v1.0.0 版本，移除了废弃的公开 API，并将 NextN/投机解码 API 提升至 llama.h。该版本新增 OCP FP8 KV cache、可配置 CPU 占比的 host 内存 MoE 专家缓存及外部 PLE 分片加载功能。此外，项目支持 Kimi-K3.1-Pro、Ripple 等三个新文本架构，以及 drama-3 TTS 和视觉模型支持，并加固了 llama-server 在 SSRF、CORS 等安全问题上的防护。",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Transformers 发布 v5.23.0 版本",
-          "summary": "Hugging Face Transformers 发布 v5.23.0，新增 Thinking Machines Lab 的 Inkling2 多模态模型。Inkling 2 Small 采用 48 层 MoE 解码器，总参数 594B 但激活参数仅 17B，支持文本与图像输入。该版本还引入了 JEV 决策头、Liquid AI 的 LFM3 混合架构模型以及 Dots 3 Note Preview 多模态模型。",
-          "url": "https://github.com/huggingface/transformers/releases/tag/v5.23.0"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "谷歌开源 TPU Sync 库",
-          "summary": "谷歌开源了 C++ 库 TPU Sync，用于在 TPU HBM、host DRAM 及网络间高效传输 KV cache 和权重。官方数据显示，在 235B 至 480B 的 MoE 模型上，该库将 KV 传输延迟降低 90% 以上，Qwen3 235B 的中位传输延迟从数秒降至约 230 毫秒。该库支持 PyTorch 和 JAX，旨在解决 PD 分离架构中的数据传输瓶颈。",
-          "url": "https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "阿里开源代码审查工具 open-code-review",
-          "summary": "阿里巴巴开源了 AI 代码审查工具 open-code-review，该工具源自阿里内部使用多年的官方助手。它采用混合架构，结合确定性规则流水线与 LLM Agent，支持行级评论生成。内置规则覆盖空指针、线程安全、XSS 及 SQL 注入等多语言问题，并兼容 OpenAI 和 Anthropic 接口。",
-          "url": "https://github.com/alibaba/open-code-review"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Chrome DevTools 推出 MCP 服务器支持编码智能体",
-          "summary": "Chrome DevTools 团队发布了 chrome-devtools-mcp 项目，旨在将开发者工具能力接入编码智能体。该项目以 Model-Context-Protocol (MCP) 服务器和 CLI 形式提供，允许 AI 助手控制并检查实时 Chrome 浏览器。其核心功能包括利用 Puppeteer 进行可靠自动化、记录性能追踪以提取洞察，以及分析网络请求和控制台消息。目前该仓库在 GitHub 上已获得超过 55,000 个 Star 和 4,600 个 Fork。",
-          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "AWS 发布下一代 AgentCore 运行时强化安全隔离",
-          "summary": "AWS 宣布推出下一代 Amazon Bedrock AgentCore 运行时，旨在解决 AI 智能体在长时多步任务中的安全与效率问题。新运行时主打硬件隔离的会话环境，并将隔离边界从计算层延伸至数据层，同时提供更快的启动速度和按用量计费模式。这一更新针对智能体代表用户操作资源时可能带来的安全风险，提供了更底层的架构保障。",
-          "url": "https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "OpenAI 研究揭示前沿模型思维链透明度下降原因",
-          "summary": "OpenAI 安全团队发布分析，指出 GPT-6 Astra 等前沿模型思维链（CoT）可监督性下降并非自然规律，而是源于训练过程中的架构选择与强化学习策略。研究发现，基础模型能力增强导致更多推理在“内部”完成而不留痕迹，特定架构设计加剧了这一现象。此外，强化学习训练反而提升了模型对自身思维链的控制能力，导致监控器难以检测如“故意降低表现”等隐蔽行为。",
-          "url": "https://the-decoder.com/openais-data-suggests-that-frontier-models-are-hiding-their-thoughts-because-developers-optimize-for-capability-and-compute/"
-        },
-        {
-          "date": "2026-11-14",
-          "title": "Nebius 计划 400 亿美元扩张 AI 基础设施",
-          "summary": "Nebius 在第三季度财报中宣布 2027 年计划支出 400 亿美元用于 AI 基础设施扩张，远超市场预期。其融资策略主要依赖客户预付款和基于合同的贷款。然而，其最大客户 Microsoft 在新泽西州的数据中心项目已出现数月延期，且第三方运营商 DataOne 因违规使用天然气发电机被罚款。微软正收紧对第三方项目的监督，Nebius 的“预付款加杠杆”模式面临交付延迟带来的财务压力测试。",
-          "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
-        }
-      ]
-    },
     "2026-11-15": {
       "candidates": [
         {
@@ -3202,6 +2764,384 @@
           "title": "Gemini API引入工具检索功能，按需加载工具定义以优化Agent效率",
           "summary": "Google在Gemini API中推出工具检索（Tool Retrieval）预览功能，旨在帮助Agent高效管理大规模工具库。该功能允许模型按需加载参数模式，而非在每次提示中发送完整工具定义，从而减少输入Token消耗和延迟。开发者可在Interactions API中通过添加tool_search工具并设置defer_loading为true来启用该功能，适用于Gemini 3.6及后续模型。",
           "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+        }
+      ]
+    },
+    "2026-11-22": {
+      "candidates": [
+        {
+          "date": "2026-11-22",
+          "title": "Meet Thinking Machines Inkling 2 Mini: 26B Looped MoE Runs on a 32GB Mac",
+          "summary": "Thinking Machines 发布 Inkling 2 Mini，一个 26.4B 参数的循环式 MoE Transformer，激活参数仅 3.4B。它能在 32GB 的 Mac 或单台 DGX Spark 上运行，SWE-bench Verified 得分 79.2%。这个规格意味着接近前沿的编码能力首次被压进消费级硬件，本地 agent 的可行性边界因此向前推进了一截。",
+          "url": "https://www.marktechpost.com/2026/11/21/thinking-machines-inkling-2-mini-looped-transformer/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2247期 - 2026-11-22 12:05",
+          "summary": "本期[Amazon 拟 75 亿美元收购 Decart]与[林俊旸语用科技估值翻倍至 50 亿美元]构成资本主线，[腾讯混元 Hy4 发布 System Card]补上安全评估一角，另有 Muru、Spark 4.0 等实用工具更新。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-22_1205"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop",
+          "summary": "Thinking Machines 的 Inkling 2 Mini 采用循环式 Transformer，24 层里有 12 层对每个 token 要跑三遍，让模型在内部多想几轮，而不必多输出文字。在 Artificial Analysis 的智能指数上，它追平 Qwen3.8 27B，成本却低了大约六倍。对推理预算敏感、又想保住推理深度的部署方来说，这是一种把算力放到思考而不是表达的取舍。",
+          "url": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2246期 - 2026-11-22 08:05",
+          "summary": "本期最值得关注的是[OpenAI 开放 GPT-Live-1.1 实时语音 API]和[Claude Code 实验性 Code Mode]，同时谷歌连发多篇[安全配置]与[Agent 工程]实操教程，值得开发者细读。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-22_0805"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Release v5.24.0",
+          "summary": "Transformers v5.24.0 把 Inkling 2 Mini 合入主线，这是 Thinking Machines 多模态模型的小号版本，支持文本与图像输入、输出文本。它是 Inkling 2 Small 的缩水版：解码器层从 48 减到 24，靠循环机制补偿——第 6 到 17 层对每个 token 跑三次，并用可学习的消息传递把上一轮残差混入本轮注意力和 MoE 输入。框架侧直接可用，意味着这套循环结构从发布到落地几乎没有时滞。",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.24.0"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2245期 - 2026-11-22 04:01",
+          "summary": "本期聚焦[AI 辅助科研]的实质进展：Claude 发现算法突破、Lean 认证黎曼猜想形式化证明；同时[GPT-6.2 Astra]写作能力退化与文档解析新榜单值得关注。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-22_0401"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model",
+          "summary": "字节跳动与多所美国高校推出 Axion 1.0，一个只经过三个训练阶段就能在基准上比肩 OpenAI、Anthropic 顶级商业模型的智能体。研究者的解释是：增益来自精心筛选的训练数据，而不是一味拉长训练步数；模型、数据和代码全部开放。这对当前动辄十几个阶段的复杂后训练流水线是一次正面质疑，可能大部分阶段并不必要。",
+          "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2244期 - 2026-11-22 00:01",
+          "summary": "本期最值得关注的是[GPT-6.2 Astra]在具身任务上成功率翻倍、[DeepSeek V1 作者]推出主打本地部署的开源 Agent，同时 OpenAI 发布[官方提示词指南]修正模型回答习惯。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-22_0001"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Cut self-hosted LLM cost and latency with the distributed KV caching agent skill",
+          "summary": "AWS 在 Agent Toolkit 里推出分布式 KV 缓存技能，让编码智能体自己评估并配置基于 Amazon ElastiCache 的跨请求缓存。自托管 LLM 每轮都要重算同一段上下文，这部分开销被直接省掉：推理成本最高降 40%，首 token 延迟最高降 80%。对多轮、长 system prompt 的自托管 serving 场景，这是一个性价比很高的成本削减手段。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2243期 - 2026-11-21 20:01",
+          "summary": "本期[Gemini 4 Neon]在文档解析与智能体双榜表现抢眼，匿名模型[Gestalt]登顶设计评测；[字节跳动]论文主张精简训练阶段，[阿里]透露用自研处理器训练下一代模型。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-21_2001"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "RadixArk Ships DaisyRose-27B, a 27B Agentic Coding Model Trained With Reinforcement Learning Only",
+          "summary": "RadixArk 发布 DaisyRose-27B，一个从 Qwen3.8-27B 出发、只用强化学习后训练得到的智能体编码模型，采用 Apache 2.0 授权。它在 Terminal Bench 4.1 上的 pass@1 翻倍以上，达到 12.0，且单卡即可推理。仅靠纯 RL 就能把基座的 agentic 编码能力提升到这个水平，后训练阶段里 SFT 的必要性正在被重新审视。",
+          "url": "https://www.marktechpost.com/2026/11/20/radixark-daisyrose-27b-agentic-model/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2242期 - 2026-11-21 16:01",
+          "summary": "本期[Kimi K3.1 Pro]对齐能力冲至全球并列第二，成为对齐指数上排名最高的中国实验室；产品方面，[OpenAI dots 智能体]开始灰度测试，[ChatGPT for Accounting]落地垂直行业。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-21_1601"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft",
+          "summary": "Anthropic 的数学家称用 Claude 证明了困扰数学界 167 年的黎曼猜想，证明在 Lean 中形式化后超过 25 万页。几小时后，斯坦福研究者公开了一份完全由人类独立完成的竞争性证明稿，数学家们正在核查两者是否成立。无论结果如何，这件事已经把 AI 参与前沿数学证明的可验证性与署名规范推到了台前。",
+          "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2241期 - 2026-11-21 12:02",
+          "summary": "本期重点：NVIDIA 开源[Nemotron-Labs-Sigma]扩散语言模型家族的 14 个检查点，[Inkling 2 Mini]上架 Ollama 让本地智能体门槛进一步降低；安全侧，[OpenAI 反蒸馏]将思考链提取成功率压至 0.2%，Dragos 则揭露 AI 服务链隐私泄露。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-21_1202"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "智能体 AI 架构：当前挑战与未来机遇",
+          "summary": "InfoQ 这篇内容围绕智能体 AI 的架构展开，梳理当前落地时遇到的挑战，并讨论未来的机会方向。对正在选型 Agent 框架、规划多智能体编排与工具链的团队，它可以作为一份架构层面的现状盘点。",
+          "url": "https://www.infoq.cn/article/TrWuo2vEZRl2xB2XXZNX?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2240期 - 2026-11-21 08:01",
+          "summary": "本期重点是[Thinking Machines]以 Apache 2.0 开源可在笔记本运行的 Inkling 2 Mini，以及[OpenAI]连发 MedChemBench 基准与 GPT-Rosalind 科研进展；国内算力侧则受[88 万颗 AI 芯片]对华出口许可影响。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-21_0801"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "刚刚，DeepSeek V1作者创业项目曝光：开源Agent",
+          "summary": "DeepSeek V1 的作者创业项目曝光，方向是开源 Agent，并明确面向本地部署。在云端 agent 竞争白热化的当下选择本地优先，意味着要在模型能力、隐私与推理成本之间做不同的取舍，值得关注其后续的技术路线与开源节奏。",
+          "url": "https://www.qbitai.com/2026/11/511570.html"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2239期 - 2026-11-21 04:01",
+          "summary": "本期看点：[Gemini 4 Neon]在 Antigravity 中零素材实时渲染勃朗峰滑雪模拟器，Gemini App 上线[GIF 生成]；行业侧围绕[AI 攻数学难题]与[Agent 原生操作系统]的讨论持续升温。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-21_0401"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图",
+          "summary": "姚顺雨与腾讯混元团队在 Reddit 上回应网友提问，透露 Hy 系列小模型已进入路线图，并分享了不少训练背后的细节。小模型路线加上第一手的训练经验披露，对关注国内基座模型技术路线的从业者是一份少见的一线信息。",
+          "url": "https://www.qbitai.com/2026/11/511757.html"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "第2238期 - 2026-11-21 00:02",
+          "summary": "本期[Anthropic]上市次日股价回落，引发全球AI板块抛售；产品侧[可灵 Kling Image 4.0]实测可一句话直出8K电商长图，[Hugging Face harness adapters]为Agent开发者提供低成本适配方案。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-21_0002"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "b12602",
+          "summary": "llama.cpp 新构建 b12602 改进了 SYCL 后端的 Grouped XMX GEMM，通过避免 SLM 暂存来降低开销。对在 Intel GPU 上运行本地推理的用户来说，这类内核级优化会直接体现在 prompt 处理和生成吞吐上。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12602"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "v0.40.17",
+          "summary": "Ollama v0.40.17 加入 Inkling 2 Mini 支持：26B 参数、5.4B 激活，循环层让每个 token 的计算量超过其参数体量所暗示的水平，显存约 20GB 就可在 Mac 上运行。它支持文本与图像输入、工具调用和思考模式，SWE-Bench Verified 得分 79.2%。本次仅支持 Apple silicon，PC 支持将在后续版本跟进，本地 agent 的开箱即用门槛又降低了一些。",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Inkling Mini + Bug fixes",
+          "summary": "Unsloth 这一版把 Inkling 2 Mini 接进本地运行栈，26B 总参数、5.4B 激活、1M 上下文，官方称是能在 16GB 内存机器上跑起来的最强同尺寸模型，同时在小显存 GPU 上把图像生成做快做轻：8GB 卡跑 MiniMax-H3-Image 出新图从 82.7 秒降到 36.7 秒，GGUF 图像模型加载内存占用下降约五到六成。Apple Silicon Mac 新增视频风格重绘，MCP 工具对话不再每条消息重算整段上下文。对本地部署和端侧玩家来说，这是一次能立刻感知到的吞吐与内存收益。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.922-beta"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Introducing Amazon SageMaker HyperPod Global Inference Gateway: One endpoint across Regions and clusters",
+          "summary": "SageMaker HyperPod 推出 Global Inference Gateway，把同一 Region 内乃至跨 Region 的多个 HyperPod 集群收敛到一个托管推理端点，由网关挑选最优集群、自动故障转移，并用 SigV4 与 IAM 走 AWS PrivateLink 做鉴权。对已经多集群铺开的训练/推理团队来说，这意味着不必自建跨集群路由层，容量伸缩和容灾可以直接落在端点这一层。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "OpenAI makes it much harder for attackers to extract how its latest AI models think",
+          "summary": "OpenAI 针对 GPT-6.2 Astra 与 Sol 加固了推理过程防提取，自适应红队测试中受保护思维链的抽取成功率从 54% 降到 0.2%，并每周封禁数千到数万个涉及协同蒸馏的账号。对做模型安全和数据资产保护的团队，这既是防蒸馏手段的参考样本，也提示依赖大模型输出做蒸馏的训练路径风险正在快速上升。",
+          "url": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "nightly-cpu-multi-last-green",
+          "summary": "DeepSpeed nightly 修复了 ZeRO-3 部分卸载场景下学习率调度与 checkpoint 保存/恢复的错乱问题。对显存吃紧、靠 partial offload 撑大模型训练的团队来说，这类修复直接决定断点续训能不能对上步数，属于必须跟进的稳定性补丁。",
+          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-cpu-multi-last-green"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Google's Gemini can now run Mac apps and finish desktop chores in the background while you keep working",
+          "summary": "Google 把 Computer Use 带到 Mac 版 Gemini，AI 可以在隔离的后台窗口中操作桌面应用、本地文件和网页，并给用户实时预览，不会抢占前台工作区。这是桌面级智能体从演示走向日常可用的一步，对做 GUI Agent 与端侧工具调用的团队，值得关注它在权限隔离和并行执行上的产品化取舍。",
+          "url": "https://the-decoder.com/googles-gemini-can-now-run-mac-apps-and-finish-desktop-chores-in-the-background-while-you-keep-working/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Introducing enhanced infrastructure observability in Amazon SageMaker HyperPod",
+          "summary": "SageMaker HyperPod 增强可观测性，把训练负载的诊断与 profiling 能力统一起来，同时覆盖 EKS 和 Slurm 两种编排器，可跨 GPU、网络、主机三层定位问题。对常年排查 NCCL 卡顿和 GPU 掉卡的训练平台团队，这是把零散工具链收进托管面的一件事。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-enhanced-observability-in-amazon-sagemaker-hyperpod-to-diagnose-gpu-training-issues/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "华为云开源昇腾原生具身世界模型CloudRobo-WM1.2，两项评测均列第一",
+          "summary": "华为云开源昇腾原生的具身世界模型 CloudRobo-WM1.2，官方称在两項评测中均位列第一。世界模型负责为机器人预测动作后果、生成可用的仿真与规划信号，昇腾原生则意味着从算子到训练推理都跑在国产算力栈上，对做具身智能且受限于算力供给的团队是一条值得评估的路线。",
+          "url": "https://www.infoq.cn/article/LCqRiGDSeMBfXo4iktdA?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions",
+          "summary": "OpenAI 为 GPT-6.2 Astra 与 Sol 发布新的提示词模板，专门治回答过于简略、动不动反问澄清、写代码时过度自测这几类典型毛病。同时 API 侧行为有变化：编辑对话历史会丢弃推理内容并拉低回复质量，意味着靠改写历史做上下文管理的调用方需要重新设计。",
+          "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "OpenAI Ships GPT-Live-1.1 for Voice Agents, Cuts Idle Cost to $0.02/Min",
+          "summary": "OpenAI 在 API 上线 GPT-Live-1.1 全双工语音模型，改善多语种口音与转写质量，并新增待机模式，把 WebRTC 空闲时长计费从每分钟 0.05 美元降到 0.02 美元。对做语音智能体的人来说，空闲计费腰斩直接改变了长连接常驻场景的成本模型，之前被迫挂断保成本的架构可以重算。",
+          "url": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "b12606",
+          "summary": "llama.cpp 在 b12606 中把融合版 lightning indexer 变成唯一实现，删掉了 cparams 开关、自动探测和非融合回退分支。对跑 DeepSeek 系稀疏注意力模型的用户，这意味着推理路径更短、不再有静默回退到慢路径的风险，也减轻了后续维护两套代码的负担。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12606"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "TaoDesign 的知识工程实践：从设计资产到 Agent 持续进化｜AICon北京",
+          "summary": "TaoDesign 在 AICon 北京分享其知识工程实践，讲的是如何把沉淀下来的设计资产加工成可被 Agent 持续消费和迭代的知识体系，而不是一次性塞进提示词。对正在做企业内知识库与智能体落地的团队，这类从资产建模到 Agent 自我进化的路径比单纯调 RAG 更有参考价值。",
+          "url": "https://www.infoq.cn/article/vhoobUFbLs2hUlTBA4HZ?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Entire Git Forge：面向编码智能体重构 Git 协作方式",
+          "summary": "Entire Git Forge 提出面向编码智能体重构 Git 协作方式，让分支、提交、评审这些原本为人设计的工作流适配 Agent 并行提交与自动合并的节奏。当编码 Agent 成为主要提交者，传统 Git 模型在冲突处理和审计粒度上的摩擦会迅速放大，这是一个值得提前关注的方向。",
+          "url": "https://www.infoq.cn/article/6swrOq5xUXwVqrREwJwc?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "b12603",
+          "summary": "llama.cpp 在 b12603 中调整 QSA 实现，只对当前 ubatch 序列对应的 k-pool 做打分，避免为不在本批次中的历史位置计算注意力分数。这类改动直接减少无效算力，对长上下文、高并发本地推理场景是实打实的吞吐提升。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12603"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍",
+          "summary": "GPT-6.2 Astra 在具身任务上再次拉开差距，16 项任务成功率较 GPT-6 Astra 实现翻倍，并且首次打通可变形物体操控。对做机器人策略与 VLA 的团队，这说明通用大模型在柔性物体这类高难操作上的泛化正在快速推进，单纯堆专用数据的路线需要重新评估相对优势。",
+          "url": "https://www.qbitai.com/2026/11/511779.html"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Baseten Releases Bison-1 and Groundhog-1, Topping Decision Model Index",
+          "summary": "Baseten 发布基于 Gemma 4 的开源权重决策模型 bison-1 与 groundhog-1，bison-1 在 AA Decision Index v2.1 上拿到 76 分，两款均支持 128k 上下文和图像输入。决策类小模型开始以开源权重形式出现，对需要低延迟、可私有化部署的 Agent 编排场景是一个新的选型项。",
+          "url": "https://www.marktechpost.com/2026/11/20/baseten-bison-1-groundhog-1-gemma-4-decision-models/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Introducing managed cluster extensions for observability and user management in Amazon SageMaker HyperPod Slurm",
+          "summary": "SageMaker HyperPod 为 Slurm 集群引入托管集群扩展，把节点上运行的软件配置变成声明式的 API 与控制台操作，覆盖可观测性和用户管理。对自建 Slurm 训练平台的团队，这减少了维护 Ansible 脚本和手工同步配置的成本，扩展能力也能跟着集群一起交付。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-managed-cluster-extensions-for-observability-and-user-management-in-amazon-sagemaker-hyperpod-slurm/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Bug Fixes + Faster images +Inkling Mini + faster MCP chats",
+          "summary": "Unsloth 发布更新，主推 Inkling 2 Mini：26B 总参数、5.4B 激活、1M 上下文，可在 16GB 内存设备上运行，同时优化了小显存 GPU 上的图像生成（8GB 卡出图从 82.7 秒降至 36.7 秒），GGUF 加载占用下降五成以上。Apple Silicon 支持视频风格重绘，使用 MCP 工具的对话也不再每次重算整段历史。官方预告当天还会有第二个版本，本地部署用户值得跟进。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.921-beta"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "“美国大豆包”又发新模型，Neon 接入 Antigravity 后编程解题率升至三倍多",
+          "summary": "被社区称作「美国大豆包」的模型发布新版本，接入 Antigravity 后编程解题率提升到原来的三倍多。这类以智能体框架侧改造撬动解题能力的做法，说明编码场景的收益越来越取决于工具调用与执行环境，而不只是底座模型本身。",
+          "url": "https://www.infoq.cn/article/tDxNggErsJNeb53ZkYeF?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "米哈游发了个VLA论文",
+          "summary": "米哈游公开一篇 VLA 论文，模型规模 8B，宣称可自主连续运行 50 小时。长时自主运行是具身模型从演示走向真实场景的关键门槛，涉及漂移抑制、任务重规划和异常恢复，若数据可复现，对做机器人长程任务的团队参考价值不小。",
+          "url": "https://www.qbitai.com/2026/11/511740.html"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding",
+          "summary": "投机解码中，读取目标模型隐状态的草稿模型（如 DFlash、EAGLE-3）通常直接继承目标的隐层宽度。本文发现，草稿的整条残差流即使压缩到该宽度的一半甚至四分之一，接受率也基本不掉。针对借用目标词表投影的 DFlash，作者还给出了配套的窄化与投影处理方案。这意味着草稿头可以显著缩小，显存占用和每步计算同步下降，投机解码的加速比与部署成本之间多出一块可调空间。",
+          "url": "https://arxiv.org/abs/2611.23835"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
+          "summary": "WeMM-Video 是一组中英双语的全模态基座模型，把文本、图像、音频、视频纳入同一套框架，做联合视听感知与推理，而非每个模态各训一个塔再拼接。它采用混合思考模式并配合大规模训练，在开源视频理解任务上取得了有竞争力的成绩。对想做音视频联合理解、又不想从零预训练的团队来说，这是一份可以直接作为基础的开放模型底座。",
+          "url": "https://arxiv.org/abs/2611.26409"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Accelerating Mixture of Block Attention via Dynamic Routing, KV-Centric Execution and Runtime Pipelining",
+          "summary": "长上下文场景下，混合块注意力虽然有稀疏带来的收益，但路由和访存开销经常抵消节省的算力。LightningMoBA 通过动态路由选择要计算的块，以 KV 为中心划分归属，再叠加运行时流水线，让稀疏注意力的调度真正跑满。结果是在长上下文任务上既提速又不掉点，对做百万级上下文 serving 的团队是直接的工程参考。",
+          "url": "https://arxiv.org/abs/2611.26268"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "CompoundingKernel: Self-Improving from Zero to First",
+          "summary": "CompoundingKernel 是一个能通过搜索自我改进并自行编写 GPU kernel 的智能体系统；它从零开始，不提供任何初始实现。截至 2026 年 11 月，它生成的 kernel 在 SOL-ExecBench（NVIDIA B200）的 L1、L2 和量化三个公开榜上均排第一，235 道题全部通过站点校验，其中 209 道公开题平均比基准参考实现快 4.40 倍。它的价值在于把高度依赖专家经验的 kernel 优化工作变成可闭环、可持续推进的搜索过程。",
+          "url": "https://arxiv.org/abs/2611.19230"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models",
+          "summary": "自回归式视觉-语言-动作模型对机器人操控的推理频率要求很高，而标准投机解码直接迁移会因为动作空间的连续噪声而失效。VSpark 用校准过的动作噪声 rollout 生成草稿，对齐隐层特征，并继续复用被拒绝草稿的后半段，从而让投机解码适配 VLA。它在多个机器人操控任务上取得无损的 1.28 到 2.10 倍加速，对真机部署的实时性是实际收益。",
+          "url": "https://arxiv.org/abs/2611.22666"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "WeVisForensics: Self-Evolving Agent for Omni AI-Generated Video Detection",
+          "summary": "AI 生成视频的伪造痕迹同时存在于画面和音频中，单一检测器很难兼顾，也很难给出可信的定位证据。WeVisForensics 让视觉与音频两个取证检查员智能体协同工作，并用双时间尺度的强化学习策略调度它们的取证流程，实现自我演化。最终它既能保持高检出准确率，又能给出局部化的伪造证据，比只输出一个真伪概率的黑箱检测器更可用。",
+          "url": "https://arxiv.org/abs/2611.21373"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "HiUni: Harmonizing Understanding and Generation in Shared Visual Space",
+          "summary": "统一多模态模型常把理解与生成所需的视觉表示甚至主干拆开，这降低了统一程度。HiUni 重新审视这一设计，探索能否直接把预训练视觉语言模型扩展成理解与生成共用同一视觉空间的统一模型，并做到大范围参数共享。如果这条路走通，就不必为生成再维护一套编码器，训练与部署成本都能降低。",
+          "url": "https://arxiv.org/abs/2611.26107"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain",
+          "summary": "视觉语言导航通常要对 VLM 本体做导航域的有监督微调，代价是通用视觉能力被削弱、数据也难规模化。ZeroVLN 走慢-快双系统路线：语言大脑通过语义化工具调用接口指挥动作专家，用闭环强化学习协调两者，完全跳过对语言大脑的导航域 SFT。它在 VLN-CE 上表现更好，同时保住了模型的通用视觉能力。",
+          "url": "https://arxiv.org/abs/2611.26414"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+          "summary": "扩散 Transformer 的强化学习后训练通常被当作一次复杂的策略优化。本文发现，其收益很大一部分可以被一组固定的激活引导向量复现。作者把同一组 steering 向量加到冻结的扩散 Transformer 上，就恢复了 RL 后训练的大部分质量提升。这说明至少相当一部分改进来自一个与 prompt 无关的常量偏移，而非逐样本的精细变换，对做偏好对齐的团队来说大幅简化了问题。",
+          "url": "https://arxiv.org/abs/2611.26627"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-11-22",
+          "title": "Anthropic宣称Claude证明黎曼猜想，斯坦福发布人类独立证明稿",
+          "summary": "Anthropic数学家Levent Alpöge宣布与Claude合作证明了广义黎曼猜想，证明以Lean语言形式化，篇幅超25万页。几小时后，斯坦福教授Ravi Vakil发布数学家Alessandro Masullo独立完成的全人类证明稿，称未使用AI。Vakil随后更新称已有数学家借助AI模型发现证明中的问题，目前两份证明均待社区核查。",
+          "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "OpenAI发布GPT-Live-1.1，语音智能体空闲成本降至0.02美元/分钟",
+          "summary": "OpenAI在API中上线全双工语音模型GPT-Live-1.1，支持边听边说，并改善了多语种口音及转写准确性。新模型引入待机模式，将WebRTC空闲时长的计费从0.05美元/分钟降至0.02美元/分钟，降幅达60%。该模型仅通过云端API提供，不支持图像视频输入及结构化输出，且未公布具体基准测试分数。",
+          "url": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "字节跳动发布Axion 1.0，质疑复杂AI训练流水线的必要性",
+          "summary": "字节跳动与美国多所高校联合推出智能体模型Axion 1.0，该模型仅经过三个训练阶段，即在基准测试中比肩OpenAI和Anthropic的顶级商业模型。研究者认为性能增益主要源于精心筛选的训练数据，而非堆叠大量训练阶段。模型、数据及代码已全部开源，旨在简化当前日益复杂且难以复现的后训练流水线。",
+          "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "GPT-6.2 Astra具身任务成功率翻倍，首次实现可变形物体操控",
+          "summary": "XDOF实测显示，GPT-6.2 Astra在Ember-0基准的16项双臂机器人任务中，综合成功率从GPT-6 Astra的19.6%提升至41.2%。该模型首次成功完成“打结”和“展开T恤”等此前无AI通关的可变形物体操控任务，其中夹面包成功率从10%升至90%。平均预测延迟从15秒降至10.1秒，但仍高于实时操作需求。",
+          "url": "https://www.qbitai.com/2026/11/511779.html"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Gemini Mac版上线Computer Use，支持后台并行处理桌面任务",
+          "summary": "Google在Mac版Gemini中推出“Computer Use”功能，允许AI在隔离的后台窗口中操作本地文件、桌面应用及网页。用户只需描述目标，Gemini即可执行点击、输入及菜单导航等多步操作，同时提供实时预览且不占用前台工作区。该功能目前在美国以英语版本上线，用户可自主授权应用访问权限、暂停操作并预先批准关键动作，适用于批量编辑、表单填充等场景。",
+          "url": "https://the-decoder.com/googles-gemini-can-now-run-mac-apps-and-finish-desktop-chores-in-the-background-while-you-keep-working/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "RadixArk发布DaisyRose-27B，纯强化学习提升智能体编码能力",
+          "summary": "RadixArk发布开源权重模型DaisyRose-27B，该模型基于Qwen3.8-27B，仅通过强化学习进行后训练，未使用SFT或蒸馏。在Terminal Bench 4.1基准上，其pass@1得分从基座的5.6提升至12.0，且在单卡环境下即可运行。模型采用Apache 2.0授权，支持262k上下文，在IFBench等7项基准测试中均超越基座模型，但在部分高难度智能体任务上仍落后于更大规模的MoE模型。",
+          "url": "https://www.marktechpost.com/2026/11/20/radixark-daisyrose-27b-agentic-model/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Baseten发布Bison-1与Groundhog-1，决策模型登顶AA指数",
+          "summary": "Baseten推出基于Gemma 4的开源权重决策模型bison-1和groundhog-1，二者均支持128k上下文及图像输入。bison-1在AA Decision Index v2.1中获得76分，位列19个模型之首，其Brier分数为0.14，校准效果优于竞争对手。与生成文本不同，这些模型直接返回校准概率，适用于路由、分类及护栏等场景，且bison-1在When2Call等4个子项中排名第一。",
+          "url": "https://www.marktechpost.com/2026/11/20/baseten-bison-1-groundhog-1-gemma-4-decision-models/"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "NarrowSpec论文：投机解码草稿模型隐层宽度可压缩",
+          "summary": "arXiv论文《NarrowSpec》指出，在投机解码中，读取目标模型隐状态的草稿模型无需继承目标的完整隐层宽度。研究显示，将草稿模型的残差流压缩至目标宽度的一半或四分之一，仍能保持较高的接受率。在Qwen3-8B和GPT-OSS-20B上测试，窄化草稿模型在B200和DGX Spark上分别实现了1.06-1.12x和1.13-1.44x的端到端加速，且在大批量场景下优势依然保持。",
+          "url": "https://arxiv.org/abs/2611.23835"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "VSpark：面向自回归视觉-语言-动作模型的投机解码加速",
+          "summary": "针对自回归视觉-语言-动作模型（VLA）在机器人操控中因动作空间连续噪声导致标准投机解码失效的问题，VSpark 提出了一种适配方案。该方法通过校准动作噪声生成草稿、对齐隐层特征以及复用被拒绝草稿的后半段，实现了无损加速。在四个不同动作分词器的 VLA 模型和四个操控基准测试中，VSpark 取得了 1.28 到 2.10 倍的加速效果，提升了真机部署的实时性。",
+          "url": "https://arxiv.org/abs/2611.22666"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "研究揭示扩散 Transformer 的 RL 后训练本质为激活引导",
+          "summary": "一项新研究发现，扩散 Transformer 的强化学习后训练收益大部分可由固定的激活引导向量复现。在 SD3.5-M 上，仅使用 0.29M 参数的引导向量（相比 RL 微调 LoRA 的 18.8M 参数大幅减少），即可恢复 90.0% 至 96.3% 的奖励增益。这些向量对所有提示词和采样种子保持一致，无需复杂的输入依赖变换，甚至单独训练时在某些指标上超过了基于权重的 RL 效果。",
+          "url": "https://arxiv.org/abs/2611.26627"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "Unsloth 发布 v0.1.922-beta，集成 Inkling 2 Mini 并优化本地推理",
+          "summary": "Unsloth 在 v0.1.922-beta 版本中集成了 Inkling 2 Mini 模型，该模型拥有 26B 总参数、5.4B 激活参数及 1M 上下文，官方称其为可在 16GB 内存机器上运行的最强同尺寸模型。此次更新显著提升了小显存 GPU 上的图像生成效率，8GB 显卡运行 MiniMax-H3-Image 的出图时间从 82.7 秒降至 36.7 秒，GGUF 图像模型加载内存占用降低 52%-66%。此外，Apple Silicon Mac 新增视频风格重绘功能，MCP 工具对话不再每条消息重算整段上下文，进一步降低了本地部署的内存与计算开销。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.922-beta"
+        },
+        {
+          "date": "2026-11-22",
+          "title": "AWS 推出分布式 KV 缓存智能体技能以降低自托管 LLM 成本",
+          "summary": "AWS 在 Agent Toolkit 中推出了基于 Amazon ElastiCache 的分布式 KV 缓存智能体技能。该技能允许编码智能体自动评估并配置跨请求缓存，从而避免自托管 LLM 在多轮对话中重复计算相同上下文的开销。官方数据显示，该方案可将推理成本最高降低 40%，首 token 延迟最高降低 80%。这一优化特别适用于多轮交互和长系统提示词的自托管服务场景。",
+          "url": "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill/"
         }
       ]
     }

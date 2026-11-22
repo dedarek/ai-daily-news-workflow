@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Anthropic宣称Claude证明黎曼猜想，斯坦福发布人类独立证明稿",
+    "summary": "Anthropic数学家Levent Alpöge宣布与Claude合作证明了广义黎曼猜想，证明以Lean语言形式化，篇幅超25万页。几小时后，斯坦福教授Ravi Vakil发布数学家Alessandro Masullo独立完成的全人类证明稿，称未使用AI。Vakil随后更新称已有数学家借助AI模型发现证明中的问题，目前两份证明均待社区核查。",
+    "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
+    "section": "🔥 今日焦点",
+    "review": "AI辅助证明与人类独立证明的“竞速”暴露了当前数学验证流程的滞后性。Lean形式化虽提供机器验证优势，但25万页的篇幅仍难以人工复核，而人类证明稿的快速发布也反映出学界对AI介入前沿数学的警惕与竞争心态。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI发布GPT-Live-1.1，语音智能体空闲成本降至0.02美元/分钟",
+    "summary": "OpenAI在API中上线全双工语音模型GPT-Live-1.1，支持边听边说，并改善了多语种口音及转写准确性。新模型引入待机模式，将WebRTC空闲时长的计费从0.05美元/分钟降至0.02美元/分钟，降幅达60%。该模型仅通过云端API提供，不支持图像视频输入及结构化输出，且未公布具体基准测试分数。",
+    "url": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/",
+    "section": "🚀 产品发布",
+    "review": "待机计费腰斩直接降低了长连接语音智能体的运营成本，使常驻场景更具经济性。但缺乏公开基准数据且仅限云端部署，限制了开发者对模型实际性能边界的评估与本地化部署的可能性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "字节跳动发布Axion 1.0，质疑复杂AI训练流水线的必要性",
+    "summary": "字节跳动与美国多所高校联合推出智能体模型Axion 1.0，该模型仅经过三个训练阶段，即在基准测试中比肩OpenAI和Anthropic的顶级商业模型。研究者认为性能增益主要源于精心筛选的训练数据，而非堆叠大量训练阶段。模型、数据及代码已全部开源，旨在简化当前日益复杂且难以复现的后训练流水线。",
+    "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/",
+    "section": "💼 行业动态",
+    "review": "该研究对当前业界普遍采用的多阶段复杂训练范式构成直接挑战，提示数据质量可能比训练步数更关键。若结论被广泛验证，将大幅降低前沿智能体的研发门槛与算力成本，推动训练流程向精简高效方向重构。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.2 Astra具身任务成功率翻倍，首次实现可变形物体操控",
+    "summary": "XDOF实测显示，GPT-6.2 Astra在Ember-0基准的16项双臂机器人任务中，综合成功率从GPT-6 Astra的19.6%提升至41.2%。该模型首次成功完成“打结”和“展开T恤”等此前无AI通关的可变形物体操控任务，其中夹面包成功率从10%升至90%。平均预测延迟从15秒降至10.1秒，但仍高于实时操作需求。",
+    "url": "https://www.qbitai.com/2026/11/511779.html",
+    "section": "💼 行业动态",
+    "review": "通用大模型在柔性物体操控上的突破表明其物理世界泛化能力正在快速提升，专用VLA模型需重新评估数据堆叠路线的优势。然而10秒以上的推理延迟仍是实时机器人应用的硬伤，限制了其在高频交互场景的落地。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Gemini Mac版上线Computer Use，支持后台并行处理桌面任务",
+    "summary": "Google在Mac版Gemini中推出“Computer Use”功能，允许AI在隔离的后台窗口中操作本地文件、桌面应用及网页。用户只需描述目标，Gemini即可执行点击、输入及菜单导航等多步操作，同时提供实时预览且不占用前台工作区。该功能目前在美国以英语版本上线，用户可自主授权应用访问权限、暂停操作并预先批准关键动作，适用于批量编辑、表单填充等场景。",
+    "url": "https://the-decoder.com/googles-gemini-can-now-run-mac-apps-and-finish-desktop-chores-in-the-background-while-you-keep-working/",
+    "section": "🤖 Agent & 工具",
+    "review": "后台隔离执行解决了GUI Agent干扰用户工作流的核心痛点，但权限隔离机制的实际安全性仍需验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "RadixArk发布DaisyRose-27B，纯强化学习提升智能体编码能力",
+    "summary": "RadixArk发布开源权重模型DaisyRose-27B，该模型基于Qwen3.8-27B，仅通过强化学习进行后训练，未使用SFT或蒸馏。在Terminal Bench 4.1基准上，其pass@1得分从基座的5.6提升至12.0，且在单卡环境下即可运行。模型采用Apache 2.0授权，支持262k上下文，在IFBench等7项基准测试中均超越基座模型，但在部分高难度智能体任务上仍落后于更大规模的MoE模型。",
+    "url": "https://www.marktechpost.com/2026/11/20/radixark-daisyrose-27b-agentic-model/",
+    "section": "🔓 开源热榜",
+    "review": "纯RL后训练在27B规模下显著提升了编码智能体性能，验证了减少SFT依赖的可行性，但小模型在复杂任务上仍有局限。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Baseten发布Bison-1与Groundhog-1，决策模型登顶AA指数",
+    "summary": "Baseten推出基于Gemma 4的开源权重决策模型bison-1和groundhog-1，二者均支持128k上下文及图像输入。bison-1在AA Decision Index v2.1中获得76分，位列19个模型之首，其Brier分数为0.14，校准效果优于竞争对手。与生成文本不同，这些模型直接返回校准概率，适用于路由、分类及护栏等场景，且bison-1在When2Call等4个子项中排名第一。",
+    "url": "https://www.marktechpost.com/2026/11/20/baseten-bison-1-groundhog-1-gemma-4-decision-models/",
+    "section": "🔓 开源热榜",
+    "review": "决策模型以开源权重形式出现，为低延迟、可私有化的Agent编排提供了新选项，但所有性能数据均为自报，缺乏第三方验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "NarrowSpec论文：投机解码草稿模型隐层宽度可压缩",
+    "summary": "arXiv论文《NarrowSpec》指出，在投机解码中，读取目标模型隐状态的草稿模型无需继承目标的完整隐层宽度。研究显示，将草稿模型的残差流压缩至目标宽度的一半或四分之一，仍能保持较高的接受率。在Qwen3-8B和GPT-OSS-20B上测试，窄化草稿模型在B200和DGX Spark上分别实现了1.06-1.12x和1.13-1.44x的端到端加速，且在大批量场景下优势依然保持。",
+    "url": "https://arxiv.org/abs/2611.23835",
+    "section": "💡 前沿研究",
+    "review": "缩小草稿模型宽度可在不显著牺牲接受率的前提下降低显存占用，为投机解码的部署成本优化提供了新的工程参数。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "VSpark：面向自回归视觉-语言-动作模型的投机解码加速",
+    "summary": "针对自回归视觉-语言-动作模型（VLA）在机器人操控中因动作空间连续噪声导致标准投机解码失效的问题，VSpark 提出了一种适配方案。该方法通过校准动作噪声生成草稿、对齐隐层特征以及复用被拒绝草稿的后半段，实现了无损加速。在四个不同动作分词器的 VLA 模型和四个操控基准测试中，VSpark 取得了 1.28 到 2.10 倍的加速效果，提升了真机部署的实时性。",
+    "url": "https://arxiv.org/abs/2611.22666",
+    "section": "💡 前沿研究",
+    "review": "VSpark 解决了 VLA 模型中动作 token 冗余导致的解码效率瓶颈，其无损加速特性对降低机器人控制延迟具有直接工程价值。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "研究揭示扩散 Transformer 的 RL 后训练本质为激活引导",
+    "summary": "一项新研究发现，扩散 Transformer 的强化学习后训练收益大部分可由固定的激活引导向量复现。在 SD3.5-M 上，仅使用 0.29M 参数的引导向量（相比 RL 微调 LoRA 的 18.8M 参数大幅减少），即可恢复 90.0% 至 96.3% 的奖励增益。这些向量对所有提示词和采样种子保持一致，无需复杂的输入依赖变换，甚至单独训练时在某些指标上超过了基于权重的 RL 效果。",
+    "url": "https://arxiv.org/abs/2611.26627",
+    "section": "💡 前沿研究",
+    "review": "该发现表明扩散模型偏好对齐可能主要源于常量偏移而非复杂策略优化，这为简化后训练流程、降低计算成本提供了新的理论依据。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Unsloth 发布 v0.1.922-beta，集成 Inkling 2 Mini 并优化本地推理",
+    "summary": "Unsloth 在 v0.1.922-beta 版本中集成了 Inkling 2 Mini 模型，该模型拥有 26B 总参数、5.4B 激活参数及 1M 上下文，官方称其为可在 16GB 内存机器上运行的最强同尺寸模型。此次更新显著提升了小显存 GPU 上的图像生成效率，8GB 显卡运行 MiniMax-H3-Image 的出图时间从 82.7 秒降至 36.7 秒，GGUF 图像模型加载内存占用降低 52%-66%。此外，Apple Silicon Mac 新增视频风格重绘功能，MCP 工具对话不再每条消息重算整段上下文，进一步降低了本地部署的内存与计算开销。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.922-beta",
+    "section": "🤖 Agent & 工具",
+    "review": "该版本通过模型量化与缓存优化，显著降低了端侧部署的硬件门槛，特别是视频重绘和 MCP 上下文优化对本地开发者具有实用价值。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AWS 推出分布式 KV 缓存智能体技能以降低自托管 LLM 成本",
+    "summary": "AWS 在 Agent Toolkit 中推出了基于 Amazon ElastiCache 的分布式 KV 缓存智能体技能。该技能允许编码智能体自动评估并配置跨请求缓存，从而避免自托管 LLM 在多轮对话中重复计算相同上下文的开销。官方数据显示，该方案可将推理成本最高降低 40%，首 token 延迟最高降低 80%。这一优化特别适用于多轮交互和长系统提示词的自托管服务场景。",
+    "url": "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill/",
+    "section": "🤖 Agent & 工具",
+    "review": "通过智能体自动配置 KV 缓存，AWS 将基础设施优化转化为开箱即用的能力，有效缓解了自托管 LLM 在高并发长上下文场景下的成本与延迟痛点。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
