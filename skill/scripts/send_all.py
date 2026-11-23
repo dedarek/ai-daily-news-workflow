@@ -301,7 +301,7 @@ def build_message(
     sender: str,
     to_header: str,
     html_content: str,
-    media_path: Path,
+    media_path: Path | None,
     media_kind: str,
 ) -> MIMEMultipart:
     message = MIMEMultipart('mixed', policy=SMTP)
@@ -315,6 +315,8 @@ def build_message(
     alternative.attach(MIMEText(plain, 'plain', 'utf-8'))
     alternative.attach(MIMEText(html_content, 'html', 'utf-8'))
     message.attach(alternative)
+    if media_path is None:
+        return message
 
     attachment = EmailMessage(policy=SMTP)
     if media_kind == 'video':
@@ -359,7 +361,7 @@ def main() -> int:
             'ai-daily-news-html-{date}.html',
         ],
     )
-    mp3_path = resolve_artifact(
+    mp3_path = resolve_optional_artifact(
         artifact_dir,
         args.date,
         [
@@ -393,10 +395,13 @@ def main() -> int:
                 f'url={public_video_url(args.date)}',
                 flush=True,
             )
-    print(
-        f'MEDIA_ATTACHMENT_SELECTED kind={media_kind} path={media_path} size={media_path.stat().st_size}',
-        flush=True,
-    )
+    if media_path is None:
+        print('MEDIA_ATTACHMENT_SKIPPED reason=no_media text-only issue', flush=True)
+    else:
+        print(
+            f'MEDIA_ATTACHMENT_SELECTED kind={media_kind} path={media_path} size={media_path.stat().st_size}',
+            flush=True,
+        )
     if media_kind == 'video':
         delay = max(delay, float(os.environ.get('AI_DAILY_VIDEO_SEND_DELAY', '90')))
         batch_pause = max(batch_pause, float(os.environ.get('AI_DAILY_VIDEO_BATCH_PAUSE', '600')))

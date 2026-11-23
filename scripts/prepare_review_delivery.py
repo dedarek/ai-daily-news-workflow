@@ -89,7 +89,8 @@ def main() -> int:
     podcast_script = get_json(published['podcast_script'])
     voice = get_json(published['voice']) if published.get('voice') else None
     html_bytes = get_bytes(published['html'])
-    audio_bytes = get_bytes(published['audio'])
+    audio_url = published.get('audio')
+    audio_bytes = get_bytes(audio_url) if audio_url else None
     report_from_manifest = manifest.get('pipeline_report') if isinstance(manifest.get('pipeline_report'), dict) else {}
     tts_mode = report_from_manifest.get('tts_mode')
     video_required = tts_mode == 'video-api-audio-video'
@@ -110,13 +111,14 @@ def main() -> int:
     if voice:
         write_json_file(output_dir / f'voice-{args.date}.json', voice)
     (output_dir / f'daily-news-{args.date}.html').write_bytes(email_safe_html(html_bytes))
-    (output_dir / f'daily-news-podcast-{args.date}.mp3').write_bytes(audio_bytes)
+    if audio_bytes is not None:
+        (output_dir / f'daily-news-podcast-{args.date}.mp3').write_bytes(audio_bytes)
     if video_bytes is not None:
         (output_dir / f'daily-news-video-{args.date}.mp4').write_bytes(video_bytes)
     write_podcast_text(output_dir / f'podcast-script-{args.date}.txt', podcast_script)
 
     deterministic_issues: list[str] = []
-    allowed_tts_modes = {'video-api-audio-video', 'siliconflow-moss-reference-live'}
+    allowed_tts_modes = {'video-api-audio-video', 'siliconflow-moss-reference-live', 'text-only'}
     if tts_mode not in allowed_tts_modes:
         deterministic_issues.append(
             f'tts_mode={tts_mode} is not one of {sorted(allowed_tts_modes)}'
@@ -140,8 +142,10 @@ def main() -> int:
         deterministic_issues.append('podcast dialogue is empty')
     if len(html_bytes) < 10 * 1024:
         deterministic_issues.append(f'html_bytes={len(html_bytes)} < 10240')
-    if not 1_000_000 <= len(audio_bytes) <= 8 * 1024 * 1024:
-        deterministic_issues.append(f'audio_bytes={len(audio_bytes)} outside allowed range')
+    if tts_mode != 'text-only':
+        if audio_bytes is None or not 1_000_000 <= len(audio_bytes) <= 8 * 1024 * 1024:
+            size = len(audio_bytes) if audio_bytes is not None else 0
+            deterministic_issues.append(f'audio_bytes={size} outside allowed range')
     if video_required and video_bytes is None:
         deterministic_issues.append('video artifact is required for video-api-audio-video but missing')
     if video_bytes is not None and len(video_bytes) < 100_000:

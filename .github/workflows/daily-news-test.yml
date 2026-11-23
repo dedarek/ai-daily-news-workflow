@@ -72,11 +72,15 @@ jobs:
 
       - name: Validate video API credentials
         if: ${{ steps.delivery.outputs.skip != 'true' }}
+        continue-on-error: true
         env:
           AI_DAILY_VIDEO_API_TOKEN: ${{ secrets.AI_DAILY_VIDEO_API_TOKEN || vars.AI_DAILY_VIDEO_API_TOKEN }}
           AI_DAILY_VIDEO_API_BASE_URL: ${{ vars.AI_DAILY_VIDEO_API_BASE_URL || 'http://8.137.39.142:1234/api' }}
         run: |
-          test -n "$AI_DAILY_VIDEO_API_TOKEN" || { echo "::error::Missing GitHub Actions secret AI_DAILY_VIDEO_API_TOKEN"; exit 1; }
+          if [ -z "$AI_DAILY_VIDEO_API_TOKEN" ]; then
+            echo "::warning::Missing AI_DAILY_VIDEO_API_TOKEN; pipeline will fall back to text-only issue"
+            exit 0
+          fi
           python3 scripts/check_video_api.py
 
       - name: Install media dependency
@@ -104,7 +108,6 @@ jobs:
           LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen38-27b/v1' }}
         run: |
           test -n "$LENOVO_LLM_API_KEY" || { echo "::error::Missing GitHub Actions secret LENOVO_LLM_API_KEY"; exit 1; }
-          test -n "$AI_DAILY_VIDEO_API_TOKEN" || { echo "::error::Missing GitHub Actions secret AI_DAILY_VIDEO_API_TOKEN"; exit 1; }
           FORCE_ARGS=""
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             FORCE_ARGS="--force-regenerate"

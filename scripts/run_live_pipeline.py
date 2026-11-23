@@ -1853,7 +1853,7 @@ def generate_video_api_media(
         submit_error: Exception | None = None
         used_base_url = ''
         for candidate_base_url in video_api_base_url_candidates():
-            attempts = max(1, int(os.environ.get('AI_DAILY_VIDEO_API_SUBMIT_ATTEMPTS', '6')))
+            attempts = max(1, int(os.environ.get('AI_DAILY_VIDEO_API_SUBMIT_ATTEMPTS', '2')))
             for attempt in range(1, attempts + 1):
                 try:
                     job_id, submit_payload = submit_video_api_job(script_path, issue_date, token, candidate_base_url)
@@ -2444,22 +2444,28 @@ def main() -> int:
     )
     moss_input_path.write_text(moss_dialogue_input(dialogue), encoding='utf-8')
 
-    voice_manifest, video_api_metadata = generate_video_api_media(
-        podcast_script_text_path,
-        podcast_path,
-        video_path,
-        voice_path,
-        args.date,
-        dialogue,
-    )
-    tts_mode = 'video-api-audio-video'
+    # 视频接口失败时只出文字日报：音频/视频/时间轴同源于同一个任务，全部丢弃
+    voice_manifest: dict | None = None
+    video_api_metadata: dict | None = None
+    tts_mode = 'text-only'
+    try:
+        voice_manifest, video_api_metadata = generate_video_api_media(
+            podcast_script_text_path,
+            podcast_path,
+            video_path,
+            voice_path,
+            args.date,
+            dialogue,
+        )
+        tts_mode = 'video-api-audio-video'
+    except Exception as exc:
+        print(f'WARN video_api_failed_text_only_issue: {exc}', flush=True)
+        video_api_metadata = {'error': str(exc)}
+        for stale in (podcast_path, video_path, voice_path):
+            stale.unlink(missing_ok=True)
 
-    tmp_html = Path('/tmp') / html_path.name
-    tmp_podcast = Path('/tmp') / podcast_path.name
-    tmp_video = Path('/tmp') / video_path.name
-    shutil.copy2(html_path, tmp_html)
-    shutil.copy2(podcast_path, tmp_podcast)
-    shutil.copy2(video_path, tmp_video)
+    for published in [html_path, *[p for p in (podcast_path, video_path) if p.exists()]]:
+        shutil.copy2(published, Path('/tmp') / published.name)
     shutil.copy2(html_path, SKILL_DIR / 'samples' / f'{args.date}.html')
 
     report = {
@@ -2481,9 +2487,9 @@ def main() -> int:
         'podcast_script_text_file': podcast_script_text_path.name,
         'podcast_moss_input_file': moss_input_path.name,
         'voice_file': voice_path.name,
-        'voice_turns': len(voice_manifest['turns']),
+        'voice_turns': len(voice_manifest['turns']) if voice_manifest else 0,
         'tts_mode': tts_mode,
-        'tts_synthesis_mode': 'external_video_api',
+        'tts_synthesis_mode': 'external_video_api' if voice_manifest else None,
         'voice_timing_source': 'estimated_text_weight',
         'tts_model': None,
         'tts_speed': None,
@@ -2491,9 +2497,9 @@ def main() -> int:
         'tts_reference_files': None,
         'video_api': video_api_metadata,
         'html_bytes': html_path.stat().st_size,
-        'podcast_bytes': podcast_path.stat().st_size,
-        'video_bytes': video_path.stat().st_size,
-        'podcast_duration_seconds': round(duration(podcast_path), 2),
+        'podcast_bytes': podcast_path.stat().st_size if voice_manifest else 0,
+        'video_bytes': video_path.stat().st_size if video_path.exists() else 0,
+        'podcast_duration_seconds': round(duration(podcast_path), 2) if voice_manifest else None,
     }
     (output_dir / f'pipeline-report-{args.date}.json').write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8'

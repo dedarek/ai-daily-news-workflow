@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import html as html_lib
+import json
 import os
 import re
 import subprocess
@@ -62,6 +63,12 @@ def file_info(path: Path) -> str:
     if not path.exists():
         return 'missing'
     return f'{path.stat().st_size} bytes'
+
+
+def text_only_issue(artifact_dir: Path, date_str: str) -> bool:
+    """True when the video API failed and the pipeline produced a text-only issue."""
+    report = artifact_dir / f'pipeline-report-{date_str}.json'
+    return report.exists() and json.loads(report.read_text(encoding='utf-8')).get('tts_mode') == 'text-only'
 
 
 def resolve_artifact(artifact_dir: Path, date_str: str, names: List[str]) -> Path:
@@ -221,7 +228,10 @@ def main() -> int:
             failures.append(f'HTML_ENTITY_BUG: {html_path} contains &#x entities')
 
     if not mp3_path.exists():
-        failures.append(f'MISSING: {mp3_path}')
+        if text_only_issue(artifact_dir, date_str):
+            facts.append('MP3: skipped (text-only issue, video API unavailable)')
+        else:
+            failures.append(f'MISSING: {mp3_path}')
     else:
         mp3_size = mp3_path.stat().st_size
         facts.append(f'MP3: {mp3_path} ({mp3_size} bytes)')

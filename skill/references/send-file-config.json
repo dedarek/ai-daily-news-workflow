@@ -16,7 +16,8 @@
     },
     {
       "path": "daily-news-podcast-{date}.mp3",
-      "field": "docs"
+      "field": "docs",
+      "optional": true
     }
   ]
 }

@@ -42,20 +42,22 @@ function requireDate(date) {
 }
 
 function firstExisting(candidates, label) {
-  return fs
-    .stat(candidates[0])
-    .then(() => candidates[0])
-    .catch(async () => {
-      for (const candidate of candidates.slice(1)) {
-        try {
-          const stat = await fs.stat(candidate);
-          if (stat.isFile()) return candidate;
-        } catch {
-          // Try the next known artifact name.
-        }
-      }
-      throw new Error(`Missing ${label}: ${candidates.join(", ")}`);
-    });
+  return optionalExisting(candidates).then((match) => {
+    if (match) return match;
+    throw new Error(`Missing ${label}: ${candidates.join(", ")}`);
+  });
+}
+
+async function optionalExisting(candidates) {
+  for (const candidate of candidates) {
+    try {
+      const stat = await fs.stat(candidate);
+      if (stat.isFile()) return candidate;
+    } catch {
+      // Optional media may be absent on text-only issues.
+    }
+  }
+  return null;
 }
 
 function hashApiId(apiKey) {
@@ -324,19 +326,21 @@ async function main() {
     [path.join(distDir, `pipeline-report-${date}.json`)],
     "pipeline report",
   );
-  const audioPath = args.audio || await firstExisting(
-    [
-      path.join(distDir, `daily-news-podcast-${date}.mp3`),
-      path.join(distDir, `ai-daily-news-podcast-${date}.mp3`),
-    ],
-    "audio",
+  const audioPath = await optionalExisting(
+    args.audio
+      ? [args.audio]
+      : [
+          path.join(distDir, `daily-news-podcast-${date}.mp3`),
+          path.join(distDir, `ai-daily-news-podcast-${date}.mp3`),
+        ],
   );
-  const videoPath = args.video || await firstExisting(
-    [
-      path.join(distDir, `daily-news-video-${date}.mp4`),
-      path.join(distDir, `ai-daily-news-video-${date}.mp4`),
-    ],
-    "video",
+  const videoPath = await optionalExisting(
+    args.video
+      ? [args.video]
+      : [
+          path.join(distDir, `daily-news-video-${date}.mp4`),
+          path.join(distDir, `ai-daily-news-video-${date}.mp4`),
+        ],
   );
   const textPath = args.txt || path.join(distDir, `daily-news-text-${date}.txt`);
 
@@ -349,9 +353,9 @@ async function main() {
 
   const raw = await fs.readFile(textPath, "utf8");
   const parsed = parseNewsText(raw);
-  const audio = await readMedia(audioPath);
+  const audio = audioPath ? await readMedia(audioPath) : null;
   const uploadVideo = !envFalse(args["upload-video"] || process.env.AI_DAILY_NEW_SITE_UPLOAD_VIDEO || "true");
-  const video = uploadVideo ? await readMedia(videoPath) : null;
+  const video = uploadVideo && videoPath ? await readMedia(videoPath) : null;
   let payload = {
     date,
     title: args.title || `AI 晚报：${date} 行业要闻速览`,
@@ -383,7 +387,7 @@ async function main() {
     api_key_id: envelope.apiKeyId,
     text: textPath,
     items: parsed.items.length,
-    audio_bytes: audio.bytes,
+    audio_bytes: audio ? audio.bytes : 0,
     video_bytes: payload.video ? payload.video.bytes : 0,
     payload_bytes: envelope.plainBytes,
     request_bytes: envelope.requestBytes,

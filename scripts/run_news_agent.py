@@ -218,19 +218,23 @@ def restore_from_published_site(site_dir: Path, output_dir: Path, issue_date: st
         (issue_root / 'podcast-script.json', output_dir / f'podcast-script-{issue_date}.json'),
         (issue_root / 'podcast-script.txt', output_dir / f'podcast-script-{issue_date}.txt'),
         (issue_root / 'podcast-moss-input.txt', output_dir / f'podcast-moss-input-{issue_date}.txt'),
-        (issue_root / 'voice.json', output_dir / f'voice-{issue_date}.json'),
         (issue_root / 'pipeline-report.json', output_dir / f'pipeline-report-{issue_date}.json'),
         (site_dir / 'html' / f'{issue_date}.html', output_dir / f'daily-news-{issue_date}.html'),
+    ]
+    media_mappings = [
+        (issue_root / 'voice.json', output_dir / f'voice-{issue_date}.json'),
         (site_dir / 'audio' / f'{issue_date}.mp3', output_dir / f'daily-news-podcast-{issue_date}.mp3'),
         (site_dir / 'video' / f'{issue_date}.mp4', output_dir / f'daily-news-video-{issue_date}.mp4'),
     ]
     missing = [str(src) for src, _ in mappings if not src.exists()]
+    if not is_text_only_report(issue_root / 'pipeline-report.json'):
+        missing.extend(str(src) for src, _ in media_mappings if not src.exists())
     if missing:
         print(json.dumps({'status': 'published_restore_incomplete', 'missing': missing}, ensure_ascii=False, indent=2))
         return False
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    for src, dst in mappings:
+    for src, dst in mappings + media_mappings:
         copy_if_needed(src, dst)
     return True
 
@@ -316,9 +320,24 @@ def update_recent_state(issue_date: str, paths: dict[str, Path]) -> dict[str, in
     }
 
 
+MEDIA_KEYS = {'voice', 'audio', 'video'}
+
+
+def is_text_only_report(report_path: Path) -> bool:
+    if not report_path.exists():
+        return False
+    try:
+        return read_json(report_path).get('tts_mode') == 'text-only'
+    except Exception:
+        return False
+
+
 def validate_artifacts(paths: dict[str, Path]) -> list[str]:
     issues: list[str] = []
+    text_only = is_text_only_report(paths['pipeline_report'])
     for key, min_size in MIN_SIZES.items():
+        if text_only and key in MEDIA_KEYS:
+            continue
         path = paths[key]
         if not path.exists():
             issues.append(f'missing {key}: {path}')
@@ -326,9 +345,9 @@ def validate_artifacts(paths: dict[str, Path]) -> list[str]:
         size = path.stat().st_size
         if size < min_size:
             issues.append(f'{key} too small: {size} < {min_size}')
-    if paths['audio'].exists() and paths['audio'].stat().st_size > 8 * 1024 * 1024:
+    if not text_only and paths['audio'].exists() and paths['audio'].stat().st_size > 8 * 1024 * 1024:
         issues.append(f'audio too large: {paths["audio"].stat().st_size} > 8388608')
-    if paths['voice'].exists():
+    if not text_only and paths['voice'].exists():
         issues.extend(validate_voice_manifest(paths['voice']))
     return issues
 
@@ -450,8 +469,12 @@ def validate_manifest(output_dir: Path, issue_date: str) -> tuple[int, dict[str,
     artifacts = manifest.get('artifacts')
     if not isinstance(artifacts, dict):
         return INVALID, {'status': 'invalid', 'reason': 'missing artifacts object'}
+    report = manifest.get('pipeline_report')
+    text_only = isinstance(report, dict) and report.get('tts_mode') == 'text-only'
     resolved_artifacts: dict[str, Path] = {}
     for key, min_size in MIN_SIZES.items():
+        if text_only and key in MEDIA_KEYS:
+            continue
         value = artifacts.get(key)
         if not isinstance(value, str) or not value:
             return INVALID, {'status': 'invalid', 'reason': f'missing artifact key: {key}'}
@@ -461,9 +484,10 @@ def validate_manifest(output_dir: Path, issue_date: str) -> tuple[int, dict[str,
             return INVALID, {'status': 'invalid', 'reason': f'artifact missing: {key} {artifact}'}
         if artifact.stat().st_size < min_size:
             return INVALID, {'status': 'invalid', 'reason': f'artifact too small: {key} {artifact.stat().st_size}'}
-    voice_issues = validate_voice_manifest(resolved_artifacts['voice'])
-    if voice_issues:
-        return INVALID, {'status': 'invalid', 'reason': 'invalid voice manifest: ' + '; '.join(voice_issues)}
+    if not text_only:
+        voice_issues = validate_voice_manifest(resolved_artifacts['voice'])
+        if voice_issues:
+            return INVALID, {'status': 'invalid', 'reason': 'invalid voice manifest: ' + '; '.join(voice_issues)}
     return READY, {'status': 'ready', 'manifest': rel(path)}
 
 

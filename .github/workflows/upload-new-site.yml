@@ -49,8 +49,6 @@ jobs:
           DATE="${{ steps.issue.outputs.date }}"
           test -f "published-site/api/issues/$DATE/articles.json"
           test -f "published-site/api/issues/$DATE/pipeline-report.json"
-          test -f "published-site/audio/$DATE.mp3"
-          test -f "published-site/video/$DATE.mp4"
 
       - name: Upload artifacts to new site
         id: upload_new_site

@@ -65,6 +65,10 @@ def first_existing(paths: list[Path], label: str) -> Path:
     raise FileNotFoundError(f'Missing content artifact for {label}: {[str(path) for path in paths]}')
 
 
+def optional_existing(paths: list[Path]) -> Path | None:
+    return next((path for path in paths if path.exists()), None)
+
+
 def render_index(latest: dict, issues: list[dict]) -> str:
     row_parts: list[str] = []
     for item in issues[:30]:
@@ -74,18 +78,18 @@ def render_index(latest: dict, issues: list[dict]) -> str:
         voice_link = f' · <a href="{voice_url}">带时间JSON</a>' if voice_url else ''
         video_url = item.get('video_url')
         video_link = f' · <a href="{video_url}">视频</a>' if video_url else ''
+        audio_link = f' · <a href="{item["audio_url"]}">音频</a>' if item.get('audio_url') else ''
         row_parts.append(
             f'<li><a href="{item["html_url"]}">{item["issue_date"]}</a>'
-            f' · {item["article_count"]} 条 · <a href="{item["audio_url"]}">音频</a>'
+            f' · {item["article_count"]} 条{audio_link}'
             f'{video_link}{dialogue_link}{voice_link}</li>'
         )
     rows = ''.join(row_parts)
     latest_dialogue_url = latest.get('podcast_dialogue_text_url') or latest.get('podcast_script_text_url')
     latest_voice_url = latest.get('voice_timeline_url') or latest.get('voice_url')
-    latest_links = [
-        f'<a href="{latest["html_url"]}">日报</a>',
-        f'<a href="{latest["audio_url"]}">音频</a>',
-    ]
+    latest_links = [f'<a href="{latest["html_url"]}">日报</a>']
+    if latest.get('audio_url'):
+        latest_links.append(f'<a href="{latest["audio_url"]}">音频</a>')
     if latest.get('video_url'):
         latest_links.append(f'<a href="{latest["video_url"]}">视频</a>')
     if latest_dialogue_url:
@@ -146,18 +150,17 @@ def main() -> int:
     script_path = first_existing([dist / f'podcast-script-{args.date}.json'], 'podcast script')
     script_text_path = first_existing([dist / f'podcast-script-{args.date}.txt'], 'podcast script text')
     moss_input_path = first_existing([dist / f'podcast-moss-input-{args.date}.txt'], 'podcast moss input')
-    voice_path = first_existing([dist / f'voice-{args.date}.json'], 'voice timeline')
+    voice_path = optional_existing([dist / f'voice-{args.date}.json'])
     html_path = first_existing(
         [dist / f'daily-news-{args.date}.html', dist / f'ai-daily-news-html-{args.date}.html'],
         'html',
     )
-    audio_path = first_existing(
+    # 视频接口失败时音频/视频/时间轴都不存在，日报仍然发布
+    audio_path = optional_existing(
         [dist / f'daily-news-podcast-{args.date}.mp3', dist / f'ai-daily-news-podcast-{args.date}.mp3'],
-        'audio',
     )
-    video_path = first_existing(
+    video_path = optional_existing(
         [dist / f'daily-news-video-{args.date}.mp4', dist / f'ai-daily-news-video-{args.date}.mp4'],
-        'video',
     )
 
     report = read_json(report_path)
@@ -165,7 +168,7 @@ def main() -> int:
     candidate_articles = read_json(candidate_articles_path)
     articles = read_json(articles_path)
     podcast_script = read_json(script_path)
-    voice = read_json(voice_path)
+    voice = read_json(voice_path) if voice_path else None
     issue_root = site / 'api' / 'issues' / args.date
     write_json(issue_root / 'candidate-news.json', candidate_articles)
     write_json(issue_root / 'articles.json', articles)
@@ -185,8 +188,10 @@ def main() -> int:
     published_dialogue_text.parent.mkdir(parents=True, exist_ok=True)
     published_voice.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(html_path, published_html)
-    shutil.copy2(audio_path, published_audio)
-    shutil.copy2(video_path, published_video)
+    if audio_path:
+        shutil.copy2(audio_path, published_audio)
+    if video_path:
+        shutil.copy2(video_path, published_video)
     shutil.copy2(script_text_path, published_dialogue_text)
 
     issue = {
@@ -207,21 +212,23 @@ def main() -> int:
         'podcast_script_text_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.txt'),
         'podcast_dialogue_text_url': absolute(args.base_url, f'podcast-dialogue/{args.date}.txt'),
         'podcast_moss_input_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-moss-input.txt'),
-        'voice_url': absolute(args.base_url, f'api/issues/{args.date}/voice.json'),
-        'voice_timeline_url': absolute(args.base_url, f'voice/{args.date}.json'),
+        'voice_url': absolute(args.base_url, f'api/issues/{args.date}/voice.json') if voice else None,
+        'voice_timeline_url': absolute(args.base_url, f'voice/{args.date}.json') if voice else None,
         'manifest_url': absolute(args.base_url, f'api/issues/{args.date}/manifest.json'),
         'html_url': absolute(args.base_url, f'html/{args.date}.html'),
-        'audio_url': absolute(args.base_url, f'audio/{args.date}.mp3'),
-        'video_url': absolute(args.base_url, f'video/{args.date}.mp4'),
+        'audio_url': absolute(args.base_url, f'audio/{args.date}.mp3') if audio_path else None,
+        'video_url': absolute(args.base_url, f'video/{args.date}.mp4') if video_path else None,
     }
     published_html.write_text(
-        insert_video_player_after_summary(published_html.read_text(encoding='utf-8'), issue['video_url']),
+        insert_video_player_after_summary(published_html.read_text(encoding='utf-8'), issue['video_url'])
+        if issue['video_url'] else published_html.read_text(encoding='utf-8'),
         encoding='utf-8',
     )
-    voice['audio'] = issue['audio_url']
-    voice['video'] = issue['video_url']
-    write_json(issue_root / 'voice.json', voice)
-    write_json(published_voice, voice)
+    if voice:
+        voice['audio'] = issue['audio_url']
+        voice['video'] = issue['video_url']
+        write_json(issue_root / 'voice.json', voice)
+        write_json(published_voice, voice)
     manifest['published_artifacts'] = {
         'index': absolute(args.base_url, f'api/issues/{args.date}/index.json'),
         'candidate_articles': issue['candidate_articles_url'],

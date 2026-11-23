@@ -53,7 +53,11 @@ def manifest_ready(base_url: str, date_str: str) -> tuple[bool, str]:
     if payload.get('status') != 'ready':
         return False, f"manifest status is {payload.get('status')!r}"
     published = payload.get('published_artifacts')
-    if not isinstance(published, dict) or not published.get('html') or not published.get('audio'):
+    report = payload.get('pipeline_report')
+    text_only = isinstance(report, dict) and report.get('tts_mode') == 'text-only'
+    if not isinstance(published, dict) or not published.get('html'):
+        return False, 'manifest missing html/audio artifacts'
+    if not text_only and not published.get('audio'):
         return False, 'manifest missing html/audio artifacts'
     return True, 'ready'
 

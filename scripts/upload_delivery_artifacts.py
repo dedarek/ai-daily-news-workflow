@@ -56,6 +56,8 @@ def collect_configured_files(artifact_dir: Path, date_str: str, configured_files
             raise RuntimeError(f'each send-file config files item requires path and field: {CONFIG_FILE}')
         path = artifact_dir / pattern.format(date=date_str)
         if not path.is_file():
+            if item.get('optional'):
+                continue
             raise FileNotFoundError(f'Missing configured upload file: {path}')
         files.append((field, path))
     if not files:
