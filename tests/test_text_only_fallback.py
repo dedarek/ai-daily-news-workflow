@@ -109,6 +109,20 @@ class TextOnlyFallbackTests(unittest.TestCase):
             self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
             self.assertIn('MP3: skipped (text-only issue', proc.stdout)
 
+    def test_check_and_distribute_recognizes_text_only_from_review_manifest(self) -> None:
+        issue_date = '2026-11-20'
+        with tempfile.TemporaryDirectory() as tmp:
+            review_dist = Path(tmp)
+            _seed_text_only_dist(review_dist, issue_date)
+            report_path = review_dist / f'pipeline-report-{issue_date}.json'
+            embedded_report = json.loads(report_path.read_text(encoding='utf-8'))
+            report_path.unlink()
+            _write_json(
+                review_dist / f'manifest-{issue_date}.json',
+                {'date': issue_date, 'status': 'ready', 'pipeline_report': embedded_report},
+            )
+            self.assertTrue(check_and_distribute.text_only_issue(review_dist, issue_date))
+
     def test_send_all_builds_message_without_media_attachment(self) -> None:
         msg = send_all.build_message(
             date_str='2026-11-20',

@@ -97,6 +97,8 @@ def main() -> int:
     video_url = published.get('video')
     video_bytes = get_bytes(video_url) if video_url else None
     write_json_file(output_dir / f'manifest-{args.date}.json', manifest)
+    if report_from_manifest:
+        write_json_file(output_dir / f'pipeline-report-{args.date}.json', report_from_manifest)
     if candidate_articles:
         write_json_file(output_dir / f'candidate-news-{args.date}.json', candidate_articles)
 

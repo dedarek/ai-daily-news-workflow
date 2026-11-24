@@ -68,7 +68,13 @@ def file_info(path: Path) -> str:
 def text_only_issue(artifact_dir: Path, date_str: str) -> bool:
     """True when the video API failed and the pipeline produced a text-only issue."""
     report = artifact_dir / f'pipeline-report-{date_str}.json'
-    return report.exists() and json.loads(report.read_text(encoding='utf-8')).get('tts_mode') == 'text-only'
+    if report.exists() and json.loads(report.read_text(encoding='utf-8')).get('tts_mode') == 'text-only':
+        return True
+    manifest = artifact_dir / f'manifest-{date_str}.json'
+    if manifest.exists():
+        embedded = json.loads(manifest.read_text(encoding='utf-8')).get('pipeline_report')
+        return isinstance(embedded, dict) and embedded.get('tts_mode') == 'text-only'
+    return False
 
 
 def resolve_artifact(artifact_dir: Path, date_str: str, names: List[str]) -> Path:
