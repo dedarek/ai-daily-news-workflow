@@ -1,0 +1,27 @@
+{
+  "issue_date": "2026-11-24",
+  "reviewed_at": "2026-11-24T16:06:29.591306+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实准确，播客对话自然流畅且逻辑清晰，成功将技术细节转化为易懂的行业洞察，无明显事实错误或重复。",
+    "issues": [
+      "部分新闻摘要中提到的具体参数（如GLM-5.4的750B、蚂蚁模型的124B/560B）需确保与原始来源完全一致，若为推测性描述建议标注，但基于提供的source_text为空，暂按给定文本视为事实。",
+      "播客中S1提到Clover模型时，将其与DeepMind的量子模拟并列，虽逻辑上属于“工程优化”，但两者领域跨度较大，过渡稍显生硬，不过不影响整体理解。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
