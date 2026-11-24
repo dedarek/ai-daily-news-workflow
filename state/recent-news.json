@@ -2273,6 +2273,12 @@
       "candidates": [
         {
           "date": "2026-11-24",
+          "title": "智谱循环旗舰模型加深内部推理",
+          "summary": "智谱发布的循环架构模型让28层网络重复运行，以额外计算换取更深推理。官方称 🚀 7500亿参数可接近两万亿至三万亿参数模型表现。开放权重已列入计划，但完整基准尚未公布。",
+          "url": "https://x.com/kimmonismus/status/2124811337951744042"
+        },
+        {
+          "date": "2026-11-24",
           "title": "Z.ai follows OpenAI into loop transformer territory with its new 750B flagship model",
           "summary": "智谱把旗舰 GLM-5.4 转向循环架构：28 层跑两遍，号称让 750B 参数模型对标 2 到 3 万亿参数的对手；目前只公布了 30B 小测试模型的跑分，旗舰实测数据仍缺。公司同时把方向包装成「通用编码」，即代码模型也能生成视频、游戏和 CAD 模型。对从业者而言，循环/重复层这条 OpenAI 也在走的省参数路线又多了一个国产大厂下注，但缺少旗舰级 benchmark 意味着宣称的等效规模还需验证。",
           "url": "https://the-decoder.com/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-model/"
@@ -2282,6 +2288,12 @@
           "title": "第2258期 - 2026-11-24 08:02",
           "summary": "本期[Claude Ship]让 AI Agent 深入到 PR 审查与合并环节，Claude[插件市场]统一了工具生态；安全方面，[0.1% 预训练投毒]后门与 GPT-6 Cyber 批量挖洞形成对照。",
           "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_0802"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "文档抽取模型同步返回证据坐标",
+          "summary": "Nace推出的文档抽取模型会标出答案所在文字范围或页面坐标。它在空白字段测试中 🔎 有98%概率回答页面未提供，ExtractBench得分为84.1，方便人工复核发票与合同。",
+          "url": "https://x.com/kimmonismus/status/2124952898056716300"
         },
         {
           "date": "2026-11-24",
@@ -2297,6 +2309,12 @@
         },
         {
           "date": "2026-11-24",
+          "title": "黎曼猜想形式化证明完成多重核验",
+          "summary": "Anthropic研究员Levent Alpöge与Claude公开了黎曼猜想形式化证明，覆盖黎曼猜想及其广义版本。约1700万行Lean 4代码 🧮 已由多套独立检查器重放，社区确认编译与陈述比对通过；证明的数学思想仍待进一步提炼，庞大可信计算基也意味着核验工作仍需持续。",
+          "url": "http://weixin.sogou.com/weixin?type=2&query=%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80+%E5%86%99%E5%9C%A8%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3%E8%A2%AB%E8%AF%81%E6%98%8E%E4%B9%8B%E5%90%8E"
+        },
+        {
+          "date": "2026-11-24",
           "title": "Meta TLX Brings Warp-Group GPU Control to Triton on Hopper, Blackwell, AMD",
           "summary": "Meta 公布 TLX（Triton Low-Level Extensions），在 Python 写 Triton kernel 时可以直接调用 warp-group、barrier、TMA 与 cluster 级别的控制，把过去只能落到 CUDA/HIP 里的底层调度拿回 Triton 生态。它已在 Hopper、Blackwell 和 AMD MI350 上跑 Meta 的广告与 LLM 负载。对写推理/训练 kernel 的人，这意味着跨 NVIDIA 与 AMD 的高性能算子可以用一套 Triton 代码维护，减少多后端分裂。",
           "url": "https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/"
@@ -2306,6 +2324,12 @@
           "title": "第2256期 - 2026-11-24 00:03",
           "summary": "本期焦点包括[GPT-6.2 Astra]自动完成定理形式化证明、[NVIDIA]管理层变动引发股价大涨，以及[Sierra]估值翻倍至300亿美元等融资与Agent商业化进展。",
           "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_0003"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "流体方程证明公开形式化代码",
+          "summary": "Levent Alpöge与Tristan Buckmaster提出三维Navier–Stokes证明主张，并公开79页论文与Lean代码。Claude参与证明生成、整理和改写 🌊，具体结论仍需独立核验。同期，一份耗时近十二年的940页广义黎曼猜想人类手稿也进入公开审查。",
+          "url": "https://www.qbitai.com/2026/11/511870.html"
         },
         {
           "date": "2026-11-24",
@@ -2333,6 +2357,12 @@
         },
         {
           "date": "2026-11-24",
+          "title": "智能体团队大幅压低量子模拟成本",
+          "summary": "DeepMind让Gemini 4智能体团队改写量子算法，再用Lean核验所得结果。聚变模拟成本 ⚛️ 降低11.8倍，药物相关分子模拟最高降低八倍；部分任务还减少量子位内存需求，代码与题目已同步开放。",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+        },
+        {
+          "date": "2026-11-24",
           "title": "实测：1450亿参数塞进笔记本，每秒狂飙80+Token！国产端侧大模型杀疯了",
           "summary": "有国产端侧模型把 1450 亿参数塞进笔记本，实测生成速度超过每秒 80 token，主打零 token 成本、断网也能做 Vibe Coding。对终端厂商和隐私敏感场景而言，这意味着本地跑大参数模型开始接近可用体验；对云端推理生意，则是一个明确的成本侧替代信号——尽管还需核实具体量化精度与内存占用下的真实可用性。",
           "url": "https://www.qbitai.com/2026/11/512195.html"
@@ -2342,6 +2372,12 @@
           "title": "第2253期 - 2026-11-23 12:03",
           "summary": "本期焦点：[Claude Code]冲击传统 IDE，纳德拉坦言 VS Code 半年失守；[AI 搜索变现乏力]拖累谷歌广告收入增速。同时微软跟进公开[MAI-2 Base]困惑度数据，端侧小模型加速出海。",
           "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-23_1203"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "智能体递归改进主要依靠执行框架",
+          "summary": "阿里提出的递归改进评测CoEvoBench给模型24小时修改执行框架、训练模型并参加盲测。实验显示 🧰 五个测试领域中有四个领域的大部分增益来自框架升级。智能体通常能迅速完成首轮改进，随后则受验证方法和泛化能力拖累。",
+          "url": "https://x.com/omarsar0/status/2124869837545701845"
         },
         {
           "date": "2026-11-24",
@@ -2357,6 +2393,12 @@
         },
         {
           "date": "2026-11-24",
+          "title": "网页操作路径暴露智能体私有上下文",
+          "summary": "SNOOP通过行为侧信道攻击分析搜索、点击和阅读顺序，反推用户查询与画像。查询概念恢复F1达到0.89 👣，四类代表性内容防御带来的变化不足0.03。固定预算、脱离私有上下文的检索方案可将该指标降至0.39，说明防护范围还需覆盖行为选择。",
+          "url": "https://arxiv.org/abs/2611.27046"
+        },
+        {
+          "date": "2026-11-24",
           "title": "Anthropic 创纪录 IPO 未能扭转 AI 市场悲观情绪，Claude 上市当天突发性能降级！靠失业焦虑撑起的万亿估值，该踩刹车了",
           "summary": "Anthropic 完成创纪录 IPO，但上市当天 Claude 出现性能降级，加之市场对 AI 的整体悲观情绪未被打消，文章直指靠失业焦虑撑起的万亿估值需要踩刹车。对从业者的意义在于：一级市场的高估值开始接受二级市场的公开定价与产品可用性检验，模型服务稳定性这类工程问题会直接映射到估值叙事上。",
           "url": "https://www.infoq.cn/article/OPbZhT0OHL4IbZz8exvA?utm_source=rss&utm_medium=article"
@@ -2366,6 +2408,12 @@
           "title": "第2251期 - 2026-11-23 04:02",
           "summary": "本期聚焦[OpenAI]公开预训练困惑度数据并倡议全行业统一安全红线，以及[NVIDIA]开源车载 VLA 模型 Alpamayo 2 Edge；同时市场端出现[AI 服务器交付前提价]与科技股大幅回调的信号。",
           "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-23_0402"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "英伟达董事会恢复黄仁勋全部职务",
+          "summary": "英伟达董事会全票通过黄仁勋复职安排，恢复其总裁、首席执行官和董事职务。相关独立调查仍将继续 🏢，公司另设国家安全与出口管制委员会监督贸易合规和国家安全风险。此次回归距离其辞职仅十天，公司治理安排同步调整。",
+          "url": "https://x.com/dotey/status/2124900260925296807"
         },
         {
           "date": "2026-11-24",
@@ -2381,9 +2429,21 @@
         },
         {
           "date": "2026-11-24",
+          "title": "机器人公司刷新行业种子融资规模",
+          "summary": "Dreamer与VideoGPT团队成立Embo，并在机器人公司发布帖披露融资进展。公司获得1.1亿美元种子轮 🎬，计划用互联网视频与机器人演示训练世界模型，让机器人在想象场景中反复练习，增强其在陌生环境中的稳定性。",
+          "url": "https://x.com/kimmonismus/status/2124924676422193427"
+        },
+        {
+          "date": "2026-11-24",
           "title": "b12647",
           "summary": "llama.cpp 构建 b12647 调整测试逻辑，只比较那些有保证的 GDN（门控 Delta 网络）快照槽位，避免因非确定性槽位导致的测试误报。属于维护性修复，但对正在接入 GDN 类线性注意力结构、依赖快照做状态回滚与投机验证的开发者，测试口径统一能减少大量排查成本。",
           "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12647"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "模型批量验证近千个内核提权漏洞",
+          "summary": "OpenAI称GPT-6 Cyber在内核漏洞研究中单次验证了948个可能授予本地root权限的Linux内核问题。模型还生成补丁 🔧 供研究人员审核，并配合维护者推动修复进入上游；人工仍负责最终审查。",
+          "url": "https://x.com/OpenAI/status/2125007927098699827"
         },
         {
           "date": "2026-11-24",
@@ -2393,9 +2453,21 @@
         },
         {
           "date": "2026-11-24",
+          "title": "亚马逊重金收购模型优化技术团队",
+          "summary": "亚马逊据报道通过75亿美元交易收购Decart的人工智能优化技术与研究团队。相关能力将服务Trainium芯片 💰，强化模型优化与自研算力的软硬件协同，提高亚马逊加速器的市场竞争力。",
+          "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+        },
+        {
+          "date": "2026-11-24",
           "title": "How to build and maintain an agentic evaluation",
           "summary": "Hugging Face 博客给出构建与维护 Agent 评测的方法论：评测不是一次性榜单，而要随 Agent 能力边界和环境变化持续迭代，并覆盖工具调用、多步任务中间过程而非只看最终答案。对正在搭建 Agent 上线前评估体系的团队，这类工程化经验比又多一个 benchmark 更有用。",
           "url": "https://huggingface.co/blog/agentic-evals"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "超级智能争论转向人类方向控制权",
+          "summary": "Meta首席人工智能官Alexandr Wang在超级智能风险观点中讨论社会交接与研发自动化。他主张人类应保留方向权 ⏳，并警惕递归升级速度失控。文中“千倍智能”属于推演假设，引用的数学突破也仍在接受共同体核验。",
+          "url": "https://x.com/AYi_AInotes/status/2124865868987523529"
         },
         {
           "date": "2026-11-24",
@@ -2405,9 +2477,21 @@
         },
         {
           "date": "2026-11-24",
+          "title": "困惑度被提议用作行业能力标尺",
+          "summary": "OpenAI提出用困惑度能力指标追踪预训练进展，减少对FLOPS的单一依赖。方案希望建立共享门槛 📊，在模型能力跨越阈值后加强行为理解和发展约束；讨论提到的关键区间为0.68至0.7对数困惑度。",
+          "url": "https://x.com/swyx/status/2124583459356373052"
+        },
+        {
+          "date": "2026-11-24",
           "title": "Agent不再只写代码，亚马逊云科技瞄准三个新难题",
           "summary": "亚马逊云科技指出 Agent 的落地已不再局限于写代码，并把重点转向三个更难的工程难题——大致指向长时任务的可靠执行、企业级治理与工具/系统集成的深度。对在企业内推进 Agent 的团队，这反映出竞争焦点正从「能不能生成代码」转向「能不能在真实业务约束下稳定跑完流程」。",
           "url": "https://www.infoq.cn/article/4cFZ1bATcXRJaGPFoF7z?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "开源防护运行时实现不停机隔离",
+          "summary": "OpenAI与思科共同发布智能防护运行时Shirudo，让智能体动态编写eBPF控制规则。系统可在服务持续运行时 🛡️ 先隔离新漏洞影响，为正式补丁的测试与部署争取时间，面向Linux基础设施构建可适应新威胁的防护能力。",
+          "url": "https://x.com/OpenAI/status/2124980590717911527"
         },
         {
           "date": "2026-11-24",
@@ -2528,74 +2612,74 @@
         {
           "date": "2026-11-24",
           "title": "智谱发布GLM-5.4：采用循环架构的750B旗舰模型",
-          "summary": "智谱AI发布旗舰模型GLM-5.4，该模型拥有7500亿参数，采用循环Transformer架构，通过让28层网络运行两遍来增加计算深度，旨在对标2至3万亿参数模型的性能。为控制内存和计算成本，模型引入了专用控制门、共享KV缓存及稀疏注意力机制，支持百万Token上下文。目前官方仅公布了30B测试模型的基准数据，显示其在数学和科学推理上优于基线且响应更短，但750B旗舰模型的实测性能数据尚未公开。",
+          "summary": "智谱AI推出基于循环Transformer架构的旗舰模型GLM-5.4，该模型拥有750亿参数，通过让28层网络运行两遍来增加计算深度，旨在对标2至3万亿参数模型的性能。为解决二次遍历带来的激活值波动和内存开销问题，模型引入了专用控制门、共享KV缓存及稀疏注意力机制，以在百万级上下文下保持可控成本。目前官方仅公布了30B测试模型在AIME25等基准上的提升数据，750B旗舰模型的实测性能尚未公开。",
           "url": "https://the-decoder.com/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-model/"
         },
         {
           "date": "2026-11-24",
-          "title": "蚂蚁集团发布五款医疗健康AI模型，支持本地部署与开源",
-          "summary": "蚂蚁集团在医疗健康生态大会上发布五款AI模型，涵盖深度推理、实时多模态交互及疾病风险预测。其中LingSante-3.1-air-VL（124B）和LingSante-3.1-flash（560B）两款专业模型当天直接开源，前者适合本地部署处理图文资料，后者支持100万Token上下文以应对复杂长病历任务。此外，面向普通用户的LingSante Live也同步上线，支持“望闻问切”式交互。",
-          "url": "https://www.qbitai.com/2026/11/512017.html"
+          "title": "蚂蚁开源阿福同款医疗大模型，支持本地部署",
+          "summary": "蚂蚁集团宣布开源“百灵”医疗健康大模型家族，包括多模态模型LingSante-3.1-air-VL和深度推理模型LingSante-3.1-flash。其中124B参数的多模态模型支持在笔记本电脑等本地设备部署，可处理皮肤照片、体检报告等多源信息；560B参数的推理模型支持1M Token上下文，在InclusionMed评测中位列全球开源模型首位。此次开源旨在降低医疗AI部署门槛，服务基层医疗及私有化场景，并同步升级阿福App的健康管家功能。",
+          "url": "https://www.qbitai.com/2026/11/511998.html"
         },
         {
           "date": "2026-11-24",
           "title": "英伟达发布Alpamayo 2 Edge：车规级推理VLA模型",
-          "summary": "英伟达发布Alpamayo 2 Edge，这是一款2B参数的推理型视觉-语言-动作（VLA）模型，专为DRIVE AGX Thor平台设计。该模型能直接规划驾驶轨迹并提供因果推理解释，像素到轨迹的端到端延迟为160至190毫秒。在AlpaSim闭环测试中，其表现优于Qwen-Drive-1.0，但推理问答能力略逊于云端版本Alpamayo 2 Super。该模型采用FP8量化和TensorRT优化，实现了车规级硬件上的实时推理。",
+          "summary": "英伟达发布2B参数的推理型视觉-语言-动作模型Alpamayo 2 Edge，专为DRIVE AGX Thor平台设计。该模型通过FP8量化和TensorRT优化，在车内硬件上实现160至190毫秒的像素到轨迹端到端延迟，并生成因果推理链以解释驾驶决策。在AlpaSim闭环测试中，其每事故行驶里程达15.15公里，远超竞品，但推理问答能力略逊于云端大模型。",
           "url": "https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/"
         },
         {
           "date": "2026-11-24",
-          "title": "Anthropic完成创纪录IPO，上市次日股价下跌",
-          "summary": "Anthropic于11月19日在纳斯达克上市，发行价83美元，开盘价111.50美元，募资规模约813亿美元，成为全球最大IPO。然而，上市次日股价下跌约9%，且上市当天Claude服务出现性能降级。尽管公司营收增长迅猛，但截至2026年9月已签署约9009亿美元的算力采购承诺，且单位算力收入效率在Q3出现回落。市场对其高估值及算力投入回报率的担忧加剧了AI板块的整体调整。",
-          "url": "https://www.infoq.cn/article/OPbZhT0OHL4IbZz8exvA?utm_source=rss&utm_medium=article"
+          "title": "亚马逊75亿美元收购Decart强化Trainium竞争力",
+          "summary": "亚马逊宣布以75亿美元收购以色列初创公司Decart，获取其Decart Optimization Stack（DOS）技术及核心团队。DOS软件旨在提升AI模型在Nvidia、Amazon及Google硬件上的运行效率。此举正值亚马逊准备向外部客户销售自研Trainium芯片，旨在通过优化软件栈降低客户迁移成本，增强与Nvidia在AI算力市场的竞争能力。",
+          "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "英伟达董事会全票通过恢复黄仁勋CEO等职务",
+          "summary": "英伟达董事会于11月22日宣布，全票通过恢复黄仁勋的总裁、首席执行官及董事职务，该决定即刻生效。此举距离黄仁勋11月12日辞去上述职务仅过去十天。董事会表示，在做出决定前已听取美国政府高层意见，确认其回归不会带来国家安全风险。同时，针对此前涉及“外国情报行动”的独立调查将继续进行，公司新设由独立董事组成的“国家安全与出口管制委员会”，以监督贸易合规及国家安全风险。",
+          "url": "https://x.com/dotey/status/2124900260925296807"
         },
         {
           "date": "2026-11-24",
           "title": "腾讯混元团队回应：下一代模型将大幅扩参，RSI仍处早期",
-          "summary": "腾讯混元团队在Reddit社区进行公开问答，确认下一代Hy模型将显著扩大参数量，并坚持Scaling Law路线。团队承认递归自我改进（RSI）能力仍处早期，当前优先任务是提升基础智能。针对后训练难题，团队指出“过度思考”导致推理冗长，影响效率与体验，需平衡推理能力与响应速度。",
+          "summary": "腾讯混元团队在Reddit社区进行AMA问答，明确下一代Hy模型将显著扩大参数量，并坚持Scaling Law路线。团队承认递归自我改进（RSI）能力仍处于早期阶段，当前优先任务是提升基础智能水平。针对后训练难题，团队指出“过度思考”导致推理冗长，影响效率与体验，是需重点解决的问题。此外，团队透露正在开发Hyra 3.0，并计划推出更小的Flash-Lite模型及开源图像模型，以平衡模型能力、推理成本与本地部署需求。",
           "url": "https://www.infoq.cn/article/b4QKbFZaXvbK9hzcBhZV?utm_source=rss&utm_medium=article"
         },
         {
           "date": "2026-11-24",
-          "title": "Architect Labs发布AI设计CPU Frostbite，能效比提升4.59倍",
-          "summary": "Architect Labs推出基于交互网（Interaction Nets）的CPU架构Frostbite，其ISA与芯片架构由AI智能体从理论到7纳米GDS全流程设计。流片前测试显示，Frostbite每瓦性能达到现代顺序执行核心的4.59倍，每面积性能提升8.77倍。该芯片采用Rust类语言Vine编写，通过硬件级并行执行交互网重写规则。",
-          "url": "https://www.marktechpost.com/2026/11/23/architect-labs-frostbite-ai-designed-cpu-interaction-nets/"
+          "title": "936个AI智能体12周发布近千篇论文并建立同行评议机制",
+          "summary": "来自alphaXiv、斯坦福等机构的研究团队构建了一个由936个AI智能体组成的科研社区，在12周内自主完成假设提出、实验运行及论文撰写，共发布936篇论文。智能体不仅通过聊天室交流复现实验，还自发建立《Journal of Agent Research》期刊及审稿机制，对投稿进行质量把关。对比研究显示，AI论文在实验严谨性和复现细节上优于人类论文，但在创新性和研究重要性上仍有差距，且部分代码存在数据泄漏问题，需人工核查。",
+          "url": "https://www.qbitai.com/2026/11/512004.html"
         },
         {
           "date": "2026-11-24",
-          "title": "DiffuSpace发布Clover-35B-A3B：MoE扩散语言模型技术报告",
-          "summary": "DiffuSpace团队发布Clover-35B-A3B-Preview技术报告，这是一款总参数35B、激活参数3B的MoE扩散语言模型。该模型将Gated Delta Networks的循环记忆机制融入块扩散框架，历史记忆与当前块token在共享softmax中竞争。在SWE-bench Verified等代理指标上表现领先，单卡GB300下生成速度达680 tokens/s。",
+          "title": "DeepMind利用智能体团队与Lean核验降低量子模拟成本",
+          "summary": "DeepMind利用Gemini 4智能体团队改写量子算法，并通过Lean形式化验证工具核验结果，显著降低了量子模拟的计算成本。在聚变模拟任务中，成本降低了11.8倍；在药物相关分子模拟中，成本最高降低八倍。部分任务还减少了量子位内存需求。该研究展示了智能体在优化复杂科学计算算法方面的能力，相关代码与题目已同步开放，供研究者使用。",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "Clover-35B-A3B-Preview：MoE扩散语言模型技术报告发布",
+          "summary": "DiffuSpace团队发布了Clover-35B-A3B-Preview技术报告，这是一款总参数35B、激活参数3B的混合专家扩散语言模型，支持思维模式生成。该模型将Gated Delta Networks的循环记忆机制融入块扩散框架，通过历史记忆读出与当前块内token在共享softmax中竞争，并结合可学习的块大小校准，实现了上下文复用与块内并行去噪。在SWE-bench Verified和Terminal-Bench 2.1等代理指标上，Clover取得了领先成绩，单张NVIDIA GB300 GPU在BF16精度下生成速度达680 tokens/s。",
           "url": "https://arxiv.org/abs/2611.24636"
         },
         {
           "date": "2026-11-24",
-          "title": "新研究提出Search-Native Pretraining，预训练阶段注入搜索能力",
-          "summary": "研究人员提出Search-Native Pretraining方法，通过在预训练语料中合成网络搜索查询并检索真实网页响应，使模型在预训练阶段学会生成搜索调用并整合检索证据。实验表明，1.4B参数的QueryLM在知识密集型任务上性能优于或持平于3.3B基线模型，且优势在微调后依然保持。",
-          "url": "https://arxiv.org/abs/2611.26809"
+          "title": "MemOnce：面向LLM的可扩展记忆架构",
+          "summary": "MemOnce是一种旨在解决长时程交互中记忆状态维护问题的基础架构，由Chang Nie等人提出。该架构包含记忆编码器-解码器和记忆稀疏注意力两个核心设计，仅缓存少量最终层隐藏状态作为紧凑记忆，并动态解码回KV缓存，同时自适应检索相关记忆表示。实验显示，将Qwen3.5-4B适配MemOnce后，在1M上下文下记忆状态缓存减少1313倍，预填充延迟降低6.9倍，吞吐量提升3.5倍。",
+          "url": "https://arxiv.org/abs/2611.27973"
         },
         {
           "date": "2026-11-24",
-          "title": "Duopra：实现全双工对话与任务执行统一建模",
-          "summary": "Chiyu Chen等人在arXiv发布论文，提出Duopra模型以解决全双工交互中对话代理与任务代理分离的问题。该模型将后端视为工具，通过自然语言请求统一决策流，结合协议SFT、全双工强化学习及投影器修复进行三阶段训练。在Full-Duplex-Bench v3基准上，Duopra将Pass@1从4.7%提升至44.7%，并在直接调用工具场景下达到47.7%的成功率，证明任务执行能力可与对话控制能力共存。",
-          "url": "https://arxiv.org/abs/2611.25773"
+          "title": "OpenAI与思科发布开源防护运行时Shirudo",
+          "summary": "OpenAI与思科联合发布了开源Linux运行时Shirudo，旨在让智能体在不中断服务的情况下防御系统漏洞。该系统允许智能体动态编写eBPF控制规则，以隔离新漏洞的影响，为正式补丁的测试与部署争取时间。Shirudo被视为迈向自防御基础设施的第一步，目标是让防御者能与AI智能体协作，在保持工作负载运行的同时，发现受影响系统并部署防护。",
+          "url": "https://x.com/OpenAI/status/2124980590717911527"
         },
         {
           "date": "2026-11-24",
-          "title": "MoRI UMBP：NVMe直接承载Agent KV缓存以替代DRAM层",
-          "summary": "vLLM博客介绍MoRI UMBP方案，将Agent场景的KV缓存直接存储在NVMe上，跳过DRAM层级。在AMD MI355X GPU上运行Kimi-K3时，同规模NVMe池与DRAM池的吞吐量差距在1%以内。由于NVMe成本随写入量计算而非驻留量，其存储一天KV的成本低于仅能存储31分钟KV的DRAM池，从而改写了长时程Agent服务的容量规划前提。",
+          "title": "MoRI UMBP：NVMe直接承载Agent KV缓存",
+          "summary": "vLLM博客介绍了MoRI UMBP方案，该方案将Agent场景的KV缓存直接置于NVMe上，跳过DRAM层。在AMD MI355X GPU上运行Kimi-K3时，同规模NVMe KV池与DRAM池的性能差距在1%以内。经济性方面，能装下一天Agent KV的NVMe盘成本低于仅能容纳31分钟KV的DRAM池。该方案利用NVMe按写入量计费的特性，显著降低了长时程Agent会话的存储成本。",
           "url": "https://vllm.ai/blog/2026-11-23-skip-the-dram-tier"
-        },
-        {
-          "date": "2026-11-24",
-          "title": "Hugging Face发布Agent评测构建与维护指南",
-          "summary": "Hugging Face博客发布方法论，指导如何构建和维护Agent评测体系。文章指出评测需随Agent能力边界持续迭代，重点覆盖工具调用及多步任务中间过程，而非仅关注最终答案。指南详细阐述了从定义声明、任务适配到结果验证的八个步骤，并强调公开审查对于纠正基准错误及防止数据污染的重要性，旨在帮助团队建立工程化的上线前评估体系。",
-          "url": "https://huggingface.co/blog/agentic-evals"
-        },
-        {
-          "date": "2026-11-24",
-          "title": "Meta TLX：在Triton中实现跨平台Warp-Group GPU控制",
-          "summary": "Meta发布Triton低层扩展TLX，允许在Python编写的Triton内核中直接调用warp-group、barrier、TMA及cluster级别控制。该扩展支持NVIDIA Hopper、Blackwell及AMD MI300/MI350系列GPU，旨在提供CUDA级别的调度能力而无需离开Triton生态。Meta数据显示，TLX在H100上的GEMM性能与cuBLAS相当，并在广告推理线性压缩内核上实现4倍加速，已在Meta生产环境中用于广告与LLM负载。",
-          "url": "https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/"
         }
       ]
     }

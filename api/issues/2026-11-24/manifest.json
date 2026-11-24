@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-11-24",
   "status": "ready",
-  "created_at": "2026-11-24T02:58:23.674865+00:00",
+  "created_at": "2026-11-24T03:57:12.434053+00:00",
   "artifacts": {
     "candidate_articles": "dist/candidate-news-2026-11-24.json",
     "articles": "dist/articles-2026-11-24.json",
@@ -29,7 +29,7 @@
     "items": []
   },
   "memory_update": {
-    "candidate_count": 42,
+    "candidate_count": 56,
     "selected_count": 12
   },
   "agent": null,
@@ -37,8 +37,9 @@
     "mode": "live-collection",
     "issue_date": "2026-11-24",
     "content_date": "2026-11-24",
-    "source_url": "https://satori-ai.cn/",
+    "source_url": "https://hex2077.dev/docs/2026-11/2026-11-24/",
     "source_urls": [
+      "https://hex2077.dev/docs/2026-11/2026-11-24/",
       "https://satori-ai.cn/",
       "https://news.daheiai.com/rss.php"
     ],
@@ -46,28 +47,31 @@
     "source_health": {
       "schema_version": 1,
       "issue_date": "2026-11-24",
-      "checked_at": "2026-11-24T02:52:21.398260+00:00",
-      "overall_status": "degraded",
+      "checked_at": "2026-11-24T03:51:11.238285+00:00",
+      "overall_status": "ok",
       "pipeline_can_continue": true,
       "minimum_usable_candidates": 12,
-      "candidate_count_before_dedup": 42,
-      "candidate_count_after_dedup": 42,
-      "successful_source_count": 2,
-      "failed_source_count": 1,
-      "duration_ms": 1826,
+      "candidate_count_before_dedup": 57,
+      "candidate_count_after_dedup": 56,
+      "successful_source_count": 3,
+      "failed_source_count": 0,
+      "duration_ms": 1447,
       "sources": [
         {
           "source_id": "hex2077",
           "source_name": "Hex2077 AI 日报",
           "adapter": "hex2077",
-          "source_url": "https://hex2077.dev/docs/{year_month}/{date}/",
-          "status": "failed",
-          "content_date": "",
+          "source_url": "https://hex2077.dev/docs/2026-11/2026-11-24/",
+          "status": "ok",
+          "content_date": "2026-11-24",
           "generated_at": "",
-          "error": "SourceError: fetch failed for https://hex2077.dev/docs/2026-11/2026-11-24/: HTTP 404 Not Found",
-          "duration_ms": 119,
-          "metadata": {},
-          "candidate_count": 0
+          "error": "",
+          "duration_ms": 99,
+          "metadata": {
+            "resolved_url": "https://hex2077.dev/docs/2026-11/2026-11-24/",
+            "time_rule": "content date equals issue date"
+          },
+          "candidate_count": 15
         },
         {
           "source_id": "satori",
@@ -78,7 +82,7 @@
           "content_date": "2026-11-23",
           "generated_at": "2026-11-24T05:44:00+08:00",
           "error": "",
-          "duration_ms": 1788,
+          "duration_ms": 1413,
           "metadata": {
             "time_rule": "generation date equals issue date; edition is treated as today's digest",
             "edition_semantics": "today"
@@ -94,7 +98,7 @@
           "content_date": "2026-11-24",
           "generated_at": "2026-11-24T08:02:58+08:00",
           "error": "",
-          "duration_ms": 122,
+          "duration_ms": 102,
           "metadata": {
             "time_rule": "newest RSS item must be published on issue date (Asia/Shanghai)",
             "selected_feed_entries": 9
@@ -105,7 +109,7 @@
     },
     "recipient": "yyc54321@126.com",
     "article_count": 12,
-    "candidate_count": 42,
+    "candidate_count": 56,
     "candidate_data_file": "candidate-news-2026-11-24.json",
     "llm": {
       "provider": "opencode-go",
@@ -128,7 +132,7 @@
             "validation_attempt": 1,
             "model": "lenovo:qwen38-27b",
             "usage": {},
-            "candidate_count": 41,
+            "candidate_count": 55,
             "target_count": 12,
             "validation_issues": []
           }
@@ -198,10 +202,10 @@
             "review": {
               "pass": true,
               "issues": [
-                "S1在讨论英伟达Alpamayo 2 Edge时，提到“目前只在H100上完整验证”，而日报原文指出“当前仅在H100上完成完整验证，Thor平台实时性能依赖特定优化配方”，S1的表述基本准确，但S2追问时提到“Thor平台的实时性能还得看后续优化”，S1回答“问题不大”略显主观，缺乏基于日报事实的支撑（日报仅说依赖特定优化配方，未说问题不大），属于轻微的主观判断偏差。",
-                "S1在总结部分提到“从模型架构到基础设施，大家都在追求‘高效’和‘可解释’”，其中“可解释”主要对应英伟达VLA，但其他新闻如智谱、腾讯、蚂蚁等并未明确强调“可解释”，而是强调“效率”、“合规”、“开源”等，总结略显泛化，但整体逻辑成立，属于轻微概括偏差。"
+                "第16轮S1发言中，将DeepMind量子模拟新闻与Clover模型新闻合并讨论，导致Clover模型的解释略显仓促，且“线性注意力记忆”这一技术细节在口播中可能稍显晦涩，建议简化表述或单独展开。",
+                "第18轮S2发言中，“显存早爆了”这一表述虽符合口语习惯，但略显夸张，可调整为“显存压力极大”以更严谨。"
               ],
-              "repair_instruction": "1. S1在回应S2关于英伟达Thor平台量产瓶颈的追问时，应避免主观判断“问题不大”，改为基于日报事实的客观陈述，例如：“日报提到Thor平台的实时性能依赖特定优化配方，因此量产前的优化工作仍是关键步骤。” 2. S1在总结部分，可将“可解释”限定为英伟达VLA的特点，避免过度泛化到其他新闻，例如：“无论是智谱的循环架构追求效率，还是英伟达VLA强调可解释性，核心都是让AI更实用。”"
+              "repair_instruction": "1. 第16轮S1：建议将Clover模型部分单独成轮或简化技术描述，例如：“Clover模型通过新架构将生成速度提升至680 tokens/s，这对降低长任务推理成本很有意义。” 2. 第18轮S2：将“显存早爆了”修改为“显存压力会非常大”，保持专业度。"
             },
             "review_model": "lenovo:qwen38-27b",
             "review_usage": {}
@@ -212,8 +216,8 @@
           "best_attempt": 1,
           "final_pass": true,
           "final_issues": [
-            "S1在讨论英伟达Alpamayo 2 Edge时，提到“目前只在H100上完整验证”，而日报原文指出“当前仅在H100上完成完整验证，Thor平台实时性能依赖特定优化配方”，S1的表述基本准确，但S2追问时提到“Thor平台的实时性能还得看后续优化”，S1回答“问题不大”略显主观，缺乏基于日报事实的支撑（日报仅说依赖特定优化配方，未说问题不大），属于轻微的主观判断偏差。",
-            "S1在总结部分提到“从模型架构到基础设施，大家都在追求‘高效’和‘可解释’”，其中“可解释”主要对应英伟达VLA，但其他新闻如智谱、腾讯、蚂蚁等并未明确强调“可解释”，而是强调“效率”、“合规”、“开源”等，总结略显泛化，但整体逻辑成立，属于轻微概括偏差。"
+            "第16轮S1发言中，将DeepMind量子模拟新闻与Clover模型新闻合并讨论，导致Clover模型的解释略显仓促，且“线性注意力记忆”这一技术细节在口播中可能稍显晦涩，建议简化表述或单独展开。",
+            "第18轮S2发言中，“显存早爆了”这一表述虽符合口语习惯，但略显夸张，可调整为“显存压力极大”以更严谨。"
           ],
           "structure_issues": [],
           "loop_exhausted": false,
@@ -221,8 +225,8 @@
         }
       }
     },
-    "digest_summary": "今日新闻揭示AI行业正从盲目扩参转向效率与落地。智谱、腾讯等通过架构优化平衡推理深度与成本，英伟达、蚂蚁集团推动模型在车规及医疗场景的合规部署。同时，Anthropic IPO后股价下跌暴露算力投入与回报错配风险，NVMe替代DRAM、AI设计CPU等基础设施创新旨在降低长期运营成本。行业焦点已明确转向解决推理延迟、存储瓶颈及垂直场景的合规落地，以应对资本市场的理性审视。",
-    "podcast_turns": 18,
+    "digest_summary": "今日新闻共同指向AI基础设施从单纯追求算力规模转向极致成本优化与工程落地。智谱、腾讯及Clover等通过架构创新压缩推理开销，蚂蚁开源医疗模型降低部署门槛，英伟达VLA实现车规级实时推理，亚马逊收购补齐芯片软件生态。同时，NVMe承载KV缓存、MemOnce架构及Shirudo安全运行时，均聚焦于解决长上下文存储瓶颈与系统稳定性。这表明行业正跨越理论性能竞争，进入以降低部署成本、提升运行效率及保障安全为核心的工程化深水区。",
+    "podcast_turns": 21,
     "podcast_script_file": "podcast-script-2026-11-24.json",
     "podcast_script_text_file": "podcast-script-2026-11-24.txt",
     "podcast_moss_input_file": "podcast-moss-input-2026-11-24.txt",
@@ -238,7 +242,7 @@
     "video_api": {
       "error": "<urlopen error timed out>"
     },
-    "html_bytes": 25148,
+    "html_bytes": 25916,
     "podcast_bytes": 0,
     "video_bytes": 0,
     "podcast_duration_seconds": null
