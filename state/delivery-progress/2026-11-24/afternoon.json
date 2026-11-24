@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-24",
+  "phase": "afternoon",
+  "audience": "all",
+  "sent": {
+    "caorm3@lenovo.com": {
+      "recipient": "caorm3@lenovo.com",
+      "sent_at": "2026-11-24T08:06:35.325306+00:00"
+    },
+    "ekan@lenovo.com": {
+      "recipient": "ekan@lenovo.com",
+      "sent_at": "2026-11-24T08:06:45.954171+00:00"
+    },
+    "gaokl4@lenovo.com": {
+      "recipient": "gaokl4@lenovo.com",
+      "sent_at": "2026-11-24T08:06:57.978890+00:00"
+    },
+    "gaoxi1@lenovo.com": {
+      "recipient": "gaoxi1@lenovo.com",
+      "sent_at": "2026-11-24T08:07:09.548596+00:00"
+    },
+    "hejy17@lenovo.com": {
+      "recipient": "hejy17@lenovo.com",
+      "sent_at": "2026-11-24T08:07:20.262158+00:00"
+    },
+    "heyj17@lenovo.com": {
+      "recipient": "heyj17@lenovo.com",
+      "sent_at": "2026-11-24T08:07:31.220205+00:00"
+    },
+    "hujun10@lenovo.com": {
+      "recipient": "hujun10@lenovo.com",
+      "sent_at": "2026-11-24T08:07:42.545767+00:00"
+    },
+    "kangcn1@lenovo.com": {
+      "recipient": "kangcn1@lenovo.com",
+      "sent_at": "2026-11-24T08:07:54.060948+00:00"
+    },
+    "liancf2@lenovo.com": {
+      "recipient": "liancf2@lenovo.com",
+      "sent_at": "2026-11-24T08:08:04.674298+00:00"
+    },
+    "liuao3@lenovo.com": {
+      "recipient": "liuao3@lenovo.com",
+      "sent_at": "2026-11-24T08:08:15.394194+00:00"
+    },
+    "liugl12@lenovo.com": {
+      "recipient": "liugl12@lenovo.com",
+      "sent_at": "2026-11-24T08:08:56.227838+00:00"
+    },
+    "liuhx20@lenovo.com": {
+      "recipient": "liuhx20@lenovo.com",
+      "sent_at": "2026-11-24T08:09:06.958343+00:00"
+    },
+    "liumm13@lenovo.com": {
+      "recipient": "liumm13@lenovo.com",
+      "sent_at": "2026-11-24T08:09:17.605703+00:00"
+    },
+    "lixl72@lenovo.com": {
+      "recipient": "lixl72@lenovo.com",
+      "sent_at": "2026-11-24T08:09:29.608315+00:00"
+    },
+    "nansw2@lenovo.com": {
+      "recipient": "nansw2@lenovo.com",
+      "sent_at": "2026-11-24T08:09:41.036142+00:00"
+    },
+    "penglei4@lenovo.com": {
+      "recipient": "penglei4@lenovo.com",
+      "sent_at": "2026-11-24T08:09:51.686119+00:00"
+    },
+    "renjc5@lenovo.com": {
+      "recipient": "renjc5@lenovo.com",
+      "sent_at": "2026-11-24T08:10:02.362911+00:00"
+    },
+    "shiyl7@lenovo.com": {
+      "recipient": "shiyl7@lenovo.com",
+      "sent_at": "2026-11-24T08:10:12.950922+00:00"
+    },
+    "wangning38@lenovo.com": {
+      "recipient": "wangning38@lenovo.com",
+      "sent_at": "2026-11-24T08:10:23.584521+00:00"
+    },
+    "wangxh47@lenovo.com": {
+      "recipient": "wangxh47@lenovo.com",
+      "sent_at": "2026-11-24T08:10:34.231968+00:00"
+    },
+    "wangxh63@lenovo.com": {
+      "recipient": "wangxh63@lenovo.com",
+      "sent_at": "2026-11-24T08:11:14.930078+00:00"
+    },
+    "wangyb18@lenovo.com": {
+      "recipient": "wangyb18@lenovo.com",
+      "sent_at": "2026-11-24T08:11:25.541354+00:00"
+    },
+    "wujian11@lenovo.com": {
+      "recipient": "wujian11@lenovo.com",
+      "sent_at": "2026-11-24T08:11:36.260004+00:00"
+    },
+    "wupan2@lenovo.com": {
+      "recipient": "wupan2@lenovo.com",
+      "sent_at": "2026-11-24T08:11:46.919412+00:00"
+    },
+    "wuzx9@lenovo.com": {
+      "recipient": "wuzx9@lenovo.com",
+      "sent_at": "2026-11-24T08:11:57.591916+00:00"
+    },
+    "xiaojy6@lenovo.com": {
+      "recipient": "xiaojy6@lenovo.com",
+      "sent_at": "2026-11-24T08:12:08.242633+00:00"
+    },
+    "xiongjb2@lenovo.com": {
+      "recipient": "xiongjb2@lenovo.com",
+      "sent_at": "2026-11-24T08:12:19.342943+00:00"
+    },
+    "xubo17@lenovo.com": {
+      "recipient": "xubo17@lenovo.com",
+      "sent_at": "2026-11-24T08:12:31.078935+00:00"
+    },
+    "xuhc2@lenovo.com": {
+      "recipient": "xuhc2@lenovo.com",
+      "sent_at": "2026-11-24T08:12:41.679837+00:00"
+    },
+    "xutj4@lenovo.com": {
+      "recipient": "xutj4@lenovo.com",
+      "sent_at": "2026-11-24T08:12:52.978076+00:00"
+    },
+    "yangfc1@lenovo.com": {
+      "recipient": "yangfc1@lenovo.com",
+      "sent_at": "2026-11-24T08:13:33.891030+00:00"
+    },
+    "yangrp2@lenovo.com": {
+      "recipient": "yangrp2@lenovo.com",
+      "sent_at": "2026-11-24T08:13:44.545446+00:00"
+    },
+    "yangyc18@lenovo.com": {
+      "recipient": "yangyc18@lenovo.com",
+      "sent_at": "2026-11-24T08:13:55.202088+00:00"
+    },
+    "yangying21@lenovo.com": {
+      "recipient": "yangying21@lenovo.com",
+      "sent_at": "2026-11-24T08:14:06.032141+00:00"
+    },
+    "yaowz1@lenovo.com": {
+      "recipient": "yaowz1@lenovo.com",
+      "sent_at": "2026-11-24T08:14:16.694311+00:00"
+    },
+    "yuyang5@lenovo.com": {
+      "recipient": "yuyang5@lenovo.com",
+      "sent_at": "2026-11-24T08:14:27.596529+00:00"
+    },
+    "yyc54321@126.com": {
+      "recipient": "yyc54321@126.com",
+      "sent_at": "2026-11-24T08:14:38.220147+00:00"
+    },
+    "zhaijx2@lenovo.com": {
+      "recipient": "zhaijx2@lenovo.com",
+      "sent_at": "2026-11-24T08:14:49.814634+00:00"
+    },
+    "zhanghq24@lenovo.com": {
+      "recipient": "zhanghq24@lenovo.com",
+      "sent_at": "2026-11-24T08:15:00.550819+00:00"
+    },
+    "zhangly35@lenovo.com": {
+      "recipient": "zhangly35@lenovo.com",
+      "sent_at": "2026-11-24T08:15:11.358545+00:00"
+    },
+    "zhangxi27@lenovo.com": {
+      "recipient": "zhangxi27@lenovo.com",
+      "sent_at": "2026-11-24T08:15:51.964169+00:00"
+    },
+    "zhangzq39@lenovo.com": {
+      "recipient": "zhangzq39@lenovo.com",
+      "sent_at": "2026-11-24T08:16:03.670764+00:00"
+    },
+    "zhanml1@lenovo.com": {
+      "recipient": "zhanml1@lenovo.com",
+      "sent_at": "2026-11-24T08:16:15.170318+00:00"
+    },
+    "zhaotao1@lenovo.com": {
+      "recipient": "zhaotao1@lenovo.com",
+      "sent_at": "2026-11-24T08:16:25.872590+00:00"
+    },
+    "zhenght1@lenovo.com": {
+      "recipient": "zhenght1@lenovo.com",
+      "sent_at": "2026-11-24T08:16:36.651548+00:00"
+    },
+    "zhengqh2@lenovo.com": {
+      "recipient": "zhengqh2@lenovo.com",
+      "sent_at": "2026-11-24T08:16:47.315169+00:00"
+    },
+    "zhouzw6@lenovo.com": {
+      "recipient": "zhouzw6@lenovo.com",
+      "sent_at": "2026-11-24T08:16:57.995825+00:00"
+    },
+    "zhulei19@lenovo.com": {
+      "recipient": "zhulei19@lenovo.com",
+      "sent_at": "2026-11-24T08:17:08.715739+00:00"
+    },
+    "zhuzc6@lenovo.com": {
+      "recipient": "zhuzc6@lenovo.com",
+      "sent_at": "2026-11-24T08:17:19.358506+00:00"
+    },
+    "zhury2@lenovo.com": {
+      "recipient": "zhury2@lenovo.com",
+      "sent_at": "2026-11-24T08:17:30.010647+00:00"
+    },
+    "duanxg2@lenovo.com": {
+      "recipient": "duanxg2@lenovo.com",
+      "sent_at": "2026-11-24T08:18:10.627891+00:00"
+    },
+    "duzg2@lenovo.com": {
+      "recipient": "duzg2@lenovo.com",
+      "sent_at": "2026-11-24T08:18:21.550334+00:00"
+    },
+    "wangcy57@lenovo.com": {
+      "recipient": "wangcy57@lenovo.com",
+      "sent_at": "2026-11-24T08:18:32.860374+00:00"
+    }
+  },
+  "failed": {}
+}
