@@ -1,0 +1,110 @@
+[
+  {
+    "title": "智谱发布GLM-5.4：采用循环架构的750B旗舰模型",
+    "summary": "智谱AI发布旗舰模型GLM-5.4，该模型拥有7500亿参数，采用循环Transformer架构，通过让28层网络运行两遍来增加计算深度，旨在对标2至3万亿参数模型的性能。为控制内存和计算成本，模型引入了专用控制门、共享KV缓存及稀疏注意力机制，支持百万Token上下文。目前官方仅公布了30B测试模型的基准数据，显示其在数学和科学推理上优于基线且响应更短，但750B旗舰模型的实测性能数据尚未公开。",
+    "url": "https://the-decoder.com/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-model/",
+    "section": "🔥 今日焦点",
+    "review": "循环架构是降低参数冗余的有效路径，但缺乏旗舰级独立基准测试使得“等效规模”的宣称仍停留在理论层面，实际落地效果需待后续验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "蚂蚁集团发布五款医疗健康AI模型，支持本地部署与开源",
+    "summary": "蚂蚁集团在医疗健康生态大会上发布五款AI模型，涵盖深度推理、实时多模态交互及疾病风险预测。其中LingSante-3.1-air-VL（124B）和LingSante-3.1-flash（560B）两款专业模型当天直接开源，前者适合本地部署处理图文资料，后者支持100万Token上下文以应对复杂长病历任务。此外，面向普通用户的LingSante Live也同步上线，支持“望闻问切”式交互。",
+    "url": "https://www.qbitai.com/2026/11/512017.html",
+    "section": "🚀 产品发布",
+    "review": "开源与本地部署能力解决了医疗数据合规痛点，使医院能在数据不出院的前提下引入专业AI能力，加速了医疗大模型在垂直场景的合规落地。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "英伟达发布Alpamayo 2 Edge：车规级推理VLA模型",
+    "summary": "英伟达发布Alpamayo 2 Edge，这是一款2B参数的推理型视觉-语言-动作（VLA）模型，专为DRIVE AGX Thor平台设计。该模型能直接规划驾驶轨迹并提供因果推理解释，像素到轨迹的端到端延迟为160至190毫秒。在AlpaSim闭环测试中，其表现优于Qwen-Drive-1.0，但推理问答能力略逊于云端版本Alpamayo 2 Super。该模型采用FP8量化和TensorRT优化，实现了车规级硬件上的实时推理。",
+    "url": "https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/",
+    "section": "🚀 产品发布",
+    "review": "可解释推理VLA模型成功压缩至车规级时延预算，标志着自动驾驶从纯感知规划向具备逻辑解释能力的端到端决策迈进，但当前仅在H100上完成完整验证，Thor平台实时性能依赖特定优化配方。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic完成创纪录IPO，上市次日股价下跌",
+    "summary": "Anthropic于11月19日在纳斯达克上市，发行价83美元，开盘价111.50美元，募资规模约813亿美元，成为全球最大IPO。然而，上市次日股价下跌约9%，且上市当天Claude服务出现性能降级。尽管公司营收增长迅猛，但截至2026年9月已签署约9009亿美元的算力采购承诺，且单位算力收入效率在Q3出现回落。市场对其高估值及算力投入回报率的担忧加剧了AI板块的整体调整。",
+    "url": "https://www.infoq.cn/article/OPbZhT0OHL4IbZz8exvA?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "IPO并未扭转市场对AI板块的悲观情绪，反而暴露了巨额算力承诺与收入增长之间的潜在错配，服务稳定性问题进一步削弱了投资者对高估值的信心。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "腾讯混元团队回应：下一代模型将大幅扩参，RSI仍处早期",
+    "summary": "腾讯混元团队在Reddit社区进行公开问答，确认下一代Hy模型将显著扩大参数量，并坚持Scaling Law路线。团队承认递归自我改进（RSI）能力仍处早期，当前优先任务是提升基础智能。针对后训练难题，团队指出“过度思考”导致推理冗长，影响效率与体验，需平衡推理能力与响应速度。",
+    "url": "https://www.infoq.cn/article/b4QKbFZaXvbK9hzcBhZV?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "混元明确将优化重点从“能否推理”转向“推理效率”，直面长思维链带来的成本与延迟痛点。RSI的谨慎表态符合当前技术现实，避免了对自主进化能力的过度炒作。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Architect Labs发布AI设计CPU Frostbite，能效比提升4.59倍",
+    "summary": "Architect Labs推出基于交互网（Interaction Nets）的CPU架构Frostbite，其ISA与芯片架构由AI智能体从理论到7纳米GDS全流程设计。流片前测试显示，Frostbite每瓦性能达到现代顺序执行核心的4.59倍，每面积性能提升8.77倍。该芯片采用Rust类语言Vine编写，通过硬件级并行执行交互网重写规则。",
+    "url": "https://www.marktechpost.com/2026/11/23/architect-labs-frostbite-ai-designed-cpu-interaction-nets/",
+    "section": "💼 行业动态",
+    "review": "Frostbite展示了AI在芯片架构设计中的端到端能力，但“流片前测试”数据尚需硅片验证。交互网在硬件层面的能效优势若成立，将为非冯·诺依曼架构提供重要参考。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DiffuSpace发布Clover-35B-A3B：MoE扩散语言模型技术报告",
+    "summary": "DiffuSpace团队发布Clover-35B-A3B-Preview技术报告，这是一款总参数35B、激活参数3B的MoE扩散语言模型。该模型将Gated Delta Networks的循环记忆机制融入块扩散框架，历史记忆与当前块token在共享softmax中竞争。在SWE-bench Verified等代理指标上表现领先，单卡GB300下生成速度达680 tokens/s。",
+    "url": "https://arxiv.org/abs/2611.24636",
+    "section": "💡 前沿研究",
+    "review": "Clover通过线性注意力与并行解码的结合，在低激活参数下实现了高吞吐，为非自回归生成提供了新路径。其“决策模型变体”在联合预测中显著提升准确率，验证了扩散模型在复杂推理任务中的潜力。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "新研究提出Search-Native Pretraining，预训练阶段注入搜索能力",
+    "summary": "研究人员提出Search-Native Pretraining方法，通过在预训练语料中合成网络搜索查询并检索真实网页响应，使模型在预训练阶段学会生成搜索调用并整合检索证据。实验表明，1.4B参数的QueryLM在知识密集型任务上性能优于或持平于3.3B基线模型，且优势在微调后依然保持。",
+    "url": "https://arxiv.org/abs/2611.26809",
+    "section": "💡 前沿研究",
+    "review": "该研究证明搜索能力可在预训练阶段内化，而非仅依赖后训练工具调用。这降低了模型对复杂RL数据的需求，为构建原生具备检索增强能力的基座模型提供了低成本可行方案。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Duopra：实现全双工对话与任务执行统一建模",
+    "summary": "Chiyu Chen等人在arXiv发布论文，提出Duopra模型以解决全双工交互中对话代理与任务代理分离的问题。该模型将后端视为工具，通过自然语言请求统一决策流，结合协议SFT、全双工强化学习及投影器修复进行三阶段训练。在Full-Duplex-Bench v3基准上，Duopra将Pass@1从4.7%提升至44.7%，并在直接调用工具场景下达到47.7%的成功率，证明任务执行能力可与对话控制能力共存。",
+    "url": "https://arxiv.org/abs/2611.25773",
+    "section": "💡 前沿研究",
+    "review": "Duopra通过统一决策流解决了前端发起与后端执行割裂导致的任务失败问题，显著提升了实时Agent的任务完成率。其全双工RL训练策略为语音助手在复杂任务场景下的落地提供了关键的技术路径。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MoRI UMBP：NVMe直接承载Agent KV缓存以替代DRAM层",
+    "summary": "vLLM博客介绍MoRI UMBP方案，将Agent场景的KV缓存直接存储在NVMe上，跳过DRAM层级。在AMD MI355X GPU上运行Kimi-K3时，同规模NVMe池与DRAM池的吞吐量差距在1%以内。由于NVMe成本随写入量计算而非驻留量，其存储一天KV的成本低于仅能存储31分钟KV的DRAM池，从而改写了长时程Agent服务的容量规划前提。",
+    "url": "https://vllm.ai/blog/2026-11-23-skip-the-dram-tier",
+    "section": "🤖 Agent & 工具",
+    "review": "该方案通过消除DRAM层级大幅降低了长会话Agent的存储成本，且性能损失可忽略。这为大规模GPU集群处理多轮会话提供了更具经济性的KV缓存管理策略，但需关注NVMe写入寿命对长期运行的影响。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Hugging Face发布Agent评测构建与维护指南",
+    "summary": "Hugging Face博客发布方法论，指导如何构建和维护Agent评测体系。文章指出评测需随Agent能力边界持续迭代，重点覆盖工具调用及多步任务中间过程，而非仅关注最终答案。指南详细阐述了从定义声明、任务适配到结果验证的八个步骤，并强调公开审查对于纠正基准错误及防止数据污染的重要性，旨在帮助团队建立工程化的上线前评估体系。",
+    "url": "https://huggingface.co/blog/agentic-evals",
+    "section": "🤖 Agent & 工具",
+    "review": "该指南将Agent评测从静态榜单转向动态工程实践，强调对中间过程和环境变化的监控。对于缺乏成熟评估体系的团队，其提供的复用、适配与验证流程具有直接的落地参考价值，有助于提升评测的可信度与可复现性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Meta TLX：在Triton中实现跨平台Warp-Group GPU控制",
+    "summary": "Meta发布Triton低层扩展TLX，允许在Python编写的Triton内核中直接调用warp-group、barrier、TMA及cluster级别控制。该扩展支持NVIDIA Hopper、Blackwell及AMD MI300/MI350系列GPU，旨在提供CUDA级别的调度能力而无需离开Triton生态。Meta数据显示，TLX在H100上的GEMM性能与cuBLAS相当，并在广告推理线性压缩内核上实现4倍加速，已在Meta生产环境中用于广告与LLM负载。",
+    "url": "https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/",
+    "section": "🤖 Agent & 工具",
+    "review": "TLX填补了Triton在细粒度GPU调度上的空白，使跨NVIDIA与AMD的高性能算子可用统一代码维护。虽然目前性能数据均为自报且缺乏独立基准，但其降低多后端分裂成本的潜力对基础设施工程师具有实际意义。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-11-24",
+  "content_date": "2026-11-24",
+  "published_at": "2026-11-24T02:58:29.136207+00:00",
+  "article_count": 12,
+  "podcast_turns": 18,
+  "tts_mode": "text-only",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 41,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 71,
+        "exact_url_blocks": [],
+        "high_confidence_event_blocks": [
+          {
+            "current_url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-23_1602",
+            "previous_url": "https://the-decoder.com/isomorphic-labs-raises-5-billion-in-its-second-mega-round-within-six-months/",
+            "previous_date": "2026-11-18",
+            "actions": [
+              "funding"
+            ],
+            "entities": [
+              "isomorphic",
+              "labs"
+            ]
+          }
+        ],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "S1在讨论英伟达Alpamayo 2 Edge时，提到“目前只在H100上完整验证”，而日报原文指出“当前仅在H100上完成完整验证，Thor平台实时性能依赖特定优化配方”，S1的表述基本准确，但S2追问时提到“Thor平台的实时性能还得看后续优化”，S1回答“问题不大”略显主观，缺乏基于日报事实的支撑（日报仅说依赖特定优化配方，未说问题不大），属于轻微的主观判断偏差。",
+              "S1在总结部分提到“从模型架构到基础设施，大家都在追求‘高效’和‘可解释’”，其中“可解释”主要对应英伟达VLA，但其他新闻如智谱、腾讯、蚂蚁等并未明确强调“可解释”，而是强调“效率”、“合规”、“开源”等，总结略显泛化，但整体逻辑成立，属于轻微概括偏差。"
+            ],
+            "repair_instruction": "1. S1在回应S2关于英伟达Thor平台量产瓶颈的追问时，应避免主观判断“问题不大”，改为基于日报事实的客观陈述，例如：“日报提到Thor平台的实时性能依赖特定优化配方，因此量产前的优化工作仍是关键步骤。” 2. S1在总结部分，可将“可解释”限定为英伟达VLA的特点，避免过度泛化到其他新闻，例如：“无论是智谱的循环架构追求效率，还是英伟达VLA强调可解释性，核心都是让AI更实用。”"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "S1在讨论英伟达Alpamayo 2 Edge时，提到“目前只在H100上完整验证”，而日报原文指出“当前仅在H100上完成完整验证，Thor平台实时性能依赖特定优化配方”，S1的表述基本准确，但S2追问时提到“Thor平台的实时性能还得看后续优化”，S1回答“问题不大”略显主观，缺乏基于日报事实的支撑（日报仅说依赖特定优化配方，未说问题不大），属于轻微的主观判断偏差。",
+          "S1在总结部分提到“从模型架构到基础设施，大家都在追求‘高效’和‘可解释’”，其中“可解释”主要对应英伟达VLA，但其他新闻如智谱、腾讯、蚂蚁等并未明确强调“可解释”，而是强调“效率”、“合规”、“开源”等，总结略显泛化，但整体逻辑成立，属于轻微概括偏差。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-24/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-24/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-24/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-24/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-24.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-24/podcast-moss-input.txt",
+  "voice_url": null,
+  "voice_timeline_url": null,
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-24/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-24.html",
+  "audio_url": null,
+  "video_url": null
+}
