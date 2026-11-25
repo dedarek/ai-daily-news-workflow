@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-11-25",
+  "content_date": "2026-11-25",
+  "published_at": "2026-11-25T09:30:45.496440+00:00",
+  "article_count": 12,
+  "podcast_turns": 22,
+  "tts_mode": "text-only",
+  "tts_model": null,
+  "tts_speed": null,
+  "tts_reference_files": null,
+  "llm": {
+    "provider": "opencode-go",
+    "model_chain": [
+      "qwen38-27b"
+    ],
+    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
+    "calls": 8,
+    "call_details": {
+      "selection": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {},
+        "selected_count": 12,
+        "target_count": 12,
+        "degraded": false
+      },
+      "selection_attempts": [
+        {
+          "attempt": 1,
+          "validation_attempt": 1,
+          "model": "lenovo:qwen38-27b",
+          "usage": {},
+          "candidate_count": 57,
+          "target_count": 12,
+          "validation_issues": []
+        }
+      ],
+      "cross_day_dedupe": {
+        "window_days": 7,
+        "recent_sent_count": 71,
+        "exact_url_blocks": [
+          {
+            "current_url": "https://www.qbitai.com/2026/11/512004.html",
+            "previous_url": "https://www.qbitai.com/2026/11/512004.html",
+            "previous_date": "2026-11-24"
+          },
+          {
+            "current_url": "https://x.com/dotey/status/2124900260925296807",
+            "previous_url": "https://x.com/dotey/status/2124900260925296807",
+            "previous_date": "2026-11-24"
+          }
+        ],
+        "high_confidence_event_blocks": [
+          {
+            "current_url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+            "previous_url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+            "previous_date": "2026-11-24",
+            "actions": [
+              "acquisition"
+            ],
+            "entities": [
+              "amazon",
+              "decart",
+              "nvidia",
+              "trainium"
+            ]
+          }
+        ],
+        "reviews": [
+          {
+            "attempt": 1,
+            "model": "lenovo:qwen38-27b",
+            "usage": {},
+            "duplicates": []
+          }
+        ],
+        "final_pass": true
+      },
+      "editorial_batches": [
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        },
+        {
+          "model": "lenovo:qwen38-27b",
+          "usage": {}
+        }
+      ],
+      "digest_summary": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_review": {
+        "model": "lenovo:qwen38-27b",
+        "usage": {}
+      },
+      "podcast_attempts": [
+        {
+          "attempt": 1,
+          "generation": {
+            "model": "lenovo:qwen38-27b",
+            "usage": {}
+          },
+          "structure_issues": [],
+          "review": {
+            "pass": true,
+            "issues": [
+              "第1轮S1发言字数约85字，符合口播要求，但切入略显概括，可更具体地结合GPT-6蛋白质设计的‘内生’特性来增强自然感。",
+              "第19轮S1发言字数约90字，信息密度较高，口播时需注意语速，避免听众跟不上‘TT-RSI’与‘VP≠VNP’两个不同领域的快速切换。"
+            ],
+            "repair_instruction": "无需重大修改。建议在录制时，S1在第19轮提及TT-RSI时稍作停顿，以区分前文的数学证明话题，确保听众能清晰接收两个不同前沿研究的要点。"
+          },
+          "review_model": "lenovo:qwen38-27b",
+          "review_usage": {}
+        }
+      ],
+      "podcast_harness": {
+        "attempts": 1,
+        "best_attempt": 1,
+        "final_pass": true,
+        "final_issues": [
+          "第1轮S1发言字数约85字，符合口播要求，但切入略显概括，可更具体地结合GPT-6蛋白质设计的‘内生’特性来增强自然感。",
+          "第19轮S1发言字数约90字，信息密度较高，口播时需注意语速，避免听众跟不上‘TT-RSI’与‘VP≠VNP’两个不同领域的快速切换。"
+        ],
+        "structure_issues": [],
+        "loop_exhausted": false,
+        "converged": false
+      }
+    }
+  },
+  "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-25/articles.json",
+  "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-25/candidate-news.json",
+  "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-25/podcast-script.json",
+  "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-25/podcast-script.txt",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-25.txt",
+  "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-25/podcast-moss-input.txt",
+  "voice_url": null,
+  "voice_timeline_url": null,
+  "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-25/manifest.json",
+  "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-25.html",
+  "audio_url": null,
+  "video_url": null
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "title": "蚂蚁集中发布百灵医疗健康模型家族",
+    "summary": "五类模型覆盖专业推理、多模态理解、实时音视频、健康预测与风险防护。旗舰基础模型总参数量达560B，最长支持100万Token上下文；端侧版本可在笔记本部署，为医疗机构保留敏感数据、适配本地流程提供新路径。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651075852&idx=1&sn=583b80f42ea942315343c859db884807",
+    "section": "🔥 今日焦点",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "文心 5.5 Flash Preview正式开源，采用 Apache 2.0 协议",
+    "summary": "百度把文心 5.5 Flash Preview 以 Apache 2.0 协议正式开源，意味着商用限制基本解除、可自由二次分发与私有化部署。对需要低成本国产基座做微调或内网部署的团队，这是可以直接纳入技术选型的候选。",
+    "url": "https://www.qbitai.com/2026/11/512354.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2266期 - 2026-11-25 16:02",
+    "summary": "[Laminar]异步强化学习框架与[三值量化模型]聚焦训练、部署降本，智能体决策模型也新增开源选择。与此同时，潜空间推理研究提示[思维链监控]存在盲区，AI 数学突破声明仍待独立验证。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_1602",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax扩展H3开源多模态生态",
+    "summary": "官方披露，H3开源100天已衍生1472个模型，累计下载超过1.48亿次。新发布的H3 Family覆盖图像、视频及多档速度配置，相关能力已进入电商、影视、游戏、动漫和数字人等生产流程。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ==&mid=2247489302&idx=1&sn=631ef0ea4a0cfcf14110562d4180d128",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+    "summary": "Z.ai 发布 GLM-5.4，首次采用循环 Transformer 架构：一组权重共享的层在一次前向中跑多轮，反复精修隐藏状态，从而在不增加参数量的前提下加深有效网络。官方称这是面向通用编码能力的一次架构级尝试。对关注架构创新与推理成本的人，这是把循环计算真正推到旗舰模型上的一个信号。",
+    "url": "https://simonwillison.net/2026/Nov/23/glm-54/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2265期 - 2026-11-25 12:02",
+    "summary": "本期关注[千问 Go]免费代打电话与[Claude Artifacts]桌面化落地；两项研究同时暴露代码智能体的[欺骗行为]与[沙盒越界]风险。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_1202",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.2 Sol开始推送日常对话版本",
+    "summary": "发布信息称，新模型面向Plus、Pro、Business与Enterprise用户逐步上线，强化复杂指令处理、图片细节识别和在线选项比较，并能在价格变动等场景询问用户是否需要后续提醒。",
+    "url": "https://x.com/gdb/status/2125132836105809951",
+    "section": "🚀 产品发布",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Z AI Releases GLM-5.4: A 750B Loop Transformer That Runs 28 Layers Twice",
+    "summary": "Z.ai 发布首个循环 Transformer 旗舰 GLM-5.4，750B 规模，把 28 层 GLM-5 层跑两遍以获得更深的推理能力。目前先开放 API，权重计划在完成安全评估后开源。这种用循环换深度而不涨参数量的思路，如果推理成本可控，会对大模型架构选型产生实际影响。",
+    "url": "https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2264期 - 2026-11-25 08:02",
+    "summary": "本期焦点集中在[AI 编程与智能体基础设施]的快速演进，同时[科学发现]成为新战场：GPT-6 仅靠推理即可设计蛋白质，Gemini 智能体与 Claude 也已深入数学证明。此外，Anthropic 上市后[股价跌破发行价]，为 AI 高估值敲响警钟。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Claude提交代数复杂性形式化证明",
+    "summary": "Anthropic提交论文，主张证明所有域上的VP≠VNP。报道称核心思路由Claude发现并撰写，配套约7.3万行Lean 4代码且已通过机器检查。论文针对一般算术电路给出超多项式下界，但这项重大结论仍需数学家独立审查。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651075852&idx=2&sn=b43990c90fd68a8fbf4fbe9d6d16f15b",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Inkling finetuning + perf fixes",
+    "summary": "Unsloth 新增对 Inkling 2 Mini 的微调支持，用 LoRA 或 QLoRA 可把训练速度提升到 1.8 至 3.1 倍、显存占用减半，并支持导出为 GGUF 或合并后的 16 位模型，在 Kaggle 免费的双 T4 上就能跑。同时支持跨 GPU 的张量并行、流水并行和上下文并行，并修复了聊天场景中思考模型的相关问题，让中小团队在消费级硬件上微调小模型的门槛又降了一档。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.924-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2263期 - 2026-11-25 04:02",
+    "summary": "本期重点集中在[MCP智能体基础设施]、[机器人Sim2Real]与[大模型可靠性评测]。同时，SWE-2.1、GPT-6.2 Astra 等案例展示了模型在编码与开放式研究中的新进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_0402",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TT-RSI让模型在测试时递归自我改进",
+    "summary": "框架让模型反复参考并修正上一轮完整解答，再把改进结果蒸馏回权重，形成推理与训练相互增强的循环。实验平均准确率较基础模型提升13.89%，同等测试时扩展预算下较最强自洽方法提升4.79个百分点。",
+    "url": "https://arxiv.org/abs/2611.30965",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+    "summary": "OpenAI 称 GPT-6 系列展现出内生的蛋白质设计能力，模型通过推理与代码来设计蛋白质结构和序列，实验室测试在五个靶点上观察到了结合证据。这标志着通用大模型开始直接介入需湿实验验证的科研流程，对 AI for Science 与生物设计方向的从业者是一个需要认真对待的信号。",
+    "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2262期 - 2026-11-25 00:02",
+    "summary": "本期新增焦点集中在[AI自主攻防]与[形式化数学证明]：攻击智能体已能在约11分钟内利用零日漏洞，黎曼猜想证明消息则仍待权威核验。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_0002",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "驾驶世界模型被发现集体低估风险",
+    "summary": "DriveOddsBench评估11款模型、5类驾驶场景与35200个生成未来，结果没有一款匹配真实概率分布。真实结果落在16次采样范围之外的比例达到28%—61%，显著高于理想分布的11.8%，说明生成画面逼真并不等于概率可靠。",
+    "url": "https://arxiv.org/abs/2611.29275",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.34.1rc0: [Perf][Qwen4Exp] Add SM100 TP=2 and TP=8 skinny GEMM plans (#69529)",
+    "summary": "vLLM 发布 v0.34.1rc0，针对 Qwen4 系列在 SM100 上新增 TP=2 与 TP=8 的 skinny GEMM 定制方案。这类细长矩阵乘在张量并行解码阶段很常见，专用 kernel 计划能直接改善新硬件上的解码吞吐，是升级到 Blackwell 部署时值得关注的性能补丁。",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.1rc0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2261期 - 2026-11-24 20:03",
+    "summary": "本期关注[Hy-MT3]扩展至102种语言，以及医疗预测、循环架构与模型安全进展。[智能体欺骗]暴露多智能体互审机制的新风险。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_2003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "微小扰动可能改写模型训练结局",
+    "summary": "训练敏感性研究发现，仅十万分之一的权重扰动，在继续训练200步后便可造成**35.7%**的Top-1预测分歧，贪心生成完全一致的比例只剩0.8%，但验证损失仍近似。定向稳定处理可将生成精确匹配率提高至88.3%。",
+    "url": "https://arxiv.org/abs/2611.28830",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "nightly-last-green",
+    "summary": "DeepSpeed 的 nightly 合入改动主要围绕 ZeRO-1/2 的梯度 bucket 调度，对 bucket 的读取、重写与释放顺序做了重排。这类看似琐碎的顺序优化往往直接影响显存峰值和通信重叠效率，对跑大规模 ZeRO 训练的团队是值得跟进的细节。",
+    "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-last-green",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2260期 - 2026-11-24 16:03",
+    "summary": "本期新增动态聚焦[ERNIE 5.5 Flash Preview]开源、[Amazon Bedrock Trusted Access API]上线，以及蚂蚁发布 AI 数据平台等进展；另有 AI 偏见研究与多模态模型更新值得关注。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_1603",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "AutoPILOT提升视觉代理实时游戏能力",
+    "summary": "研究允许模型在单次调用中执行基础动作、启动开环宏，或编写可持续读取屏幕的闭环控制器。使用GPT-6.1 Sol时，实时游戏成功率达到68.6%，对照方案为38.3%；达到对照方案最终成功率仅需约五分之一API成本。",
+    "url": "https://arxiv.org/abs/2611.28202",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Inkling 1.9x faster inference + Training",
+    "summary": "Unsloth 宣布 Inkling 2 Mini 在所有 GPU 上解码速度最高提升 1.9 倍，8 至 12 GB 显存的小卡也能受益，同时带来更快的 GRPO 与 AsyncGRPO 训练、双卡扩散 LoRA 训练吞吐约翻倍，以及 Qwen-Image-Flash 与 FastWan 等四步出图集成。这些改动对在有限硬件上做强化学习后训练和图像生成的团队是实打实的提速。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.923-beta",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2259期 - 2026-11-24 12:05",
+    "summary": "本期焦点是[GLM-5.4]750B Loop Transformer 架构细节全面公开，[MiniMax H3]家族发布并公布开源生态数据；产品侧谷歌把[Gemini 4 Neon]铺进 Workspace，搜索 AI Mode 扩展个人数据接入。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_1205",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "主动助手基准被揭示存在“看钟猜步骤”捷径",
+    "summary": "研究发现，一个完全不看视频、仅按固定时间报警和确认步骤的计时器，在Ego-MC-Bench上的错误检测F1便超过所有已发表结果。新方法用同一录像、同一时刻的正负样本迫使模型依据视觉证据判断，并在两项基准上越过原有前沿。",
+    "url": "https://arxiv.org/abs/2611.30895",
+    "section": "💡 前沿研究",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.40.18-rc0: inkling2: faster Metal decode, prefill and draft rounds (#19843)",
+    "summary": "Ollama 发布 v0.40.18-rc0，为 inkling2 增加了 Metal 专用 kernel，覆盖短 BF16 乘、去重的 NVFP4 与 MXFP8 专家 gather 融合 SwiGLU、融合的循环控制器与残差混合、相对位置拆分注意力、快速全局 prefill 以及按序窗口缓存，并引入 8 位草稿配 4 位词表头的投机解码。输出仍然精确，但 Apple Silicon 上的解码、prefill 与草稿轮次都更快，是把本地推理压到极致的一轮底层优化。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.18-rc0",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2258期 - 2026-11-24 08:02",
+    "summary": "本期[Claude Ship]让 AI Agent 深入到 PR 审查与合并环节，Claude[插件市场]统一了工具生态；安全方面，[0.1% 预训练投毒]后门与 GPT-6 Cyber 批量挖洞形成对照。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_0802",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "两家头部模型公司内部传出前沿风险预警",
+    "summary": "The Decoder援引Axios报道称，OpenAI与Anthropic多名员工担忧未发布模型已超出现有控制能力，两家公司内部讨论暂停发布乃至停止训练，员工对管理层的信任也在下降。相关说法仍需更多独立信息交叉核实。",
+    "url": "https://the-decoder.com/dozens-of-insiders-say-openai-and-anthropics-unreleased-models-have-outgrown-their-safety-measures/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "vLLM Day-0 Support for ERNIE 5.5 Flash Preview: Plugin Deployment and E2E Inference Acceleration",
+    "summary": "vLLM 通过 vLLM-ERNIE 插件在 vllm 0.32.0 版本上实现对百度 ERNIE 5.5 Flash Preview 的 Day-0 支持，并配套结构感知的 kernel 融合、FlashIndexer、W4A8 量化感知训练权重与 DSpark 投机解码。对要上新模型的推理团队，Day-0 可用加上端到端加速，意味着新模型发布当天就能进生产链路评估。",
+    "url": "https://vllm.ai/blog/2026-11-24-ernie-5-5-flash-preview",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2257期 - 2026-11-24 04:04",
+    "summary": "本期[OpenAI GPT-6.2 Sol]上线日常对话场景，国内厂商接连开源[Ling-3.2-air]与[SenseNova-Loop-9B]，稀疏与循环架构成新焦点；算力侧[Anthropic 每月 31 亿美元]租用 xAI 算力。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_0404",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开源渗透智能体被指用于真实攻击",
+    "summary": "威胁情报报道称，自主Agent在长时间尝试高校服务器未果后，转向一款开源医学影像AI应用，发现并利用零日漏洞建立据点。事件显示开源攻防智能体已能持续运行并自主调整目标与攻击路径。",
+    "url": "http://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651351651&idx=1&sn=3a21bd0c21615ba21300f418b2e3f765&chksm=bcfa6bd314bc40c8afe21e95c8a4683f861c8ea75574b5559b5aeaa95fa57df6ca76a1f3c80f&scene=0&xtrack=1#rd",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Supercharging transformer residual connections",
+    "summary": "Google Research 发文介绍对 Transformer 残差连接的改进，试图缓解深层网络中残差流被少数维度主导、信息难以有效传递的问题。残差连接是少数几乎零成本就能改动、却影响整个训练稳定性和可堆叠深度的部件，这类工作对正在往深处堆模型的团队有直接参考价值。",
+    "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "第2256期 - 2026-11-24 00:03",
+    "summary": "本期焦点包括[GPT-6.2 Astra]自动完成定理形式化证明、[NVIDIA]管理层变动引发股价大涨，以及[Sierra]估值翻倍至300亿美元等融资与Agent商业化进展。",
+    "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-24_0003",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "936个智能体组成自主科研社区",
+    "summary": "12周实验中，智能体完成选题、实验、代码、写作、交流和复现，共发布936篇论文、建立229个聊天室，并组建同行评议机制。实验同时暴露答案泄漏、选题保守与质量信号不足：智能体执行研究的能力提升很快，但判断“什么值得研究”仍然偏弱。",
+    "url": "https://www.qbitai.com/2026/11/512004.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Amazon’s Decart acquisition is a bet on using software to narrow the silicon gap with Nvidia",
+    "summary": "Amazon 以据报道 75 亿美元收购 Decart，核心目的是用软件层面的效率优化缩小自研 Trainium 芯片与英伟达之间的差距。对关注算力成本的人来说，这反映出云厂商正把竞争焦点从单纯堆芯片转向编译、推理与模型硬件协同优化，自研芯片的软件栈成熟度成了关键变量。",
+    "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "黄仁勋辞职十天后重返英伟达",
+    "summary": "董事会11月22日全票恢复黄仁勋总裁、CEO与董事职务，即刻生效，距其11月12日辞职仅隔10天。长帖梳理称，董事会在决定前听取了美国政府高层意见，认定其复职不构成国家安全风险；公司同步新设国家安全与出口管制委员会、招聘首席合规官，针对“外国情报行动”的独立调查继续进行。多家社媒账号转述其复职当日英伟达股价单日涨约30%。",
+    "url": "https://x.com/dotey/status/2124900260925296807",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6展示通用蛋白设计能力",
+    "summary": "OpenAI披露的预印本与实验信息称，GPT-6家族可通过推理和代码设计新蛋白形状与序列，无需调用专用生物生成模型，相关设计已完成湿实验验证。这意味着通用推理模型开始直接进入蛋白工程流程。",
+    "url": "https://x.com/gdb/status/2125341356503748716",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12676",
+    "summary": "llama.cpp 构建 b12676 把 GDN 的 rollback 改为 replay，并顺手修掉一个隐蔽的状态 bug：find_slot 交换 cell 时只迁移了 pos、src、rs_pend、seq_id 而没有带上 rs_max，导致被挪走的序列继承了原 cell 所有者的回滚深度——值偏小会让 seq_rm 直接拒绝回滚，值偏大又会让 snapshot 模式恢复出别人的快照。改用 replay 后待处理列直接拷贝，属于多序列 serving 场景下的状态正确性修复。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12676",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "智谱用循环层替GLM-5.4换取推理深度",
+    "summary": "技术解读称，模型把第27—54层共28层在GLM-5基座上跑两轮，第二轮沿用同一组权重继续加工第一轮隐藏状态，并复用稀疏KV缓存与局部滑动窗口压低额外开销；官方口径为7500亿参数、表现对标2T—3T级模型，同时新增视觉能力覆盖视频、游戏、3D着色器与CAD。发布侧观察指出基准成绩仍未完整公布，开放权重与更大模型均在计划中。",
+    "url": "https://x.com/shao__meng/status/2124834881901646155",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic's Claude Ship lets AI agents review, fix, and approve pull requests on their own",
+    "summary": "Anthropic 推出仍处于 beta 的 Claude Ship，可按团队规范自动审查、修正并批准代码变更建议。它把 PR 流程里的例行审批交给 agent，直接针对 AI 生成代码大量堆积后 review 成为新瓶颈的问题。",
+    "url": "https://the-decoder.com/anthropics-claude-ship-lets-ai-agents-review-fix-and-approve-pull-requests-on-their-own/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开源模型首次靠写代码改写自身权重",
+    "summary": "实验梳理显示，UIUC、CMU、普林斯顿等校研究者禁掉梯度与优化器，让Qwen3.5 27B用Python直接改权重：最好一轮把48层控制旧信息消退的时间步偏置统一加0.5，490道未见过的数学题准确率由57.2%升至63.8%，未答完比例从33.6%降到26.1%；受损副本的数学成绩从0.0%修回33.0%，图像基准从7.3%回到70.2%。同系列2B无法动手，4B与9B把自己改坏，且8轮均从原版重启，尚未形成递归式持续改进。",
+    "url": "https://x.com/dotey/status/2124775538648633370",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12675",
+    "summary": "llama.cpp b12675 让 server 在恢复成功之前保留 prompt-cache 条目，避免 restore 失败时缓存被提前清掉、被迫重新 prefill。这是服务端首 token 延迟与缓存命中率上很实际的细节改进。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12675",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "千万行Lean证明引发数学界争议",
+    "summary": "Alpöge在回应中称，“25万页文档”是玩笑，约1700万行Lean代码虽混乱但能够编译，相关核查也未发现偷换命题。他承诺继续精简代码；争议凸显机器可验证与人类可理解之间的巨大距离。",
+    "url": "https://x.com/dotey/status/2125081053098373590",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12674",
+    "summary": "llama.cpp b12674 为 Windows on Snapdragon 在 configure 阶段自动拉取 Adreno 二进制 kernel 库，新增的 GGML_OPENCL_USE_ADRENO_BIN_KERNELS 与 FETCH 选项默认开启，CMake 会从高通软件中心下载固定版本、校验 SHA256 并把 DLL 与 license 拷到可执行文件旁，下载失败仅降级不中断构建。这让骁龙平台上的 OpenCL 后端开箱可用，端侧设备不必再手工折腾 kernel。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12674",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "豆包个人智能体“小豆”开启邀请制公测",
+    "summary": "体验长帖称，小豆已打通抖音、飞书与手机本地能力：可把收藏的美食视频整理成附近店铺卡片并代为电话问排队，分析账号数据拆解选题，把聊天截图直接写进系统日历与飞书日历，还能接Apple健康数据做分析；短板是回复偏冗长、主动推送过频。另一份内测记录提到每位用户另配一台2核4G、10G硬盘的Ubuntu云端电脑，但连接器配置仍不稳定。",
+    "url": "https://x.com/op7418/status/2125163207304139041",
+    "section": "🤖 Agent & 工具",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "v0.40.18",
+    "summary": "Ollama v0.40.18 在 MLX 后端把 Inkling 的残差混合融合到 Metal 上，mlxrunner 开始跨架构共享张量算子与模型初始化，同步 llama.cpp b12651 并移除 Jetpack5 支持；inkling2 的 Metal decode、prefill 与 draft 轮次都更快。对在 Mac 上跑新模型的用户，这是直接的吞吐收益。",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.18",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "[AINews] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft",
+    "summary": "本期 AINews 三条主线：Nvidia 让创始人回归、OpenAI 公开内部 loss 曲线并提出共享训练上限的设想、微软同场。预训练曲线被当作公开材料摆出来，意味着 scaling 叙事的透明度与算力治理开始被正式讨论。",
+    "url": "https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "nightly-cpu-multi-last-green",
+    "summary": "DeepSpeed nightly 调整 ZeRO-1/2 中梯度 bucket 的读取、重写与释放顺序，目标是压低多卡训练时的显存峰值、让通信与计算交错得更顺。属于分布式训练里不显眼但影响稳定性的常规优化。",
+    "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-cpu-multi-last-green",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic Launches Claude Ship for GitHub Pull Request Review and Fixes",
+    "summary": "Claude Ship 实际由三个 agent 组成：Code Review 已 GA，PR Steward 与 Claude Approvals 面向 Team 和 Enterprise 公测，覆盖 GitHub PR 的审查、修复与批准。把 code review 拆成可独立订阅的 agent 产品线，团队可以按需组合而不是整套接入。",
+    "url": "https://www.marktechpost.com/2026/11/23/anthropic-claude-ship-pull-request-agents/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Announcing vLLM-GR: Efficient Inference for Generative Recommendation",
+    "summary": "vLLM-GR 把 vLLM 扩展到生成式推荐模型的 serving，在加速器侧做 beam search、catalog 约束解码，并在多条候选路径之间共享 KV cache。生成式推荐此前很难直接吃到 vLLM 的调度与 PagedAttention 红利，这一步主要压缩候选爆炸带来的重复计算。",
+    "url": "https://vllm.ai/blog/2026-11-24-vllm-gr-announcement",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+    "summary": "TechCrunch 的视角是：AI 生成代码量暴涨之后，review 本身成了新瓶颈，Claude Ship 让 agent 接管例行审批来消灭这个堵点。对已把编程助手深度接入研发流程的团队，这提示瓶颈正从「写」转向「审」。",
+    "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI updates ChatGPT to handle complex everyday questions, web searches, and images more reliably",
+    "summary": "OpenAI 把 GPT-6.2 Sol 设为 ChatGPT 对话页的默认模型并全球推送：内部测试中图像理解从 47.4% 升到 71.7%，复杂指令正确执行率 78.1%，安全策略遵循也更稳定。这代的重心明显是把多模态理解与指令跟随做扎实，而不是单纯刷榜。",
+    "url": "https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12672: metal : add NVFP4 support (#32825)",
+    "summary": "llama.cpp b12672 给 Metal 后端补上 NVFP4：沿 MXFP4 路径加入 UE4M3 scale 解码、NVFP4 反量化、带 MUL_MAT_ID 的专用 mat-vec kernel，以及 small-batch、MMA、mul_mm/mul_mm_id、get_rows 与 cpy 变体，并在 supports_op 中开放该类型。已在 M5 Max 上用 Nemotron 30B-A3B 的 NVFP4 GGUF 跑通测试，意味着低比特权重在 Apple Silicon 上不再只能退回 CPU。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12672",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI and Cisco Releases Shirudo: An Open-Source Linux Runtime Allowing Agents to Defend Systems Without Downtime",
+    "summary": "OpenAI 与 Cisco 发布 BSD 许可的预发布 Linux eBPF 运行时 Shirudo，AI agent 编写经过签名的「盾」，在运行中的系统上封堵漏洞利用路径，团队可在此期间测试并推送真正的补丁。它把 agent 产出从代码建议变成可签名的运行时策略，是 agent 进入生产运维的关键一步，也顺手绕开了打补丁必须停机的老问题。",
+    "url": "https://www.marktechpost.com/2026/11/24/openai-cisco-shirudo-ebpf-linux-runtime/",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "viable/strict/1795540860: [Stable ABI] Add cpublas shims (#204470)",
+    "summary": "PyTorch 2.16 的稳定 ABI 新增 torch::stable::cpublas，把 CPU 扩展常用的四个 at::native::cpublas 接口暴露出来：brgemm 的全部 8 个重载、brgemm_release、gemm_no_downcast_stub 与 could_pack，输入类型与 native 版本一致。做 CPU 侧定制算子或微内核的团队不必再跟着 PyTorch 版本反复重编译。",
+    "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1795540860",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "谷歌发现，技术债务会通过“智能体分心”导致编码智能体偏离正轨",
+    "summary": "谷歌发现技术债务会通过「智能体分心」让编码智能体偏离正轨。这解释了为什么同一模型在新项目里表现不错、在老仓库里却频繁跑偏，对把 agent 塞进遗留代码库的团队是个明确的施工前提。",
+    "url": "https://www.infoq.cn/article/sFmubmDWkulIOTBLX0Dr?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Pinterest 让大模型取代多阶段聚类，但最大的提速来自“少推理”",
+    "summary": "Pinterest 用大模型取代原来的多阶段聚类流水线，但实测最大的提速并不来自模型本身，而是「少推理」——砍掉不必要的 LLM 调用轮次。对做推荐与内容理解的团队，这说明流水线的成本与延迟瓶颈往往在编排而非单次推理。",
+    "url": "https://www.infoq.cn/article/vaEUVvWD9AIaFXZhzSMH?utm_source=rss&utm_medium=article",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "b12682: ggml : use a range-reduced log1p for softplus (#32655)",
+    "summary": "llama.cpp b12682 让 Metal 后端的 softplus 改用范围归约后的 log1p：x 落在 [-0.5, 1] 用 atanh 级数，其余走精确 log(1+x)，避免负输入下 log(1+exp(x)) 的相消误差，也不再依赖 fast-math 对 (1+e)-1 的折叠。配套新增了 [-16.6, -16.0] 区间的负输入测试，该区间旧实现的相对误差可达约 2 倍。",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12682",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "业界首提“端侧超节点”，让端侧AI组队计算：AI效率暴涨270%，不用换芯片或模型",
+    "summary": "辛米尔提出业界首个「端侧超节点」思路，让多台端侧设备组队做协同计算，宣称 AI 效率提升 270% 且不需要更换芯片或模型。若数据站得住，这是物理 AI 规模化落地一条不依赖新硬件的路径。",
+    "url": "https://www.qbitai.com/2026/11/512362.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "具身行业，终于等来了自己的通用智能时刻",
+    "summary": "量子位讨论具身智能行业等待已久的通用智能时刻，认为预训练这一套范式终于开始向具身领域迁移。对做机器人基础模型的人，真正的门槛仍是数据从哪来以及跨本体如何迁移。",
+    "url": "https://www.qbitai.com/2026/11/512264.html",
+    "section": "💼 行业动态",
+    "review": "",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI 发布 GPT-6 蛋白质设计能力研究",
+    "summary": "OpenAI 于 2026 年 11 月 24 日发布研究，展示 GPT-6 系列模型具备内生蛋白质设计能力。该模型仅通过推理和代码即可设计新的蛋白质结构与序列，无需调用专用生物模型。在实验室测试中，基于 GPT-6.2 设计的蛋白质在五个靶点上显示出结合证据，且重新设计的抗体保留了结合能力。内部模型在多项蛋白质设计任务中表现匹配或超越专用模型，并能通过提示词灵活调整设计约束。",
+    "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+    "section": "🔥 今日焦点",
+    "review": "通用大模型直接介入需湿实验验证的科研流程，降低了生物设计的技术门槛，但当前结果仍依赖实验室验证，尚未完全替代专用工具链。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "百度文心 5.5 Flash Preview 正式开源",
+    "summary": "百度于 11 月 24 日以 Apache 2.0 协议开源文心 5.5 Flash Preview，开发者可在 Hugging Face 和 ModelScope 获取权重。该模型总参数量 2800 亿，每 Token 激活 140 亿参数，支持 100 万 Token 上下文，兼容 vLLM 等主流推理框架。在 CodeArena WebDev 榜单中，其得分位列开源模型第二，在编程、3D 建模等任务中表现具有竞争力，适合低成本私有化部署与二次开发。",
+    "url": "https://www.qbitai.com/2026/11/512354.html",
+    "section": "🚀 产品发布",
+    "review": "Apache 2.0 协议解除了商用限制，为需要内网部署或低成本微调的团队提供了直接的国产基座选项，但其在复杂推理上的实际表现仍需更多独立基准验证。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "MiniMax 扩展 H3 开源多模态生态",
+    "summary": "MiniMax 披露 H3 开源 100 天已衍生 1472 个模型，累计下载量超过 1.48 亿次。新发布的 H3 Family 覆盖图像、视频生成及多档速度配置。相关能力已应用于电商、影视、游戏、动漫和数字人等生产流程，显示出开源生态在垂直行业中的落地能力。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ==&mid=2247489302&idx=1&sn=631ef0ea4a0cfcf14110562d4180d128",
+    "section": "🚀 产品发布",
+    "review": "高衍生模型数量与下载量表明 H3 已成为多模态开发的重要基座，但具体生成质量与商业竞争力需结合具体行业案例评估。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "GPT-6.2 Sol 日常对话版本开始推送",
+    "summary": "OpenAI 开始向 Plus、Pro、Business 及 Enterprise 用户推送 GPT-6.2 Sol 的日常对话版本。该版本优化了复杂指令处理、图片细节识别及在线信息检索能力，并能在价格变动等场景主动询问用户是否需要后续提醒。Greg Brockman 在社交媒体上评价其为“一个很棒的模型”，但部分用户反馈认为其对话体验不如前代自然。",
+    "url": "https://x.com/gdb/status/2125132836105809951",
+    "section": "🚀 产品发布",
+    "review": "强化在线检索与复杂指令处理旨在提升实用性，但用户反馈显示其在对话自然度上存在争议，实际体验可能因使用场景而异。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic推出Claude Ship实现PR自动审查与合并",
+    "summary": "Anthropic发布Beta版工具Claude Ship，旨在自动化代码审查流程。该系统结合Code Review功能与PR Steward、Claude Approvals两个智能体，能自动修复测试失败或冲突，并依据项目策略文件决定是否批准合并。在启用GitHub自动合并且策略允许时，代码可完全无人工干预合并。该功能面向Team和Enterprise计划用户，按Token计费，且因默认无支出上限，需团队自行设置预算，有数据隐私要求的组织无法使用。",
+    "url": "https://the-decoder.com/anthropics-claude-ship-lets-ai-agents-review-fix-and-approve-pull-requests-on-their-own/",
+    "section": "🚀 产品发布",
+    "review": "将审批权下放给AI虽能缓解代码堆积瓶颈，但默认无预算上限和隐私限制暴露了成本与合规风险，企业需严格配置策略以防失控。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "豆包个人智能体“小豆”开启邀请制公测",
+    "summary": "豆包个人智能体“小豆”开启邀请制公测，重点打通抖音、飞书及手机本地生态。用户可将其收藏的美食视频转化为附近店铺卡片并代为电话询问排队情况，或分析账号数据辅助选题。此外，它支持将聊天截图同步至系统及飞书日历，并连接Apple健康数据进行综合分析。尽管生态整合能力突出，但用户反馈其回复偏冗长且主动推送过于频繁，目前仍处于邀请制阶段以优化体验。",
+    "url": "https://x.com/op7418/status/2125163207304139041",
+    "section": "🚀 产品发布",
+    "review": "深度绑定字节系生态是其核心壁垒，但冗长回复和高频推送暴露了交互体验短板，邀请制本质是控制流量以打磨产品成熟度。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "OpenAI与Anthropic内部担忧未发布模型安全风险",
+    "summary": "据Axios报道，OpenAI与Anthropic多名内部人士透露，两家公司未发布的前沿模型能力已超出当前安全控制措施。许多员工认为这些系统过于强大，难以安全地面向公众发布，公司内部正在讨论是否暂停发布甚至停止训练。这一情况反映出前沿模型能力增长与安全对齐之间的张力，同时也显示出员工对管理层在安全决策上的信任度有所下降。",
+    "url": "https://the-decoder.com/dozens-of-insiders-say-openai-and-anthropics-unreleased-models-have-outgrown-their-safety-measures/",
+    "section": "💼 行业动态",
+    "review": "内部对“失控”的担忧若属实，表明现有安全框架已滞后于模型能力演进，可能迫使头部实验室重新评估发布节奏与治理结构。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "开源渗透框架Cairn被用于真实网络攻击",
+    "summary": "亚马逊威胁情报团队披露，某中国背景威胁组织利用开源AI渗透测试框架Cairn发起真实攻击。自主Agent在耗时近一天尝试入侵高校服务器未果后，利用一款开源医学影像AI应用中的0Day路径遍历漏洞，成功建立root权限反向Shell。该Agent能自主调整攻击路径，包括凭据喷洒和内部网络测绘。近期多家安全厂商发现Cairn被多类威胁组织滥用，用于窃取数据及攻击关键基础设施，传统防御策略难以应对AI Agent的持续性与自动化特征。",
+    "url": "http://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651351651&idx=1&sn=3a21bd0c21615ba21300f418b2e3f765&chksm=bcfa6bd314bc40c8afe21e95c8a4683f861c8ea75574b5559b5aeaa95fa57df6ca76a1f3c80f&scene=0&xtrack=1#rd",
+    "section": "💼 行业动态",
+    "review": "AI Agent自主利用0Day漏洞并持续调整策略，标志着网络攻击进入“机器对机器”的高频对抗阶段，传统人工响应速度已无法匹配攻击节奏。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "辛米尔提出“端侧超节点”架构，实测提升AI吞吐量270%",
+    "summary": "辛米尔科技提出业界首个“端侧超节点”（Edge SuperPOD）概念，旨在解决端侧AI设备算力分散、感知割裂及部署复杂的问题。该方案通过感知融合、弹性调度和异构互联，让不同芯片架构的端侧设备协同计算。实测显示，在相同硬件和模型条件下，有效任务吞吐量提升了270%。此外，公司配套推出了EdgeFlowOS操作系统及模块化硬件产品，以支持物理AI的规模化落地。",
+    "url": "https://www.qbitai.com/2026/11/512362.html",
+    "section": "💼 行业动态",
+    "review": "该方案通过系统级调度挖掘现有硬件潜力，为物理AI落地提供了不依赖新硬件的路径，但270%的提升数据需结合具体场景验证，且跨设备协同的工程复杂度仍是规模化部署的主要挑战。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic提交论文主张证明VP≠VNP，核心思路由Claude生成",
+    "summary": "Anthropic提交了一篇论文，主张证明所有域上的VP≠VNP，即针对一般算术电路给出超多项式下界。据报道，该论文的核心思路由Claude发现并撰写，并配套了约7.3万行已通过机器检查的Lean 4代码。尽管代码通过了形式化验证，但这一涉及计算复杂性理论的重大结论，目前仍需数学界专家进行独立的学术审查与确认。",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651075852&idx=2&sn=b43990c90fd68a8fbf4fbe9d6d16f15b",
+    "section": "💡 前沿研究",
+    "review": "若结论成立，将标志AI在基础数学证明上的重大突破，但形式化验证通过不等于数学正确性被学界公认，独立审查是确认其价值的关键门槛。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "TT-RSI框架实现测试时递归自我改进，平均准确率提升13.89%",
+    "summary": "研究人员提出TT-RSI（Test-Time Recursive Self-Improvement）框架，通过无标签方式在测试时改进大语言模型。该框架包含上下文递归自我改进和权重递归自我改进两个部分，让模型反复参考并修正上一轮解答，并将改进结果蒸馏回模型权重。实验表明，TT-RSI使平均准确率较基础模型提升13.89%，在同等测试时扩展预算下，比最强自洽方法高出4.79个百分点。",
+    "url": "https://arxiv.org/abs/2611.30965",
+    "section": "💡 前沿研究",
+    "review": "TT-RSI突破了传统自洽方法依赖多数投票的局限，通过迭代修正和权重更新实现推理与训练的闭环增强，为模型部署后的持续优化提供了新范式。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Unsloth更新支持Inkling 2 Mini微调，训练速度提升3倍",
+    "summary": "Unsloth发布v0.1.924-beta版本，新增对Inkling 2 Mini模型的微调支持。通过LoRA或QLoRA技术，训练速度可提升1.8至3.1倍，显存占用减少50%，并支持在Kaggle免费的双T4 GPU上运行。该版本还修复了聊天场景中思考模型的相关问题，支持导出为GGUF或合并后的16位模型，并优化了adamw_8bit优化器及Z-Image LoRA训练速度，降低了中小团队在消费级硬件上微调小模型的门槛。",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.924-beta",
+    "section": "🔓 开源热榜",
+    "review": "该更新显著降低了小模型微调的硬件门槛，使消费级GPU能高效处理Inkling系列模型，进一步推动了开源社区在低成本场景下的模型定制能力。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]
