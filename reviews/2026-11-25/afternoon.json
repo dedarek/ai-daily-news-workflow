@@ -1,0 +1,26 @@
+{
+  "issue_date": "2026-11-25",
+  "reviewed_at": "2026-11-25T17:56:09.774250+08:00",
+  "pass": true,
+  "delivery_approved": true,
+  "llm_recommendation_pass": true,
+  "blocking_reasons": [],
+  "deterministic_issues": [],
+  "llm_review": {
+    "pass": true,
+    "score": 92,
+    "summary": "日报内容详实准确，锐评切中要害，播客对话自然流畅且逻辑连贯，整体质量高。",
+    "issues": [
+      "播客中S1提到'安全不再是附加项，而是核心竞争力'，虽符合行业趋势，但略显绝对化，可微调为'关键考量'以更严谨。"
+    ],
+    "checks": {
+      "factual_consistency": "pass",
+      "duplication": "pass",
+      "readability": "pass",
+      "editorial_quality": "pass",
+      "podcast_quality": "pass"
+    }
+  },
+  "review_model": "lenovo:qwen38-27b",
+  "usage": {}
+}
