@@ -2785,75 +2785,75 @@
       "selected": [
         {
           "date": "2026-11-26",
-          "title": "OpenAI启动Private Inference企业试点，承诺隔离敏感数据",
-          "summary": "OpenAI正在向首批企业客户试点名为“Private Inference”的新功能，允许企业在调用其最强模型时，确保OpenAI无法访问查询数据。该服务运行在可独立验证安全性的隔离硬件上，旨在解决金融、医疗等高敏感场景的数据隐私顾虑。CEO Sam Altman表示，更好的隐私保护将扩大AI在各类工作中的应用范围。目前OpenAI正在扩展计算容量以支持该服务的推广，而消费者版ChatGPT的对话数据默认仍用于训练，除非用户主动退出。",
+          "title": "OpenAI启动企业私密推理服务试点",
+          "summary": "OpenAI正在向首批企业客户试点名为“Private Inference”的新功能，允许企业在调用其最强模型时隔离敏感请求。该服务运行在可独立验证安全性的专用隔离硬件上，确保OpenAI无法访问查询数据。CEO Sam Altman表示，这一举措旨在通过提升隐私保护，使AI适用于金融、医疗等更广泛的高敏场景。目前OpenAI正在扩展计算容量以支持该服务的推广。",
           "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/"
         },
         {
           "date": "2026-11-26",
-          "title": "Anthropic MCP月下载量破7亿，新增后台任务与文件上传功能",
-          "summary": "Anthropic宣布其Model Context Protocol (MCP) SDK月下载量已超过7亿次，并拥有超过1万个连接器。为支持更自主的AI Agent，MCP协议新增了“Tasks”和“Elicitation”功能，前者允许服务器在后台运行长时任务并异步返回结果，后者允许进程暂停并向用户追问缺失细节。此外，处于公测阶段的“Skills over MCP”允许服务器提供特定组织或用户的定制化技能，且即将推出的文件上传功能将支持Claude直接向MCP服务器传输PDF、表格等文件。",
+          "title": "Anthropic扩展MCP协议支持自主Agent",
+          "summary": "Anthropic宣布其MCP标准SDK月下载量突破7亿次，并推出多项新功能以增强Agent自主性。新增的“Tasks”功能允许服务器在后台运行长时任务，而“Elicitation”功能则支持进程暂停并向用户追问缺失细节。此外，处于Beta阶段的“Skills over MCP”允许服务器提供针对特定组织或用户的定制化知识。这些更新旨在让Claude在缺乏即时人工干预时，仍能独立维持长时间复杂任务的执行。",
           "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/"
         },
         {
           "date": "2026-11-26",
-          "title": "Anthropic测试Claude桌面应用安装功能，实现云端代码同步",
-          "summary": "Anthropic正在桌面客户端中测试“Install as app”功能，允许用户将Claude对话中生成的工具直接安装为Mac程序坞或Windows开始菜单中的独立应用。该功能无需用户手动打包签名或配置API密钥，安装后的应用连接云端原稿，代码更新后可自动同步，并复用用户的Claude额度及已连接的连接器。目前测试版本要求Claude Desktop版本在6.28899.0及以上，通知、本地文件访问及本机程序调用需用户逐项授权。",
-          "url": "https://x.com/xiaohu/status/2125528598484545556"
-        },
-        {
-          "date": "2026-11-26",
-          "title": "FCC批准SpaceX部署百万颗AI卫星，推进Starmind太空数据中心计划",
-          "summary": "美国联邦通信委员会（FCC）授权SpaceX部署最多100万颗搭载AI芯片的卫星，用于其“Starmind”太空数据中心计划。批准条件要求SpaceX在2033年前至少发射一颗卫星，并在2040年前达到百万颗规模。SpaceX计划利用太空太阳能驱动地球上的AI能力，并通过高速激光将数据传输至Starlink网络，芯片将在其Terafab工厂生产。FCC同时暂缓了SpaceX关于在600公里以上“墓地轨道”处置卫星的请求，理由是未提供足够的处置过程信息。",
+          "title": "FCC批准SpaceX建设百万颗太空算力卫星",
+          "summary": "美国FCC正式授权SpaceX部署名为“Starmind”的太空数据中心计划，允许其发射最多100万颗搭载AI芯片的卫星。批准条件要求SpaceX在2033年前至少发射一颗卫星，并在2040年前达到百万颗规模。该计划旨在利用太空太阳能驱动地球上的AI能力，并通过高速激光向Starlink传输数据。FCC同时推迟了SpaceX关于在600公里以上轨道处置卫星的请求，认为其未提供足够的处置计划信息。",
           "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers"
         },
         {
           "date": "2026-11-26",
-          "title": "42州总检察长联合阻止Character.AI破产拍卖用户聊天数据",
-          "summary": "Character.AI在10月申请破产后，计划于12月1日拍卖包含超过2100万美国账户（含210万未成年人）的私人聊天数据。42个州的总检察长介入破产程序，反对该交易，指出买家无需遵守原隐私政策且可能转售数据，而公司此前曾承诺不售卖用户信息。目前唯一披露的匿名买家为Smirks and Pangs Acquisition LLC，其背景及数据用途尚不明确。",
+          "title": "42州总检察长阻击Character.AI数据拍卖",
+          "summary": "42个美国州总检察长联合介入Character.AI的破产程序，反对其将用户私密聊天数据拍卖给最高出价者。数据显示，拟交易数据涉及超过2100万个美国账户，其中约210万个属于未成年人，还包括IP地址等个人信息。总检察长们指出，买家无需遵守原隐私政策，且可能无限制转售数据，这违反了联邦及加州法律。目前唯一披露的匿名买家为Smirks and Pangs Acquisition LLC，拍卖定于12月1日进行。",
           "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
         },
         {
           "date": "2026-11-26",
-          "title": "DeepMind让AI Agent自主运行Gemini实验，但距递归自我改进尚远",
-          "summary": "谷歌DeepMind研究副总裁Koray Kavukcuoglu透露，AI Agent已接管部分算力，自主为下一代Gemini模型运行实验。作为安全措施，实验室在训练中不奖励Agent的内部思维链，以确保其推理过程在自然语言中保持可审查性。Kavukcuoglu强调，当前模型虽能视觉化模拟物理过程，但缺乏精确理解，且AGI的衡量标准应转向日常用户信任度，而非基准测试分数。",
-          "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/"
+          "title": "METR报告揭示Anthropic内部模型研发加速与未发布模型储备",
+          "summary": "独立评估机构METR发布的报告显示，Anthropic内部拥有多款未公开模型，其中Model 4的综合能力指数AECI达到178.6分，高于已发布的Mythos 5.2。METR测算指出，自2025年10月以来，Anthropic模型能力增长速度达到此前的1.9倍，其中约80%的加速贡献来自AI辅助研发。目前Anthropic核心代码库中超过90%的代码改动由Claude编写，公司已在招股书中确认达到AI研发能力阈值。",
+          "url": "https://www.qbitai.com/2026/11/512538.html"
         },
         {
           "date": "2026-11-26",
-          "title": "脸谱心智发布General Looped Model，9400万参数对标50亿级模型",
-          "summary": "国内团队脸谱心智公开了General Looped Model技术细节，该架构通过循环复用同一套权重来解耦参数规模与计算深度。其9400万参数的视频生成模型在多项指标上优于50亿参数参照方案，权重显存从21.34GB降至0.31GB。该报告还展示了在世界模型、工程基础模型及三维重建领域的越级对标结果，旨在应对HBM显存瓶颈。",
-          "url": "https://www.qbitai.com/2026/11/512565.html"
+          "title": "字节跳动与港大开源异步RL后训练框架Laminar",
+          "summary": "港大与字节跳动Seed团队开源了异步强化学习后训练框架Laminar，该框架解耦了rollout、训练和权重同步流程，支持多节点GPU集群运行。在Qwen3-Coder-30B-A3B-Instruct模型上，Laminar将SWE-bench Verified得分从基线的46.6%提升至52.2%，同时样本量和GPU小时数分别减少33%和64%。框架采用Apache-2.0协议，支持版本一致性rollout和细粒度异步机制，旨在解决长轨迹训练中的GPU等待问题。",
+          "url": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/"
         },
         {
           "date": "2026-11-26",
-          "title": "PrismML发布Ternary Bonsai 2.5，三值量化将27B模型压缩至5.9GB",
-          "summary": "初创公司PrismML发布Ternary Bonsai 2.5 27B，基于Qwen3.8-27B，通过三值量化（-1, 0, +1）将模型体积从54GB压缩至5.9GB。该模型在SWE-bench Verified上得分从60.8%提升至75.6%，在AppWorld基准上从51.2提升至90.5，显著改善了长链工具调用任务中的循环和推理停滞问题。权重以Apache 2.0许可开源，支持llama.cpp在Nvidia、Intel GPU及MLX在苹果设备上运行。",
-          "url": "https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/"
+          "title": "Anthropic测试Claude生成工具桌面应用安装功能",
+          "summary": "Anthropic正在桌面客户端中测试“Install as app”功能，允许用户将Claude对话中生成的工具直接安装为Mac或Windows桌面应用。该功能无需手动打包或配置API密钥，安装后的应用连接云端原稿，可自动同步代码更新并复用用户的Claude额度及连接器。测试版本要求Claude Desktop版本在6.28899.0及以上，且通知、本地文件访问等权限需用户逐项授权。",
+          "url": "https://x.com/xiaohu/status/2125528598484545556"
         },
         {
           "date": "2026-11-26",
-          "title": "ActiveSecHarness提出分权架构以强化编码代理安全",
-          "summary": "研究人员提出ActiveSecHarness，一种针对代理式编码框架的组合式安全架构。该方案将模型智能与系统执行权限分离，通过能力令牌、污点账本及系统守卫约束工具调用，防止恶意指令利用bash等双用途二进制文件实施攻击。在252个测试项中，该架构阻断了全部12条多步攻击链，且中位延迟仅为31.5微秒，显著优于依赖LLM判断的现有护栏方案。",
+          "title": "谷歌开源AQuA智能体用于诊断生产环境AI故障",
+          "summary": "谷歌开源了环境质量智能体AQuA，用于离线分析生产环境中AI智能体的会话质量，定位如跳过工具调用、忽略用户偏好等静默回归问题。AQuA从Cloud Trace等遥测数据中采样，通过五阶段流程进行聚类分析，并将异常会话与不可变源码快照对比以进行根因诊断。在出行应用测试中，AQuA识别出9个候选聚类，最终确认6个问题，开发者据此修改提示词后显著提升了会话通过率。",
+          "url": "https://www.infoq.cn/article/YAc2TqCHc09kAFF1A7BS?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "ActiveSecHarness提出分权架构以增强编码代理安全性",
+          "summary": "论文提出ActiveSecHarness，一种神经符号参考监视架构，旨在解决AI编码代理中模型智能与系统执行权限耦合带来的安全风险。该架构通过Macaroon启发的HMAC能力令牌、污点账本及确定性OS守卫，实现了智能与权限的分离。在252个测试项及12条多步攻击链的评估中，该方案在Ring 0层级实现了零误报率，并成功阻断所有攻击链，其中位延迟仅为31.5微秒，比实时LLM裁判快4517倍。",
           "url": "https://arxiv.org/abs/2611.13960"
         },
         {
           "date": "2026-11-26",
-          "title": "ASTERISM基准揭示多模态模型存在单图捷径依赖",
-          "summary": "研究团队审计了19个多图推理基准，发现约3.3万道题中有24.2%可仅凭单张图片或问题文本作答，导致模型产生“单图捷径”依赖。新基准ASTERISM筛选出1.87万道真正需要跨图推理的题目，并指出当前强化学习后训练往往奖励这种捷径行为。通过引入跨图信用分配方法，三款开源模型在ASTERISM上的得分提升了2.6至6.0分。",
-          "url": "https://arxiv.org/abs/2611.32316"
-        },
-        {
-          "date": "2026-11-26",
-          "title": "Loom Attention实现Transformer电路的动态重组",
-          "summary": "研究人员提出Loom Attention机制，允许Transformer在每个token处动态重组其内部电路。该机制交织了头对早期头输出的垂直注意力与对token的水平注意力，并利用归一化门控线性注意力高效存储历史头输出。基于此构建的LoomFormer双流架构，在仅增加2% FLOPs的情况下，其下游任务表现超越了使用3倍以上计算资源训练的标准Transformer。",
+          "title": "Loom Attention实现Transformer电路动态重连",
+          "summary": "研究人员提出Loom Attention机制，允许Transformer在每个token处动态重组电路。该机制将头对早期头输出的垂直注意力与对token的水平注意力交织，利用每token矩阵记忆存储压缩头输出作为第二残差流。基于此构建的LoomFormer双流架构，在仅增加2% FLOPs的情况下，其2.8B模型在下游任务表现优于12B的Pythia模型，且匹配了使用3倍以上计算资源训练的Transformer。",
           "url": "https://arxiv.org/abs/2611.30634"
         },
         {
           "date": "2026-11-26",
-          "title": "字节跳动开源异步RL后训练框架Laminar",
-          "summary": "港大与字节Seed研究者开源了异步RL后训练框架Laminar，旨在解耦rollout、训练和权重同步过程，实现生成与更新的流水并行。该框架基于verl和Uni-Agent构建，支持版本一致的rollout模式以避免重复预填充。在Qwen3-Coder-30B-A3B模型上，Laminar将SWE-bench Verified得分从46.6%提升至52.2%，同时大幅减少了所需的样本量和GPU小时数。",
-          "url": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/"
+          "title": "FlashAttention发布fa4-v4.0.0.beta41版本",
+          "summary": "FlashAttention发布fa4-v4.0.0.beta41预发布版，主要优化了SM100架构下的反向传播性能。更新内容包括按fp32 dV暂存大小分配sdO并直接写dK/dV，新增支持BF16带的causal原生MXFP8 PV，以及修复dKGemmKernel中释放累加器前未等待tcgen05.ld的竞态条件。这些改动直接影响了Blackwell架构上长上下文训练的正确性与显存占用。",
+          "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta41"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "llama.cpp实现具名工具调用功能",
+          "summary": "llama.cpp在b12731版本中实现了具名工具调用（named tool choice）功能，允许服务端强制模型调用指定工具。该实现同步支持qwen3-coder的解析格式，并对具名工具关闭parallel_tool_calls，同时支持工具白名单子集校验。这一更新使本地部署的模型在Agent场景中获得了与商业API接近的工具约束能力。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12731"
         }
       ]
     }
