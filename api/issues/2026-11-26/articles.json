@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI启动Private Inference企业试点，承诺隔离敏感数据",
+    "summary": "OpenAI正在向首批企业客户试点名为“Private Inference”的新功能，允许企业在调用其最强模型时，确保OpenAI无法访问查询数据。该服务运行在可独立验证安全性的隔离硬件上，旨在解决金融、医疗等高敏感场景的数据隐私顾虑。CEO Sam Altman表示，更好的隐私保护将扩大AI在各类工作中的应用范围。目前OpenAI正在扩展计算容量以支持该服务的推广，而消费者版ChatGPT的对话数据默认仍用于训练，除非用户主动退出。",
+    "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/",
+    "section": "🔥 今日焦点",
+    "review": "通过硬件隔离和平台不可见承诺，OpenAI试图消除企业采用前沿模型的核心信任障碍。若该模式能规模化落地，将直接改变高敏行业对云端AI的依赖结构，迫使竞争对手跟进类似的隐私保障机制。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic MCP月下载量破7亿，新增后台任务与文件上传功能",
+    "summary": "Anthropic宣布其Model Context Protocol (MCP) SDK月下载量已超过7亿次，并拥有超过1万个连接器。为支持更自主的AI Agent，MCP协议新增了“Tasks”和“Elicitation”功能，前者允许服务器在后台运行长时任务并异步返回结果，后者允许进程暂停并向用户追问缺失细节。此外，处于公测阶段的“Skills over MCP”允许服务器提供特定组织或用户的定制化技能，且即将推出的文件上传功能将支持Claude直接向MCP服务器传输PDF、表格等文件。",
+    "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/",
+    "section": "🚀 产品发布",
+    "review": "MCP从简单的工具调用接口演变为支持异步协作和状态管理的Agent基础设施，7亿月下载量确立了其事实标准地位。新增的后台任务与追问机制显著提升了Agent处理长周期复杂任务的能力，但也增加了系统调试和权限管理的复杂度。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Anthropic测试Claude桌面应用安装功能，实现云端代码同步",
+    "summary": "Anthropic正在桌面客户端中测试“Install as app”功能，允许用户将Claude对话中生成的工具直接安装为Mac程序坞或Windows开始菜单中的独立应用。该功能无需用户手动打包签名或配置API密钥，安装后的应用连接云端原稿，代码更新后可自动同步，并复用用户的Claude额度及已连接的连接器。目前测试版本要求Claude Desktop版本在6.28899.0及以上，通知、本地文件访问及本机程序调用需用户逐项授权。",
+    "url": "https://x.com/xiaohu/status/2125528598484545556",
+    "section": "🚀 产品发布",
+    "review": "这一功能将AI生成的代码从“聊天产物”转化为“可执行资产”，降低了非专业开发者使用AI工具的门槛。云端同步机制解决了本地版本管理痛点，但依赖云端连接的特性意味着离线场景下的可用性受限，且权限授权流程需平衡便利性与安全性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "FCC批准SpaceX部署百万颗AI卫星，推进Starmind太空数据中心计划",
+    "summary": "美国联邦通信委员会（FCC）授权SpaceX部署最多100万颗搭载AI芯片的卫星，用于其“Starmind”太空数据中心计划。批准条件要求SpaceX在2033年前至少发射一颗卫星，并在2040年前达到百万颗规模。SpaceX计划利用太空太阳能驱动地球上的AI能力，并通过高速激光将数据传输至Starlink网络，芯片将在其Terafab工厂生产。FCC同时暂缓了SpaceX关于在600公里以上“墓地轨道”处置卫星的请求，理由是未提供足够的处置过程信息。",
+    "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+    "section": "💼 行业动态",
+    "review": "这是首个获批的完整AI卫星星座计划，标志着算力竞争正式延伸至轨道资源。百万颗卫星的规模对太空监管、轨道碎片管理及国际协调提出严峻挑战，FCC对处置方案的保留态度也暗示了后续审批可能面临更严格的环境与安全审查。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "42州总检察长联合阻止Character.AI破产拍卖用户聊天数据",
+    "summary": "Character.AI在10月申请破产后，计划于12月1日拍卖包含超过2100万美国账户（含210万未成年人）的私人聊天数据。42个州的总检察长介入破产程序，反对该交易，指出买家无需遵守原隐私政策且可能转售数据，而公司此前曾承诺不售卖用户信息。目前唯一披露的匿名买家为Smirks and Pangs Acquisition LLC，其背景及数据用途尚不明确。",
+    "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+    "section": "💼 行业动态",
+    "review": "此举将破产处置中的用户隐私保护置于法律前沿，若法院支持州方诉求，可能确立AI企业破产时敏感数据不得随意拍卖的先例，迫使行业重新审视数据资产处置的合规边界。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "DeepMind让AI Agent自主运行Gemini实验，但距递归自我改进尚远",
+    "summary": "谷歌DeepMind研究副总裁Koray Kavukcuoglu透露，AI Agent已接管部分算力，自主为下一代Gemini模型运行实验。作为安全措施，实验室在训练中不奖励Agent的内部思维链，以确保其推理过程在自然语言中保持可审查性。Kavukcuoglu强调，当前模型虽能视觉化模拟物理过程，但缺乏精确理解，且AGI的衡量标准应转向日常用户信任度，而非基准测试分数。",
+    "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+    "section": "💼 行业动态",
+    "review": "保留思维链的可审查性是平衡自动化效率与安全性的关键设计，表明前沿实验室在追求Agent自主性的同时，仍将人类监督视为防止失控的必要约束，而非单纯的技术障碍。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "脸谱心智发布General Looped Model，9400万参数对标50亿级模型",
+    "summary": "国内团队脸谱心智公开了General Looped Model技术细节，该架构通过循环复用同一套权重来解耦参数规模与计算深度。其9400万参数的视频生成模型在多项指标上优于50亿参数参照方案，权重显存从21.34GB降至0.31GB。该报告还展示了在世界模型、工程基础模型及三维重建领域的越级对标结果，旨在应对HBM显存瓶颈。",
+    "url": "https://www.qbitai.com/2026/11/512565.html",
+    "section": "💼 行业动态",
+    "review": "在HBM产能受限背景下，这种以计算深度换参数规模的架构为端侧及低成本部署提供了可行路径，但报告曾短暂下架也暗示了核心工程细节在商业化竞争中的敏感性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "PrismML发布Ternary Bonsai 2.5，三值量化将27B模型压缩至5.9GB",
+    "summary": "初创公司PrismML发布Ternary Bonsai 2.5 27B，基于Qwen3.8-27B，通过三值量化（-1, 0, +1）将模型体积从54GB压缩至5.9GB。该模型在SWE-bench Verified上得分从60.8%提升至75.6%，在AppWorld基准上从51.2提升至90.5，显著改善了长链工具调用任务中的循环和推理停滞问题。权重以Apache 2.0许可开源，支持llama.cpp在Nvidia、Intel GPU及MLX在苹果设备上运行。",
+    "url": "https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/",
+    "section": "💼 行业动态",
+    "review": "三值量化在保持Agent任务性能的同时极大降低了内存门槛，证明了极端离散化在特定场景下的有效性，但其在LiveCodeBench上的轻微退步提示了极致压缩与通用能力之间的权衡。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ActiveSecHarness提出分权架构以强化编码代理安全",
+    "summary": "研究人员提出ActiveSecHarness，一种针对代理式编码框架的组合式安全架构。该方案将模型智能与系统执行权限分离，通过能力令牌、污点账本及系统守卫约束工具调用，防止恶意指令利用bash等双用途二进制文件实施攻击。在252个测试项中，该架构阻断了全部12条多步攻击链，且中位延迟仅为31.5微秒，显著优于依赖LLM判断的现有护栏方案。",
+    "url": "https://arxiv.org/abs/2611.13960",
+    "section": "💡 前沿研究",
+    "review": "该架构通过结构性分权替代行为性监控，有效解决了编码代理中“活体攻击”的权限滥用问题。其极低的延迟和零误报率表明，确定性守卫比概率性模型判断更适合处理实时安全约束。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "ASTERISM基准揭示多模态模型存在单图捷径依赖",
+    "summary": "研究团队审计了19个多图推理基准，发现约3.3万道题中有24.2%可仅凭单张图片或问题文本作答，导致模型产生“单图捷径”依赖。新基准ASTERISM筛选出1.87万道真正需要跨图推理的题目，并指出当前强化学习后训练往往奖励这种捷径行为。通过引入跨图信用分配方法，三款开源模型在ASTERISM上的得分提升了2.6至6.0分。",
+    "url": "https://arxiv.org/abs/2611.32316",
+    "section": "💡 前沿研究",
+    "review": "现有评测体系对“单图捷径”的容忍掩盖了模型真实的跨模态推理能力缺陷。ASTERISM通过剔除无效样本，迫使训练目标从“猜对答案”转向“整合证据”，是修正多模态后训练偏差的关键基础设施。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "Loom Attention实现Transformer电路的动态重组",
+    "summary": "研究人员提出Loom Attention机制，允许Transformer在每个token处动态重组其内部电路。该机制交织了头对早期头输出的垂直注意力与对token的水平注意力，并利用归一化门控线性注意力高效存储历史头输出。基于此构建的LoomFormer双流架构，在仅增加2% FLOPs的情况下，其下游任务表现超越了使用3倍以上计算资源训练的标准Transformer。",
+    "url": "https://arxiv.org/abs/2611.30634",
+    "section": "💡 前沿研究",
+    "review": "Loom Attention通过引入矩阵记忆作为第二残差流，打破了传统Transformer静态权重的限制。这种“深度可重写”的设计在保持计算效率的同时，显著提升了模型对复杂任务的结构适应性。",
+    "source_text": "",
+    "source_text_status": ""
+  },
+  {
+    "title": "字节跳动开源异步RL后训练框架Laminar",
+    "summary": "港大与字节Seed研究者开源了异步RL后训练框架Laminar，旨在解耦rollout、训练和权重同步过程，实现生成与更新的流水并行。该框架基于verl和Uni-Agent构建，支持版本一致的rollout模式以避免重复预填充。在Qwen3-Coder-30B-A3B模型上，Laminar将SWE-bench Verified得分从46.6%提升至52.2%，同时大幅减少了所需的样本量和GPU小时数。",
+    "url": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/",
+    "section": "🔓 开源热榜",
+    "review": "Laminar通过异步解耦解决了长轨迹训练中GPU空闲等待的痛点，显著提升了RL后训练的吞吐量。其版本一致机制有效降低了KV缓存重算成本，为大规模智能体训练提供了高效的基础设施方案。",
+    "source_text": "",
+    "source_text_status": ""
+  }
+]

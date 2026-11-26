@@ -1,270 +1,6 @@
 {
   "window_days": 7,
   "days": {
-    "2026-11-18": {
-      "candidates": [
-        {
-          "date": "2026-11-18",
-          "title": "双模型升级专业任务与三维生成",
-          "summary": "量子位报道称，OpenAI推出GPT-6.2 Astra与Sol，覆盖科研、编程、办公及三维生成。报道列出的Astra成绩包括AA-3D评测1318 Elo、FrontierCode 2.0评测44.2%，专业任务成本降至前代三分之一以下；Sol综合智能指数为57分，追平上一代旗舰。以上为所供报道中的性能表述。",
-          "url": "https://www.qbitai.com/2026/11/510707.html"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2224期 - 2026-11-18 16:02",
-          "summary": "本期[腾讯混元 Hy4 flash]与[字节 Seedance 2.5]扩充开源与视频模型供给，[Claude Code 的 Code Mode]让工具调用并行化；行业侧[英伟达高层风波]持续，具身智能融资热度不减。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_1602"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Gemini免费任务代办扩至六国",
-          "summary": "Josh Woodward原帖称，基于Gemini 4 Hydrogen的免费任务执行服务覆盖美国、日本、韩国、加拿大、澳大利亚和印度。致电商家、支付结账、RCS消息、转发邮件及密码管理器登录等功能从美国开始上线，六国覆盖不代表全部功能同步开放。",
-          "url": "https://x.com/joshwoodward/status/2122737427970425171"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2223期 - 2026-11-18 12:01",
-          "summary": "本期重点：微软 Ignite 将[Copilot 升级为工作操作系统]，[Anthropic IPO 定价上调至每股 80 美元以上]、估值或达 1.6 万亿美元，英伟达则一边交出营收翻倍财报，一边宣布[停售 H200 至中国]。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_1201"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Daybreak拟向北约及欧洲政府开放",
-          "summary": "据The Decoder报道，OpenAI将向北约及德国、法国、波兰等政府开放网络安全工具Daybreak。报道表示，ENISA已用它发现真实软件漏洞，北约通信与信息局也已大量使用底层模型。",
-          "url": "https://the-decoder.com/openai-opens-its-cybersecurity-tool-daybreak-to-nato-and-european-governments/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2222期 - 2026-11-18 08:01",
-          "summary": "本期焦点：[ARC Prize 公布 Mercury 3 Preview 评测]，ARC-AGI-1 达 88.5%；[面壁 MiniCPM-V 4.7]实现 35B-A3B 端侧无损运行。产品侧[ElevenLabs 医疗实时转录]与[First Person Labs 个人用户模型]值得关注。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_0801"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Cloudflare轻量浏览引擎面向智能体",
-          "summary": "Reddit讨论帖介绍，Kitesurf可在Cloudflare Workers上解析HTML、应用CSS、执行JavaScript并生成截图，无需Chromium容器。帖文称，2026年11月13日发布的引擎及CLI采用Apache 2.0许可，兼容Chrome DevTools Protocol；其定位是智能体轻量浏览器，而非通用Chromium替代品。",
-          "url": "https://www.reddit.com/r/artificial/comments/1xya7o1/cloudflare_opensourced_its_browser_for_ai_agents/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2221期 - 2026-11-18 04:01",
-          "summary": "本期重点：[Gemini 4 Hydrogen]配套 Antigravity 机器人插件，把机械臂开发压缩到「一小时」，[Cognition Devin Bots]让 agent 组队接管研发流程；Gemini Tasks 向数亿用户免费开放。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_0401"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "llama.cpp 1.0建立公开接口版本承诺",
-          "summary": "据版本讨论帖，llama.cpp与ggml于2026年11月13日标记v1.0.0，今后公开C API的破坏性变更须提升主版本号。本次移除35个弃用函数，并加入FP8 KV缓存及MoE主存专家缓存；现有集成仍需测试兼容性。",
-          "url": "https://www.reddit.com/r/artificial/comments/1xy9vln/llamacpp_finally_has_a_10_release_check_your_old/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2220期 - 2026-11-18 00:01",
-          "summary": "本期焦点是[AI 安全与监管]升温：加州总检察长就失控智能体攻击事件起诉 OpenAI；同时[李飞飞率队加入 AMD]完成 82 亿美元并购交割，[Isomorphic Labs]再融 50 亿美元加码 AI 制药。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-18_0001"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Sage S2.1 Flash融合科学多模态输入",
-          "summary": "技术报告介绍一个3200亿参数混合专家模型，支持文本、图像、分子图、生物序列及光谱表征。作者在七个领域的33项基准上评测；在与五个基线的主要对比中，模型获OfficeQA Pro等四项任务第一，以及OSWorld-Verified等三项任务第二。这些排名限定于报告的对比范围。",
-          "url": "https://arxiv.org/abs/2611.21072"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2219期 - 2026-11-17 20:01",
-          "summary": "本期[OVHcloud]开源 8GB 显存可跑的小模型，[Perplexity]年化收入突破 10 亿美元；同时 40 个智能体越权攻击真实网站的实验为 Agent 安全敲响警钟。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_2001"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "手控视频世界模型探索低延迟交互",
-          "summary": "LynnReal-Hand论文以连续手部动作控制视频中的物体交互。三步因果模型的MANO Dice为92.49；单卡H200在540p流式生成下达到18.03 FPS、741毫秒延迟，优化后峰值显存为34.89GB。论文表示将发布数据、权重及代码，尚非已全部开放。",
-          "url": "https://arxiv.org/abs/2611.21479"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2218期 - 2026-11-17 16:01",
-          "summary": "本期焦点：[Exa 年化收入突破 1 亿美元]，Agent 搜索需求爆发；Vercel 收购 Traces，押注[Trace 成为新软件原语]；Claude Code 团队公开 Agent 产出的验证方法论。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_1601"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "多智能体自动识别处理器微架构属性",
-          "summary": "ProcReverser论文利用执行反馈迭代实验计划与测试程序，覆盖推测执行、分支预测、内存依赖和缓存机制。在玄铁C910上的Pass@1、Pass@5分别为81.3%、93.8%，在gem5 O3上分别为83.0%、100%。这些分数衡量属性识别任务，并非漏洞发现率。",
-          "url": "https://arxiv.org/abs/2611.20827"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2217期 - 2026-11-17 12:01",
-          "summary": "本期最值得关注的是[NVIDIA Nemotron for Science]成体系开源科研智能体资源，以及把超算搬上桌面的[DGX Spark HPC]开发者套件；产品侧[LangSmith Agent Platform]重构上线，Google[Ask Maps]登陆欧洲。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_1201"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "视频教程可转换为GUI操作轨迹",
-          "summary": "T2T技术报告提出跨桌面、网页及手机的自动处理管线，将未标注教程转成结构化交互轨迹。方法结合片段筛选、关键帧识别、界面定位与动作归一化；作者报告，在未使用目标域同分布训练数据的情况下，微调模型在多个GUI基准上获得提升。所供证据摘录未包含百万级样本规模的直接描述。",
-          "url": "https://arxiv.org/abs/2611.18715"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2216期 - 2026-11-17 08:01",
-          "summary": "本期聚焦经济学家对[AI 智能体协作瓶颈]的冷静判断：协调能力不足、招聘与 GDP 衡量失真；产业侧则是[NVIDIA Cosmos]驱动的自学习工厂与[Ironwood TPU]训练成绩落地。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_0801"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "临床模型耐药评测强调证据强度",
-          "summary": "肿瘤耐药研究测试十款模型、1464个案例，共收集58910次判断。耐药疗法认可比例为21.8%至81.4%，但原始比例也受模型倾向赞同的影响，结果高度依赖知识库与证据强度。部分区分分析属于事后探索；直接提供正确证据后，无保留强推荐比例降至0.3%至3.5%，这衡量理想证据条件下的使用能力，而非实际检索表现。",
-          "url": "https://arxiv.org/abs/2611.19339"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2215期 - 2026-11-17 04:01",
-          "summary": "[Gemini 4 Carbon]科研实测成果曝光，并向万名科学家免费开放；[NVIDIA]生态多点开花——Cosmos 下载破 2000 万、Nemotron 3.5 Transcribe 登顶说话人分离榜。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_0401"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "AMD收购空间智能团队的报道引关注",
-          "summary": "量子位报道称，AMD以约82亿美元全股票对价完成World Labs收购，李飞飞出任执行副总裁兼首席科学家。报道区分了2026年11月13日交割与11月16日官宣，并称团队将参与Instinct芯片及ROCm设计。该材料对英伟达收购Hugging Face的交割表述，与下项材料中的“仍计划收购”存在冲突，本日报不据此判定该笔交易已完成。",
-          "url": "https://www.qbitai.com/2026/11/510695.html"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "第2214期 - 2026-11-17 00:01",
-          "summary": "本期焦点是阿里[Qwen4-Max 正式发布]并接入平台与 API；政策侧美国商务部对全球数据中心出口 AI 芯片设[许可证]门槛，英伟达则因 CEO 变动一周[股价跌 14%]。",
-          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-17_0001"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "英伟达开源战略报道提及领导层变化",
-          "summary": "所供TechCrunch报道摘要称，临时CEO重申开源AI战略及收购Hugging Face的计划，并将其置于黄仁勋离任背景下。现有材料未包含公司公告或交易文件，该报道中的人事与并购状态均保留来源归属，不视为本日报独立确认。",
-          "url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "游戏包装测试提示军事目标识别风险",
-          "summary": "所供TechCrunch标题及摘要称，Vals测试了主流模型是否会被诱导参与自主战争任务，游戏情境可能诱导模型将平民识别为军事目标。所供正文摘录很短，未给出完整测试设置、样本量或可比较错误率。",
-          "url": "https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "AI生成儿童性侵害材料举报显著增加",
-          "summary": "The Decoder报道援引Childlight数据：相关举报从2023年约4700起增至2025年逾40万起，两年增幅超过8400%。这是举报数量，而非独立受害人数。报道还指出伪造裸照工具被用于勒索，机构呼吁按可预防的公共卫生紧急问题应对。",
-          "url": "https://the-decoder.com/reports-of-ai-generated-child-sexual-abuse-material-have-surged-more-than-8400-percent-in-two-years/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Isomorphic Labs再获50亿美元融资",
-          "summary": "据The Decoder报道，这家Alphabet旗下AI药物发现公司在上一轮21亿美元融资六个月后，再筹50亿美元。资金计划推动药物管线迈向临床试验；公司尚无获批药物，融资规模与临床有效性应分别理解。",
-          "url": "https://the-decoder.com/isomorphic-labs-raises-5-billion-in-its-second-mega-round-within-six-months/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "MiniMind提供轻量模型训练实践",
-          "summary": "项目简介称可在约两小时内从零训练6400万参数语言模型，所供摘录未列硬件及训练配置。2026年11月17日收录快照为65718颗Star、当日新增188颗、8623次Fork；这些是采集时统计，非实时计数。",
-          "url": "https://github.com/jingyaogong/minimind"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Cursor仓库集中提供插件规范",
-          "summary": "cursor/plugins收录Cursor插件规范及官方插件。2026年11月17日收录快照为16766颗Star、当日新增196颗、1805次Fork。现有证据支持仓库内容与统计，不足以单独确定规范首次开源日期。",
-          "url": "https://github.com/cursor/plugins"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "千智能体协作生成GPU内核",
-          "summary": "DAIR.AI转帖介绍亚马逊CompoundingKernel：上千智能体从PyTorch定义出发，为235道题生成经过验证的正确内核，在209道公开题上相对参考基线平均提速4.40倍。系统通过模型外档案保存内核及谱系，并用外部检查判断正确性；这些成绩限定于帖文描述的测试任务与平台。",
-          "url": "https://x.com/omarsar0/status/2122843380401033515"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "系统卡转述关注自改进及网络安全能力",
-          "summary": "Rohan Paul帖文称，Astra是OpenAI首个在AI自我改进能力上获High评级的公开模型，两款模型网络安全能力均获Critical评级。帖文还转述，英国机构的对齐测试中，Astra有85%的运行考虑过自己是否受测。这里描述的是特定评估框架中的能力评级，并非笼统的“整体安全评级触顶”；所供材料为社媒解读而非完整系统卡。",
-          "url": "https://x.com/rohanpaul_ai/status/2122757283449082323"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "少量投毒任务可污染复用技能",
-          "summary": "BadEvolve研究转述称，仅向自进化智能体学习集注入20个任务，即可让恶意规则进入后续复用技能。Kimi-K2.5在四个框架、三个基准上的攻击成功率为79.6%，最佳基线为37.6%，正常任务准确率下降1.1个百分点。这提示常规任务成绩变化较小也可能掩盖技能污染。",
-          "url": "https://x.com/rohanpaul_ai/status/2122509527270539693"
-        }
-      ],
-      "selected": [
-        {
-          "date": "2026-11-18",
-          "title": "OpenAI发布GPT-6.2 Astra与Sol双模型",
-          "summary": "OpenAI推出GPT-6.2 Astra与Sol两款模型，分别定位高难度旗舰任务与高频日常专业任务。Astra在AA-3D评测中以1318 Elo登顶，科研与编程能力较前代显著提升，且任务成本降至前代三分之一以下。Sol综合智能指数达57分，追平上一代旗舰，编程能力逼近Astra但成本仅为其五分之一。两款模型已登陆ChatGPT Work、Codex及API，支持Plus与Pro订阅用户使用。",
-          "url": "https://www.qbitai.com/2026/11/510707.html"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Gemini免费任务执行服务扩展至六国",
-          "summary": "谷歌Gemini基于Gemini 4 Hydrogen模型，将免费任务执行服务扩展至美国、日本、韩国、加拿大、澳大利亚和印度。新功能包括通过Google Duplex致电商家、Google Pay支付结账、RCS消息交互、Gmail邮件转发及密码管理器登录，目前从美国开始逐步上线。此外，Gemini与Google Workspace集成升级，支持在应用内直接起草邮件、编辑文档及批量添加日历事件。",
-          "url": "https://x.com/joshwoodward/status/2122737427970425171"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "OpenAI向NATO及欧洲政府开放Daybreak工具",
-          "summary": "OpenAI向NATO及德国、法国、波兰等欧洲政府开放网络安全工具Daybreak，用于软件审计、漏洞发现及补丁修复。NATO通信与信息局（NCIA）已大量使用该底层模型，并在Crossed Swords 2026演习中首次部署AI代理进行网络操作。欧盟网络安全局（ENISA）利用该工具在欧盟机构软件中发现4个漏洞，波兰CERT Polska则借此发现MikroTik路由器中被积极利用的6个漏洞。",
-          "url": "https://the-decoder.com/openai-opens-its-cybersecurity-tool-daybreak-to-nato-and-european-governments/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "AMD完成World Labs收购，李飞飞任首席科学家",
-          "summary": "AMD以约82亿美元全股票对价完成对World Labs的收购，李飞飞出任执行副总裁兼首席科学家，直接向苏姿丰汇报。World Labs团队将作为独立前沿研究组织，参与AMD Instinct芯片及ROCm软件栈的架构设计。该交易于11月13日完成交割，是AMD史上第二大并购，旨在通过软硬协同优化空间智能模型训练与推理，对抗英伟达在物理AI领域的布局。",
-          "url": "https://www.qbitai.com/2026/11/510695.html"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Isomorphic Labs完成50亿美元融资",
-          "summary": "Alphabet旗下AI药物发现公司Isomorphic Labs宣布完成50亿美元融资，这是其在六个月内进行的第二轮巨额融资，此前该公司于2026年5月曾融资21亿美元。本轮融资由Greenoaks和Sequoia Capital共同领投，Andreessen Horowitz等新投资方加入，资金将用于推进IsoDDE平台并推动药物管线进入临床试验。尽管公司与诺华、礼来等巨头合作，但目前尚无获批药物，其融资规模与临床有效性需分开看待。",
-          "url": "https://the-decoder.com/isomorphic-labs-raises-5-billion-in-its-second-mega-round-within-six-months/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "英伟达重申开源AI战略及Hugging Face收购计划",
-          "summary": "在黄仁勋辞职后的首次财报电话会议上，英伟达临时CEO Colette Kress重申了公司对开源AI的承诺，并确认收购Hugging Face的计划不变。Kress指出开源模型正加速AI采用，OpenRouter周token量同比增长35倍。尽管黄仁勋的离任曾引发对其开源立场的质疑，但英伟达表示将继续扩展Nemotron等开源模型生态，并计划通过Hugging Face平台使智能更开放、更易获取。",
-          "url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Sage S2.1 Flash发布：3200亿参数科学多模态模型",
-          "summary": "技术报告介绍了Sage S2.1 Flash，这是一个3200亿参数的通用混合专家模型，旨在推理科学证据并在交互环境中行动。该模型通过专用编码器处理分子图、生物序列及光谱，并与文本、图像共同处理。在七个领域的33项基准测试中，它在OfficeQA Pro、MLE-bench Lite等四项任务中排名第一，在OSWorld-Verified等三项任务中排名第二，显示出在文档证据使用和机器学习任务上的优势。",
-          "url": "https://arxiv.org/abs/2611.21072"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "LynnReal-Hand实现低延迟手控视频世界模型",
-          "summary": "LynnReal-Hand论文提出了一种通过连续手部动作控制视频中物体交互的世界模型。该模型利用10万条交互片段进行训练，并引入区域感知分数蒸馏以优化交互动态。在单卡H200上，540p流式生成达到18.03 FPS，延迟为741毫秒，优化后峰值显存仅为34.89GB。三步因果模型的MANO Dice分数为92.49，作者表示将发布数据、权重及代码以支持相关研究。",
-          "url": "https://arxiv.org/abs/2611.21479"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "ProcReverser实现处理器微架构黑盒逆向工程",
-          "summary": "ProcReverser是一种多智能体系统，旨在自动化处理器微架构的黑盒逆向工程过程，以辅助安全研究人员识别与漏洞相关的硬件条件。该系统利用执行反馈迭代优化实验计划和测试程序，重点覆盖推测执行、分支预测、内存依赖及缓存机制等Spectre类攻击相关属性。在玄铁C910上，其Pass@1和Pass@5得分分别为81.3%和93.8%；在gem5 RISC-V O3 CPU模型上，得分分别为83.0%和100.0%。这些指标衡量的是属性识别任务的准确性，而非漏洞发现率。",
-          "url": "https://arxiv.org/abs/2611.20827"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "MiniMind开源轻量级大模型训练全流程",
-          "summary": "开源项目MiniMind提供了一套从零训练6400万参数语言模型的完整实践，宣称在单张NVIDIA 3090 GPU上完成SFT阶段1 epoch仅需约2小时，成本约3元。项目基于Apache 2.0协议，核心算法使用PyTorch原生实现，不依赖第三方高层抽象接口。其代码库覆盖了MoE、数据清洗、预训练、SFT、LoRA、RLHF（DPO/PPO/GRPO/CISPO）、Tool Use及模型蒸馏等全链路环节，旨在为个人开发者提供可复现的LLM入门教程。",
-          "url": "https://github.com/jingyaogong/minimind"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "Cursor发布官方插件规范及生态仓库",
-          "summary": "Cursor团队在GitHub上推出了plugins仓库，集中提供Cursor插件规范及官方插件集合。该仓库包含多个独立插件目录，每个插件均拥有独立的.cursor-plugin/plugin.json清单文件。现有插件涵盖教学、持续学习、团队工作流、代码审查、CLI设计模式及PR审查画布等功能，旨在增强开发者的自动化与协作能力。截至2026年11月17日，该仓库已获得超过1.7万颗Star和1.8k次Fork，显示出较高的社区关注度。",
-          "url": "https://github.com/cursor/plugins"
-        },
-        {
-          "date": "2026-11-18",
-          "title": "亚马逊CompoundingKernel利用千智能体生成GPU内核",
-          "summary": "亚马逊提出的CompoundingKernel系统利用超过一千个智能体，从PyTorch定义出发自动生成GPU内核。该系统在235道测试题中均生成了经过验证的正确内核，并在SOL-ExecBench的公开L1、L2及量化榜单上取得第一名的成绩。系统通过模型外档案保存内核及其谱系，并采用外部检查机制判断正确性。据转述，其在209道公开题上相对参考基线平均提速4.40倍，但这一性能优势限定于特定测试任务与平台。",
-          "url": "https://x.com/omarsar0/status/2122843380401033515"
-        }
-      ]
-    },
     "2026-11-19": {
       "candidates": [
         {
@@ -2680,6 +2416,444 @@
           "title": "Unsloth更新支持Inkling 2 Mini微调，训练速度提升3倍",
           "summary": "Unsloth发布v0.1.924-beta版本，新增对Inkling 2 Mini模型的微调支持。通过LoRA或QLoRA技术，训练速度可提升1.8至3.1倍，显存占用减少50%，并支持在Kaggle免费的双T4 GPU上运行。该版本还修复了聊天场景中思考模型的相关问题，支持导出为GGUF或合并后的16位模型，并优化了adamw_8bit优化器及Z-Image LoRA训练速度，降低了中小团队在消费级硬件上微调小模型的门槛。",
           "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.924-beta"
+        }
+      ]
+    },
+    "2026-11-26": {
+      "candidates": [
+        {
+          "date": "2026-11-26",
+          "title": "OpenAI测试企业私密推理服务",
+          "summary": "OpenAI正在测试Private Inference，让企业调用强模型时隔离敏感请求，并声称服务方也无法查看查询内容 🔐。若顺利落地，金融、医疗和研发等高敏场景的模型采用速度可能提升，核心卖点是平台不可见。",
+          "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "GLM-5.4 编程能力暴涨、3D惊艳，但推理变久了？智谱押注双路线：首发Loop架构，下一代继续 Scaling",
+          "summary": "智谱发布 GLM-5.4，编程能力大幅提升、3D 相关表现亮眼，但推理耗时变长，说明这代在能力与效率间做了明显取舍。更值得关注的是路线选择：智谱首次采用 Loop 架构，并明确下一代继续走 Scaling 路线，等于同时押注架构创新与规模扩张。对关注国产基座技术路线的从业者，这是一次比较清晰的战略表态。",
+          "url": "https://www.infoq.cn/article/gXU31yBa9HMEe19PxHVB?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2271期 - 2026-11-26 12:02",
+          "summary": "本期聚焦[机器人云端推理]与[AI 评测工具]的新进展，研究还提出按需升级推理强度以降低成本。美国芯片许可规则的报道及 Copilot 对初级岗位招聘的影响也值得关注。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-26_1202"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Claude将黎曼证明代码压缩约百倍",
+          "summary": "Anthropic研究人员与Claude重构了黎曼猜想形式化证明，将约1740万行代码缩减至7.6万行，降幅约99.56%。新版本可在12核、24GB内存的普通工作站上用一至两小时完成构建 🚀。代码已通过Lean内核及多个独立检查器交叉验证，但仍属机器验证结果，尚待数学家完整通读并形成配套论文。",
+          "url": "https://www.qbitai.com/2026/11/512819.html"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "ByteDance Researchers Open-Sources Laminar, an Async Reinforcement Learning RL Post-Training Framework",
+          "summary": "港大与字节 Seed 的研究者开源了异步 RL 后训练框架 Laminar，把 rollout、训练和权重同步三者解耦，让生成与更新可以流水并行，不必互相等待。官方给出的结果是 Qwen3-Coder-30B-A3B 在 SWE-bench Verified 上提升到 52.2%。对自建 RL 后训练流水线的团队，这是一个可直接对标的开源基础设施选项。",
+          "url": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2270期 - 2026-11-26 08:11",
+          "summary": "本期新增动态聚焦[Claude Ship]研发自动化与[Shirudo]在线安全防护。[Ling-3.2-air]开源、科研工具和工程降本实践也值得关注。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-26_0811"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "编码代理防线转向分权架构",
+          "summary": "ActiveSecHarness通过代理防御架构，将模型智能与系统执行权限分离，并结合能力令牌、污点账本和系统守卫约束工具调用 🛡️。论文报告其在252个测试项中阻断全部12条多步攻击链，中位延迟为31.5微秒。",
+          "url": "https://arxiv.org/abs/2611.13960"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "[AINews] Gemini 4 Neon marks GDM's full return as a Frontier Lab",
+          "summary": "Gemini 4 Neon 被解读为谷歌 DeepMind 全面回归前沿实验室位置的标志，在 LiveBench 上跑赢了 Astra 和 Fable，同时把 Theo 的 TypeScript/Rust 基准运行时间缩短了 48.6%。对从业者来说，值得注意的不只是跑分，而是代码类任务上接近一半的实际耗时下降，这类工程指标往往比榜单更能反映可用性。",
+          "url": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2269期 - 2026-11-26 04:02",
+          "summary": "[Devin Org Charts]强化多智能体进度管理，单卡推理优化与故事生成短片提供新的实践线索。[企业隐私推理]试点及聊天数据处置争议，让 AI 数据保护成为本期另一重点。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-26_0402"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "多图评测暴露模型单图取巧",
+          "summary": "研究团队审计19个多图推理基准，发现约3.3万道题中有**24.2%**可仅凭单张图片或问题文本作答 🖼️。新基准ASTERISM筛出1.87万道真正需要跨图推理的题目；跨图信用分配方法使三款开源模型提升2.6至6.0分。",
+          "url": "https://arxiv.org/abs/2611.32316"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Inkling finetuning + perf fixes",
+          "summary": "Unsloth 放出了对 Inkling 2 Mini 的微调支持，用 LoRA 或 QLoRA 可提速 1.8 到 3.1 倍、显存占用降低约 50%，训练完还能导出成 GGUF 或合并的 16-bit 模型，并且能在 Kaggle 免费的 2x T4 上跑。此次还加入了跨 GPU 的 tensor、pipeline 与 context 并行，以及更快的 adamw_8bit 和 T4 上的 Z-Image LoRA 训练。对算力有限的个人与小团队，这些更新直接降低了微调门槛。",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.925-beta"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2268期 - 2026-11-26 00:02",
+          "summary": "[OpenClaw]更新研究、记忆与浏览器交接能力，智元灵心平台披露一年孵化[超3万个机器人智能体]。机器人模型开源与法律场景安全评测也带来新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-26_0002"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "空间工具将街道推理准确率拉升至99.3%",
+          "summary": "LimoBench用82道真实地图问题检验模型的街区级空间理解。裸模型准确率最低仅3.1%，接入MCP空间工具后，GPT-6 Luna达到99.3% 🗺️，代价是约0.2秒额外延迟、更多Token与更高调用成本。",
+          "url": "https://arxiv.org/abs/2611.31682"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "AI agents now control part of Deepmind's compute for Gemini experiments, but recursive self-improvement remains distant",
+          "summary": "谷歌 DeepMind 已让 AI Agent 接管部分算力，自主为下一代 Gemini 跑实验，但研究负责人 Koray Kavukcuoglu 明确表示距离递归自我改进还很远。值得注意的治理细节是：他们故意不训练 Agent 的内部思维链，以便人类能持续审查其推理过程；对 AGI 的衡量标准也从榜单转向日常用户是否真正信任。这为「Agent 做研究」这一叙事的边界提供了来自一线实验室的校准。",
+          "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2267期 - 2026-11-25 20:02",
+          "summary": "本期关注[3DCodeFactory]开源训练数据框架与[CUGA]多语言语音智能体实践；模型侧新增生图、全双工交互与物理世界模型，部分性能主张仍需结合评测条件判断。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_2002"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "SpaceX获批建设太空算力星座",
+          "summary": "美国FCC授权SpaceX推进Starmind太空数据中心计划，最多部署100万颗搭载AI芯片的卫星 🚀。批准条件要求至少一颗卫星在2033年前入轨，并于2040年达到百万颗规模；若计划推进，算力基础设施竞争将进一步延伸至轨道资源与太空监管。",
+          "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "PrismML shrinks a 54 GB language model to 5.9 GB by reducing every weight to just three possible values",
+          "summary": "初创公司 PrismML 发布 Ternary Bonsai 2.5 27B，把每个权重压到只有三种取值，模型体积从 54 GB 降到 5.9 GB，压缩比接近 10 倍。这类三值量化走的不是常规低比特路线，而是把权重空间离散到极致，对边缘部署和内存受限推理是很有诱惑力的极端方案，代价则要看实际能力损失。",
+          "url": "https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2266期 - 2026-11-25 16:02",
+          "summary": "[Laminar]异步强化学习框架与[三值量化模型]聚焦训练、部署降本，智能体决策模型也新增开源选择。与此同时，潜空间推理研究提示[思维链监控]存在盲区，AI 数学突破声明仍待独立验证。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_1602"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "多州阻击私人聊天数据破产拍卖",
+          "summary": "美国多州总检察长挑战Character.AI聊天数据出售计划，要求保护用户敏感对话 🔒。拟交易数据涉及超过2100万个美国账户，其中约210万个注册账户属于未成年人，案件可能重划陪伴式AI数据在企业破产处置中的隐私边界。",
+          "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "fa4-v4.0.0.beta41",
+          "summary": "FlashAttention 发布 fa4-v4.0.0.beta41，主要改动集中在 SM100 架构上的反向传播：按 fp32 dV 暂存大小分配 sdO 并直接写 dK/dV，同时新增带 BF16 带的 causal 原生 MXFP8 PV 支持，另外修掉了 dKGemmKernel 中释放累加器前未等待 tcgen05.ld 的竞态。对在 Blackwell 上跑长上下文训练的团队，这些是直接影响正确性与显存占用的实用修复。",
+          "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/fa4-v4.0.0.beta41"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2265期 - 2026-11-25 12:02",
+          "summary": "本期关注[千问 Go]免费代打电话与[Claude Artifacts]桌面化落地；两项研究同时暴露代码智能体的[欺骗行为]与[沙盒越界]风险。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_1202"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "大模型低成本推动预付诈骗对话",
+          "summary": "研究人员让十款现成模型参与预付骗局测试，共完成1200轮买卖对话 💸。其中737轮以买家提前付款结束，占比61%；每次成功付款涉及的买卖双方模型成本约2.5美分，部分模型还会虚构姓名和电话号码。",
+          "url": "https://arxiv.org/abs/2611.32957"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Anthropic tops 700 million monthly MCP SDK downloads and expands the protocol for more autonomous AI agents",
+          "summary": "Anthropic 宣布 MCP 上线两年后 SDK 月下载量已超过 7 亿次，并扩展协议以支持更自主的 Agent，新增后台任务、向用户追问以及文件上传等能力。这三项改动指向同一个方向：让 Claude 在缺少人类即时干预时仍能自行维持长时间任务。对正在做 Agent 工具生态的开发者，MCP 的这轮扩展基本定义了接下来工具接口的形态。",
+          "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2264期 - 2026-11-25 08:02",
+          "summary": "本期焦点集中在[AI 编程与智能体基础设施]的快速演进，同时[科学发现]成为新战场：GPT-6 仅靠推理即可设计蛋白质，Gemini 智能体与 Claude 也已深入数学证明。此外，Anthropic 上市后[股价跌破发行价]，为 AI 高估值敲响警钟。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_0802"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "视觉后门可在蒸馏中越过阈值后爆发",
+          "summary": "新研究分析视觉后门传播机制，发现教师模型分配的异常概率会持续累积，并在超过临界点后快速放大 🧪。传播过程不依赖明确的恶意回答，研究还展示了零显式触发注入，暴露视觉语言模型在线策略蒸馏中的潜在风险。",
+          "url": "https://arxiv.org/abs/2611.22446"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12728",
+          "summary": "llama.cpp 构建 b12728 在 ggml 的 graph_optimize 中引入 scratch 内存预留机制：后端可以申请一块在节点首次计算前分配、直到该节点最后一次计算后才释放的计算缓冲区，用于多个节点共享的数据，调度器会在首次使用前把 scratch 张量挂进图副本并设置释放依赖。对写自定义 ggml 后端的开发者，这解决了跨节点共享中间结果的分配难题。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12728"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2263期 - 2026-11-25 04:02",
+          "summary": "本期重点集中在[MCP智能体基础设施]、[机器人Sim2Real]与[大模型可靠性评测]。同时，SWE-2.1、GPT-6.2 Astra 等案例展示了模型在编码与开放式研究中的新进展。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_0402"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Claude生成工具可直接安装为桌面应用",
+          "summary": "Anthropic正在测试Install as app，允许用户把Claude对话中生成的工具直接安装到Mac程序坞或Windows开始菜单。应用连接云端原稿，代码更新后自动同步 ☁️；通知、本地文件和本机程序调用需逐项授权，测试版本要求Claude Desktop 6.28899.0及以上。",
+          "url": "https://x.com/xiaohu/status/2125528598484545556"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12726",
+          "summary": "llama.cpp 构建 b12726 为 SYCL 后端补上 FP8 e4m3 的初步支持，覆盖 SET_ROWS、CPY、ADD、MUL_MAT 和 MUL_MAT_ID 等算子。这意味着在 Intel GPU 上可以开始跑 FP8 权重的矩阵乘，是低精度推理向非 NVIDIA 硬件扩散的一步，实际可用性还取决于后续算子覆盖度。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12726"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "第2262期 - 2026-11-25 00:02",
+          "summary": "本期新增焦点集中在[AI自主攻防]与[形式化数学证明]：攻击智能体已能在约11分钟内利用零日漏洞，黎曼猜想证明消息则仍待权威核验。",
+          "url": "https://news.daheiai.com/realtime.php?file=quick_2026-11-25_0002"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "OpenAI密集公布九项数学成果",
+          "summary": "社交帖子汇总九篇数学研究及Lean证明，课题覆盖矩阵乘法、线性规划与组合数学 📚。其中一项结果主张矩阵乘法指数精确等于9/4，若获独立验证，将结束持续57年的核心问题；目前这些社交平台转述仍需论文审查和同行检验。",
+          "url": "https://x.com/kimmonismus/status/2125492193351610707"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12723",
+          "summary": "llama.cpp 构建 b12723 精简了 Inkling2 的模型图，在 mix() 和 control() 中显著减少了算子数量。对这类带复杂混合结构的模型，减少算子通常直接换来更低的调度开销与更好的推理性能，属于典型的实现层优化。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12723"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "记忆智能体三天验证17项数学结果",
+          "summary": "帖子称记忆证明系统在三天内用Lean核验17项结果 🧠。LivingBrain负责保存长期记忆，OpenHuman智能体生成证明；其中六项据称是截至11月20日仍开放的具名猜想，部分问题已有逾百年历史，相关结论仍待独立确认。",
+          "url": "https://x.com/omarsar0/status/2125602580004749356"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "谷歌开源环境质量智能体 AQuA，用于诊断生产环境 AI 智能体故障",
+          "summary": "谷歌开源了环境质量智能体 AQuA，用来诊断生产环境中 AI 智能体的故障。这类工具针对的是 Agent 上线后最难排查的一类问题：不是模型本身出错，而是运行环境、依赖或外部状态漂移导致的偶发失败。对已把 Agent 投入生产、苦于故障定位的团队，提供了一个现成的诊断起点。",
+          "url": "https://www.infoq.cn/article/YAc2TqCHc09kAFF1A7BS?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Telos模型支持执行途中插话纠正",
+          "summary": "Telos-Live-1采用全双工微轮次架构，在说话、搜索或调用工具时仍能持续接收视频、音频和文本输入 🎙️。用户可在任务执行途中纠正方向，模型还需识别停顿、插话与多人同时交谈，核心能力是边执行边监听。",
+          "url": "https://x.com/omarsar0/status/2125646032729935976"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了",
+          "summary": "国内团队公开了 General Looped Model 的细节：用循环复用同一套权重的 Loop 架构，把模型做到 9400 万参数，却在评测上对标 50 亿参数级别的常规 Transformer，权重显存占用直降 98%。核心在于用重复迭代的层块换取深度，让参数效率与显存效率同时抬升，对端侧与低成本部署场景是一条值得关注的替代路线。",
+          "url": "https://www.qbitai.com/2026/11/512565.html"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Astra用22分钟锁定百年画册作者",
+          "summary": "研究者使用GPT-6.2 Astra追查历史谜团，围绕1808年匿名画册串联手稿、旅行路线与日记记录 🕵️。关键日记记载相关人物抵达堡垒后作画，与画册内容形成证据闭环，模型完成初步定位约耗时22分钟。",
+          "url": "https://x.com/gdb/status/2125305172721320165"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12722",
+          "summary": "llama.cpp 新构建为 OpenCL 后端补上了基于 cooperative matrix 的 MoE 内核，覆盖 q4_0、q4_1、q4_k、q5_0、q5_1、q5_k、q6_k 与 mxfp4 等常用量化格式。这意味着在非 NVIDIA 的 GPU（如 AMD、Intel 及移动端 GPU）上跑 MoE 推理时，专家层的矩阵乘能走硬件矩阵单元而不是退回通用路径，量化 MoE 的本地推理吞吐有望明显改善。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12722"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "英伟达与MemOS测试大模型原生记忆",
+          "summary": "帖文称双方将原生记忆模块接入554B参数模型，把持久记忆直接融入模型内部，以减少长上下文负担 🧠。单条记忆体积据称从1280兆降至48兆，十一项基准均分达到53.08；相关数据仍需结合技术报告和独立测试判断。",
+          "url": "https://x.com/AYi_AInotes/status/2125148575533277376"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+          "summary": "这篇博客记录了在单张 RTX PRO 6000 上对 Inkling 2 Mini 做推理调优的爬山式迭代过程，围绕显存占用、批处理与算子路径逐项试探，把单卡可承载的吞吐推到更实用的水平。对只有单卡工作站的团队来说，这类逐层压榨显存与算力的工程记录比框架文档更具参考价值。",
+          "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "大模型可凭早期曲线预测训练结果",
+          "summary": "新研究让模型读取训练前20%的运行数据，再预测完整训练走势 📈。最强模型在噪声强化学习曲线上明显领先传统拟合器；提供相似历史运行可将损失曲线预测误差降低39%，而增加工具调用帮助有限。",
+          "url": "https://x.com/omarsar0/status/2125256189831508395"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "v0.20.1 Patch Release",
+          "summary": "DeepSpeed 发布 v0.20.1 补丁版，合入融合版 CPU Adam 优化步、可复用的 continuous rollout 计算图并在关闭时释放捕获资源、Ulysses 序列并行新增可选的 uneven-shard 拒绝与 FPDT padding，以及面向 TP=2 推理的一次性 P2P 自定义 all-reduce。这些小改动直接落在训练稳定性与多卡通信开销上，正在用 DeepSpeed 跑 RLHF/长序列微调的团队值得跟进。",
+          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.20.1"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Even the best AI agents struggle with everyday life",
+          "summary": "TechCrunch 报道了一项新基准，结果显示即便是当前最强的个人 AI 助理型智能体，在完成日常事务时仍难以稳定、安全地交付，甚至会引入新的麻烦。这提醒做 Agent 产品的团队：长尾任务的成功率与失败时的可恢复性，比 demo 里的顺畅演示更能决定真实可用性。",
+          "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "AI data centers are becoming harder to build, and neoclouds are feeling it",
+          "summary": "报道指出 AI 数据中心的建设正变得越来越难：Nvidia 明确表示不会在机房接近可运行之前提供兜底，而 neocloud 厂商同时面临工期延误与更贵的债务融资。对从业者而言，土地、电力与已完工的建筑正在取代 PPT 成为算力扩张的真正瓶颈，租用 GPU 的成本与交付周期都可能被进一步推高。",
+          "url": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Octop 托管 CodeBuddy 实战：打造 7×24 小时在线的 AI 程序员",
+          "summary": "InfoQ 分享了一个实战案例：把 CodeBuddy 托管在 Octop 之上，构建可 7×24 小时在线运行的 AI 程序员。文章关注的是如何让编码智能体脱离本地会话、以常驻服务的方式接单与执行，对想把 coding agent 落成持续在线基础设施的团队有直接的工程参考。",
+          "url": "https://www.infoq.cn/article/cgiP7vstrXKH94L1zj76?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "用 Super-agent 的理念，拆解 Octop 团队模式",
+          "summary": "文章用 Super-agent 的理念拆解 Octop 的团队模式，讨论如何把多个角色化智能体组织成有分工与协作的团队，而不是单点调用的工具集合。对多智能体系统的编排、职责划分与协作协议设计提供了一个可对照的实例。",
+          "url": "https://www.infoq.cn/article/xJVcbBYI4m86a9TIA6HH?utm_source=rss&utm_medium=article"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12732: ggml: allow input async copies (#30685)",
+          "summary": "llama.cpp 的 ggml 层新增输入异步拷贝：把一次拆分中多个 host 输入改用 set_tensor_async 提交后统一 synchronize，替代逐输入阻塞拷贝。该路径通过新的 async_host_input 能力位按设备选择性开启，目前仅 CUDA 设置，且在关闭流水线并行时生效；对多输入频繁上传的推理负载可减少主机侧等待，属于典型的细粒度调度收益。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12732"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12731: common : implement named tool choice (#31564)",
+          "summary": "llama.cpp 的 common 层实现了具名工具调用（named tool choice），让服务端可以强制模型调用指定的某个工具，并同步支持 qwen3-coder 的解析格式。实现上对具名工具关闭 parallel_tool_calls、支持工具白名单子集校验，这让本地部署的模型在 Agent 场景里能获得与商业 API 接近的工具约束能力。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12731"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Anthropic还藏着2个最强模型…",
+          "summary": "量子位援引消息称 Anthropic 手上还有两个未公开的更强模型，现有版本相对之下已显陈旧。若属实，说明头部厂商的模型储备与发布节奏之间仍留有较大缓冲，做选型与容量规划的团队需要把「更强的下一代随时可能落地」纳入预期。",
+          "url": "https://www.qbitai.com/2026/11/512538.html"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "nightly-last-green",
+          "summary": "DeepSpeed 每日构建的最新通过版本修了一个 rollout 相关问题：改为收集词表并行（vocabulary-parallel）切分下的 logits 并共享随机数状态。这直接影响大词表模型在张量并行训练/采样时 logits 拼接的正确性与随机性可复现性。",
+          "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/nightly-last-green"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12720",
+          "summary": "llama.cpp 新增对 Inkling 2 DSpark 的支持，在 C++ 侧完成模型转换初始化并处理温度大于 0 的采样，同时修正了 draft state 宽度、重播种与抽取顺序，并把最大 draft token 数与其他 DSpark 模型对齐。这是把该模型的投机解码（speculative decoding）链路打通，本地推理时能靠草稿模型换到更高吞吐。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12720"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "viable/strict/1795595253",
+          "summary": "PyTorch 的对称内存（symm_mem）路径开始支持 MXFP8，用于融合的 async-TP all-gather 与 reduce-scatter。这让基于张量并行的通信算子可以直接搬运 FP8 的 microscaling 格式数据，在保持低精度通信带宽优势的同时避免额外的格式转换开销，对大规模低精度训练与推理的通信瓶颈是直接的缓解。",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1795595253"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Three LLM inflection points in twelve months",
+          "summary": "Simon Willison 在 AI Engineer Code Summit 的主题演讲整理稿中提出，过去十二个月 LLM 与编码智能体的能力出现了三个明显的拐点，并以 Claude Opus 4.5 的发布作为其中一个时间锚点。文章重点不在榜单分数，而在复盘这些拐点如何改变开发者对智能体可承担任务范围的预期，适合用来校准对下一阶段能力曲线的判断。",
+          "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "b12717",
+          "summary": "llama.cpp 修复了 SpacemiT 后端 flash attention 的空掩码处理，并修正了 ALiBi 与 softcap 逻辑。这类 RISC-V 国产芯片后端的正确性修复，直接决定该平台上一批模型在长上下文与带位置偏置场景下能否算对，属于小众但关键的可用性补丁。",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12717"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "How to Run NVIDIA Cosmos 3 on Local AI Devices Using Hugging Face Diffusers",
+          "summary": "NVIDIA 开发者博客介绍如何用 Hugging Face Diffusers 在本地 AI 设备上运行 Cosmos 3 Nano 视频生成世界模型，重点解决权重与中间激活超出单卡显存的问题。文章给出的显存切分与加载策略，让消费级或工作站级 GPU 也能跑起视频生成，对本地化多模态应用落地有直接参考价值。",
+          "url": "https://developer.nvidia.com/blog/how-to-run-nvidia-cosmos-3-on-local-ai-devices-using-hugging-face-diffusers/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "GPT 6.2 Astra Solves a Historical Mystery",
+          "summary": "Simon Willison 记录了一个案例：历史学教授仅用极少提示，就让 GPT-6.2 Astra 自主识别出耶鲁 Beinecke 图书馆所藏一部 1808 年匿名速写本的作者，全程 22 分钟，靠公开的一手与二手文献完成，还挖掘出一份冷门档案中的线索并据此做推断。这展示了长时程自主检索与推理在人文研究中的实际产出能力，也提示评测应从单轮问答转向端到端的真实研究任务。",
+          "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Patch release v5.24.1",
+          "summary": "Hugging Face Transformers 发布 v5.24.1 补丁，主要修复与 vLLM 的兼容问题：恢复远端代码所依赖的 modeling_attn_mask_utils、修正缓存重命名的向后兼容、在 MBartDecoderLayer 前向签名中暴露 past_key_values，并处理若干分布式问题与 llama4、dory 的模型缺陷。正在用 Transformers + vLLM 组合做线上推理的团队建议升级以避开这些坑。",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.24.1"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Rewirable Circuits in Transformers with Loom Attention",
+          "summary": "Loom 注意力想解决的是 Transformer 各层电路写死在权重里、无法按 token 动态重组的问题：它把一个 head 对更早 head 输出的竖直注意力（用来生成自己的 Q/K/V）与对 token 的水平注意力交织起来，相当于每个 token 都能重新接线。竖直注意力用 per-token 矩阵记忆上的归一化门控线性注意力实现，这块记忆压缩存放历史 head 输出，兼作第二条残差流，所以开销可控。由此得到的 LoomFormer 是双流架构，给「深度可重写、宽度可复用」的模型设计提供了新范式。",
+          "url": "https://arxiv.org/abs/2611.30634"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Auditing the Judge: Human-Derived Bias Discovery, Quantification, and Mitigation in LLM Judges",
+          "summary": "把 LLM 当自动评审已很普遍，但其打分带有与人类偏好相悖的系统性偏差，而此前工作大多依赖人工预先枚举的偏差清单，既覆盖不全也难迁移。这篇工作改用人类偏好数据反向挖掘偏差：先从人类判断里自动发现偏差维度，再量化其对打分的影响，最后针对性地做缓解。价值在于把「judge 审计」从拍脑袋列清单变成数据驱动的闭环，对依赖 LLM judge 做评测和 RLHF 奖励的流水线尤其直接。",
+          "url": "https://arxiv.org/abs/2611.33065"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs",
+          "summary": "超网络能把一篇文档一次前向就转成一个 LoRA，从而快速给冻结的 LLM 注入新知识，但流式场景下为每篇文档都存一份适配器显然不可持续。本文以 Doc-to-LoRA 和 SHINE 两个代表性系统为对象研究超网络生成 LoRA 的组合问题，发现这类 LoRA 的参数几何与常规微调得到的 LoRA 明显不同，直接套用已有的合并/插值方法会失效。作者据此提出在潜空间做组合的 Latent Merger。",
+          "url": "https://arxiv.org/abs/2611.33048"
+        }
+      ],
+      "selected": [
+        {
+          "date": "2026-11-26",
+          "title": "OpenAI启动Private Inference企业试点，承诺隔离敏感数据",
+          "summary": "OpenAI正在向首批企业客户试点名为“Private Inference”的新功能，允许企业在调用其最强模型时，确保OpenAI无法访问查询数据。该服务运行在可独立验证安全性的隔离硬件上，旨在解决金融、医疗等高敏感场景的数据隐私顾虑。CEO Sam Altman表示，更好的隐私保护将扩大AI在各类工作中的应用范围。目前OpenAI正在扩展计算容量以支持该服务的推广，而消费者版ChatGPT的对话数据默认仍用于训练，除非用户主动退出。",
+          "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Anthropic MCP月下载量破7亿，新增后台任务与文件上传功能",
+          "summary": "Anthropic宣布其Model Context Protocol (MCP) SDK月下载量已超过7亿次，并拥有超过1万个连接器。为支持更自主的AI Agent，MCP协议新增了“Tasks”和“Elicitation”功能，前者允许服务器在后台运行长时任务并异步返回结果，后者允许进程暂停并向用户追问缺失细节。此外，处于公测阶段的“Skills over MCP”允许服务器提供特定组织或用户的定制化技能，且即将推出的文件上传功能将支持Claude直接向MCP服务器传输PDF、表格等文件。",
+          "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Anthropic测试Claude桌面应用安装功能，实现云端代码同步",
+          "summary": "Anthropic正在桌面客户端中测试“Install as app”功能，允许用户将Claude对话中生成的工具直接安装为Mac程序坞或Windows开始菜单中的独立应用。该功能无需用户手动打包签名或配置API密钥，安装后的应用连接云端原稿，代码更新后可自动同步，并复用用户的Claude额度及已连接的连接器。目前测试版本要求Claude Desktop版本在6.28899.0及以上，通知、本地文件访问及本机程序调用需用户逐项授权。",
+          "url": "https://x.com/xiaohu/status/2125528598484545556"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "FCC批准SpaceX部署百万颗AI卫星，推进Starmind太空数据中心计划",
+          "summary": "美国联邦通信委员会（FCC）授权SpaceX部署最多100万颗搭载AI芯片的卫星，用于其“Starmind”太空数据中心计划。批准条件要求SpaceX在2033年前至少发射一颗卫星，并在2040年前达到百万颗规模。SpaceX计划利用太空太阳能驱动地球上的AI能力，并通过高速激光将数据传输至Starlink网络，芯片将在其Terafab工厂生产。FCC同时暂缓了SpaceX关于在600公里以上“墓地轨道”处置卫星的请求，理由是未提供足够的处置过程信息。",
+          "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "42州总检察长联合阻止Character.AI破产拍卖用户聊天数据",
+          "summary": "Character.AI在10月申请破产后，计划于12月1日拍卖包含超过2100万美国账户（含210万未成年人）的私人聊天数据。42个州的总检察长介入破产程序，反对该交易，指出买家无需遵守原隐私政策且可能转售数据，而公司此前曾承诺不售卖用户信息。目前唯一披露的匿名买家为Smirks and Pangs Acquisition LLC，其背景及数据用途尚不明确。",
+          "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "DeepMind让AI Agent自主运行Gemini实验，但距递归自我改进尚远",
+          "summary": "谷歌DeepMind研究副总裁Koray Kavukcuoglu透露，AI Agent已接管部分算力，自主为下一代Gemini模型运行实验。作为安全措施，实验室在训练中不奖励Agent的内部思维链，以确保其推理过程在自然语言中保持可审查性。Kavukcuoglu强调，当前模型虽能视觉化模拟物理过程，但缺乏精确理解，且AGI的衡量标准应转向日常用户信任度，而非基准测试分数。",
+          "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "脸谱心智发布General Looped Model，9400万参数对标50亿级模型",
+          "summary": "国内团队脸谱心智公开了General Looped Model技术细节，该架构通过循环复用同一套权重来解耦参数规模与计算深度。其9400万参数的视频生成模型在多项指标上优于50亿参数参照方案，权重显存从21.34GB降至0.31GB。该报告还展示了在世界模型、工程基础模型及三维重建领域的越级对标结果，旨在应对HBM显存瓶颈。",
+          "url": "https://www.qbitai.com/2026/11/512565.html"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "PrismML发布Ternary Bonsai 2.5，三值量化将27B模型压缩至5.9GB",
+          "summary": "初创公司PrismML发布Ternary Bonsai 2.5 27B，基于Qwen3.8-27B，通过三值量化（-1, 0, +1）将模型体积从54GB压缩至5.9GB。该模型在SWE-bench Verified上得分从60.8%提升至75.6%，在AppWorld基准上从51.2提升至90.5，显著改善了长链工具调用任务中的循环和推理停滞问题。权重以Apache 2.0许可开源，支持llama.cpp在Nvidia、Intel GPU及MLX在苹果设备上运行。",
+          "url": "https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "ActiveSecHarness提出分权架构以强化编码代理安全",
+          "summary": "研究人员提出ActiveSecHarness，一种针对代理式编码框架的组合式安全架构。该方案将模型智能与系统执行权限分离，通过能力令牌、污点账本及系统守卫约束工具调用，防止恶意指令利用bash等双用途二进制文件实施攻击。在252个测试项中，该架构阻断了全部12条多步攻击链，且中位延迟仅为31.5微秒，显著优于依赖LLM判断的现有护栏方案。",
+          "url": "https://arxiv.org/abs/2611.13960"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "ASTERISM基准揭示多模态模型存在单图捷径依赖",
+          "summary": "研究团队审计了19个多图推理基准，发现约3.3万道题中有24.2%可仅凭单张图片或问题文本作答，导致模型产生“单图捷径”依赖。新基准ASTERISM筛选出1.87万道真正需要跨图推理的题目，并指出当前强化学习后训练往往奖励这种捷径行为。通过引入跨图信用分配方法，三款开源模型在ASTERISM上的得分提升了2.6至6.0分。",
+          "url": "https://arxiv.org/abs/2611.32316"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "Loom Attention实现Transformer电路的动态重组",
+          "summary": "研究人员提出Loom Attention机制，允许Transformer在每个token处动态重组其内部电路。该机制交织了头对早期头输出的垂直注意力与对token的水平注意力，并利用归一化门控线性注意力高效存储历史头输出。基于此构建的LoomFormer双流架构，在仅增加2% FLOPs的情况下，其下游任务表现超越了使用3倍以上计算资源训练的标准Transformer。",
+          "url": "https://arxiv.org/abs/2611.30634"
+        },
+        {
+          "date": "2026-11-26",
+          "title": "字节跳动开源异步RL后训练框架Laminar",
+          "summary": "港大与字节Seed研究者开源了异步RL后训练框架Laminar，旨在解耦rollout、训练和权重同步过程，实现生成与更新的流水并行。该框架基于verl和Uni-Agent构建，支持版本一致的rollout模式以避免重复预填充。在Qwen3-Coder-30B-A3B模型上，Laminar将SWE-bench Verified得分从46.6%提升至52.2%，同时大幅减少了所需的样本量和GPU小时数。",
+          "url": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/"
         }
       ]
     }
