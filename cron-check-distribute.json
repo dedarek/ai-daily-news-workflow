@@ -15,7 +15,7 @@
   "wakeMode": "now",
   "payload": {
     "kind": "agentTurn",
-    "message": "[CRON: daily-news-distribute-test] 14:30 自动质量检查，仅允许发送测试邮箱 yyc54321@126.com，严禁发送任何其他地址。\n\n执行命令（仅一条）：\npython3 ~/.codex/skills/ai-daily-news/scripts/check_and_distribute.py\n\n执行后汇报测试邮箱发送结果和 send-log 路径。",
+    "message": "[CRON: daily-news-distribute-test] 14:30 自动质量检查，仅允许发送测试邮箱 [contact omitted]，严禁发送任何其他地址。\n\n执行命令（仅一条）：\npython3 ~/.codex/skills/ai-daily-news/scripts/check_and_distribute.py\n\n执行后汇报测试邮箱发送结果和 send-log 路径。",
     "timeoutSeconds": 1800
   },
   "delivery": {

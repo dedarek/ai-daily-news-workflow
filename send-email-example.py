@@ -8,7 +8,7 @@ from email import encoders
 date = "YYYY-MM-DD"
 sender = "only_for_aics_tic@163.com"
 password = "FZbuF344Ef7zDKLr"
-recipient = "yyc54321@126.com"  # review 收件人
+recipient = "newsletter-contact@example.invalid"  # review 收件人
 mp3_path = f"/tmp/ai-daily-news-podcast-{date}.mp3"
 
 with open(f"/tmp/ai-daily-news-html-{date}.html", "r", encoding="utf-8") as f:

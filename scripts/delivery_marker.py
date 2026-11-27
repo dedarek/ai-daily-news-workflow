@@ -21,7 +21,7 @@ def main() -> int:
         item.add_argument('--date', required=True)
         item.add_argument('--phase', choices=('morning', 'afternoon'), required=True)
     mark.add_argument('--run-id', required=True)
-    mark.add_argument('--recipient', default='yyc54321@126.com')
+    mark.add_argument('--recipient', default='newsletter-contact@example.invalid')
     args = parser.parse_args()
 
     path = marker_path(Path(args.site_dir), args.date, args.phase)

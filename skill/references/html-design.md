@@ -54,7 +54,7 @@
 
 ## Footer 内容
 - 必须居中：`text-align: center`
-- 第一行：`联系我们：penglei4@lenovo.com ｜ yangyc13@lenovo.com`（均为 mailto 链接，颜色 #2563EB）
+- 第一行：`联系我们：[contact omitted] ｜ yangyc13@lenovo.com`（均为 mailto 链接，颜色 #2563EB）
 - 第二行：`技术创新中心：-TIC@lenovo.com`（mailto 链接，颜色 #2563EB）
 - 禁止出现"仅供参考"、"如需退订请联系管理员"、"本邮件由 AI 自动生成"等字样
 - ⛔ 参考 `/tmp/ai-daily-news-html-2026-04-10.html` 中的 footer 写法（2026-04-12 确认为正确格式）
