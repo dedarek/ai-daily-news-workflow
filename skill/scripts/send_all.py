@@ -20,7 +20,6 @@ SKILL_DIR = Path(__file__).resolve().parent.parent
 TMP = Path('/tmp')
 sys.path.insert(0, str(SKILL_DIR.parent / 'scripts'))
 from delivery_retry import run_delivery
-from private_delivery_git import checkpoint, storage
 SEND_EMAIL_CONFIG_FILE = SKILL_DIR / 'references' / 'send-email-config.json'
 DEFAULT_PUBLIC_BASE_URL = 'https://dedarek.github.io/ai-daily-news-workflow'
 DEFAULT_DAILY_SITE_URL = 'https://tokenless.top/daily'
@@ -102,11 +101,11 @@ def chunked(items: list[str], size: int) -> list[list[str]]:
     return [items[index:index + size] for index in range(0, len(items), size)]
 
 
-def delivery_status_path(artifact_dir: Path, date_str: str, phase: str | None) -> Path:
+def delivery_status_path(date_str: str, phase: str | None) -> Path:
     phase_name = phase or 'manual'
     if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', date_str) or phase_name not in {'morning', 'afternoon', 'manual'}:
         raise ValueError('Invalid delivery state path')
-    return storage() / 'state' / 'delivery-progress' / date_str / f'{phase_name}.json'
+    return TMP / 'delivery-progress' / date_str / f'{phase_name}.json'
 
 
 def load_delivery_status(path: Path, date_str: str, phase: str | None, audience: str) -> dict:
@@ -132,7 +131,7 @@ def load_delivery_status(path: Path, date_str: str, phase: str | None, audience:
     loaded.setdefault('failed', {})
     loaded.setdefault('in_flight', {})
     if loaded['audience'] != audience:
-        raise RuntimeError('Delivery audience differs from private checkpoint')
+        raise RuntimeError('Delivery audience differs from saved delivery state')
     if not isinstance(loaded['sent'], dict) or not isinstance(loaded['failed'], dict):
         raise RuntimeError(f'Delivery status sent/failed must be objects: {path}')
     return loaded
@@ -143,7 +142,6 @@ def write_delivery_status(path: Path, status: dict) -> None:
     tmp = path.with_suffix('.tmp')
     tmp.write_text(json.dumps(status, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     tmp.replace(path)
-    checkpoint(path)
 
 
 def is_flow_limit_error(exc: Exception) -> bool:
@@ -256,34 +254,34 @@ def read_smtp_config() -> tuple[str, int, str, str]:
 
 
 def read_recipients(audience: str) -> list[str]:
-    recipients_file = storage() / 'recipients.json'
+    raw = os.environ.get('AI_DAILY_RECIPIENTS_JSON', '')
+    if not raw:
+        raise RuntimeError('Missing AI_DAILY_RECIPIENTS_JSON secret')
     try:
-        configured = json.loads(recipients_file.read_text(encoding='utf-8'))
-    except FileNotFoundError as exc:
-        raise FileNotFoundError(f'Missing recipient config: {recipients_file}') from exc
+        configured = json.loads(raw)
     except json.JSONDecodeError as exc:
-        raise RuntimeError(f'Invalid recipient JSON in {recipients_file}: {exc}') from exc
+        raise RuntimeError(f'Invalid AI_DAILY_RECIPIENTS_JSON: {exc}') from exc
 
     if not isinstance(configured, dict) or not configured:
-        raise RuntimeError(f'Recipient JSON must be a non-empty object of audience arrays: {recipients_file}')
+        raise RuntimeError('AI_DAILY_RECIPIENTS_JSON must be a non-empty object of audience arrays')
     if audience not in configured:
         available = ', '.join(sorted(str(key) for key in configured))
         raise RuntimeError(f'Unknown recipient audience "{audience}". Available audiences: {available}')
 
     recipients = configured[audience]
     if not isinstance(recipients, list) or not recipients:
-        raise RuntimeError(f'Recipient audience "{audience}" must be a non-empty array: {recipients_file}')
+        raise RuntimeError(f'Recipient audience "{audience}" must be a non-empty array')
 
     validated: list[str] = []
     seen: set[str] = set()
     for item in recipients:
         if not isinstance(item, str):
-            raise RuntimeError(f'Recipient audience "{audience}" must contain only strings: {recipients_file}')
+            raise RuntimeError(f'Recipient audience "{audience}" must contain only strings')
         recipient = item.strip()
         if not recipient:
-            raise RuntimeError(f'Recipient audience "{audience}" contains blank entry: {recipients_file}')
+            raise RuntimeError(f'Recipient audience "{audience}" contains blank entry')
         if not re.fullmatch(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', recipient):
-            raise RuntimeError(f'Invalid recipient address in private configuration')
+            raise RuntimeError('Invalid recipient address in AI_DAILY_RECIPIENTS_JSON')
         dedupe_key = recipient.lower()
         if dedupe_key in seen:
             print(f'WARN duplicate_recipient_skipped audience={audience}', flush=True)
@@ -408,7 +406,7 @@ def main() -> int:
             flush=True,
         )
     recipients = read_recipients(audience)
-    status_path = delivery_status_path(artifact_dir, args.date, args.phase)
+    status_path = delivery_status_path(args.date, args.phase)
     delivery_status = load_delivery_status(status_path, args.date, args.phase, audience)
     sent = delivery_status['sent']
     in_flight = delivery_status.setdefault('in_flight', {})

@@ -38,13 +38,9 @@ class PrivacyTests(unittest.TestCase):
             safe_text(f'<p>{A}</p>', {A, B}, [])
         with self.assertRaisesRegex(ValueError, 'endpoint'):
             safe_text('https://private.invalid/x', set(), ['https://private.invalid'])
-        with tempfile.TemporaryDirectory() as tmp:
-            p = Path(tmp) / 'recipients.json'
-            p.write_text(json.dumps({'admins': [A], 'all': [A, B]}))
-            self.assertEqual(recipients(p), {A, B})
-            p.write_text(json.dumps({'all': [A]}))
-            with self.assertRaises(ValueError):
-                recipients(p)
+        self.assertEqual(recipients(json.dumps({'admins': [A], 'all': [A, B]})), {A, B})
+        with self.assertRaises(ValueError):
+            recipients(json.dumps({'all': [A]}))
 
 
 class RetryTests(unittest.TestCase):

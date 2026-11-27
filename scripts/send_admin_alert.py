@@ -13,7 +13,6 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = REPO_ROOT / 'skill'
-from private_delivery_git import storage
 SMTP_CONFIG_FILE = SKILL_DIR / 'references' / 'smtp-config.md'
 
 
@@ -28,7 +27,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def read_recipients(audience: str = 'admins') -> list[str]:
-    configured = json.loads((storage() / 'recipients.json').read_text(encoding='utf-8'))
+    configured = json.loads(os.environ['AI_DAILY_RECIPIENTS_JSON'])
     recipients = configured.get(audience)
     if not isinstance(recipients, list) or not recipients:
         raise RuntimeError(f'Missing non-empty recipient audience "{audience}"')

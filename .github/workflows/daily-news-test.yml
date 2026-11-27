@@ -26,46 +26,16 @@ permissions:
 
 jobs:
   build-validate-send:
-    if: ${{ vars.AI_DAILY_PRIVATE_DELIVERY_READY == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     outputs:
       issue_date: ${{ steps.issue.outputs.date }}
-      skipped: ${{ steps.delivery.outputs.skip }}
     env:
       TZ: Asia/Shanghai
-      AI_DAILY_PRIVATE_STATE_DIR: ${{ github.workspace }}/private-delivery
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
-      - name: Verify private delivery destination
-        env:
-          GH_TOKEN: ${{ secrets.AI_DAILY_PRIVATE_STATE_TOKEN }}
-          STATE_REPO: ${{ vars.AI_DAILY_PRIVATE_STATE_REPO }}
-        run: |
-          set -eu
-          [[ "$STATE_REPO" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]]
-          test "$STATE_REPO" != "$GITHUB_REPOSITORY"
-          test -n "$GH_TOKEN"
-          test "$(gh api "repos/$STATE_REPO" --jq '.private and .visibility == "private" and .default_branch == "main"')" = true
-
-      - name: Check out private delivery storage
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ vars.AI_DAILY_PRIVATE_STATE_REPO }}
-          token: ${{ secrets.AI_DAILY_PRIVATE_STATE_TOKEN }}
-          ref: main
-          path: private-delivery
-          fetch-depth: 1
-
-      - name: Validate private roster
-        run: |
-          test -f private-delivery/migration-complete
-          git -C private-delivery config user.name "github-actions[bot]"
-          git -C private-delivery config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          python3 -c "from pathlib import Path; from scripts.verify_public_news import recipients; recipients(Path('private-delivery/recipients.json'))"
 
       - name: Resolve issue date
         id: issue
@@ -77,28 +47,12 @@ jobs:
           ref: gh-pages
           path: published-site
 
-      - name: Check morning delivery marker
-        id: delivery
-        run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            SENT=$(python3 scripts/delivery_marker.py check \
-              --site-dir private-delivery \
-              --date "${{ steps.issue.outputs.date }}" \
-              --phase morning)
-          else
-            SENT=false
-          fi
-          echo "skip=$SENT" >> "$GITHUB_OUTPUT"
-          echo "Morning already sent: $SENT"
-
       - name: Set up Python
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Validate video API credentials
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         continue-on-error: true
         env:
           AI_DAILY_VIDEO_API_TOKEN: ${{ secrets.AI_DAILY_VIDEO_API_TOKEN }}
@@ -111,21 +65,17 @@ jobs:
           python3 scripts/check_video_api.py
 
       - name: Install media dependency
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
       - name: Install Python dependencies
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: python -m pip install -r requirements.txt
 
       - name: Run source smoke tests
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: ./scripts/smoke_test.sh > "$RUNNER_TEMP/news-smoke.log" 2>&1
 
       - name: Run news agent and build artifacts
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           AI_DAILY_VIDEO_API_TOKEN: ${{ secrets.AI_DAILY_VIDEO_API_TOKEN }}
           AI_DAILY_VIDEO_API_BASE_URL: ${{ secrets.AI_DAILY_VIDEO_API_BASE_URL || vars.AI_DAILY_VIDEO_API_BASE_URL }}
@@ -148,11 +98,12 @@ jobs:
             $FORCE_ARGS; } > "$RUNNER_TEMP/news-private.log" 2>&1 || { echo '::error::Newsletter step failed; raw diagnostics withheld'; exit 1; }
 
       - name: Alert on individual news source failures
-        if: ${{ always() && steps.delivery.outputs.skip != 'true' }}
+        if: ${{ always() }}
         continue-on-error: true
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+          AI_DAILY_RECIPIENTS_JSON: ${{ secrets.AI_DAILY_RECIPIENTS_JSON }}
         run: |
           HEALTH_FILE="dist/source-health-${{ steps.issue.outputs.date }}.json"
           if [ -f "$HEALTH_FILE" ]; then
@@ -164,7 +115,6 @@ jobs:
           fi
 
       - name: Run complete quality gate
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
           python3 skill/scripts/check_and_distribute.py \
             --date "${{ steps.issue.outputs.date }}" \
@@ -172,10 +122,10 @@ jobs:
             --dry-run
 
       - name: Verify recipient delivery plan
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+          AI_DAILY_RECIPIENTS_JSON: ${{ secrets.AI_DAILY_RECIPIENTS_JSON }}
         run: |
           { python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
@@ -184,7 +134,6 @@ jobs:
             --dry-run; } > "$RUNNER_TEMP/news-private.log" 2>&1 || { echo '::error::Newsletter step failed; raw diagnostics withheld'; exit 1; }
 
       - name: Update public content API
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         run: |
           { python3 scripts/build_content_site.py \
             --date "${{ steps.issue.outputs.date }}" \
@@ -193,12 +142,12 @@ jobs:
             --base-url "https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow"; } > "$RUNNER_TEMP/news-private.log" 2>&1 || { echo '::error::Newsletter step failed; raw diagnostics withheld'; exit 1; }
 
       - name: Publish content API
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           LENOVO_LLM_BASE_URL: ${{ secrets.LENOVO_LLM_BASE_URL || vars.LENOVO_LLM_BASE_URL }}
           AI_DAILY_VIDEO_API_BASE_URL: ${{ secrets.AI_DAILY_VIDEO_API_BASE_URL || vars.AI_DAILY_VIDEO_API_BASE_URL }}
           AI_DAILY_PRE_SEND_API_URL: ${{ secrets.AI_DAILY_PRE_SEND_API_URL || vars.AI_DAILY_PRE_SEND_API_URL }}
+          AI_DAILY_RECIPIENTS_JSON: ${{ secrets.AI_DAILY_RECIPIENTS_JSON }}
         run: |
           cd published-site
           git config user.name "github-actions[bot]"
@@ -213,10 +162,11 @@ jobs:
           fi
 
       - name: Send admin email
-        if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
+        if: ${{ github.event_name == 'schedule' || inputs.send_email }}
         env:
           AI_DAILY_SMTP_USER: ${{ secrets.AI_DAILY_SMTP_USER }}
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
+          AI_DAILY_RECIPIENTS_JSON: ${{ secrets.AI_DAILY_RECIPIENTS_JSON }}
         run: |
           test -n "$AI_DAILY_SMTP_USER"
           test -n "$AI_DAILY_SMTP_PASSWORD"
@@ -224,12 +174,6 @@ jobs:
             --date "${{ steps.issue.outputs.date }}" \
             --artifact-dir dist \
             --phase morning; } > "$RUNNER_TEMP/news-private.log" 2>&1 || { echo '::error::Newsletter step failed; raw diagnostics withheld'; exit 1; }
-
-      - name: Mark delivery complete in private storage
-        if: ${{ success() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
-        run: |
-          python3 scripts/delivery_marker.py mark --site-dir private-delivery --date "${{ steps.issue.outputs.date }}" --phase morning --run-id "${{ github.run_id }}"
-          python3 -c "from pathlib import Path; from scripts.private_delivery_git import checkpoint; checkpoint(Path('private-delivery/state/deliveries/${{ steps.issue.outputs.date }}/morning.json'))"
 
       - name: Write workflow summary
         if: always()
@@ -244,19 +188,17 @@ jobs:
             echo "- Content mode: DeepAgent-backed material workflow"
             echo "- Force regenerate: ${{ github.event_name == 'workflow_dispatch' }}"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
-            echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
             echo "- Content API: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow/api/latest.json"
             echo
           } >> "$GITHUB_STEP_SUMMARY"
 
   upload-new-site:
     needs: build-validate-send
-    if: ${{ needs.build-validate-send.result == 'success' && needs.build-validate-send.outputs.skipped != 'true' }}
+    if: ${{ needs.build-validate-send.result == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
       TZ: Asia/Shanghai
-      AI_DAILY_PRIVATE_STATE_DIR: ${{ github.workspace }}/private-delivery
 
     steps:
       - name: Check out repository

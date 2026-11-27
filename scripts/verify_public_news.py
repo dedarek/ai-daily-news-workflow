@@ -11,8 +11,8 @@ UNSAFE_JSON = {'recipient', 'recipients', 'endpoint', 'base_url', 'llm', 'call_d
                'source_health', 'video_api', 'tts_reference_files', 'api_key', 'password'}
 
 
-def recipients(path):
-    data = json.loads(path.read_text())
+def recipients(text):
+    data = json.loads(text)
     if not isinstance(data, dict) or not all(data.get(x) for x in ('admins', 'all')):
         raise ValueError('Private roster missing required audiences')
     if any(not isinstance(group, list) or any(not isinstance(x, str) or not EMAIL.fullmatch(x.strip())
@@ -42,7 +42,7 @@ def walk(value):
 
 def main():
     site = Path(sys.argv[1]).resolve()
-    private_addresses = recipients(Path(os.environ['AI_DAILY_PRIVATE_STATE_DIR']) / 'recipients.json')
+    private_addresses = recipients(os.environ['AI_DAILY_RECIPIENTS_JSON'])
     sender = os.getenv('AI_DAILY_SMTP_USER', '').strip().lower()
     if sender:
         private_addresses.add(sender)
