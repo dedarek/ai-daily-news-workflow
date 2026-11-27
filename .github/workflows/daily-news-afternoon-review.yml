@@ -27,6 +27,8 @@ permissions:
 
 jobs:
   review-and-send:
+    # Pause publication until delivery state is private.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:

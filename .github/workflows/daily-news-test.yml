@@ -28,6 +28,8 @@ permissions:
 
 jobs:
   build-validate-send:
+    # Pause publication until delivery state is private.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
