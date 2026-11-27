@@ -6,145 +6,15 @@
   "article_count": 12,
   "podcast_turns": 19,
   "tts_mode": "text-only",
-  "tts_model": null,
-  "tts_speed": null,
-  "tts_reference_files": null,
-  "llm": {
-    "provider": "opencode-go",
-    "model_chain": [
-      "qwen38-27b"
-    ],
-    "endpoint": "https://aicloud-app.lenovo.com.cn/qwen38-27b/v1",
-    "calls": 10,
-    "call_details": {
-      "selection": {
-        "model": "lenovo:qwen38-27b",
-        "usage": {},
-        "selected_count": 12,
-        "target_count": 12,
-        "degraded": false
-      },
-      "selection_attempts": [
-        {
-          "attempt": 1,
-          "validation_attempt": 1,
-          "model": "lenovo:qwen38-27b",
-          "usage": {},
-          "candidate_count": 60,
-          "target_count": 12,
-          "validation_issues": []
-        },
-        {
-          "attempt": 2,
-          "validation_attempt": 1,
-          "model": "lenovo:qwen38-27b",
-          "usage": {},
-          "candidate_count": 58,
-          "target_count": 12,
-          "validation_issues": []
-        }
-      ],
-      "cross_day_dedupe": {
-        "window_days": 7,
-        "recent_sent_count": 71,
-        "exact_url_blocks": [],
-        "high_confidence_event_blocks": [],
-        "reviews": [
-          {
-            "attempt": 1,
-            "model": "lenovo:qwen38-27b",
-            "usage": {},
-            "duplicates": [
-              {
-                "current_url": "https://www.qbitai.com/2026/11/512819.html",
-                "previous_url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
-                "reason": "两者均报道Anthropic利用Claude辅助证明黎曼猜想（或广义黎曼猜想）的事件。今日新闻提供了更具体的代码压缩数据（从1740万行缩减至7.6万行）和构建环境细节，但核心主体（Anthropic/Claude）、动作（证明黎曼猜想）和对象（黎曼猜想形式化证明）与7天前已发送的新闻属于同一底层事件，属于对同一事件的后续细节补充或进展报道，而非全新独立事件。"
-              },
-              {
-                "current_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.925-beta",
-                "previous_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.924-beta",
-                "reason": "两者均报道Unsloth对Inkling 2 Mini模型的微调支持。今日新闻（v0.1.925-beta）与7天前新闻（v0.1.924-beta）涉及相同的核心功能（LoRA/QLoRA加速、显存降低、Kaggle T4支持等），且性能数据（1.8-3.1倍提速、50%显存降低）完全一致。这属于同一功能更新在不同版本标签下的重复报道或细微版本迭代，核心事件主体、动作和对象相同，不构成实质性新进展。"
-              }
-            ]
-          },
-          {
-            "attempt": 2,
-            "model": "lenovo:qwen38-27b",
-            "usage": {},
-            "duplicates": []
-          }
-        ],
-        "final_pass": true
-      },
-      "editorial_batches": [
-        {
-          "model": "lenovo:qwen38-27b",
-          "usage": {}
-        },
-        {
-          "model": "lenovo:qwen38-27b",
-          "usage": {}
-        },
-        {
-          "model": "lenovo:qwen38-27b",
-          "usage": {}
-        }
-      ],
-      "digest_summary": {
-        "model": "lenovo:qwen38-27b",
-        "usage": {}
-      },
-      "podcast": {
-        "model": "lenovo:qwen38-27b",
-        "usage": {}
-      },
-      "podcast_review": {
-        "model": "lenovo:qwen38-27b",
-        "usage": {}
-      },
-      "podcast_attempts": [
-        {
-          "attempt": 1,
-          "generation": {
-            "model": "lenovo:qwen38-27b",
-            "usage": {}
-          },
-          "structure_issues": [],
-          "review": {
-            "pass": true,
-            "issues": [
-              "S1第1轮切入略显生硬，直接抛出宏观结论“信任机制的底层重构”，缺乏更自然的口语化引入或过渡，建议增加一句简短的开场缓冲。",
-              "S2第18轮结尾“好了，今天的复盘就到这里”与S1第19轮“谢谢大家的收听”存在轻微的收尾重叠，建议S2仅做内容总结，将告别语完全留给S1，或S1简化为“我们下期见”。"
-            ],
-            "repair_instruction": "1. 优化S1第1轮开场，将“今天最核心的信号是...”改为更自然的口语引入，例如“今天咱们聊点硬核的，核心信号其实是...”；2. 调整结尾轮次，S2第18轮去掉“好了，今天的复盘就到这里”，仅保留内容总结，让S1第19轮完整承担告别功能，避免寒暄重复。"
-          },
-          "review_model": "lenovo:qwen38-27b",
-          "review_usage": {}
-        }
-      ],
-      "podcast_harness": {
-        "attempts": 1,
-        "best_attempt": 1,
-        "final_pass": true,
-        "final_issues": [
-          "S1第1轮切入略显生硬，直接抛出宏观结论“信任机制的底层重构”，缺乏更自然的口语化引入或过渡，建议增加一句简短的开场缓冲。",
-          "S2第18轮结尾“好了，今天的复盘就到这里”与S1第19轮“谢谢大家的收听”存在轻微的收尾重叠，建议S2仅做内容总结，将告别语完全留给S1，或S1简化为“我们下期见”。"
-        ],
-        "structure_issues": [],
-        "loop_exhausted": false,
-        "converged": false
-      }
-    }
-  },
   "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-26/articles.json",
   "candidate_articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-26/candidate-news.json",
   "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-26/podcast-script.json",
   "podcast_script_text_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-26/podcast-script.txt",
-  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-26.txt",
   "podcast_moss_input_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-26/podcast-moss-input.txt",
   "voice_url": null,
-  "voice_timeline_url": null,
   "manifest_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-11-26/manifest.json",
+  "podcast_dialogue_text_url": "https://dedarek.github.io/ai-daily-news-workflow/podcast-dialogue/2026-11-26.txt",
+  "voice_timeline_url": null,
   "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-11-26.html",
   "audio_url": null,
   "video_url": null

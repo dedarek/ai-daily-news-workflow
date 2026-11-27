@@ -5,103 +5,17 @@
   "published_at": "2026-06-26T05:50:01.034337+00:00",
   "article_count": 12,
   "podcast_turns": 16,
-  "tts_mode": "fallback-sample",
-  "llm": {
-    "provider": "opencode-go",
-    "model_chain": [
-      "deepseek-v4-flash",
-      "deepseek-v4-pro",
-      "mimo-v2.5"
-    ],
-    "endpoint": "https://opencode.ai/zen/go/v1",
-    "calls": 5,
-    "call_details": {
-      "selection": {
-        "model": "deepseek-v4-flash",
-        "usage": {
-          "prompt_tokens": 2718,
-          "completion_tokens": 7831,
-          "total_tokens": 10549,
-          "prompt_tokens_details": {
-            "cached_tokens": 2688
-          },
-          "completion_tokens_details": {
-            "reasoning_tokens": 7212
-          },
-          "prompt_cache_hit_tokens": 2688,
-          "prompt_cache_miss_tokens": 30
-        }
-      },
-      "editorial_batches": [
-        {
-          "model": "deepseek-v4-flash",
-          "usage": {
-            "prompt_tokens": 880,
-            "completion_tokens": 2229,
-            "total_tokens": 3109,
-            "prompt_tokens_details": {
-              "cached_tokens": 512
-            },
-            "completion_tokens_details": {
-              "reasoning_tokens": 1758
-            },
-            "prompt_cache_hit_tokens": 512,
-            "prompt_cache_miss_tokens": 368
-          }
-        },
-        {
-          "model": "deepseek-v4-flash",
-          "usage": {
-            "prompt_tokens": 970,
-            "completion_tokens": 10079,
-            "total_tokens": 11049,
-            "prompt_tokens_details": {
-              "cached_tokens": 256
-            },
-            "completion_tokens_details": {
-              "reasoning_tokens": 9373
-            },
-            "prompt_cache_hit_tokens": 256,
-            "prompt_cache_miss_tokens": 714
-          }
-        },
-        {
-          "model": "deepseek-v4-flash",
-          "usage": {
-            "prompt_tokens": 979,
-            "completion_tokens": 2392,
-            "total_tokens": 3371,
-            "prompt_tokens_details": {
-              "cached_tokens": 256
-            },
-            "completion_tokens_details": {
-              "reasoning_tokens": 1800
-            },
-            "prompt_cache_hit_tokens": 256,
-            "prompt_cache_miss_tokens": 723
-          }
-        }
-      ],
-      "podcast": {
-        "model": "deepseek-v4-flash",
-        "usage": {
-          "prompt_tokens": 2746,
-          "completion_tokens": 6161,
-          "total_tokens": 8907,
-          "prompt_tokens_details": {
-            "cached_tokens": 256
-          },
-          "completion_tokens_details": {
-            "reasoning_tokens": 5635
-          },
-          "prompt_cache_hit_tokens": 256,
-          "prompt_cache_miss_tokens": 2490
-        }
-      }
-    }
-  },
+  "tts_mode": null,
   "articles_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-26/articles.json",
+  "candidate_articles_url": null,
   "podcast_script_url": "https://dedarek.github.io/ai-daily-news-workflow/api/issues/2026-06-26/podcast-script.json",
+  "podcast_script_text_url": null,
+  "podcast_moss_input_url": null,
+  "voice_url": null,
+  "manifest_url": null,
+  "podcast_dialogue_text_url": null,
+  "voice_timeline_url": null,
   "html_url": "https://dedarek.github.io/ai-daily-news-workflow/html/2026-06-26.html",
-  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-06-26.mp3"
+  "audio_url": "https://dedarek.github.io/ai-daily-news-workflow/audio/2026-06-26.mp3",
+  "video_url": null
 }
