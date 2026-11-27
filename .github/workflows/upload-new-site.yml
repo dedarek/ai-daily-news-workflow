@@ -14,8 +14,7 @@ permissions:
 
 jobs:
   upload:
-    # Pause publication while recipient data is moved out of public output.
-    if: ${{ false }}
+    if: ${{ vars.AI_DAILY_PRIVATE_DELIVERY_READY == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -67,7 +66,7 @@ jobs:
             --report "published-site/api/issues/$DATE/pipeline-report.json" \
             --audio "published-site/audio/$DATE.mp3" \
             --video "published-site/video/$DATE.mp4" \
-            --endpoint "$AI_DAILY_NEW_SITE_ENDPOINT"
+            --endpoint "$AI_DAILY_NEW_SITE_ENDPOINT" > "$RUNNER_TEMP/news-mirror.log" 2>&1
 
       - name: Upload new-site text artifact
         if: always()

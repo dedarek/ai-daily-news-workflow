@@ -223,13 +223,13 @@ Mode: single-pass spoken dialogue synthesis with [S1]/[S2] tags
 ```json
 {
   "admins": [
-    "yyc54321@126.com",
-    "heyj17@lenovo.com"
+    "[contact omitted]",
+    "[contact omitted]"
   ],
   "all": [
-    "yyc54321@126.com",
-    "heyj17@lenovo.com",
-    "heyujie1104@gmail.com"
+    "[contact omitted]",
+    "[contact omitted]",
+    "[contact omitted]"
   ]
 }
 ```

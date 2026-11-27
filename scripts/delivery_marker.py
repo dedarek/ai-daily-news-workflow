@@ -21,7 +21,6 @@ def main() -> int:
         item.add_argument('--date', required=True)
         item.add_argument('--phase', choices=('morning', 'afternoon'), required=True)
     mark.add_argument('--run-id', required=True)
-    mark.add_argument('--recipient', default='yyc54321@126.com')
     args = parser.parse_args()
 
     path = marker_path(Path(args.site_dir), args.date, args.phase)
@@ -35,7 +34,6 @@ def main() -> int:
             {
                 'date': args.date,
                 'phase': args.phase,
-                'recipient': args.recipient,
                 'run_id': args.run_id,
                 'sent_at': datetime.now(timezone.utc).isoformat(),
             },

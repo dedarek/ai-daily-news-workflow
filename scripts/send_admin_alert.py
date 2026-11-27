@@ -13,7 +13,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = REPO_ROOT / 'skill'
-RECIPIENTS_FILE = SKILL_DIR / 'references' / 'recipients.json'
+from private_delivery_git import storage
 SMTP_CONFIG_FILE = SKILL_DIR / 'references' / 'smtp-config.md'
 
 
@@ -28,10 +28,10 @@ def parse_args() -> argparse.Namespace:
 
 
 def read_recipients(audience: str = 'admins') -> list[str]:
-    configured = json.loads(RECIPIENTS_FILE.read_text(encoding='utf-8'))
+    configured = json.loads((storage() / 'recipients.json').read_text(encoding='utf-8'))
     recipients = configured.get(audience)
     if not isinstance(recipients, list) or not recipients:
-        raise RuntimeError(f'Missing non-empty recipient audience "{audience}" in {RECIPIENTS_FILE}')
+        raise RuntimeError(f'Missing non-empty recipient audience "{audience}"')
     return [str(item).strip() for item in recipients if str(item).strip()]
 
 
@@ -78,7 +78,6 @@ def main() -> int:
 
     if args.dry_run:
         print(f'DRY-RUN subject={subject}', flush=True)
-        print(f'DRY-RUN recipients={", ".join(recipients)}', flush=True)
         return 0
 
     host, port, sender, password = read_smtp_config()
@@ -88,7 +87,6 @@ def main() -> int:
         for recipient in recipients:
             message = build_message(sender, recipient, subject, body)
             server.sendmail(sender, [recipient], message.as_string())
-            print(f'Admin alert sent to {recipient}', flush=True)
     return 0
 
 

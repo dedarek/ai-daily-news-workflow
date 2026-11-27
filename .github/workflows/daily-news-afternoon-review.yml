@@ -18,7 +18,7 @@ on:
     - cron: "0 3 * * *"  # 13:00 北京
 
 concurrency:
-  group: ai-daily-news-afternoon
+  group: ai-daily-news-private-delivery
   cancel-in-progress: false
 
 permissions:
@@ -26,17 +26,44 @@ permissions:
 
 jobs:
   review-and-send:
-    # Pause publication while recipient data is moved out of public output.
-    if: ${{ false }}
+    if: ${{ vars.AI_DAILY_PRIVATE_DELIVERY_READY == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
       TZ: Asia/Shanghai
+      AI_DAILY_PRIVATE_STATE_DIR: ${{ github.workspace }}/private-delivery
       CONTENT_BASE_URL: https://${{ github.repository_owner }}.github.io/ai-daily-news-workflow
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Verify private delivery destination
+        env:
+          GH_TOKEN: ${{ secrets.AI_DAILY_PRIVATE_STATE_TOKEN }}
+          STATE_REPO: ${{ vars.AI_DAILY_PRIVATE_STATE_REPO }}
+        run: |
+          set -eu
+          [[ "$STATE_REPO" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]]
+          test "$STATE_REPO" != "$GITHUB_REPOSITORY"
+          test -n "$GH_TOKEN"
+          test "$(gh api "repos/$STATE_REPO" --jq '.private and .visibility == "private" and .default_branch == "main"')" = true
+
+      - name: Check out private delivery storage
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.AI_DAILY_PRIVATE_STATE_REPO }}
+          token: ${{ secrets.AI_DAILY_PRIVATE_STATE_TOKEN }}
+          ref: main
+          path: private-delivery
+          fetch-depth: 1
+
+      - name: Validate private roster
+        run: |
+          test -f private-delivery/migration-complete
+          git -C private-delivery config user.name "github-actions[bot]"
+          git -C private-delivery config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 -c "from pathlib import Path; from scripts.verify_public_news import recipients; recipients(Path('private-delivery/recipients.json'))"
 
       - name: Resolve issue date
         id: issue
@@ -53,7 +80,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             SENT=$(python3 scripts/delivery_marker.py check \
-              --site-dir published-site \
+              --site-dir private-delivery \
               --date "${{ steps.issue.outputs.date }}" \
               --phase afternoon)
           else
@@ -77,7 +104,7 @@ jobs:
               --date "${{ steps.issue.outputs.date }}" \
               --phase afternoon \
               --reason "$REASON" \
-              --issue-url "$ISSUE_URL" || echo "::warning::Failed to send admin alert"
+              --issue-url "$ISSUE_URL" > "$RUNNER_TEMP/news-alert.log" 2>&1 || echo "::warning::Failed to send admin alert"
             exit 1
           fi
           if ! READY_OUTPUT=$(python3 scripts/check_manifest_ready.py /tmp/morning-manifest.json 2>&1); then
@@ -87,7 +114,7 @@ jobs:
               --date "${{ steps.issue.outputs.date }}" \
               --phase afternoon \
               --reason "$REASON" \
-              --issue-url "$ISSUE_URL" || echo "::warning::Failed to send admin alert"
+              --issue-url "$ISSUE_URL" > "$RUNNER_TEMP/news-alert.log" 2>&1 || echo "::warning::Failed to send admin alert"
             exit 1
           fi
           echo "Morning issue is published: $ISSUE_URL"
@@ -105,14 +132,14 @@ jobs:
           OPENCODE_GO_TIMEOUT_SECONDS: "600"
           LLM_STREAM: "true"
           LENOVO_LLM_API_KEY: ${{ secrets.LENOVO_LLM_API_KEY || secrets.AI_DAILY_LENOVO_LLM_API_KEY }}
-          LENOVO_LLM_BASE_URL: ${{ vars.LENOVO_LLM_BASE_URL || 'https://aicloud-app.lenovo.com.cn/qwen38-27b/v1' }}
+          LENOVO_LLM_BASE_URL: ${{ secrets.LENOVO_LLM_BASE_URL || vars.LENOVO_LLM_BASE_URL }}
         run: |
           test -n "$LENOVO_LLM_API_KEY" || { echo "::error::Missing GitHub Actions secret LENOVO_LLM_API_KEY"; exit 1; }
-          python3 scripts/prepare_review_delivery.py \
+          { python3 scripts/prepare_review_delivery.py \
             --date "${{ steps.issue.outputs.date }}" \
             --base-url "$CONTENT_BASE_URL" \
             --output-dir review-dist \
-            --review-warn-only
+            --review-warn-only; } > "$RUNNER_TEMP/news-private.log" 2>&1 || { echo '::error::Newsletter step failed; raw diagnostics withheld'; exit 1; }
 
       - name: Alert admins when afternoon review blocks delivery
         if: ${{ failure() && steps.delivery.outputs.skip != 'true' }}
@@ -123,24 +150,13 @@ jobs:
           REASON="Afternoon review failed before delivery."
           REPORT="review-dist/quality-review-${{ steps.issue.outputs.date }}.json"
           if [ -f "$REPORT" ]; then
-            REASON=$(python3 scripts/summarize_review_block.py "$REPORT")
+            REASON="Afternoon quality review blocked delivery."
           fi
           python3 scripts/send_admin_alert.py \
             --date "${{ steps.issue.outputs.date }}" \
             --phase afternoon \
             --reason "$REASON" \
-            --issue-url "$CONTENT_BASE_URL/api/issues/${{ steps.issue.outputs.date }}/manifest.json" || echo "::warning::Failed to send admin alert"
-
-      - name: Restore afternoon delivery progress
-        if: ${{ steps.delivery.outputs.skip != 'true' }}
-        run: |
-          STATUS="published-site/state/delivery-progress/${{ steps.issue.outputs.date }}/afternoon.json"
-          if [ -f "$STATUS" ]; then
-            cp "$STATUS" "review-dist/delivery-status-afternoon-${{ steps.issue.outputs.date }}.json"
-            echo "Restored afternoon delivery progress: $STATUS"
-          else
-            echo "No previous afternoon delivery progress"
-          fi
+            --issue-url "$CONTENT_BASE_URL/api/issues/${{ steps.issue.outputs.date }}/manifest.json" > "$RUNNER_TEMP/news-alert.log" 2>&1 || echo "::warning::Failed to send admin alert"
 
       - name: Run deterministic quality gate again
         if: ${{ steps.delivery.outputs.skip != 'true' }}
@@ -157,11 +173,11 @@ jobs:
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
           AI_DAILY_EMAIL_ATTACH_VIDEO: ${{ vars.AI_DAILY_AFTERNOON_ATTACH_VIDEO || 'true' }}
         run: |
-          python3 skill/scripts/send_all.py \
+          { python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
             --artifact-dir review-dist \
             --phase afternoon \
-            --dry-run
+            --dry-run; } > "$RUNNER_TEMP/news-private.log" 2>&1 || { echo '::error::Newsletter step failed; raw diagnostics withheld'; exit 1; }
 
       - name: 文件上传
         if: ${{ steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_files) }}
@@ -170,7 +186,7 @@ jobs:
         run: |
           set +e
           python3 scripts/upload_delivery_artifacts.py \
-            --date "${{ steps.issue.outputs.date }}"
+            --date "${{ steps.issue.outputs.date }}" > "$RUNNER_TEMP/news-upload.log" 2>&1
           STATUS=$?
           set -e
           if [ "$STATUS" -ne 0 ]; then
@@ -197,72 +213,29 @@ jobs:
           AI_DAILY_SMTP_PASSWORD: ${{ secrets.AI_DAILY_SMTP_PASSWORD }}
           AI_DAILY_EMAIL_ATTACH_VIDEO: ${{ vars.AI_DAILY_AFTERNOON_ATTACH_VIDEO || 'true' }}
         run: |
-          python3 skill/scripts/send_all.py \
+          { python3 skill/scripts/send_all.py \
             --date "${{ steps.issue.outputs.date }}" \
             --artifact-dir review-dist \
-            --phase afternoon
+            --phase afternoon; } > "$RUNNER_TEMP/news-private.log" 2>&1 || { echo '::error::Newsletter step failed; raw diagnostics withheld'; exit 1; }
 
-      - name: Publish afternoon delivery progress
-        if: ${{ always() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
-        run: |
-          STATUS_FILE="review-dist/delivery-status-afternoon-${{ steps.issue.outputs.date }}.json"
-          if [ ! -f "$STATUS_FILE" ]; then
-            echo "No afternoon delivery progress file"
-            exit 0
-          fi
-          mkdir -p "published-site/state/delivery-progress/${{ steps.issue.outputs.date }}"
-          cp "$STATUS_FILE" "published-site/state/delivery-progress/${{ steps.issue.outputs.date }}/afternoon.json"
-          cd published-site
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "state/delivery-progress/${{ steps.issue.outputs.date }}/afternoon.json"
-          if git diff --cached --quiet; then
-            echo "No afternoon delivery progress changes"
-          else
-            git commit -m "Update afternoon delivery progress ${{ steps.issue.outputs.date }}"
-            git push origin HEAD:gh-pages
-          fi
-
-      - name: Publish review report and delivery marker
+      - name: Mark delivery complete in private storage
         if: ${{ success() && steps.delivery.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.send_email) }}
         run: |
-          mkdir -p "published-site/reviews/${{ steps.issue.outputs.date }}"
-          cp "review-dist/quality-review-${{ steps.issue.outputs.date }}.json" \
-            "published-site/reviews/${{ steps.issue.outputs.date }}/afternoon.json"
-          python3 scripts/delivery_marker.py mark \
-            --site-dir published-site \
-            --date "${{ steps.issue.outputs.date }}" \
-            --phase afternoon \
-            --run-id "${{ github.run_id }}"
-          cd published-site
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reviews/ state/
-          git commit -m "Publish afternoon review ${{ steps.issue.outputs.date }}"
-          git push origin HEAD:gh-pages
+          python3 scripts/delivery_marker.py mark --site-dir private-delivery --date "${{ steps.issue.outputs.date }}" --phase afternoon --run-id "${{ github.run_id }}"
+          python3 -c "from pathlib import Path; from scripts.private_delivery_git import checkpoint; checkpoint(Path('private-delivery/state/deliveries/${{ steps.issue.outputs.date }}/afternoon.json'))"
 
       - name: Write workflow summary
         if: always()
         run: |
           AUDIENCE=$(python3 -c "import json, pathlib; print(json.loads(pathlib.Path('skill/references/send-email-config.json').read_text(encoding='utf-8'))['phases']['afternoon']['audience'])")
-          RECIPIENTS=$(python3 -c "import json, pathlib, sys; print(', '.join(json.loads(pathlib.Path('skill/references/recipients.json').read_text(encoding='utf-8'))[sys.argv[1]]))" "$AUDIENCE")
           {
             echo "## AI Daily News afternoon review"
             echo
             echo "- Date: ${{ steps.issue.outputs.date }}"
             echo "- Phase: \`afternoon\`"
             echo "- Audience: \`$AUDIENCE\`"
-            echo "- Recipients: \`$RECIPIENTS\`"
             echo "- File upload requested: ${{ github.event_name == 'schedule' || inputs.send_files }}"
             echo "- Skipped by idempotency marker: ${{ steps.delivery.outputs.skip }}"
             echo "- Email requested: ${{ github.event_name == 'schedule' || inputs.send_email }}"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Upload review artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ai-daily-news-review-${{ steps.issue.outputs.date }}
-          path: review-dist/
-          if-no-files-found: warn
-          retention-days: 14

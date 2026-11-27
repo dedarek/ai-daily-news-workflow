@@ -7,6 +7,7 @@ import json
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
+from news_public_fields import public_index, public_manifest, public_report
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -175,7 +176,7 @@ def main() -> int:
     write_json(issue_root / 'podcast-script.json', podcast_script)
     shutil.copy2(script_text_path, issue_root / 'podcast-script.txt')
     shutil.copy2(moss_input_path, issue_root / 'podcast-moss-input.txt')
-    write_json(issue_root / 'pipeline-report.json', report)
+    write_json(issue_root / 'pipeline-report.json', public_report(report, args.date))
 
     published_html = site / 'html' / f'{args.date}.html'
     published_audio = site / 'audio' / f'{args.date}.mp3'
@@ -202,10 +203,6 @@ def main() -> int:
         'article_count': len(articles),
         'podcast_turns': len(podcast_script['dialogue']),
         'tts_mode': report['tts_mode'],
-        'tts_model': report.get('tts_model'),
-        'tts_speed': report.get('tts_speed'),
-        'tts_reference_files': report.get('tts_reference_files'),
-        'llm': report['llm'],
         'articles_url': absolute(args.base_url, f'api/issues/{args.date}/articles.json'),
         'candidate_articles_url': absolute(args.base_url, f'api/issues/{args.date}/candidate-news.json'),
         'podcast_script_url': absolute(args.base_url, f'api/issues/{args.date}/podcast-script.json'),
@@ -229,7 +226,7 @@ def main() -> int:
         voice['video'] = issue['video_url']
         write_json(issue_root / 'voice.json', voice)
         write_json(published_voice, voice)
-    manifest['published_artifacts'] = {
+    published_artifacts = {
         'index': absolute(args.base_url, f'api/issues/{args.date}/index.json'),
         'candidate_articles': issue['candidate_articles_url'],
         'articles': issue['articles_url'],
@@ -244,14 +241,15 @@ def main() -> int:
         'video': issue['video_url'],
         'pipeline_report': absolute(args.base_url, f'api/issues/{args.date}/pipeline-report.json'),
     }
-    write_json(issue_root / 'manifest.json', manifest)
+    issue = public_index(issue)
+    write_json(issue_root / 'manifest.json', public_manifest(manifest, report, published_artifacts, args.date))
     write_json(issue_root / 'index.json', issue)
     write_json(site / 'api' / 'latest.json', issue)
 
     feed_path = site / 'feed.json'
     feed = read_json(feed_path) if feed_path.exists() else {'schema_version': 1, 'issues': []}
     existing = {
-        item['issue_date']: item
+        item['issue_date']: public_index(item)
         for item in feed.get('issues', [])
         if isinstance(item, dict) and item.get('issue_date')
     }

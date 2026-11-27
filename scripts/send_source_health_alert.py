@@ -74,7 +74,6 @@ def main() -> int:
     body = build_alert_text(args.date, report, failures)
     if args.dry_run:
         print(f"DRY-RUN subject={subject}", flush=True)
-        print(f"DRY-RUN recipients={', '.join(recipients)}", flush=True)
         print(body, flush=True)
         return 0
 
@@ -85,7 +84,6 @@ def main() -> int:
         for recipient in recipients:
             message = build_message(sender, recipient, subject, body)
             server.sendmail(sender, [recipient], message.as_string())
-            print(f"Source health alert sent to {recipient}", flush=True)
     return 0
 
 

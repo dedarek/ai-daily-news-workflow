@@ -166,13 +166,13 @@ python scripts/generate_podcast_only.py \
 ### 邮件收件人
 
 **管理员检查收件人（11:30，`admins`）**：
-- `yyc54321@126.com`
-- `heyj17@lenovo.com`
+- `[contact omitted]`
+- `[contact omitted]`
 
 **下午正式收件人（14:30，`all`）**：
-- `yyc54321@126.com`
-- `heyj17@lenovo.com`
-- `heyujie1104@gmail.com`
+- `[contact omitted]`
+- `[contact omitted]`
+- `[contact omitted]`
 - 发送器从 `skill/references/recipients.json` 读取并校验邮箱格式。
 
 发送阶段配置在 `skill/references/send-email-config.json`：

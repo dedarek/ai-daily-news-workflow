@@ -236,6 +236,21 @@ def restore_from_published_site(site_dir: Path, output_dir: Path, issue_date: st
     output_dir.mkdir(parents=True, exist_ok=True)
     for src, dst in mappings + media_mappings:
         copy_if_needed(src, dst)
+    restored = read_json(manifest)
+    restored['artifacts'] = {
+        'candidate_articles': str(output_dir / f'candidate-news-{issue_date}.json'),
+        'podcast_script_text': str(output_dir / f'podcast-script-{issue_date}.txt'),
+        'podcast_moss_input': str(output_dir / f'podcast-moss-input-{issue_date}.txt'),
+        'pipeline_report': str(output_dir / f'pipeline-report-{issue_date}.json'),
+        'articles': str(output_dir / f'articles-{issue_date}.json'),
+        'html': str(output_dir / f'daily-news-{issue_date}.html'),
+        'podcast_script': str(output_dir / f'podcast-script-{issue_date}.json'),
+        'audio': str(output_dir / f'daily-news-podcast-{issue_date}.mp3'),
+        'video': str(output_dir / f'daily-news-video-{issue_date}.mp4'),
+        'voice': str(output_dir / f'voice-{issue_date}.json'),
+    }
+    restored['restored_public_metadata'] = True
+    write_json(output_dir / f'manifest-{issue_date}.json', restored)
     return True
 
 
@@ -482,6 +497,8 @@ def validate_manifest(output_dir: Path, issue_date: str) -> tuple[int, dict[str,
         resolved_artifacts[key] = artifact
         if not artifact.exists():
             return INVALID, {'status': 'invalid', 'reason': f'artifact missing: {key} {artifact}'}
+        if key == 'pipeline_report' and manifest.get('restored_public_metadata') is True:
+            min_size = 1
         if artifact.stat().st_size < min_size:
             return INVALID, {'status': 'invalid', 'reason': f'artifact too small: {key} {artifact.stat().st_size}'}
     if not text_only:

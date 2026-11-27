@@ -7,6 +7,7 @@ import os
 import re
 import smtplib
 import ssl
+import sys
 import time
 from datetime import datetime, timezone
 from email.message import EmailMessage
@@ -17,7 +18,9 @@ from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
 TMP = Path('/tmp')
-RECIPIENTS_FILE = SKILL_DIR / 'references' / 'recipients.json'
+sys.path.insert(0, str(SKILL_DIR.parent / 'scripts'))
+from delivery_retry import run_delivery
+from private_delivery_git import checkpoint, storage
 SEND_EMAIL_CONFIG_FILE = SKILL_DIR / 'references' / 'send-email-config.json'
 DEFAULT_PUBLIC_BASE_URL = 'https://dedarek.github.io/ai-daily-news-workflow'
 DEFAULT_DAILY_SITE_URL = 'https://tokenless.top/daily'
@@ -101,7 +104,9 @@ def chunked(items: list[str], size: int) -> list[list[str]]:
 
 def delivery_status_path(artifact_dir: Path, date_str: str, phase: str | None) -> Path:
     phase_name = phase or 'manual'
-    return artifact_dir / f'delivery-status-{phase_name}-{date_str}.json'
+    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', date_str) or phase_name not in {'morning', 'afternoon', 'manual'}:
+        raise ValueError('Invalid delivery state path')
+    return storage() / 'state' / 'delivery-progress' / date_str / f'{phase_name}.json'
 
 
 def load_delivery_status(path: Path, date_str: str, phase: str | None, audience: str) -> dict:
@@ -112,7 +117,7 @@ def load_delivery_status(path: Path, date_str: str, phase: str | None, audience:
         'sent': {},
         'failed': {},
     }
-    if not path.is_file() or env_truthy('AI_DAILY_IGNORE_DELIVERY_STATUS', False):
+    if not path.is_file():
         return default
     try:
         loaded = json.loads(path.read_text(encoding='utf-8'))
@@ -125,6 +130,9 @@ def load_delivery_status(path: Path, date_str: str, phase: str | None, audience:
     loaded.setdefault('audience', audience)
     loaded.setdefault('sent', {})
     loaded.setdefault('failed', {})
+    loaded.setdefault('in_flight', {})
+    if loaded['audience'] != audience:
+        raise RuntimeError('Delivery audience differs from private checkpoint')
     if not isinstance(loaded['sent'], dict) or not isinstance(loaded['failed'], dict):
         raise RuntimeError(f'Delivery status sent/failed must be objects: {path}')
     return loaded
@@ -132,22 +140,10 @@ def load_delivery_status(path: Path, date_str: str, phase: str | None, audience:
 
 def write_delivery_status(path: Path, status: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-
-
-def mark_delivery_status(status: dict, recipients: list[str], state: str, error: Exception | None = None) -> None:
-    now = datetime.now(timezone.utc).isoformat()
-    target = status['sent'] if state == 'sent' else status['failed']
-    for recipient in recipients:
-        key = recipient.lower()
-        target[key] = {
-            'recipient': recipient,
-            f'{state}_at': now,
-        }
-        if error is not None:
-            target[key]['error'] = str(error)
-        if state == 'sent':
-            status['failed'].pop(key, None)
+    tmp = path.with_suffix('.tmp')
+    tmp.write_text(json.dumps(status, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    tmp.replace(path)
+    checkpoint(path)
 
 
 def is_flow_limit_error(exc: Exception) -> bool:
@@ -260,36 +256,37 @@ def read_smtp_config() -> tuple[str, int, str, str]:
 
 
 def read_recipients(audience: str) -> list[str]:
+    recipients_file = storage() / 'recipients.json'
     try:
-        configured = json.loads(RECIPIENTS_FILE.read_text(encoding='utf-8'))
+        configured = json.loads(recipients_file.read_text(encoding='utf-8'))
     except FileNotFoundError as exc:
-        raise FileNotFoundError(f'Missing recipient config: {RECIPIENTS_FILE}') from exc
+        raise FileNotFoundError(f'Missing recipient config: {recipients_file}') from exc
     except json.JSONDecodeError as exc:
-        raise RuntimeError(f'Invalid recipient JSON in {RECIPIENTS_FILE}: {exc}') from exc
+        raise RuntimeError(f'Invalid recipient JSON in {recipients_file}: {exc}') from exc
 
     if not isinstance(configured, dict) or not configured:
-        raise RuntimeError(f'Recipient JSON must be a non-empty object of audience arrays: {RECIPIENTS_FILE}')
+        raise RuntimeError(f'Recipient JSON must be a non-empty object of audience arrays: {recipients_file}')
     if audience not in configured:
         available = ', '.join(sorted(str(key) for key in configured))
         raise RuntimeError(f'Unknown recipient audience "{audience}". Available audiences: {available}')
 
     recipients = configured[audience]
     if not isinstance(recipients, list) or not recipients:
-        raise RuntimeError(f'Recipient audience "{audience}" must be a non-empty array: {RECIPIENTS_FILE}')
+        raise RuntimeError(f'Recipient audience "{audience}" must be a non-empty array: {recipients_file}')
 
     validated: list[str] = []
     seen: set[str] = set()
     for item in recipients:
         if not isinstance(item, str):
-            raise RuntimeError(f'Recipient audience "{audience}" must contain only strings: {RECIPIENTS_FILE}')
+            raise RuntimeError(f'Recipient audience "{audience}" must contain only strings: {recipients_file}')
         recipient = item.strip()
         if not recipient:
-            raise RuntimeError(f'Recipient audience "{audience}" contains blank entry: {RECIPIENTS_FILE}')
+            raise RuntimeError(f'Recipient audience "{audience}" contains blank entry: {recipients_file}')
         if not re.fullmatch(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', recipient):
-            raise RuntimeError(f'Invalid recipient address in {RECIPIENTS_FILE}: {recipient}')
+            raise RuntimeError(f'Invalid recipient address in private configuration')
         dedupe_key = recipient.lower()
         if dedupe_key in seen:
-            print(f'WARN duplicate_recipient_skipped audience={audience} recipient={recipient}', flush=True)
+            print(f'WARN duplicate_recipient_skipped audience={audience}', flush=True)
             continue
         seen.add(dedupe_key)
         validated.append(recipient)
@@ -336,13 +333,14 @@ def build_message(
     return message
 
 
-def send_batch(host: str, port: int, sender: str, password: str, recipients: list[str], message: MIMEMultipart) -> None:
+def send_batch(host: str, port: int, sender: str, password: str, recipients: list[str], message: MIMEMultipart) -> dict:
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL(host, port, context=context, timeout=30) as server:
+    server = smtplib.SMTP_SSL(host, port, context=context, timeout=30)
+    try:
         server.login(sender, password)
-        refused = server.sendmail(sender, recipients, message.as_bytes(policy=SMTP))
-        if refused:
-            raise smtplib.SMTPRecipientsRefused(refused)
+        return server.sendmail(sender, recipients, message.as_bytes(policy=SMTP))
+    finally:
+        server.close()
 
 
 def main() -> int:
@@ -412,90 +410,34 @@ def main() -> int:
     recipients = read_recipients(audience)
     status_path = delivery_status_path(artifact_dir, args.date, args.phase)
     delivery_status = load_delivery_status(status_path, args.date, args.phase, audience)
-    already_sent = set(delivery_status['sent'])
-    pending_recipients = [recipient for recipient in recipients if recipient.lower() not in already_sent]
-    skipped = len(recipients) - len(pending_recipients)
-    if skipped:
-        print(
-            f'DELIVERY_STATUS_RESTORED path={status_path} already_sent={skipped} pending={len(pending_recipients)}',
-            flush=True,
-        )
-    batch_size = recipient_batch_size(media_kind)
-    recipient_batches = chunked(pending_recipients, batch_size)
-    success = skipped
-
-    if args.phase:
-        print(f'Phase: {args.phase}', flush=True)
-    print(f'Audience: {audience}', flush=True)
-    print(
-        f'RECIPIENT_BATCHING batch_size={batch_size} batches={len(recipient_batches)} '
-        f'pending={len(pending_recipients)} total={len(recipients)}',
-        flush=True,
-    )
-    if not recipient_batches:
-        write_delivery_status(status_path, delivery_status)
-        print(f'NO_PENDING_RECIPIENTS status={status_path}', flush=True)
-        print(f'成功: {success} / {len(recipients)}', flush=True)
+    sent = delivery_status['sent']
+    in_flight = delivery_status.setdefault('in_flight', {})
+    if not isinstance(in_flight, dict):
+        raise RuntimeError('Invalid private in-flight state')
+    if any(addr.lower() in in_flight for addr in recipients):
+        print('Delivery paused: unresolved SMTP acknowledgement in private state', flush=True)
+        return 1
+    pending = [addr for addr in recipients if addr.lower() not in sent]
+    print(f'Delivery phase={args.phase} pending={len(pending)} total={len(recipients)}', flush=True)
+    if args.dry_run:
         return 0
-    host, port, sender, password = read_smtp_config()
+    if pending:
+        host, port, sender, password = read_smtp_config()
 
-    for index, batch in enumerate(recipient_batches, start=1):
-        to_header = batch[0] if len(batch) == 1 else 'undisclosed-recipients:;'
-        batch_label = ','.join(batch)
-        message = build_message(
-            args.date,
-            sender,
-            to_header,
-            html_content,
-            media_path,
-            media_kind,
-        )
-        if args.dry_run:
-            print(
-                f'OK [{index}/{len(recipient_batches)}] DRY-RUN batch_size={len(batch)} recipients={batch_label}',
-                flush=True,
-            )
-            success += len(batch)
-            continue
+        def deliver(batch):
+            label = batch[0] if len(batch) == 1 else 'undisclosed-recipients:;'
+            message = build_message(args.date, sender, label, html_content, media_path, media_kind)
+            return send_batch(host, port, sender, password, batch, message)
 
-        last_error: Exception | None = None
-        for attempt in range(1, retry_attempts + 1):
-            try:
-                send_batch(host, port, sender, password, batch, message)
-                print(
-                    f'OK [{index}/{len(recipient_batches)}] batch_size={len(batch)} recipients={batch_label}',
-                    flush=True,
-                )
-                success += len(batch)
-                mark_delivery_status(delivery_status, batch, 'sent')
-                write_delivery_status(status_path, delivery_status)
-                last_error = None
-                break
-            except (smtplib.SMTPException, OSError) as exc:
-                last_error = exc
-                print(
-                    f'WARN [{index}/{len(recipient_batches)}] attempt={attempt} '
-                    f'batch_size={len(batch)} recipients={batch_label}: {exc}',
-                    flush=True,
-                )
-                if attempt < retry_attempts:
-                    sleep_seconds = flow_limit_cooldown_seconds() if is_flow_limit_error(exc) else retry_delay
-                    if is_flow_limit_error(exc):
-                        print(
-                            f'WARN smtp_flow_limit_cooldown recipients={batch_label} sleep={sleep_seconds}s',
-                            flush=True,
-                        )
-                    time.sleep(sleep_seconds)
-        if last_error is not None:
-            mark_delivery_status(delivery_status, batch, 'failed', last_error)
-            write_delivery_status(status_path, delivery_status)
-            print(f'FAIL batch_size={len(batch)} recipients={batch_label}: {last_error}', flush=True)
-
-        if index < len(recipient_batches):
+        def between(index):
             time.sleep(delay)
             if index % 10 == 0:
                 time.sleep(batch_pause)
 
+        run_delivery(chunked(pending, recipient_batch_size(media_kind)), delivery_status,
+                     deliver, lambda status: write_delivery_status(status_path, status),
+                     retry_attempts, time.sleep, retry_delay, between)
+    success = sum(addr.lower() in sent for addr in recipients)
     print(f'成功: {success} / {len(recipients)}', flush=True)
     return 0 if success == len(recipients) else 1
 
