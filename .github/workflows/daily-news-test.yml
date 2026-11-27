@@ -26,6 +26,8 @@ permissions:
 
 jobs:
   build-validate-send:
+    # Pause publication while recipient data is moved out of public output.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     outputs:
@@ -266,8 +268,9 @@ jobs:
           retention-days: 14
 
   upload-new-site:
+    # Pause publication while recipient data is moved out of public output.
+    if: ${{ false }}
     needs: build-validate-send
-    if: ${{ needs.build-validate-send.result == 'success' && needs.build-validate-send.outputs.skipped != 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:

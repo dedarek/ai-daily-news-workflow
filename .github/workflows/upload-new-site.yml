@@ -14,6 +14,8 @@ permissions:
 
 jobs:
   upload:
+    # Pause publication while recipient data is moved out of public output.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:

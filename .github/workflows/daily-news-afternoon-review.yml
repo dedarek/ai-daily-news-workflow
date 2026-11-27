@@ -26,7 +26,8 @@ permissions:
 
 jobs:
   review-and-send:
-    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    # Pause publication while recipient data is moved out of public output.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
